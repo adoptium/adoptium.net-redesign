@@ -1,6 +1,7 @@
 ---
-path: "/about"
 title: "About"
+path: "/about"
+authors: gdams, karianna, tellison, parkerm, lasombra, hendrikebbers, davew16, akdsco
 ---
 
 The mission of the Eclipse Adoptium Top-Level Project is to produce high-quality runtimes and associated technology for use within the Java ecosystem.  We achieve this through a set of Projects under the Adoptium PMC and a close working partnership with external projects, most notably OpenJDK for providing the Java SE runtime implementation.  Our goal is to meet the needs of both the Eclipse community and broader runtime users by providing a comprehensive set of technologies around runtimes for Java applications that operate alongside existing standards, infrastructures, and cloud platforms.

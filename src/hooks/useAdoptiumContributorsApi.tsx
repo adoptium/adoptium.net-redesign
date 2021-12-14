@@ -71,7 +71,7 @@ async function getContributor(randomPage: number): Promise<Contributor> {
 
   return {
     avatarUri: contributor.avatar_url,
-    commitsListUri: `https://github.com/adoptium/${repoToCheck}}/commits?author=${contributor.login}`,
+    commitsListUri: `https://github.com/adoptium/${repoToCheck}/commits?author=${contributor.login}`,
     contributionsCount: contributor.contributions,
     login: contributor.login,
     profileUri: contributor.html_url,

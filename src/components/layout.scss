@@ -2,5 +2,24 @@
 $primary: #14003c;
 @import "~bootstrap/scss/bootstrap";
 
+/* set a max-width for horizontal fluid layout and make it centered */
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 60rem;
+}
 
-
+.adopt-demo-container {
+    position: relative;
+}
+  
+.adopt-demo {
+    background: #1f272a;
+    border-radius: 0.4rem;
+    box-shadow: 5px 10px 50px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    height: 450px;
+    max-width: 832px;
+    width: 90vw;
+    z-index: 2;
+}

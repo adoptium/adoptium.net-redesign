@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout";
 import EditLink from '../components/EditLink';
+import AuthorsList from '../containers/AuthorList';
+import InstallTabs from '../components/InstallTabs';
 import Seo from "../components/Seo"
 
 export default function Template({
@@ -15,13 +17,21 @@ export default function Template({
     <section className="py-5 container">
     <div className="markdown-container container-md">
       <div className="markdown">
-        <h1>{frontmatter.title}</h1>
+        <h1 className="pb-4">{frontmatter.title}</h1>
+        {frontmatter.path === "/installation" && (
+          <section className="adopt-demo-container my-5">
+            <div className="adopt-demo mx-auto">
+              <InstallTabs />
+            </div>
+          </section>
+        )}
         <div
           className="markdown-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
     </div>
+    <AuthorsList authors={frontmatter.authors.split(',')} />
     <EditLink relativePath={frontmatter.path} />
     </section>
     </Layout>
@@ -35,6 +45,7 @@ export const pageQuery = graphql`
       frontmatter {
         path
         title
+        authors
       }
     }
   }

@@ -12,7 +12,26 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-code-titles`,
+          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                // Used to map Markdown to Bootstrap
+                "table": "table table-hover py-2",
+                "heading[depth=2]": "pt-2",
+              }
+            }
+          }
+        ]
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

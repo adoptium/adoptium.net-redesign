@@ -5,6 +5,8 @@ interface Props {
     versions: array;
 }
 
+const defaultJDK = '17'
+
 
 const DownloadDropdowns = ({
     versions
@@ -26,7 +28,7 @@ const DownloadDropdowns = ({
                 {versions.map(
                     (version, i): string | JSX.Element =>
                         version && (
-                            <li><Link className={version === '17' ? `dropdown-item active {version}` : `dropdown-item {version}`} to="#">Temurin {version} (LTS)</Link></li>
+                            <li><Link className={version === defaultJDK ? `dropdown-item active` : `dropdown-item`} to={`?version=${version}`}>Temurin {version} (LTS)</Link></li>
                         )
                 )}
             </ul>

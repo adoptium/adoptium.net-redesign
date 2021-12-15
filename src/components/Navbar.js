@@ -1,7 +1,9 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import Logo from "../images/adoptium-logo-light.svg"
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import LogoLight from '../images/adoptium-logo-light.svg';
+import LogoDark from '../images/adoptium-logo-dark.svg';
 
 const isActive = ({ isCurrent }) => {
   return isCurrent ? { className: "nav-link active" } : {className: "nav-link"}
@@ -13,9 +15,13 @@ const ExactNavLink = props => (
 
 const Navbar = ({ siteTitle }) => {
   return (
-    <nav className="navbar navbar-expand-xl border-bottom navbar-light bg-light" style={{ paddingTop: '1.25em', paddingBottom: '1.25em' }}>
+    <nav className="navbar navbar-expand-xl border-bottom" style={{ height: '7rem', paddingTop: '1.25em', paddingBottom: '1.25em' }}>
       <div className="container-fluid">
-        <Link to="/" className="navbar-brand" href="#"><Logo style={{ height: '3em' }}/></Link>
+        <Link to="/" className="navbar-brand" href="#">
+          {/* <Logo style={{ height: '3em' }}/> */}
+          <LogoLight style={{ height: '3em' }} className="light-mode-only" />
+          <LogoDark style={{ paddingLeft: '.2em', paddingRight: '.2em', height: '1.9em' }} className="dark-mode-only" />
+        </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar"
                 aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -82,6 +88,18 @@ const Navbar = ({ siteTitle }) => {
             </li>
           </ul>
         </div>
+        <ThemeToggler>
+        {({ theme, toggleTheme }) => (
+          <label>
+            <input
+              type="checkbox"
+              onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+              checked={theme === 'dark'}
+            />{' '}
+            Dark mode
+          </label>
+        )}
+      </ThemeToggler>
       </div>
     </nav>
   )

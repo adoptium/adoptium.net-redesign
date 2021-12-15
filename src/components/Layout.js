@@ -18,7 +18,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="container-fluid p-0">
+    <div className="container-fluid p-0"
+      style={{
+        backgroundColor: 'var(--bg)',
+        color: 'var(--textNormal)',
+        transition: 'color 0.2s ease-out, background 0.2s ease-out',
+      }}
+    >
       <Navbar siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main >
         <main>{children}</main>

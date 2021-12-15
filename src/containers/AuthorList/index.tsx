@@ -7,7 +7,6 @@ interface Props {
 }
 
 const AuthorsList = ({ authors }: Props): null | JSX.Element => {
-  console.log(authors)
   return (
     <ul className="list">
       <h5>Contributors</h5>

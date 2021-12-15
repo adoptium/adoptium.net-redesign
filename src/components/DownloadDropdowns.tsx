@@ -18,37 +18,37 @@ const DownloadDropdowns = ({
     versions = versions.split(',');
 
     return (
-        <div class="dropdown">
-            <button class="btn btn-secondary m-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <div className="dropdown">
+            <button className="btn btn-secondary m-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Version
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownVersion">
+            <ul className="dropdown-menu" aria-labelledby="dropdownVersion">
                 {versions.map(
                     (version, i): string | JSX.Element =>
                         version && (
-                            <li><Link className={version === '17' ? `dropdown-item active` : `dropdown-item`} to="#">Temurin {version} (LTS)</Link></li>
+                            <li><Link className={version === '17' ? `dropdown-item active {version}` : `dropdown-item {version}`} to="#">Temurin {version} (LTS)</Link></li>
                         )
                 )}
             </ul>
-            <button class="btn btn-secondary m-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button className="btn btn-secondary m-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Operating System
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownOS">
+            <ul className="dropdown-menu" aria-labelledby="dropdownOS">
                 {oses.map(
                     (os, i): string | JSX.Element =>
                         os && (
-                            <li><a class="dropdown-item" href="#">{os}</a></li>
+                            <li><a className="dropdown-item" href="#">{os}</a></li>
                     )
                 )}
             </ul>
-            <button class="btn btn-secondary m-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button className="btn btn-secondary m-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Architecture
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownArchitecture">
+            <ul className="dropdown-menu" aria-labelledby="dropdownArchitecture">
                 {arches.map(
                     (arch, i): string | JSX.Element =>
                         arch && (
-                            <li><a class="dropdown-item" href="#">{arch}</a></li>
+                            <li><a className="dropdown-item" href="#">{arch}</a></li>
                     )
                 )}
             </ul>

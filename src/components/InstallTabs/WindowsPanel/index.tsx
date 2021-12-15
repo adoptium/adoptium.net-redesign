@@ -33,12 +33,12 @@ const WindowsPanel = (): JSX.Element => {
         <span className="install__text__no-select">$</span>
         <span className="install__text__command">winget uninstall </span>EclipseAdoptium.Temurin.17
       </ShellBox>
-      <Link
+      <a
         className="install__docs-button"
-        to="https://docs.microsoft.com/en-us/windows/package-manager/winget/"
+        href="https://docs.microsoft.com/en-us/windows/package-manager/winget/"
       >
       Read documentation
-      </Link>
+      </a>
     </div>
   );
 };

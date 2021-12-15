@@ -21,7 +21,7 @@ const RandomContributor = (): JSX.Element => {
             >
               <img
                 src={contributor.avatarUri}
-                alt="Avatar of a Node.js contributor"
+                alt="Avatar of an Adoptium contributor"
               />
             </a>
           </div>
@@ -34,13 +34,21 @@ const RandomContributor = (): JSX.Element => {
             >
               {contributor.login}
             </a>{' '}
-            for being an Adoptium contributor{' '}
+            for making{' '}
             <a
               href={contributor.commitsListUri}
               target="_blank"
               rel="nofollow noopener noreferrer"
             >
               <span>{contributor.contributionsCount} contributions</span>
+            </a>{' '}
+            to{' '}
+            <a
+              href={contributor.repo}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+            >
+              <span>{contributor.repo}</span>
             </a>
           </div>
         </>

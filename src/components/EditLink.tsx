@@ -17,7 +17,7 @@ const EditLink = ({ relativePath }: Props) => {
   const href = `https://github.com/AdoptOpenJDK/openjdk-website-next/edit/main/src/markdown-pages${relativePath}.md`;
 
   return (
-    <div class="mx-auto">
+    <div className="mx-auto">
       <Link to={href}>
         Edit this page on GitHub
         <FontAwesomeIcon icon={faPen} size="1x" style={{ marginLeft: '.3em' }} />

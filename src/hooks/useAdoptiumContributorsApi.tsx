@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 
 // List of repos that will be checked for contributions
-const repositories = ['temurin-build', 'ci-jenkins-pipelines', 'infrastructure', 'aqa-tests', 'adoptium.net', 'containers']
+const repositories = [
+  'temurin-build', 'ci-jenkins-pipelines', 'infrastructure', 'aqa-tests', 'adoptium.net', 'api.adoptium.net', 'blog.adoptium.net', 'containers', 'installer',
+  'STF', 'run-aqa', 'TKG', 'aqa-test-tooks', 'aqa-systemtest', 'bumblebench', 'jenkins-helper'
+
+]
 
 const randomValue = (list) => {
     return list[Math.floor(Math.random() * list.length)];
@@ -72,6 +76,7 @@ async function getContributor(randomPage: number): Promise<Contributor> {
   return {
     avatarUri: contributor.avatar_url,
     commitsListUri: `https://github.com/adoptium/${repoToCheck}/commits?author=${contributor.login}`,
+    repo: repoToCheck,
     contributionsCount: contributor.contributions,
     login: contributor.login,
     profileUri: contributor.html_url,

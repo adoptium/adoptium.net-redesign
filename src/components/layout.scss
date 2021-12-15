@@ -19,6 +19,9 @@ body {
     --color-fill-banner: #9992;
     --color-text-primary: var(--black9);
     --color-text-accent: var(--color-brand-primary);
+    .support-matrix th {
+        background-color: #aeadad97;
+    }
 }
   
   body.dark {
@@ -39,7 +42,7 @@ body {
     a:active {
         color: var(--brand4);
     }
-    .nav-link {
+    .nav-link .dropdown-item {
         color: var(--textNormal) !important;
     }
     .text-muted {
@@ -62,6 +65,9 @@ body {
         color: #fff;
         border-color: #373b3e;
     }
+    // .dropdown-menu {
+    //     background-color: var(--color-fill-banner);
+    // }
 }
 
 body:not(.dark) .dark-mode-only,

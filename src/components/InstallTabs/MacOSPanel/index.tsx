@@ -34,12 +34,12 @@ const MacOSPanel = (): JSX.Element => {
         <span className="install__text__no-select">$</span>
         <span className="install__text__command">brew uninstall --cask </span>temurin
       </ShellBox>
-      <Link
+      <a
         className="install__docs-button"
-        to="https://docs.brew.sh/Manpage"
+        href="https://docs.brew.sh/Manpage"
       >
       Read documentation
-      </Link>
+      </a>
     </div>
   );
 };

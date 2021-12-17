@@ -237,31 +237,6 @@ async function makeRequest(method, url): Promise<apiData> {
     return apiResult
 };
 
-// function makeRequest(method, url) {
-//     return new Promise(function (resolve, reject) {
-//         let request = new XMLHttpRequest();
-//         request.open(method, url);
-//         request.setRequestHeader('Disco-User-Info', 'Adoptium Marketplace');
-//         request.onload = function () {
-//             if (this.status >= 200 && this.status < 300) {
-//             resolve(request.response);
-//             } else {
-//             reject({
-//                 status    : this.status,
-//                 statusText: request.statusText
-//             });
-//             }
-//         };
-//         request.onerror = function () {
-//             reject({
-//             status    : this.status,
-//             statusText: request.statusText
-//             });
-//         };
-//         request.send();
-//     });
-// }
-
 // Utility methods
 function normalizeJavaVersion(javaVersion) {
     let version = javaVersion
@@ -291,9 +266,9 @@ function getVendorForDistribution(distribution) {
 
 function getImageForVendor(vendor) {
     switch(vendor) {
-    case 'Microsoft': return './images/microsoft-logo.png';
-    case 'Eclipse Foundation': return './images/adoptium-logo.png';
-    case 'Azul'              : return './images/azul-logo.png';
+    case 'Microsoft': return '/images/microsoft-logo.png';
+    case 'Eclipse Foundation': return '/images/adoptium-logo.png';
+    case 'Azul'              : return '/images/azul-logo.png';
     default                  : return '';
     }
 }

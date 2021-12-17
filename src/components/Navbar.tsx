@@ -2,9 +2,10 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import Switch from "react-switch";
+
 import LogoLight from '../images/adoptium-logo-light.svg';
 import LogoDark from '../images/adoptium-logo-dark.svg';
-import Switch from "react-switch";
 import { IoMdMoon } from "@react-icons/all-files/io/IoMdMoon";
 import { IoMdSunny } from "@react-icons/all-files/io/IoMdSunny";
 
@@ -54,9 +55,9 @@ const Navbar = ({siteTitle}): JSX.Element => {
             </li>
             <li className="nav-item">
               <ExactNavLink
-                to="/download"
+                to="/marketplace"
               >
-                Download
+                Marketplace
               </ExactNavLink>
             </li>
             <li className="nav-item">

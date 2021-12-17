@@ -1,5 +1,6 @@
 //Here you can customize bootstrap
 $primary: #14003c;
+$secondary: #fff;
 @import "~bootstrap/scss/bootstrap";
 
 /* set a max-width for horizontal fluid layout and make it centered */
@@ -65,9 +66,19 @@ body {
         color: #fff;
         border-color: #373b3e;
     }
-    // .dropdown-menu {
-    //     background-color: var(--color-fill-banner);
-    // }
+}
+
+.table-secondary {
+    --bs-table-bg: #333;
+}
+
+.home {
+    background-repeat-y: no-repeat;
+	background-position: 0 -150px;
+    height: 40em;
+	@media (max-width: 991px) {
+		padding-top: 71px;
+	}
 }
 
 body:not(.dark) .dark-mode-only,

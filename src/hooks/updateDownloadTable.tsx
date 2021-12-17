@@ -231,30 +231,36 @@ async function getDownloadLink(id, directly_downloadable) {
     return directly_downloadable ? packageInfo.direct_download_uri : packageInfo.download_site_uri;
 }
 
-function makeRequest(method, url) {
-    return new Promise(function (resolve, reject) {
-    let request = new XMLHttpRequest();
-    request.open(method, url);
-    request.setRequestHeader('Disco-User-Info', 'Adoptium Marketplace');
-    request.onload = function () {
-        if (this.status >= 200 && this.status < 300) {
-        resolve(request.response);
-        } else {
-        reject({
-            status    : this.status,
-            statusText: request.statusText
-        });
-        }
-    };
-    request.onerror = function () {
-        reject({
-        status    : this.status,
-        statusText: request.statusText
-        });
-    };
-    request.send();
-    });
-}
+async function makeRequest(method, url): Promise<apiData> {
+    const response = await fetch(url);
+    const apiResult = await response.text();
+    return apiResult
+};
+
+// function makeRequest(method, url) {
+//     return new Promise(function (resolve, reject) {
+//         let request = new XMLHttpRequest();
+//         request.open(method, url);
+//         request.setRequestHeader('Disco-User-Info', 'Adoptium Marketplace');
+//         request.onload = function () {
+//             if (this.status >= 200 && this.status < 300) {
+//             resolve(request.response);
+//             } else {
+//             reject({
+//                 status    : this.status,
+//                 statusText: request.statusText
+//             });
+//             }
+//         };
+//         request.onerror = function () {
+//             reject({
+//             status    : this.status,
+//             statusText: request.statusText
+//             });
+//         };
+//         request.send();
+//     });
+// }
 
 // Utility methods
 function normalizeJavaVersion(javaVersion) {

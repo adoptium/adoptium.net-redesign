@@ -14,7 +14,7 @@ const EditLink = ({ relativePath }: Props) => {
     return null;
   }
 
-  const href = `https://github.com/AdoptOpenJDK/openjdk-website-next/edit/main/src/markdown-pages${relativePath}.md`;
+  const href = `https://github.com/gdams/adoptium/edit/main/src/markdown-pages${relativePath}.md`;
 
   return (
     <div className="mx-auto">

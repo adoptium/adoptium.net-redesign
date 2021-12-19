@@ -33,7 +33,7 @@ const Navbar = ({siteTitle}): JSX.Element => {
   };
 
   return (
-    <nav className="navbar navbar-expand-xl border-bottom" style={{ height: '7rem', paddingTop: '1.25em', paddingBottom: '1.25em' }}>
+    <nav className="navbar navbar-expand-xl border-bottom navbar-light bg-light" style={{ height: '7rem', paddingTop: '1.25em', paddingBottom: '1.25em' }}>
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
           <LogoLight style={{ height: '3em' }} className="light-mode-only" />
@@ -45,7 +45,7 @@ const Navbar = ({siteTitle}): JSX.Element => {
         </button>
 
         <div className="collapse navbar-collapse" id="main-navbar">
-          <ul className="navbar-nav me-auto mb-2 mb-md-0">
+          <ul className="navbar-nav bg-light me-auto mb-2 mb-md-0">
             <li className="nav-item">
               <ExactNavLink
                 to="/"
@@ -85,7 +85,7 @@ const Navbar = ({siteTitle}): JSX.Element => {
               <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Projects
               </Link>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul className="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
                 <li><ExactNavLink className="dropdown-item" to="/jmc">Eclipse Mission Control</ExactNavLink></li>
               </ul>
             </li>
@@ -93,7 +93,7 @@ const Navbar = ({siteTitle}): JSX.Element => {
               <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Further Information
               </Link>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul className="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
                 <li><ExactNavLink className="dropdown-item" to="/about">About</ExactNavLink></li>
                 <li><ExactNavLink className="dropdown-item" to="/support">Support</ExactNavLink></li>
                 <li><ExactNavLink className="dropdown-item" to="/members">Members</ExactNavLink></li>

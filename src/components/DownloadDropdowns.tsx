@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import { detectOS, UserOS } from '../util/detectOS';
 import { init, updateDownloadTable } from '../hooks';
 
 const oses = ['Any', 'Linux', 'Alpine', 'Windows', 'macOS'];
@@ -12,15 +13,30 @@ const versions = [ 17, 16, 11, 8 ];
 const defaultVersion = '17'
 const defaultPackageType = 'jdk'
 const defaultArchitecture = 'x64'
+let defaultOS = ''
 
 init(versions)
 
 const DownloadDropdowns = () => {
 
+    const userOS = detectOS();
+    switch (userOS) {
+      case UserOS.MAC:
+        defaultOS = 'macos'
+        break;
+      case UserOS.LINUX:
+      case UserOS.UNIX:
+        defaultOS = 'linux'
+        break;
+      default:
+        defaultOS = 'windows'
+        break;
+    }
+
     return (
         <div className="input-group mb-5">
             <label className="px-2 fw-bold" for="os">Operating System</label> 
-            <select id="os-filter" onChange={updateDownloadTable} className="form-select form-select-sm">
+            <select id="os-filter" onChange={updateDownloadTable} defaultValue={defaultOS}className="form-select form-select-sm">
                 {oses.map(
                     (os, i): string | JSX.Element =>
                         os && (

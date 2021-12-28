@@ -3,32 +3,6 @@ const distributions = [ 'microsoft', 'temurin', 'zulu' ];
 let pkgs = [];
 let selectedPkgs = [];
 
-export function init(versions) {
-      // Collect all available packages defined by distributions and versions and store them in pkgs
-      collectAllPkgs(versions);
-    
-    //   let operatingSystem = getOperatingSystem();
-    //   switch(operatingSystem) {
-    //     case 'Windows': 
-    //       document.getElementById('os-filter').value = 'windows'; 
-    //       document.getElementByid('archive-type-filter').value = 'msi';
-    //       break;
-    //     case 'Linux': 
-    //     case 'Unix' : 
-    //       document.getElementById('os-filter').value = 'linux'; 
-    //       document.getElementById('archive-type-filter').value = 'tar.gz';
-    //       break;
-    //     case 'MacOS': 
-    //       document.getElementById('os-filter').value = 'macos';
-    //       document.getElementById('archive-type-filter').value = 'tar.gz';
-    //       break;
-    //   }
-    
-    //   document.getElementById('arch-filter').value         = 'x64';
-    //   document.getElementById('package-type-filter').value = 'jdk';
-    //   document.getElementById('version-filter').value      = '17';
-}
-
 export function updateDownloadTable() {
     let microsoftSelected       = document.getElementById('vendor-microsoft').checked;
     let temurinSelected         = document.getElementById('vendor-adoptium').checked;
@@ -186,7 +160,7 @@ function updateDownloads() {
 }
 
 // Functions to collect packages using the foojay.io DiscoAPI
-function collectAllPkgs(versions) {
+export function collectAllPkgs(versions) {
     let promises = [];
     versions.forEach((version) => { promises.push(getAllPkgsForVersion(version).then((pkgsFound) => pkgsFound.forEach((pkg) => { pkgs.push(pkg); }))); });
     Promise.all(promises).then(res => updateDownloadTable());
@@ -197,7 +171,7 @@ async function getAllPkgsForVersion(version) {
     distributions.forEach((distro) => {
     params += ('&distro=' + distro);
     });
-    params += '&release_status=ga&latest=available&operating_system=windows&operating_system=linux&operating_system=macos&libc_type=libc&libc_type=c_std_lib&libc_type=glibc&libc_type=musl&with_javafx_if_available=true&architecture=x86&architecture=x64&architecture=aarch64';
+    params += '&release_status=ga&latest=available&operating_system=windows&operating_system=linux&operating_system=macos&libc_type=libc&libc_type=c_std_lib&libc_type=glibc&libc_type=musl&with_javafx_if_available=false&architecture=x86&architecture=x64&architecture=aarch64';
     
     let   url       = baseUrl + '/disco/v2.0/packages' + params;
     let   json      = await getPkgs(url);

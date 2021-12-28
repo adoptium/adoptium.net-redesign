@@ -1,5 +1,4 @@
 import * as React from "react"
-// import { useState, useRef } from "react";
 import { updateDownloadTable } from '../../hooks';
 
 import './VendorSelector.scss';
@@ -26,6 +25,10 @@ const VendorSelector = () => {
             <li className="vendor-li">
                 <input id="vendor-azul" ref={checkboxRef} type="checkbox" defaultChecked={true} onChange={handleChange} />
                 <label className="vendor-label" htmlFor="vendor-azul" title="Azul"><img src="https://i.ibb.co/KGmL129/vendor-azul.png"/></label>
+            </li>
+            <li className="vendor-li">
+                <input id="vendor-ibm" ref={checkboxRef} type="checkbox" defaultChecked={true} onChange={handleChange} />
+                <label className="vendor-label" htmlFor="vendor-ibm" title="IBM"><img src="/images/ibm.png"/></label>
             </li>
         </ul>
     );

@@ -1,5 +1,5 @@
 const baseUrl       = 'https://api.foojay.io';
-const distributions = [ 'microsoft', 'temurin', 'zulu' ];
+const distributions = [ 'microsoft', 'temurin', 'zulu', 'semeru' ];
 let pkgs = [];
 let selectedPkgs = [];
 
@@ -7,6 +7,7 @@ export function updateDownloadTable() {
     let microsoftSelected       = document.getElementById('vendor-microsoft').checked;
     let temurinSelected         = document.getElementById('vendor-adoptium').checked;
     let zuluSelected            = document.getElementById('vendor-azul').checked;
+    let ibmSelected             = document.getElementById('vendor-ibm').checked;
     let selectedOperatingSystem = document.getElementById('os-filter').value;
     let selectedArchitecture    = document.getElementById('arch-filter').value
     let selectedPackageType     = document.getElementById('package-type-filter').value;
@@ -56,8 +57,9 @@ export function updateDownloadTable() {
         let temurin   = temurinSelected   ? pkg.distribution == 'temurin'   : false;
         let microsoft = microsoftSelected ? pkg.distribution == 'microsoft' : false;
         let zulu      = zuluSelected      ? pkg.distribution == 'zulu'      : false;
+        let ibm       = ibmSelected       ? pkg.distribution == 'semeru'    : false;
 
-        return os && lc && arc && pt && ver && (temurin || microsoft || zulu);
+        return os && lc && arc && pt && ver && (temurin || microsoft || zulu || ibm);
 
     });
     updateDownloads();
@@ -169,7 +171,7 @@ export function collectAllPkgs(versions) {
 async function getAllPkgsForVersion(version) {
     let params  = '?version=' + version;
     distributions.forEach((distro) => {
-    params += ('&distro=' + distro);
+        params += ('&distro=' + distro);
     });
     params += '&release_status=ga&latest=available&operating_system=windows&operating_system=linux&operating_system=macos&libc_type=libc&libc_type=c_std_lib&libc_type=glibc&libc_type=musl&with_javafx_if_available=false&architecture=x86&architecture=x64&architecture=aarch64';
     
@@ -234,6 +236,7 @@ function getVendorForDistribution(distribution) {
     case 'microsoft': return 'Microsoft';
     case 'temurin'  : return 'Eclipse Foundation';
     case 'zulu'     : return 'Azul';
+    case 'semeru'   : return 'IBM';
     default         : return '';
     }
 }
@@ -243,6 +246,7 @@ function getImageForVendor(vendor) {
     case 'Microsoft': return '/images/microsoft-logo.png';
     case 'Eclipse Foundation': return '/images/adoptium-logo.png';
     case 'Azul'              : return '/images/azul-logo.png';
+    case 'IBM'              : return '/images/ibm-logo.png';
     default                  : return '';
     }
 }

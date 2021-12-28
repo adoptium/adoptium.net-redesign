@@ -35,9 +35,9 @@ const DownloadPage = () => (
               </p>
             </div>
           </div>
-          <VendorSelector/>
         </div>
       </div>
+      <VendorSelector/>
       <DownloadDropdowns/>
       <DownloadTable/>
     </section>

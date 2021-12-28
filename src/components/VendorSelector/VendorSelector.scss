@@ -53,8 +53,6 @@ label img {
 }
 
 :checked + label:before {
-    // font-family: FontAwesome;
-    // font-size: 2em;
     color: #14003c;
     content: "✔";
     transform: scale(1);

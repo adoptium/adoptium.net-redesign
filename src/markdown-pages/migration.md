@@ -71,4 +71,4 @@ Java Flight Recorder (JFR) was decoupled from the Oracle JDK and contributed to 
 
 ### Eclipse Mission Control
 
-The [Eclipse Mission Control](https://projects.eclipse.org/projects/adoptium.mc) project provides a download JMC which is available from the [Download Page](https://projects.eclipse.org/projects/adoptium.mc/downloads).
+The [Eclipse Mission Control](https://projects.eclipse.org/projects/adoptium.mc) project provides a download JMC which is available from the [Download Page](/jmc).

@@ -18,10 +18,10 @@ const EditLink = ({ relativePath }: Props) => {
 
   return (
     <div className="mx-auto">
-      <Link to={href}>
+      <a href={href} target="_blank">
         Edit this page on GitHub
         <FontAwesomeIcon icon={faPen} size="1x" style={{ marginLeft: '.3em' }} />
-      </Link>
+      </a>
     </div>
   );
 };

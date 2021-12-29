@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Adoptium`,
-    description: `A simple bootstrap 5 and Sass starter for Gatsby. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@r-ichard`,
+    description: `Eclipse Adoptium provides prebuilt OpenJDK binaries from a fully open source set of build scripts and infrastructure. Supported platforms include Linux, macOS, Windows, ARM, Solaris, and AIX.`,
+    author: `Eclipse Adoptium`,
   },
   plugins: [
     {
@@ -76,7 +76,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `standalone`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/adoptium-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,

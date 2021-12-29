@@ -44,7 +44,7 @@ const RandomContributor = (): JSX.Element => {
             </a>{' '}
             to{' '}
             <a
-              href={contributor.repo}
+              href={`https://github.com/adoptium/${contributor.repo}`}
               target="_blank"
               rel="nofollow noopener noreferrer"
             >

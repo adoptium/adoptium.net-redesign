@@ -1,5 +1,5 @@
 const baseUrl       = 'https://api.foojay.io';
-const distributions = [ 'microsoft', 'temurin', 'zulu', 'semeru' ];
+const distributions = [ 'microsoft', 'temurin', 'zulu', 'semeru_certified' ];
 let pkgs = [];
 let selectedPkgs = [];
 
@@ -57,7 +57,7 @@ export function updateDownloadTable() {
         let temurin   = temurinSelected   ? pkg.distribution == 'temurin'   : false;
         let microsoft = microsoftSelected ? pkg.distribution == 'microsoft' : false;
         let zulu      = zuluSelected      ? pkg.distribution == 'zulu'      : false;
-        let ibm       = ibmSelected       ? pkg.distribution == 'semeru'    : false;
+        let ibm       = ibmSelected       ? pkg.distribution == 'semeru_certified' : false;
 
         return os && lc && arc && pt && ver && (temurin || microsoft || zulu || ibm);
 
@@ -94,7 +94,12 @@ function updateDownloads() {
         // Distribution
         var cellDistribution       = row.insertCell();
         cellDistribution.className = 'fw-bold align-middle';
-        var distributionText = document.createTextNode(capitalize(pkg.distribution) + (pkg.javafx_bundled ? ' (FX)' : ''));
+        let distributionText;
+        if ( pkg.distribution == 'semeru_certified') {
+            distributionText = document.createTextNode('Semeru CE');
+        } else {
+            distributionText = document.createTextNode(capitalize(pkg.distribution));
+        };
         var spanDistribution = document.createElement('span');
         spanDistribution.appendChild(distributionText);
         cellDistribution.appendChild(spanDistribution);
@@ -173,8 +178,7 @@ async function getAllPkgsForVersion(version) {
     distributions.forEach((distro) => {
         params += ('&distro=' + distro);
     });
-    params += '&release_status=ga&latest=available&operating_system=windows&operating_system=linux&operating_system=macos&libc_type=libc&libc_type=c_std_lib&libc_type=glibc&libc_type=musl&with_javafx_if_available=false&architecture=x86&architecture=x64&architecture=aarch64';
-    
+    params += '&release_status=ga&latest=available&operating_system=windows&operating_system=linux&operating_system=macos&javafx_bundled=false&libc_type=libc&libc_type=c_std_lib&libc_type=glibc&libc_type=musl&architecture=x86&architecture=x64&architecture=aarch64';
     let   url       = baseUrl + '/disco/v2.0/packages' + params;
     let   json      = await getPkgs(url);
     const response  = JSON.parse(json);
@@ -236,7 +240,7 @@ function getVendorForDistribution(distribution) {
     case 'microsoft': return 'Microsoft';
     case 'temurin'  : return 'Eclipse Foundation';
     case 'zulu'     : return 'Azul';
-    case 'semeru'   : return 'IBM';
+    case 'semeru_certified' : return 'IBM';
     default         : return '';
     }
 }

@@ -18,7 +18,7 @@ Instructions for running an interactive installation using the Windows MSI insta
     - Add the installation to the PATH environment variable
     - Associate `.jar` files with Java applications
     Additional features can be selected by clicking on the directory tree where you see a check mark (x). These features include:
-    - Updating the JAVA_HOME environment variable
+    - Updating the `JAVA_HOME` environment variable
 1. When you have chosen the features that you want to install, click Next.
 1. Click Install to begin the installation.
 1. When the installation is finished, click Finish to close the program.
@@ -35,7 +35,7 @@ A silent installation allows you to install the Windows package with pre-selecte
     | `FeatureMain` | Core Temurin installation (DEFAULT) |
     |`FeatureEnvironment` | Update the PATH environment variable (DEFAULT)|
     |`FeatureJarFileRunWith` | Associate .jar files with Java applications (DEFAULT)|
-    |`FeatureJavaHomec` |Update the JAVA_HOME environment variable |
+    |`FeatureJavaHome` |Update the JAVA_HOME environment variable |
     |`FeatureOracleJavaSoft` | Updates registry keys HKLM\SOFTWARE\JavaSoft\|
 
     Note: `FeatureOracleJavaSoft` can be used to prevent Oracle Java launching from `PATH` when Temurin is uninstalled. Reinstall Oracle Java if you need to restore the Oracle registry keys.

@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QTemurin RPM and DEB packages are available for installing on your favourite Linux distribution.\\E$"}

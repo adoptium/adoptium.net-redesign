@@ -1,5 +1,5 @@
 import * as React from "react"
-import { withPrefix } from 'gatsby';
+import { withPrefix, Link } from 'gatsby';
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/Layout"
@@ -28,8 +28,8 @@ const IndexPage = () => (
 								runtimes and associated technology for use across the Java™ ecosystem.
 								Eclipse Temurin is the name of the OpenJDK distribution from Adoptium.
 								</p>
-								<a href="#" className="btn btn-lg btn-primary m-3">Join the Working group</a>
-								<a href="#" className="btn btn-lg btn-secondary m-3">View our members</a>
+								<Link to="/join" className="btn btn-lg btn-primary m-3">Join the Working group</Link>
+								<Link to="/members" className="btn btn-lg btn-secondary m-3">View our members</Link>
 							</div>
 							<div className="m-5">
 								<StaticImage

@@ -26,6 +26,6 @@ Based upon this roadmap, and starting with Java 8 (currently supported releases 
 |Java 11 (LTS) - Sep 2018 | jdk-11.0.13+8 - 19th Oct 2021 | jdk-11.0.14 - 18th Jan 2021 | At Least Oct 2024 <sup>[1]</sup>|
 |Java 16 - Mar 2021 | jdk-16.0.2+7 - 20th Jul 2021 | EOL | Sep 2021|
 |Java 17 (LTS) - Sep 2021 | jdk-17.0.1+12 - 19th Oct 2021 | jdk-17.0.2 - 18th Jan 2021 | TBC <sup>[1]</sup>|
-|Java 18 - Mar 2022 |N/A | jdk-18 - 15th Marc 2022 | Sep 2022|
+|Java 18 - Mar 2022 |N/A | jdk-18 - 15th Mar 2022 | Sep 2022|
 
 <sup>[1]</sup> As a general philosophy, Adoptium will continue to build binaries for LTS releases as long as the corresponding upstream source is actively maintained.

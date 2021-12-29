@@ -29,11 +29,11 @@ const SponsorsPage = () => (
 		<div className="row py-lg-5">
 			<div className="col-lg-8 col-md-8 mx-auto">
 				<h1 className="fw-light">Sponsors</h1>
-				<p>Additionally to our Working Group Members Adoptium is proud to receive financial donations (both one-off and regularly) from the following companies.</p>
+				<p className="lead text-muted">Additionally to our Working Group Members Adoptium is proud to receive financial donations (both one-off and regularly) from the following companies.</p>
 				<MembersGrid
 					members={sponsors}
 				/>
-				<a target="_blank" href="https://www.eclipse.org/org/workinggroups/sponsorship/working-group-sponsorship-agreement.pdf" className="btn btn-lg btn-primary mt-5">Want to become a Sponsor?</a>
+				<a target="_blank" rel="noreferrer" href="https://www.eclipse.org/org/workinggroups/sponsorship/working-group-sponsorship-agreement.pdf" className="btn btn-lg btn-primary mt-5">Want to become a Sponsor?</a>
 			</div>
 		</div>
     </section>

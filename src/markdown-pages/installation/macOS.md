@@ -4,7 +4,7 @@ title: "macOS PKG installer packages"
 authors: gdams
 ---
 
-Temurin macOS installer packages are available as standard .pkg files, which can be run with an interactive user interface or run silently from the Terminal command line.
+Eclipse Temurin macOS installer packages are available as standard .pkg files, which can be run with an interactive user interface or run silently from the Terminal command line.
 
 ## GUI installation
 

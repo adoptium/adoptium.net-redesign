@@ -4,7 +4,7 @@ title: "Windows MSI installer packages"
 authors: gdams
 ---
 
-Temurin Windows installer packages are available as standard .msi files, which can be run with an interactive user interface or run silently from the command line. The installer is designed for use on a per-machine basis, not per-user basis, so you can have only one installation of the MSI on a machine for all users.
+Eclipse Temurin Windows installer packages are available as standard .msi files, which can be run with an interactive user interface or run silently from the command line. The installer is designed for use on a per-machine basis, not per-user basis, so you can have only one installation of the MSI on a machine for all users.
 
 Note: Windows installer packages are supported only on Windows x64 systems.
 

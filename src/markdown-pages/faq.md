@@ -32,11 +32,11 @@ The transition to Adoptium means we have unfortunately not been able to continue
 
 ## Where are the docker images?
 
-Due to the limited amount of people we have working on the project, maintaining the wide variety of docker images that we provided from AdoptOpenJDK was becoming unsustainable. For that reason we are releasing a cut down set of docker images for Temurin. For those users who want a containerized Linux distribution that we don't provide an image for, use this guide.
+Due to the limited amount of people we have working on the project, maintaining the wide variety of docker images that we provided from AdoptOpenJDK was becoming unsustainable. For that reason we are releasing a cut down set of docker images for Temurin. For those users who want a containerized Linux distribution that we don't provide an image for, use [this guide](https://blog.adoptium.net/2021/08/using-jlink-in-dockerfiles/).
 
-## Where are the Linux rpm/deb packages?
+## Where are the Linux RPM/DEB packages?
 
-We are working on a solution for that at the moment with [this issue](https://github.com/adoptium/installer/issues/330) as an umbrella for the work
+Linux Installers are available at packages.adoptium.net. For more information us [this guide](/installation/linux).
 
 ## Why do the packages not include IcedTea-Web?
 

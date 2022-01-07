@@ -1,0 +1,24 @@
+= Install Eclipse Temurin
+:page-authors: gdams
+
+Eclipse Temurin binaries are available for link:/download[download] in
+the following types of installation package:
+
+* Package managers (shown above)
+* link:#_installers[Installers]
+* link:/installation/archives[Archive files]
+
+The binaries are supported on the architectures and operating systems
+listed in link:/supported-platforms[Supported Platforms]. If you’re
+migrating to Temurin, you can learn about the differences between Oracle
+JDK and Temurin in our link:/migration[Migration Guide] and any steps
+that you might need to take.
+
+== Installers
+
+Installers are currently available for Windows® and macOS® JDK and JRE
+packages. Installation steps are covered in the following sections:
+
+* link:/installation/windows[Windows MSI installers packages]
+* link:/installation/macOS[macOS PKG installer packages]
+* link:/installation/linux[Linux (RPM/DEB) packages]

@@ -12,9 +12,12 @@ type Props = {
 const EditLink = ({ relativePath }: Props) => {
   if (!relativePath) {
     return null;
+  } else {
+    // Trim trainling slash
+    relativePath = relativePath.replace(/\/$/, "");
   }
 
-  const href = `https://github.com/gdams/adoptium/edit/main/src/markdown-pages${relativePath}.md`;
+  const href = `https://github.com/gdams/adoptium/edit/main/src/asciidoc-pages${relativePath}.adoc`;
 
   return (
     <div className="mx-auto">

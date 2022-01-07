@@ -1,3 +1,25 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
+
+const asciidoc = require(`@asciidoctor/core`)()
+
+class CustomConverter {
+  constructor() {
+    this.baseConverter = asciidoc.Html5Converter.$new()
+  }
+
+  convert(node, transform) {
+    // if (node.getNodeName() === "table") {
+    //   return `<table class="table table-hover py-2">${node.getRows()}</table>`
+    // }
+
+    return this.baseConverter.convert(node, transform)
+  }
+}
+
 module.exports = {
   siteMetadata: {
     title: `Adoptium`,
@@ -8,8 +30,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`,
+        name: `asciidoc-pages`,
+        path: `${__dirname}/src/asciidoc-pages`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-asciidoc`,
+      options: {
+        converterFactory: CustomConverter,
       },
     },
     {
@@ -25,17 +53,6 @@ module.exports = {
         plugins: [
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-code-titles`,
-          `gatsby-remark-prismjs`,
-          {
-            resolve: `gatsby-remark-classes`,
-            options: {
-              classMap: {
-                // Used to map Markdown to Bootstrap
-                "table": "table table-hover py-2",
-                "heading[depth=2]": "pt-2",
-              }
-            }
-          }
         ]
       }
     },

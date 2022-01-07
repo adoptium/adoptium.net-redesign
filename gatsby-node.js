@@ -1,34 +1,51 @@
 const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const markdownTemplate = path.resolve(`src/templates/markdownTemplate.js`)
+  // Create Asciidoc pages.
+  const asciidocTemplate = path.resolve(`./src/templates/asciidocTemplate.js`)
 
   return graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              path
-              title
+      {
+        allAsciidoc {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
             }
           }
         }
       }
-    }
-  `).then(result => {
+    `).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
 
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    return result.data.allAsciidoc.edges.forEach(({ node }) => {
       createPage({
-        path: node.frontmatter.path,
-        component: markdownTemplate,
-        context: {}, // additional data can be passed via context
+        path: node.fields.slug,
+        component: asciidocTemplate,
+        context: {
+          id: node.id,
+        },
       })
     })
   })
+}
+
+exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `Asciidoc`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
 }

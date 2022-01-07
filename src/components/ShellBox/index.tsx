@@ -27,7 +27,7 @@ const ShellBox = ({ children }: Props): JSX.Element => {
   }, [copied]);
 
   return (
-    <pre className="shell-box">
+    <pre className="shell-box no-highlight">
       <div className="shell-box-top">
       </div>
       <code className="shell-box-code">{children}</code>

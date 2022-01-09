@@ -4,22 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-const asciidoc = require(`@asciidoctor/core`)()
-
-class CustomConverter {
-  constructor() {
-    this.baseConverter = asciidoc.Html5Converter.$new()
-  }
-
-  convert(node, transform) {
-    // if (node.getNodeName() === "table") {
-    //   return `<table class="table table-hover py-2">${node.getRows()}</table>`
-    // }
-
-    return this.baseConverter.convert(node, transform)
-  }
-}
-
 module.exports = {
   siteMetadata: {
     title: `Adoptium`,
@@ -34,12 +18,7 @@ module.exports = {
         path: `${__dirname}/src/asciidoc-pages`,
       },
     },
-    {
-      resolve: `gatsby-transformer-asciidoc`,
-      options: {
-        converterFactory: CustomConverter,
-      },
-    },
+    `gatsby-transformer-asciidoc`,
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {

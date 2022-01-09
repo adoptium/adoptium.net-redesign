@@ -1,5 +1,10 @@
 const baseUrl       = 'https://api.foojay.io';
 const distributions = [ 'microsoft', 'temurin', 'zulu', 'semeru_certified' ];
+export const oses = ['Linux', 'Alpine', 'Windows', 'macOS', 'AIX', 'Solaris'];
+export const arches = ['x64', 'x86', 'aarch64', 's390x', 'ppc64le', 'ppc64', 'arm', 'sparcv9'];
+export const packageTypes = ['JDK', 'JRE']
+export const versions = [ 17, 16, 11, 8 ];
+
 let pkgs = [];
 let selectedPkgs = [];
 
@@ -18,6 +23,8 @@ export function updateDownloadTable() {
         case 'windows': libc = 'c_std_lib'; break;
         case 'linux'  : libc = 'glibc'; break;
         case 'macos'  : libc = 'libc'; break;
+        case 'aix'    : libc = 'libc'; break;
+        case 'solaris': libc = 'libc'; break;
         case 'alpine' : libc = 'musl'; selectedOperatingSystem = 'linux'; break;
         default       : libc = ''; break;
     }
@@ -33,13 +40,6 @@ export function updateDownloadTable() {
             lc = pkg.lib_c_type == libc;
         }
 
-        let arc;
-        if (selectedArchitecture === 'any') {
-            arc = true;
-        } else {
-            arc = pkg.architecture == selectedArchitecture;
-        }
-
         let pt;
         if (selectedPackageType === 'any') {
             pt = true;
@@ -47,19 +47,12 @@ export function updateDownloadTable() {
             pt = pkg.package_type == selectedPackageType;
         }
         
-        let ver;
-        if (selectedVersion === 'any') {
-            ver = true;
-        } else {
-            ver = pkg.major_version == selectedVersion;
-        }
-        
         let temurin   = temurinSelected   ? pkg.distribution == 'temurin'   : false;
         let microsoft = microsoftSelected ? pkg.distribution == 'microsoft' : false;
         let zulu      = zuluSelected      ? pkg.distribution == 'zulu'      : false;
         let ibm       = ibmSelected       ? pkg.distribution == 'semeru_certified' : false;
 
-        return os && lc && arc && pt && ver && (temurin || microsoft || zulu || ibm);
+        return os && lc && pt && (temurin || microsoft || zulu || ibm);
 
     });
     updateDownloads();
@@ -166,19 +159,51 @@ function updateDownloads() {
     });
 }
 
-// Functions to collect packages using the foojay.io DiscoAPI
-export function collectAllPkgs(versions) {
+export function updateTable(handler, version, os, architecture) {
+    pkgs = []
+    version ? version : version = document.getElementById('version-filter').value;
+    os ? os : os = document.getElementById('os-filter').value;
+    architecture ? architecture : architecture = document.getElementById('arch-filter').value;
     let promises = [];
-    versions.forEach((version) => { promises.push(getAllPkgsForVersion(version).then((pkgsFound) => pkgsFound.forEach((pkg) => { pkgs.push(pkg); }))); });
-    Promise.all(promises).then(res => updateDownloadTable());
+    promises.push(getAllPkgsForVersion(version, os, architecture)
+        .then((pkgsFound) =>
+            pkgsFound.forEach((pkg) => { 
+                pkgs.push(pkg); 
+            })
+        )
+    );
+    Promise.all(promises).then( res => 
+        updateDownloadTable()
+    );
 }
     
-async function getAllPkgsForVersion(version) {
-    let params  = '?version=' + version;
+async function getAllPkgsForVersion(version, os, architecture) {
+    let params = '?'
+    if (version == 'any' ) {
+        versions.forEach((version) => {
+            params += '&version=' + version;
+        })
+    } else {
+        params += 'version=' + version;
+    }
+    if (os == 'any' ) {
+        oses.forEach((os) => {
+            params += '&operating_system=' + os.toLowerCase();
+        })
+    } else {
+        params += ('&operating_system=' + os)
+    }
+    if (architecture == 'any' ) {
+        arches.forEach((architecture) => {
+            params += '&architecture=' + architecture.toLowerCase();
+        })
+    } else {
+        params += ('&architecture=' + architecture)
+    }
     distributions.forEach((distro) => {
         params += ('&distro=' + distro);
     });
-    params += '&release_status=ga&latest=available&operating_system=windows&operating_system=linux&operating_system=macos&javafx_bundled=false&libc_type=libc&libc_type=c_std_lib&libc_type=glibc&libc_type=musl&architecture=x86&architecture=x64&architecture=aarch64';
+    params += '&release_status=ga&latest=available&javafx_bundled=false&libc_type=libc&libc_type=c_std_lib&libc_type=glibc&libc_type=musl';
     let   url       = baseUrl + '/disco/v2.0/packages' + params;
     let   json      = await getPkgs(url);
     const response  = JSON.parse(json);

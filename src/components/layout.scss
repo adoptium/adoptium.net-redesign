@@ -24,6 +24,10 @@ body {
         background-color: #aeadad97;
     }
 }
+
+.navbar {
+    background-color: #EE1A6D !important;
+}
   
 body.dark {
     -webkit-font-smoothing: antialiased;
@@ -42,9 +46,6 @@ body.dark {
       }
     a:active {
         color: var(--brand4);
-    }
-    .nav-link .dropdown-item {
-        color: var(--textNormal) !important;
     }
     .text-muted {
         color: var(--textNormal) !important;
@@ -65,9 +66,6 @@ body.dark {
         --bs-table-hover-color: #fff;
         color: #fff;
         border-color: #373b3e;
-    }
-    .navbar-light .navbar-nav .nav-link {
-        color: rgba(255, 255, 255, 0.55) !important;
     }
     .bg-light {
         --bs-bg-opacity: 1;

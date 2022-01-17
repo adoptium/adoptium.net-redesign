@@ -33,11 +33,10 @@ const Navbar = ({siteTitle}): JSX.Element => {
   };
 
   return (
-    <nav className="navbar navbar-expand-xl border-bottom navbar-light bg-light" style={{ height: '7rem', paddingTop: '1.25em', paddingBottom: '1.25em' }}>
+    <nav className="navbar navbar-expand-xl navbar-dark bg-transparent" style={{ height: '7rem', paddingTop: '1.25em', paddingBottom: '1.25em' }}>
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
-          <LogoLight style={{ height: '3em' }} className="light-mode-only" />
-          <LogoDark style={{ paddingLeft: '.2em', paddingRight: '.2em', height: '1.9em' }} className="dark-mode-only" />
+          <LogoDark style={{ paddingLeft: '.2em', paddingRight: '.2em', height: '1.9em' }} />
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar"
                 aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +44,7 @@ const Navbar = ({siteTitle}): JSX.Element => {
         </button>
 
         <div className="collapse navbar-collapse" id="main-navbar">
-          <ul className="navbar-nav bg-light me-auto mb-2 mb-md-0">
+          <ul className="navbar-nav bg-transparent me-auto mb-2 mb-md-0">
             <li className="nav-item">
               <ExactNavLink
                 to="/"
@@ -85,7 +84,7 @@ const Navbar = ({siteTitle}): JSX.Element => {
               <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Projects
               </Link>
-              <ul className="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+              <ul className="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
                 <li><ExactNavLink className="dropdown-item" to="/jmc">Eclipse Mission Control</ExactNavLink></li>
               </ul>
             </li>
@@ -93,13 +92,13 @@ const Navbar = ({siteTitle}): JSX.Element => {
               <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Further Information
               </Link>
-              <ul className="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+              <ul className="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
                 <li><ExactNavLink className="dropdown-item" to="/about">About</ExactNavLink></li>
                 <li><ExactNavLink className="dropdown-item" to="/support">Support</ExactNavLink></li>
                 <li><ExactNavLink className="dropdown-item" to="/members">Members</ExactNavLink></li>
                 <li><ExactNavLink className="dropdown-item" to="/sponsors">Sponsors</ExactNavLink></li>
-                <li><a className="dropdown-item" href="https://api.adoptium.net">API</a></li>
-                <li><a className="dropdown-item" href="https://blog.adoptium.net">Blog</a></li>
+                <li><a className="dropdown-item nav-link" href="https://api.adoptium.net">API</a></li>
+                <li><a className="dropdown-item nav-link" href="https://blog.adoptium.net">Blog</a></li>
                 <li><ExactNavLink className="dropdown-item" to="/supported-platforms">Supported Platforms</ExactNavLink></li>
               </ul>
             </li>

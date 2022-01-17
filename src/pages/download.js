@@ -5,8 +5,6 @@ import * as queryString from "query-string";
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
-const link="foo"
-
 const DownloadPage = ({ location }) => {
 	const { link } = queryString.parse(location.search);
 	return (

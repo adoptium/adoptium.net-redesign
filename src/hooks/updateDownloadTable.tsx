@@ -126,7 +126,7 @@ function updateDownloads() {
         var spanArchitecture = document.createElement('span');
         spanArchitecture.appendChild(architectureText);
         cellArchitecture.appendChild(spanArchitecture);
-        
+
         
         // Archive Type
         var cellArchiveType       = row.insertCell();
@@ -145,15 +145,11 @@ function updateDownloads() {
         aArchiveType.onclick = async function() {             
             let promise = getDownloadLink(pkg.id, pkg.directly_downloadable);
             promise.then(function(uri) {
-            let pkgUri = uri;
-            if (pkgUri == null || pkgUri === undefined) { return; }
-            var link      = document.createElement('a');
-            link.href     = pkgUri;
-            link.download = pkgUri.substr(pkgUri.lastIndexOf('/') + 1);
-            link.click();
+                let pkgUri = `/download?link=${uri}`;
+                window.location.href = pkgUri
             }, function() { 
-            console.log("Error: Problem getting download link");
-            pkgUri = null;
+                console.log("Error: Problem getting download link");
+                pkgUri = null;
             });
         }
     });

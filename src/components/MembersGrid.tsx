@@ -11,7 +11,9 @@ const array = members.members
                     (member, i): string | JSX.Element =>
                         member && (
                             <div className="col-lg-4 col-md-12 mt-5">
-                            <a target="_blank" href={member.url}><img src={`/images/${member.logo}`} style={{width: '10rem'}} alt={`${member.name} logo`}/></a>
+                                <a target="_blank" href={member.url}>
+                                    <img src={`/images/${member.logo}`} style={{width: '10rem'}} alt={`${member.name} logo`}/>
+                                </a>
                             </div>
                     )
                 )}

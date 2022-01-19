@@ -1,9 +1,7 @@
+import { capitalize } from '../util/capitalize';
+
 const baseUrl       = 'https://api.foojay.io';
-const distributions = [ 'microsoft', 'temurin', 'zulu', 'semeru_certified' ];
-export const oses = ['Linux', 'Alpine', 'Windows', 'macOS', 'AIX', 'Solaris'];
-export const arches = ['x64', 'x86', 'aarch64', 's390x', 'ppc64le', 'ppc64', 'arm', 'sparcv9'];
-export const packageTypes = ['JDK', 'JRE']
-export const versions = [ 17, 16, 11, 8 ];
+import { oses, arches, packageTypes, versions, marketplaceDistributions } from '../util/defaults'
 
 let pkgs = [];
 let selectedPkgs = [];
@@ -110,7 +108,7 @@ function updateDownloads() {
         
         
         // Operating System
-        let os = pkg.lib_c_type == 'musl' ? 'Alpine' : pkg.operating_system == 'macos' ? 'MacOS' : capitalize(pkg.operating_system);
+        let os = pkg.lib_c_type == 'musl' ? 'Alpine Linux' : pkg.operating_system == 'macos' ? 'MacOS' : capitalize(pkg.operating_system);
         var cellOperatingSystem       = row.insertCell();
         cellOperatingSystem.className = 'align-middle';
         var operatingSystemText = document.createTextNode(os);
@@ -148,7 +146,6 @@ function updateDownloads() {
                 let pkgUri = `/download?link=${uri}`;
                 window.location.href = pkgUri
             }, function() { 
-                console.log("Error: Problem getting download link");
                 pkgUri = null;
             });
         }
@@ -196,7 +193,7 @@ async function getAllPkgsForVersion(version, os, architecture) {
     } else {
         params += ('&architecture=' + architecture)
     }
-    distributions.forEach((distro) => {
+    marketplaceDistributions.forEach((distro) => {
         params += ('&distro=' + distro);
     });
     params += '&release_status=ga&latest=available&javafx_bundled=false&libc_type=libc&libc_type=c_std_lib&libc_type=glibc&libc_type=musl';
@@ -250,10 +247,6 @@ function normalizeJavaVersion(javaVersion) {
     version = version.substring(0, version.indexOf('-ea'));
     }      
     return version;
-}
-
-function capitalize(text) {
-    return text[0].toUpperCase() + text.slice(1);
 }
 
 function getVendorForDistribution(distribution) {

@@ -31,6 +31,7 @@
     "gatsby-transformer-remark": "^5.5.2",
     "gatsby-transformer-sharp": "^4.5.0",
     "highlight.js": "^11.4.0",
+    "moment": "^2.29.1",
     "prop-types": "^15.7.2",
     "query-string": "^7.1.0",
     "react": "^17.0.1",
@@ -39,7 +40,8 @@
     "react-hubspot-form": "^1.3.7",
     "react-switch": "^6.0.0",
     "react-tabs": "^3.2.3",
-    "sass": "1.48.0"
+    "sass": "1.48.0",
+    "ua-parser-js": "^1.0.2"
   },
   "devDependencies": {
     "prettier": "2.5.1"

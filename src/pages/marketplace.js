@@ -6,6 +6,7 @@ import Seo from "../components/Seo"
 import VendorSelector from "../components/VendorSelector"
 import DownloadDropdowns from "../components/DownloadDropdowns"
 import DownloadTable from "../components/DownloadTable"
+import { updateTable } from '../hooks';
 
 const DownloadPage = () => (
   <Layout>
@@ -21,11 +22,18 @@ const DownloadPage = () => (
           <div className="row align-items-center pt-3">
             <div className="col-6 col-md-4">
               	<StaticImage
-									src="../images/aqavit.png"
+									src="../images/aqavit-light.png"
                   width={150}
 									formats={["AUTO", "WEBP"]}
 									alt="AQAvit logo"
-									className="img-fluid"
+									className="img-fluid light-mode-only"
+								/>
+              	<StaticImage
+									src="../images/aqavit-dark.png"
+                  width={150}
+									formats={["AUTO", "WEBP"]}
+									alt="AQAvit logo"
+									className="img-fluid dark-mode-only"
 								/>
             </div>
             <div className="col-12 col-sm-6 col-md-8 ">
@@ -38,7 +46,7 @@ const DownloadPage = () => (
         </div>
       </div>
       <VendorSelector/>
-      <DownloadDropdowns/>
+      <DownloadDropdowns updaterAction={updateTable}/>
       <DownloadTable/>
     </section>
   </Layout>

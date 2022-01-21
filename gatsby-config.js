@@ -35,6 +35,8 @@ module.exports = {
         ]
       }
     },
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-remove-fingerprints`,
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,

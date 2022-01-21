@@ -7,14 +7,25 @@ let pkgs = [];
 let selectedPkgs = [];
 
 export function updateDownloadTable() {
-    let microsoftSelected       = document.getElementById('vendor-microsoft').checked;
-    let temurinSelected         = document.getElementById('vendor-adoptium').checked;
-    let zuluSelected            = document.getElementById('vendor-azul').checked;
-    let ibmSelected             = document.getElementById('vendor-ibm').checked;
-    let selectedOperatingSystem = document.getElementById('os-filter').value;
-    let selectedArchitecture    = document.getElementById('arch-filter').value
-    let selectedPackageType     = document.getElementById('package-type-filter').value;
-    let selectedVersion         = document.getElementById('version-filter').value;
+    let selectedOperatingSystem = 'any';
+    let selectedArchitecture = 'any';
+    let selectedPackageType = 'any';
+    let selectedVersion = 'any';
+    let microsoftSelected = true
+    let temurinSelected = true
+    let zuluSelected = true
+    let ibmSelected = true
+
+    if (typeof document !== `undefined`) {
+        microsoftSelected       = document.getElementById('vendor-microsoft').checked;
+        temurinSelected         = document.getElementById('vendor-adoptium').checked;
+        zuluSelected            = document.getElementById('vendor-azul').checked;
+        ibmSelected             = document.getElementById('vendor-ibm').checked;
+        selectedOperatingSystem = document.getElementById('os-filter').value;
+        selectedArchitecture    = document.getElementById('arch-filter').value
+        selectedPackageType     = document.getElementById('package-type-filter').value;
+        selectedVersion         = document.getElementById('version-filter').value;
+    }
 
     let libc;
     switch(selectedOperatingSystem) {

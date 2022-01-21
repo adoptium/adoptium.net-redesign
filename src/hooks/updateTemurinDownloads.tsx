@@ -106,7 +106,9 @@ function updateDownloadTable() {
             release.binaries.sort((binaryA, binaryB) => binaryA.type > binaryB.type ? 1 : binaryA.type < binaryB.type ? -1 : 0);
         });
     })
-    updateTable(releases)
+    if (typeof document !== `undefined`) {
+        updateTable(releases)
+    }
 }
 
 function detectEA(version) {

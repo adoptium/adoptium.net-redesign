@@ -17,7 +17,7 @@ const EditLink = ({ relativePath }: Props) => {
     relativePath = relativePath.replace(/\/$/, "");
   }
 
-  const href = `https://github.com/gdams/adoptium/edit/main/src/asciidoc-pages${relativePath}.adoc`;
+  const href = `https://github.com/adoptium/website-v2/edit/main/src/asciidoc-pages${relativePath}.adoc`;
 
   return (
     <div className="mx-auto">

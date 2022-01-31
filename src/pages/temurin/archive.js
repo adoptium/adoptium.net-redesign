@@ -1,9 +1,7 @@
 import * as React from "react"
 import { Link } from 'gatsby';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowCircleRight
-} from '@fortawesome/free-solid-svg-icons'
+
+import { FaArrowCircleRight } from 'react-icons/fa';
 
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
@@ -31,10 +29,10 @@ const TemurinReleases = () => (
             </div>
             <div className="btn-group">
               <Link to="/temurin/releases" className="btn btn-primary m-3">
-                Latest release <FontAwesomeIcon icon={faArrowCircleRight} size="1x" style={{ marginLeft: '.3em' }} />
+                Latest release <FaArrowCircleRight />
               </Link>
               <Link to="/temurin/nightly" className="btn btn-secondary m-3">
-                Nightly builds <FontAwesomeIcon icon={faArrowCircleRight} size="1x" style={{ marginLeft: '.3em' }} />
+                Nightly builds <FaArrowCircleRight />
               </Link>
             </div>
           </div>

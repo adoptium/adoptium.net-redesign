@@ -1,11 +1,8 @@
 import React, { MutableRefObject, useRef } from 'react';
 import { Link } from "gatsby";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowCircleRight,
-  faArchive,
-  faDownload
-} from '@fortawesome/free-solid-svg-icons'
+
+import { FaArrowCircleRight, FaArchive, FaDownload } from 'react-icons/fa';
+
 import { detectOS, UserOS } from '../util/detectOS';
 import { fetchLatestForOS, useOnScreen } from '../hooks';
 import { defaultVersion } from '../util/defaults'
@@ -49,21 +46,21 @@ const LatestTemurin = (): JSX.Element => {
                 {binary ? (
                   <>
                     <a href={`/download?link=${binary.link}`} className="btn btn-lg btn-primary mt-3 py-3">
-                        <FontAwesomeIcon icon={faDownload} size="1x" style={{ marginRight: '.3em' }} /> Latest release
+                        <FaDownload /> Latest release
                         <br/>
                         <span style={{ fontSize: '.6em'}} className="font-weight-light">{binary.release_name}</span>
                     </a>
                     <Link to="/temurin/releases" className="btn btn-secondary mt-3">
-                        Other platforms <FontAwesomeIcon icon={faArrowCircleRight} size="1x" style={{ marginLeft: '.3em' }} />
+                        Other platforms <FaArrowCircleRight />
                     </Link>
                   </>
                 ) :
                   <Link to="/temurin/releases" className="btn btn-lg btn-primary mt-3 py-3">
-                      <FontAwesomeIcon icon={faDownload} size="1x" style={{ marginRight: '.3em' }} /> Latest releases
+                      <FaDownload /> Latest releases
                   </Link>
                 }
                 <Link to="/temurin/archive" className="btn btn-secondary mt-3">
-                    Release archive <FontAwesomeIcon icon={faArchive} size="1x" style={{ marginLeft: '.3em' }} />
+                    Release archive <FaArchive />
                 </Link>
             </div>
         </div>

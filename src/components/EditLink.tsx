@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from "gatsby";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faPen
-} from '@fortawesome/free-solid-svg-icons'
+import { FaPen } from 'react-icons/fa';
 
 type Props = {
   relativePath?: string;
@@ -23,7 +20,7 @@ const EditLink = ({ relativePath }: Props) => {
     <div className="mx-auto">
       <a href={href} target="_blank">
         Edit this page on GitHub
-        <FontAwesomeIcon icon={faPen} size="1x" style={{ marginLeft: '.3em' }} />
+        <FaPen size={15} style={{ marginLeft: '.3em' }} />
       </a>
     </div>
   );

@@ -1,9 +1,7 @@
 import * as React from "react"
 import { Link } from 'gatsby';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowCircleRight
-} from '@fortawesome/free-solid-svg-icons'
+
+import { FaArrowCircleRight } from 'react-icons/fa';
 
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
@@ -21,7 +19,7 @@ const TemurinReleases = () => (
           <div className="row align-items-center pt-3">
             <div className="btn-group-vertical col-6 mx-auto">
                 <Link to="/temurin/archive" className="btn btn btn-primary mt-3">
-                    Build archive <FontAwesomeIcon icon={faArrowCircleRight} size="1x" style={{ marginLeft: '.3em' }} />
+                    Build archive <FaArrowCircleRight />
                 </Link>
             </div>
           </div>

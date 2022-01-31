@@ -1,5 +1,4 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
@@ -14,18 +13,16 @@ const TemurinHome = () => (
           <h1 className="fw-light">Eclipse Temurin</h1>
           <div className="row align-items-center pt-3">
             <div className="col-6 col-md-4">
-              	<StaticImage
+              	<img
                     src="../../images/temurin-light.png"
                     width={150}
-                    formats={["AUTO", "WEBP"]}
-                    alt="AQAvit logo"
+                    alt="Temurin logo"
                     className="img-fluid light-mode-only"
                 />
-              	<StaticImage
+              	<img
                     src="../../images/temurin-dark.png"
                     width={150}
-                    formats={["AUTO", "WEBP"]}
-                    alt="AQAvit logo"
+                    alt="Temurin logo"
                     className="img-fluid dark-mode-only"
                 />
             </div>

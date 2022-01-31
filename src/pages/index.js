@@ -33,11 +33,9 @@ const IndexPage = () => (
 							</div>
 							<div className="m-5">
 								<StaticImage
-									src="../images/gatsby-astronaut.png"
+									src="../images/adoptium-icon.png"
 									width={800}
-									quality={95}
-									formats={["AUTO", "WEBP"]}
-									alt="A Gatsby astronaut"
+									alt="Adoptium Icon"
 									className="img-fluid"
 								/>
 							</div>

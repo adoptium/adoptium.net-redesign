@@ -1,5 +1,7 @@
 # Adoptium Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/359195e4-6832-4457-b67c-e79ddaf8c549/deploy-status)](https://app.netlify.com/sites/eclipsefdn-adoptium-v2/deploys)
+
 This repository contains the source code for https://adoptium.net.
 
 The main branch contains the source code necessary for development. The production website is hosted on Netlify which also supports pull request staging.

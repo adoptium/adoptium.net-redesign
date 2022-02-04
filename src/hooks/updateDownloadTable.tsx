@@ -64,7 +64,9 @@ export function updateDownloadTable() {
         return os && lc && pt && (temurin || microsoft || zulu || ibm);
 
     });
-    updateDownloads();
+    if (typeof document !== `undefined`) {
+        updateDownloads();
+    }
 }
 
 function updateDownloads() {

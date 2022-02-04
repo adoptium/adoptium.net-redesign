@@ -33,7 +33,7 @@ const TemurinHome = () => (
                 for general use across the Java ecosystem.
               </p>
             </div>
-            <LatestTemurin />
+            <LatestTemurin page="temurin" />
           </div>
         </div>
       </div>

@@ -204,11 +204,15 @@ function updateTable(releases) {
 
                 var downloadLinkCell = downloadRow.insertCell();
                 downloadLinkCell.className = 'align-middle'
-                var archiveTypeText = document.createTextNode(binary.installer_extension);
+                var archiveTypeIcon = document.createElement('i');
+                archiveTypeIcon.className = 'fa fa-download';
+                archiveTypeIcon.ariaHidden = true;
+                var archiveTypeText = document.createTextNode('\u00A0' + binary.installer_extension);
                 var aArchiveType = document.createElement('a');
                 aArchiveType.href = `/download?link=${binary.installer_link}`
                 aArchiveType.className = 'btn btn-primary';
                 aArchiveType.style.width = '6em';
+                aArchiveType.appendChild(archiveTypeIcon);
                 aArchiveType.appendChild(archiveTypeText);
                 downloadLinkCell.appendChild(aArchiveType);
             }
@@ -243,11 +247,15 @@ function updateTable(releases) {
 
             var downloadLinkCell = downloadRow.insertCell();
             downloadLinkCell.className = 'align-middle'
-            var archiveTypeText = document.createTextNode(binary.extension);
+            var archiveTypeText = document.createTextNode('\u00A0' + binary.extension);
             var aArchiveType = document.createElement('a');
+            var archiveTypeIcon = document.createElement('i');
+            archiveTypeIcon.className = 'fa fa-download';
+            archiveTypeIcon.ariaHidden = true;
             aArchiveType.href = `/download?link=${binary.link}`
             aArchiveType.className = 'btn btn-primary';
             aArchiveType.style.width = '6em';
+            aArchiveType.appendChild(archiveTypeIcon);
             aArchiveType.appendChild(archiveTypeText);
             downloadLinkCell.appendChild(aArchiveType);
         });
@@ -258,7 +266,7 @@ function fetchExtension (filename) {
     let extension = `.${filename.split('.').pop()}`;
     // Workaround to prevent extension returning as .gz
     if (extension == '.gz') {
-      extension = '.tar.gz';
+      extension = 'tar.gz';
     }
     return extension;
 }

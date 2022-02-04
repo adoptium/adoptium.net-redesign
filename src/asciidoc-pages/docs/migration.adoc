@@ -1,5 +1,6 @@
 = Migration Guide
 :page-authors: gdams, karianna, SueChaplain, hendrikebbers, sxa555, ParkerM, jiekang
+:icons: font
 
 == Migrating to Eclipse Temurin
 
@@ -21,23 +22,23 @@ them.
 [cols="35%,25%,20%,20%",options="header",]
 |=======================================================================
 |Oracle JDK 8 proprietary component |Alternative component |OpenJDK 8 |OpenJDK 11
-|Java Web Start |link:#_icedtea-web[IcedTea-Web] |  ✔️  |  ✖️   
-|JavaFX |link:#_openjfx[OpenJFX] |  ✖️    |  ✔️  
+|Java Web Start |link:#_icedtea_web[IcedTea-Web] | icon:check[] |  icon:times[]   
+|JavaFX |link:#_openjfx[OpenJFX] |  icon:times[]    |  icon:check[]  
 |T2K font rendering engine
-|link:#_freetype-font-rendering-library[Freetype] |  ✔️   |  ✔️  
-|Monotype Lucida fonts |link:#_relicensed-lucida-fonts[Relicensed Lucida
-fonts] |  ✖️    (coming soon) |  ✖️    (coming soon)
-|Ductus 2D renderer |link:#_pisces-and-marlin[Pisces/Marlin] |  ✔️   (Pisces)
-|  ✔️   (Marlin)
-|Kodac Color Matching System (KCMS) library |link:#_lcms[LCMS] |  ✔️   |  ✔️  
-|SNMP |Use link:#_jmx[JMX] (or SNMP4J) |  ✔️   (not bundled) |  ✔️   (not
+|link:#_freetype_font_rendering_library[Freetype] |  icon:check[]   |  icon:check[]  
+|Monotype Lucida fonts |link:#_relicensed_lucida_fonts[Relicensed Lucida
+fonts] |  icon:times[]    (coming soon) |  icon:times[]    (coming soon)
+|Ductus 2D renderer |link:#_pisces_and_marlin[Pisces/Marlin] |  icon:check[]   (Pisces)
+|  icon:check[]   (Marlin)
+|Kodac Color Matching System (KCMS) library |link:#_lcms[LCMS] |  icon:check[]   |  icon:check[]  
+|SNMP |Use link:#_jmx[JMX] (or SNMP4J) |  icon:check[]   (not bundled) |  icon:check[]   (not
 bundled)
-|Sound drivers |Use link:#_windows-sound-drivers[Windows sound drivers]
-|  ✔️   (not bundled) |  ✔️   (not bundled)
-|Java Flight Recorder (JFR) |link:#_java-flight-recorder[Java Flight
-Recorder] |  ✔️   |  ✔️  
-|Java Mission Control (JMC) |Use link:#_eclipse-mission-control[Eclipse
-Mission Control] |  ✔️   |  ✔️  
+|Sound drivers |Use link:#_windows_sound_drivers[Windows sound drivers]
+|  icon:check[]   (not bundled) |  icon:check[]   (not bundled)
+|Java Flight Recorder (JFR) |link:#_java_flight_recorder[Java Flight
+Recorder] |  icon:check[]   |  icon:check[]  
+|Java Mission Control (JMC) |Use link:#_eclipse_mission_control[Eclipse
+Mission Control] |  icon:check[]   |  icon:check[]  
 |=======================================================================
 
 === IcedTea-Web

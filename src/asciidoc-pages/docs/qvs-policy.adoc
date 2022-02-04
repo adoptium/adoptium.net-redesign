@@ -1,6 +1,6 @@
 = AQAvit Quality Verification Suite
 :description: Adoptium QVS Policy
-:keywords: adoptium AQAvit quality policy
+:keywords: Adoptium AQAvit quality policy
 :orgname: Eclipse Adoptium
 :lang: en
 :page-authors: tellison

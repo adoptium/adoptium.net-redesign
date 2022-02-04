@@ -17,6 +17,8 @@ jobs:
 
     - id: files
       uses: jitterbit/get-changed-files@v1
+      
+    - run: pip3 install bs4
 
     - run: |
         current_authors=$(grep ':page-authors:' ${changed_file} | sed -n -e 's/^.*page-authors: //p')

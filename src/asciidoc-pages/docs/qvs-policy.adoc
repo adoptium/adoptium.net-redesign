@@ -12,6 +12,10 @@ is the quality evaluation project for Java SE runtimes and associated technology
 
 == AQAvit Software Product Verification
 
+Eclipse AQAvit tests are made
+https://projects.eclipse.org/projects/adoptium.aqavit/developer[available to the public^]
+at no charge as open source licensed software. You can fork, copy or modify the AQAvit software subject to the terms of the software license.
+
 Nominated
 https://github.com/adoptium/aqa-tests/releases[releases of the AQAvit quality verification suite^]
 (QVS) are available under the Eclipse Foundation Quality Verification Suite License (QVSL). A software product will be deemed to be “verified” by the AQAvit QVS if it fully and completely meets and satisfies all requirements of the AQAvit QVS as described in the QVSL.
@@ -20,9 +24,7 @@ It is not necessary to be an Adoptium working group member to produce an AQAvit 
 
 == Factual Statements about AQAvit testing
 
-Eclipse AQAvit tests are made
-https://projects.eclipse.org/projects/adoptium.aqavit/developer[available to the public^]
-at no charge as open source licensed software. You can run the AQAvit test suites and make factually correct statements about the results. You can fork, copy or modify the AQAvit software subject to the terms of the software license.
+Anyone can run the AQAvit test suites and make factually correct statements about the results.
 
 “AQAvit” is a registered trademark of the Eclipse Foundation and is managed under the
 https://www.eclipse.org/legal/logo_guidelines.php[Eclipse Foundation Guidelines for Eclipse Logos & Trademarks Policy^].

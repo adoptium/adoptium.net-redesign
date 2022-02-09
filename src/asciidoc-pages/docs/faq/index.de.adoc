@@ -1,4 +1,4 @@
-= Frequently Asked Questions
+= Häufig gestellte Fragen
 :page-authors: gdams, karianna, sxa555, aahlenst, sxa, tellison, kemitix
 
 We have completed our first releases at Eclipse Temurin and will be
@@ -8,7 +8,7 @@ https://adoptium.net/slack.html[slack instance] or via an issue in the
 https://github.com/adoptium/adoptium-support[support channel] if your
 question is not covered by one of the entries below.
 
-== Where are the latest JDKs?
+== Wo sind die neuesten JDKs?
 
 Most of the Eclipse Temurin builds with HotSpot for 8u322-b06, 11.0.14+9
 and jdk-17.0.2+8 are now available on this site.

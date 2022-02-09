@@ -1,6 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import {Link, Trans, useTranslation, useI18next} from 'gatsby-plugin-react-i18next';
 // import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 // import Switch from "react-switch";
 
@@ -18,6 +18,8 @@ const ExactNavLink = props => (
 )
 
 const Navbar = ({siteTitle}): JSX.Element => {
+  const {languages, changeLanguage} = useI18next();
+  const {t} = useTranslation();
 
   // const handleThemeOnClick = (
   //   toggleTheme: Function,
@@ -49,7 +51,7 @@ const Navbar = ({siteTitle}): JSX.Element => {
               <ExactNavLink
                 to="/"
               >
-                Home
+                {t('Home')}
               </ExactNavLink>
             </li>
             <li className="nav-item">
@@ -91,9 +93,9 @@ const Navbar = ({siteTitle}): JSX.Element => {
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <ExactNavLink className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Further Information
-              </Link>
+              </ExactNavLink>
               <ul className="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
                 <li><ExactNavLink className="dropdown-item" to="/about">About</ExactNavLink></li>
                 <li><ExactNavLink className="dropdown-item" to="/support">Support</ExactNavLink></li>
@@ -106,6 +108,20 @@ const Navbar = ({siteTitle}): JSX.Element => {
             </li>
           </ul>
         </div>
+        <ul className="languages">
+          {languages.map((lng) => (
+            <li key={lng}>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  changeLanguage(lng);
+                }}>
+                {lng}
+              </a>
+            </li>
+          ))}
+        </ul>
         {/* <ThemeToggler>
           {({
             theme,

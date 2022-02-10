@@ -70,14 +70,14 @@ const Navbar = ({siteTitle}): JSX.Element => {
             </li>
             <li className="nav-item">
               <ExactNavLink
-                to="/docs/migration"
+                to="/docs/migration/"
               >
                 Migration Guide
               </ExactNavLink>
             </li>
             <li className="nav-item">
               <ExactNavLink
-                to="/docs/faq"
+                to="/docs/faq/"
               >
                 FAQ
               </ExactNavLink>

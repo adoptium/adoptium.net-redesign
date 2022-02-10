@@ -1,114 +1,89 @@
 = Häufig gestellte Fragen
-:page-authors: gdams, karianna, sxa555, aahlenst, sxa, tellison, kemitix
+:page-authors: gdams
 
-We have completed our first releases at Eclipse Temurin and will be
-updating this FAQ as and when things are completed and available. If you
-want to talk to us or ask additional questions the best place is our
-https://adoptium.net/slack.html[slack instance] or via an issue in the
-https://github.com/adoptium/adoptium-support[support channel] if your
-question is not covered by one of the entries below.
+Wir haben unsere ersten Veröffentlichungen von Eclipse Temurin abgeschlossen und werden
+diese FAQ aktualisieren, sobald die Dinge fertiggestellt und verfügbar sind. Falls Ihre
+Frage nicht durch die unten stehenden Einträge beantwortet wird oder Sie
+direkt mit uns sprechen möchten bzw. zusätzliche Fragen haben, ist der beste Ort unser
+https://adoptium.net/slack.html[Slack-Channel] oder über einen Issue im
+https://github.com/adoptium/adoptium-support[Support-Kanal].
+
 
 == Wo sind die neuesten JDKs?
 
-Most of the Eclipse Temurin builds with HotSpot for 8u322-b06, 11.0.14+9
-and jdk-17.0.2+8 are now available on this site.
+Die meisten der Eclipse Temurin builds mit HotSpot für 8u322-b06, 11.0.14+9 und
+jdk-17.0.2+8 sind nun auf dieser Seite verfügbar.
 
-== What happened to AdoptOpenJDK?
+== Was ist mit AdoptOpenJDK passiert?
 
-Short answer: The project got so big that we chose to
-https://projects.eclipse.org/projects/adoptium[move under the Eclipse Foundation] as
-https://blog.adoptopenjdk.net/2020/06/adoptopenjdk-to-join-the-eclipse-foundation/[announced last year] to provide us some additional stability for the future!
+Kurze Antwort: Das Projekt ist dermaßen gewachsen und um die Stabilität des Projektes in der Zukunft zu gewährleisten, haben wir uns entschieden
+es in der https://projects.eclipse.org/projects/adoptium[Eclipse Foundation unterzubringen]
+, https://blog.adoptopenjdk.net/2020/06/adoptopenjdk-to-join-the-eclipse-foundation/[wie bereits Ende letzten Jahres angekündigt].
 
-Longer answer: The builds you know as AdoptOpenJDK are now "Eclipse
-Temurin by Adoptium"(https://blog.adoptium.net/2021/08/adoptium-celebrates-first-release/[release blog post]) Don’t worry though - despite the branding changes it is the
-same open build processes, AQAvit test suites and primarily the same
-team producing them as before, but there are link:/members[more larger companies] now involved in the working group.
+Längere Antwort: Die Builds, welche Sie als AdoptOpenJDK kennen, sind jetzt "Eclipse Temurin by Adoptium"(https://blog.adoptium.net/2021/08/adoptium-celebrates-first-release/[release blog post])
+Aber keine Sorge - trotz der Änderungen im Branding sind es die gleichen offenen Build-Prozesse, AQAvit-Test-Suites und hauptsächlich das gleiche Team, welches die builds erstellt.
+Allerdings sind jetzt link:/members[mehr größere Unternehmen] an der Arbeitsgruppe beteiligt.
 
-== Why doesn’t the AdoptOpenJDK site redirect here?
+== Warum wird man von der AdoptOpenJDK Seite nicht direkt hierhin umgeleitet?
 
-Two reasons. Firstly: Since users are still transitioning we have left
-the old site working as it did before with the same layout and buttons
-as before. The links on the old site will give you the latest Temurin
-builds, but this should not be relied on and users should begin to
-migrate over to using the Adoptium API and website to download Temurin
-binaries. There are some variants which are not yet available at
-Adoptium, and these can link:#will-the-migration-break-my-api-links[still be obtained] through the old site, so we are not removing the old site as this would result
-in some functionality disappearing with no warning. It’s not ideal, and
-causes some SEO confusion, but we feel it is the right option for now.
-In the future the Adoptium web site will be more than just Temurin so a
-pure redirect at between the domains would not ba appropriate.
+Aus folgenden zwei Gründen, erstens: Da noch immer Benutzer in der Umstellungsphase sind, haben wir die alte Seite so belassen, wie sie war, mit dem gleichen Layout und Buttons.
+Über die Links auf der alten Website erhalten Sie die neuesten Temurin builds. Allerdings sollte man sich nicht darauf verlassen sondern lieber auf die Adoptium-API und -Webseite
+umsteigen um Temurin Binaries herunterzuladen. Es gibt einige Varianten, welche noch nicht auf der Adoptium-Webseite verfügbar sind. Diese lassen sich jedoch über link:#will-the-migration-break-my-api-links[weiterhin] über die alte Website beziehen,
+weshalb wir diese nicht entfernen, da dieses dazu führen würde, dass einige Funktionen ohne Vorwarnung verschwinden würden.
+Dieses ist nicht optimal und führt zu einer gewissen SEO-Verwirrung, aber wir denken, dass es im MOment die richtige Option ist.
+In Zukunft wird die Adoptium-Webseite mehr als nur Temurin anbieten, weswegen eine reine Weiterleitung zwischen den Domains nicht angemessen wäre.
 
-Secondly: As alluded to at the end of the previous paragraph, some
-things are not available at Adoptium.net and so a the old web site is
-retained without an explicit redirect in order to continue hosting them
-at present. This includes things like the https://adoptopenjdk.net/upstream.html[Upstream builds] and https://adoptopenjdk.net/icedtea-web.html[IcedTea-WEB]. We would expect to get lots of complaints if this stuff just disappeared from view and
-that would not be the best option for our customers.
+Zweitens: Wie bereits im vorigen Absatz erwähnt, sind einige Dinge nicht auf Adoptium.net verfügbar und aus diesem Grund wird die alte Webseite ohne explizite Weiterleitung
+beibehalten, um diese Dinge weiterhin zur Verfügung zu stellen. Dazu gehören Sachen wie https://adoptopenjdk.net/upstream.html[Upstream builds] und https://adoptopenjdk.net/icedtea-web.html[IcedTea-WEB].
+Würden diese Sachen einfach verschwinden, so wäre das für unsere Kunden nicht beste Option und wir würden eine Menge Beschwerden erwarten.
 
-== What is this "Eclipse Temurin" name?
+== Was bedeutet der Name "Eclipse Temurin"?
 
-This is the project and brand name for the binaries that the Eclipse
-Foundation produces. You can think of these as the successor binaries to
-AdoptOpenJDK. However, it is important to note that these binaries are
-just one of many that will eventually be in the
-https://github.com/adoptium/adoptium/issues/7[Eclipse Adoptium Marketplace].
-While we appreciate that the Adoptium/Temurin name split
-is more confusing that just "Adoptium", this is similar to how other
-vendors brand their binaries, e.g. Amazon has Corretto, Azul has Zulu
-(and others). The "Adoptium" project and working group will deal with
-more than just Temurin so the distinction is important to maintain.
+Dies ist der Projekt- und Markenname für die Binaries, welche die Eclipse Foundation produziert.
+Sie können diese Binaries als Nachfolger von AdoptOpenJDK Binaries betrachten. Es ist allerdings zu beachten, dass diese Binaries nur einige von vielen sind, welche schließlich
+im https://github.com/adoptium/adoptium/issues/7[Eclipse Adoptium Marketplace] zur Verfügung stehen werden.
+Wir verstehen, dass die Aufteilung des Namens in Adoptium/Temurin verwirrender ist als einfach nur "Adoptium", allerdings ist dieses auch ähnlich wie bei anderen Anbietern,
+z.B. Amazon mit Corretto, Azul mit Zulu und andere. Das "Adoptium"-Projekt und die Arbeitsgruppe werden sich mit mehr als nur Temurin befassen weswegen es wichtig ist, diese
+Unterscheidung beizubehalten.
 
-== Where are the OpenJ9 builds?
+== Wo sind ei OpenJ9 builds?
 
-The transition to Adoptium means we have unfortunately not been able to
-continue to distribute builds of Eclipse OpenJ9. IBM has now taken them
-over and they are now available as
-"https://developer.ibm.com/languages/java/semeru-runtimes/[IBM Semeru]".
-There is no need to be concerned about the change - it is still free.
+Der Übergang zu Adoptium bedeutet leider, dass wir nicht mehr in der Lage sind die Builds von Eclipse OpenJ9 anzubieten.
+Dieses hat nun IBM übernommen und dort sind sie nun verfügbar als "https://developer.ibm.com/languages/java/semeru-runtimes/[IBM Semeru]".
+Es gibt keinen Grund, sich über diese Änderung Sorgen zu machen - auch diese Distribution ist immer noch kostenlos verfügbar.
 
-== Where are the docker images?
+== Wo sind die Docker-Images?
 
-Due to the limited amount of people we have working on the project,
-maintaining the wide variety of docker images that we provided from
-AdoptOpenJDK was becoming unsustainable. For that reason we are
-releasing a cut down set of docker images for Temurin. For those users
-who want a containerized Linux distribution that we don’t provide an
-image for, use
-https://blog.adoptium.net/2021/08/using-jlink-in-dockerfiles/[this
-guide].
+Aufgrund der begrenzten Anzahl von Personen, welche an dem Projekt arbeiten, ist die Pflege der zahlreichen Docker-Images, welche wir on AdoptOpenJDK zur Verfügung gestellt
+haben, nicht mehr tragbar. Aus diesem Grund werden wir ein reduziertes Set von Docker-Images für Temurin bereitstellen.
+Jene Benutzer, welche sich eine containerbasierte Linux-Distribution wünschen, für die wir kein Image zur Verfügung stellen, verweisen wir an https://blog.adoptium.net/2021/08/using-jlink-in-dockerfiles/[diese
+Anleitung].
 
-== Where are the Linux RPM/DEB packages?
+== Wo sind die Linux RPM/DEB Pakete?
 
-Linux Installers are available at packages.adoptium.net. For more
-information us link:/installation/linux[this guide].
+Linux-Installer sind unter packages.adoptium.net verfügbar.
+Weitere Informationen finden Sie in link:/installation/linux[dieser Anleitung].
 
-== Why do the packages not include IcedTea-Web?
+== Warum beeinhalten die Pakete nicht IcedTea-Web?
 
-The agreements that we have since moving under the Eclipse Foundation
-mean that we can no longer include IcedTea-Web in our installers.
-However, you can still add the functionality if you require it using the
-https://blog.adoptopenjdk.net/2018/10/using-icedtea-web-browser-plug-in-with-adoptopenjdk/[instructions
-here].
+Die Vereinbarungen, welche wir seit dem Umzug zur Eclipse Foundation getroffen haben, besagen, dass wir IcedTea-Web nicht mehr in unsere Installationsprogramme
+aufnehmen können. Sie können diese Funktionalität jedoch immer noch, falls benötigt, hinzufügen, indem Sie https://blog.adoptopenjdk.net/2018/10/using-icedtea-web-browser-plug-in-with-adoptopenjdk/[dieser Anleitung] folgen.
 
-== Will the migration break my API links?
+== Werden durch die Migration meine API-Links ungültig?
 
-There is a https://api.adoptium.net/q/swagger-ui/[new download API]
-provided by Adoptium for downloading Eclipse Temurin builds.
+Es gibt eine https://api.adoptium.net/q/swagger-ui/[neue Download-API]
+die von Adoptium zum Herunterladen von Eclipse-Temurin-Builds bereitgestellt wird.
 
-The good news is that it looks very like the AdoptOpenJDK one did so
-migration isn’t too difficult for anyone currently using it. At present
-the AdoptOpenJDK API will redirect to Temurin (or Semeru) if available
-when you request the latest release builds. We have done this because we
-haven’t had time to encourage the community to fully migrate and because
-we haven’t released everything yet so there are missing builds in the
-Adoptium API. Note that this will be a temporary measure and the
-AdoptOpenJDK API is not expected to be retained forever to do this
-although the timescale for removing the redirection is still to be
-decided.
+Die gute Nachricht ist, dass sie der API von AdoptOpenJDK sehr ähnlich sieht, so dass die Migration für all, die sie derzeit verwenden, nicht allzu schwierig ist.
+Zur Zeit leitet die AdoptOpenJDK-API auf Temurin (oder Semeru) um (falls verfügbar) wenn Sie die neuesten Release-Builds anfordern.
+Wir haben dies getan, da wir nicht die Zeit hatten die Community zur vollständigen Migration zu bewegen und weil wir noch nicht alles veröffentlicht haben, was bedeutet, dass es noch
+fehlende Builds in der Adoptium-API gibt.
+Bitte beachten Sie, dass dies eine vorübergehende Maßnahme ist und die AdoptOpenJDK API voraussichtlich dieses Verhalten nicht für immer beibehalten wird, wenngleich es zur Zeit
+noch keinen Zeitplan zur Entfernung der Umleitung gibt.
 
-== Can you give a talk on the project?
+== Können Sie einen Vortrag über das Projekt halten?
 
-The people involved in the project are passionate about promoting it and
-we are keen to find ways to promote the work we do at Adoptium and with
-the Temurin binaries so feel free to get in touch with us if you have a
-forum you wish us to participate in and we will see what we can do. In
-general contacting the team via Slack is the best way to engage with us.
+Die an dem Projekt beteiligten Personen sind leidenschaftlich bemüht, es zu fördern.
+Wir sind sehr daran interessiert, Wege zu finden über unsere Arbeit bei Adoptium und den Temurin Binaries zu sprechen.
+Falls also der Wunsch besteht, dass wir an einer Veranstaltung teilnehmen, werden wir sehen was wir tun können um dieses zu ermöglichen.
+Der beste Weg um mit dem Team in Kontakt zu treten ist über den Slack-Channel.

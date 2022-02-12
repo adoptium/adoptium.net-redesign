@@ -41,4 +41,4 @@ This assumes you already have Node.js and npm installed. At time of writing we u
 
 ## How to contribute
 
-See [CONTRIBUTING.md]
+See [CONTRIBUTING.md](CONTRIBUTING.md)

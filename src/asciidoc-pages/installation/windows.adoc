@@ -16,7 +16,7 @@ systems.
 Instructions for running an interactive installation using the Windows
 MSI installer:
 
-. link:/download[Download] the `.msi` file. Open it to launch the
+. link:/temurin/releases[Download] the `.msi` file. Open it to launch the
 installation program.
 . Read and accept the license if you are happy with the terms.
 . On the Custom Setup screen you can choose the features that you want

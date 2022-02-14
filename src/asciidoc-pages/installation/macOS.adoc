@@ -1,5 +1,5 @@
 = macOS PKG installer packages
-:page-authors: gdams
+:page-authors: gdams, SueChaplain, karianna
 :toc:
 
 Eclipse Temurin macOS installer packages are available as standard .pkg

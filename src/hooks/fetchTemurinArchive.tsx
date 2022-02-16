@@ -2,9 +2,9 @@ const baseUrl = 'https://api.adoptopenjdk.net/v3';
 
 let releases = []
 
-export async function getAssetsForVersion(version: any) {
+export async function getAssetsForVersion(version: any, releaseType: any) {
   releases = []
-  let   url       = `${baseUrl}/assets/feature_releases/${version}/ga?vendor=eclipse`;
+  let   url       = `${baseUrl}/assets/feature_releases/${version}/${releaseType}?vendor=eclipse`;
   let   json      = await makeRequest('GET', url);
   const response  = JSON.parse(json);
   const data      = response;

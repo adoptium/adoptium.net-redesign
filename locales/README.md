@@ -29,7 +29,7 @@ Inside these directories are json files which can be named anything but it's bes
 
 The translations in this file can be used in one of two ways:
 
-### `<trans>foobar<trans>`
+### `<Trans>foobar</Trans>`
 
 The first way is to use the `<Trans>` function provided by `gatsby-plugin-react-i18next`
 

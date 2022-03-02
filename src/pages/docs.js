@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { FaDownload, FaQuestion, FaGithub, FaBox, FaInfoCircle, FaGlobe } from 'react-icons/fa'
+import { FaDownload, FaQuestion, FaGithub, FaBox, FaInfoCircle, FaGlobe, FaGem } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
@@ -22,7 +22,8 @@ const DocumentationPage = ({ data }) => (
               links={[
                 { name: 'Download Eclipse Temurin', link: '/temurin/releases' },
                 { name: 'Install Eclipse Temurin', link: '/installation' },
-                { name: 'Container Images', link: 'https://hub.docker.com/_/eclipse-temurin' }
+                { name: 'Container Images', link: 'https://hub.docker.com/_/eclipse-temurin' },
+                { name: 'Release Archive', link: '/temurin/archive' }
               ]}
             />
             <DocumentationCard
@@ -32,16 +33,24 @@ const DocumentationPage = ({ data }) => (
                 { name: 'Support', link: '/support' },
                 { name: 'Migration Guide', link: '/docs/migration' },
                 { name: 'Supported Platforms', link: '/supported-platforms' },
-                { name: 'Submit a Issue', link: 'https://github.com/adoptium/adoptium-support/issues' }
+                { name: 'Submit an Issue', link: 'https://github.com/adoptium/adoptium-support/issues' }
               ]}
+            />
+            <DocumentationCard
+              title='AQAvit Quality'
+              links={[
+                { name: 'About Eclipse AQAvit', link: '/aqavit' },
+                { name: 'AQAvit Quality Verification', link: '/docs/qvs-policy' },
+                { name: 'AQAvit Verification Guide', link: '/docs/aqavit-verification' }
+              ]}
+              Icon={FaGem}
             />
             <DocumentationCard
               title='Marketplace'
               links={[
                 { name: 'Marketplace Downloads', link: '/marketplace' },
-                { name: 'Marketplace Publisher Guide', link: '/docs/marketplace-guide' },
-                { name: 'Marketplace Policy', link: '/docs/marketplace-policy' },
-                { name: 'Quality Verification Suite Policy', link: '/docs/qvs-policy' }
+                { name: 'Marketplace Listing Information', link: '/docs/marketplace-policy' },
+                { name: 'Marketplace Publisher Guide', link: '/docs/marketplace-guide' }
               ]}
               Icon={FaBox}
             />
@@ -50,7 +59,7 @@ const DocumentationPage = ({ data }) => (
               Icon={FaGithub}
               links={[
                 { name: 'First Timer Support', link: '/docs/first-timer-support' },
-                { name: 'Sign the ECA', link: '/docs/eca-sign-off' },
+                { name: 'Sign the Contributor Agreement', link: '/docs/eca-sign-off' },
                 { name: 'Join our Slack Channel', link: '/slack' },
                 { name: 'Code of Conduct', link: 'https://github.com/adoptium/.github/blob/main/CODE_OF_CONDUCT.md' }
               ]}
@@ -59,7 +68,7 @@ const DocumentationPage = ({ data }) => (
               title='Eclipse Adoptium'
               Icon={FaGlobe}
               links={[
-                { name: 'About', link: '/about' },
+                { name: 'About Eclipse Adoptium', link: '/about' },
                 { name: 'Join the Working Group', link: '/join' },
                 { name: 'Sponsor the Working Group', link: 'https://www.eclipse.org/org/workinggroups/sponsorship/working-group-sponsorship-agreement.pdf' }
               ]}

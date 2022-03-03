@@ -15,7 +15,7 @@ const EditLink = ({ relativePath }: Props) => {
       <span>All Adoptium docs are open source. See something that's wrong or unclear?</span><br/>
       <a href={href} className='btn btn-secondary mt-2' style={{borderColor: '#0869DA', backgroundColor: '#f6f8fa'}} target='_blank'>
         <IoMdGitPullRequest size={18} style={{ marginRight: '.3em' }} />
-        Make a contribution
+        Edit this page
       </a>
     </div>
   );

@@ -207,7 +207,9 @@ to help produce product listing data in the correct format.
         "build": 8,
         "optional": null,
         "openjdk_version": "1.8.0_302-b08"
-      }
+      },
+      "aqavit_results_link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17%2B35/OpenJDK17-jdk_x64_linux_hotspot_17_35.tar.gz.aqavit.zip",
+      "tck_affidavit_link": "https://adoptium.net/tck_affidavit.html"
     }
   ]
 }

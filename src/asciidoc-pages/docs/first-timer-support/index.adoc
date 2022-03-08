@@ -1,8 +1,7 @@
-= First Timers Support (DRAFT)
+= First Timers Support
 :page-authors: MBoegers, hendrikebbers
 :description: Support with first time contributions
 :keywords: adoptium documentation contribute first-time
-:lang: en 
 :icons: font
 
 

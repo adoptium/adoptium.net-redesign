@@ -5,6 +5,7 @@ on:
 
 jobs:
   auto-merge:
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'dependencies') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

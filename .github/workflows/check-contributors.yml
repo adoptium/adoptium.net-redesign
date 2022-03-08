@@ -42,6 +42,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.ADOPTIUM_TEMURIN_BOT_TOKEN }}
       with:
         title: "Update Asciidoc Contributors"
+        body: "This is an automatically generated pull request, it will be automatically merged if all the CI tests pass."
         path: "src/asciidoc-pages/"
+        branch: "contributor_bot"
         commit-message: "contributors: update asciidoc contributors"
+        labels: automerge
         author: "eclipse-temurin-bot <temurin-bot@eclipse.org>"

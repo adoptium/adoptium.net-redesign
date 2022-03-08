@@ -1,4 +1,4 @@
-Auto Merge (contributors)
+name: Auto Merge (contributors)
 
 on:
   pull_request_target:

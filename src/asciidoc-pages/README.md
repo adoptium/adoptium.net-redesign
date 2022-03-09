@@ -49,7 +49,7 @@ To add a newly translated document you must first ensure that the english versio
 
 ### Adding Images
 
-You may wish to add images to the Asciidoc page. In order to do this you should add the image to the static directory (`/static/images/`). Once you've added the image you can reference it in the document using the following syntax:
+You may wish to add images to the Asciidoc page. In order to do this you should add the image to the static directory at the root of this repo (`/static/images/`). Once you've added the image you can reference it in the document using the following syntax:
 
 ```adoc
 image:sample_image.png[a description of the image]

@@ -38,7 +38,7 @@ https://www.baeldung.com/java-digital-signature[code examples^] available to hel
 .Generating, verifying, and encoding a signature usings OpenSSL
 [%collapsible]
 ====
-[source, shell]
+[source, bash]
 ----
 # Generate signature
 openssl dgst -sha256 -sign private.pem -out index.json.sig index.json
@@ -78,7 +78,11 @@ Here's a simple listing repository example.
 The simplest `index.json` file only contains a reference to a single `releases.json` file.
 
 [source, json]
-{ "releases": [ "releases.json" ] }
+{
+  "releases": [
+    "example.json"
+  ]
+}
 
 
 == Structured Repository Layout
@@ -163,15 +167,15 @@ to help produce product listing data in the correct format.
         {
           "os": "linux",
           "architecture": "x64",
-          "image_type": "debugimage",
+          "image_type": "jre",
           "jvm_impl": "hotspot",
           "package": {
-            "name": "OpenJDK8U-debugimage_x64_linux_hotspot_8u302b08.tar.gz",
-            "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-debugimage_x64_linux_hotspot_8u302b08.tar.gz",
+            "name": "OpenJDK8U-jre_x64_linux_hotspot_8u302b08.tar.gz",
+            "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jre_x64_linux_hotspot_8u302b08.tar.gz",
             "size": 156695698,
             "checksum": "eb860e0656d7fd50437c703ed8f2f68dc6239fcdd8fa8037295570f298994850",
-            "checksum_link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-debugimage_x64_linux_hotspot_8u302b08.tar.gz.sha256.txt",
-            "metadata_link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-debugimage_x64_linux_hotspot_8u302b08.tar.gz.json"
+            "checksum_link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jre_x64_linux_hotspot_8u302b08.tar.gz.sha256.txt",
+            "metadata_link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jre_x64_linux_hotspot_8u302b08.tar.gz.json"
           },
           "timestamp": "2021-07-29T19:22:46Z",
           "scm_ref": "jdk8u302-b08",

@@ -13,7 +13,7 @@ An example entry looks like this:
 }
 ```
 
-The `name` and `url` fields are faily self explantory. The `logo` field is where you specify the filename of the logo located in the [static folder](../static).
+The `name` and `url` fields are faily self explantory. The `logo` field is where you specify the filename of the logo located in the [static folder](../../static).
 
 There are currently five different options for `tier`:
 

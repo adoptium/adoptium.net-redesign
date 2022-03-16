@@ -1,7 +1,7 @@
 = Install Eclipse Temurin
 :page-authors: gdams
 
-Eclipse Temurin binaries are available for link:/download[/temurin/releases] in
+Eclipse Temurin binaries are available for link:/temurin/releases[download] in
 the following types of installation package:
 
 * Package managers (shown above)

@@ -14,7 +14,8 @@ $secondary: #dadada;
 body {
   --black4: #cbd4d9;
   --black9: #2c3437;
-  --brand4: #ee1a6d;
+  --brand4: #c52158;
+  --brand1: #14003c;
   --page-pink: #fcf4f6;
   --bg: white;
   --text-normal: #222;
@@ -29,6 +30,10 @@ body {
   }
 }
 
+.text-pink {
+  color: var(--brand4);
+}
+
 .halign-center {
   text-align: center;
 }
@@ -41,18 +46,12 @@ body {
   background-color: var(--brand4) !important;
 }
 
-.table-secondary {
-  --bs-table-bg: #333;
+.bg-purple {
+  background-color: var(--brand1) !important;
 }
 
-.home {
-  background-repeat-y: no-repeat;
-  background-position: 0 -150px;
-  height: 40em;
-
-  @media (max-width: 991px) {
-    padding-top: 71px;
-  }
+.table-secondary {
+  --bs-table-bg: #333;
 }
 
 body:not(.dark) .dark-mode-only,
@@ -62,6 +61,10 @@ body:not(.dark) .dark-mode-only,
 
 .adopt-demo-container {
   position: relative;
+
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
 }
 
 .adopt-demo {

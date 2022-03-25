@@ -24,11 +24,11 @@ const ChecksumModal = () => {
 
   return (
     <>
-      <div className="modal fade" id="checksumModal" tabIndex={-1} aria-labelledby="checksumModalLabel" aria-hidden="true">
+      <div className="modal fade" id="checksumModal" tabIndex={-1} aria-labelledby="checksumModalLabel" aria-hidden="true" style={{zIndex: '10000'}}>
           <div className="modal-dialog modal-lg">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title" id="checksumModalLabel">Checksum</h5>
+                <h5 className="modal-title" id="checksumModalLabel">Checksum (SHA256)</h5>
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div className="modal-body">

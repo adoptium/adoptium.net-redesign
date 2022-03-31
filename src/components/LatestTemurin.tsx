@@ -63,17 +63,17 @@ const LatestTemurin = (props): JSX.Element => {
             {binary ? (
               <>
                 <a href={`/download?link=${binary.link}`} className="btn btn-lg btn-primary mt-3 py-3 text-white">
-                    <FaDownload /> Latest release
+                    <FaDownload /> Latest LTS release
                     <br/>
                     <span style={{ fontSize: '.6em'}} className="font-weight-light">{binary.release_name}</span>
                 </a>
                 <Link to="/temurin/releases" className="btn btn-outline-dark mt-3">
-                    Other platforms <FaArrowCircleRight />
+                    Other platforms and versions <FaArrowCircleRight />
                 </Link>
               </>
             ) :
               <Link to="/temurin/releases" className="btn btn-lg btn-primary mt-3 py-3 text-white">
-                  <FaDownload /> Latest releases
+                  <FaDownload /> Latest LTS releases
               </Link>
             }
             <Link to="/temurin/archive" className="btn btn-outline-dark mt-3">

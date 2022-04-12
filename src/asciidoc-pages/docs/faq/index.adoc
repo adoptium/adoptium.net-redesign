@@ -65,7 +65,7 @@ over and they are now available as
 "https://developer.ibm.com/languages/java/semeru-runtimes/[IBM Semeru]".
 There is no need to be concerned about the change - it is still free.
 
-== Where are the docker images?
+== Where are the Docker images?
 
 Due to the limited amount of people we have working on the project,
 maintaining the wide variety of docker images that we provided from

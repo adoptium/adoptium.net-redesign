@@ -57,6 +57,9 @@ const TemurinDownloadTable = ({results}) => {
                                                             extension={binary.installer_extension}
                                                             type={binary.type}
                                                             size={binary.installer_size}
+                                                            os={capitalize(pkg.os)}
+                                                            arch={pkg.architecture}
+                                                            version={pkg.release_name}
                                                         />
                                                     )}
                                                     <BinaryTable
@@ -65,6 +68,9 @@ const TemurinDownloadTable = ({results}) => {
                                                         extension={binary.extension}
                                                         type={binary.type}
                                                         size={binary.size}
+                                                        os={capitalize(pkg.os)}
+                                                        arch={pkg.architecture}
+                                                        version={pkg.release_name}
                                                     />
                                                 </>
                                             )
@@ -86,7 +92,7 @@ const TemurinDownloadTable = ({results}) => {
 
 export default TemurinDownloadTable;
 
-const BinaryTable = ({ checksum, link, extension, type, size }) => {
+const BinaryTable = ({ checksum, link, extension, type, size, os, arch, version }) => {
     return (
         <tr key={checksum}>
             <td className="align-middle text-center">
@@ -104,7 +110,7 @@ const BinaryTable = ({ checksum, link, extension, type, size }) => {
                 </tbody></table>
             </td>
             <td className="align-middle">
-                <Link to="/download" state={{ link: link }} className="btn btn-primary" style={{width: "6em"}}>
+                <Link to="/download" state={{ link: link, os: os, arch: arch, pkg_type: type, java_version: version }} className="btn btn-primary" style={{width: "6em"}}>
                     <FaDownload /> {extension}
                 </Link>
             </td>

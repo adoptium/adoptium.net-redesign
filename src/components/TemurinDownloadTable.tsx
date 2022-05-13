@@ -99,14 +99,22 @@ const BinaryTable = ({ checksum, link, extension, type, size, os, arch, version 
                 <table><tbody>
                 <tr>
                     <td>
-                        <a href="" data-bs-toggle="modal" data-bs-target="#checksumModal" data-bs-checksum={checksum}>Checksum (SHA256)</a>
+                        {`${type} - ${size} MB`}
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        {`${type} - ${size} MB`}
+                        <span className="fw-light">
+                            <a href=""
+                                data-bs-toggle="modal"
+                                data-bs-target="#checksumModal"
+                                data-bs-checksum={checksum}>
+                                <small>checksum</small>
+                            </a>
+                        </span>
                     </td>
                 </tr>
+
                 </tbody></table>
             </td>
             <td className="align-middle">

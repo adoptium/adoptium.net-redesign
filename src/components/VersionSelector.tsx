@@ -1,54 +1,57 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { ChoiceGroup } from "office-ui-fabric-react";
+import { useQueryParam, NumberParam } from 'use-query-params'
+
 import DatePicker from 'react-date-picker';
 
 import { versions, defaultVersion } from '../util/defaults'
 
 const VersionSelector = ({updater, releaseType, Table}) => {
-  const [version, udateVersion] = useState({version: defaultVersion});
-  const [numBuilds, udateNumBuilds] = useState({number: 5});
-  const [buildDate, updateBuildDate] = useState(new Date());  
+  let selectedVersion = defaultVersion
+  let [versionParam] = useQueryParam('version', NumberParam)
+  if (versionParam) {
+      selectedVersion = versionParam;
+  }
 
+  const [version, udateVersion] = useState(selectedVersion.toString());
+  const [numBuilds, udateNumBuilds] = useState(5);
+  const [buildDate, updateBuildDate] = useState(new Date());  
   const [releases, setReleases] = useState(null);
 
   useEffect(() => {
     (async () => {
-      setReleases(await updater(version.version, releaseType, numBuilds.number, buildDate));
+      setReleases(await updater(version, releaseType, numBuilds, buildDate));
     })();
-  }, [version.version, numBuilds.number, buildDate]);
+  }, [version, numBuilds, buildDate]);
 
   const setVersion = useCallback((version) => {
-    udateVersion({version: version});
+    let currentURL = window.location.protocol + "//" + window.location.host + window.location.pathname + `?version=${version}`;    
+    window.history.replaceState({ path: currentURL }, '', currentURL);
+    udateVersion(version);
   }, []);
 
   const setNumBuilds= useCallback((number) => {
-    udateNumBuilds({number: number});
+    udateNumBuilds(number);
   }, []);
 
-  let dropdownOptions = [];
-  for (let version of versions) {
-    let option = {
-        key: version,
-        text: `OpenJDK ${version}`
-    }
-    dropdownOptions.push(option)
-  }
   return (
     <>
-      <div className="btn-container">
-        <form id="version-selector" className="btn-form">
-          <h3>Choose a Version</h3>
-          <ChoiceGroup
-            className="d-flex justify-content-center"
-            defaultSelectedKey={defaultVersion}
-            onChange={(e, selectedOption) => { setVersion(selectedOption.key); } }
-            options={dropdownOptions} />
-        </form>
+      <p className='text-center'>
+        Use the drop-down boxes below to filter the list of current releases.
+      </p>
+      <div className="input-group p-3 d-flex justify-content-center">
+        <label className="px-2 fw-bold" htmlFor="version">Version</label>
+        <select id="version-filter" onChange={(e) => setVersion(e.target.value)} value={version} className="form-select form-select-sm" style={{ maxWidth: '10em' }}>
+            {versions.map(
+                (version, i): number | JSX.Element => version && (
+                    <option key={version} value={version}>{version}</option>
+                )
+            )}
+        </select>
       </div>
       {releaseType === "ea" && (
-        <div className="input-group p-5 d-flex justify-content-center">
+        <div className="input-group pb-5 d-flex justify-content-center">
           <span className='p-2'>View</span>
-          <select id="build-num-filter" onChange={(e) => setNumBuilds(e.target.value)} defaultValue={numBuilds.number} className="form-select form-select-sm" style={{ maxWidth: '5em' }}>
+          <select id="build-num-filter" onChange={(e) => setNumBuilds(e.target.value)} defaultValue={numBuilds} className="form-select form-select-sm" style={{ maxWidth: '5em' }}>
             <option key={1} value={1}>1</option>
             <option key={5} value={5}>5</option>
             <option key={10} value={10}>10</option>

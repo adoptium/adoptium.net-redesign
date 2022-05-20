@@ -153,72 +153,7 @@ and
 https://github.com/adoptium/api.adoptium.net/tree/marketplace/marketplace/adoptium-marketplace-schema[code^]
 to help produce product listing data in the correct format.
 
-.Example Release file content
-[example%collapsible]
-====
-[source,json]
-{
-  "releases": [
-    {
-      "release_link": "https://github.com/adoptium/temurin8-binaries/releases/tag/jdk8u302-b08",
-      "release_name": "jdk8u302-b08",
-      "timestamp": "2021-07-29T19:22:38Z",
-      "binaries": [
-        {
-          "os": "linux",
-          "architecture": "x64",
-          "image_type": "jre",
-          "jvm_impl": "hotspot",
-          "package": {
-            "name": "OpenJDK8U-jre_x64_linux_hotspot_8u302b08.tar.gz",
-            "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jre_x64_linux_hotspot_8u302b08.tar.gz",
-            "size": 156695698,
-            "checksum": "eb860e0656d7fd50437c703ed8f2f68dc6239fcdd8fa8037295570f298994850",
-            "checksum_link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jre_x64_linux_hotspot_8u302b08.tar.gz.sha256.txt",
-            "metadata_link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jre_x64_linux_hotspot_8u302b08.tar.gz.json"
-          },
-          "timestamp": "2021-07-29T19:22:46Z",
-          "scm_ref": "jdk8u302-b08",
-          "project": "jdk",
-          "distribution": "temurin"
-        },
-        {
-          "os": "linux",
-          "architecture": "x64",
-          "image_type": "jdk",
-          "jvm_impl": "hotspot",
-          "package": {
-            "name": "OpenJDK8U-jdk_x64_linux_hotspot_8u302b08.tar.gz",
-            "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u302b08.tar.gz",
-            "size": 102954777,
-            "checksum": "cc13f274becf9dd5517b6be583632819dfd4dd81e524b5c1b4f406bdaf0e063a",
-            "checksum_link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u302b08.tar.gz.sha256.txt",
-            "metadata_link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u302b08.tar.gz.json"
-          },
-          "timestamp": "2021-07-29T19:22:53Z",
-          "scm_ref": "jdk8u302-b08",
-          "project": "jdk",
-          "distribution": "temurin"
-        }
-      ],
-      "vendor": "adoptium",
-      "version_data": {
-        "major": 8,
-        "minor": 0,
-        "security": 302,
-        "patch": null,
-        "pre": null,
-        "build": 8,
-        "optional": null,
-        "openjdk_version": "1.8.0_302-b08"
-      },
-      "aqavit_results_link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17%2B35/OpenJDK17-jdk_x64_linux_hotspot_17_35.tar.gz.aqavit.zip",
-      "tck_affidavit_link": "https://adoptium.net/tck_affidavit.html"
-    }
-  ]
-}
-====
-
+The live Temurin release files are available in a our public https://github.com/adoptium/marketplace-data[marketplace data repository^] and serve as an example of what is expected.
 
 == Repository Read and Marketplace Update Process
 

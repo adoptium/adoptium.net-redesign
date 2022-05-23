@@ -1,21 +1,11 @@
 import * as React from "react"
+import { Link } from 'gatsby-plugin-react-i18next';
 import { FaDownload } from 'react-icons/fa';
 import { capitalize } from '../util/capitalize';
-import { normalizeJavaVersion, getImageForVendor, getVendorForDistribution, getDownloadLink } from '../hooks'
+import { getImageForDistribution } from '../hooks'
+import { fetchExtension } from '../util/fetchExtension';
 
 const DownloadTable = ({results}) => {
-
-    async function fetchDownloadLink(id, directly_downloadable) {  
-        let pkgUri           
-        let promise = getDownloadLink(id, directly_downloadable);
-        promise.then(function(uri) {
-            pkgUri = `/download?link=${uri}`;
-            window.location.href = pkgUri
-        }, function() { 
-            pkgUri = null;
-        });
-    }
-
     return (
         <table id="download-table" className="table table-bordered releases-table" style={{borderSpacing: '0 10px', borderCollapse: 'separate'}}>
             <thead className="table-dark">
@@ -32,34 +22,33 @@ const DownloadTable = ({results}) => {
                 {results ? (
                     results.map(
                         (pkg, i): string | JSX.Element =>
-                            <tr key={pkg.id}>
-                                <td className="table-secondary py-4 text-white">
-                                    <span>{normalizeJavaVersion(pkg.java_version)}</span>
+                            <tr key={pkg.binary.package.checksum}>
+                                <td className="table-secondary py-4 text-white align-middle w-20">
+                                    <span>{pkg.release_name}</span>
                                     <br></br>
-                                    <span>{pkg.package_type == 'jdk' ? 'JDK' : 'JRE'}</span>
+                                    <span>{pkg.binary.image_type == 'jdk' ? 'JDK' : 'JRE'}</span>
                                 </td>
                                 <td className="fw-bold align-middle">
-                                    {pkg.distribution == 'semeru_certified' ? 'IBM Semeru Runtimes' : capitalize(pkg.distribution)}
+                                    {capitalize(pkg.binary.distribution)}
                                 </td>
                                 <td className="align-middle">
-                                    <img width="100px" src={getImageForVendor(getVendorForDistribution(pkg.distribution))}/>
+                                    <img width="100px" src={getImageForDistribution(pkg.binary.distribution)}/>
                                 </td>
                                 <td className="align-middle">
-                                    {pkg.lib_c_type == 'musl' ? 'Alpine Linux' : pkg.operating_system == 'macos' ? 'MacOS' : capitalize(pkg.operating_system)}
+                                    {capitalize(pkg.binary.os)}
                                 </td>
                                 <td className="align-middle">
-                                    {pkg.architecture}
+                                    {pkg.binary.architecture}
                                 </td>
-                                <td className="align-middle text-center">
-                                    <a className="btn btn-primary" 
-                                        style={{width: "6em"}}
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            fetchDownloadLink(pkg.id, pkg.directly_downloadable)
-                                        }}
-                                    >
-                                        <FaDownload /> {pkg.archive_type}
-                                    </a>
+                                <td className="align-middle">
+                                    <table className="table parent mb-0 w-auto">
+                                        <tbody className="table-light">
+                                            {pkg.binary.installer && (
+                                                <BinaryTable checksum={pkg.binary.installer[0].sha265sum} link={pkg.binary.installer[0].link} />
+                                            )}
+                                            <BinaryTable checksum={pkg.binary.package.sha265sum} link={pkg.binary.package.link} />
+                                        </tbody>
+                                    </table>
                                 </td>
                             </tr>
                     )
@@ -72,3 +61,24 @@ const DownloadTable = ({results}) => {
 };
 
 export default DownloadTable;
+
+const BinaryTable = ({ checksum, link }) => {
+    return (
+        <tr key={checksum}>
+            <td className="align-middle text-center">
+                <table><tbody>
+                <tr>
+                    <td>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#checksumModal" data-bs-checksum={checksum}>Checksum (SHA256)</a>
+                    </td>
+                </tr>
+                </tbody></table>
+            </td>
+            <td className="align-middle">
+                <Link to="/download" state={{ link: link }} className="btn btn-primary" style={{width: "6em"}}>
+                    <FaDownload /> {fetchExtension(link)}
+                </Link>
+            </td>
+        </tr>
+    )
+}

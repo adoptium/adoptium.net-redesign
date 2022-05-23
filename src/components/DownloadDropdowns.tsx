@@ -6,13 +6,14 @@ import VendorSelector from './VendorSelector'
 import { detectOS, UserOS } from '../util/detectOS';
 import { setURLParam } from '../util/setURLParam';
 import { capitalize } from '../util/capitalize';
-import { oses, arches, packageTypes, versions, defaultVersion, defaultArchitecture, defaultPackageType} from '../util/defaults'
+import { oses, arches, packageTypes, versions, versionsLTS, defaultVersion, defaultArchitecture, defaultPackageType} from '../util/defaults'
 
 let defaultOS = 'any'
 let defaultArch = 'any'
 
 const DownloadDropdowns = ({updaterAction, marketplace, Table}) => {
-    let selectedVersion = defaultVersion
+    let versionList = versions;
+    let selectedVersion = defaultVersion;
     let [versionParam] = useQueryParam('version', NumberParam)
     if (versionParam) {
         selectedVersion = versionParam;
@@ -24,12 +25,21 @@ const DownloadDropdowns = ({updaterAction, marketplace, Table}) => {
     }
 
     if (marketplace) {
+        versionList = versionsLTS;
         defaultArch = defaultArchitecture;
         const userOS = detectOS();
         switch (userOS) {
-          case UserOS.MAC:
-            defaultOS = 'mac'
-            break;
+            case UserOS.MAC:
+                defaultOS = 'mac'
+                if (typeof document !== 'undefined') {
+                    let w = document.createElement("canvas").getContext("webgl");
+                    let d = w.getExtension('WEBGL_debug_renderer_info');
+                    let g = d && w.getParameter(d.UNMASKED_RENDERER_WEBGL) || "";
+                    if (g.match(/Apple/) && !g.match(/Apple GPU/)) {
+                        defaultArch = 'aarch64'
+                    }
+                }
+                break;
           case UserOS.LINUX:
           case UserOS.UNIX:
             defaultOS = 'linux'
@@ -118,7 +128,7 @@ const DownloadDropdowns = ({updaterAction, marketplace, Table}) => {
                 <div className="input-group-prepend flex-colunm col-12 col-md-3">
                     <label className="px-2 fw-bold" htmlFor="version">Version</label>
                     <select id="version-filter" onChange={(e) => setVersion(e.target.value)} value={version} className="form-select form-select-sm">
-                        {versions.map(
+                        {versionList.map(
                             (version, i): number | JSX.Element => version && (
                                 <option key={version} value={version}>{version}</option>
                             )

@@ -1,3 +1,5 @@
+# JSON Config Files
+
 ## Members JSON file
 
 This directory contains the `members.json` file which is used to populate the `/members` and `/sponsors` pages.
@@ -22,3 +24,18 @@ There are currently five different options for `tier`:
 - `participant` - shows on `/members`
 - `sponsor` - shows on `/sponsors` (lists all financial sponsors that aren't members)
 - `infra` - shows on `/sponsors` (lists all infrastructure sponsors that aren't members)
+
+## Marketplace JSON file
+
+This directory also contains the `marketplace.json` file which is used by the `VendorSelector` component to create the vendor tiles in the marketpkace.
+
+An example entry looks like this:
+
+```json
+{
+  "name": "Adoptium",
+  "icon": "vendor-adoptium.png"
+}
+```
+
+The `name` field is the name of the vendor which can include spaces. The `icon` field is the filename of the square vendor icon located inside the `static/images/vendors/` directory.

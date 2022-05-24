@@ -7,9 +7,9 @@ import { detectOS, UserOS } from '../util/detectOS';
 import { fetchLatestForOS, useOnScreen } from '../hooks';
 import { defaultVersion } from '../util/defaults'
 
-let userOSName
-let userOSAPIName
-let arch = 'x64'
+let userOSName: string
+let userOSAPIName: string
+let arch: string = 'x64'
 
 const LatestTemurin = (props): JSX.Element => {
 
@@ -53,7 +53,7 @@ const LatestTemurin = (props): JSX.Element => {
   }
 
     return (
-      <div ref={ref} className="container hide-on-mobile">
+      <div ref={ref} className={props.page === "home" ? "container hide-on-mobile" : "container"}>
         {binary ? (
           <h2 className={`fw-light mt-3 ${textClass}`}>Download Temurin for {userOSName} {arch}</h2>
         ) :

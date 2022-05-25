@@ -4,6 +4,7 @@ export function capitalize (text: string) {
     case 'alpine-linux': return 'Alpine Linux';
     case 'alpine_linux': return 'Alpine Linux';
     case 'redhat': return 'Red Hat';
+    case 'ibm': return 'IBM';
     case 'mac': return 'macOS';
     case 'bisheng': return 'BiSheng';
     case 'semeru': return 'Semeru Runtimes';

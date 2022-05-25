@@ -1,6 +1,12 @@
 const baseUrl = 'https://marketplace-api.adoptium.net';
     
-export async function getAllPkgsForVersion(version, os, architecture, package_type, checkboxRef) {
+export async function getAllPkgsForVersion(
+        version: number,
+        os: string,
+        architecture: string,
+        package_type: string,
+        checkboxRef: any,
+    ): Promise<apiData> {
     let microsoftSelected = checkboxRef.current.vendorMicrosoft.checked;
     let temurinSelected = checkboxRef.current.vendorAdoptium.checked;
     let redhatSelected = checkboxRef.current.vendorRedHat.checked;

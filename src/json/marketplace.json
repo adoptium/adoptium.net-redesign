@@ -27,6 +27,6 @@
     {
         "name": "Huawei",
         "icon": "vendor-huawei.png",
-        "postDownload": "https://mirror.iscas.ac.cn/kunpeng/archive/compiler/bisheng_jdk/"
+        "postDownload": "https://www.openeuler.org/en/other/projects/bishengjdk"
     }
 ]

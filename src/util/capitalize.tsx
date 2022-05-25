@@ -5,6 +5,7 @@ export function capitalize (text: string) {
     case 'alpine_linux': return 'Alpine Linux';
     case 'redhat': return 'Red Hat';
     case 'mac': return 'macOS';
+    case 'bisheng': return 'BiSheng';
     default: return text.charAt(0).toUpperCase() + text.slice(1);
   }
 }

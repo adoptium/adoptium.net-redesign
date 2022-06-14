@@ -2,5 +2,11 @@
     "Download Temurin for": "Temurin für {{userOSName}} {{arch}} herunterladen",
     "Latest LTS Release": "Aktuelles LTS Release",
     "Other platforms and versions": "Weitere Plattformen und Versionen",
-    "Release Archive": "Archivierte Releases"
+    "Release Archive": "Archivierte Releases",
+    "Vendor":"Anbieter",
+    "Operating System":"Betriebssystem",
+    "Architecture":"Systemarchitektur",
+    "Download":"Runterladen",
+    "Checksum":"Checksumme",
+    "Package Type":"Pakettyp"
 }

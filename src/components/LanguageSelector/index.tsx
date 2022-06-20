@@ -10,6 +10,18 @@ const LanguageSelector = (): JSX.Element => {
   const {languages, changeLanguage} = useI18next();
   const location = useLocation();
 
+  function SwitchCase(lng: string) {
+    // Convert locale to ISO 3166-1 alpha-2 https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+    switch(lng) {
+      case 'en':
+        return 'gb';
+      case 'zh-CN':
+        return 'cn';
+      default:
+        return lng;
+    }
+  }
+
   return (
     <div className="App lngg">
       <Form>
@@ -32,10 +44,8 @@ const LanguageSelector = (): JSX.Element => {
                   }
                 }}>
                 <Dropdown.Item key={lng} eventKey={lng}>
-                  {lng === 'en'
-                    ? <Flag code='gb' width="35"/>
-                    : <Flag code={lng} width="35"/>}
-                    <Trans>{lng}</Trans>
+                  <Flag code={SwitchCase(lng)} width="35" /> 
+                  <Trans>{lng}</Trans>
                 </Dropdown.Item>
               </a>
             ))}

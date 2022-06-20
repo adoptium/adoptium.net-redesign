@@ -116,7 +116,7 @@ const DownloadDropdowns = ({updaterAction, marketplace, Table}) => {
                     </select>
                 </div>
                 <div className="input-group-prepend flex-colunm col-12 col-md-3">
-                    <label className="px-2 fw-bold" htmlFor="package-type"><Trans i18nKey="downloadDropdown.package">Package Type</Trans></label>
+                    <label className="px-2 fw-bold" htmlFor="package-type"><Trans>Package Type</Trans></label>
                     <select id="package-type-filter" onChange={(e) => setPackageType(e.target.value)} value={packageType} className="form-select form-select-sm">
                         <option key="any" value="any">Any</option>
                         {packageTypes.map(

@@ -1,11 +1,13 @@
 import * as React from "react"
-import { Link, Trans } from 'gatsby-plugin-react-i18next';
-import moment from 'moment';
+import { Link, Trans, useI18next } from 'gatsby-plugin-react-i18next';
 import { FaDownload } from 'react-icons/fa';
 import { MdVerifiedUser } from 'react-icons/md';
 import { capitalize } from '../util/capitalize';
+import { localeDate } from "../util/localeDate";
 
 const TemurinArchiveTable = ({results}) => {
+    const { language } = useI18next();
+
     return (
         <div id="archive-list">
             <div id="pagination-container">
@@ -33,7 +35,7 @@ const TemurinArchiveTable = ({results}) => {
                                                             className='img-fluid'
                                                         />
                                                     </Link>
-                                                    <h4 className="pt-3 pb-3" style={{fontSize: ".8rem"}}>{moment(release.timestamp).format('D MMMM YYYY')}</h4>
+                                                    <h4 className="pt-3 pb-3" style={{fontSize: ".8rem"}}>{localeDate(release.timestamp, language)}</h4>
                                                     {release.source_url &&
                                                         <span><a href={release.source_url} className="link-light"><FaDownload /> <Trans>Source Code Archive</Trans></a></span>
                                                     }

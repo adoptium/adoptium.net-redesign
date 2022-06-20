@@ -1,10 +1,13 @@
 import * as React from "react"
-import { Link, Trans } from 'gatsby-plugin-react-i18next';
+import { Link, Trans, useI18next } from 'gatsby-plugin-react-i18next';
 import { FaDownload } from 'react-icons/fa';
 import { MdVerifiedUser } from 'react-icons/md';
 import { capitalize } from '../util/capitalize';
+import { localeDate } from "../util/localeDate";
 
 const TemurinDownloadTable = ({results}) => {
+    const { language } = useI18next();
+
     let source = false
     if (results && results.source) {
         source = results.source
@@ -41,7 +44,7 @@ const TemurinDownloadTable = ({results}) => {
                                             />
                                         </Link>
                                     </span>
-                                    <span className="text-white text-muted">{pkg.release_date}</span>
+                                    <span className="text-white text-muted">{localeDate(pkg.release_date, language)}</span>
                                 </td>
                                 <td className="align-middle w-20">{capitalize(pkg.os)}</td>
                                 <td className="align-middle w-20">{pkg.architecture}</td>

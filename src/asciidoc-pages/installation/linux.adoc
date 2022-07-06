@@ -77,7 +77,14 @@ gpgkey=https://packages.adoptium.net/artifactory/api/gpg/key/public
 EOF
 ----
 +
-. Install the Temurin version you require:
+. Install the Temurin version you require using `dnf`:
++
+[source, bash]
+----
+dnf update # update if you haven't already
+dnf install temurin-17-jdk
+----
+Alternatively, if you are using `yum`:
 +
 [source, bash]
 ----

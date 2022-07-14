@@ -26,7 +26,7 @@ const IndexPage = () => {
                   </div>
                   <p className='mt-3 text-center text-md-start'>
                     <Trans i18nKey='Intro'>
-                      Java™ is the world's leading programming language and platform. The Adoptium Working Group promotes and supports high-quality, TCK certified runtimes and associated technology for use across the Java™ ecosystem. Eclipse Temurin is the name of the OpenJDK distribution from Adoptium.
+                      Java&trade; is the world's leading programming language and platform. The Adoptium Working Group promotes and supports high-quality, TCK certified runtimes and associated technology for use across the Java ecosystem. Eclipse Temurin is the name of the OpenJDK distribution from Adoptium.
                     </Trans>
                   </p>
                 </div>
@@ -45,10 +45,12 @@ const IndexPage = () => {
         </div>
         <div className='p-3 mt-4 mb-4 bg-light rounded-3 text-start'>
           <div className='container py-5'>
-            <h2 className='text-pink'><Trans>The Adoptium Working Group</Trans></h2>
+            <h2 className='text-pink'><Trans>The Adoptium&trade; Working Group</Trans></h2>
             <p>
               <Trans i18nKey='wg-description'>
-                The Adoptium Working Group promotes and supports high-quality runtimes and associated technology for use across the Java ecosystem. Our vision is to meet the needs of Eclipse and the broader Java community by providing runtimes for Java-based applications. We embrace existing standards and a wide variety of hardware and cloud platforms.
+                The Adoptium Working Group promotes and supports high-quality runtimes and associated technology for use across the Java ecosystem.
+                Our vision is to meet the needs of Eclipse and the broader Java community by providing runtimes for Java-based applications. We
+                embrace existing standards and a wide variety of hardware and cloud platforms.
               </Trans>
             </p>
             <div className='btn-group'>

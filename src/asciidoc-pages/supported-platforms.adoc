@@ -1,4 +1,4 @@
-= Supported Platforms
+= Temurin(TM) Supported Platforms
 :page-authors: gdams, karianna, SueChaplain, sxa, KalyanJoseph, sxa555, ParkerM, hendrikebbers, aahlenst, MBoegers, luozhenyu
 :icons: font
 

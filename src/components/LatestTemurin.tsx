@@ -57,11 +57,11 @@ const LatestTemurin = (props): JSX.Element => {
         {binary ? (
           <h2 className={`fw-light mt-3 ${textClass}`}>
             <Trans i18nKey="Download Temurin for" userOSName={userOSName} arch={arch}>
-              Download Temurin for {{ userOSName }} {{ arch }}
+              Download Temurin&trade; for {{ userOSName }} {{ arch }}
             </Trans>
           </h2>
         ) :
-          <h2 className={`fw-light mt-3 ${textClass}`}>Download Temurin</h2>
+          <h2 className={`fw-light mt-3 ${textClass}`}>Download Temurin&trade;</h2>
         }
         <div className={`btn-group-vertical mx-auto ${buttonClass}`}>
             {binary ? (

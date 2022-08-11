@@ -24,7 +24,9 @@ const VendorSelector = ({
                     vendor && (
                         <li className="vendor-li">
                             <input id={`vendor${vendor.name}`} ref={el => checkboxRef.current[`vendor${vendor.name.replace(/\s+/g, '')}`] = el} type="checkbox" defaultChecked={true} onChange={handleChange} />
-                            <label className="vendor-label" htmlFor={`vendor${vendor.name}`} title={vendor.name}><img src={`/images/vendors/${vendor.icon}`}/></label>
+                            <label className="vendor-label" htmlFor={`vendor${vendor.name}`} title={vendor.name}>
+                                <img src={`/images/vendors/${vendor.icon}`} style={ vendor.iconPadding ? { padding:vendor.iconPadding} : {}}/>
+                            </label>
                         </li>
                 )
             )}

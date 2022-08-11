@@ -17,6 +17,7 @@
     {
         "name": "Azul",
         "icon": "vendor-azul.png",
+        "iconPadding": "0.7em",
         "postDownload": "https://www.azul.com/downloads"
     },
     {

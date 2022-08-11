@@ -17,7 +17,7 @@
     {
         "name": "Azul",
         "icon": "vendor-azul.png",
-        "postDownload": null
+        "postDownload": "https://www.azul.com/downloads"
     },
     {
         "name": "IBM",

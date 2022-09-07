@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`SEO component SEO metadata renders correctly 1`] = `
+exports[`SEO component > SEO metadata renders correctly 1`] = `
 <div>
   <title>
     Page Title | Adoptium

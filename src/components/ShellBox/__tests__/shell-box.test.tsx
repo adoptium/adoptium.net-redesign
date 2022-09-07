@@ -1,20 +1,20 @@
 import React from 'react';
 
 import { render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { afterEach, describe, expect, it, vi } from 'vitest'
 
 import ShellBox from '../index';
 
 Object.assign(navigator, {
   clipboard: {
-    writeText: jest.fn(),
+    writeText: vi.fn(),
   },
 });
 
-const navigatorClipboardSpy = jest.spyOn(navigator.clipboard, 'writeText');
+const navigatorClipboardSpy = vi.spyOn(navigator.clipboard, 'writeText');
 
 afterEach(() => {
-  jest.clearAllMocks();
+  vi.clearAllMocks();
 });
 
 describe('ShellBox component', (): void => {

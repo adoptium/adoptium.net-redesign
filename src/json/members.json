@@ -36,6 +36,12 @@
     "tier": "strategic"
   },
   {
+    "name": "Bloomberg",
+    "logo": "bloomberg.svg",
+    "url": "https://www.techatbloomberg.com/opensource",
+    "tier": "enterprise"
+  },
+  {
     "name": "IBM",
     "logo": "ibm-logo.png",
     "url": "https://ibm.com",

@@ -1,4 +1,13 @@
-import { Binary, ContributorApiResponse, Contributor, News } from '../hooks';
+import {
+  Binary,
+  ContributorApiResponse,
+  Contributor,
+  LatestTemurin,
+  MarketplaceRelease,
+  News,
+  ReleaseAsset,
+  TemurinReleases,
+} from '../hooks';
 
 export const createRandomContributorApiData = (): ContributorApiResponse => ({
   login: 'login_mock',
@@ -22,6 +31,149 @@ export const createRandomContributorApiData = (): ContributorApiResponse => ({
   contributions: 3,
 });
 
+export const createRandomTemurinRelease = (installer, id): ReleaseAsset => ({
+  os: 'os_mock',
+  architecture: 'arch_mock',
+  release_link: new URL('https://release_link_mock'),
+  platform_name: `platform_name_mock${id}`,
+  release_name: 'release_name_mock',
+  release_date: new Date(Date.UTC(2020, 0, 1)),
+  binaries: [
+    {
+      type: 'type_mock',
+      link: new URL('https://link_mock'),
+      checksum: 'checksum_mock',
+      size: 0,
+      extension: 'extension_mock',
+      installer_link: installer ? new URL('https://installer_link_mock') : undefined,
+      installer_checksum: installer ? 'installer_checksum_mock' : undefined,
+      installer_size: installer ? 0 : undefined,
+      installer_extension: installer ? 'installer_extension_mock' : undefined,
+    },
+  ],
+})
+
+export const createRandomMarketplaceRelease = (installer): MarketplaceRelease => ({
+  release_name: 'release_name_mock',
+  vendor: 'vendor_mock',
+  binary: {
+    os: 'os_mock',
+    architecture: 'arch_mock',
+    distribution: 'distribution_mock',
+    image_type: 'type_mock',
+    jvm_impl: 'jvm_impl_mock',
+    timestamp: new Date(Date.UTC(2020, 0, 1)),
+    scm_ref: 'scm_ref_mock',
+    openjdk_scm_ref: 'openjdk_scm_ref_mock',
+    aqavit_results_link: new URL('https://aqavit_results_link_mock'),
+    tck_affidavit_link: new URL('https://tck_affidavit_link_mock'),
+    package: {
+      name: 'name_mock.tar.gz',
+      link: new URL('https://link_mock'),
+      sha265sum: 'sha265sum_mock',
+      sha256sum_link: new URL('https://sha256sum_link_mock'),
+      signature_link: new URL('https://signature_link_mock'),
+    },
+    installer: installer
+      ? [
+          {
+            name: 'installer_name_mock.msi',
+            link: new URL('https://installer_link_mock'),
+            sha265sum: 'installer_sha265sum_mock',
+            sha256sum_link: new URL('https://installer_sha256sum_link_mock'),
+            signature_link: new URL('https://installer_signature_link_mock'),
+          },
+        ]
+      : undefined,
+  },
+  version: {
+    major: 0,
+    minor: 0,
+    security: 0,
+    patch: 0,
+    build: 0,
+    openjdk_version: 'openjdk_version_mock',
+  }
+})
+
+export const mockLatestTemurin = (installer): LatestTemurin => ({
+  download_count: 0,
+  id: 'id_mock',
+  release_link: new URL('https://release_link_mock'),
+  release_name: 'release_name_mock',
+  release_type: 'release_type_mock',
+  timestamp: new Date(Date.UTC(2020, 0, 1)),
+  updated_at: new Date(Date.UTC(2020, 0, 1)),
+  vendor: 'vendor_mock',
+  version_data: {
+    major: 0,
+    minor: 0,
+    security: 0,
+    patch: 0,
+    build: 0,
+    openjdk_version: 'openjdk_version_mock',
+  },
+  binaries: [
+    {
+      os: 'os_mock',
+      architecture: 'arch_mock',
+      image_type: 'type_mock',
+      heap_size: 'heap_size_mock',
+      download_count: 0,
+      jvm_impl: 'jvm_impl_mock',
+      package: {
+        name: 'name_mock.tar.gz',
+        link: new URL('https://link_mock'),
+        checksum: 'sha265sum_mock',
+        checksum_link: new URL('https://sha256sum_link_mock'),
+        metadata_link: new URL('https://metadata_link_mock'),
+        signature_link: new URL('https://signature_link_mock'),
+        size: 0,
+        download_count: 0,
+      },
+      installer: installer
+      ?
+        {
+          name: 'installer_name_mock.msi',
+          link: new URL('https://installer_link_mock'),
+          checksum: 'installer_sha265sum_mock',
+          checksum_link: new URL('https://installer_sha256sum_link_mock'),
+          metadata_link: new URL('https://installer_metadata_link_mock'),
+          signature_link: new URL('https://installer_signature_link_mock'),
+          size: 0,
+          download_count: 0,
+        }
+      : undefined,
+    }
+  ]
+})
+
+export const createRandomTemurinReleases = (installer, id): TemurinReleases => ({
+  release_name: `release_name_mock_${id}`,
+  release_link: new URL('https://release_link_mock'),
+  source_url: new URL('https://source_url_mock'),
+  timestamp: new Date(Date.UTC(2020, 0, 1)),
+  platforms: {
+    'platform_mock': {
+      assets: [
+        {
+          os: 'os_mock',
+          architecture: 'architecture_mock',
+          type: 'type_mock',
+          link: new URL('https://link_mock'),
+          checksum: `checksum_mock${id}`,
+          size: 0,
+          extension: 'extension_mock',
+          installer_link: installer ? new URL('https://installer_link_mock') : undefined,
+          installer_checksum: installer ? 'installer_checksum_mock' : undefined,
+          installer_size: installer ? 0 : undefined,
+          installer_extension: installer ? 'installer_extension_mock' : undefined,
+        },
+      ],
+    },
+  },
+})
+
 export const createRandomContributorViewData = (): Contributor => ({
   avatarUri: 'avatarUri_mock',
   profileUri: 'profileUri_mock',
@@ -33,7 +185,7 @@ export const createRandomContributorViewData = (): Contributor => ({
 
 export const createRandomLatestForOSData = (): Binary => ({
   release_name: 'release_name_mock',
-  link: 'link_mock',
+  link: new URL('https://link_mock'),
 });
 
 export const createRandomNewsAndEventsData = (): News => ({

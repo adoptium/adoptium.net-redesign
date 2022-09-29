@@ -28,6 +28,25 @@ vi.mock('gatsby', async () => {
   }
 })
 
+vi.mock('gatsby-plugin-image', async () => {
+  const plugin = await vi.importActual<typeof import('gatsby-plugin-image')>('gatsby-plugin-image')
+
+  const mockImage = ({imgClassName, ...props}: any) => {
+    return React.createElement('img', {
+      className: imgClassName,
+      ...props
+    })
+  }
+
+  const mockPlugin = {
+    ...plugin,
+    GatsbyImage: vi.fn().mockImplementation(mockImage),
+    StaticImage: vi.fn().mockImplementation(mockImage),
+  }
+
+  return mockPlugin
+})
+
 vi.mock('@reach/router', async () => {
   return {
     useLocation: () => ({
@@ -44,7 +63,7 @@ vi.mock('react-world-flags', async () => {
 
 vi.mock('gatsby-plugin-react-i18next', async () => {
   return {
-    Link: vi.fn().mockImplementation(({ to, ...rest }) =>
+    Link: vi.fn().mockImplementation(({ to, getProps, ...rest }) =>
       React.createElement('a', {
         ...rest,
         href: to

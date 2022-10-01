@@ -2,7 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 
 import { SiGithubsponsors } from 'react-icons/si'
-
+import { MembersProps } from './members' 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import MembersGrid from '../components/MembersGrid'
@@ -10,8 +10,8 @@ import { shuffle } from '../util/shuffle'
 
 import Members from '../json/members.json'
 
-const sponsors = []
-const infra = []
+let sponsors: MembersProps[] = []
+let infra: MembersProps[] = []
 
 for (const member of Members) {
   switch (member.tier) {
@@ -27,8 +27,8 @@ for (const member of Members) {
 }
 
 // Randomly mix up members logos
-shuffle(sponsors)
-shuffle(infra)
+sponsors = shuffle(sponsors)
+infra = shuffle(infra)
 
 const SponsorsPage = () => (
   <Layout>
@@ -46,7 +46,7 @@ const SponsorsPage = () => (
           />
           <div className='btn-group-vertical'>
             <a target='_blank' rel='noreferrer' href='https://www.eclipse.org/org/workinggroups/sponsorship/working-group-sponsorship-agreement.pdf' className='btn btn-lg btn-primary mt-5'>Want to become a Sponsor?</a>
-            <a target='_blank' rel='noreferrer' href='https://github.com/sponsors/adoptium' className='btn btn-lg btn-outline-dark mt-3'><SiGithubsponsors color='#bf3989' /> Become a GitHub Sponsor!</a>
+            <a target='_blank' rel='noreferrer' href='https://github.com/sponsors/adoptium' className='btn btn-lg btn-outline-dark mt-3'><SiGithubsponsors aria-label='GitHub Sponsors Logo' color='#bf3989' /> Become a GitHub Sponsor!</a>
           </div>
         </div>
       </div>

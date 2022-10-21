@@ -1,7 +1,8 @@
 [
   {
     "name": "Alibaba",
-    "logo": "alibaba-logo.png",
+    "logo": "alibaba.png",
+    "logoPadding": "0.5em",
     "url": "https://alibabacloud.com",
     "tier": "strategic"
   },
@@ -38,6 +39,7 @@
   {
     "name": "Rivos",
     "logo": "rivos.png",
+    "logoPadding": "0.9em",
     "url": "https://www.rivosinc.com/",
     "tier": "strategic"
   },

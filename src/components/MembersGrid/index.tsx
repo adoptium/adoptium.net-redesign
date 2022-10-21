@@ -12,7 +12,7 @@ const array = members.members
                         member && (
                             <div className='col-lg-4 col-md-12 mt-5' key={member.name}>
                                 <a target='_blank' rel='noopener noreferrer' href={member.url}>
-                                    <img src={`/images/${member.logo}`} style={{width: '10rem'}} alt={`${member.name} logo`}/>
+                                    <img src={`/images/${member.logo}`} style={ member.logoPadding ? { padding:member.logoPadding, width: '10rem'} : {width: '10rem'}} alt={`${member.name} logo`}/>
                                 </a>
                             </div>
                     )

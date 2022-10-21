@@ -1,8 +1,8 @@
 [
     {
-      "name": "Adoptium",
-      "icon": "vendor-adoptium.png",
-      "postDownload": null
+        "name": "Adoptium",
+        "icon": "vendor-adoptium.png",
+        "postDownload": null
     },
     {
         "name": "Red Hat",

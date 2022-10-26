@@ -14,6 +14,7 @@ describe('MembersGrid component', () => {
     {
         name: 'Member 2',
         logo: 'member2.png',
+        logoPadding: '1em',
         url: 'https://member2.com'
     }
   ]

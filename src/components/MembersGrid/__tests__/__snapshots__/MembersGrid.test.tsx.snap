@@ -34,7 +34,7 @@ exports[`MembersGrid component > Members grid renders correctly 1`] = `
           <img
             alt="Member 2 logo"
             src="/images/member2.png"
-            style="width: 10rem;"
+            style="padding-right: 1em; padding-left: 1em; width: 10rem;"
           />
         </a>
       </div>

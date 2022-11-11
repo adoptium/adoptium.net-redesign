@@ -44,16 +44,12 @@ const updater = vi.fn().mockImplementation(() => {
   };
 });
 
-vi.mock('use-query-params', () => ({
-  NumberParam: vi.fn(),
-  StringParam: vi.fn(),
-  useQueryParam: (arg) => {
-    switch (arg) {
-      case 'version':
-        return [8, () => {}];
-      case 'variant':
-        return ['openjdk8', () => {}];
-    }
+vi.mock('query-string', () => ({
+  default: {
+    parse: () => ({
+      version: 8,
+      variant: 'openjdk8',
+    }),
   }
 }));
 

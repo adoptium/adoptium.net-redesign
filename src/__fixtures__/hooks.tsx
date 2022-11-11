@@ -8,7 +8,7 @@ import {
   MockTemurinFeatureReleaseAPI,
   MockTemurinReleaseAPI,
   News,
-  NewsAPI,
+  NewsResponse,
   ReleaseAsset,
   TemurinReleases,
 } from '../hooks';
@@ -152,7 +152,7 @@ export const mockLatestTemurin = (installer): LatestTemurin => ({
   ]
 })
 
-export const mockNewsAPI = (): NewsAPI => ({
+export const mockNewsAPI = (): NewsResponse => ({
   news: [
     {
       title: 'news_title_mock',
@@ -161,7 +161,15 @@ export const mockNewsAPI = (): NewsAPI => ({
       link: new URL('https://link_mock'),
       date: new Date(Date.UTC(2020, 0, 1)),
     }
-  ]
+  ],
+  pagination: {
+    page: 1,
+    pagesize: 5,
+    result_start: 1,
+    result_end: 5,
+    result_size: 5,
+    total_result_size: 16
+  }
 });
 
 export const mockEventsAPI = (): EventAPI => ({
@@ -303,15 +311,25 @@ export const createRandomLatestForOSData = (): Binary => ({
 });
 
 export const createRandomNewsAndEventsData = (): News => ({
-  news: [
-    {
-      id: 'id_mock',
-      title: 'title_mock',
-      body: 'body_mock',
-      date: new Date(Date.UTC(2020, 0, 1)),
-      link: new URL('https://link_mock'),
-    },
-  ],
+  news: {
+    news: [
+      {
+        id: 'id_mock',
+        title: 'title_mock',
+        body: 'body_mock',
+        date: new Date(Date.UTC(2020, 0, 1)),
+        link: new URL('https://link_mock'),
+      },
+    ],
+    pagination: {
+      page: 1,
+      pagesize: 5,
+      result_start: 1,
+      result_end: 5,
+      result_size: 5,
+      total_result_size: 16,
+    }
+  },
   events: [
     {
       id: 'id_mock',

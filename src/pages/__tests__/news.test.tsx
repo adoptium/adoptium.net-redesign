@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render, fireEvent, waitFor } from '@testing-library/react';
 import { useOnScreen } from '../../hooks/useOnScreen';
 import { describe, expect, it, vi } from 'vitest'
 import { fetchNewsItems } from '../../hooks/fetchNews';
@@ -25,6 +25,35 @@ describe('News page', () => {
     const pageContent = container.querySelector('main');
 
     expect(pageContent).toMatchSnapshot();
+  });
+
+  it('renders spinner when news not loaded', () => {
+    const news = [];
+    const events = [];
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    fetchNewsItems.mockReturnValue({news, events});
+
+    const { container } = render(<News />);
+    // eslint-disable-next-line
+    const pageContent = container.querySelector('main');
+
+    expect(pageContent).toMatchSnapshot();
+  });
+
+  it('next page triggers event', () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    useOnScreen.mockReturnValue(true);
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    fetchNewsItems.mockReturnValue(createRandomNewsAndEventsData());
+
+    const { getByLabelText } = render(<News />);
+    let next = getByLabelText('Go to last page');
+    fireEvent.click(next);
   });
 
   it('head renders correctly', () => {

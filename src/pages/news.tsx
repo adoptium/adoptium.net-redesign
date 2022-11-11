@@ -1,8 +1,10 @@
-import React, { MutableRefObject, useRef } from 'react';
+import React, { MutableRefObject, useRef, useState, useEffect } from 'react';
 import Timeline from '@mui/lab/Timeline'
 import TimelineItem from '@mui/lab/TimelineItem'
 import TimelineSeparator from '@mui/lab/TimelineSeparator'
 import TimelineConnector from '@mui/lab/TimelineConnector'
+import { Pagination } from '@mui/material'
+import CircularProgress from '@mui/material/CircularProgress';
 import TimelineContent from '@mui/lab/TimelineContent'
 import TimelineDot from '@mui/lab/TimelineDot'
 import { graphql } from 'gatsby'
@@ -16,7 +18,12 @@ import { fetchNewsItems, useOnScreen } from '../hooks';
 const NewsPage = (): JSX.Element => {
   const ref = useRef<HTMLDivElement | null>(null);
   const isVisible = useOnScreen(ref as MutableRefObject<Element>, true);
-  const { news, events }  = fetchNewsItems(isVisible);
+  const [page, changePage] = useState(1);
+  let {news, events } = fetchNewsItems(isVisible, page);
+
+  const handlePageClick = (event: React.ChangeEvent<unknown>, page: number) => {
+    changePage(page);
+  };
 
   return (
     <Layout>
@@ -26,7 +33,7 @@ const NewsPage = (): JSX.Element => {
           <div ref={ref} className='row pt-5'>
             <div className='col-md-5 text-start'>
               <h2>News</h2>
-              {news && news.map(
+              {news && news.news ? news.news.map(
                 (item, i) =>
                   item && (
                     <div key={item.id}>
@@ -35,7 +42,16 @@ const NewsPage = (): JSX.Element => {
                       <p className='text-muted lh-sm'>{item.body}</p>
                     </div>
                   )
-              )}
+              ) : <CircularProgress aria-label='loading spinner' />}
+              {news && news.pagination ? 
+                <Pagination
+                  className='pt-3 d-flex justify-content-center'
+                  count={Math.ceil(news.pagination.total_result_size / news.pagination.pagesize)}
+                  onChange={handlePageClick}
+                  showFirstButton
+                  showLastButton
+                />
+              : null}           
             </div>
             <div className='col-md-1' />
             <div className='col-md-6'>

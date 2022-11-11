@@ -4,13 +4,13 @@ import { fetchNewsItems } from '../fetchNews';
 import { mockNewsAPI, mockEventsAPI  } from '../../__fixtures__/hooks';
 
 global.fetch = vi.fn()
-  .mockImplementation((url) => {
-    switch (url) {
-      case 'https://newsroom.eclipse.org/api/news?parameters[publish_to]=adoptium':
+  .mockImplementation((url: URL) => {
+    switch (url.pathname) {
+      case '/api/news':
         return Promise.resolve({
           json: () => Promise.resolve(mockNewsAPI())
         });
-      case 'https://newsroom.eclipse.org/api/events?parameters[publish_to]=adoptium':
+      case '/api/events':
         return Promise.resolve({
           json: () => Promise.resolve(mockEventsAPI())
         });
@@ -23,9 +23,9 @@ afterEach(() => {
 
 describe('fetchNewsItems', () => {
   it('returns valid news and events object', async () => {
-    const { result } = renderHook(() => fetchNewsItems(true));
+    const { result } = renderHook(() => fetchNewsItems(true, 1));
     await waitFor(() => {
-      expect(result.current?.news[0].title).toBe('news_title_mock')
+      expect(result.current?.news.news[0].title).toBe('news_title_mock')
       expect(result.current?.events[0].title).toBe('events_title_mock')
     }, { interval: 1 });
     expect(global.fetch).toHaveBeenCalledTimes(2)

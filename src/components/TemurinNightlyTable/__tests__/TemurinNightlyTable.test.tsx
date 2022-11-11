@@ -4,10 +4,13 @@ import { describe, expect, it } from 'vitest'
 import { createRandomTemurinReleases } from '../../../__fixtures__/hooks';
 import TemurinNightlyTable from '..';
 
-const releases = [
-  createRandomTemurinReleases(false),
-  createRandomTemurinReleases(true),
-];
+const releases =  {
+  pagecount: null,
+  releases: [
+    createRandomTemurinReleases(false),
+    createRandomTemurinReleases(true),
+  ]
+}
 
 describe('TemurinNightlyTable component', () => {
   it('renders correctly', () => {

@@ -20,8 +20,8 @@ const TemurinNightlyTable = ({results}) => {
                     </tr>
                 </thead>
                 <tbody className="table-light">
-                    {results ? (
-                        results.map(
+                    {results && results.releases ? (
+                        results.releases.map(
                             (release, i): string | JSX.Element =>
                                 release && (
                                     Object.keys(release.platforms).map(function(key) {

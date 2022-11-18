@@ -49,7 +49,7 @@ Source - https://slsa.dev/spec/v0.1/requirements#version-controlled[Version cont
 Adoptium mirrors the
 https://openjdk.org/[OpenJDK^] Java SE reference implementation source code into our local Github repository
 (e.g. https://github.com/adoptium/jdk17u[adoptium/jdk17u^]).
-Every change to the source we build and the scripts we use is tracked by Github's version control system. This ensures a record of the history of changes that went into each revision. Each change contains the identities of the uploader and reviewers, timestamps of the reviews and submission, the change description/justification, the content of the change, and the parent revisions. All committers and reviewers undergo strong suthentication, and all contributors must execute and abide by the
+Every change to the source we build and the scripts we use is tracked by Github's version control system. This ensures a record of the history of changes that went into each revision. Each change contains the identities of the uploader and reviewers, timestamps of the reviews and submission, the change description/justification, the content of the change, and the parent revisions. All committers and reviewers undergo strong authentication, and all contributors must execute and abide by the
 https://www.eclipse.org/legal/ECA.php[Eclipse Contributor Agreement^].
 +
 Each immutable revision of the code under our control has a unique reference with an indefinite lifespan via Github (repo URL + branch/tag/ref + commit ID). Eclipse Temurin is built from tagged revisions of our mirror, and we make source archive files available for each release.

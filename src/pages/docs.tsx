@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { FaDownload, FaQuestion, FaGithub, FaBox, FaInfoCircle, FaGlobe, FaGem, FaUserFriends } from 'react-icons/fa'
+import { FaDownload, FaQuestion, FaGithub, FaBox, FaInfoCircle, FaGlobe, FaGem, FaUserFriends, FaLock } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
@@ -63,6 +63,15 @@ const DocumentationPage = ({ data }) => (
                 { name: 'Sign the Contributor Agreement', link: '/docs/eca-sign-off' },
                 { name: 'Join our Slack Channel', link: '/slack' },
                 { name: 'Code of Conduct', link: 'https://github.com/adoptium/.github/blob/main/CODE_OF_CONDUCT.md' }
+              ]}
+            />
+            <DocumentationCard
+              title='Secure Software'
+              Icon={FaLock}
+              links={[
+                { name: 'Secure Software Practices', link: '/docs/secure-software' },
+                { name: 'SLSA Secure Supply Chain', link: '/docs/slsa' },
+                { name: 'Vulnerability Reporting', link: 'https://www.eclipse.org/security/policy.php' }
               ]}
             />
             <DocumentationCard

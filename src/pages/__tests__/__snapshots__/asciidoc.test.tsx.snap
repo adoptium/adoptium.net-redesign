@@ -22,7 +22,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
     name="og:type"
   />
   <meta
-    content="https://adoptium.net/images/social-image.png"
+    content="https://sample.com/images/social-image.png"
     name="og:image"
   />
   <meta
@@ -34,7 +34,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
     name="twitter:site"
   />
   <meta
-    content="https://adoptium.net/images/social-image.png"
+    content="https://sample.com/images/social-image.png"
     name="twitter:image"
   />
   <meta
@@ -433,7 +433,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
       <br />
       <a
         class="btn btn-secondary mt-2"
-        href="https://github.com/adoptium/website-v2/edit/main/src/asciidoc-pages/test.adoc"
+        href="https://github.com/adoptium/website-v2/edit/main/content/asciidoc-pages/test.adoc"
         rel="noopener noreferrer"
         style="border-color: #0869da; background-color: rgb(246, 248, 250);"
         target="_blank"
@@ -481,7 +481,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
     name="og:type"
   />
   <meta
-    content="https://adoptium.net/images/social-image.png"
+    content="https://sample.com/images/social-image.png"
     name="og:image"
   />
   <meta
@@ -493,7 +493,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
     name="twitter:site"
   />
   <meta
-    content="https://adoptium.net/images/social-image.png"
+    content="https://sample.com/images/social-image.png"
     name="twitter:image"
   />
   <meta
@@ -668,7 +668,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
       <br />
       <a
         class="btn btn-secondary mt-2"
-        href="https://github.com/adoptium/website-v2/edit/main/src/asciidoc-pages/test.adoc"
+        href="https://github.com/adoptium/website-v2/edit/main/content/asciidoc-pages/test.adoc"
         rel="noopener noreferrer"
         style="border-color: #0869da; background-color: rgb(246, 248, 250);"
         target="_blank"

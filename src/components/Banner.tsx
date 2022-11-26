@@ -13,13 +13,7 @@ const Banner = () => {
   //         target='_blank'
   //         rel='noopener noreferrer'
   //         className="alert-link p-1 text-white"
-  //       >by platforms</a> or 
-  //       <a 
-  //         href="https://github.com/adoptium/adoptium/issues/179"
-  //         target='_blank'
-  //         rel='noopener noreferrer'
-  //         className="alert-link p-1 text-white"
-  //       >by detailed release checklist</a>.
+  //       >by platforms</a>.
   //    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   //   </div>
   // );

@@ -46,6 +46,17 @@ export interface SingleMDXPage {
         date: string;
         description: string;
         tags: string[];
+        featuredImage?: {
+            childImageSharp: {
+                gatsbyImageData: {
+                    images: {
+                        fallback: {
+                            src: string;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

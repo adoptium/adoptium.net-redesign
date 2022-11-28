@@ -34,6 +34,25 @@ describe('BlogPost Template page', () => {
     expect(pageContent).toMatchSnapshot();
   });
 
+  it('renders correctly - featured image', () => {
+    mockData.mdx.frontmatter.featuredImage = {
+      childImageSharp: {
+        gatsbyImageData: {
+          images: {
+            fallback: {
+              src: 'https://fake-image.com'
+            }
+          }
+        }
+      }
+    }
+    const { container } = render(<BlogPost data={mockData} pageContext={pageContext} location={{}} children={'sample blog'} />);
+    // eslint-disable-next-line
+    const pageContent = container.querySelector('main');
+
+    expect(pageContent).toMatchSnapshot();
+  });
+
   it('head renders correctly', () => {
     const { container } = render(<Head data={mockData} />);
     // eslint-disable-next-line

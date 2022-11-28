@@ -1,38 +1,7 @@
 import React from 'react';
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { GitHubLink, TwitterLink, LinkedinLink } from '../BlogAuthor';
 
 import ProfilePic from '../ProfilePic';
-
-const GitHubLink = (props) => {
-  if (!props.name) {
-    return null;
-  }
-
-  return (
-    <a className='no-underline' aria-label='GitHub Profile' href={`https://github.com/${props.name}`}><FaGithub /></a>
-  );
-};
-
-const TwitterLink = (props) => {
-  if (!props.name) {
-    return null;
-  }
-
-  return (
-    <a className='no-underline' aria-label='Twitter Profile' href={`https://twitter.com/${props.name}`}><FaTwitter /></a>
-  );
-};
-
-const LinkedinLink = (props) => {
-  if (!props.name) {
-    return null;
-  }
-
-  return (
-    <a className='no-underline' aria-label='LinkedIn Profile' href={`https://www.linkedin.com/in/${props.name}`}><FaLinkedin /></a>
-  );
-};
-
 
 const AuthorBio = (props) => {
   const author = props.author;

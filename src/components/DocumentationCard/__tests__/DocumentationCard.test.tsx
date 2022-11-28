@@ -12,7 +12,7 @@ describe('DocumentationCard component', () => {
        Icon={FaDownload}
        links={[
         { name: 'Link1', link: '/link1' },
-        { name: 'Link2', link: '/link2' }
+        { name: 'Link2', link: 'https://external-link' }
        ]}
       />
     );
@@ -25,7 +25,7 @@ describe('DocumentationCard component', () => {
       Icon={FaDownload}
       links={[
         { name: 'Link1', link: '/link1' },
-        { name: 'Link2', link: '/link2' }
+        { name: 'Link2', link: 'https://external-link' }
       ]}
     />);
     expect(container).toMatchSnapshot();
@@ -34,10 +34,11 @@ describe('DocumentationCard component', () => {
   it('does not render without a Icon', () => {
     const { container } = render(<DocumentationCard
       title="Test Title"
+      // @ts-ignore
       Icon=""
       links={[
         { name: 'Link1', link: '/link1' },
-        { name: 'Link2', link: '/link2' }
+        { name: 'Link2', link: 'https://external-link' }
       ]}
     />);
     expect(container).toMatchSnapshot();
@@ -47,6 +48,7 @@ describe('DocumentationCard component', () => {
     const { container } = render(<DocumentationCard
       title="Test Title"
       Icon={FaDownload}
+      // @ts-ignore
       links="Bad Links"
     />);
     expect(container).toMatchSnapshot();

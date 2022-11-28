@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 import ProfilePic from '../ProfilePic';
 
-const GitHubLink = (props) => {
+export const GitHubLink = (props) => {
   if (!props.name) {
     return null;
   }
@@ -14,7 +14,7 @@ const GitHubLink = (props) => {
   );
 };
 
-const TwitterLink = (props) => {
+export const TwitterLink = (props) => {
   if (!props.name) {
     return null;
   }
@@ -24,7 +24,7 @@ const TwitterLink = (props) => {
   );
 };
 
-const LinkedinLink = (props) => {
+export const LinkedinLink = (props) => {
   if (!props.name) {
     return null;
   }

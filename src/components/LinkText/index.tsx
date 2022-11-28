@@ -1,11 +1,14 @@
 import { Link } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 
-const LinkText = ({ href, children }) => {
+type LinkTextProps = {
+    href: string;
+    children?: React.ReactNode;
+};
+
+const LinkText = ({ href, children }: LinkTextProps) => {
     return (
-        <>
-        {href.startsWith('http') ? <a href={href} target='_blank' rel='noreferrer'>{children}</a> : <Link to={href}>{children}</Link>}
-        </>
+        href.startsWith('http') ? <a href={href} target='_blank' rel='noreferrer'>{children}</a> : <Link to={href}>{children}</Link>
     )
 }
 

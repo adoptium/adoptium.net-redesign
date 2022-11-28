@@ -1,6 +1,6 @@
 ---
 title: Secure Software Development Framework (SSDF) at Adoptium
-date: "2022-10-28T12:00:00+00:00"
+date: "2022-11-28T15:00:00+00:00"
 author: sxa
 description: An overview of the SSDF framework and what we are doing to work towards implementing it
 tags:
@@ -10,7 +10,7 @@ tags:
 
 ## Introduction to the framework
 
-The Secure Software Development Framework (Henceforth SSDF) is
+The Secure Software Development Framework (SSDF) is
 [special publication 800-218](https://csrc.nist.gov/Projects/ssdf)
 from the National Institute of Standards and Technology agency of the US
 Department of Commerce's Computer Security Resource Center division.  It is
@@ -56,7 +56,7 @@ terms of the points in the specifications.  Our process will be:
 ## What have you done so far?
 
 One of the important things in the secure software specification relate to
-Software Bill Of Materials (Henceforth SBOMs) and we have started producing
+Software Bill Of Materials (SBOMs) and we have started producing
 SBOMs along with the Temurin builds using [CycloneDX](https://cyclonedx.org)
 as part of our regular build process.  While the full content of it is still
 a work in progress and will be enhanced over time - and you can have your
@@ -65,7 +65,7 @@ we have a good baseline of data about what has been used to produce each of
 our builds across all of our platforms.  The JSON-formatted SBOMs can be
 obtained along with the Eclipse Temurin builds.
 
-Additionally, we have been working towards having fully reproducable builds
+Additionally, we have been working towards having fully reproducible builds
 which are binary identical and can be rebuilt by others if desired in order
 to prove that we have built what we say we have, in the way we said we did.
 That way, a cautious user could rebuild what we have to verify that it is

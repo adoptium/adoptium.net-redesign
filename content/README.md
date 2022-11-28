@@ -84,15 +84,17 @@ Example:
 
 ```markdown
 <GuestPost>
-    This a guest post by <a href="https://www.linkedin.com/in/weitzelm/">Mark Weitzel</a>, General Manager, New Relic One at New Relic.
+    This a guest post by [Mark Weitzel](https://www.linkedin.com/in/weitzelm/), General Manager, New Relic One at New Relic.
 </GuestPost>
 ```
 
-**Note:** Markdown is not supported within `<GuestPost/>`. This is a limitation of MDX v1 and fixed in [MDX v2](https://github.com/mdx-js/mdx/issues/1041) which is currently being developed.
+This will render the following section at the top of the blog post:
+
+![Guest Post example](https://user-images.githubusercontent.com/20224954/204316138-cfd7cdbe-6727-4579-8dd0-443ba2435c41.png)
 
 ## Adding Authors
 
-1. Create an entry in `content/authors.json`. Structure:
+1. Create an entry in [`src/json/authors.json`](../src/json/authors.json). The schema uses this structure:
 
     ```json
     {
@@ -105,4 +107,4 @@ Example:
     }
     ```
 
-2. Your profile picture comes from GitHub but this can be changed by adding a profile picture in `content/assets/authors`. If the key in the `authors.json` is `janedoe`, name the image file `janedoe.jpg`.
+2. Your profile picture comes from GitHub but this can be changed by adding a profile picture in `static/images/authors`. If the key in the `authors.json` is `janedoe`, name the image file `janedoe.jpg`.

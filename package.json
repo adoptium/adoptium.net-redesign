@@ -89,6 +89,11 @@
     "vitest": "^0.25.3",
     "vitest-axe": "^0.1.0"
   },
+  "overrides": {
+    "gatsby-plugin-react-i18next": {
+      "gatsby": ">=5.0.0"
+    }
+  },
   "keywords": [
     "adoptium",
     "gatsby"

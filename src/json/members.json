@@ -68,6 +68,12 @@
     "tier": "participant"
   },
   {
+    "name": "Open Elements",
+    "logo": "openelements.svg",
+    "url": "https://github.com/openelements",
+    "tier": "participant"
+  },
+  {
     "name": "CarGurus",
     "logo": "cargurus.svg",
     "url": "https://www.cargurus.com",

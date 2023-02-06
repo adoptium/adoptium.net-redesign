@@ -2,23 +2,31 @@ import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest'
 import { useOnScreen } from '../../../hooks/useOnScreen';
-import { fetchLatestForOS } from '../../../hooks/fetchLatestTemurin';
-import { createRandomLatestForOSData } from '../../../__fixtures__/hooks';
+import { fetchReleaseNotesForVersion } from '../../../hooks/fetchReleaseNotes';
+import { createMockReleaseNotesAPI } from '../../../__fixtures__/hooks';
 import { axe } from 'vitest-axe';
-import Index, { Head } from '../index';
+import ReleaseNotesPage, { Head } from '../release-notes';
 
 vi.mock('../../../hooks/useOnScreen');
-vi.mock('../../../hooks/fetchLatestTemurin');
+vi.mock('../../../hooks/fetchReleaseNotes');
+// mock query string version
+vi.mock('query-string', () => ({
+  default: {
+    parse: () => ({
+      version: 'version',
+    }),
+  }
+}));
 
-describe('Temurin Index page', () => {
+describe('Temurin Release Notes page', () => {
   it('renders correctly', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     useOnScreen.mockReturnValue(true);
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    fetchLatestForOS.mockReturnValue(createRandomLatestForOSData());
-    const { container } = render(<Index />);
+    fetchReleaseNotesForVersion.mockReturnValue(createMockReleaseNotesAPI());
+    const { container } = render(<ReleaseNotesPage />);
     // eslint-disable-next-line
     const pageContent = container.querySelector('main');
 
@@ -29,7 +37,8 @@ describe('Temurin Index page', () => {
     const { container } = render(<Head />);
     // eslint-disable-next-line
     const title = container.querySelector('title');
-    expect(title).toHaveTextContent('Temurin | Adoptium');
+    expect(title).toHaveTextContent('Release Notes | Adoptium');
+
   });
 
   it('has no accessibility violations', async () => {
@@ -38,8 +47,8 @@ describe('Temurin Index page', () => {
     useOnScreen.mockReturnValue(true);
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    fetchLatestForOS.mockReturnValue(createRandomLatestForOSData());
-    const { container } = render(<Index />);
+    fetchReleaseNotesForVersion.mockReturnValue(createMockReleaseNotesAPI());
+    const { container } = render(<ReleaseNotesPage />);
     const results = await axe(container);
     expect(results).toHaveNoViolations();
   });

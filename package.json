@@ -13,6 +13,7 @@
     "@mdx-js/react": "^2.3.0",
     "@mui/lab": "^5.0.0-alpha.97",
     "@mui/material": "^5.11.8",
+    "@mui/x-data-grid": "^5.17.22",
     "@popperjs/core": "^2.11.6",
     "@react-icons/all-files": "^4.1.0",
     "bootstrap": "^5.2.3",
@@ -88,7 +89,8 @@
     "prettier": "2.8.4",
     "react-test-renderer": "^18.2.0",
     "vitest": "^0.28.5",
-    "vitest-axe": "^0.1.0"
+    "vitest-axe": "^0.1.0",
+    "vitest-canvas-mock": "^0.2.2"
   },
   "overrides": {
     "gatsby-plugin-react-i18next": {

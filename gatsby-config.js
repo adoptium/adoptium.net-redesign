@@ -63,6 +63,10 @@ module.exports = {
           {
             matchPath: '/:lang?/docs/:uid',
             getLanguageFromPath: true
+          },
+          {
+            matchPath: '/:lang?/about/',
+            getLanguageFromPath: true
           }
         ]
       }

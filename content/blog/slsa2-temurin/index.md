@@ -67,7 +67,7 @@ CI server.  The requirements here are:
   [Eclipse Contributor Agreement (ECA)](https://www.eclipse.org/legal/ECA.php)
 
 - **Build - Build service**. All of the build steps are run using our Jenkins
-  build service (https://ci.adoptopenjdk.net) which is used to
+  build service (https://ci.adoptium.net) which is used to
   perform the builds, generate the SBOMs, and build the installers where
   applicable. The output from the builds are then posted into GitHub release
   repositories named as temurinXX-binaries (e.g.

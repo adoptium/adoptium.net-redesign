@@ -24,7 +24,7 @@ All steps for producing Eclipse Temurin are defined by version-controlled
 https://github.com/adoptium/ci-jenkins-pipelines[Jenkins pipelines^] that invoke build scripts stored in the 
 https://github.com/adoptium/temurin-build[adoptium/temurin-build^]
 repository. The pipeines and build scripts are available for anyone to view and verify, and
-https://ci.adoptopenjdk.net/[the Jenkins system^]
+https://ci.adoptium.net/[the Jenkins system^]
 runs are open to scrutiny. Documentation for using the build scripts is available in the build repository's
 https://github.com/adoptium/temurin-build#readme[readme file^].
 
@@ -57,7 +57,7 @@ Each immutable revision of the code under our control has a unique reference wit
 Build - https://slsa.dev/spec/v0.1/requirements#build-service[Build service^]::
 +
 All Adoptium's build steps run on
-https://ci.adoptopenjdk.net/[our own managed Jenkins build service^] and the Eclipse Foundation's code signing service. These services perform the builds, generate the SBOMs, and build the installers where applicable. The output from the builds are uploaded to GitHub release repositories by the Jenkins CI system. No parts of the process run on a developer’s workstation.
+https://ci.adoptium.net/[our own managed Jenkins build service^] and the Eclipse Foundation's code signing service. These services perform the builds, generate the SBOMs, and build the installers where applicable. The output from the builds are uploaded to GitHub release repositories by the Jenkins CI system. No parts of the process run on a developer’s workstation.
 +
 Access to build services is carefully managed by the project. The build system is as open as possible to allow scrutiny by the community without compromising security.
 
@@ -86,7 +86,7 @@ https://www.eclipse.org/org/foundation/contact.php[addressed to the Eclipse Foun
 Build - https://slsa.dev/spec/v0.1/requirements#build-as-code[Build as code^]::
 +
 Adoptium's build definition and configuration executed by
-https://ci.adoptopenjdk.net/[the build service^]
+https://ci.adoptium.net/[the build service^]
 is verifiably derived from text file definitions stored in our version control system.
 
 

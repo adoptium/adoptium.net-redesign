@@ -25,6 +25,16 @@ Linux 安装程序包RPM/DEB可在 packages.adoptium.net 中获得。 更多信�
 是的！ 根据“GNU General Public License, version 2 with the Classpath Exception“，Adoptium 永远免费提供 Eclipse Temurin 二进制文件供您使用。
 您可以按照描述自由使用、修改和共享代码。这些都包含在下载的许可证中。
 
+== 如何提供对这个项目的支持？
+
+Adoptium 团队对各种不同方式的支持表示欢迎。 例如：
+
+* 任何人都可以赞助资金使项目顺利运行，可以通过 https://www.eclipse.org/donate/adoptium/[一次性捐赠] 或通过 link:/sponsors[项目赞助]的链接。
+* 我们鼓励任何依赖 Adoptium 的组织加入 link:/members[Adoptium 工作组] 并在项目发展方向上发表意见。
+* 我们欢迎技术和创意支持，例如通过推广和营销来推进我们的目标； 写关于您对 Adoptium 的体验博客；回答我们 link:/slack[Slack 社区]的问题,
+帮助测试软件或诊断问题；link:/docs/first-timer-support[修复]那些已报告的问题。
+* 还有许多其他方式，无论是一次性赞助还是成为我们的长期成员，快来加入我们并告诉我们您的想法！
+
 == Eclipse Temurin支持生命周期
 
 https://adoptium.net/support/[在此] 阅读我们的发布和支持周期声明
@@ -33,6 +43,37 @@ https://adoptium.net/support/[在此] 阅读我们的发布和支持周期声明
 
 当然！ 每个 Temurin 版本都通过了相关的 Oracle Java Compatibility Kit (JCK) 以证明它是与 Java 规范兼容实现的。
 此外，Temurin 版本必须通过 link:/aqavit[AQAvit 质量验证套件]以确保它们可在生产中使用。
+
+== 如果有Eclipse Temurin 的错误或问题，去哪里报告 ？
+
+如果您怀疑 Adoptium 项目的任何产品存在安全漏洞，请向 https://www.eclipse.org/security/[Eclipse 安全团队] 发送报告
+它们会在不公开的前提下管理和跟踪问题，直到问题得到解决。
+如果某些事项没有按照您的预期运行，或者您对如何配置 Temurin 有疑问，请通过发送
+https://github.com/adoptium/adoptium-support/issues/new/choose[请求支持]，我们将与您一起寻求解决方案。
+我们的支持是 link:/support["社区支持"]， 问题将在尽力而为的基础上得到解决。
+如果您需要为您的 Java 使用提供有保证的服务，您应该联系提供商业支持的组织。
+
+== Temurin 能用我最喜欢的 Docker 镜像来交付吗？
+
+我们有一组 https://hub.docker.com/_/eclipse-temurin[ Docker 官方存储库] 来确保我们对含 Temurin 的新镜像做出及时响应。
+Docker 与 Adoptium 合作，由他们来决定为 Temurin 提供哪些操作系统容器版本的支持。
+
+对于那些想使用我们不提供的容器化 Linux 发行版的用户，可以查看这些 https://adoptium.net/blog/2021/08/using-jlink-in-dockerfiles/[
+指导]。
+
+== 我的漏洞扫描程序报告 Eclipse Temurin Docker 镜像中有 CVE。 你们能修复它吗？
+
+Docker Hub 上的 https://hub.docker.com/_/eclipse-temurin[Temurin container images] 是我们的 https://docs.docker.com/docker-hub/official_images/[官方镜像]
+它们由Adoptium 项目和 Docker, Inc. 共同来建立和维护。 
+Adoptium 创建、维护并测试广泛的 https://github.com/adoptium/containers[Temurin 镜像源文件] 然后交由
+https://github.com/docker-library/official-images/blob/master/library/eclipse-temurin[Docker] 来制作基于不同操作系统的官方镜像。
+
+为了在合理的时间段内安全使用，Docker 努力确保 Temurin 镜像包含最新的安装包。
+Docker 有自己的强大漏洞扫描程序，但是，第三方安全扫描程序可能仍会标记官方镜像的问题。 
+这些可能已经在 Docker 的 https://github.com/docker-library/faq#why-does-my-security-scanner-show-that-an-image-has-cves[常见问答]中列出
+我们感谢 Docker 持续更新基础镜像并定期为我们重建官方镜像。
+我们乐意接受关于 https://hub.docker.com/_/eclipse-temurin[eclipse-temurin 镜像] 的 https://github.com/adoptium/adoptium-support/issues/new/choose[问题]
+但请注意在某些情况下，如问题本身与操作系统相关，我们会将问题转交给 Docker。
 
 == 是否支持使用容器映像来交付 Temurin？
 

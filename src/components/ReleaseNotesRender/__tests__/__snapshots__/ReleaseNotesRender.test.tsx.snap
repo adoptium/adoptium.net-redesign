@@ -183,9 +183,9 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                           aria-haspopup="true"
                           aria-label="Menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                          data-mui-internal-clone-element="true"
                           id=":r4:"
                           tabindex="-1"
-                          title="Menu"
                           type="button"
                         >
                           <svg
@@ -255,13 +255,13 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                         class="MuiDataGrid-menuIcon"
                       >
                         <button
-                          aria-controls=":r6:"
+                          aria-controls=":r7:"
                           aria-haspopup="true"
                           aria-label="Menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-                          id=":r7:"
+                          data-mui-internal-clone-element="true"
+                          id=":r8:"
                           tabindex="-1"
-                          title="Menu"
                           type="button"
                         >
                           <svg
@@ -331,13 +331,13 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                         class="MuiDataGrid-menuIcon"
                       >
                         <button
-                          aria-controls=":r9:"
+                          aria-controls=":rb:"
                           aria-haspopup="true"
                           aria-label="Menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-                          id=":ra:"
+                          data-mui-internal-clone-element="true"
+                          id=":rc:"
                           tabindex="-1"
-                          title="Menu"
                           type="button"
                         >
                           <svg
@@ -684,13 +684,13 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                         class="MuiDataGrid-menuIcon"
                       >
                         <button
-                          aria-controls=":rf:"
+                          aria-controls=":ri:"
                           aria-haspopup="true"
                           aria-label="Menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-                          id=":rg:"
+                          data-mui-internal-clone-element="true"
+                          id=":rj:"
                           tabindex="-1"
-                          title="Menu"
                           type="button"
                         >
                           <svg
@@ -760,13 +760,13 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                         class="MuiDataGrid-menuIcon"
                       >
                         <button
-                          aria-controls=":ri:"
+                          aria-controls=":rm:"
                           aria-haspopup="true"
                           aria-label="Menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-                          id=":rj:"
+                          data-mui-internal-clone-element="true"
+                          id=":rn:"
                           tabindex="-1"
-                          title="Menu"
                           type="button"
                         >
                           <svg
@@ -836,13 +836,13 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                         class="MuiDataGrid-menuIcon"
                       >
                         <button
-                          aria-controls=":rl:"
+                          aria-controls=":rq:"
                           aria-haspopup="true"
                           aria-label="Menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-                          id=":rm:"
+                          data-mui-internal-clone-element="true"
+                          id=":rr:"
                           tabindex="-1"
-                          title="Menu"
                           type="button"
                         >
                           <svg
@@ -912,13 +912,13 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                         class="MuiDataGrid-menuIcon"
                       >
                         <button
-                          aria-controls=":ro:"
+                          aria-controls=":ru:"
                           aria-haspopup="true"
                           aria-label="Menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-                          id=":rp:"
+                          data-mui-internal-clone-element="true"
+                          id=":rv:"
                           tabindex="-1"
-                          title="Menu"
                           type="button"
                         >
                           <svg
@@ -988,13 +988,13 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                         class="MuiDataGrid-menuIcon"
                       >
                         <button
-                          aria-controls=":rr:"
+                          aria-controls=":r12:"
                           aria-haspopup="true"
                           aria-label="Menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-                          id=":rs:"
+                          data-mui-internal-clone-element="true"
+                          id=":r13:"
                           tabindex="-1"
-                          title="Menu"
                           type="button"
                         >
                           <svg
@@ -1173,7 +1173,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                 />
                 <p
                   class="MuiTablePagination-selectLabel css-pdct74-MuiTablePagination-selectLabel"
-                  id=":re:"
+                  id=":rh:"
                 >
                   Rows per page:
                 </p>
@@ -1183,9 +1183,9 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby=":re: :rd:"
+                    aria-labelledby=":rh: :rg:"
                     class="MuiSelect-select MuiTablePagination-select MuiSelect-standard MuiInputBase-input css-194a1fa-MuiSelect-select-MuiInputBase-input"
-                    id=":rd:"
+                    id=":rg:"
                     role="button"
                     tabindex="0"
                   >

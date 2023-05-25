@@ -1,4 +1,6 @@
+const crypto = require('crypto')
 const path = require('path')
+const fetch = require('node-fetch')
 const fs = require('fs')
 const { pipeline } = require('stream')
 const { promisify } = require('util')
@@ -7,6 +9,64 @@ const locales = require('./locales/i18n')
 const authors = require('./src/json/authors.json')
 
 const { localizedSlug, findKey, removeTrailingSlash } = require('./src/util/gatsby-node-helpers')
+
+// Import available versions from Adoptium API
+exports.sourceNodes = async ({ actions, createNodeId }) => {
+  const { createNode } = actions
+
+  // Fetch available versions from Adoptium API
+  const res = await fetch('https://api.adoptium.net/v3/info/available_releases')
+  const data = await res.json()
+
+  data.available_releases.forEach((release, i) => {
+    const nodeContent = JSON.stringify(release)
+
+    const nodeMeta = {
+      id: createNodeId(`adoptium-release-${i}`), // Unique identifier for each node
+      parent: null,
+      children: [],
+      internal: {
+        type: 'Versions',
+        content: nodeContent,
+        contentDigest: crypto
+          .createHash('md5')
+          .update(nodeContent)
+          .digest('hex')
+      }
+    }
+
+    const lts = data.available_lts_releases.includes(release)
+
+    const extraData = {
+      version: release,
+      lts,
+      label: lts ? `${release} - LTS` : release.toString()
+    }
+
+    // Combine the metadata and data to create the node
+    const node = Object.assign({}, extraData, nodeMeta)
+    createNode(node)
+  })
+
+  // Create a node for the most recent LTS release
+  const latestLTS = data.most_recent_lts
+  const nodeContent = JSON.stringify(latestLTS)
+  const node = {
+    id: createNodeId('adoptium-lts-most-recent'), // Unique identifier for each node
+    version: latestLTS,
+    parent: null,
+    children: [],
+    internal: {
+      type: 'MostRecentLTS',
+      content: nodeContent,
+      contentDigest: crypto
+        .createHash('md5')
+        .update(nodeContent)
+        .digest('hex')
+    }
+  }
+  createNode(node)
+}
 
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions

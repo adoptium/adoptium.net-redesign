@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Trans, useI18next } from 'gatsby-plugin-react-i18next'
 import { useLocation } from '@reach/router';
 import queryString from 'query-string';
@@ -6,10 +7,29 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 
-import { versions, defaultVersion } from '../../util/defaults'
 import { setURLParam } from '../../util/setURLParam';
 
 const VersionSelector = ({updater, releaseType, Table}) => {
+  const data = useStaticQuery(graphql`
+    query VersionsQuery {
+      allVersions(sort: {version: DESC}) {
+        edges {
+          node {
+            version
+            label
+            lts
+          }
+        }
+      }
+      mostRecentLts {
+        version
+      }
+    }
+  `)
+
+  const defaultVersion = data.mostRecentLts.version;
+  const versions = data.allVersions.edges;
+
   const { language } = useI18next();
 
   let locale;
@@ -61,9 +81,10 @@ const VersionSelector = ({updater, releaseType, Table}) => {
       <div className="input-group p-3 d-flex justify-content-center">
         <label className="px-2 fw-bold" htmlFor="version"><Trans>Version</Trans></label>
         <select data-testid="version-filter" aria-label="version-filter" id="version-filter" onChange={(e) => setVersion(e.target.value)} value={version} className="form-select form-select-sm" style={{ maxWidth: '10em' }}>
+            {/* loop through versions array from graphql */}
             {versions.map(
                 (version, i): number | JSX.Element => version && (
-                    <option key={version} value={version}>{version}</option>
+                    <option key={version.node.id} value={version.node.version}>{version.node.label}</option>
                 )
             )}
         </select>

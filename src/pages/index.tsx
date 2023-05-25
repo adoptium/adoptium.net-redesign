@@ -7,7 +7,8 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import LatestTemurin from '../components/LatestTemurin'
 
-const IndexPage = () => {
+const IndexPage = ({data}) => {
+  const latestLTS = data.mostRecentLts.version
   return (
     <Layout>
       <section id='home' className='home' style={{ overflowX: 'hidden' }}>
@@ -29,7 +30,7 @@ const IndexPage = () => {
                     </Trans>
                   </p>
                 </div>
-                <LatestTemurin page='home' />
+                <LatestTemurin latestLTS={latestLTS} page='home' />
               </div>
             </div>
             <div className='col-md-6'>
@@ -79,6 +80,9 @@ export const query = graphql`
           language
         }
       }
+    }
+    mostRecentLts {
+      version
     }
   }
 `

@@ -4,8 +4,9 @@ import queryString from 'query-string';
 import { afterEach, vi } from 'vitest';
 import { useI18next } from 'gatsby-plugin-react-i18next'
 import VersionSelector from '../index';
-import { defaultVersion } from '../../../util/defaults';
 import locales from '../../../../locales/i18n';
+
+const defaultVersion = 1;
 
 describe('VersionSelector', () => {
   const updater = vi.fn();
@@ -55,9 +56,9 @@ describe('VersionSelector', () => {
     queryString.parse = vi.fn().mockReturnValue({});
     render(<VersionSelector updater={updater} releaseType={releaseType} Table={Table} />);
     await act(async () => {
-      fireEvent.change(screen.getByTestId('version-filter'), { target: { value: '8' } });
+      fireEvent.change(screen.getByTestId('version-filter'), { target: { value: '2' } });
     });
-    expect(updater).toHaveBeenCalledWith('8', releaseType, 5, expect.any(Date), 0);
+    expect(updater).toHaveBeenCalledWith('2', releaseType, 5, expect.any(Date), 0);
   });
 
   it('updates the number of builds and build date when the inputs change', async () => {
@@ -76,31 +77,31 @@ describe('VersionSelector', () => {
       expect(datepicker.getAttribute('value')).toBe('01/01/2022');
     });
 
-    expect(updater).lastCalledWith('17', 'ea', '10', expect.any(Date), 0);
+    expect(updater).lastCalledWith('1', 'ea', '10', expect.any(Date), 0);
 
     // Add the snapshot test for the final rendered output
     expect(prettyDOM(container)).toMatchSnapshot();
   });
 
   it('renders the component with version query param', async () => {
-    queryString.parse = vi.fn().mockReturnValue({ version: 11 });
+    queryString.parse = vi.fn().mockReturnValue({ version: 2 });
 
     await act(async () => {
       render(<VersionSelector updater={updater} releaseType={releaseType} Table={Table} />);
     });
-    expect(screen.getByTestId('version-filter')).toHaveValue('11');
+    expect(screen.getByTestId('version-filter')).toHaveValue('2');
     expect(screen.queryByLabelText('View')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('nightly builds prior to:')).not.toBeInTheDocument();
     expect(screen.getByText('Table')).toBeInTheDocument();
   });
 
   it('renders the component with variant query param', async () => {
-    queryString.parse = vi.fn().mockReturnValue({ variant: 'openjdk8' });
+    queryString.parse = vi.fn().mockReturnValue({ variant: 'openjdk2' });
 
     await act(async () => {
       render(<VersionSelector updater={updater} releaseType={releaseType} Table={Table} />);
     });
-    expect(screen.getByTestId('version-filter')).toHaveValue('8');
+    expect(screen.getByTestId('version-filter')).toHaveValue('2');
     expect(screen.queryByLabelText('View')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('nightly builds prior to:')).not.toBeInTheDocument();
     expect(screen.getByText('Table')).toBeInTheDocument();

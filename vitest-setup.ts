@@ -20,6 +20,29 @@ vi.mock('gatsby', async () => {
         siteUrl: 'https://sample.com',
       }
     },
+    mostRecentLts: {
+      version: 1,
+    },
+    allVersions: {
+      edges: [
+        {
+          node: {
+            id: 'mock-id-1',
+            version: 1,
+            label: '1 - LTS',
+            lts: true,
+          }
+        },
+        {
+          node: {
+            id: 'mock-id-2',
+            version: 2,
+            label: '2',
+            lts: false,
+          }
+        },
+      ]
+    },
     avatar: {
       edges: [
         {

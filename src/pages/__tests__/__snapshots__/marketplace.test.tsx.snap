@@ -356,19 +356,9 @@ exports[`Marketplace page > renders correctly 1`] = `
           id="version-filter"
         >
           <option
-            value="17"
+            value="1"
           >
-            17
-          </option>
-          <option
-            value="11"
-          >
-            11
-          </option>
-          <option
-            value="8"
-          >
-            8
+            1 - LTS
           </option>
         </select>
       </div>

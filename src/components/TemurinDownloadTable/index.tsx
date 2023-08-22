@@ -5,6 +5,8 @@ import { MdNotes } from 'react-icons/md';
 import { MdVerifiedUser } from 'react-icons/md';
 import { capitalize } from '../../util/capitalize';
 import { localeDate } from '../../util/localeDate';
+import { IoMdHelpBuoy } from 'react-icons/io';
+import { PiFiles } from 'react-icons/pi';
 
 const TemurinDownloadTable = ({results}) => {
     const { language } = useI18next();
@@ -13,10 +15,15 @@ const TemurinDownloadTable = ({results}) => {
     if (results && results.source) {
         source = results.source
     }
+
     return (
     <>
         {source &&
-            <p><Link to={`/temurin/release-notes?version=${source.release_name}`}><MdNotes /> <Trans>Release Notes</Trans></Link></p>
+            <p className='release-notes'>
+                <Link to={`/temurin/release-notes?version=${source.release_name}`}><MdNotes /><Trans>Release Notes</Trans></Link> 
+                <Link to="/installation/"><IoMdHelpBuoy /><Trans>Installation Guide</Trans></Link>
+                <Link to={source.binary.package.link}><PiFiles /><Trans>Source Code</Trans></Link> 
+            </p>
         }
         <table id="download-table" className="table table-bordered releases-table" style={{borderSpacing: '0 10px', borderCollapse: 'separate'}}>
             <tbody className="table-light">
@@ -88,9 +95,6 @@ const TemurinDownloadTable = ({results}) => {
             }
             </tbody>
         </table>
-        {source &&
-            <p><a href={source.binary.package.link}>{source.release_name} <Trans>Source Code Archive</Trans></a></p>
-        }
     </>
     );
 };

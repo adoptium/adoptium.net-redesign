@@ -92,34 +92,44 @@ const DownloadDropdowns = ({updaterAction, marketplace, Table}) => {
     }
 
     if (marketplace) {
+        // in marketplace we have to preselect some values in dropdowns if not given in parameters
+        if(defaultSelectedOS === 'any') {
+            const userOS = detectOS();
+            switch (userOS) {
+                case UserOS.MAC:
+                    defaultSelectedOS = 'mac'
+                    if (typeof document !== 'undefined') {
+                        let w = document.createElement("canvas").getContext("webgl");
+                        // @ts-ignore
+                        let d = w.getExtension('WEBGL_debug_renderer_info');
+                        // @ts-ignore
+                        let g = d && w.getParameter(d.UNMASKED_RENDERER_WEBGL) || "";
+                        if (g.match(/Apple/) && !g.match(/Apple GPU/)) {
+                            defaultSelectedArch = 'aarch64'
+                        }
+                    }
+                    break;
+                case UserOS.LINUX:
+                case UserOS.UNIX:
+                    defaultSelectedOS = 'linux'
+                break;
+            default:
+                defaultSelectedOS = 'windows'
+                break;
+            }
+        }
+        if(defaultSelectedArch === 'any') {
+            defaultSelectedArch = defaultArchitecture;
+        }
+        if(defaultSelectedPackageType === 'any') {
+            defaultSelectedPackageType = defaultPackageType;
+        }
         // filter non LTS versions
         versionList = versions.filter((version) => {
             return version.node.lts === true;
         });
-        defaultSelectedArch = defaultArchitecture;
-        defaultSelectedPackageType = defaultPackageType;
-        const userOS = detectOS();
-        switch (userOS) {
-            case UserOS.MAC:
-                defaultSelectedOS = 'mac'
-                if (typeof document !== 'undefined') {
-                    let w = document.createElement("canvas").getContext("webgl");
-                    // @ts-ignore
-                    let d = w.getExtension('WEBGL_debug_renderer_info');
-                    // @ts-ignore
-                    let g = d && w.getParameter(d.UNMASKED_RENDERER_WEBGL) || "";
-                    if (g.match(/Apple/) && !g.match(/Apple GPU/)) {
-                        defaultSelectedArch = 'aarch64'
-                    }
-                }
-                break;
-            case UserOS.LINUX:
-            case UserOS.UNIX:
-                defaultSelectedOS = 'linux'
-            break;
-        default:
-            defaultSelectedOS = 'windows'
-            break;
+        if(versionList.findIndex(version => version.node.version === defaultSelectedVersion) < 0) {
+            defaultSelectedVersion = data.mostRecentLts.version;
         }
     }
 
@@ -174,7 +184,7 @@ const DownloadDropdowns = ({updaterAction, marketplace, Table}) => {
                         <option key="any" value="any">Any</option>
                         {oses.sort((os1, os2) => os1.localeCompare(os2)).map(
                             (os, i): string | JSX.Element => os && (
-                                <option key={os.toLowerCase()} value={os.toLowerCase()}>{capitalize(os)}</option>
+                                <option key={`os-${i}`} value={os.toLowerCase()}>{capitalize(os)}</option>
                             )
                         )}
                     </select>
@@ -185,7 +195,7 @@ const DownloadDropdowns = ({updaterAction, marketplace, Table}) => {
                         <option key="any" value="any">Any</option>
                         {arches.sort((arch1, arch2) => arch1.localeCompare(arch2)).map(
                             (arch, i): string | JSX.Element => arch && (
-                                <option key={arch.toLowerCase()} value={arch.toLowerCase()}>{arch}</option>
+                                <option key={`arch-${i}`} value={arch.toLowerCase()}>{arch}</option>
                             )
                         )}
                     </select>
@@ -196,7 +206,7 @@ const DownloadDropdowns = ({updaterAction, marketplace, Table}) => {
                         <option key="any" value="any">Any</option>
                         {packageTypes.map(
                             (packageType, i): string | JSX.Element => packageType && (
-                                <option key={packageType.toLowerCase()} value={packageType.toLowerCase()}>{packageType}</option>
+                                <option key={`packageType-${i}`} value={packageType.toLowerCase()}>{packageType}</option>
                             )
                         )}
                     </select>
@@ -206,7 +216,7 @@ const DownloadDropdowns = ({updaterAction, marketplace, Table}) => {
                     <select id="version-filter" aria-label="Version Filter" data-testid="version-filter" onChange={(e) => setVersion(e.target.value)} value={version} className="form-select form-select-sm">
                         {versionList.map(
                             (version, i): number | JSX.Element => version && (
-                                <option key={version.node.id} value={version.node.version}>{version.node.label}</option>
+                                <option key={`version-${i}`} value={version.node.version}>{version.node.label}</option>
                             )
                         )}
                     </select>

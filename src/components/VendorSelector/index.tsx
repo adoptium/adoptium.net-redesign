@@ -1,25 +1,24 @@
-import * as React from "react"
-
+import React, { useState, useEffect } from "react"
+import { shuffle } from '../../util/shuffle'
 import vendors from '../../json/marketplace.json';
 import './VendorSelector.scss';
 
-// Shuffle vendors
-//for (let i = vendors.length - 1; i > 0; i--) {
-//    const j = Math.floor(Math.random() * (i + 1));
-//    [vendors[i], vendors[j]] = [vendors[j], vendors[i]];
-//}
+const VendorSelector = ({checkboxRef, setCheckbox}) => {
 
-const VendorSelector = ({
-    checkboxRef,
-    setCheckbox
-}) => {
+    const [randomizedVendors, setRandomizedVendors] = useState(vendors);
+
+    useEffect(() => {
+        let vendorsCpy = [...vendors];
+        setRandomizedVendors(shuffle(vendorsCpy));
+    }, [])
+
     const handleChange = () => {
         setCheckbox(checkboxRef.current.checked)
     };
 
     return (
         <ul className="vendor-list pt-5">
-            {vendors.map(
+            {randomizedVendors.map(
                 (vendor, i): string | JSX.Element =>
                     vendor && (
                         <li key={vendor.name} className="vendor-li">

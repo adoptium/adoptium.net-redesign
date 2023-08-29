@@ -3,13 +3,18 @@ import { render, fireEvent, screen } from '@testing-library/react';
 import { vi } from 'vitest';
 import VendorSelector from '../index';
 import vendors from '../../../json/marketplace.json';
+import getVendorIdentifier from '../../../util/vendors';
 
 describe('VendorSelector', () => {
-  const mockSetCheckbox = vi.fn();
-  const checkboxRef = { current: {} };
+  const mockSetSelectedVendorIdentifiers = vi.fn();
+  const mockSelectedVendorIdentifiers = vendors.map(v => getVendorIdentifier(v));
 
   beforeEach(() => {
-    render(<VendorSelector checkboxRef={checkboxRef} setCheckbox={mockSetCheckbox} />);
+    render(<VendorSelector selectedVendorIdentifiers={mockSelectedVendorIdentifiers} setSelectedVendorIdentifiers={mockSetSelectedVendorIdentifiers} />);
+  });
+
+  afterEach(() => {
+    vi.clearAllMocks();
   });
 
   test('renders component correctly', () => {
@@ -22,15 +27,18 @@ describe('VendorSelector', () => {
 
   vendors.forEach((vendor, i) => {
     test(`renders the input checkbox with correct attributes for vendor ${i}`, () => {
-      const checkbox = screen.getByTestId(vendor.name);
-      expect(checkbox).toHaveAttribute('id', `vendor${vendor.name}`);
+      const identifier = getVendorIdentifier(vendor);
+      const checkbox = screen.getByTestId(`checkbox-${identifier}`);
+      expect(checkbox).toHaveAttribute('id', `vendor-${identifier}`);
       expect(checkbox).toHaveAttribute('type', 'checkbox');
-      expect(checkbox).toHaveProperty('defaultChecked', true);
+      expect(checkbox).toHaveProperty('readOnly', true);
+      expect(checkbox).toHaveProperty('checked', true);
     });
 
     test(`renders the label element with correct attributes for vendor ${i}`, () => {
+      const identifier = getVendorIdentifier(vendor);
       const label = screen.getByTitle(vendor.name);
-      expect(label).toHaveAttribute('for', `vendor${vendor.name}`);
+      expect(label).toHaveAttribute('for', `vendor-${identifier}`);
     });
 
     test(`renders the img element with correct attributes for vendor ${i}`, () => {
@@ -41,8 +49,8 @@ describe('VendorSelector', () => {
   });
 
   test('calls handleChange function when a checkbox is toggled', () => {
-    const checkbox = screen.getByTitle(vendors[0].name);
-    fireEvent.click(checkbox);
-    expect(mockSetCheckbox).toHaveBeenCalledTimes(1);
+    const li = screen.getByTestId(`li-${mockSelectedVendorIdentifiers[0]}`);
+    fireEvent.click(li);
+    expect(mockSetSelectedVendorIdentifiers).toHaveBeenCalledTimes(2 /* 1 by the useEffec() and 1 by the onclick() */);
   });
 });

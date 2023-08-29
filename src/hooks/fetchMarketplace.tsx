@@ -6,16 +6,8 @@ export async function getAllPkgsForVersion(
     os: string,
     architecture: string,
     package_type: string,
-    checkboxRef: any,
+    vendors: string[]= [],
 ): Promise<MarketplaceRelease[] | null> {
-    let microsoftSelected = checkboxRef.current.vendorMicrosoft && checkboxRef.current.vendorMicrosoft.checked;
-    let temurinSelected = checkboxRef.current.vendorAdoptium && checkboxRef.current.vendorAdoptium.checked;
-    let redhatSelected = checkboxRef.current.vendorRedHat && checkboxRef.current.vendorRedHat.checked;
-    let huaweiSelected = checkboxRef.current.vendorHuawei && checkboxRef.current.vendorHuawei.checked;
-    let zuluSelected = checkboxRef.current.vendorAzul && checkboxRef.current.vendorAzul.checked;
-    let ibmSelected = checkboxRef.current.vendorIBM && checkboxRef.current.vendorIBM.checked;
-    let alibabaSelected = checkboxRef.current.vendorAlibaba && checkboxRef.current.vendorAlibaba.checked;
-
     let params = '?'
     params += 'feature_version=' + version;
 
@@ -37,32 +29,8 @@ export async function getAllPkgsForVersion(
         params += ('&image_type=' + package_type)
     }
 
-    if (temurinSelected) {
-        params += '&vendor=adoptium'
-    }
-
-    if (redhatSelected) {
-        params += '&vendor=redhat'
-    }
-
-    if (huaweiSelected) {
-        params += '&vendor=huawei'
-    }
-
-    if (microsoftSelected) {
-        params += ('&vendor=microsoft')
-    }
-
-    if (zuluSelected) {
-        params += ('&vendor=azul')
-    }
-
-    if (ibmSelected) {
-        params += ('&vendor=ibm')
-    }
-
-    if (alibabaSelected) {
-        params += ('&vendor=alibaba')
+    for(const vendor of vendors) {
+        params += ('&vendor=' + vendor)
     }
 
     const url = new URL(baseUrl + '/v1/assets/latestForVendors' + params);

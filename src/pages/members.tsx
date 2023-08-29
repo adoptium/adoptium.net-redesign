@@ -82,7 +82,7 @@ export const query = graphql`
     }
   }
 `
-interface MembersProps {
+export interface MembersProps {
   name: string;
   logo: string;
   url: string;

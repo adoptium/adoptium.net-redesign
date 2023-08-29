@@ -20,7 +20,7 @@
     {
         "name": "Doping Technology",
         "logo": "adopters/logo-doping-tech.svg",
-        "url": "https://dopingtech.com/",
+        "url": "https://dopingtech.net/",
         "tier": "adopter"
     },
     {
@@ -85,12 +85,6 @@
         "tier": "adopter"
     },
     {
-        "name": "MongoDB",
-        "logo": "adopters/logo-mongodb.svg",
-        "url": "https://mongodb.com/",
-        "tier": "adopter"
-    },
-    {
         "name": "OpenElements",
         "logo": "openelements.svg",
         "url": "https://open-elements.com/",
@@ -99,6 +93,7 @@
     {
         "name": "R3m Score",
         "logo": "adopters/logo-r3m-score.png",
+        "logoPadding": "1em",
         "url": "https://r3mscore.com/",
         "tier": "adopter"
     },

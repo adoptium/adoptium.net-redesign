@@ -6,6 +6,7 @@ const baseUrl = 'https://api.adoptium.net/v3/info/release_notes';
 export function fetchReleaseNotesForVersion(
     isVisible: boolean,
     version: any,
+    sortReleaseNotesByCallback?: Function,
 ): ReleaseNoteAPIResponse | null {
     if (!version) {
         return null
@@ -15,7 +16,9 @@ export function fetchReleaseNotesForVersion(
     useEffect(() => {
         if (isVisible) {
         (async () => {
-            setReleaseNotes(await fetchReleaseNote(version));
+            let result = await fetchReleaseNote(version);
+            if(sortReleaseNotesByCallback) sortReleaseNotesByCallback(result);
+            setReleaseNotes(result);
         })();
         }
     }, [isVisible]);

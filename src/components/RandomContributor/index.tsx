@@ -2,6 +2,7 @@ import React, { MutableRefObject, useRef } from 'react';
 import { useAdoptiumContributorsApi, useOnScreen } from '../../hooks';
 import './RandomContributor.scss';
 import AnimatedPlaceholder from '../AnimatedPlaceholder';
+import { Trans, Link } from 'gatsby-plugin-react-i18next';
 
 const RandomContributor = (): JSX.Element => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -26,32 +27,20 @@ const RandomContributor = (): JSX.Element => {
             </a>
           </div>
           <div className="random-contributor__thank">
-            Thank you{' '}
-            <a
-              href={contributor.profileUri}
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-            >
-              {contributor.login}
-            </a>{' '}
-            for making{' '}
-            <a
-              href={contributor.commitsListUri}
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-            >
-              <span>{contributor.contributionsCount}
-                {contributor.contributionsCount === 1 ? ' contribution' : ' contributions'}
-              </span>
-            </a>{' '}
-            to{' '}
-            <a
-              href={`https://github.com/adoptium/${contributor.repo}`}
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-            >
-              <span>{contributor.repo}</span>
-            </a>
+            <Trans 
+              i18nKey="asciidoc.random.contributor.text" 
+              defaults='Thank you <profileUri>{{login}}</profileUri> for making <commitsListUri>{{contributionsCount}} contribution(s)</commitsListUri> to <repoUri>{{repo}}</repoUri>' 
+              components={{
+                profileUri: <Link to={contributor.profileUri} target="_blank" rel="nofollow noopener noreferrer" />, 
+                commitsListUri: <Link to={contributor.commitsListUri} target="_blank" rel="nofollow noopener noreferrer"/>,
+                repoUri: <Link to={`https://github.com/adoptium/${contributor.repo}`} target="_blank" rel="nofollow noopener noreferrer"/>,
+              }}
+              values={{
+                'login': contributor.login, 
+                'contributionsCount': contributor.contributionsCount,
+                'repo': contributor.repo
+              }}
+            />
           </div>
         </>
       )}

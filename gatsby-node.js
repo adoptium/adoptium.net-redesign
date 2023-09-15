@@ -167,6 +167,9 @@ exports.onCreateNode = async ({ node, actions, getNode, getNodes }) => {
     const fetchFilePath = getNodes().find(n => n.id === node.parent)
     const name = path.basename(fetchFilePath.relativePath, '.adoc')
 
+    const currentFileDir = path.dirname(fetchFilePath.absolutePath)
+    const partialDir = path.join(currentFileDir, '_partials')
+
     // Check if post.name is "index" -- because that's the file for default language
     // (In this case "en")
     const isDefault = name === 'index'
@@ -200,6 +203,12 @@ exports.onCreateNode = async ({ node, actions, getNode, getNodes }) => {
       name: 'slug',
       node,
       value
+    })
+
+    createNodeField({
+      node,
+      name: 'partialDir',
+      value: partialDir
     })
   } else if (node.internal.type === 'Mdx') {
     const slug = createFilePath({ node, getNode })

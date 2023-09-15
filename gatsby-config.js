@@ -24,7 +24,7 @@ module.exports = {
       options: {
         name: 'asciidoc-pages',
         path: path.join(__dirname, 'content/asciidoc-pages'),
-        ignore: ['**/*.md']
+        ignore: ['**/*.md', '**/_partials/**']
       }
     },
     {
@@ -129,7 +129,12 @@ module.exports = {
         ]
       }
     },
-    'gatsby-transformer-asciidoc',
+    {
+      resolve: 'gatsby-transformer-asciidoc',
+      options: {
+        safe: 'server'
+      }
+    },
     {
       resolve: 'gatsby-plugin-mdx',
       options: {

@@ -1,5 +1,4 @@
 = Temurin(TM) Download Buttons
-
 :page-authors: tellison, gdams
 :keywords: buttons
 

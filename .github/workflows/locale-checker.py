@@ -116,22 +116,7 @@ def main():
 
             body = "The English version of this file has been updated. "
             body += "The following localised versions are potentially out of date:\n\n"
-            body += "```diff\n"
-            body += f"- {english_shasum} (English latest)\n"
-            for locale in outdated_locales:
-                localized_shasum = get_shasum(
-                    os.path.join(root, f"index.{locale}.adoc")
-                )
-                # If localized file is None then we need to create a pull request to add the shasum to the file
-                if localized_shasum is None:
-                    addLocalizedShasum(english_shasum, locale, root)
-                # Add localized shasum to outdated_locales
-                outdated_locales[
-                    outdated_locales.index(locale)
-                ] = f"{localized_shasum} {locale}"
-                body += f"+ {localized_shasum} ({locale})\n"
-            body += "```\n\n"
-            body += "View the Latest version of the file "
+            body += "View the Latest English version of the file "
             body += f"[here](https://github.com/{REPO}/blob/main/{english_file}).\n\n"
             body += "| Locale | File | Locale Lead |\n"
             body += "| ------ | ---- | ----------- |\n"
@@ -147,6 +132,21 @@ def main():
                     f'| {locale} | [{f"index.{locale}.adoc"}]({url}) | {locale_lead}\n'
                 )
             body += "\n"
+            body += "```diff\n"
+            body += f"- {english_shasum} (English latest)\n"
+            for locale in outdated_locales:
+                localized_shasum = get_shasum(
+                    os.path.join(root, f"index.{locale}.adoc")
+                )
+                # If localized file is None then we need to create a pull request to add the shasum to the file
+                if localized_shasum is None:
+                    addLocalizedShasum(english_shasum, locale, root)
+                # Add localized shasum to outdated_locales
+                outdated_locales[
+                    outdated_locales.index(locale)
+                ] = f"{localized_shasum} {locale}"
+                body += f"+ {localized_shasum} ({locale})\n"
+            body += "```\n\n"
             body += "---\n\n"
 
             for locale in outdated_locales:
@@ -176,7 +176,7 @@ def main():
                     "--body",
                     body,
                     "--label",
-                    "translation,help wanted",
+                    "translation,help wanted, good first issue",
                 ]
             )
 

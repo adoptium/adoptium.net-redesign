@@ -1,6 +1,6 @@
 ---
 title: Eclipse Temurin 21 release delay
-date: "2023-10-28T12:00:00+00:00"
+date: "2023-09-28T12:00:00+00:00"
 author: pmc
 description: Adoptium is experiencing a delay to the release of Temurin 21
 tags:

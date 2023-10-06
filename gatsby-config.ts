@@ -4,19 +4,76 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-const path = require('path')
-const locales = require('./locales/i18n')
+import path from 'path'
+import adapter from 'gatsby-adapter-netlify'
+import locales from './locales/i18n'
+
+interface SiteMetadata {
+  title: string;
+  description: string;
+  author: string;
+  siteUrl: string;
+  social: {
+    twitter: string
+  }
+}
+
+interface AsciidocNode {
+  id: string;
+  document: {
+    title: string;
+  };
+  fields: {
+    slug: string;
+  };
+  html: string;
+}
+
+interface LocalSearchNormalizerArgs {
+  data: {
+    allAsciidoc: {
+      edges: Array<{ node: AsciidocNode }>;
+    };
+  };
+}
+
+interface MdxNode {
+  excerpt: string;
+  fields: {
+    slug: string;
+    postPath: string;
+  };
+  frontmatter: {
+    date: string;
+    title: string;
+  };
+}
+
+interface AllMdxQueryResult {
+  allMdx: {
+    totalCount: number;
+    edges: {
+      node: MdxNode;
+    }[];
+  };
+  site: {
+    siteMetadata: SiteMetadata;
+  }
+}
+
+const metadata: SiteMetadata = {
+  title: 'Adoptium',
+  description: 'Eclipse Adoptium provides prebuilt OpenJDK binaries ...',
+  author: 'Eclipse Adoptium',
+  siteUrl: 'https://adoptium.net',
+  social: {
+    twitter: 'Adoptium'
+  }
+};
 
 module.exports = {
-  siteMetadata: {
-    title: 'Adoptium',
-    description: 'Eclipse Adoptium provides prebuilt OpenJDK binaries from a fully open source set of build scripts and infrastructure. Supported platforms include Linux, macOS, Windows, ARM, Solaris, and AIX.',
-    author: 'Eclipse Adoptium',
-    siteUrl: 'https://adoptium.net',
-    social: {
-      twitter: 'Adoptium'
-    }
-  },
+  adapter: adapter(),
+  siteMetadata: metadata,
   plugins: [
     'gatsby-plugin-sitemap',
     {
@@ -92,7 +149,7 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMdx } }) => {
+            serialize: ({ query: { site, allMdx } }: { query: AllMdxQueryResult }) => {
               return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
@@ -204,7 +261,7 @@ module.exports = {
         `,
         index: ['title', 'body'],
         store: ['id', 'path', 'title'],
-        normalizer: ({ data }) =>
+        normalizer: ({ data }: LocalSearchNormalizerArgs) =>
           data.allAsciidoc.edges.map((result) => ({
             id: result.node.id,
             path: result.node.fields.slug,
@@ -222,7 +279,6 @@ module.exports = {
         ]
       }
     },
-    'gatsby-plugin-netlify',
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-react-svg',

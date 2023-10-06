@@ -31,6 +31,8 @@
     },
     "include": [
       "**/*.{ts,tsx,mdx}",
+      "gatsby-node.ts",
+      "gatsby-config.ts",
       "vitest.config.ts",
       "vitest-setup.ts"
     ]

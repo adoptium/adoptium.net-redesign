@@ -36,7 +36,7 @@ This assumes you already have Node.js and npm installed. Node.js version 18 or a
 
 ## Configuring the build
 
-`gatsby-config.js` is effectively your build script and `gatsby-node.js` is where the Asciidoc rendering takes place.
+`gatsby-config.ts` is effectively your build script and `gatsby-node.ts` is where the Asciidoc rendering takes place.
 
 ## How to contribute
 

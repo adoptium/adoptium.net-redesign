@@ -1,24 +1,95 @@
-const crypto = require('crypto')
-const path = require('path')
-const fetch = require('node-fetch')
-const fs = require('fs')
-const util = require('node:util')
-const exec = util.promisify(require('node:child_process').exec)
-const { pipeline } = require('stream')
-const { promisify } = require('util')
-const { createFilePath } = require('gatsby-source-filesystem')
-const locales = require('./locales/i18n')
-const authors = require('./src/json/authors.json')
+import crypto from 'crypto'
+import path from 'path'
+import fetch from 'node-fetch'
+import fs from 'fs'
+import util from 'node:util'
+import { exec as execChild } from 'node:child_process'
+import { pipeline } from 'stream'
+import { promisify } from 'util'
+import { createFilePath } from 'gatsby-source-filesystem'
+import locales from './locales/i18n'
+import authors from './src/json/authors.json'
+import type { Actions, GatsbyNode, Node } from 'gatsby'
 
-const { localizedSlug, findKey, removeTrailingSlash } = require('./src/util/gatsby-node-helpers')
+import { localizedSlug, findKey, removeTrailingSlash } from './src/util/gatsby-node-helpers'
+const exec = util.promisify(execChild)
+
+interface SourceNodesArgs {
+  actions: {
+    createNode: (node: any) => void;
+  };
+  createNodeId: (id: string) => string;
+}
+
+interface AdoptiumData {
+  available_releases: string[];
+  available_lts_releases: string[];
+  most_recent_lts: string;
+  most_recent_feature_version: string;
+}
+
+interface Page {
+  path: string;
+  component: string;
+  context: {
+    locale: string;
+    defaultGitSHA?: string | null;
+    language: string;
+    i18n: {
+      routed: boolean;
+      originalPath: string;
+      path: string;
+      language: string;
+    };
+  };
+}
+
+interface Action {
+  createNodeField: (field: any) => void;
+}
+
+interface MdxNode extends Node {
+  frontmatter: {
+    date: string;
+  };
+  fields: {
+    slug: string;
+    gitSHA?: string;
+  }
+}
+
+interface FileNode {
+  id: string;
+  relativePath: string;
+  absolutePath: string;
+}
+
+interface CreateNodeArgs {
+  node: Node;
+  actions: Action;
+  getNode: (id: string) => FileNode;
+  getNodes: () => FileNode[];
+}
+
+interface CreatePageArgs {
+  page: Page;
+  actions: Actions;
+  getNodes: () => Node[];
+}
+
+interface LocaleEntry {
+  default?: boolean;
+  locale: string;
+  path: string;
+}
 
 // Import available versions from Adoptium API
-exports.sourceNodes = async ({ actions, createNodeId }) => {
+export const sourceNodes: GatsbyNode['sourceNodes'] = async ({ actions, createNodeId }: SourceNodesArgs) => {
   const { createNode } = actions
 
   // Fetch available versions from Adoptium API
   const res = await fetch('https://api.adoptium.net/v3/info/available_releases')
-  const data = await res.json()
+  const data: AdoptiumData = await res.json()
 
   data.available_releases.forEach((release, i) => {
     const nodeContent = JSON.stringify(release)
@@ -89,7 +160,7 @@ exports.sourceNodes = async ({ actions, createNodeId }) => {
   createNode(MostRecentFeatureVersion)
 }
 
-exports.onCreatePage = ({ page, actions, getNodes }) => {
+export const onCreatePage = ({ page, actions, getNodes }: CreatePageArgs): void => {
   const { createPage, deletePage } = actions
 
   // Delete pages such as /about/index.de
@@ -103,7 +174,7 @@ exports.onCreatePage = ({ page, actions, getNodes }) => {
   if (page.component.includes('asciidocTemplate') && page.context.locale === 'en') {
     // Grab the keys ('en' & 'de') of locales and map over them
     // eslint-disable-next-line array-callback-return
-    Object.keys(locales).map(lang => {
+    Object.keys(locales).forEach(lang => {
       if (lang !== 'en') {
         // Use the values defined in "locales" to construct the path
         const localizedPath = locales[lang].default
@@ -116,7 +187,7 @@ exports.onCreatePage = ({ page, actions, getNodes }) => {
         if (fs.existsSync(`./content/asciidoc-pages${page.path}index.${lang}.adoc`)) {
           locale = lang
           // fetch fields.gitSHA from the default language file
-          defaultGitSHA = getNodes().find(n => n.fields && n.fields.slug === page.path).fields.gitSHA || null
+          defaultGitSHA = (getNodes() as MdxNode[]).find(n => n.fields && n.fields.slug === page.path)?.fields?.gitSHA || null
         }
 
         return createPage({
@@ -160,11 +231,15 @@ exports.onCreatePage = ({ page, actions, getNodes }) => {
   })
 }
 
-exports.onCreateNode = async ({ node, actions, getNode, getNodes }) => {
+export const onCreateNode = async ({ node, actions, getNode, getNodes }: CreateNodeArgs) => {
   const { createNodeField } = actions
 
   if (node.internal.type === 'Asciidoc') {
     const fetchFilePath = getNodes().find(n => n.id === node.parent)
+    if (!fetchFilePath) {
+      // Handle the case where fetchFilePath is not found.
+      throw new Error(`No file path found for node with parent ID: ${node.parent}`);
+    }
     const name = path.basename(fetchFilePath.relativePath, '.adoc')
 
     const currentFileDir = path.dirname(fetchFilePath.absolutePath)
@@ -175,7 +250,7 @@ exports.onCreateNode = async ({ node, actions, getNode, getNodes }) => {
     const isDefault = name === 'index'
 
     // Find the key that has "default: true" set (in this case it returns "en")
-    const defaultKey = findKey(locales, o => o.default === true)
+    const defaultKey = findKey(locales, (o: LocaleEntry) => o.default === true)
 
     if (isDefault) {
       // Get Git SHA of the last commit to the file and add it as a field
@@ -212,7 +287,8 @@ exports.onCreateNode = async ({ node, actions, getNode, getNodes }) => {
     })
   } else if (node.internal.type === 'Mdx') {
     const slug = createFilePath({ node, getNode })
-    const date = new Date(node.frontmatter.date)
+    const mdxNode = node as MdxNode
+    const date = new Date(mdxNode.frontmatter.date)
     const year = date.getFullYear()
     const zeroPaddedMonth = `${date.getMonth() + 1}`.padStart(2, '0')
 
@@ -229,31 +305,31 @@ exports.onCreateNode = async ({ node, actions, getNode, getNodes }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions }) => {
   const { createPage, createSlice } = actions
   const postsPerPage = 10
 
   // Create Slice components https://www.gatsbyjs.com/docs/how-to/performance/using-slices/
   createSlice({
     id: 'navbar',
-    component: require.resolve('./src/components/NavBar/index.tsx')
+    component: path.resolve('src', 'components', 'NavBar', 'index.tsx'),
   })
 
   createSlice({
     id: 'footer',
-    component: require.resolve('./src/components/Footer/index.tsx')
+    component: path.resolve('src', 'components', 'Footer', 'index.tsx'),
   })
 
   createSlice({
     id: 'banner',
-    component: require.resolve('./src/components/Banner/index.tsx')
+    component: path.resolve('src', 'components', 'Banner', 'index.tsx'),
   })
 
   // create slice for AuthorBio
   for (const author of Object.keys(authors)) {
     createSlice({
       id: `author-bio-${author}`,
-      component: require.resolve('./src/components/AuthorBio/index.tsx'),
+      component: path.resolve('src', 'components', 'AuthorBio', 'index.tsx'),
       context: {
         identifier: author,
         author: authors[author]
@@ -264,7 +340,24 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create Asciidoc pages.
   const asciidocTemplate = path.resolve('./src/templates/asciidocTemplate.tsx')
 
-  const asciidocResults = await graphql(`
+  const asciidocResults = await graphql<{
+    docs: {
+      edges: Array<{
+        node: {
+          childAsciidoc: {
+            document: {
+              title: string;
+            };
+            fields: {
+              locale: string;
+              isDefault: boolean;
+              slug: string;
+            };
+          };
+        };
+      }>;
+    };
+  }>(`
     {
       docs: allFile(filter: {sourceInstanceName: {eq: "asciidoc-pages"}}) {
         edges {
@@ -289,7 +382,12 @@ exports.createPages = async ({ graphql, actions }) => {
     throw asciidocResults.errors
   }
 
-  const docs = asciidocResults.data.docs.edges
+  const docs = asciidocResults.data?.docs.edges
+
+  // Check if docs is null and throw error if it is
+  if (!docs) {
+    throw new Error('Error retrieving Asciidoc pages')
+  }
 
   docs.forEach(({ node: doc }) => {
     const title = doc.childAsciidoc.document.title
@@ -330,7 +428,11 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     // Query all blog posts by author to determine the number of pages needed
-    const authorPosts = await graphql(
+    const authorPosts = await graphql<{
+      allMdx: {
+        totalCount: number;
+      };
+    }>(
       `
         {
           allMdx(filter: {frontmatter: {author: {eq: "${author}"}}}) {
@@ -342,6 +444,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
     if (authorPosts.errors) {
       throw authorPosts.errors
+    }
+
+    if (!authorPosts.data) {
+      throw new Error('Error retrieving author posts')
     }
 
     const numAuthorPages = Math.ceil(authorPosts.data.allMdx.totalCount / postsPerPage)
@@ -375,7 +481,30 @@ exports.createPages = async ({ graphql, actions }) => {
   const tagTemplate = path.resolve('./src/templates/tagPage.tsx')
   const blogPost = path.resolve('./src/templates/blogPost.tsx')
 
-  const blogPostResults = await graphql(
+  const blogPostResults = await graphql<{
+    allMdx: {
+      edges: Array<{
+        node: {
+          fields: {
+            slug: string;
+            postPath: string;
+          };
+          frontmatter: {
+            title: string;
+            tags: string[];
+          };
+          internal: {
+            contentFilePath: string;
+          };
+        };
+      }>;
+    };
+    tagsGroup: {
+      group: Array<{
+        fieldValue: string;
+      }>;
+    };
+  }>(
     `
       {
         allMdx(sort: {frontmatter: {date: DESC}}) {
@@ -406,6 +535,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
   if (blogPostResults.errors) {
     throw blogPostResults.errors
+  }
+
+  if (!blogPostResults.data) {
+    throw new Error('Error retrieving blog posts')
   }
 
   const posts = blogPostResults.data.allMdx.edges

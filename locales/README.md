@@ -15,7 +15,9 @@ This is the locales folder, it contains several json files which are used to map
 │   ├── language-selector.json
 │   └── marketplace.json
 ├── zh-CN
-    ├── download.json
+    ├── asciidoc.json
+    ├── docs.json
+    ├── download.json
     ├── index.json
     ├── language-selector.json
     ├── marketplace.json

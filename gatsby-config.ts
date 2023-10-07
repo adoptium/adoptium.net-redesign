@@ -8,72 +8,39 @@ import path from 'path'
 import adapter from 'gatsby-adapter-netlify'
 import locales from './locales/i18n'
 
-interface SiteMetadata {
-  title: string;
-  description: string;
-  author: string;
-  siteUrl: string;
-  social: {
-    twitter: string
-  }
-}
-
-interface AsciidocNode {
-  id: string;
-  document: {
-    title: string;
-  };
-  fields: {
-    slug: string;
-  };
-  html: string;
-}
+import type { GatsbyConfig } from 'gatsby'
+import type { MDXPage, AsciidocPage } from './src/types'
 
 interface LocalSearchNormalizerArgs {
   data: {
     allAsciidoc: {
-      edges: Array<{ node: AsciidocNode }>;
+      edges: Array<{ node: AsciidocPage }>;
     };
   };
 }
 
-interface MdxNode {
-  excerpt: string;
-  fields: {
-    slug: string;
-    postPath: string;
-  };
-  frontmatter: {
-    date: string;
-    title: string;
-  };
-}
+type SiteMetadata = GatsbyConfig['siteMetadata'] & {
+    siteUrl: string;
+};
 
 interface AllMdxQueryResult {
-  allMdx: {
-    totalCount: number;
-    edges: {
-      node: MdxNode;
-    }[];
-  };
+  allMdx: MDXPage;
   site: {
     siteMetadata: SiteMetadata;
   }
 }
 
-const metadata: SiteMetadata = {
-  title: 'Adoptium',
-  description: 'Eclipse Adoptium provides prebuilt OpenJDK binaries ...',
-  author: 'Eclipse Adoptium',
-  siteUrl: 'https://adoptium.net',
-  social: {
-    twitter: 'Adoptium'
-  }
-};
-
-module.exports = {
+const config: GatsbyConfig = {
   adapter: adapter(),
-  siteMetadata: metadata,
+  siteMetadata: {
+    title: 'Adoptium',
+    description: 'Eclipse Adoptium provides prebuilt OpenJDK binaries ...',
+    author: 'Eclipse Adoptium',
+    siteUrl: 'https://adoptium.net',
+    social: {
+      twitter: 'Adoptium'
+    }
+  },
   plugins: [
     'gatsby-plugin-sitemap',
     {
@@ -325,3 +292,5 @@ module.exports = {
     }
   ]
 }
+
+export default config

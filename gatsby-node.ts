@@ -9,7 +9,7 @@ import { promisify } from 'util'
 import { createFilePath } from 'gatsby-source-filesystem'
 import locales from './locales/i18n'
 import authors from './src/json/authors.json'
-import type { Actions, GatsbyNode, Node } from 'gatsby'
+import type { GatsbyNode, Node } from 'gatsby'
 
 import { localizedSlug, findKey, removeTrailingSlash } from './src/util/gatsby-node-helpers'
 const exec = util.promisify(execChild)
@@ -28,26 +28,6 @@ interface AdoptiumData {
   most_recent_feature_version: string;
 }
 
-interface Page {
-  path: string;
-  component: string;
-  context: {
-    locale: string;
-    defaultGitSHA?: string | null;
-    language: string;
-    i18n: {
-      routed: boolean;
-      originalPath: string;
-      path: string;
-      language: string;
-    };
-  };
-}
-
-interface Action {
-  createNodeField: (field: any) => void;
-}
-
 interface MdxNode extends Node {
   frontmatter: {
     date: string;
@@ -56,25 +36,6 @@ interface MdxNode extends Node {
     slug: string;
     gitSHA?: string;
   }
-}
-
-interface FileNode {
-  id: string;
-  relativePath: string;
-  absolutePath: string;
-}
-
-interface CreateNodeArgs {
-  node: Node;
-  actions: Action;
-  getNode: (id: string) => FileNode;
-  getNodes: () => FileNode[];
-}
-
-interface CreatePageArgs {
-  page: Page;
-  actions: Actions;
-  getNodes: () => Node[];
 }
 
 interface LocaleEntry {
@@ -160,8 +121,13 @@ export const sourceNodes: GatsbyNode['sourceNodes'] = async ({ actions, createNo
   createNode(MostRecentFeatureVersion)
 }
 
-export const onCreatePage = ({ page, actions, getNodes }: CreatePageArgs): void => {
+export const onCreatePage: GatsbyNode['onCreatePage'] = async ({ page, actions, getNodes }) => {
   const { createPage, deletePage } = actions
+
+  // Throw error if page.context is undefined
+  if (!page.context) {
+    throw new Error('Error retrieving page context')
+  }
 
   // Delete pages such as /about/index.de
   if (page.path.includes('index')) {
@@ -200,12 +166,12 @@ export const onCreatePage = ({ page, actions, getNodes }: CreatePageArgs): void 
           // This context also gets passed to the src/components/layout file
           // This should ensure that the locale is available on every page
           context: {
-            ...page.context,
+            ...(page.context ? page.context : {}),
             locale,
             defaultGitSHA,
             language: lang,
             i18n: {
-              ...page.context.i18n,
+              ...(page.context?.i18n ? page.context.i18n : {}),
               routed: true,
               originalPath: page.path,
               path: removeTrailingSlash(localizedPath),
@@ -231,7 +197,7 @@ export const onCreatePage = ({ page, actions, getNodes }: CreatePageArgs): void 
   })
 }
 
-export const onCreateNode = async ({ node, actions, getNode, getNodes }: CreateNodeArgs) => {
+export const onCreateNode: GatsbyNode['onCreateNode'] = async ({ node, actions, getNode, getNodes }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === 'Asciidoc') {
@@ -240,9 +206,10 @@ export const onCreateNode = async ({ node, actions, getNode, getNodes }: CreateN
       // Handle the case where fetchFilePath is not found.
       throw new Error(`No file path found for node with parent ID: ${node.parent}`);
     }
-    const name = path.basename(fetchFilePath.relativePath, '.adoc')
 
-    const currentFileDir = path.dirname(fetchFilePath.absolutePath)
+    const name = path.basename(fetchFilePath.relativePath as string, '.adoc')
+
+    const currentFileDir = path.dirname(fetchFilePath.absolutePath as string);
     const partialDir = path.join(currentFileDir, '_partials')
 
     // Check if post.name is "index" -- because that's the file for default language

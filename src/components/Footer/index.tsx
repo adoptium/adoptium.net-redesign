@@ -50,6 +50,7 @@ const Footer = (): JSX.Element => {
                 <li className="nav-item mb-2"><a href="https://www.eclipse.org/mail/" className="nav-link p-0 text-muted">Mailing Lists</a></li>
                 <li className="nav-item mb-2"><a href="https://www.eclipse.org/forums/" className="nav-link p-0 text-muted">Forums</a></li>
                 <li className="nav-item mb-2"><a href="https://marketplace.eclipse.org/" className="nav-link p-0 text-muted">Marketplace</a></li>
+                <li className="nav-item mb-2"><a href="https://store.adoptium.net/" className="nav-link p-0 text-muted">Swag Store</a></li>
               </ul>
             </div>
 

@@ -245,6 +245,16 @@ exports[`Footer component > renders correctly 1`] = `
                 Marketplace
               </a>
             </li>
+            <li
+              class="nav-item mb-2"
+            >
+              <a
+                class="nav-link p-0 text-muted"
+                href="https://store.adoptium.net/"
+              >
+                Swag Store
+              </a>
+            </li>
           </ul>
         </div>
         <div

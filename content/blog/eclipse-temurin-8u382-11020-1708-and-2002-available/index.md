@@ -53,4 +53,4 @@ Adoptium is not releasing Temurin 20.0.2 for Linux PPC64le, s390x, arm32, and AI
 
 ### New AIX version requirement
 
-From this release onwards, all Temurin versions published for AIX now require AIX OS version 7.1.
+From this release onwards, all Temurin versions published for AIX now require AIX OS version 7.2.

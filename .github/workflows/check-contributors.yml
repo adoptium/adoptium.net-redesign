@@ -39,6 +39,10 @@ jobs:
         update_authors() {
           local file=$1
           if [[ ${file} =~ ^content/asciidoc.*.adoc ]]; then
+            # If page is in a _partials directory, skip it
+            if [[ ${file} =~ ^content/asciidoc.*_partials.*.adoc ]]; then
+              return
+            fi
             current_authors=$(grep ':page-authors:' "${file}" | sed -n -e 's/^.*page-authors: //p')
             contibutors=$(python3 .github/workflows/github-file-contributors.py --file "${file}")
             for contibutor in ${contibutors}; do

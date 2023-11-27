@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide, SwiperRef } from "swiper/react"
 import "swiper/swiper-bundle.css"
 import SwiperCore from "swiper"
 import { Navigation } from "swiper/modules"
-import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
+import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi"
 import { RedIcon } from "../Common/Icon"
 
 // Use SwiperCore modules

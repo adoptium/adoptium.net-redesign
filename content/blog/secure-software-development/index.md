@@ -13,11 +13,11 @@ tags:
 The Secure Software Development Framework (SSDF) is
 [special publication 800-218](https://csrc.nist.gov/Projects/ssdf)
 from the National Institute of Standards and Technology agency of the US
-Department of Commerce's Computer Security Resource Center division.  It is
+Department of Commerce's Computer Security Resource Center division. It is
 a set of development practices which can be used to establish secure
 development processes for your software and was based on development
-practices from multiple other organisations.  Its goal is to reduce
-vulnerabilities in the software that organisations ship.  With President
+practices from multiple other organisations. Its goal is to reduce
+vulnerabilities in the software that organisations ship. With President
 Biden's
 [executive order 14028](https://www.federalregister.gov/documents/2021/05/17/2021-10460/improving-the-nations-cybersecurity)
 from 17th May 2021 being signed in an attempt to improve cybersecurity,
@@ -28,12 +28,12 @@ points.
 
 There are other models available and if there are others that might have
 relevant things not covered by SSDF then please let us know so we can
-evaluate whether it's worth including extra things from them.  We found that
+evaluate whether it's worth including extra things from them. We found that
 of the alternative models available such as
 [BSA](https://www.bsa.org/reports/updated-bsa-framework-for-secure-software)
 (which maps to SSDF) and [SLSA](https://slsa.dev/) we found the SSDF
 publication to be suitably thorough and in many cases is more detailed than
-the alternatives we had looked at.  While we continue this work we are,
+the alternatives we had looked at. While we continue this work we are,
 along with other Eclipse Foundation projects, aiming to comply with the SLSA
 levels too as we perform this work, and with SSDF and SLSA we have
 complementary frameworks with both helping to enhance the software
@@ -46,7 +46,7 @@ announcing SLSA level 2 compliance is an example of this.
 
 As a starting point we have been performing analysis to determine where the
 Adoptium project, and Eclipse Temurin specifically to start with, is in
-terms of the points in the specifications.  Our process will be:
+terms of the points in the specifications. Our process will be:
 
 1. Determine which items in the specification we believe we already adhere to
 2. Collate the information on each of the SSDF points to clarify where we currently stand relative to what is needed
@@ -58,11 +58,11 @@ terms of the points in the specifications.  Our process will be:
 One of the important things in the secure software specification relate to
 Software Bill Of Materials (SBOMs) and we have started producing
 SBOMs along with the Temurin builds using [CycloneDX](https://cyclonedx.org)
-as part of our regular build process.  While the full content of it is still
+as part of our regular build process. While the full content of it is still
 a work in progress and will be enhanced over time - and you can have your
 say [in this issue](https://github.com/adoptium/temurin-build/issues/3013) -
 we have a good baseline of data about what has been used to produce each of
-our builds across all of our platforms.  The JSON-formatted SBOMs can be
+our builds across all of our platforms. The JSON-formatted SBOMs can be
 obtained along with the Eclipse Temurin builds.
 
 Additionally, we have been working towards having fully reproducible builds
@@ -77,7 +77,7 @@ come to enable binary identical builds on Linux, but we have also done similar
 activities on macOS and Windows platforms too and our JDK19 deliverables at
 the time of writing are almost completely reproducible when built-in an
 equivalent environment - the class data sharing archives in
-`lib/server/*.cds` are the only files that are not always reproducible.  You
+`lib/server/*.cds` are the only files that are not always reproducible. You
 can read some details of this in our [reproducible build
 blog](https://blog.adoptium.net/2022/06/adoptium-reproducible-builds/).
 

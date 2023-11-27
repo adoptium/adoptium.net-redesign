@@ -1,39 +1,39 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react"
 
 const mediaQueryChangeSubscribe = (mq: MediaQueryList, handler: () => void) => {
   if (mq.addEventListener) {
-    mq.addEventListener('change', handler);
+    mq.addEventListener("change", handler)
   } else {
-    mq.addListener(handler);
+    mq.addListener(handler)
   }
-};
+}
 
 const mediaQueryChangeUnsubscribe = (
   mq: MediaQueryList,
-  handler: () => void
+  handler: () => void,
 ) => {
   if (mq.removeEventListener) {
-    mq.removeEventListener('change', handler);
+    mq.removeEventListener("change", handler)
   } else {
-    mq.removeListener(handler);
+    mq.removeListener(handler)
   }
-};
+}
 
 // eslint-disable-next-line
 export function useMediaQuery(query: string): boolean | undefined {
-  const [matches, setMatches] = useState<boolean>();
+  const [matches, setMatches] = useState<boolean>()
 
   useEffect(() => {
-    if (typeof window.matchMedia === 'function') {
-      const mq = window.matchMedia(query);
-      setMatches(mq.matches);
-      const handler = (): void => setMatches(mq.matches);
-      mediaQueryChangeSubscribe(mq, handler);
-      return (): void => mediaQueryChangeUnsubscribe(mq, handler);
+    if (typeof window.matchMedia === "function") {
+      const mq = window.matchMedia(query)
+      setMatches(mq.matches)
+      const handler = (): void => setMatches(mq.matches)
+      mediaQueryChangeSubscribe(mq, handler)
+      return (): void => mediaQueryChangeUnsubscribe(mq, handler)
     }
 
-    return undefined;
-  }, [query]);
+    return undefined
+  }, [query])
 
-  return matches;
+  return matches
 }

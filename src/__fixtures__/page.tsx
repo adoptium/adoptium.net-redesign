@@ -1,16 +1,11 @@
-import {
-    AsciidocPage,
-    MDXPage,
-    SingleMDXPage,
-    SiteMetaData
-} from '../types';
+import { AsciidocPage, MDXPage, SingleMDXPage, SiteMetaData } from "../types"
 
 export const createAsciidocData = (): {
-    asciidoc: AsciidocPage;
-  } => ({
-    asciidoc: {
-        id: 'asciidoc-1',
-        html: `
+  asciidoc: AsciidocPage
+} => ({
+  asciidoc: {
+    id: "asciidoc-1",
+    html: `
             <p>Hello World, this is a <pre><code>test</code></pre></p>
             <pre><code class="language-java">public static void main(String[] args) {
                 System.out.println("Hello World");
@@ -25,67 +20,67 @@ export const createAsciidocData = (): {
                 </ul>
             </div>
         `,
-        document: {
-            title: 'Asciidoc Page title',
-            main: 'Asciidoc Page content',
-        },
-        pageAttributes: {
-            authors: 'author1, author2',
-        },
-        fields: {
-            slug: '/asciidoc/asciidoc-page-title',
-            relativePath: 'test.adoc',
-        }
+    document: {
+      title: "Asciidoc Page title",
+      main: "Asciidoc Page content",
     },
-});
+    pageAttributes: {
+      authors: "author1, author2",
+    },
+    fields: {
+      slug: "/asciidoc/asciidoc-page-title",
+      relativePath: "test.adoc",
+    },
+  },
+})
 
 export const createMDXData = (): {
-    allMdx: MDXPage;
+  allMdx: MDXPage
 } => ({
-    allMdx: {
-        totalCount: 1,
-        edges: [
-            {
-                node: {
-                    frontmatter: {
-                        title: 'MDX Page title',
-                        author: 'pmc',
-                        date: '2021-01-01',
-                        describtion: 'MDX Page describtion',
-                    },
-                    fields: {
-                        slug: '/mdx/mdx-page-title',
-                        postPath: '/mdx/mdx-page-title',
-                    },
-                    excerpt: 'MDX Page excerpt',
-                }
-            }
-        ]
-    }
-});
+  allMdx: {
+    totalCount: 1,
+    edges: [
+      {
+        node: {
+          frontmatter: {
+            title: "MDX Page title",
+            author: "pmc",
+            date: "2021-01-01",
+            describtion: "MDX Page describtion",
+          },
+          fields: {
+            slug: "/mdx/mdx-page-title",
+            postPath: "/mdx/mdx-page-title",
+          },
+          excerpt: "MDX Page excerpt",
+        },
+      },
+    ],
+  },
+})
 
 export const createSingleMDXData = (): {
-    mdx: SingleMDXPage;
-    site: SiteMetaData;
+  mdx: SingleMDXPage
+  site: SiteMetaData
 } => ({
-    mdx: {
-        id: 'mdx-1',
-        excerpt: 'MDX Page excerpt',
-        frontmatter: {
-            title: 'MDX Page title',
-            author: 'pmc',
-            date: '2021-01-01',
-            description: 'MDX Page describtion',
-            tags: ['tag1', 'tag2'],
-        }
+  mdx: {
+    id: "mdx-1",
+    excerpt: "MDX Page excerpt",
+    frontmatter: {
+      title: "MDX Page title",
+      author: "pmc",
+      date: "2021-01-01",
+      description: "MDX Page describtion",
+      tags: ["tag1", "tag2"],
     },
-    site: {
-        siteMetadata: {
-            title: 'Site title',
-            siteUrl: 'https://adoptium.net',
-            social: {
-                twitter: 'twitter',
-            }
-        }
-    }
-});
+  },
+  site: {
+    siteMetadata: {
+      title: "Site title",
+      siteUrl: "https://adoptium.net",
+      social: {
+        twitter: "twitter",
+      },
+    },
+  },
+})

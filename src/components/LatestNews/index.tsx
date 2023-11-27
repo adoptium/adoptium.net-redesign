@@ -5,31 +5,29 @@ import LatestNewsSlider from "./LatestNewsSlider"
 import { RedIcon } from "../Common/Icon"
 
 const LatestNews = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
-        allMdx(limit: 4, sort: {frontmatter: {date: DESC}}) {
-            edges {
-            node {
-                frontmatter {
-                title
-                date(formatString: "MMMM DD, YYYY")
-                }
-                fields {
-                postPath
-                }
+      allMdx(limit: 4, sort: { frontmatter: { date: DESC } }) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date(formatString: "MMMM DD, YYYY")
             }
+            fields {
+              postPath
             }
+          }
         }
+      }
     }
-  `);
+  `)
 
-    const newsmap = data.allMdx.edges
-    console.log(newsmap)
+  const newsmap = data.allMdx.edges
+  const set1 = newsmap.slice(0, 2)
+  const set2 = newsmap.slice(2, 4)
 
-    const set1 = newsmap.slice(0, 2)
-    const set2 = newsmap.slice(2, 4)
-
-    return (
+  return (
     <>
       <div className="bg-purple py-16 lg:pt-32 pb-16 xl:px-0 lg:px-8 px-0">
         <div className="mx-auto max-w-[1264px] w-full flex lg:flex-row flex-col items-start lg:items-center justify-center lg:space-x-8 xl:space-x-16 relative overflow-hidden">

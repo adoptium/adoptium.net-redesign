@@ -29,11 +29,11 @@ Inside these directories are json files which can be named anything but it's bes
 
 ```json
 {
-    "Home": "Heim",
-    "Prebuilt OpenJDK": "Vorgefertigtes OpenJDK",
-    "Binaries for Free!": "Binaries Kostenlos!",
-    "Intro": "Java™ ist die weltweit führende Programmiersprache und Plattform. Die Adoptium Working Group fördert und unterstützt qualitativ hochwertige, TCK-zertifizierte Laufzeiten und zugehörige Technologien für den Einsatz im gesamten Java-Ökosystem™. Eclipse Temurin ist der Name der OpenJDK-Distribution von Adoptium."
-  }
+  "Home": "Heim",
+  "Prebuilt OpenJDK": "Vorgefertigtes OpenJDK",
+  "Binaries for Free!": "Binaries Kostenlos!",
+  "Intro": "Java™ ist die weltweit führende Programmiersprache und Plattform. Die Adoptium Working Group fördert und unterstützt qualitativ hochwertige, TCK-zertifizierte Laufzeiten und zugehörige Technologien für den Einsatz im gesamten Java-Ökosystem™. Eclipse Temurin ist der Name der OpenJDK-Distribution von Adoptium."
+}
 ```
 
 The translations in this file can be used in one of two ways:
@@ -45,7 +45,7 @@ The first way is to use the `<Trans>` function provided by `gatsby-plugin-react-
 Make sure that the top of your `js`/`tsx` file imports the Trans function:
 
 ```js
-import { Trans } from 'gatsby-plugin-react-i18next'
+import { Trans } from "gatsby-plugin-react-i18next"
 ```
 
 From there you can then use the function inside the React `return` block:
@@ -63,14 +63,14 @@ The second way is to use the `useTranslation()` function. This is recommended fo
 Make sure that the top of your `js`/`tsx` file imports the useTranslation function:
 
 ```js
-import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { useTranslation } from "gatsby-plugin-react-i18next"
 const { t } = useTranslation()
 ```
 
 From there you can then use the function inside the React `return` block:
 
 ```js
-<p>{t('Intro')}</p>
+<p>{t("Intro")}</p>
 ```
 
 The function will search the JSON files for the `Intro` key and return the localized block of text.

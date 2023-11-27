@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react"
-import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
+import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi"
 import SwiperCore from "swiper"
 import { Navigation } from "swiper/modules"
 
@@ -37,7 +37,7 @@ const Features = () => {
     },
   ]
 
-  const swiperRef = useRef<SwiperRef>(null);
+  const swiperRef = useRef<SwiperRef>(null)
 
   useEffect(() => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -77,7 +77,7 @@ const Features = () => {
             </div>
             <div className="lg:flex gap-4 items-center mt-16 hidden">
               <button onClick={handlePrevbase} className="text-white">
-                <FiArrowLeftCircle size={50} strokeWidth={1}/>
+                <FiArrowLeftCircle size={50} strokeWidth={1} />
               </button>
               <button onClick={handleNextbase} className="text-white">
                 <FiArrowRightCircle size={50} strokeWidth={1} />
@@ -123,10 +123,10 @@ const Features = () => {
           </Swiper>{" "}
           <div className="flex gap-4 items-center my-8  w-full justify-center lg:hidden">
             <button onClick={handlePrevbase} className="text-white">
-                <FiArrowLeftCircle size={50} strokeWidth={1}/>
+              <FiArrowLeftCircle size={50} strokeWidth={1} />
             </button>
             <button onClick={handleNextbase} className="text-white">
-                <FiArrowRightCircle size={50} strokeWidth={1}/>
+              <FiArrowRightCircle size={50} strokeWidth={1} />
             </button>
           </div>
         </div>

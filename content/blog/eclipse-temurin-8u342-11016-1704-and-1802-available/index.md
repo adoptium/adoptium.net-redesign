@@ -10,13 +10,13 @@ tags:
 
 Adoptium is happy to announce the immediate availability of Eclipse Temurin 8u342, 11.0.16, 17.0.4 and 18.0.2. As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms. All binaries are available from the [Temurin download page](https://adoptium.net/temurin/releases).
 
-* [List of security fixes and other fixes in OpenJDK 8u342](https://bugs.openjdk.org/browse/JDK-8290721?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%20openjdk8u342)
+- [List of security fixes and other fixes in OpenJDK 8u342](https://bugs.openjdk.org/browse/JDK-8290721?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%20openjdk8u342)
 
-* [List of security fixes and other fixes in OpenJDK 11.0.16](https://bugs.openjdk.org/browse/JDK-8288306?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%2011.0.16)
+- [List of security fixes and other fixes in OpenJDK 11.0.16](https://bugs.openjdk.org/browse/JDK-8288306?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%2011.0.16)
 
-* [List of security fixes and other fixes in OpenJDK 17.0.4](https://bugs.openjdk.org/browse/JDK-8288243?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%2017.0.4)
+- [List of security fixes and other fixes in OpenJDK 17.0.4](https://bugs.openjdk.org/browse/JDK-8288243?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%2017.0.4)
 
-* [List of security fixes and other fixes in OpenJDK 18.0.2](https://bugs.openjdk.org/browse/JDK-8289469?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%2018.0.2)
+- [List of security fixes and other fixes in OpenJDK 18.0.2](https://bugs.openjdk.org/browse/JDK-8289469?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%2018.0.2)
 
 ## New and Noteworthy
 
@@ -34,8 +34,8 @@ Due to some recent changes in the Harfbuzz library version used to build OpenJDK
 
 Further discussion on this issue and the changes required can be found at the links below:
 
-* https://bugs.openjdk.java.net/browse/JDK-8282588
-* https://mail.openjdk.java.net/pipermail/ppc-aix-port-dev/2022-March/004145.html
+- https://bugs.openjdk.java.net/browse/JDK-8282588
+- https://mail.openjdk.java.net/pipermail/ppc-aix-port-dev/2022-March/004145.html
 
 ### Changes to Root Certificate Authorities (Root CAs)
 
@@ -43,15 +43,15 @@ This release contains the following Root CA changes as described in the [Mozilla
 
 **Additions:**
 
-* DigiCert SMIME ECC P384 Root G5
-* DigiCert SMIME RSA4096 Root G5
-* DigiCert TLS ECC P384 Root G5
-* DigiCert TLS RSA4096 Root G5
-* Certainly Root E1
-* Certainly Root R1
-* E-Tugra Global Root CA RSA v3
-* E-Tugra Global Root CA ECC v3
+- DigiCert SMIME ECC P384 Root G5
+- DigiCert SMIME RSA4096 Root G5
+- DigiCert TLS ECC P384 Root G5
+- DigiCert TLS RSA4096 Root G5
+- Certainly Root E1
+- Certainly Root R1
+- E-Tugra Global Root CA RSA v3
+- E-Tugra Global Root CA ECC v3
 
 **Removals:**
 
-* Hellenic Academic and Research Institutions RootCA 2011
+- Hellenic Academic and Research Institutions RootCA 2011

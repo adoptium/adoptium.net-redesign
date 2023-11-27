@@ -7,6 +7,7 @@ tags:
   - adoptium
   - temurin
 ---
+
 At Adoptium we were as excited as everyone else to welcome the release of Java 21 last week. We have been testing OpenJDK 21 extensively, and have successfully built and [AQAvit](https://adoptium.net/en-GB/aqavit) verified the OpenJDK 21 GA source code release (based on the jdk-21+35 tag).
 
 Our community is committed to ensuring that all our builds are compliant to the Java specification before declaring them an official Eclipse Temurin release. We believe it is important to ensure that every official release is secure and high-quality as determined by AQAvit, and is Java compliant as determined by Oracle’s [Technology Compatibility Kit (TCK)](https://openjdk.org/groups/conformance/JckAccess). We learned only a few days before OpenJDK 21’s GA that the Java 21 TCK tests are subject to a new license agreement.

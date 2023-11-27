@@ -3,27 +3,27 @@
 module.exports = {
   en: {
     default: true,
-    locale: 'en-US',
-    path: 'en'
+    locale: "en-US",
+    path: "en",
   },
-  'en-GB': {
-    locale: 'en-GB',
-    path: 'en-GB'
+  "en-GB": {
+    locale: "en-GB",
+    path: "en-GB",
   },
   de: {
-    locale: 'de-DE',
-    path: 'de'
+    locale: "de-DE",
+    path: "de",
   },
   es: {
-    locale: 'es-ES',
-    path: 'es'
+    locale: "es-ES",
+    path: "es",
   },
   fr: {
-    locale: 'fr-FR',
-    path: 'fr'
+    locale: "fr-FR",
+    path: "fr",
   },
-  'zh-CN': {
-    locale: 'zh-CN',
-    path: 'zh-CN'
-  }
+  "zh-CN": {
+    locale: "zh-CN",
+    path: "zh-CN",
+  },
 }

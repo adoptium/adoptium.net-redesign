@@ -15,9 +15,10 @@ We are excited to announce that [Rivos](https://www.rivosinc.com/) has joined th
 ### Why join the Adoptium Working group?
 
 Puneet Kumar, CEO of Rivos, outlines the importance of Java on RISC-V.
- >*We know Java is prevalent in the datacenter for high-performance applications. Contributing to Adoptium is the best way to bring fully compliant and open Java to our RISC-V users.*
- >
- >*Through the open development model of Temurin and its use of AQAvit, we know users are guaranteed a highly compatible and secure Java. Working hand in hand with the OpenJDK community, Rivos’ goal is to develop a highly performant Java that takes full advantage of the RISC-V architecture.*
+
+> _We know Java is prevalent in the datacenter for high-performance applications. Contributing to Adoptium is the best way to bring fully compliant and open Java to our RISC-V users._
+>
+> _Through the open development model of Temurin and its use of AQAvit, we know users are guaranteed a highly compatible and secure Java. Working hand in hand with the OpenJDK community, Rivos’ goal is to develop a highly performant Java that takes full advantage of the RISC-V architecture._
 
 Every release of Temurin has passed Java SE compatibility tests for conformity to standards and the rigorous Eclipse AQAvit verification suite for added confidence of quality. Adoptium’s Java SE binaries are always free to use at no cost under an open-source license and are production-ready for the most demanding environments.
 

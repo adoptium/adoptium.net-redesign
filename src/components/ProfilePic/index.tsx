@@ -1,8 +1,8 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-const ProfilePic = (props) => {
+const ProfilePic = props => {
   const data = useStaticQuery(graphql`
     query ProfilePicQuery {
       avatar: allFile(filter: { absolutePath: { regex: "/authors/" } }) {
@@ -10,21 +10,19 @@ const ProfilePic = (props) => {
           node {
             name
             childImageSharp {
-              gatsbyImageData(
-                layout: FIXED
-                width: 50
-                height: 50
-              )
+              gatsbyImageData(layout: FIXED, width: 50, height: 50)
             }
           }
         }
       }
     }
-  `);
+  `)
 
-  const profilePicImg = data.avatar.edges.find(item => item.node.name === props.identifier);
+  const profilePicImg = data.avatar.edges.find(
+    item => item.node.name === props.identifier,
+  )
   if (!profilePicImg) {
-    return null;
+    return null
   }
 
   return (
@@ -32,16 +30,16 @@ const ProfilePic = (props) => {
       image={profilePicImg.node.childImageSharp.gatsbyImageData}
       alt={props.name}
       style={{
-        marginRight: '0.5rem',
+        marginRight: "0.5rem",
         marginBottom: 0,
         minWidth: 50,
-        borderRadius: '100%',
+        borderRadius: "100%",
       }}
       imgStyle={{
-        borderRadius: '50%',
+        borderRadius: "50%",
       }}
     />
-  );
-};
+  )
+}
 
-export default ProfilePic;
+export default ProfilePic

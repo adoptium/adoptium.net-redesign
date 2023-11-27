@@ -1,37 +1,37 @@
-import React from 'react';
+import React from "react"
 
-import { render } from '@testing-library/react';
-import { afterEach, describe, expect, it, vi } from 'vitest'
+import { render } from "@testing-library/react"
+import { afterEach, describe, expect, it, vi } from "vitest"
 
-import ShellBox from '../index';
+import ShellBox from "../index"
 
 Object.assign(navigator, {
   clipboard: {
     writeText: vi.fn(),
   },
-});
+})
 
-const navigatorClipboardSpy = vi.spyOn(navigator.clipboard, 'writeText');
+const navigatorClipboardSpy = vi.spyOn(navigator.clipboard, "writeText")
 
 afterEach(() => {
-  vi.clearAllMocks();
-});
+  vi.clearAllMocks()
+})
 
-describe('ShellBox component', (): void => {
-  it('renders correctly', (): void => {
-    const textToCopy = 'text to be copy';
+describe("ShellBox component", (): void => {
+  it("renders correctly", (): void => {
+    const textToCopy = "text to be copy"
     const { container } = render(
-      <ShellBox textToCopy={textToCopy}>mock-children-code</ShellBox>
-    );
-    expect(container).toMatchSnapshot();
-  });
+      <ShellBox textToCopy={textToCopy}>mock-children-code</ShellBox>,
+    )
+    expect(container).toMatchSnapshot()
+  })
 
-  it('renders correctly', async () => {
-    const textToCopy = 'text to be copy';
+  it("renders correctly", async () => {
+    const textToCopy = "text to be copy"
     const { getByText, findByText } = render(
-      <ShellBox textToCopy={textToCopy}>mock-children-code</ShellBox>
-    );
+      <ShellBox textToCopy={textToCopy}>mock-children-code</ShellBox>,
+    )
 
-    navigatorClipboardSpy.mockImplementationOnce(() => Promise.resolve());
-  });
-});
+    navigatorClipboardSpy.mockImplementationOnce(() => Promise.resolve())
+  })
+})

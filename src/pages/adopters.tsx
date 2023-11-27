@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
+import * as React from "react"
+import { graphql } from "gatsby"
 
-import { MembersProps } from './members' 
-import Layout from '../components/Layout'
-import Seo from '../components/Seo'
-import MembersGrid from '../components/MembersGrid'
-import { shuffle } from '../util/shuffle'
+import { MembersProps } from "./members"
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
+import MembersGrid from "../components/MembersGrid"
+import { shuffle } from "../util/shuffle"
 
-import Adopters from '../json/adopters.json'
+import Adopters from "../json/adopters.json"
 
 let adopters: MembersProps[] = Adopters
 
@@ -16,7 +16,10 @@ adopters = shuffle(adopters)
 
 const AdoptersPage = () => (
   <Layout>
-    <section className="py-5 text-center container" style={{maxWidth: '80em'}}>
+    <section
+      className="py-5 text-center container"
+      style={{ maxWidth: "80em" }}
+    >
       <div className="row py-lg-5">
         <div className="col-lg-8 col-md-8 mx-auto">
           <h1 className="fw-light">Eclipse Temurin&trade; Adopters</h1>
@@ -38,10 +41,10 @@ const AdoptersPage = () => (
           <div className="collapse" id="getListed">
             <div className="card card-body text-start">
               <p>
-                You can easily add your organization’s logo to our list of adopters
-                by creating an issue or by submitting a pull request.
+                You can easily add your organization’s logo to our list of
+                adopters by creating an issue or by submitting a pull request.
               </p>
-              <p className='h3'>Option 1 - Open an Issue</p>
+              <p className="h3">Option 1 - Open an Issue</p>
               <ol>
                 <li>
                   Go to our{" "}
@@ -54,15 +57,18 @@ const AdoptersPage = () => (
                   </a>
                   .
                 </li>
-                <li>Fill out the relevant fields (it takes less than 5 minutes)</li>
                 <li>
-                  Attach logo files to an issue by dragging and dropping them in the
-                  text editor of the form.
+                  Fill out the relevant fields (it takes less than 5 minutes)
+                </li>
+                <li>
+                  Attach logo files to an issue by dragging and dropping them in
+                  the text editor of the form.
                 </li>
               </ol>
-              <p className='h3'>Option 2 - Submit a Pull Request</p>
-              <p>When submitting a pull request, please make the following changes to
-                the eclipsefdn-project-adopters'{" "}
+              <p className="h3">Option 2 - Submit a Pull Request</p>
+              <p>
+                When submitting a pull request, please make the following
+                changes to the eclipsefdn-project-adopters'{" "}
                 <a
                   href="https://gitlab.eclipse.org/eclipsefdn/it/api/eclipsefdn-project-adopters"
                   target="_blank"
@@ -86,10 +92,11 @@ const AdoptersPage = () => (
                 </li>
                 <li>Fork the repository.</li>
                 <li>
-                  Update the adopter data file <code>config/adopters.json</code>. If your
-                  organization supports multiple projects, another project can be
-                  added to the projects list within the organization’s node. The
-                  values in this list should be the ID of the project.
+                  Update the adopter data file <code>config/adopters.json</code>
+                  . If your organization supports multiple projects, another
+                  project can be added to the projects list within the
+                  organization’s node. The values in this list should be the ID
+                  of the project.
                 </li>
                 <li>
                   Add a colored and a white organization logo to{" "}
@@ -107,13 +114,11 @@ const AdoptersPage = () => (
 
 export default AdoptersPage
 
-export const Head = () => (
-  <Seo title='Eclipse Temurin Adopters' />
-)
+export const Head = () => <Seo title="Eclipse Temurin Adopters" />
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: {language: {eq: $language}}) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns

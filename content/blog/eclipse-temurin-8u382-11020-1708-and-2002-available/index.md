@@ -15,15 +15,15 @@ Adoptium is happy to announce the immediate availability of Eclipse Temurin 8u38
 
 The following table summaries security vulnerabilities fixed in this release cycle. The affected Temurin version streams are noted by an 'X' in the table. Each line shows the [Common Vulnerabilities and Exposures (CVE) vulnerability database](https://nvd.nist.gov/vuln) reference and [Common Vulnerability Scoring System (CVSS) v3.1 base score](https://www.first.org/cvss/v3.1/specification-document) provided by the [OpenJDK Vulnerability Group](https://openjdk.org/groups/vulnerability/). Note that defense-in-depth issues are not assigned CVEs.
 
-| CVE Identifier  | Component | CVSS Score | v8 | v11 | v17 | v20 |
-| :---                                                              | :---                |  :----:      |  :----:   | :----:     | :----:     | :----:     |
-| [CVE-2023-22041](https://nvd.nist.gov/vuln/detail/CVE-2023-22041) | hotspot/compiler    | Medium ([5.1](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N)) |           | X          | X          | X          |
-| [CVE-2023-25193](https://nvd.nist.gov/vuln/detail/CVE-2023-25193) | client-libs/2d      | Low ([3.7](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L))   |           | X          | X          | X          |
-| [CVE-2023-22044](https://nvd.nist.gov/vuln/detail/CVE-2023-22044) | hotspot/compiler    | Low ([3.7](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N))    |           |            | X          | X          |
-| [CVE-2023-22045](https://nvd.nist.gov/vuln/detail/CVE-2023-22045) | hotspot/compiler    | Low ([3.7](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N))    | X         | X          | X          | X          |
-| [CVE-2023-22049](https://nvd.nist.gov/vuln/detail/CVE-2023-22049) | core-libs/java.io   | Low ([3.7](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N))    | X         | X          | X          | X          |
-| [CVE-2023-22036](https://nvd.nist.gov/vuln/detail/CVE-2023-22036) | core-libs/java.util | Low ([3.7](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L))    |           | X          | X          | X          |
-| [CVE-2023-22006](https://nvd.nist.gov/vuln/detail/CVE-2023-22006) | core-libs/java.net  | Low ([3.1](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N))    |           | X          | X          | X          |
+| CVE Identifier                                                    | Component           |                                               CVSS Score                                               | v8  | v11 | v17 | v20 |
+| :---------------------------------------------------------------- | :------------------ | :----------------------------------------------------------------------------------------------------: | :-: | :-: | :-: | :-: |
+| [CVE-2023-22041](https://nvd.nist.gov/vuln/detail/CVE-2023-22041) | hotspot/compiler    | Medium ([5.1](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N)) |     |  X  |  X  |  X  |
+| [CVE-2023-25193](https://nvd.nist.gov/vuln/detail/CVE-2023-25193) | client-libs/2d      |  Low ([3.7](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L))   |     |  X  |  X  |  X  |
+| [CVE-2023-22044](https://nvd.nist.gov/vuln/detail/CVE-2023-22044) | hotspot/compiler    |  Low ([3.7](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N))   |     |     |  X  |  X  |
+| [CVE-2023-22045](https://nvd.nist.gov/vuln/detail/CVE-2023-22045) | hotspot/compiler    |  Low ([3.7](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N))   |  X  |  X  |  X  |  X  |
+| [CVE-2023-22049](https://nvd.nist.gov/vuln/detail/CVE-2023-22049) | core-libs/java.io   |  Low ([3.7](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N))   |  X  |  X  |  X  |  X  |
+| [CVE-2023-22036](https://nvd.nist.gov/vuln/detail/CVE-2023-22036) | core-libs/java.util |  Low ([3.7](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L))   |     |  X  |  X  |  X  |
+| [CVE-2023-22006](https://nvd.nist.gov/vuln/detail/CVE-2023-22006) | core-libs/java.net  |  Low ([3.1](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N))   |     |  X  |  X  |  X  |
 
 Users should follow the [Adoptium policy for reporting vulnerability concerns](https://github.com/adoptium/adoptium/security/policy#security-policies-and-procedures) with this release.
 
@@ -31,13 +31,13 @@ Users should follow the [Adoptium policy for reporting vulnerability concerns](h
 
 This release contains the following fixes and updates.
 
-* [Temurin 8u382 release notes](https://adoptium.net/temurin/release-notes/?version=jdk8u382-b05), including [fixes in OpenJDK 8u382](https://bugs.openjdk.org/issues/?jql=project+%3D+JDK+AND+fixVersion+%3D+openjdk8u382)
+- [Temurin 8u382 release notes](https://adoptium.net/temurin/release-notes/?version=jdk8u382-b05), including [fixes in OpenJDK 8u382](https://bugs.openjdk.org/issues/?jql=project+%3D+JDK+AND+fixVersion+%3D+openjdk8u382)
 
-* [Temurin 11.0.20 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-11.0.20+8), including [fixes in OpenJDK 11.0.20](https://bugs.openjdk.org/issues/?jql=project+%3D+JDK+AND+fixVersion+%3D+11.0.20)
+- [Temurin 11.0.20 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-11.0.20+8), including [fixes in OpenJDK 11.0.20](https://bugs.openjdk.org/issues/?jql=project+%3D+JDK+AND+fixVersion+%3D+11.0.20)
 
-* [Temurin 17.0.8 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-17.0.8+7), including [fixes in OpenJDK 17.0.8](https://bugs.openjdk.org/issues/?jql=project+%3D+JDK+AND+fixVersion+%3D+17.0.8)
+- [Temurin 17.0.8 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-17.0.8+7), including [fixes in OpenJDK 17.0.8](https://bugs.openjdk.org/issues/?jql=project+%3D+JDK+AND+fixVersion+%3D+17.0.8)
 
-* [Temurin 20.0.2 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-20.0.2+9), including [fixes in OpenJDK 20.0.2](https://bugs.openjdk.org/issues/?jql=project+%3D+JDK+AND+fixVersion+%3D+20.0.2)
+- [Temurin 20.0.2 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-20.0.2+9), including [fixes in OpenJDK 20.0.2](https://bugs.openjdk.org/issues/?jql=project+%3D+JDK+AND+fixVersion+%3D+20.0.2)
 
 ## New and Noteworthy
 

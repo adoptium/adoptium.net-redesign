@@ -16,23 +16,23 @@ This assumes you already have Node.js and npm installed. Node.js version 18 or a
 
 1. Install your dependencies
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 1. Start the site up. Gatsby will build all of the various parts of the site (Asciidoc etc). Note that this command takes some time to execute.
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 1. **Open the source code and start editing!**
 
-    Your site is now running at `http://localhost:8000`!
+   Your site is now running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link:_`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+   _Note: You'll also see a second link:_`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
 
-    Open the directory in your code editor of choice and edit relevant files under the `src/` directory. Save your changes and the browser will update in real time!
+   Open the directory in your code editor of choice and edit relevant files under the `src/` directory. Save your changes and the browser will update in real time!
 
 ## Configuring the build
 

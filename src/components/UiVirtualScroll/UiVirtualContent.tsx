@@ -54,24 +54,24 @@ const UiVirtualContent = ({ data }) => {
       ></div>
       {data.map((item: any, index: any) => (
         <div
-            key={index}
-            className={`flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-${
-                index + 1
-            }`}
+          key={index}
+          className={`flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-${
+            index + 1
+          }`}
         >
-            <div className="w-[50%]">
-                <img
-                    src={`/images/icons/${item.image}`}
-                    alt="Description"
-                    className={`max-w-[436px] mb-0`}
-                />
+          <div className="w-[50%]">
+            <img
+              src={`/images/icons/${item.image}`}
+              alt="Description"
+              className={`max-w-[436px] mb-0`}
+            />
+          </div>
+          <div className="w-[50%]">
+            <div className="max-w-[436px] ml-auto">
+              <h1 className="text-xl md-pt-6 my-5 font-bold">{item.title}</h1>
+              <p className="text-base text-grey">{item.description}</p>
             </div>
-            <div className="w-[50%]">
-                <div className="max-w-[436px] ml-auto">
-                <h1 className="text-xl md-pt-6 my-5 font-bold">{item.title}</h1>
-                <p className="text-base text-grey">{item.description}</p>
-                </div>
-            </div>
+          </div>
         </div>
       ))}
     </div>

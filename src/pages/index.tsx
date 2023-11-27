@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from '../components/Layout'
-import Seo from '../components/Seo'
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 
 import { AppleIcon, HeroBgImg } from "../components/Common/Icon"
 
@@ -74,13 +74,11 @@ const Index = () => {
 }
 export default Index
 
-export const Head = () => (
-  <Seo title='Home' />
-)
+export const Head = () => <Seo title="Home" />
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: {language: {eq: $language}}) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns

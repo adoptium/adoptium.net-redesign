@@ -59,7 +59,7 @@ The following is the EMT4J architecture diagram:
 
 Let’s take a common scenario to demonstrate the use of the tool:
 
-Developer Tom needed to upgrade eight Java applications (app-service-1 to app-service-8) from JDK 8 to JDK 17. *How did he upgrade with the help of EMT4J?*
+Developer Tom needed to upgrade eight Java applications (app-service-1 to app-service-8) from JDK 8 to JDK 17. _How did he upgrade with the help of EMT4J?_
 
 The specific upgrade operation is divided into the following seven steps:
 
@@ -93,13 +93,13 @@ The specific upgrade operation is divided into the following seven steps:
 
 6. Tom referred to how to fix it in the report and learned that the schema of Java Version has changed since JDK 9. He modified the code according to the new schema.
 
-    ![schema](schema.png)
+   ![schema](schema.png)
 
 7. Tom revised other issues in the reference report in turn. After the modification is completed, he used the target version JDK startup on the development machine to verify the correctness of the function.
 
 ## EMT4J – An Overview of Tool Features
 
-The preceding EMT4J tool helped Tom upgrade from JDK 8 to JDK 17. *What are the features of the EMT4J tool?*
+The preceding EMT4J tool helped Tom upgrade from JDK 8 to JDK 17. _What are the features of the EMT4J tool?_
 
 ### 1. Java Agent, Command-line Tools, and Maven Plugins Are Supported
 
@@ -112,6 +112,7 @@ The preceding EMT4J tool helped Tom upgrade from JDK 8 to JDK 17. *What are the 
 ### 2. It Supports Various Potential Incompatibility Issues Analysis
 
 - **JDK 8 to JDK 11**
+
   - Use of JDK Internal API
   - System ClassLoader is no longer a URLClassLoader subclass.
   - Arrays.asList change in return type

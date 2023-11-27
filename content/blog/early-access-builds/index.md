@@ -6,6 +6,7 @@ description: Adoptium are publishing early access "tagged" builds instead of nig
 tags:
   - temurin
 ---
+
 In addition to the generally available release builds of all currently supported
 versions of openjdk (Currently 8, 11, 17 and 20) Temurin also publishes "nightly"
 development builds of all of those streams as well as the upcoming releases (JDK21/22
@@ -20,12 +21,12 @@ will be coming in the next release.
 
 We have recently changed the way we do the regular nightly builds of JDK21+.
 Instead of producing regular builds of the latest development code, we are
-building explicitly from the early access tags when they come out.  This is
+building explicitly from the early access tags when they come out. This is
 consistent with what OpenJDK does with the builds at
-https://jdk.java.net/21/ but on a wider range of platforms.  Similar to the
+https://jdk.java.net/21/ but on a wider range of platforms. Similar to the
 nightly builds mentioned in the introduction, these are not for production
 use but may be useful for testing new features as they go into the new
-codebase.  By using the specific early access tags you can also report
+codebase. By using the specific early access tags you can also report
 issues upstream more easily by knowing exactly which tagged level you have
 discovered any problems with.
 

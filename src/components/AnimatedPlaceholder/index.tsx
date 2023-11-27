@@ -1,8 +1,8 @@
-import React from 'react';
-import './AnimatedPlaceholder.scss';
+import React from "react"
+import "./AnimatedPlaceholder.scss"
 
 interface Props {
-  children?: React.ReactNode;
+  children?: React.ReactNode
 }
 
 const AnimatedPlaceholder = ({ children }: Props): JSX.Element => {
@@ -22,7 +22,7 @@ const AnimatedPlaceholder = ({ children }: Props): JSX.Element => {
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default AnimatedPlaceholder;
+export default AnimatedPlaceholder

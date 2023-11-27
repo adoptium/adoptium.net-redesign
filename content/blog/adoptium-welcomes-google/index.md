@@ -23,6 +23,7 @@ The goals of the working group include ensuring that Adoptium Temurin remains a 
 ### Heightened compatibility and security testing
 
 In his announcement, Cameron Balahan said:
+
 > "I'm pleased to announce that Google has joined the Eclipse Adoptium Working Group, a consortium of leaders in the Java community and makers of the Temurin build of OpenJDK. Temurin is one of the world's most popular JDK distributions certified by Adoptium for heightened compatibility and security testing. As a member of Adoptium Google will make Temurin available across GCP products and services, providing Java customers the highest standard of enterprise security and more opportunities to create integrated security-focused solutions. We're excited for you to try it out."
 
 Every release of Temurin has passed [Java SE compatibility tests](https://en.wikipedia.org/wiki/Technology_Compatibility_Kit) for conformity to standards in addition to the rigorous [Eclipse AQAvit](https://adoptium.net/aqavit) verification suite for added confidence of quality. Adoptium’s Java SE binaries are always free to use at no cost under an open source license, and are production-ready for the most demanding environments.

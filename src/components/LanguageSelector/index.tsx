@@ -1,35 +1,35 @@
-import React from 'react';
-import { useI18next, Trans } from 'gatsby-plugin-react-i18next';
-import Flag from 'react-world-flags'
-import ISO6391 from 'iso-639-1';
-import './LanguageSelector.scss';
+import React from "react"
+import { useI18next, Trans } from "gatsby-plugin-react-i18next"
+import Flag from "react-world-flags"
+import ISO6391 from "iso-639-1"
+import "./LanguageSelector.scss"
 
 const LanguageSelector = (): JSX.Element => {
-  const {languages, changeLanguage} = useI18next();
+  const { languages, changeLanguage } = useI18next()
 
   function ISO3166(lng: string) {
     // Convert locale to ISO 3166-1 alpha-2 https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-    switch(lng) {
-      case 'en':
-        return 'us';
-        case 'en-GB':
-          return 'gb';
-      case 'zh-CN':
-        return 'cn';
+    switch (lng) {
+      case "en":
+        return "us"
+      case "en-GB":
+        return "gb"
+      case "zh-CN":
+        return "cn"
       default:
-        return lng;
+        return lng
     }
   }
 
   function ISO639(lng: string) {
     // Convert locale to ISO 639-1 alpha-2 https://en.wikipedia.org/wiki/ISO_639-1_alpha-2
-    switch(lng) {
-      case 'zh-CN':
-        return 'zh';
-      case 'en-GB':
-        return 'en';
+    switch (lng) {
+      case "zh-CN":
+        return "zh"
+      case "en-GB":
+        return "en"
       default:
-        return lng;
+        return lng
     }
   }
 
@@ -52,12 +52,12 @@ const LanguageSelector = (): JSX.Element => {
                 data-testid={lng}
                 key={lng}
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                onClick={(e) => {
-                  e.preventDefault();
-                  changeLanguage(lng);
+                onClick={e => {
+                  e.preventDefault()
+                  changeLanguage(lng)
                 }}
               >
-                <Flag code={ISO3166(lng)} width='35' /> 
+                <Flag code={ISO3166(lng)} width="35" />
                 {ISO6391.getNativeName(ISO639(lng))}
               </a>
             ))}
@@ -65,7 +65,7 @@ const LanguageSelector = (): JSX.Element => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LanguageSelector;
+export default LanguageSelector

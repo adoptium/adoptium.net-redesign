@@ -1,55 +1,62 @@
-import crypto from 'crypto'
-import path from 'path'
-import fetch from 'node-fetch'
-import fs from 'fs'
-import util from 'node:util'
-import { exec as execChild } from 'node:child_process'
-import { pipeline } from 'stream'
-import { promisify } from 'util'
-import { createFilePath } from 'gatsby-source-filesystem'
-import locales from './locales/i18n'
-import authors from './src/json/authors.json'
-import type { GatsbyNode, Node } from 'gatsby'
+import crypto from "crypto"
+import path from "path"
+import fetch from "node-fetch"
+import fs from "fs"
+import util from "node:util"
+import { exec as execChild } from "node:child_process"
+import { pipeline } from "stream"
+import { promisify } from "util"
+import { createFilePath } from "gatsby-source-filesystem"
+import locales from "./locales/i18n"
+import authors from "./src/json/authors.json"
+import type { GatsbyNode, Node } from "gatsby"
 
-import { localizedSlug, findKey, removeTrailingSlash } from './src/util/gatsby-node-helpers'
+import {
+  localizedSlug,
+  findKey,
+  removeTrailingSlash,
+} from "./src/util/gatsby-node-helpers"
 const exec = util.promisify(execChild)
 
 interface SourceNodesArgs {
   actions: {
-    createNode: (node: any) => void;
-  };
-  createNodeId: (id: string) => string;
+    createNode: (node: any) => void
+  }
+  createNodeId: (id: string) => string
 }
 
 interface AdoptiumData {
-  available_releases: string[];
-  available_lts_releases: string[];
-  most_recent_lts: string;
-  most_recent_feature_version: string;
+  available_releases: string[]
+  available_lts_releases: string[]
+  most_recent_lts: string
+  most_recent_feature_version: string
 }
 
 interface MdxNode extends Node {
   frontmatter: {
-    date: string;
-  };
+    date: string
+  }
   fields: {
-    slug: string;
-    gitSHA?: string;
+    slug: string
+    gitSHA?: string
   }
 }
 
 interface LocaleEntry {
-  default?: boolean;
-  locale: string;
-  path: string;
+  default?: boolean
+  locale: string
+  path: string
 }
 
 // Import available versions from Adoptium API
-export const sourceNodes: GatsbyNode['sourceNodes'] = async ({ actions, createNodeId }: SourceNodesArgs) => {
+export const sourceNodes: GatsbyNode["sourceNodes"] = async ({
+  actions,
+  createNodeId,
+}: SourceNodesArgs) => {
   const { createNode } = actions
 
   // Fetch available versions from Adoptium API
-  const res = await fetch('https://api.adoptium.net/v3/info/available_releases')
+  const res = await fetch("https://api.adoptium.net/v3/info/available_releases")
   const data: AdoptiumData = await res.json()
 
   data.available_releases.forEach((release, i) => {
@@ -60,13 +67,13 @@ export const sourceNodes: GatsbyNode['sourceNodes'] = async ({ actions, createNo
       parent: null,
       children: [],
       internal: {
-        type: 'Versions',
+        type: "Versions",
         content: nodeContent,
         contentDigest: crypto
-          .createHash('md5')
+          .createHash("md5")
           .update(nodeContent)
-          .digest('hex')
-      }
+          .digest("hex"),
+      },
     }
 
     const lts = data.available_lts_releases.includes(release)
@@ -74,7 +81,7 @@ export const sourceNodes: GatsbyNode['sourceNodes'] = async ({ actions, createNo
     const extraData = {
       version: release,
       lts,
-      label: lts ? `${release} - LTS` : release.toString()
+      label: lts ? `${release} - LTS` : release.toString(),
     }
 
     // Combine the metadata and data to create the node
@@ -86,18 +93,15 @@ export const sourceNodes: GatsbyNode['sourceNodes'] = async ({ actions, createNo
   const latestLTS = data.most_recent_lts
   const nodeContent = JSON.stringify(latestLTS)
   const node = {
-    id: createNodeId('adoptium-lts-most-recent'), // Unique identifier for each node
+    id: createNodeId("adoptium-lts-most-recent"), // Unique identifier for each node
     version: latestLTS,
     parent: null,
     children: [],
     internal: {
-      type: 'MostRecentLTS',
+      type: "MostRecentLTS",
       content: nodeContent,
-      contentDigest: crypto
-        .createHash('md5')
-        .update(nodeContent)
-        .digest('hex')
-    }
+      contentDigest: crypto.createHash("md5").update(nodeContent).digest("hex"),
+    },
   }
   createNode(node)
 
@@ -105,55 +109,94 @@ export const sourceNodes: GatsbyNode['sourceNodes'] = async ({ actions, createNo
   const latestFeatureVersion = data.most_recent_feature_version
   const nodeContentFeatureVersion = JSON.stringify(latestFeatureVersion)
   const MostRecentFeatureVersion = {
-    id: createNodeId('adoptium-feature-version-most-recent'), // Unique identifier for each node
+    id: createNodeId("adoptium-feature-version-most-recent"), // Unique identifier for each node
     version: latestFeatureVersion,
     parent: null,
     children: [],
     internal: {
-      type: 'MostRecentFeatureVersion',
+      type: "MostRecentFeatureVersion",
       content: nodeContentFeatureVersion,
       contentDigest: crypto
-        .createHash('md5')
+        .createHash("md5")
         .update(nodeContentFeatureVersion)
-        .digest('hex')
-    }
+        .digest("hex"),
+    },
   }
   createNode(MostRecentFeatureVersion)
+
+  // Create a node for the total download count
+  const downloadCount = await fetch(
+    "https://api.adoptium.net/v3/stats/downloads/total",
+  )
+  const downloadCountData = await downloadCount.json()
+
+  const downloadCountNodeContent = JSON.stringify(
+    downloadCountData.total_downloads.total,
+  )
+  const downloadCountNode = {
+    id: createNodeId("adoptium-download-count"), // Unique identifier for each node
+    total: downloadCountData.total_downloads.total,
+    parent: null,
+    children: [],
+    internal: {
+      type: "DownloadCount",
+      content: downloadCountNodeContent,
+      contentDigest: crypto
+        .createHash("md5")
+        .update(downloadCountNodeContent)
+        .digest("hex"),
+    },
+  }
+  createNode(downloadCountNode)
 }
 
-export const onCreatePage: GatsbyNode['onCreatePage'] = async ({ page, actions, getNodes }) => {
+export const onCreatePage: GatsbyNode["onCreatePage"] = async ({
+  page,
+  actions,
+  getNodes,
+}) => {
   const { createPage, deletePage } = actions
 
   // Throw error if page.context is undefined
   if (!page.context) {
-    throw new Error('Error retrieving page context')
+    throw new Error("Error retrieving page context")
   }
 
   // Delete pages such as /about/index.de
-  if (page.path.includes('index')) {
+  if (page.path.includes("index")) {
     return deletePage(page)
   }
 
   // First delete the incoming page that was automatically created by Gatsby
   // So everything in src/pages/
   // Don't do anything to the page if context has a language already set
-  if (page.component.includes('asciidocTemplate') && page.context.locale === 'en') {
+  if (
+    page.component.includes("asciidocTemplate") &&
+    page.context.locale === "en"
+  ) {
     // Grab the keys ('en' & 'de') of locales and map over them
     // eslint-disable-next-line array-callback-return
     Object.keys(locales).forEach(lang => {
-      if (lang !== 'en') {
+      if (lang !== "en") {
         // Use the values defined in "locales" to construct the path
         const localizedPath = locales[lang].default
           ? page.path
           : `${locales[lang].path}${page.path}`
 
-        let locale = 'en'
+        let locale = "en"
         let defaultGitSHA
 
-        if (fs.existsSync(`./content/asciidoc-pages${page.path}index.${lang}.adoc`)) {
+        if (
+          fs.existsSync(
+            `./content/asciidoc-pages${page.path}index.${lang}.adoc`,
+          )
+        ) {
           locale = lang
           // fetch fields.gitSHA from the default language file
-          defaultGitSHA = (getNodes() as MdxNode[]).find(n => n.fields && n.fields.slug === page.path)?.fields?.gitSHA || null
+          defaultGitSHA =
+            (getNodes() as MdxNode[]).find(
+              n => n.fields && n.fields.slug === page.path,
+            )?.fields?.gitSHA || null
         }
 
         return createPage({
@@ -175,9 +218,9 @@ export const onCreatePage: GatsbyNode['onCreatePage'] = async ({ page, actions, 
               routed: true,
               originalPath: page.path,
               path: removeTrailingSlash(localizedPath),
-              language: lang
-            }
-          }
+              language: lang,
+            },
+          },
         })
       }
     })
@@ -192,29 +235,36 @@ export const onCreatePage: GatsbyNode['onCreatePage'] = async ({ page, actions, 
     // This context also gets passed to the src/components/layout file
     // This should ensure that the locale is available on every page
     context: {
-      ...page.context
-    }
+      ...page.context,
+    },
   })
 }
 
-export const onCreateNode: GatsbyNode['onCreateNode'] = async ({ node, actions, getNode, getNodes }) => {
+export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
+  node,
+  actions,
+  getNode,
+  getNodes,
+}) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === 'Asciidoc') {
+  if (node.internal.type === "Asciidoc") {
     const fetchFilePath = getNodes().find(n => n.id === node.parent)
     if (!fetchFilePath) {
       // Handle the case where fetchFilePath is not found.
-      throw new Error(`No file path found for node with parent ID: ${node.parent}`);
+      throw new Error(
+        `No file path found for node with parent ID: ${node.parent}`,
+      )
     }
 
-    const name = path.basename(fetchFilePath.relativePath as string, '.adoc')
+    const name = path.basename(fetchFilePath.relativePath as string, ".adoc")
 
-    const currentFileDir = path.dirname(fetchFilePath.absolutePath as string);
-    const partialDir = path.join(currentFileDir, '_partials')
+    const currentFileDir = path.dirname(fetchFilePath.absolutePath as string)
+    const partialDir = path.join(currentFileDir, "_partials")
 
     // Check if post.name is "index" -- because that's the file for default language
     // (In this case "en")
-    const isDefault = name === 'index'
+    const isDefault = name === "index"
 
     // Find the key that has "default: true" set (in this case it returns "en")
     const defaultKey = findKey(locales, (o: LocaleEntry) => o.default === true)
@@ -227,85 +277,93 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = async ({ node, actions, 
         console.error(stderr)
       }
       const gitLastCommit = stdout.trim() || null
-      gitLastCommit && createNodeField({ node, name: 'gitSHA', value: gitLastCommit })
+      gitLastCommit &&
+        createNodeField({ node, name: "gitSHA", value: gitLastCommit })
     }
 
     // Files are defined with "name-with-dashes.lang.adoc"
     // name returns "name-with-dashes.lang"
     // So grab the lang from that string
     // If it's the default language, pass the locale for that
-    const lang = isDefault ? defaultKey : name.split('.')[1]
+    const lang = isDefault ? defaultKey : name.split(".")[1]
 
-    createNodeField({ node, name: 'relativePath', value: fetchFilePath.relativePath })
-    createNodeField({ node, name: 'locale', value: lang })
-    createNodeField({ node, name: 'isDefault', value: isDefault })
+    createNodeField({
+      node,
+      name: "relativePath",
+      value: fetchFilePath.relativePath,
+    })
+    createNodeField({ node, name: "locale", value: lang })
+    createNodeField({ node, name: "isDefault", value: isDefault })
 
     const value = createFilePath({ node, getNode })
     createNodeField({
-      name: 'slug',
+      name: "slug",
       node,
-      value
+      value,
     })
 
     createNodeField({
       node,
-      name: 'partialDir',
-      value: partialDir
+      name: "partialDir",
+      value: partialDir,
     })
-  } else if (node.internal.type === 'Mdx') {
+  } else if (node.internal.type === "Mdx") {
     const slug = createFilePath({ node, getNode })
     const mdxNode = node as MdxNode
     const date = new Date(mdxNode.frontmatter.date)
     const year = date.getFullYear()
-    const zeroPaddedMonth = `${date.getMonth() + 1}`.padStart(2, '0')
+    const zeroPaddedMonth = `${date.getMonth() + 1}`.padStart(2, "0")
 
     createNodeField({
-      name: 'slug',
+      name: "slug",
       node,
-      value: slug
+      value: slug,
     })
     createNodeField({
-      name: 'postPath',
+      name: "postPath",
       node,
-      value: `/blog/${year}/${zeroPaddedMonth}${slug}`
+      value: `/blog/${year}/${zeroPaddedMonth}${slug}`,
     })
   }
 }
 
-export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions }) => {
+export const createPages: GatsbyNode["createPages"] = async ({
+  graphql,
+  actions,
+}) => {
   const { createPage, createSlice } = actions
   const postsPerPage = 10
 
   // Create Slice components https://www.gatsbyjs.com/docs/how-to/performance/using-slices/
   createSlice({
-    id: 'navbar',
-    component: path.resolve('src', 'components', 'NavBar', 'index.tsx'),
+    id: "navbar",
+    component: path.resolve("src", "components", "NavBar", "index.tsx"),
   })
 
   createSlice({
-    id: 'footer',
-    component: path.resolve('src', 'components', 'Footer', 'index.tsx'),
+    id: "footer",
+    component: path.resolve("src", "components", "Footer", "index.tsx"),
   })
 
   createSlice({
-    id: 'banner',
-    component: path.resolve('src', 'components', 'Banner', 'index.tsx'),
+    id: "banner",
+    component: path.resolve("src", "components", "Banner", "index.tsx"),
   })
 
   // create slice for AuthorBio
   for (const author of Object.keys(authors)) {
     createSlice({
       id: `author-bio-${author}`,
-      component: path.resolve('src', 'components', 'AuthorBio', 'index.tsx'),
+      component: path.resolve("src", "components", "AuthorBio", "index.tsx"),
       context: {
         identifier: author,
-        author: authors[author]
-      }
+        author: authors[author],
+      },
     })
   }
 
   // Create Asciidoc pages.
-  const asciidocTemplate = path.resolve('./src/templates/asciidocTemplate.tsx')
+  const asciidocTemplate = path.resolve("./src/templates/asciidocTemplate.tsx")
 
   const asciidocResults = await graphql<{
     docs: {
@@ -313,20 +371,20 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
         node: {
           childAsciidoc: {
             document: {
-              title: string;
-            };
+              title: string
+            }
             fields: {
-              locale: string;
-              isDefault: boolean;
-              slug: string;
-            };
-          };
-        };
-      }>;
-    };
+              locale: string
+              isDefault: boolean
+              slug: string
+            }
+          }
+        }
+      }>
+    }
   }>(`
     {
-      docs: allFile(filter: {sourceInstanceName: {eq: "asciidoc-pages"}}) {
+      docs: allFile(filter: { sourceInstanceName: { eq: "asciidoc-pages" } }) {
         edges {
           node {
             childAsciidoc {
@@ -353,7 +411,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
 
   // Check if docs is null and throw error if it is
   if (!docs) {
-    throw new Error('Error retrieving Asciidoc pages')
+    throw new Error("Error retrieving Asciidoc pages")
   }
 
   docs.forEach(({ node: doc }) => {
@@ -372,33 +430,42 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
         // Only the title would not have been sufficient as articles could have the same title
         // in different languages, e.g. because an english phrase is also common in german
         title,
-        locale
-      }
+        locale,
+      },
     })
   })
 
   // Create author pages
-  const authorJson = require('./src/json/authors.json')
-  const authorPage = path.resolve('./src/templates/authorPage.tsx')
+  const authorJson = require("./src/json/authors.json")
+  const authorPage = path.resolve("./src/templates/authorPage.tsx")
 
   for (const author of Object.keys(authorJson)) {
-    fs.open(`./static/images/authors/${author}.jpg`, 'r', async function (err, fd) {
-      if (err) {
-        const githubUsername = authorJson[author].github
-        const streamPipeline = promisify(pipeline)
-        const response = await fetch(`https://github.com/${githubUsername}.png?size=250`)
-        if (!response.ok) {
-          throw new Error(`Unexpected response: ${response.statusText}`)
+    fs.open(
+      `./static/images/authors/${author}.jpg`,
+      "r",
+      async function (err, fd) {
+        if (err) {
+          const githubUsername = authorJson[author].github
+          const streamPipeline = promisify(pipeline)
+          const response = await fetch(
+            `https://github.com/${githubUsername}.png?size=250`,
+          )
+          if (!response.ok) {
+            throw new Error(`Unexpected response: ${response.statusText}`)
+          }
+          await streamPipeline(
+            response.body,
+            fs.createWriteStream(`./static/images/authors/${author}.jpg`),
+          )
         }
-        await streamPipeline(response.body, fs.createWriteStream(`./static/images/authors/${author}.jpg`))
-      }
-    })
+      },
+    )
 
     // Query all blog posts by author to determine the number of pages needed
     const authorPosts = await graphql<{
       allMdx: {
-        totalCount: number;
-      };
+        totalCount: number
+      }
     }>(
       `
         {
@@ -406,7 +473,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
             totalCount
           }
         }
-      `
+      `,
     )
 
     if (authorPosts.errors) {
@@ -414,10 +481,12 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
     }
 
     if (!authorPosts.data) {
-      throw new Error('Error retrieving author posts')
+      throw new Error("Error retrieving author posts")
     }
 
-    const numAuthorPages = Math.ceil(authorPosts.data.allMdx.totalCount / postsPerPage)
+    const numAuthorPages = Math.ceil(
+      authorPosts.data.allMdx.totalCount / postsPerPage,
+    )
 
     Array.from({ length: numAuthorPages }).forEach((_, index) => {
       const currentPageNumber = index + 1
@@ -426,7 +495,10 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
       const nextPageNumber =
         currentPageNumber === numAuthorPages ? null : currentPageNumber + 1
       createPage({
-        path: index === 0 ? `/blog/author/${author}` : `/blog/author/${author}/page/${index + 1}`,
+        path:
+          index === 0
+            ? `/blog/author/${author}`
+            : `/blog/author/${author}/page/${index + 1}`,
         component: authorPage,
         context: {
           author,
@@ -435,77 +507,75 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
           numAuthorPages,
           currentPageNumber,
           previousPageNumber,
-          nextPageNumber
+          nextPageNumber,
         },
         slices: {
-          authorBio: `author-bio-${author}`
-        }
+          authorBio: `author-bio-${author}`,
+        },
       })
     })
   }
 
   // Create blog posts pages.
-  const tagTemplate = path.resolve('./src/templates/tagPage.tsx')
-  const blogPost = path.resolve('./src/templates/blogPost.tsx')
+  const tagTemplate = path.resolve("./src/templates/tagPage.tsx")
+  const blogPost = path.resolve("./src/templates/blogPost.tsx")
 
   const blogPostResults = await graphql<{
     allMdx: {
       edges: Array<{
         node: {
           fields: {
-            slug: string;
-            postPath: string;
-          };
+            slug: string
+            postPath: string
+          }
           frontmatter: {
-            title: string;
-            tags: string[];
-          };
+            title: string
+            tags: string[]
+          }
           internal: {
-            contentFilePath: string;
-          };
-        };
-      }>;
-    };
+            contentFilePath: string
+          }
+        }
+      }>
+    }
     tagsGroup: {
       group: Array<{
-        fieldValue: string;
-      }>;
-    };
-  }>(
-    `
-      {
-        allMdx(sort: {frontmatter: {date: DESC}}) {
-          edges {
-            node {
-              fields {
-                slug
-                postPath
-              }
-              frontmatter {
-                title
-                tags
-              }
-              internal {
-                contentFilePath
-              }
+        fieldValue: string
+      }>
+    }
+  }>(`
+    {
+      allMdx(sort: { frontmatter: { date: DESC } }) {
+        edges {
+          node {
+            fields {
+              slug
+              postPath
+            }
+            frontmatter {
+              title
+              tags
+            }
+            internal {
+              contentFilePath
             }
           }
         }
-        tagsGroup: allMdx(limit: 2000) {
-          group(field: {frontmatter: {tags: SELECT}}) {
-            fieldValue
-          }
+      }
+      tagsGroup: allMdx(limit: 2000) {
+        group(field: { frontmatter: { tags: SELECT } }) {
+          fieldValue
         }
       }
-    `
-  )
+    }
+  `)
 
   if (blogPostResults.errors) {
     throw blogPostResults.errors
   }
 
   if (!blogPostResults.data) {
-    throw new Error('Error retrieving blog posts')
+    throw new Error("Error retrieving blog posts")
   }
 
   const posts = blogPostResults.data.allMdx.edges
@@ -521,8 +591,8 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
         slug: post.node.fields.slug,
         postPath: `${post.node.fields.postPath}`,
         previous,
-        next
-      }
+        next,
+      },
     })
   })
 
@@ -535,8 +605,8 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
       path: `/blog/tags/${tag.fieldValue}/`,
       component: tagTemplate,
       context: {
-        tag: tag.fieldValue
-      }
+        tag: tag.fieldValue,
+      },
     })
   })
 
@@ -550,15 +620,15 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
 
     createPage({
       path: `/blog/page/${index + 1}`,
-      component: path.resolve('./src/templates/blogPage.tsx'),
+      component: path.resolve("./src/templates/blogPage.tsx"),
       context: {
         limit: postsPerPage,
         skip: index * postsPerPage,
         numPages,
         currentPageNumber,
         previousPageNumber,
-        nextPageNumber
-      }
+        nextPageNumber,
+      },
     })
   })
 }

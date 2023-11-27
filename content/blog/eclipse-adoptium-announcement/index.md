@@ -24,14 +24,14 @@ Many of you will have seen the new logo rollout to GitHub, Twitter, Slack and mo
 
 Several of our online locations have also been changed over the last few days:
 
-| Account | Old Name | New Name |
-| --- | --- | --- |
-| Main Site | adoptopenjdk.net | [adoptium.net](https://adoptium.net) |
-| Blog | blog.adoptopenjdk.net | [adoptium.net/blog](https://adoptium.net/blog) |
-| GitHub | AdoptOpenJDK | [Eclipse Adoptium](https://github.com/adoptium) |
-| Twitter | @adoptopenjdk | [@adoptium](https://twitter.com/adoptium) |
-| Slack | adoptopenjdk.slack.com | [adoptium.slack.com](https://adoptium.slack.com) |
-| YouTube | AdoptOpenJDK | [EclipseAdoptium](https://www.youtube.com/c/EclipseAdoptium) |
+| Account   | Old Name               | New Name                                                     |
+| --------- | ---------------------- | ------------------------------------------------------------ |
+| Main Site | adoptopenjdk.net       | [adoptium.net](https://adoptium.net)                         |
+| Blog      | blog.adoptopenjdk.net  | [adoptium.net/blog](https://adoptium.net/blog)               |
+| GitHub    | AdoptOpenJDK           | [Eclipse Adoptium](https://github.com/adoptium)              |
+| Twitter   | @adoptopenjdk          | [@adoptium](https://twitter.com/adoptium)                    |
+| Slack     | adoptopenjdk.slack.com | [adoptium.slack.com](https://adoptium.slack.com)             |
+| YouTube   | AdoptOpenJDK           | [EclipseAdoptium](https://www.youtube.com/c/EclipseAdoptium) |
 
 In most cases we have been able to leave a forward pointer from the old to the new location, but there may still be places we need to fixup. We'll keep you updated, and let us know if you see places that look like they have been missed.
 

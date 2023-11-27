@@ -10,7 +10,7 @@ tags:
 
 ## 1. Background
 
-Java applications are expected to start quickly because of the advent of the cloud-native era. It is becoming increasingly popular to reduce resource costs by dynamically scaling and using serverless computing. Alibaba has done a lot of work and exploration to meet the demands for quick start of applications in Serverless computing scenarios, including AppCDS, Ahead of Time Compilation (AOT), fast class indexing (JarIndex), class pre-initialization, and other technologies to optimize language runtime. Users can obtain up to three times the startup performance improvement without modifying any code. One of the cutting-edge technologies is *class pre-initialization*.
+Java applications are expected to start quickly because of the advent of the cloud-native era. It is becoming increasingly popular to reduce resource costs by dynamically scaling and using serverless computing. Alibaba has done a lot of work and exploration to meet the demands for quick start of applications in Serverless computing scenarios, including AppCDS, Ahead of Time Compilation (AOT), fast class indexing (JarIndex), class pre-initialization, and other technologies to optimize language runtime. Users can obtain up to three times the startup performance improvement without modifying any code. One of the cutting-edge technologies is _class pre-initialization_.
 
 ## 2. Class Pre-Initialization
 
@@ -60,7 +60,7 @@ At the same time, we have added a security check mechanism of class pre-initiali
 
 ### 2.3 Evaluation
 
-Class pre-initialization extends shared GC heap, it's a sub-phase of AppCDS dump time workflow, the following performance evaluation concerns AppCDS(Deep blue one) and AppCDS with Class pre-initialization(Green one). We found that about *90% (1800/2000) of classes can be pre-initialized safely in a better scenario*, and *average startup performance is improved by 19.2%*. In a larger-scale evaluation, we found that *class pre-initialization is slightly better than AppCDS, with a 5% performance improvement*.
+Class pre-initialization extends shared GC heap, it's a sub-phase of AppCDS dump time workflow, the following performance evaluation concerns AppCDS(Deep blue one) and AppCDS with Class pre-initialization(Green one). We found that about _90% (1800/2000) of classes can be pre-initialized safely in a better scenario_, and _average startup performance is improved by 19.2%_. In a larger-scale evaluation, we found that _class pre-initialization is slightly better than AppCDS, with a 5% performance improvement_.
 
 ![evaluation](evaluation.jpg)
 

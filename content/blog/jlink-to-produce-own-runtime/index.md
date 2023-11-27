@@ -12,16 +12,16 @@ This post will show you how to create your own runtime for Java 17+ which is com
 
 ## Why have you decided to stop shipping JREs?
 
-***NOTE: This paragraph has been superceded since we are now shipping JREs with 17+ again - see https://adoptium.net/blog/2021/12/eclipse-temurin-jres-are-back/ for the details, however we still recommend using jlink to produce your own cut down java runtimes where possible***
+**_NOTE: This paragraph has been superceded since we are now shipping JREs with 17+ again - see https://adoptium.net/blog/2021/12/eclipse-temurin-jres-are-back/ for the details, however we still recommend using jlink to produce your own cut down java runtimes where possible_**
 
 While the OpenJDK build process still has support for building a JRE via the
-`legacy-jre` target it is, as the name suggests, legacy functionality.  The
+`legacy-jre` target it is, as the name suggests, legacy functionality. The
 new LTS version provided us with an opportunity to make a clean break and we
 have decided now is the time to no longer provide JREs since there are more
 efficient options available. It also simplifies the list of downloads we have
-available and reduces our testing overhead.  We will continue to produce
+available and reduces our testing overhead. We will continue to produce
 them for the existing 8 and 11 versions to retain continuity for those using
-them.  The discussion on this happened in
+them. The discussion on this happened in
 [this issue](https://github.com/adoptium/temurin-build/issues/2683).
 
 The good news is that it is very easy to produce your own runtime that looks
@@ -31,12 +31,12 @@ legacy JRE would be!
 ## Sounds good. So how do I create my own "JRE"?
 
 Creating your own runtime that is comparable to a legacy JRE is simpler
-then you might think.  Firstly, download and extract the JDK archive.
+then you might think. Firstly, download and extract the JDK archive.
 Second, use [jlink](https://docs.oracle.com/en/java/javase/17/docs/specs/man/jlink.html)
 to create your own runtime that will be smaller, yet still provide
-equivalent functionality to the legacy JRE.  Replace `jdk-17+35` in the examples
+equivalent functionality to the legacy JRE. Replace `jdk-17+35` in the examples
 below with the version of Java you are working with, and replace the forward
-slashes with the path separator on your platform (e.g.  `\` for Windows):
+slashes with the path separator on your platform (e.g. `\` for Windows):
 
 ```bash
    jdk-17+35/bin/jlink --add-modules ALL-MODULE-PATH --output jdk-17+35-jre \
@@ -51,7 +51,7 @@ either the JDK or legacy JRE would be.
 
 It will vary by platform and the version of Java you are using, but using
 one example with the `jdk-17+35` release, the full JDK for one platform is
-about 312Mb on disk.  The jlinked runtime using the above command is about
+about 312Mb on disk. The jlinked runtime using the above command is about
 95Mb.
 
 ## Is this identical to the legacy JRE?
@@ -86,11 +86,11 @@ follows:
 ```
 
 Also, to be able to support some of those modules, you will still have tools
-like `javac`, `jlink` and others in the runtime.  The `--add-modules`
+like `javac`, `jlink` and others in the runtime. The `--add-modules`
 command accepts a comma seperated list of modules instead of the full list
-implied by `ALL-MODULE-PATH`.  You can use a comma-separated set of modules
-from the `--list-modules` output to limit it further.  As an example you
-could list all of the modules other than the ones in the list above.  Doing
+implied by `ALL-MODULE-PATH`. You can use a comma-separated set of modules
+from the `--list-modules` output to limit it further. As an example you
+could list all of the modules other than the ones in the list above. Doing
 so will reduce the size further, to around 66Mb, saving an extra 29Mb.
 
 As of `jdk-17+35` the full set of modules needed to do this is shown in the
@@ -100,10 +100,10 @@ following command:
 
 ## Can I make my runtime even smaller?
 
-As mentioned in the introduction, yes you can!  You just need to identify which modules your
-application requires.  You can do this with the
+As mentioned in the introduction, yes you can! You just need to identify which modules your
+application requires. You can do this with the
 [jdeps](https://docs.oracle.com/en/java/javase/17/docs/specs/man/jdeps.html)
-command.  For example if I take a simple "Hello World!" application I can
+command. For example if I take a simple "Hello World!" application I can
 get the list of modules it requires as follows:
 
 ```bash
@@ -114,9 +114,9 @@ Hello.class -> java.base
 ```
 
 This first line shows that my simple application only requires the
-`java.base` module.  In a more complicated example there will be several of
-these present in the output.  The rest of the output is a breakdown of what
-packages my application uses and which modules they relate to.  I can
+`java.base` module. In a more complicated example there will be several of
+these present in the output. The rest of the output is a breakdown of what
+packages my application uses and which modules they relate to. I can
 therefore create an even smaller custom runtime that will be suitable for my
 application using the following `jlink` command:
 
@@ -126,7 +126,7 @@ application using the following `jlink` command:
 ```
 
 And the new runtime, which comes in at only 32Mb, will still be able to run
-my "Hello World" application.  From this you can see that using jlink you
+my "Hello World" application. From this you can see that using jlink you
 can generate custom runtimes for your application which are even smaller
 than any legacy JRE we could ship to you.
 

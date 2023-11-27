@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6"
 // import {
 //   AsanaSlider,
 //   GithubSlider,
@@ -47,7 +47,8 @@ const Testimonials = () => {
 
   const prevTestimonial = () => {
     setCurrentTestimonial(
-      (currentTestimonial - 1 + testimonialData.length) % testimonialData.length
+      (currentTestimonial - 1 + testimonialData.length) %
+        testimonialData.length,
     )
     setSlideDirection("left")
   }

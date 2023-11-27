@@ -4,118 +4,118 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-import path from 'path'
-import adapter from 'gatsby-adapter-netlify'
-import locales from './locales/i18n'
+import path from "path"
+import adapter from "gatsby-adapter-netlify"
+import locales from "./locales/i18n"
 
-import type { GatsbyConfig } from 'gatsby'
-import type { MDXPage, AsciidocPage } from './src/types'
+import type { GatsbyConfig } from "gatsby"
+import type { MDXPage, AsciidocPage } from "./src/types"
 
 interface LocalSearchNormalizerArgs {
   data: {
     allAsciidoc: {
-      edges: Array<{ node: AsciidocPage }>;
-    };
-  };
+      edges: Array<{ node: AsciidocPage }>
+    }
+  }
 }
 
-type SiteMetadata = GatsbyConfig['siteMetadata'] & {
-    siteUrl: string;
-};
+type SiteMetadata = GatsbyConfig["siteMetadata"] & {
+  siteUrl: string
+}
 
 interface AllMdxQueryResult {
-  allMdx: MDXPage;
+  allMdx: MDXPage
   site: {
-    siteMetadata: SiteMetadata;
+    siteMetadata: SiteMetadata
   }
 }
 
 const config: GatsbyConfig = {
   adapter: adapter(),
   siteMetadata: {
-    title: 'Adoptium',
-    description: 'Eclipse Adoptium provides prebuilt OpenJDK binaries ...',
-    author: 'Eclipse Adoptium',
-    siteUrl: 'https://adoptium.net',
+    title: "Adoptium",
+    description: "Eclipse Adoptium provides prebuilt OpenJDK binaries ...",
+    author: "Eclipse Adoptium",
+    siteUrl: "https://adoptium.net",
     social: {
-      twitter: 'Adoptium'
-    }
+      twitter: "Adoptium",
+    },
   },
   plugins: [
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-postcss",
     {
-      resolve: 'gatsby-plugin-sass',
+      resolve: "gatsby-plugin-sass",
       options: {
         sassOptions: {
-          precision: 6
+          precision: 6,
         },
         cssLoaderOptions: {
           modules: {
             namedExport: false,
-            exportLocalsConvention: 'camelCaseOnly'
-          }
-        }
-      }
+            exportLocalsConvention: "camelCaseOnly",
+          },
+        },
+      },
     },
-    'gatsby-plugin-sitemap',
+    "gatsby-plugin-sitemap",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'asciidoc-pages',
-        path: path.join(__dirname, 'content/asciidoc-pages'),
-        ignore: ['**/*.md', '**/_partials/**']
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'blog',
-        path: path.join(__dirname, 'content/blog')
-      }
+        name: "asciidoc-pages",
+        path: path.join(__dirname, "content/asciidoc-pages"),
+        ignore: ["**/*.md", "**/_partials/**"],
+      },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'assets',
-        path: path.join(__dirname, 'static/images/authors')
-      }
+        name: "blog",
+        path: path.join(__dirname, "content/blog"),
+      },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'locale',
-        path: path.join(__dirname, 'locales'),
-        ignore: ['**/*.md', 'i18n.js']
-      }
+        name: "assets",
+        path: path.join(__dirname, "static/images/authors"),
+      },
     },
     {
-      resolve: 'gatsby-plugin-react-i18next',
+      resolve: "gatsby-source-filesystem",
       options: {
-        localeJsonSourceName: 'locale',
+        name: "locale",
+        path: path.join(__dirname, "locales"),
+        ignore: ["**/*.md", "i18n.js"],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-i18next",
+      options: {
+        localeJsonSourceName: "locale",
         languages: Object.keys(locales),
-        defaultLanguage: 'en',
+        defaultLanguage: "en",
         i18nextOptions: {
           transSupportBasicHtmlNodes: true,
-          transKeepBasicHtmlNodesFor: ['u', 'a']
+          transKeepBasicHtmlNodesFor: ["u", "a"],
         },
         pages: [
           {
-            matchPath: '/:lang?/docs/:uid',
-            getLanguageFromPath: true
+            matchPath: "/:lang?/docs/:uid",
+            getLanguageFromPath: true,
           },
           {
-            matchPath: '/:lang?/temurin/commercial-support/',
-            getLanguageFromPath: true
+            matchPath: "/:lang?/temurin/commercial-support/",
+            getLanguageFromPath: true,
           },
           {
-            matchPath: '/:lang?/about/',
-            getLanguageFromPath: true
-          }
-        ]
-      }
+            matchPath: "/:lang?/about/",
+            getLanguageFromPath: true,
+          },
+        ],
+      },
     },
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: "gatsby-plugin-feed",
       options: {
         query: `
           {
@@ -131,13 +131,17 @@ const config: GatsbyConfig = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMdx } }: { query: AllMdxQueryResult }) => {
+            serialize: ({
+              query: { site, allMdx },
+            }: {
+              query: AllMdxQueryResult
+            }) => {
               return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.postPath,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.postPath
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.postPath,
                 })
               })
             },
@@ -161,68 +165,68 @@ const config: GatsbyConfig = {
                 }
               }
             `,
-            output: '/rss.xml',
-            title: 'Adoptium Blog',
-            match: undefined
-          }
-        ]
-      }
+            output: "/rss.xml",
+            title: "Adoptium Blog",
+            match: undefined,
+          },
+        ],
+      },
     },
     {
-      resolve: 'gatsby-transformer-asciidoc',
+      resolve: "gatsby-transformer-asciidoc",
       options: {
-        safe: 'server'
-      }
+        safe: "server",
+      },
     },
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: "gatsby-plugin-mdx",
       options: {
-        extensions: ['.md'],
+        extensions: [".md"],
         mdxOptions: {
           remarkPlugins: [
             // Add GitHub Flavored Markdown (GFM) support
-            require('remark-gfm')
-          ]
+            require("remark-gfm"),
+          ],
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 720
-            }
+              maxWidth: 720,
+            },
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants'
-        ]
-      }
+          "gatsby-remark-prismjs",
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
+        ],
+      },
     },
     {
-      resolve: 'gatsby-plugin-google-gtag',
+      resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingIds: [
-          'G-9HHPS5RX9D' // Adoptium project tag
+          "G-9HHPS5RX9D", // Adoptium project tag
         ],
         gtagConfig: {
-          anonymize_ip: true // GDPR
+          anonymize_ip: true, // GDPR
         },
         pluginConfig: {
-          head: true
-        }
-      }
+          head: true,
+        },
+      },
     },
     {
-      resolve: 'gatsby-plugin-google-tagmanager',
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        id: 'GTM-5WLCZXC', // Eclipse Foundation tag
-        includeInDevelopment: true
-      }
+        id: "GTM-5WLCZXC", // Eclipse Foundation tag
+        includeInDevelopment: true,
+      },
     },
     {
-      resolve: 'gatsby-plugin-local-search',
+      resolve: "gatsby-plugin-local-search",
       options: {
-        name: 'docs',
-        engine: 'flexsearch',
+        name: "docs",
+        engine: "flexsearch",
         query: `
           {
             allAsciidoc {
@@ -241,57 +245,57 @@ const config: GatsbyConfig = {
             }
           }
         `,
-        index: ['title', 'body'],
-        store: ['id', 'path', 'title'],
+        index: ["title", "body"],
+        store: ["id", "path", "title"],
         normalizer: ({ data }: LocalSearchNormalizerArgs) =>
-          data.allAsciidoc.edges.map((result) => ({
+          data.allAsciidoc.edges.map(result => ({
             id: result.node.id,
             path: result.node.fields.slug,
             title: result.node.document.title,
-            body: result.node.html
-          }))
-      }
+            body: result.node.html,
+          })),
+      },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          'gatsby-remark-autolink-headers',
-          'gatsby-remark-code-titles'
-        ]
-      }
+          "gatsby-remark-autolink-headers",
+          "gatsby-remark-code-titles",
+        ],
+      },
     },
-    'gatsby-plugin-image',
+    "gatsby-plugin-image",
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: path.join(__dirname, 'src/images/')
-        }
-      }
+          include: path.join(__dirname, "src/images/"),
+        },
+      },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
-        path: path.join(__dirname, 'src/images/')
-      }
+        name: "images",
+        path: path.join(__dirname, "src/images/"),
+      },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: 'Eclipse Adoptium',
-        short_name: 'adoptium',
-        start_url: '/',
-        background_color: '#14003C',
-        theme_color: '#14003C',
-        display: 'standalone',
-        icon: 'src/images/adoptium-icon.png' // This path is relative to the root of the site.
-      }
-    }
-  ]
+        name: "Eclipse Adoptium",
+        short_name: "adoptium",
+        start_url: "/",
+        background_color: "#14003C",
+        theme_color: "#14003C",
+        display: "standalone",
+        icon: "src/images/adoptium-icon.png", // This path is relative to the root of the site.
+      },
+    },
+  ],
 }
 
 export default config

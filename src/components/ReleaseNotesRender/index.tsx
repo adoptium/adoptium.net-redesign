@@ -1,206 +1,263 @@
-import React, { useRef, MutableRefObject } from 'react';
-import { DataGrid, GridColDef, GridToolbarContainer, GridToolbarFilterButton, gridClasses } from '@mui/x-data-grid';
-import { useLocation } from '@gatsbyjs/reach-router';
-import queryString from 'query-string';
-import { fetchReleaseNotesForVersion, useOnScreen, ReleaseNoteAPIResponse } from '../../hooks';
-import './ReleaseNotesRender.scss';
+import React, { useRef, MutableRefObject } from "react"
+import {
+  DataGrid,
+  GridColDef,
+  GridToolbarContainer,
+  GridToolbarFilterButton,
+  gridClasses,
+} from "@mui/x-data-grid"
+import { useLocation } from "@gatsbyjs/reach-router"
+import queryString from "query-string"
+import {
+  fetchReleaseNotesForVersion,
+  useOnScreen,
+  ReleaseNoteAPIResponse,
+} from "../../hooks"
+import "./ReleaseNotesRender.scss"
 
-export const fetchTitle = (priority) => {
+export const fetchTitle = priority => {
   let title
   switch (priority) {
-    case '1':
-      title = 'P1 - Blocks development and/or testing work, production could not run.';
-      break;
-    case '2':
-      title = 'P2 - Crashes, loss of data, severe memory leak.';
-      break;
-    case '3':
-      title = 'P3 - Major loss of function.';
-      break;
-    case '4':
-      title = 'P4 - Minor loss of function, or other problem where easy workaround is present.';
-      break;
-    case '5':
-      title = 'P5 - Cosmetic problem like misspelt words or misaligned text.';
-      break;
-    case '6':
-      title = 'This issue is not publicly visible.'
+    case "1":
+      title =
+        "P1 - Blocks development and/or testing work, production could not run."
+      break
+    case "2":
+      title = "P2 - Crashes, loss of data, severe memory leak."
+      break
+    case "3":
+      title = "P3 - Major loss of function."
+      break
+    case "4":
+      title =
+        "P4 - Minor loss of function, or other problem where easy workaround is present."
+      break
+    case "5":
+      title = "P5 - Cosmetic problem like misspelt words or misaligned text."
+      break
+    case "6":
+      title = "This issue is not publicly visible."
   }
-  return title;
-};
+  return title
+}
 
 export const sortReleaseNotesBy = (releaseNotes: ReleaseNoteAPIResponse) => {
   // issues/1508: Should initially be sorted by (a) priority then (b) component.
-  if(releaseNotes && Array.isArray(releaseNotes.release_notes)) {
-      releaseNotes.release_notes = [...releaseNotes.release_notes].sort((v1, v2) => {
-          let c = 0;
-          if(v1.priority && v2.priority) {
-              c = v1.priority.localeCompare(v2.priority);
-          }
-          if(c === 0 && v1.component && v2.component) {
-              c = v1.component.localeCompare(v2.component);
-          }
-          return c;
-      });
+  if (releaseNotes && Array.isArray(releaseNotes.release_notes)) {
+    releaseNotes.release_notes = [...releaseNotes.release_notes].sort(
+      (v1, v2) => {
+        let c = 0
+        if (v1.priority && v2.priority) {
+          c = v1.priority.localeCompare(v2.priority)
+        }
+        if (c === 0 && v1.component && v2.component) {
+          c = v1.component.localeCompare(v2.component)
+        }
+        return c
+      },
+    )
   }
-  return releaseNotes;
-};
+  return releaseNotes
+}
 
 const CustomToolbar: React.FunctionComponent<{
-  setFilterButtonEl: React.Dispatch<React.SetStateAction<HTMLButtonElement | null>>;
+  setFilterButtonEl: React.Dispatch<
+    React.SetStateAction<HTMLButtonElement | null>
+  >
 }> = ({ setFilterButtonEl }) => (
   <GridToolbarContainer>
     <GridToolbarFilterButton ref={setFilterButtonEl} />
   </GridToolbarContainer>
-);
+)
 
-const priorityValueOptions = [];
-const typeValueOptions = [];
-const componentValueOptions = [];
+const priorityValueOptions = []
+const typeValueOptions = []
+const componentValueOptions = []
 
 const columns: GridColDef[] = [
   {
-    field: 'priority',
-    headerName: 'Priority',
-    type: 'singleSelect',
+    field: "priority",
+    headerName: "Priority",
+    type: "singleSelect",
     valueOptions: priorityValueOptions,
     width: 100,
-    renderCell: (params) => {
-      const title = fetchTitle(params.value);
+    renderCell: params => {
+      const title = fetchTitle(params.value)
       return (
         // check if params.value is defined, if not, return an empty string
-        <span title={title} className={`badge bg-secondary priority-${params.value}`}>{params.value && params.value !== '6' ? `P${params.value}` : 'P?'}</span>
+        <span
+          title={title}
+          className={`badge bg-secondary priority-${params.value}`}
+        >
+          {params.value && params.value !== "6" ? `P${params.value}` : "P?"}
+        </span>
       )
     },
   },
   {
-    field: 'type',
-    headerName: 'Type',
-    type: 'singleSelect',
+    field: "type",
+    headerName: "Type",
+    type: "singleSelect",
     valueOptions: typeValueOptions,
     width: 100,
     sortable: false,
-    renderCell: (params) => (
-      <span>{params.value ? params.value : 'Hidden'}</span>
-    )
+    renderCell: params => <span>{params.value ? params.value : "Hidden"}</span>,
   },
   {
-    field: 'component',
-    headerName: 'Component',
-    type: 'singleSelect',
+    field: "component",
+    headerName: "Component",
+    type: "singleSelect",
     valueOptions: componentValueOptions,
     width: 150,
-    sortable: false
+    sortable: false,
   },
   {
-    field: 'id',
-    headerName: 'Issue',
+    field: "id",
+    headerName: "Issue",
     width: 150,
     sortable: false,
-    renderCell: (params) => (
-      <a target='_blank' rel='noopener noreferrer' href={params.row.link}>{params.value}</a>
+    renderCell: params => (
+      <a target="_blank" rel="noopener noreferrer" href={params.row.link}>
+        {params.value}
+      </a>
     ),
   },
-  { field: 'title', headerName: 'Title', width: 800, sortable: false },
-];
+  { field: "title", headerName: "Title", width: 800, sortable: false },
+]
 
 const ReleaseNotesRender = (): null | JSX.Element => {
-  const version = queryString.parse(useLocation().search, {decode: false}).version;
+  const version = queryString.parse(useLocation().search, {
+    decode: false,
+  }).version
 
-  const ref = useRef<HTMLDivElement | null>(null);
-  const isVisible = useOnScreen(ref as MutableRefObject<Element>, true);
-  const releaseNotes = fetchReleaseNotesForVersion(isVisible, version, sortReleaseNotesBy);
+  const ref = useRef<HTMLDivElement | null>(null)
+  const isVisible = useOnScreen(ref as MutableRefObject<Element>, true)
+  const releaseNotes = fetchReleaseNotesForVersion(
+    isVisible,
+    version,
+    sortReleaseNotesBy,
+  )
 
   // Set all priorities set as undefined to '?' to avoid errors
-  releaseNotes?.release_notes?.forEach((note) => {
+  releaseNotes?.release_notes?.forEach(note => {
     if (note.priority === undefined) {
-      note.priority = '6';
+      note.priority = "6"
     }
-  });
+  })
 
-  if(releaseNotes && Array.isArray(releaseNotes.release_notes)) {
-    let priorities: string[] = [];
-    let types: string[] = [];
-    let components: string[] = [];
+  if (releaseNotes && Array.isArray(releaseNotes.release_notes)) {
+    let priorities: string[] = []
+    let types: string[] = []
+    let components: string[] = []
 
     releaseNotes.release_notes.forEach(release_note => {
-      if(release_note.priority && priorities.indexOf(release_note.priority) < 0) priorities.push(release_note.priority);
-      if(release_note.type && types.indexOf(release_note.type) < 0) types.push(release_note.type);
-      if(release_note.component && components.indexOf(release_note.component) < 0) components.push(release_note.component);
-    });
+      if (
+        release_note.priority &&
+        priorities.indexOf(release_note.priority) < 0
+      )
+        priorities.push(release_note.priority)
+      if (release_note.type && types.indexOf(release_note.type) < 0)
+        types.push(release_note.type)
+      if (
+        release_note.component &&
+        components.indexOf(release_note.component) < 0
+      )
+        components.push(release_note.component)
+    })
 
-    priorityValueOptions.splice(0);
-    Array.prototype.push.apply(priorityValueOptions, priorities.sort((a, b) => a.localeCompare(b)));
-    typeValueOptions.splice(0);
-    Array.prototype.push.apply(typeValueOptions, types.sort((a, b) => a.localeCompare(b)));
-    componentValueOptions.splice(0);
-    Array.prototype.push.apply(componentValueOptions, components.sort((a, b) => a.localeCompare(b)));
+    priorityValueOptions.splice(0)
+    Array.prototype.push.apply(
+      priorityValueOptions,
+      priorities.sort((a, b) => a.localeCompare(b)),
+    )
+    typeValueOptions.splice(0)
+    Array.prototype.push.apply(
+      typeValueOptions,
+      types.sort((a, b) => a.localeCompare(b)),
+    )
+    componentValueOptions.splice(0)
+    Array.prototype.push.apply(
+      componentValueOptions,
+      components.sort((a, b) => a.localeCompare(b)),
+    )
   }
 
   interface FilterItem {
-    field: string;
-    operator: string;
-    value: string;
+    field: string
+    operator: string
+    value: string
   }
 
   // Set type to 'Enhancement' by default if version matches jdk-xx+xx
-  const regex = /^jdk-(2\d|\d{3,})\+\d+$/;
-  let filterItems: FilterItem[] = [];
+  const regex = /^jdk-(2\d|\d{3,})\+\d+$/
+  let filterItems: FilterItem[] = []
   if (version?.toString && regex.test(version.toString())) {
-    filterItems.push(
-      {
-        field: 'type',
-        operator: 'is',
-        value: 'Enhancement'
-      }
-    )
+    filterItems.push({
+      field: "type",
+      operator: "is",
+      value: "Enhancement",
+    })
   }
 
-  const totalP1 = releaseNotes?.release_notes?.filter((note) => note.priority === '1').length;
+  const totalP1 = releaseNotes?.release_notes?.filter(
+    note => note.priority === "1",
+  ).length
 
   return (
-	  <div ref={ref} className='text-center'>
-    <h2>{version}</h2>
-      <div className='pt-3' style={{ display: 'flex', height: '100%' }}>
+    <div ref={ref} className="text-center">
+      <h2>{version}</h2>
+      <div className="pt-3" style={{ display: "flex", height: "100%" }}>
         <div style={{ flexGrow: 1 }}>
           {!version || releaseNotes?.release_notes === null ? (
             <>
-            <h2>Oops... We couldn't find those release notes</h2>
-            <span>Please ensure that you have a specified a version using the version URL parameter: <code>?version=x.x.x</code></span>
+              <h2>Oops... We couldn't find those release notes</h2>
+              <span>
+                Please ensure that you have a specified a version using the
+                version URL parameter: <code>?version=x.x.x</code>
+              </span>
             </>
           ) : (
             <>
-              <p>This section organizes the changes in the selected update release by the main component under which each issue is filed.</p>
-              <p><strong>{`The total number of fixes marked as P1 is: ${totalP1}`}</strong></p>
+              <p>
+                This section organizes the changes in the selected update
+                release by the main component under which each issue is filed.
+              </p>
+              <p>
+                <strong>{`The total number of fixes marked as P1 is: ${totalP1}`}</strong>
+              </p>
               <DataGrid
-                aria-label='Release Notes'
+                aria-label="Release Notes"
                 autoHeight
-                rows={releaseNotes && releaseNotes.release_notes? releaseNotes.release_notes : []}
+                rows={
+                  releaseNotes && releaseNotes.release_notes
+                    ? releaseNotes.release_notes
+                    : []
+                }
                 loading={releaseNotes === null}
                 columns={columns}
                 initialState={{
                   pagination: {
                     paginationModel: {
-                      pageSize: 20
-                    }
+                      pageSize: 20,
+                    },
                   },
                   filter: {
                     filterModel: {
-                      items: filterItems
-                    }
+                      items: filterItems,
+                    },
                   },
                   sorting: {
-                    sortModel: [{ field: 'priority', sort: 'asc' }],
+                    sortModel: [{ field: "priority", sort: "asc" }],
                   },
                 }}
-                sortingOrder={['desc', 'asc']}
+                sortingOrder={["desc", "asc"]}
                 pageSizeOptions={[20, 50, 75]}
                 pagination
                 isRowSelectable={() => false}
                 components={{
                   Toolbar: CustomToolbar,
                 }}
-                getRowHeight={() => 'auto'}
+                getRowHeight={() => "auto"}
                 sx={{
                   [`& .${gridClasses.cell}`]: {
                     py: 1,
@@ -212,7 +269,7 @@ const ReleaseNotesRender = (): null | JSX.Element => {
         </div>
       </div>
     </div>
-  );
- };
+  )
+}
 
-export default ReleaseNotesRender;
+export default ReleaseNotesRender

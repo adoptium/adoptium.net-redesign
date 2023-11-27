@@ -15,7 +15,7 @@ tags:
 
 [AdoptOpenJDK moved](https://blog.adoptopenjdk.net/2021/08/goodbye-adoptopenjdk-hello-adoptium/) to become Eclipse Adoptium back in August 2021. Since then the packaged versions of Eclipse Temurin have been made available via [packages.adoptium.net](https://packages.adoptium.net) and `adoptopenjdk.jfrog.io` has been deprecated.
 
-If you are still utilising the deprecated [adoptopenjdk.jfrog.io](https://adoptopenjdk.jfrog.io) service, it's essential to understand the potential vulnerabilities associated with this choice. As the service has been deprecated, it is no longer actively maintained or updated to address security concerns. This means that the OpenJDK distributions obtained from this source may contain known vulnerabilities that are not recommended for production use. The packages at AdoptOpenJDK were last updated in June 2021 and are at version `11.0.11` and `8u292`, while latest is `11.0.19` and `8u372` - that's now *eight* releases behind the latest.
+If you are still utilising the deprecated [adoptopenjdk.jfrog.io](https://adoptopenjdk.jfrog.io) service, it's essential to understand the potential vulnerabilities associated with this choice. As the service has been deprecated, it is no longer actively maintained or updated to address security concerns. This means that the OpenJDK distributions obtained from this source may contain known vulnerabilities that are not recommended for production use. The packages at AdoptOpenJDK were last updated in June 2021 and are at version `11.0.11` and `8u292`, while latest is `11.0.19` and `8u372` - that's now _eight_ releases behind the latest.
 
 In a rapidly evolving technological landscape, security vulnerabilities are discovered regularly, and updates and patches are released to address them. By continuing to use adoptopenjdk.jfrog.io, you are essentially missing out on these critical updates, leaving your applications and systems exposed to potential security breaches.
 
@@ -28,7 +28,7 @@ To fix their breakage users should move to picking up the latest secure packages
 The brownout plan is a carefully orchestrated process that aims to gradually phase out the usage of adoptopenjdk.jfrog.io while providing developers with sufficient time to migrate to [packages.adoptium.net](https://packages.adoptium.net). The following table outlines the key stages and timeline of the brownout plan:
 
 | Time Period                | Brownout Duration (GMT)                    |
-|----------------------------|--------------------------------------------|
+| -------------------------- | ------------------------------------------ |
 | July 05 - July 20          | No Brownout, Notifications Only            |
 | July 21 - July 27          | 2:00 - 3:00 and 14:00 - 15:00              |
 | July 28 - August 3         | 1:00 - 3:00, 13:00 - 15:00, 22:00 - 00:00  |

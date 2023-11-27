@@ -6,7 +6,7 @@
  */
 
 import * as React from "react"
-import { Slice } from 'gatsby'
+import { Slice } from "gatsby"
 
 import "./layout.scss"
 // import "../styles/latest.scss"
@@ -17,9 +17,9 @@ import "slick-carousel/slick/slick-theme.css"
 const Layout = ({ children }) => {
   return (
     <>
-      <Slice alias='navbar' />
+      <Slice alias="navbar" />
       <main>{children}</main>
-      <Slice alias='footer' />
+      <Slice alias="footer" />
     </>
   )
 }

@@ -1,12 +1,21 @@
 import React, { useEffect, useRef, useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { GithubIcon2 } from "../../Common/Icon"
 
 const DownloadCounter = () => {
+  const data = useStaticQuery(graphql`
+    {
+      downloadCount {
+        total
+      }
+    }
+  `)
+
   const [count, setCount] = useState(0)
   const [animate, setAnimate] = useState(false)
   const counterRef = useRef(null)
 
-  const endValue = 265996558 // End value of counter
+  const endValue = data.downloadCount.total // End value of counter
   const startValue = endValue - 10 // Start value of counter
   const duration = 500 // Duration of the animation in milliseconds
 
@@ -21,10 +30,10 @@ const DownloadCounter = () => {
             const progress = Math.min(
               // @ts-ignore
               (timestamp - startTimestamp) / duration,
-              1
+              1,
             )
             setCount(
-              Math.floor(progress * (endValue - startValue) + startValue)
+              Math.floor(progress * (endValue - startValue) + startValue),
             )
             if (progress < 1) {
               window.requestAnimationFrame(step)
@@ -33,7 +42,7 @@ const DownloadCounter = () => {
           window.requestAnimationFrame(step)
         }
       },
-      { root: null, threshold: 0.5 }
+      { root: null, threshold: 0.5 },
     )
 
     if (counterRef.current) {

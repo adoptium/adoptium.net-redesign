@@ -1,12 +1,12 @@
-import * as React from 'react'
-import { Link, graphql } from 'gatsby'
+import * as React from "react"
+import { Link, graphql } from "gatsby"
 
-import Layout from '../components/Layout'
-import Seo from '../components/Seo'
-import MembersGrid from '../components/MembersGrid'
-import { shuffle } from '../util/shuffle'
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
+import MembersGrid from "../components/MembersGrid"
+import { shuffle } from "../util/shuffle"
 
-import Members from '../json/members.json'
+import Members from "../json/members.json"
 
 let strategicMembers: MembersProps[] = []
 let enterpriseMembers: MembersProps[] = []
@@ -14,13 +14,13 @@ let participantMembers: MembersProps[] = []
 
 for (const member of Members) {
   switch (member.tier) {
-    case 'strategic':
+    case "strategic":
       strategicMembers.push(member)
       break
-    case 'enterprise':
+    case "enterprise":
       enterpriseMembers.push(member)
       break
-    case 'participant':
+    case "participant":
       participantMembers.push(member)
       break
     default:
@@ -29,34 +29,62 @@ for (const member of Members) {
 }
 
 // Randomly mix up members logos
-strategicMembers=(shuffle(strategicMembers))
-enterpriseMembers=(shuffle(enterpriseMembers))
-participantMembers=(shuffle(participantMembers))
+strategicMembers = shuffle(strategicMembers)
+enterpriseMembers = shuffle(enterpriseMembers)
+participantMembers = shuffle(participantMembers)
 
 const MembersPage = () => (
   <Layout>
-    <section className='py-5 text-center container'>
-      <div className='row py-lg-5'>
-        <div className='col-lg-8 col-md-8 mx-auto'>
-          <h1 className='fw-light'>Adoptium&reg; Working Group Members</h1>
-          <h2 className='fw-light pt-5'>Strategic Members</h2>
-          <p className='lead text-muted'>Strategic Members are organizations that view Adoptium working group managed technology as critical to their organization’s future, and are investing significant resources to sustain and define the core activities that are the responsibility of the working group.</p>
-          <MembersGrid
-            members={strategicMembers}
-          />
-          <h2 className='fw-light pt-5'>Enterprise Members</h2>
-          <p className='lead text-muted'>Enterprise Members are typically organizations that view the Adoptium working group managed technology as a critical part of their organization&lsquo;s business operations. These organizations want to influence the direction and support the development of a runtime technology ecosystem through Eclipse Adoptium.</p>
-          <MembersGrid
-            members={enterpriseMembers}
-          />
-          <h2 className='fw-light pt-5'>Participant Members</h2>
-          <p className='lead text-muted'>Participant Members are typically organizations that deliver products or services based on Adoptium technology. These organizations want to participate in the evolution of the Eclipse Adoptium ecosystem to ensure it continues to meet their needs.</p>
-          <MembersGrid
-            members={participantMembers}
-          />
-          <a style={{margin: 20}} href='https://membership.eclipse.org/application#sign-in' className='btn btn-lg btn-primary mt-5'>Ready to Join?</a>
-          <a style={{margin: 20}} href='https://www.eclipse.org/org/foundation/contact.php' className='btn btn-lg btn-primary mt-5'>Contact us</a>
-          <Link style={{margin: 20}} to='/join' className='btn btn-lg btn-primary mt-5'>Learn More</Link>
+    <section className="py-5 text-center container">
+      <div className="row py-lg-5">
+        <div className="col-lg-8 col-md-8 mx-auto">
+          <h1 className="fw-light">Adoptium&reg; Working Group Members</h1>
+          <h2 className="fw-light pt-5">Strategic Members</h2>
+          <p className="lead text-muted">
+            Strategic Members are organizations that view Adoptium working group
+            managed technology as critical to their organization’s future, and
+            are investing significant resources to sustain and define the core
+            activities that are the responsibility of the working group.
+          </p>
+          <MembersGrid members={strategicMembers} />
+          <h2 className="fw-light pt-5">Enterprise Members</h2>
+          <p className="lead text-muted">
+            Enterprise Members are typically organizations that view the
+            Adoptium working group managed technology as a critical part of
+            their organization&lsquo;s business operations. These organizations
+            want to influence the direction and support the development of a
+            runtime technology ecosystem through Eclipse Adoptium.
+          </p>
+          <MembersGrid members={enterpriseMembers} />
+          <h2 className="fw-light pt-5">Participant Members</h2>
+          <p className="lead text-muted">
+            Participant Members are typically organizations that deliver
+            products or services based on Adoptium technology. These
+            organizations want to participate in the evolution of the Eclipse
+            Adoptium ecosystem to ensure it continues to meet their needs.
+          </p>
+          <MembersGrid members={participantMembers} />
+          <a
+            style={{ margin: 20 }}
+            href="https://membership.eclipse.org/application#sign-in"
+            className="btn btn-lg btn-primary mt-5"
+          >
+            Ready to Join?
+          </a>
+          <a
+            style={{ margin: 20 }}
+            href="https://www.eclipse.org/org/foundation/contact.php"
+            className="btn btn-lg btn-primary mt-5"
+          >
+            Contact us
+          </a>
+          <Link
+            style={{ margin: 20 }}
+            to="/join"
+            className="btn btn-lg btn-primary mt-5"
+          >
+            Learn More
+          </Link>
         </div>
       </div>
     </section>
@@ -65,13 +93,11 @@ const MembersPage = () => (
 
 export default MembersPage
 
-export const Head = () => (
-  <Seo title='Adoptium Working Group Members' />
-)
+export const Head = () => <Seo title="Adoptium Working Group Members" />
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: {language: {eq: $language}}) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns
@@ -83,8 +109,8 @@ export const query = graphql`
   }
 `
 export interface MembersProps {
-  name: string;
-  logo: string;
-  url: string;
-  tier: string;
+  name: string
+  logo: string
+  url: string
+  tier: string
 }

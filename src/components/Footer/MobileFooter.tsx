@@ -1,8 +1,8 @@
 import React from "react"
-import { Link, Trans } from 'gatsby-plugin-react-i18next';
+import { Link, Trans } from "gatsby-plugin-react-i18next"
 import { Disclosure } from "@headlessui/react"
 
-import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
+import { CiCirclePlus, CiCircleMinus } from "react-icons/ci"
 
 // Custom Disclosure component
 const CustomDisclosure = ({ title, links }) => (
@@ -14,36 +14,38 @@ const CustomDisclosure = ({ title, links }) => (
           <span className="text-white text-xl font-semibold leading-7">
             <Trans i18nKey={title.key} defaults={title.defaultText} />
           </span>
-            <span className="text-white">
-                {open ? <CiCircleMinus size={45} /> : <CiCirclePlus size={45} />}
-            </span>
+          <span className="text-white">
+            {open ? <CiCircleMinus size={45} /> : <CiCirclePlus size={45} />}
+          </span>
         </Disclosure.Button>
 
         {/* Disclosure panel */}
         <Disclosure.Panel className="text-base font-normal leading-6 space-y-2 flex flex-col">
-        {links.map((link, index) => {
-            const isInternalLink = !/^https?:\/\//.test(link.url);
+          {links.map((link, index) => {
+            const isInternalLink = !/^https?:\/\//.test(link.url)
 
             return isInternalLink ? (
-                <Link
-                key={index}
-                to={link.url}
-                className="text-white"
-                >
-                <Trans i18nKey={link.text.key} defaults={link.text.defaultText} />
-                </Link>
+              <Link key={index} to={link.url} className="text-white">
+                <Trans
+                  i18nKey={link.text.key}
+                  defaults={link.text.defaultText}
+                />
+              </Link>
             ) : (
-                <a
+              <a
                 key={index}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white"
-                >
-                <Trans i18nKey={link.text.key} defaults={link.text.defaultText} />
-                </a>
-            );
-        })}
+              >
+                <Trans
+                  i18nKey={link.text.key}
+                  defaults={link.text.defaultText}
+                />
+              </a>
+            )
+          })}
         </Disclosure.Panel>
       </>
     )}

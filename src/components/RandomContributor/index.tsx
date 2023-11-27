@@ -1,14 +1,14 @@
-import React, { MutableRefObject, useRef } from 'react';
-import { useAdoptiumContributorsApi, useOnScreen } from '../../hooks';
-import './RandomContributor.scss';
-import AnimatedPlaceholder from '../AnimatedPlaceholder';
-import { Trans } from 'gatsby-plugin-react-i18next';
-import LinkText from '../LinkText'
+import React, { MutableRefObject, useRef } from "react"
+import { useAdoptiumContributorsApi, useOnScreen } from "../../hooks"
+import "./RandomContributor.scss"
+import AnimatedPlaceholder from "../AnimatedPlaceholder"
+import { Trans } from "gatsby-plugin-react-i18next"
+import LinkText from "../LinkText"
 
 const RandomContributor = (): JSX.Element => {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const isVisible = useOnScreen(ref as MutableRefObject<Element>, true);
-  const contributor = useAdoptiumContributorsApi(isVisible);
+  const ref = useRef<HTMLDivElement | null>(null)
+  const isVisible = useOnScreen(ref as MutableRefObject<Element>, true)
+  const contributor = useAdoptiumContributorsApi(isVisible)
 
   return (
     <div ref={ref} className="random-contributor">
@@ -28,25 +28,29 @@ const RandomContributor = (): JSX.Element => {
             </a>
           </div>
           <div className="random-contributor__thank">
-            <Trans 
-              i18nKey="asciidoc.random.contributor.text" 
-              defaults='Thank you <profileUri>{{login}}</profileUri> for making <commitsListUri>{{contributionsCount}} contribution(s)</commitsListUri> to <repoUri>{{repo}}</repoUri>' 
+            <Trans
+              i18nKey="asciidoc.random.contributor.text"
+              defaults="Thank you <profileUri>{{login}}</profileUri> for making <commitsListUri>{{contributionsCount}} contribution(s)</commitsListUri> to <repoUri>{{repo}}</repoUri>"
               components={{
-                profileUri: <LinkText href={contributor.profileUri} />, 
+                profileUri: <LinkText href={contributor.profileUri} />,
                 commitsListUri: <LinkText href={contributor.commitsListUri} />,
-                repoUri: <LinkText href={`https://github.com/adoptium/${contributor.repo}`} />,
+                repoUri: (
+                  <LinkText
+                    href={`https://github.com/adoptium/${contributor.repo}`}
+                  />
+                ),
               }}
               values={{
-                'login': contributor.login, 
-                'contributionsCount': contributor.contributionsCount,
-                'repo': contributor.repo
+                login: contributor.login,
+                contributionsCount: contributor.contributionsCount,
+                repo: contributor.repo,
               }}
             />
           </div>
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default RandomContributor;
+export default RandomContributor

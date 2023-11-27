@@ -22,9 +22,9 @@ now has a badge to indicate this.
 
 ## SLSA Level 1
 
-Level 1 means that the build process is full scripted and automated.  We are
+Level 1 means that the build process is full scripted and automated. We are
 now producing and distributing Software Bill Of Material (SBOM) documents
-which are shipped alongside our release builds.  We have been compliant with
+which are shipped alongside our release builds. We have been compliant with
 level 1 for some time: The level 1 requirements are:
 
 - **Build - scripted build**: Our build steps are defined completely by the
@@ -38,13 +38,13 @@ level 1 for some time: The level 1 requirements are:
   [OWASP CycloneDX format](https://owasp.org/www-project-cyclonedx/)
   along with our releases which contains all of the information about how
   the builds are produced, which should allow someone to rebuild if required
-  for any reason.  This includes the full set of parameters which we use to
+  for any reason. This includes the full set of parameters which we use to
   the makejdk_any_platform.sh script (invoked from
   make-adopt-build-farm.sh), the source repository tags (`scmRef`) which was
   used by the build process to produce the builds, the output from the
   openjdk `configure` invocation and various other pieces of information.
   We are continually evolving the specific details which we include in the
-  SBOM.  If you want to join in the discussion on the content, you can find
+  SBOM. If you want to join in the discussion on the content, you can find
   the conversation in
   [temurin-build#3013](https://github.com/adoptium/temurin-build/issues/3013)
   or talk to us in the #secure-dev slack channel in the
@@ -53,10 +53,10 @@ level 1 for some time: The level 1 requirements are:
 ## SLSA Level 2
 
 Level 2 adds in additional requirements to provide some tamper resistance of
-the build process, including having all of our code version controlled.  We
+the build process, including having all of our code version controlled. We
 achieve this through our use of GitHub for both the OpenJDK product code and
 the code that runs the build and distribution processes through our Jenkins
-CI server.  The requirements here are:
+CI server. The requirements here are:
 
 - **Source - Version controlled**. All of our source code is stored in GitHub in
   the jdkXX repositories such as
@@ -102,7 +102,7 @@ and shipped binary reproducible builds with the exception of some instances
 where the class data sharing archive is not identical.
 
 We are working towards implementing the other parts of the higher SLSA
-levels which we do not yet meet.  Some of these, such as the
+levels which we do not yet meet. Some of these, such as the
 [Ephemeral environment requirement](https://slsa.dev/spec/v0.1/requirements#ephemeral-environment),
 may take some time to achieve on all platforms and
 you can follow the current status in [the SLSA tracking

@@ -1,20 +1,20 @@
-import React from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { detectOS, UserOS } from '../../util/detectOS';
-import './InstallTabs.scss';
+import React from "react"
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
+import { detectOS, UserOS } from "../../util/detectOS"
+import "./InstallTabs.scss"
 
-import WindowsPanel from './WindowsPanel';
-import MacOSPanel from './MacOSPanel';
-import LinuxPanel from './LinuxPanel';
+import WindowsPanel from "./WindowsPanel"
+import MacOSPanel from "./MacOSPanel"
+import LinuxPanel from "./LinuxPanel"
 
 const InstallTabs = (): JSX.Element | null => {
-  const userOS = detectOS();
+  const userOS = detectOS()
 
   const os = {
-    win: 'Windows (Winget)',
-    mac: 'macOS (Homebrew)',
-    linux: 'Linux (RPM/DEB)',
-  };
+    win: "Windows (Winget)",
+    mac: "macOS (Homebrew)",
+    linux: "Linux (RPM/DEB)",
+  }
 
   const installTabSystems = {
     WIN: [os.win, os.mac, os.linux],
@@ -22,7 +22,7 @@ const InstallTabs = (): JSX.Element | null => {
     LINUX: [os.linux, os.mac, os.win],
     UNIX: [os.linux, os.mac, os.win],
     UNKNOWN: [os.win, os.mac, os.linux],
-  };
+  }
 
   function panelSwitch(): JSX.Element {
     switch (userOS) {
@@ -39,7 +39,7 @@ const InstallTabs = (): JSX.Element | null => {
               <LinuxPanel />
             </TabPanel>
           </>
-        );
+        )
       case UserOS.LINUX:
       case UserOS.UNIX:
         return (
@@ -54,7 +54,7 @@ const InstallTabs = (): JSX.Element | null => {
               <WindowsPanel />
             </TabPanel>
           </>
-        );
+        )
       default:
         return (
           <>
@@ -68,7 +68,7 @@ const InstallTabs = (): JSX.Element | null => {
               <LinuxPanel />
             </TabPanel>
           </>
-        );
+        )
     }
   }
 
@@ -82,7 +82,7 @@ const InstallTabs = (): JSX.Element | null => {
             <div className="install__header-grey-circle green" />
           </div>
           <div className="install__header-text">
-            {userOS === 'MAC' ? 'zsh' : 'bash'}
+            {userOS === "MAC" ? "zsh" : "bash"}
           </div>
         </div>
         <TabList>
@@ -93,7 +93,7 @@ const InstallTabs = (): JSX.Element | null => {
         {panelSwitch()}
       </Tabs>
     </div>
-  ) : null;
-};
+  ) : null
+}
 
-export default InstallTabs;
+export default InstallTabs

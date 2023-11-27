@@ -11,7 +11,7 @@ tags:
 With the latest releases from July 2022 (8u342, 11.0.16, 17.0.4 and 18.0.2)
 we provide GPG signatures along with our releases which you can use to
 verify that the downloads you have are genuine and have not been tampered
-with since we built them.  This gives a quick crib sheet of what you need to
+with since we built them. This gives a quick crib sheet of what you need to
 do to verify the downloads.
 
 ## What is GPG signing?
@@ -19,7 +19,7 @@ do to verify the downloads.
 In the use case we are talking about here, GPG signing is a cryptographic
 process whereby a private/public keypair is used to confirm that a file has
 not been tampered with between when it was published and it being delivered
-to the end user.  The private key is used by Adoptium to produce the
+to the end user. The private key is used by Adoptium to produce the
 signature file which can be downloaded along with the OpenJDK binaries, and
 the public key can be obtained by you and used to verify the the signature
 is valid, proving the integrity of the file and also that it was signed by
@@ -30,13 +30,13 @@ Adoptium and not modified by a third party.
 While going into the details of public key encryption is beyond the scope of
 this article, if there was a man in the middle attack that resulted in the
 downloads you receive being compromised, then the corresponding SHA
-checksums could also be compromised.  GPG signing avoids this issue by using
+checksums could also be compromised. GPG signing avoids this issue by using
 a separately certified signature which you can initially trust and then
 verify subsequent downloads.
 
 ## What do I need to do to obtain the signatures?
 
-The link to the signatures is provided in the metadata for our releases.  In
+The link to the signatures is provided in the metadata for our releases. In
 the following examples I will use JDK17 but you can change the calls
 appropriately for other versions:
 
@@ -46,7 +46,7 @@ as follows:
 `curl 'https://api.adoptium.net/v3/assets/feature_releases/17/ga' > adopt.json`
 
 Once you've downloaded that you need to extract the `link` and
-`signature_link` entries using your preferred JSON parsing tool.  The
+`signature_link` entries using your preferred JSON parsing tool. The
 information you want is in the `binaries[0].package.link` and
 `binaries[0].package.signature_link` section of the file for the most recent
 version.
@@ -82,7 +82,7 @@ released by the Adoptium project.
 ## How do I verify the signatures once I have them?
 
 You will need to have the `gpg` tool installed in order to verify the
-signatures.  You can then run the following command to check the signature by supplying the signature file and the corresponding file which the signature is for e.g.:
+signatures. You can then run the following command to check the signature by supplying the signature file and the corresponding file which the signature is for e.g.:
 
 `gpg --verify OpenJDK17U-jdk_x64_linux_hotspot_17.0.4_8.tar.gz.sig OpenJDK17U-jdk_x64_linux_hotspot_17.0.4_8.tar.gz`
 
@@ -97,7 +97,7 @@ gpg: Can't check signature: No public key
 ```
 
 To resolve this message you need to acquire the public key that was used to
-sign the binaries.  You can download it from a trusted GPG server, for
+sign the binaries. You can download it from a trusted GPG server, for
 example to use the Ubuntu key servers run this command:
 
 `gpg --keyserver keyserver.ubuntu.com --recv-keys 3B04D753C9050D9A5D343F39843C48A565F8F04B`

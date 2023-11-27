@@ -10,11 +10,11 @@ tags:
 
 Adoptium is happy to announce the immediate availability of Eclipse Temurin 8u312, 11.0.13, and 17.0.1. As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
 
-* [List of security fixes and other fixes in OpenJDK 8u312](https://bugs.openjdk.java.net/browse/JDK-8275549?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%20openjdk8u312%20ORDER%20BY%20created%20DESC)
+- [List of security fixes and other fixes in OpenJDK 8u312](https://bugs.openjdk.java.net/browse/JDK-8275549?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%20openjdk8u312%20ORDER%20BY%20created%20DESC)
 
-* [List of security fixes and other fixes in OpenJDK 11.0.13](https://bugs.openjdk.java.net/browse/JDK-8275564?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%2011.0.13%20ORDER%20BY%20created%20DESC)
+- [List of security fixes and other fixes in OpenJDK 11.0.13](https://bugs.openjdk.java.net/browse/JDK-8275564?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%2011.0.13%20ORDER%20BY%20created%20DESC)
 
-* [List of security fixes and other fixes in OpenJDK 17.0.1](https://bugs.openjdk.java.net/browse/JDK-8275444?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%2017.0.1%20ORDER%20BY%20created%20DESC)
+- [List of security fixes and other fixes in OpenJDK 17.0.1](https://bugs.openjdk.java.net/browse/JDK-8275444?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%2017.0.1%20ORDER%20BY%20created%20DESC)
 
 ## New and Noteworthy
 

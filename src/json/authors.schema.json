@@ -1,26 +1,26 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": {
     "type": "object",
-    "additionalProperties": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "summary": {
-          "type": ["string", "null"]
-        },
-        "twitter": {
-          "type": ["string", "null"]
-        },
-        "github": {
-          "type": "string"
-        },
-        "linkedin": {
-          "type": ["string", "null"]
-        }
+    "properties": {
+      "name": {
+        "type": "string"
       },
-      "required": ["name", "github"],
-      "additionalProperties": false
-    }
+      "summary": {
+        "type": ["string", "null"]
+      },
+      "twitter": {
+        "type": ["string", "null"]
+      },
+      "github": {
+        "type": "string"
+      },
+      "linkedin": {
+        "type": ["string", "null"]
+      }
+    },
+    "required": ["name", "github"],
+    "additionalProperties": false
   }
+}

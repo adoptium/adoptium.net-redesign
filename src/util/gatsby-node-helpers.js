@@ -1,6 +1,6 @@
 // Use a little helper function to remove trailing slashes from paths
 exports.removeTrailingSlash = path =>
-  path === '/' ? path : path.replace(/\/$/, '')
+  path === "/" ? path : path.replace(/\/$/, "")
 
 exports.localizedSlug = ({ isDefault, locale, slug }) =>
   isDefault ? `${slug}` : `${locale}/${slug}`

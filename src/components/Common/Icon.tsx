@@ -332,43 +332,56 @@ export const TogglIcon = () => {
   )
 }
 export const ScrollDivider = () => {
-    return (
-        <>
-        <svg width="16" height="80" viewBox="0 0 16 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="8" cy="72" r="8" fill="#FF1464"/>
-            <path d="M8 0L10 65H6L8 0Z" fill="url(#paint0_linear_2354_8054)"/>
-            <defs>
-            <linearGradient id="paint0_linear_2354_8054" x1="8" y1="0" x2="8" y2="65" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#FF1464" stopOpacity="0"/>
-            <stop offset="0.842336" stopColor="#FF1464"/>
-            </linearGradient>
-            </defs>
-        </svg>
-        </>
-    )
+  return (
+    <>
+      <svg
+        width="16"
+        height="80"
+        viewBox="0 0 16 80"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="8" cy="72" r="8" fill="#FF1464" />
+        <path d="M8 0L10 65H6L8 0Z" fill="url(#paint0_linear_2354_8054)" />
+        <defs>
+          <linearGradient
+            id="paint0_linear_2354_8054"
+            x1="8"
+            y1="0"
+            x2="8"
+            y2="65"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#FF1464" stopOpacity="0" />
+            <stop offset="0.842336" stopColor="#FF1464" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </>
+  )
 }
 export const RedIcon = () => {
-    return (
-        <svg
-            width="14"
-            height="14"
-            viewBox="0 0 14 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <rect x="3" y="3" width="8" height="8" rx="2" fill="#FF1464" />
-            <rect
-            x="1.5"
-            y="1.5"
-            width="11"
-            height="11"
-            rx="3.5"
-            stroke="#FF1464"
-            strokeOpacity="0.25"
-            strokeWidth="3"
-            />
-        </svg>
-    )
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="3" y="3" width="8" height="8" rx="2" fill="#FF1464" />
+      <rect
+        x="1.5"
+        y="1.5"
+        width="11"
+        height="11"
+        rx="3.5"
+        stroke="#FF1464"
+        strokeOpacity="0.25"
+        strokeWidth="3"
+      />
+    </svg>
+  )
 }
 export const SmallLogoIcon = () => {
   return (

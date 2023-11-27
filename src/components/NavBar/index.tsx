@@ -1,17 +1,17 @@
 import React, { useState, useEffect, Fragment } from "react"
-import { Link } from 'gatsby-plugin-react-i18next';
+import { Link } from "gatsby-plugin-react-i18next"
 import { Dialog, Menu, Transition } from "@headlessui/react"
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa"
 
 import IconSocial from "../IconSocial"
 
 // @ts-ignore
-import Logo from '../../images/adoptium-logo-dark.svg';
+import Logo from "../../images/adoptium-logo-dark.svg"
 
 interface NavItem {
-  name: string;
-  href?: string;
-  children?: NavItem[];
+  name: string
+  href?: string
+  children?: NavItem[]
 }
 
 function classNames(...classes) {
@@ -54,7 +54,6 @@ const navigation: NavItem[] = [
   {
     name: "Community",
     children: [
-
       { name: "Our Community", href: "#" },
       { name: "Support", href: "#" },
       { name: "News & Updates", href: "#" },
@@ -66,7 +65,7 @@ const navigation: NavItem[] = [
 const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showLastSlide, setShowLastSlide] = useState(false)
-  const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null);
+  const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null)
   useEffect(() => {
     if (!mobileMenuOpen) {
       setShowLastSlide(false)
@@ -85,10 +84,7 @@ const NavBar = () => {
         aria-label="Global"
       >
         <Link to="/">
-          <Logo
-            alt="Adoptium Logo"
-            className="h-10"
-          />
+          <Logo alt="Adoptium Logo" className="h-10" />
         </Link>
         <div className="flex lg:hidden">
           <button
@@ -148,10 +144,7 @@ const NavBar = () => {
                 <div>
                   <Menu.Button className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50">
                     {item.name}
-                    <FaChevronDown
-                      className="-mr-1 mt-1"
-                      aria-hidden="true"
-                    />
+                    <FaChevronDown className="-mr-1 mt-1" aria-hidden="true" />
                   </Menu.Button>
                 </div>
 
@@ -176,7 +169,7 @@ const NavBar = () => {
                               href={child.href}
                               className={classNames(
                                 active ? " text-[#A80D55]" : "text-white-700",
-                                "block  py-3 text-sm border-b border-[#3E3355]"
+                                "block  py-3 text-sm border-b border-[#3E3355]",
                               )}
                             >
                               {child.name}
@@ -196,7 +189,7 @@ const NavBar = () => {
               >
                 {item.name}
               </a>
-            )
+            ),
           )}
         </div>
         <button className="rounded-[88px] hidden sm:block bg-transparent gradient-border border-2  border-pink-500/0 text-white text-sm font-semibold w-[153px] h-[48px]">

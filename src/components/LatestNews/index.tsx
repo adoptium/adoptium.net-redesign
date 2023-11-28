@@ -93,7 +93,7 @@ const LatestNews = () => {
             </div>
           </div>
           <div className="w-full flex relative lg:hidden">
-            <LatestNewsSlider />
+            <LatestNewsSlider newsmap={newsmap} />
           </div>
         </div>
       </div>

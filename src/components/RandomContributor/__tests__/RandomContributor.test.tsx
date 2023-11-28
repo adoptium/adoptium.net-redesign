@@ -24,7 +24,7 @@ describe("RandomContributor component", () => {
       createRandomContributorViewData(),
     )
 
-    const { container } = render(<RandomContributor />)
+    const { container } = render(<RandomContributor key={1} style={{}} />)
     expect(container).toMatchSnapshot()
   })
 
@@ -39,7 +39,7 @@ describe("RandomContributor component", () => {
       createRandomContributorViewData1Contribution(),
     )
 
-    const { container } = render(<RandomContributor />)
+    const { container } = render(<RandomContributor key={1} style={{}} />)
     expect(container).toMatchSnapshot()
   })
 
@@ -52,7 +52,7 @@ describe("RandomContributor component", () => {
     // @ts-ignore
     useAdoptiumContributorsApi.mockReturnValue(false)
 
-    const { container } = render(<RandomContributor />)
+    const { container } = render(<RandomContributor key={1} style={{}} />)
     expect(container).toMatchSnapshot()
   })
 })

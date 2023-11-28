@@ -2,25 +2,6 @@
 
 exports[`News page > renders correctly 1`] = `
 <main>
-  <div
-    class="docs-header p-5 text-center"
-  >
-    <div
-      class="container"
-    >
-      <h1>
-        News & Events
-      </h1>
-      <div
-        class="lead"
-      >
-        Follow the latest updates from the Eclipse Adoptium Project
-      </div>
-      <div
-        class="main-search-box pt-3 d-block mx-auto"
-      />
-    </div>
-  </div>
   <section
     class="text-center container-flex"
   >
@@ -287,25 +268,6 @@ exports[`News page > renders correctly 1`] = `
 
 exports[`News page > renders spinner when news not loaded 1`] = `
 <main>
-  <div
-    class="docs-header p-5 text-center"
-  >
-    <div
-      class="container"
-    >
-      <h1>
-        News & Events
-      </h1>
-      <div
-        class="lead"
-      >
-        Follow the latest updates from the Eclipse Adoptium Project
-      </div>
-      <div
-        class="main-search-box pt-3 d-block mx-auto"
-      />
-    </div>
-  </div>
   <section
     class="text-center container-flex"
   >

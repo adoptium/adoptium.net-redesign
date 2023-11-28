@@ -1,113 +1,61 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react"
+import { graphql } from "gatsby"
+import { Link, Trans } from "gatsby-plugin-react-i18next"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
-const AqavitHome = () => (
-  <Layout>
-    <section className="py-5 text-center container">
-      <div className="row py-lg-5">
-        <div className="col-lg-10 col-md-8 mx-auto">
-          <h1 className="fw-light">Eclipse AQAvit&trade;</h1>
-          <div className="row align-items-center pt-3">
-            <div className="col-6 col-md-4">
-              <img
-                src="/images/aqavit-light.png"
-                width={200}
-                alt="AQAvit logo"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-12 col-sm-6 col-md-8">
-              <p className="text-start">
-                Eclipse AQAvit is the quality and runtime branding evaluation
-                project for Java SE runtimes and associated technology. During a
-                release it takes a functionally complete Java runtime and
-                ensures that all the additional qualities are present that make
-                it suitable for production use. These quality criteria include
-                good performance, exceptional security, resilience and
-                endurance, and the ability to pass a wide variety of application
-                test suites. In addition to verifying that functionally complete
-                runtimes are release ready, the AQA tests may also serve to
-                verify new functionality during runtime development.
-              </p>
+// @ts-ignore
+import HeroBgImg from "../images/backgrounds/aqavit-hero-bg.svg"
+
+import LogoCarousel from "../components/LogoCarousel"
+
+const AQAvit = () => {
+  return (
+    <Layout>
+      <div className="bg-purple sm:bg-contain bg-aqavit-hero bg-center bg-no-repeat relative">
+        <div className="relative isolate">
+          <div className="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]">
+            <HeroBgImg />
+          </div>
+          <div
+            className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+            aria-hidden="true"
+          ></div>
+          <div className="max-w-[1264px] mx-auto flex justify-center items-center">
+            <div className="mx-auto max-w-[832px] w-full h-[680px] sm:h-[720px] px-8 lg:px-0 flex items-center">
+              <div className="text-center w-full">
+                <h1 className="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]">
+                  Eclipse AQAvit
+                </h1>
+                <p className="lg:my-10 mt-6  mb-10 text-2xl leading-8 text-white-600  font-semibold">
+                  Some tagline about AQAvit
+                </p>
+                <div className="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6">
+                  <Link
+                    to="/temurin/releases"
+                    className="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
+                  >
+                    Learn More
+                  </Link>
+                  <Link
+                    to="#"
+                    className="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out  border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+                  >
+                    Download AQAvit
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="p-3 mb-4 bg-light rounded-3 text-start">
-        <div className="container-fluid py-5">
-          <h2>The AQAvit Name</h2>
-          <p>
-            The AQAvit project gets its name from Adoptium Quality Assurance
-            ‘AQA’ and ‘vit’ for vitality and speed. As the project engages with
-            vendors and enterprise consumers, the test suite is expanded and
-            improved to keep pace with the latest Java releases and to
-            continuously raise the quality bar through collaboration and rigour.
-          </p>
-        </div>
-      </div>
-      <div className="p-3 mb-4 bg-dark rounded-3 text-start">
-        <div className="container-fluid py-5 text-white">
-          <h2>AQAvit Project Central</h2>
-          <p>
-            As listed in the{" "}
-            <a
-              href="https://projects.eclipse.org/projects/adoptium.aqavit/developer"
-              className="link-light"
-            >
-              Developer Resources
-            </a>{" "}
-            section of the Eclipse Foundation&nbsp;
-            <a
-              href="https://projects.eclipse.org/projects/adoptium.aqavit"
-              className="link-light"
-            >
-              AQAvit project
-            </a>{" "}
-            page, AQAvit is comprised of many repositories. The central one is
-            the{" "}
-            <a
-              href="https://github.com/adoptium/aqa-tests"
-              className="link-light"
-            >
-              aqa-tests
-            </a>{" "}
-            repository which houses the project’s test definition files, much of
-            the project’s documentation and is the base for running the AQAvit
-            test suite. To participate in the project, people are invited to
-            join the{" "}
-            <Link to="/slack" className="link-light">
-              Adoptium Slack workspace
-            </Link>{" "}
-            and ask questions in the <code>#testing-aqavit</code> channel.
-          </p>
-        </div>
-      </div>
-      <div className="p-3 mb-4 bg-light rounded-3 text-start">
-        <div className="container-fluid py-5">
-          <h2>AQAvit Verification</h2>
-          <p>
-            The AQAvit project was created to “make quality certain to happen.”
-            AQAvit certification is achieved through the process of running and
-            passing a prescribed and versioned set of tests in the AQAvit test
-            suite.
-          </p>
-          <a
-            href="/docs/aqavit-verification"
-            className="btn btn-outline-dark"
-            type="button"
-          >
-            Learn how to run AQAvit
-          </a>
-        </div>
-      </div>
-    </section>
-  </Layout>
-)
-
-export default AqavitHome
+      <LogoCarousel />
+      <div className="w-full h-[1px] my-8 lg:my-16 bg-[#3E3355]"></div>
+    </Layout>
+  )
+}
+export default AQAvit
 
 export const Head = () => <Seo title="Eclipse AQAvit" />
 

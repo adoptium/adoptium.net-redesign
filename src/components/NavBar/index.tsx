@@ -22,7 +22,7 @@ const navigation: NavItem[] = [
   {
     name: "About Us",
     children: [
-      { name: "What We do", href: "#" },
+      { name: "What We do", href: "/what-we-do" },
       { name: "Business Benefits", href: "#" },
       { name: "Our Supporters", href: "#" },
       { name: "Our Adopters", href: "#" },
@@ -34,9 +34,9 @@ const navigation: NavItem[] = [
   {
     name: "Projects",
     children: [
-      { name: "Eclipse Temurin", href: "#" },
-      { name: "Eclipse AQAvit", href: "#" },
-      { name: "Eclipse Mission Control", href: "#" },
+      { name: "Eclipse Temurin", href: "/temurin" },
+      { name: "Eclipse AQAvit", href: "/aqavit" },
+      { name: "Eclipse Mission Control", href: "/jmc" },
     ],
   },
   {

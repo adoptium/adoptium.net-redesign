@@ -1,46 +1,42 @@
-import * as React from "react"
+import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
-import LatestTemurin from "../../components/LatestTemurin"
 
-const TemurinHome = ({ data }) => {
-  const latestLTS = data.mostRecentLts.version
+// @ts-ignore
+import HeroBgImg from "../../images/backgrounds/temurin-hero-bg.svg"
+
+import LatestTemurin from "../../components/LatestTemurin"
+import LogoCarousel from "../../components/LogoCarousel"
+import PowerOfTemurin from "../../components/Temurin/PowerOfTemurin"
+
+const Index = ({ data }) => {
   return (
     <Layout>
-      <section className="py-5 text-center container">
-        <div className="row py-lg-5">
-          <div className="col-lg-10 col-md-8 mx-auto">
-            <h1 className="fw-light">Eclipse Temurin&trade;</h1>
-            <div className="row align-items-center pt-3">
-              <div className="col-6 col-md-4">
-                <img
-                  src="/images/temurin-light.png"
-                  width={150}
-                  alt="Temurin logo"
-                  className="img-fluid"
-                />
-              </div>
-              <div className="col-12 col-sm-6 col-md-8">
-                <p className="text-start">
-                  The Eclipse Temurin project provides code and processes that
-                  support the building of runtime binaries and associated
-                  technologies that are high performance, enterprise-caliber,
-                  cross-platform, open-source licensed, and Java SE TCK-tested
-                  for general use across the Java ecosystem.
-                </p>
-              </div>
-              <LatestTemurin latestLTS={latestLTS} page="temurin" />
+      <div className="bg-purple sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative">
+        <div className="relative isolate">
+          <div className="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]">
+            <HeroBgImg />
+          </div>
+          <div
+            className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+            aria-hidden="true"
+          ></div>
+          <div className="max-w-[1264px] mx-auto flex justify-center items-center">
+            <div className="mx-auto max-w-[832px] w-full h-[680px] sm:h-[720px] px-8 lg:px-0 flex items-center">
+              <LatestTemurin latestLTS={data.mostRecentLts.version} />
             </div>
           </div>
         </div>
-      </section>
+      </div>
+      <LogoCarousel />
+      <div className="w-full h-[1px] my-8 lg:my-16 bg-[#3E3355]"></div>
+      <PowerOfTemurin />
     </Layout>
   )
 }
-
-export default TemurinHome
+export default Index
 
 export const Head = () => <Seo title="Eclipse Temurin" />
 

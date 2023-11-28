@@ -100,10 +100,10 @@ const LatestNewsSlider = () => {
 
       <div className="flex gap-4 items-center justify-center mt-16 mb-8">
         <button onClick={handlePrev} className="text-white">
-          <FiArrowLeftCircle />
+          <FiArrowLeftCircle size={50} strokeWidth={1} />
         </button>
         <button onClick={handleNext} className="text-white">
-          <FiArrowRightCircle />
+          <FiArrowRightCircle size={50} strokeWidth={1} />
         </button>
       </div>
     </div>

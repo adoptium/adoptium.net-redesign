@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 
+import { RedIcon } from "../components/Common/Icon"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import BlogAuthor from "../components/BlogAuthor"
@@ -26,18 +27,16 @@ export const formatDiv = props => {
 const components = {
   GuestPost,
   blockquote: props => (
-    <blockquote
-      style={{
-        paddingLeft: "1.5rem",
-        borderLeft: ".3rem solid hsla(0,0%,0%,0.9)",
-      }}
-      className="blockquote"
+    <blockquote className="pl-6 border-l-4 border-gray-900" {...props} />
+  ),
+  table: props => (
+    <table
+      className="min-w-full divide-y divide-gray-200 shadow-sm"
       {...props}
     />
   ),
-  table: props => <table className="table table-hover" {...props} />,
-  thead: props => <thead className="table-dark" {...props} />,
-  li: props => <li style={{ marginBottom: "1.5em" }} {...props} />,
+  thead: props => <thead className="bg-gray-50" {...props} />,
+  li: props => <li className="mb-6" {...props} />,
   img: props => <ImagePopup {...props} />,
   div: formatDiv,
 }
@@ -50,14 +49,31 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
 
   return (
     <Layout>
-      <section className="py-5 container">
-        <div className="row py-lg-5">
-          <div className="col-lg-9 col-md-9 mx-auto">
+      <div className="pt-32 pb-12">
+        <div className="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center">
+          <div className="self-stretch h-52 flex-col justify-center items-center gap-6 flex">
+            <div className="self-stretch h-32 flex-col justify-center items-center gap-4 flex">
+              <div className="justify-start items-center gap-3 inline-flex">
+                <RedIcon />
+                <div className="text-rose-600 text-base font-bold leading-normal">
+                  News article
+                </div>
+              </div>
+              <div className="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold">
+                {post.frontmatter.title}
+              </div>
+            </div>
+            <div className="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7">
+              foobar
+            </div>
+          </div>
+        </div>
+      </div>
+      <section className="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center">
+        <div className="flex flex-wrap py-5">
+          <div className="w-full lg:w-3/4 md:w-3/4 mx-auto">
             <article>
               <header className="pb-5">
-                <h1 className="mb-0" style={{ fontWeight: "900" }}>
-                  {post.frontmatter.title}
-                </h1>
                 <Byline
                   date={post.frontmatter.date}
                   author={author.name}
@@ -72,7 +88,7 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
               <MDXProvider components={components}>{children}</MDXProvider>
               <Tags tags={tags} />
               <Comments />
-              <hr className="p-3" />
+              <hr className="my-3" />
               <footer className="pb-5">
                 <BlogAuthor
                   identifier={post.frontmatter.author}
@@ -82,15 +98,7 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
             </article>
 
             <div>
-              <ul
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "space-between",
-                  listStyle: "none",
-                  padding: 0,
-                }}
-              >
+              <ul className="flex flex-wrap justify-between list-none p-0">
                 <li>
                   {next && (
                     <Link to={next.fields.postPath} rel="next">

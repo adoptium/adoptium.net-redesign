@@ -24,25 +24,80 @@ exports[`BlogPost Template page > formatDiv renders correctly 1`] = `
 
 exports[`BlogPost Template page > renders correctly - featured image 1`] = `
 <main>
-  <section
-    class="py-5 container"
+  <div
+    class="pt-32 pb-12"
   >
     <div
-      class="row py-lg-5"
+      class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
     >
       <div
-        class="col-lg-9 col-md-9 mx-auto"
+        class="self-stretch h-52 flex-col justify-center items-center gap-6 flex"
+      >
+        <div
+          class="self-stretch h-32 flex-col justify-center items-center gap-4 flex"
+        >
+          <div
+            class="justify-start items-center gap-3 inline-flex"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              News article
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold"
+          >
+            MDX Page title
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7"
+        >
+          foobar
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    class="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center"
+  >
+    <div
+      class="flex flex-wrap py-5"
+    >
+      <div
+        class="w-full lg:w-3/4 md:w-3/4 mx-auto"
       >
         <article>
           <header
             class="pb-5"
           >
-            <h1
-              class="mb-0"
-              style="font-weight: 900;"
-            >
-              MDX Page title
-            </h1>
             <div
               class="byline"
               style="display: flex; align-items: center; margin-top: 1rem; margin-bottom: 1rem; text-decoration: none;"
@@ -223,7 +278,8 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
             style="align-items: center; display: flex; flex-wrap: wrap; justify-content: flex-start; background-color: rgb(227, 227, 227); border-radius: 4px; padding: 0.5em; margin-top: 1em;"
           >
             <em>
-              Do you have questions or want to discuss this post? Hit us up on the 
+              Do you have questions or want to discuss this post? Hit us up on the
+               
               <a
                 href="https://adoptium.slack.com/"
               >
@@ -233,7 +289,7 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
             </em>
           </p>
           <hr
-            class="p-3"
+            class="my-3"
           />
           <footer
             class="pb-5"
@@ -303,7 +359,7 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
         </article>
         <div>
           <ul
-            style="display: flex; flex-wrap: wrap; justify-content: space-between; list-style: none; padding: 0px;"
+            class="flex flex-wrap justify-between list-none p-0"
           >
             <li>
               <a
@@ -333,25 +389,80 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
 
 exports[`BlogPost Template page > renders correctly 1`] = `
 <main>
-  <section
-    class="py-5 container"
+  <div
+    class="pt-32 pb-12"
   >
     <div
-      class="row py-lg-5"
+      class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
     >
       <div
-        class="col-lg-9 col-md-9 mx-auto"
+        class="self-stretch h-52 flex-col justify-center items-center gap-6 flex"
+      >
+        <div
+          class="self-stretch h-32 flex-col justify-center items-center gap-4 flex"
+        >
+          <div
+            class="justify-start items-center gap-3 inline-flex"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              News article
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold"
+          >
+            MDX Page title
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7"
+        >
+          foobar
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    class="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center"
+  >
+    <div
+      class="flex flex-wrap py-5"
+    >
+      <div
+        class="w-full lg:w-3/4 md:w-3/4 mx-auto"
       >
         <article>
           <header
             class="pb-5"
           >
-            <h1
-              class="mb-0"
-              style="font-weight: 900;"
-            >
-              MDX Page title
-            </h1>
             <div
               class="byline"
               style="display: flex; align-items: center; margin-top: 1rem; margin-bottom: 1rem; text-decoration: none;"
@@ -532,7 +643,8 @@ exports[`BlogPost Template page > renders correctly 1`] = `
             style="align-items: center; display: flex; flex-wrap: wrap; justify-content: flex-start; background-color: rgb(227, 227, 227); border-radius: 4px; padding: 0.5em; margin-top: 1em;"
           >
             <em>
-              Do you have questions or want to discuss this post? Hit us up on the 
+              Do you have questions or want to discuss this post? Hit us up on the
+               
               <a
                 href="https://adoptium.slack.com/"
               >
@@ -542,7 +654,7 @@ exports[`BlogPost Template page > renders correctly 1`] = `
             </em>
           </p>
           <hr
-            class="p-3"
+            class="my-3"
           />
           <footer
             class="pb-5"
@@ -612,7 +724,7 @@ exports[`BlogPost Template page > renders correctly 1`] = `
         </article>
         <div>
           <ul
-            style="display: flex; flex-wrap: wrap; justify-content: space-between; list-style: none; padding: 0px;"
+            class="flex flex-wrap justify-between list-none p-0"
           >
             <li>
               <a

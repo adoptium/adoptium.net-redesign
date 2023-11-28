@@ -6,7 +6,7 @@
   animation-name: placeHolderShimmer;
   animation-timing-function: linear;
   background: #f6f6f6;
-  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+  background: linear-gradient(to right, #f6f6f6 8%, #bcbcbc 18%, #f6f6f6 33%);
   background-size: 800px 104px;
   height: 96px;
   position: relative;
@@ -29,8 +29,9 @@
   &__image {
     @extend %animated-background;
     height: 60px;
-    margin-right: 5px;
+    margin-right: 10px;
     min-width: 60px;
+    clip-path: circle();
   }
 
   &__text {

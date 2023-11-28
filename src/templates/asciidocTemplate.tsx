@@ -14,6 +14,7 @@ import LinkText from "../components/LinkText"
 
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import "@fortawesome/fontawesome-free/css/v4-shims.min.css"
+import PageHeader from "../components/PageHeader"
 
 const AsciidocTemplate = ({ data, pageContext }) => {
   const { t } = useTranslation()
@@ -38,7 +39,12 @@ const AsciidocTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <section className="py-5 px-3">
+      <PageHeader
+        title={document.title}
+        subtitle="Documentation"
+        description="fooBar"
+      />
+      <section className="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center">
         <div
           className="asciidoc-container container-adoc row"
           id="asciidoc-container"
@@ -47,10 +53,6 @@ const AsciidocTemplate = ({ data, pageContext }) => {
             {/* Leaving space for a table of contents (side bar) */}
           </div>
           <div className="asciidoc col-lg-6 col-md-12">
-            <h1
-              className="pb-4 fw-light text-center"
-              dangerouslySetInnerHTML={{ __html: document.title }}
-            />
             {displayDefaultLocaleWarning && (
               <div className="alert alert-warning">
                 <i className="fas fa-exclamation-triangle pe-1" />

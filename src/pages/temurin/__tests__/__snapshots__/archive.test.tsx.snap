@@ -22,7 +22,8 @@ exports[`Temurin Archive page > renders correctly 1`] = `
           <div
             class="callout callout-default text-start"
           >
-            Please be aware that this archive contains old releases of Eclipse Temurin kept for reference. The 
+            Please be aware that this archive contains old releases of Eclipse Temurin kept for reference. The
+             
             <a
               href="/temurin/releases"
             >
@@ -169,7 +170,8 @@ exports[`Temurin Archive page > renders correctly 1`] = `
               The checksum is used to ensure the file has not been corrupted during download. You should compare the checksum of the file you received with the value below to ensure the file you received is complete and unmodified.
             </p>
             <p>
-              On Windows use 
+              On Windows use
+               
               <code>
                 certUtil -hashfile 
                 <var>
@@ -177,14 +179,16 @@ exports[`Temurin Archive page > renders correctly 1`] = `
                 </var>
                  SHA256
               </code>
-              , on Linux use 
+              , on Linux use
+               
               <code>
                 sha256sum 
                 <var>
                   file
                 </var>
               </code>
-              , and on macOS use 
+              , and on macOS use
+               
               <code>
                 shasum -a 256 
                 <var>

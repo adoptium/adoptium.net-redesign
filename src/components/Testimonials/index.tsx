@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6"
-// import {
-//   AsanaSlider,
-//   GithubSlider,
-//   GoogleSlider,
-//   SlackSlider,
-// } from "../latest-news/AppIcons"
+import { AsanaSlider, GithubSlider, GoogleSlider, SlackSlider } from "./Icons"
 
 import "./Testimonials.scss"
 
@@ -14,7 +9,7 @@ const testimonialData = [
     quote:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     name: "Joe Bloggs",
-    role: "CEO at Google",
+    role: "CEO at GitHub",
     image:
       "https://th.bing.com/th/id/OIP.sYE4E2Y8K4hHU21bS0zx2QHaH4?rs=1&pid=ImgDetMain",
   },
@@ -22,7 +17,23 @@ const testimonialData = [
     quote:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     name: "Jane Doe",
-    role: "CTO at Meta",
+    role: "CTO at Asana",
+    image:
+      "https://th.bing.com/th/id/OIP.EhdrnPDN08Vtj8MgbvlOxQHaHa?rs=1&pid=ImgDetMain?",
+  },
+  {
+    quote:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    name: "Jane Doe",
+    role: "Cleaner at Google",
+    image:
+      "https://th.bing.com/th/id/OIP.EhdrnPDN08Vtj8MgbvlOxQHaHa?rs=1&pid=ImgDetMain?",
+  },
+  {
+    quote:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    name: "Jane Doe",
+    role: "Slacker at Slack",
     image:
       "https://th.bing.com/th/id/OIP.EhdrnPDN08Vtj8MgbvlOxQHaHa?rs=1&pid=ImgDetMain?",
   },
@@ -57,6 +68,19 @@ const Testimonials = () => {
   const testimonialClassName =
     slideDirection === "right" ? "slide-in-right" : "slide-in-left"
   const testimonialKey = `${currentTestimonial}-${slideDirection}`
+  const logoSliderChangeHandler = value => {
+    console.log(value)
+    if (value === currentTestimonial) {
+      return
+    } else {
+      setCurrentTestimonial(value)
+      if (currentTestimonial > value) {
+        setSlideDirection("left")
+      } else {
+        setSlideDirection("right")
+      }
+    }
+  }
 
   return (
     <section className="bg-[#0E002A] overflow-x-hidden border-t border-[#3E3355]">
@@ -73,12 +97,15 @@ const Testimonials = () => {
               fill="currentColor"
             />
           </svg>
-          <blockquote className={testimonialClassName}>
-            <span className="text-[32px] leading-10 font-semibold font-hanken  text-white">
+          <blockquote
+            className={testimonialClassName}
+            style={{ minHeight: "204px" }}
+          >
+            <span className="md:text-[32px] text-[26px] leading-[34px] md:leading-10 font-semibold font-hanken  text-white">
               {testimonial.quote}
             </span>
           </blockquote>
-          <figcaption className="flex items-center justify-center mt-6 space-x-3">
+          <figcaption className="flex items-center justify-center md:mt-6 mt-0 space-x-3">
             <img
               className="w-6 h-6 mb-0 rounded-full"
               src={testimonial.image}
@@ -107,20 +134,20 @@ const Testimonials = () => {
             <div className="progress-border"></div>
           </button>
         </div>
-        {/* <div className="max-w-[896px] mx-auto flex justify-center items-center mt-10 space-x-16">
-          <button>
-            <GithubSlider />
+        <div className="max-w-[896px] mx-auto flex flex-wrap justify-center items-center mt-10 gap-6 md:space-x-16">
+          <button onClick={() => logoSliderChangeHandler(0)}>
+            <GithubSlider current={currentTestimonial} />
           </button>
-          <button>
-            <AsanaSlider />
+          <button onClick={() => logoSliderChangeHandler(1)}>
+            <AsanaSlider current={currentTestimonial} />
           </button>
-          <button>
-            <GoogleSlider />
+          <button onClick={() => logoSliderChangeHandler(2)}>
+            <GoogleSlider current={currentTestimonial} />
           </button>
-          <button>
-            <SlackSlider />
+          <button onClick={() => logoSliderChangeHandler(3)}>
+            <SlackSlider current={currentTestimonial} />
           </button>
-        </div> */}
+        </div>
       </div>
     </section>
   )

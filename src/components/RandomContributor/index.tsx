@@ -5,13 +5,18 @@ import AnimatedPlaceholder from "../AnimatedPlaceholder"
 import { Trans } from "gatsby-plugin-react-i18next"
 import LinkText from "../LinkText"
 
-const RandomContributor = (): JSX.Element => {
+const RandomContributor = ({ key, style }): JSX.Element => {
   const ref = useRef<HTMLDivElement | null>(null)
   const isVisible = useOnScreen(ref as MutableRefObject<Element>, true)
   const contributor = useAdoptiumContributorsApi(isVisible)
 
   return (
-    <div ref={ref} className="random-contributor">
+    <div
+      ref={ref}
+      key={key}
+      className="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+      style={style}
+    >
       {!contributor && isVisible && <AnimatedPlaceholder />}
       {contributor && (
         <>
@@ -23,11 +28,12 @@ const RandomContributor = (): JSX.Element => {
             >
               <img
                 src={contributor.avatarUri}
+                className="w-[150px] !mb-0 mw-[60px] rounded-full"
                 alt="Avatar of an Adoptium contributor"
               />
             </a>
           </div>
-          <div className="random-contributor__thank">
+          <div className="random-contributor__thank text-white text-sm font-normal leading-6">
             <Trans
               i18nKey="asciidoc.random.contributor.text"
               defaults="Thank you <profileUri>{{login}}</profileUri> for making <commitsListUri>{{contributionsCount}} contribution(s)</commitsListUri> to <repoUri>{{repo}}</repoUri>"

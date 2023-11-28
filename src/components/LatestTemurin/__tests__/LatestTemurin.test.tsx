@@ -11,7 +11,7 @@ import { createRandomLatestForOSData } from "../../../__fixtures__/hooks"
 vi.mock("../../../hooks/useOnScreen")
 vi.mock("../../../hooks/fetchLatestTemurin")
 
-describe("RandomContributor component", () => {
+describe("LatestTemurin component", () => {
   it("should render correctly", () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore

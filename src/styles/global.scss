@@ -46,9 +46,15 @@ body {
   }
 }
 
-.bg-img-hero {
+.bg-temurin-hero {
   @media (min-width: 640px) {
-    background-image: url("/images/hero-img.png");
+    background-image: url("/images/temurin-hero-img.png");
+  }
+}
+
+.bg-aqavit-hero {
+  @media (min-width: 640px) {
+    background-image: url("/images/aqavit-hero-img.png");
   }
 }
 

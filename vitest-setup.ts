@@ -24,6 +24,9 @@ vi.mock("gatsby", async () => {
     mostRecentFeatureVersion: {
       version: 2,
     },
+    downloadCount: {
+      total: 1000000,
+    },
     allVersions: {
       edges: [
         {

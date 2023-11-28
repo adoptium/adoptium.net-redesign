@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react"
+import { Link } from "gatsby-plugin-react-i18next"
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react"
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi"
 import SwiperCore from "swiper"
@@ -71,9 +72,11 @@ const Features = () => {
                 open-source Java runtime binaries that are enterprise-ready and
                 Java SE TCK-tested for general use in the Java ecosystem.
               </h3>
-              <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[212px] h-[48px] ">
-                Download Temurin™
-              </button>
+              <Link to="/temurin/releases">
+                <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[212px] h-[48px] ">
+                    Download Temurin™
+                </button>
+              </Link>
             </div>
             <div className="lg:flex gap-4 items-center mt-16 hidden">
               <button onClick={handlePrevbase} className="text-white">

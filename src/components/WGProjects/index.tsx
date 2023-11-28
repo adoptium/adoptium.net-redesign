@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby-plugin-react-i18next"
 import { RedIcon } from "../Common/Icon"
 
 interface Project {
@@ -11,17 +12,17 @@ const projects: Project[] = [
   {
     title: "Eclipse Temurin™",
     imagePath: "temurin-project.svg",
-    link: "#",
+    link: "/temurin",
   },
   {
     title: "Eclipse AQAvit",
     imagePath: "aqavit-project.svg",
-    link: "#",
+    link: "/aqavit",
   },
   {
     title: "Eclipse Mission Control",
     imagePath: "mc-project.svg",
-    link: "#",
+    link: "/jmc",
   },
 ]
 
@@ -61,11 +62,11 @@ const WGProjects = () => {
                   <h2 className="text-white text-[26px] md:text-[32px] font-hanken leading-8 md:leading-10 font-semibold mt-2">
                     {project.title}
                   </h2>
-                  <a href={project.link}>
+                  <Link to={project.link}>
                     <button className="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border">
                       Learn More
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

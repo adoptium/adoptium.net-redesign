@@ -28,7 +28,6 @@ const ContributorsHome = () => {
     },
     {
       marginTop: "40px",
-      zIndex: "10",
     },
   ]
 
@@ -37,7 +36,7 @@ const ContributorsHome = () => {
   const set3 = contributorStyles.slice(4, 6)
   return (
     <>
-      <div className="bg-purple xl:px-0 lg:px-8 px-0 w-full overflow-hidden flex flex-col items-center justify-center max-w-[1440px] mx-auto ">
+      <div className="xl:px-0 lg:px-8 px-0 w-full overflow-hidden flex flex-col items-center justify-center contributors mx-auto ">
         {/* ==========================================SET-1=============================================== */}
         {/* Contributors cards for Set 1 */}
         <div className="flex w-fit space-x-4 sm:space-x-[210px] md:mx-auto justify-between items-end mt-[81px] xl:ml-[461px] overflow-hidden">

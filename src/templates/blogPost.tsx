@@ -64,7 +64,7 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
               </div>
             </div>
             <div className="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7">
-              foobar
+              {post.excerpt}
             </div>
           </div>
         </div>
@@ -155,7 +155,7 @@ export const pageQuery = graphql`
     }
     mdx(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
+      excerpt
       frontmatter {
         title
         author

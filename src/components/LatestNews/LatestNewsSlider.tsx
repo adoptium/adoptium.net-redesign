@@ -43,13 +43,13 @@ const LatestNewsSlider = ({ newsmap }) => {
           <SwiperSlide className={`!w-[256px] newscard p-6 m-auto`} key={index}>
             <h2 className="text-primary text-base leading-6 font-bold m-0 flex items-center gap-x-3">
               <RedIcon />
-                News
+              News
             </h2>
             <p className="text-white text-xl  font-normal leading-7 mt-6">
-                {card.node.frontmatter.title}
+              {card.node.frontmatter.title}
             </p>
             <span className="text-sm text-grey font-normal leading-5 block mt-2 mb-6">
-                {card.node.frontmatter.date}
+              {card.node.frontmatter.date}
             </span>
             <Link
               to={card.node.fields.postPath}

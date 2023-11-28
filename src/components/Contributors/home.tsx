@@ -41,7 +41,7 @@ const ContributorsHome = () => {
         {/* Contributors cards for Set 1 */}
         <div className="flex w-fit space-x-4 sm:space-x-[210px] md:mx-auto justify-between items-end mt-[81px] xl:ml-[461px] overflow-hidden">
           {set1.map((style, index) => (
-            <RandomContributor key={index} style={style} />
+            <RandomContributor key={`set-1-${index}`} style={style} />
           ))}
         </div>
         {/* ==========================================SET-2=============================================== */}{" "}
@@ -62,14 +62,14 @@ const ContributorsHome = () => {
           {/* Contributors cards for Set 2 */}
           <div className="absolute flex justify-between h-full w-full">
             {set2.map((style, index) => (
-              <RandomContributor key={index} style={style} />
+              <RandomContributor key={`set-2-${index}`} style={style} />
             ))}
           </div>
         </div>
         {/* ==========================================SET-3=============================================== */}
         <div className="flex w-fit xl:ml-[244px] justify-between mt-10 mb-[87px] sm:space-x-[233px] space-x-10 md:mx-auto overflow-hidden sm:ml-0">
           {set3.map((style, index) => (
-            <RandomContributor key={index} style={style} />
+            <RandomContributor key={`set-3-${index}`} style={style} />
           ))}
         </div>
       </div>

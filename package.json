@@ -124,7 +124,7 @@
   },
   "ts-standard": {
     "ignore": [
-      "vitest-setup.ts",
+      "vitest-setup.tsx",
       "vitest.config.ts",
       "gatsby-node.ts",
       "gatsby-config.ts"

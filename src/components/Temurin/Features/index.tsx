@@ -79,10 +79,18 @@ const Features = () => {
               </Link>
             </div>
             <div className="lg:flex gap-4 items-center mt-16 hidden">
-              <button onClick={handlePrevbase} className="text-white">
+              <button
+                onClick={handlePrevbase}
+                className="text-white"
+                aria-label="Previous Feature"
+              >
                 <FiArrowLeftCircle size={50} strokeWidth={1} />
               </button>
-              <button onClick={handleNextbase} className="text-white">
+              <button
+                onClick={handleNextbase}
+                className="text-white"
+                aria-label="Next Feature"
+              >
                 <FiArrowRightCircle size={50} strokeWidth={1} />
               </button>
             </div>
@@ -126,10 +134,18 @@ const Features = () => {
           </Swiper>{" "}
           <div className="flex gap-4 items-center my-8  w-full justify-center lg:hidden">
             <button onClick={handlePrevbase} className="text-white">
-              <FiArrowLeftCircle size={50} strokeWidth={1} />
+              <FiArrowLeftCircle
+                size={50}
+                strokeWidth={1}
+                aria-label="Previous Feature"
+              />
             </button>
             <button onClick={handleNextbase} className="text-white">
-              <FiArrowRightCircle size={50} strokeWidth={1} />
+              <FiArrowRightCircle
+                size={50}
+                strokeWidth={1}
+                aria-label="Next Feature"
+              />
             </button>
           </div>
         </div>

@@ -11,7 +11,9 @@ exports[`AQAvit page > renders correctly 1`] = `
       <div
         class="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]"
       >
-        <img />
+        <img
+          alt="background-image"
+        />
       </div>
       <div
         aria-hidden="true"

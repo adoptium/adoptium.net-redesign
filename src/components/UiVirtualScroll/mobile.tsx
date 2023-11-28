@@ -1,10 +1,15 @@
 import React from "react"
-import { ScrollDivider } from "../Common/Icon"
+
+// @ts-ignore
+import ScrollDivider from "../../images/scroll-divider.svg"
 
 const UiMobileScroll = ({ data }) => {
   return data.map((item, index) => (
     // render an image in the center and then the text below it centered
-    <div className="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center">
+    <div
+      key={index}
+      className="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
+    >
       <img
         src={`/images/icons/${item.image}`}
         alt="Description"

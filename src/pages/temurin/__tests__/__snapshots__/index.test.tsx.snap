@@ -11,7 +11,9 @@ exports[`Temurin Index page > renders correctly 1`] = `
       <div
         class="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]"
       >
-        <img />
+        <img
+          alt="background-image"
+        />
       </div>
       <div
         aria-hidden="true"
@@ -396,43 +398,10 @@ exports[`Temurin Index page > renders correctly 1`] = `
         class="w-full mb-0 max-w-[366px] object-cover"
         src="/images/icons/feature-layers.svg"
       />
-      <svg
-        fill="none"
-        height="80"
-        viewBox="0 0 16 80"
-        width="16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="8"
-          cy="72"
-          fill="#FF1464"
-          r="8"
-        />
-        <path
-          d="M8 0L10 65H6L8 0Z"
-          fill="url(#paint0_linear_2354_8054)"
-        />
-        <defs>
-          <lineargradient
-            gradientUnits="userSpaceOnUse"
-            id="paint0_linear_2354_8054"
-            x1="8"
-            x2="8"
-            y1="0"
-            y2="65"
-          >
-            <stop
-              stop-color="#FF1464"
-              stop-opacity="0"
-            />
-            <stop
-              offset="0.842336"
-              stop-color="#FF1464"
-            />
-          </lineargradient>
-        </defs>
-      </svg>
+      <img
+        alt="scrol divider"
+        class="mb-0"
+      />
       <div
         class="flex flex-col flex-1 px-4"
       >
@@ -456,43 +425,10 @@ exports[`Temurin Index page > renders correctly 1`] = `
         class="w-full mb-0 max-w-[366px] object-cover"
         src="/images/icons/feature-layers.svg"
       />
-      <svg
-        fill="none"
-        height="80"
-        viewBox="0 0 16 80"
-        width="16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="8"
-          cy="72"
-          fill="#FF1464"
-          r="8"
-        />
-        <path
-          d="M8 0L10 65H6L8 0Z"
-          fill="url(#paint0_linear_2354_8054)"
-        />
-        <defs>
-          <lineargradient
-            gradientUnits="userSpaceOnUse"
-            id="paint0_linear_2354_8054"
-            x1="8"
-            x2="8"
-            y1="0"
-            y2="65"
-          >
-            <stop
-              stop-color="#FF1464"
-              stop-opacity="0"
-            />
-            <stop
-              offset="0.842336"
-              stop-color="#FF1464"
-            />
-          </lineargradient>
-        </defs>
-      </svg>
+      <img
+        alt="scrol divider"
+        class="mb-0"
+      />
       <div
         class="flex flex-col flex-1 px-4"
       >
@@ -516,43 +452,10 @@ exports[`Temurin Index page > renders correctly 1`] = `
         class="w-full mb-0 max-w-[366px] object-cover"
         src="/images/icons/feature-layers.svg"
       />
-      <svg
-        fill="none"
-        height="80"
-        viewBox="0 0 16 80"
-        width="16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="8"
-          cy="72"
-          fill="#FF1464"
-          r="8"
-        />
-        <path
-          d="M8 0L10 65H6L8 0Z"
-          fill="url(#paint0_linear_2354_8054)"
-        />
-        <defs>
-          <lineargradient
-            gradientUnits="userSpaceOnUse"
-            id="paint0_linear_2354_8054"
-            x1="8"
-            x2="8"
-            y1="0"
-            y2="65"
-          >
-            <stop
-              stop-color="#FF1464"
-              stop-opacity="0"
-            />
-            <stop
-              offset="0.842336"
-              stop-color="#FF1464"
-            />
-          </lineargradient>
-        </defs>
-      </svg>
+      <img
+        alt="scrol divider"
+        class="mb-0"
+      />
       <div
         class="flex flex-col flex-1 px-4"
       >

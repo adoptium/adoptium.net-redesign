@@ -1,0 +1,84 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContributorsHome component > Contributors renders correctly 1`] = `
+<div>
+  <div
+    class="xl:px-0 lg:px-8 px-0 w-full overflow-hidden flex flex-col items-center justify-center contributors mx-auto "
+  >
+    <div
+      class="flex w-fit space-x-4 sm:space-x-[210px] md:mx-auto justify-between items-end mt-[81px] xl:ml-[461px] overflow-hidden"
+    >
+      <div
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+        style="margin-bottom: 100px; width: 305px;"
+      />
+      <div
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+        style="width: 305px;"
+      />
+    </div>
+     
+    <div
+      class="mx-auto max-w-[848px] w-full lg:space-x-8 xl:space-x-16 xl:hidden flex flex-col justify-center items-center text-center z-10 "
+    >
+      <h2
+        class="font-semibold text-white text-[64px] leading-[72px]"
+      >
+        Thank you 
+        <br />
+         to our 
+        <span
+          class="text-primary"
+        >
+          300+
+        </span>
+         
+        contributors
+      </h2>
+    </div>
+    <div
+      class="xl:flex hidden w-full justify-center items-center relative"
+    >
+      <div
+        class="mx-auto max-w-[848px] w-full lg:space-x-8 xl:space-x-16 flex flex-col justify-center items-center text-center z-10"
+      >
+        <h2
+          class="font-semibold text-white thank-greeting !text-[104px] leading-[120px]"
+        >
+          Thank you to our 
+          <span
+            class="text-primary"
+          >
+            300+
+          </span>
+           
+          contributors
+        </h2>
+      </div>
+      <div
+        class="absolute flex justify-between h-full w-full"
+      >
+        <div
+          class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+          style="left: -80px; top: 0px; position: absolute;"
+        />
+        <div
+          class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+          style="right: -80px; bottom: 0px; position: absolute;"
+        />
+      </div>
+    </div>
+    <div
+      class="flex w-fit xl:ml-[244px] justify-between mt-10 mb-[87px] sm:space-x-[233px] space-x-10 md:mx-auto overflow-hidden sm:ml-0"
+    >
+      <div
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+      />
+      <div
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+        style="margin-top: 40px;"
+      />
+    </div>
+  </div>
+</div>
+`;

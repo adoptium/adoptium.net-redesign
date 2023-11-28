@@ -80,7 +80,7 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
         <div
           class="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7"
         >
-          foobar
+          MDX Page excerpt
         </div>
       </div>
     </div>
@@ -445,7 +445,7 @@ exports[`BlogPost Template page > renders correctly 1`] = `
         <div
           class="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7"
         >
-          foobar
+          MDX Page excerpt
         </div>
       </div>
     </div>

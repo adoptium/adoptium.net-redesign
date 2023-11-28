@@ -5,7 +5,7 @@ import AnimatedPlaceholder from "../AnimatedPlaceholder"
 import { Trans } from "gatsby-plugin-react-i18next"
 import LinkText from "../LinkText"
 
-const RandomContributor = ({ key, style }): JSX.Element => {
+const RandomContributor = ({ style }): JSX.Element => {
   const ref = useRef<HTMLDivElement | null>(null)
   const isVisible = useOnScreen(ref as MutableRefObject<Element>, true)
   const contributor = useAdoptiumContributorsApi(isVisible)
@@ -13,7 +13,6 @@ const RandomContributor = ({ key, style }): JSX.Element => {
   return (
     <div
       ref={ref}
-      key={key}
       className="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
       style={style}
     >

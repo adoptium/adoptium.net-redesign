@@ -138,7 +138,7 @@ const NavBar = () => {
             item.children ? (
               <Menu
                 as="div"
-                key={item.name}
+                key={`desktop-${item.name}`}
                 className="relative inline-block text-left"
               >
                 <div>
@@ -163,7 +163,7 @@ const NavBar = () => {
                   >
                     <div className="py-6 px-4">
                       {item.children.map(child => (
-                        <Menu.Item key={child.name}>
+                        <Menu.Item key={`mobile-${child.name}`}>
                           {({ active }) => (
                             <a
                               href={child.href}
@@ -183,7 +183,7 @@ const NavBar = () => {
               </Menu>
             ) : (
               <a
-                key={item.name}
+                key={`desktop-${item.name}`}
                 href={item.href}
                 className="text-sm font-semibold leading-6 text-white-900"
               >
@@ -260,7 +260,7 @@ const NavBar = () => {
             >
               <div className="space-y-2 py-6">
                 {navigation.map((item, index) => (
-                  <>
+                  <div key={item.name}>
                     {item.children ? (
                       <div
                         onClick={() => openLastSlideHandler(item)}
@@ -289,7 +289,6 @@ const NavBar = () => {
                       <div className="flex justify-between">
                         <a
                           onClick={() => setMobileMenuOpen(false)}
-                          key={item.name}
                           href={item.href}
                           className="-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
                         >
@@ -300,7 +299,7 @@ const NavBar = () => {
                     {navigation.length != index + 1 ? (
                       <div className=" w-full px-3 bg-[#3E3355] h-[1px]"></div>
                     ) : null}
-                  </>
+                  </div>
                 ))}
               </div>
             </div>
@@ -357,7 +356,7 @@ const NavBar = () => {
                 {activeLastSlide &&
                   activeLastSlide.children?.length &&
                   activeLastSlide.children.map((item, index) => (
-                    <>
+                    <div key={index}>
                       <div className="flex w-full justify-between">
                         <a
                           onClick={() => setMobileMenuOpen(false)}
@@ -372,7 +371,7 @@ const NavBar = () => {
                       {navigation.length != index + 1 ? (
                         <div className=" w-full px-3 bg-[#3E3355] h-[1px]"></div>
                       ) : null}
-                    </>
+                    </div>
                   ))}
               </div>
             </div>

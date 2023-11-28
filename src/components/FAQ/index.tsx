@@ -89,7 +89,7 @@ const FAQ = () => {
                   }`}
                 >
                   {openFaq === index && (
-                    <div className={`flex `}>
+                    <div className="flex">
                       <p className="my-0 pt-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Quidem, itaque culpa in recusandae ipsam ea quisquam

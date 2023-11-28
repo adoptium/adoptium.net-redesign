@@ -62,10 +62,18 @@ const LatestNewsSlider = ({ newsmap }) => {
       </Swiper>
 
       <div className="flex gap-4 items-center justify-center mt-16 mb-8">
-        <button onClick={handlePrev} className="text-white">
+        <button
+          onClick={handlePrev}
+          className="text-white"
+          aria-label="Previous News"
+        >
           <FiArrowLeftCircle size={50} strokeWidth={1} />
         </button>
-        <button onClick={handleNext} className="text-white">
+        <button
+          onClick={handleNext}
+          className="text-white"
+          aria-label="Next News"
+        >
           <FiArrowRightCircle size={50} strokeWidth={1} />
         </button>
       </div>

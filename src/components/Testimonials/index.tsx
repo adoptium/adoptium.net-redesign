@@ -123,28 +123,45 @@ const Testimonials = () => {
         </figure>
         {/* Navigation Arrows */}
         <div className="flex justify-center items-center max-w-screen-md mx-auto">
-          <button className="arrow-button p-2" onClick={prevTestimonial}>
+          <button
+            className="arrow-button p-2"
+            onClick={prevTestimonial}
+            aria-label="Previous Testimonial"
+          >
             <FaArrowLeft size={20} strokeWidth={1} />
           </button>
           <button
             className="arrow-button arrow-button-progress p-2"
             onClick={nextTestimonial}
+            aria-label="Next Testimonial"
           >
             <FaArrowRight size={20} strokeWidth={1} />
             <div className="progress-border"></div>
           </button>
         </div>
         <div className="max-w-[896px] mx-auto flex flex-wrap justify-center items-center mt-10 gap-6 md:space-x-16">
-          <button onClick={() => logoSliderChangeHandler(0)}>
+          <button
+            onClick={() => logoSliderChangeHandler(0)}
+            aria-label="GitHub Testimonial"
+          >
             <GithubSlider current={currentTestimonial} />
           </button>
-          <button onClick={() => logoSliderChangeHandler(1)}>
+          <button
+            onClick={() => logoSliderChangeHandler(1)}
+            aria-label="Aana Testimonial"
+          >
             <AsanaSlider current={currentTestimonial} />
           </button>
-          <button onClick={() => logoSliderChangeHandler(2)}>
+          <button
+            onClick={() => logoSliderChangeHandler(2)}
+            aria-label="Google Testimonial"
+          >
             <GoogleSlider current={currentTestimonial} />
           </button>
-          <button onClick={() => logoSliderChangeHandler(3)}>
+          <button
+            onClick={() => logoSliderChangeHandler(3)}
+            aria-label="Slack Testimonial"
+          >
             <SlackSlider current={currentTestimonial} />
           </button>
         </div>

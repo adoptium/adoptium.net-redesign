@@ -21,7 +21,7 @@ export default defineConfig({
         include: ["vitest-canvas-mock"],
       },
     },
-    setupFiles: "./vitest-setup.ts",
+    setupFiles: "./vitest-setup.tsx",
     coverage: {
       all: true,
       include: ["src/**/*.{ts,tsx}"],

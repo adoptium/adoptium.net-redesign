@@ -27,6 +27,23 @@ vi.mock("gatsby", async () => {
     downloadCount: {
       total: 1000000,
     },
+    allMdx: {
+      edges: [
+        {
+          node: {
+            id: "mock-id-1",
+            fields: {
+              slug: "/mock-slug-1",
+            },
+            frontmatter: {
+              title: "Mock Title 1",
+              description: "Mock Description 1",
+              date: "2021-01-01",
+            },
+          },
+        },
+      ],
+    },
     allVersions: {
       edges: [
         {
@@ -145,6 +162,32 @@ vi.mock("gatsby-plugin-react-i18next", async () => {
     Trans: () => "Text",
   }
 })
+
+type SwiperProps = {
+  children: React.ReactNode
+}
+
+vi.mock("swiper/react", () => ({
+  Swiper: React.forwardRef<HTMLDivElement, SwiperProps>(({ children }, ref) => {
+    // Create a mock swiper object with an init method
+    const mockSwiper = {
+      init: () => vi.fn(),
+      update: () => vi.fn(),
+    }
+
+    // Use a callback ref to assign the mock swiper object to the ref
+    React.useEffect(() => {
+      if (ref && typeof ref !== "function") {
+        ;(ref as React.MutableRefObject<any>).current = { swiper: mockSwiper }
+      }
+    }, [ref])
+
+    return <div data-testid="Swiper">{children}</div>
+  }),
+  SwiperSlide: ({ children }) => (
+    <div data-testid="SwiperSlide">{children}</div>
+  ),
+}))
 
 const IntersectionObserverMock = vi.fn(() => ({
   disconnect: vi.fn(),

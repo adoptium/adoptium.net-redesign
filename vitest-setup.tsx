@@ -7,6 +7,22 @@ import "vitest-canvas-mock"
 
 expect.extend(axeMatchers)
 
+const mdxMock = number => {
+  return {
+    node: {
+      id: `mock-id-${number}`,
+      fields: {
+        slug: `/mock-slug-${number}`,
+      },
+      frontmatter: {
+        title: `Mock Title ${number}`,
+        description: `Mock Description ${number}`,
+        date: "2021-01-01",
+      },
+    },
+  }
+}
+
 vi.mock("gatsby", async () => {
   const gatsby = await vi.importActual<typeof import("gatsby")>("gatsby")
 
@@ -28,21 +44,7 @@ vi.mock("gatsby", async () => {
       total: 1000000,
     },
     allMdx: {
-      edges: [
-        {
-          node: {
-            id: "mock-id-1",
-            fields: {
-              slug: "/mock-slug-1",
-            },
-            frontmatter: {
-              title: "Mock Title 1",
-              description: "Mock Description 1",
-              date: "2021-01-01",
-            },
-          },
-        },
-      ],
+      edges: [mdxMock(1), mdxMock(2), mdxMock(3), mdxMock(4)],
     },
     allVersions: {
       edges: [
@@ -173,6 +175,8 @@ vi.mock("swiper/react", () => ({
     const mockSwiper = {
       init: () => vi.fn(),
       update: () => vi.fn(),
+      slideNext: () => vi.fn(),
+      slidePrev: () => vi.fn(),
     }
 
     // Use a callback ref to assign the mock swiper object to the ref

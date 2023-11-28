@@ -244,7 +244,7 @@ const Footer = (): JSX.Element => {
             </ul>
           </div>
         </div>
-        <div className="w-full px-4  md:hidden block">
+        <div className="w-full px-4 md:hidden block">
           <MobileFooter footerData={footerData} />
         </div>
       </div>

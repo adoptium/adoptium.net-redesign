@@ -77,7 +77,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
     </div>
   </div>
   <section
-    class="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center"
+    class="mx-auto max-w-4xl w-full p-6 lg:px-0 flex flex-col items-center justify-center"
   >
     <div
       class="asciidoc-container w-full"
@@ -320,7 +320,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
           </div>
         </section>
         <div
-          class="asciidoc-content prose prose-invert lg:prose-xl"
+          class="asciidoc-content prose prose-invert lg:prose-lg max-w-none"
         >
           
             
@@ -695,7 +695,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
     </div>
   </div>
   <section
-    class="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center"
+    class="mx-auto max-w-4xl w-full p-6 lg:px-0 flex flex-col items-center justify-center"
   >
     <div
       class="asciidoc-container w-full"
@@ -708,7 +708,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
         class="asciidoc col-lg-6 col-md-12"
       >
         <div
-          class="asciidoc-content prose prose-invert lg:prose-xl"
+          class="asciidoc-content prose prose-invert lg:prose-lg max-w-none"
         >
           
             

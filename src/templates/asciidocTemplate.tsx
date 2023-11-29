@@ -45,7 +45,7 @@ const AsciidocTemplate = ({ data, pageContext }) => {
         subtitle="Documentation"
         description="fooBar"
       />
-      <section className="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center">
+      <section className="mx-auto max-w-4xl w-full p-6 lg:px-0 flex flex-col items-center justify-center">
         <div
           className="asciidoc-container w-full"
           id="asciidoc-container"
@@ -114,7 +114,7 @@ const AsciidocTemplate = ({ data, pageContext }) => {
               </section>
             )}
             <div
-              className="asciidoc-content prose prose-invert lg:prose-xl"
+              className="asciidoc-content prose prose-invert lg:prose-lg max-w-none"
               dangerouslySetInnerHTML={{ __html: html }}
             />
             <hr className="m-5" />

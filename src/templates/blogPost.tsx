@@ -59,53 +59,51 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
         </div>
       </div>
       <section className="mx-auto w-full p-6 lg:px-0 flex flex-col items-center justify-center">
-        <div className="flex flex-wrap py-5">
-          <div className="w-full mx-auto">
-            <article>
-              <header className="pb-5">
-                <Byline
-                  date={post.frontmatter.date}
-                  author={author.name}
-                  identifier={post.frontmatter.author}
-                />
-                <ShareButton
-                  location={location}
-                  siteMetadata={data.site.siteMetadata}
-                  post={post.frontmatter}
-                />
-              </header>
-              <article className="prose prose-invert lg:prose-xl">
-                <MDXProvider components={components}>{children}</MDXProvider>
-              </article>
-              <Tags tags={tags} />
-              <Comments />
-              <hr className="my-3" />
-              <footer className="pb-5">
-                <BlogAuthor
-                  identifier={post.frontmatter.author}
-                  author={author}
-                />
-              </footer>
+        <div className="max-w-4xl">
+          <article>
+            <header className="pb-5">
+              <Byline
+                date={post.frontmatter.date}
+                author={author.name}
+                identifier={post.frontmatter.author}
+              />
+              <ShareButton
+                location={location}
+                siteMetadata={data.site.siteMetadata}
+                post={post.frontmatter}
+              />
+            </header>
+            <article className="prose prose-invert lg:prose-lg max-w-none">
+              <MDXProvider components={components}>{children}</MDXProvider>
             </article>
+            <Tags tags={tags} />
+            <Comments />
+            <hr className="my-3" />
+            <footer className="pb-5">
+              <BlogAuthor
+                identifier={post.frontmatter.author}
+                author={author}
+              />
+            </footer>
+          </article>
 
-            <div>
-              <ul className="flex flex-wrap justify-between list-none p-0">
-                <li>
-                  {next && (
-                    <Link to={next.fields.postPath} rel="next">
-                      ← {next.frontmatter.title}
-                    </Link>
-                  )}
-                </li>
-                <li>
-                  {previous && (
-                    <Link to={previous.fields.postPath} rel="prev">
-                      {previous.frontmatter.title} →
-                    </Link>
-                  )}
-                </li>
-              </ul>
-            </div>
+          <div>
+            <ul className="flex flex-wrap justify-between list-none p-0">
+              <li>
+                {next && (
+                  <Link to={next.fields.postPath} rel="next">
+                    ← {next.frontmatter.title}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {previous && (
+                  <Link to={previous.fields.postPath} rel="prev">
+                    {previous.frontmatter.title} →
+                  </Link>
+                )}
+              </li>
+            </ul>
           </div>
         </div>
       </section>

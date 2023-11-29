@@ -63,7 +63,7 @@ exports[`What We Do page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="self-stretch text-center text-white text-5xl lg:text-7xl font-semibold"
+            class="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold"
           >
             About Eclipse Adoptium®
           </div>

@@ -2,8 +2,8 @@ import { graphql } from "gatsby"
 import { convert } from "html-to-text"
 import React, { useEffect } from "react"
 
+import asciidocFormatter from '../util/asciidocFormatter'
 import highlightCode from "../util/highlightCode"
-import asciidocFormatter from "../util/asciidocFormatter"
 import Layout from "../components/Layout"
 import EditLink from "../components/EditLink"
 import AuthorsList from "../components/AuthorList"
@@ -15,6 +15,7 @@ import LinkText from "../components/LinkText"
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import "@fortawesome/fontawesome-free/css/v4-shims.min.css"
 import PageHeader from "../components/PageHeader"
+import { as } from "vitest/dist/reporters-5f784f42"
 
 const AsciidocTemplate = ({ data, pageContext }) => {
   const { t } = useTranslation()
@@ -46,7 +47,7 @@ const AsciidocTemplate = ({ data, pageContext }) => {
       />
       <section className="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center">
         <div
-          className="asciidoc-container container-adoc row"
+          className="asciidoc-container w-full"
           id="asciidoc-container"
         >
           <div className="col-lg-3 hide-on-mobile">
@@ -113,7 +114,7 @@ const AsciidocTemplate = ({ data, pageContext }) => {
               </section>
             )}
             <div
-              className="asciidoc-content"
+              className="asciidoc-content prose prose-invert lg:prose-xl"
               dangerouslySetInnerHTML={{ __html: html }}
             />
             <hr className="m-5" />

@@ -78,7 +78,7 @@ The current reproducible comparison is the first step of reproducibility compari
 - Report results to Slack so job can be monitored instantly
 - Add both JDKs build URL as the build description to be more user friendly so it's easy to debug if needed
 
-Going forward we will also need to think about the Comparability as there are always non-deterministic factors for the JDK builds besides there is an intentional variation of build parameters, such as vendor strings. Our next steps are to fine-tune the [jenkins jobs](https://github.com/adoptium/ci-jenkins-pipelines/blob/master/tools/reproduce_comparison/Jenkinsfile) and update the script in [temurin-build](https://github.com/adoptium/temurin-build/tree/master/tooling)jenkins jobs to work with following not limited to different scenarios:
+Going forward we will also need to think about the Comparability as there are always non-deterministic factors for the JDK builds besides there is an intentional variation of build parameters, such as vendor strings. Our next steps are to fine-tune the [jenkins jobs](https://github.com/adoptium/ci-jenkins-pipelines/blob/master/tools/reproduce_comparison/Jenkinsfile) and update the script in [temurin-build](https://github.com/adoptium/temurin-build/tree/master/tooling) jenkins jobs to work with following not limited to different scenarios:
 
 - Support comparison with different metric<sup>\[[3](https://reproducible-builds.org/citests/)\]</sup>
 

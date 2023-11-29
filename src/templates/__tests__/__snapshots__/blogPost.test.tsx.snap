@@ -72,7 +72,7 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
             </div>
           </div>
           <div
-            class="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold"
+            class="self-stretch text-center text-white text-4xl lg:text-5xl font-semibold"
           >
             MDX Page title
           </div>
@@ -86,13 +86,13 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
     </div>
   </div>
   <section
-    class="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center"
+    class="mx-auto w-full p-6 lg:px-0 flex flex-col items-center justify-center"
   >
     <div
       class="flex flex-wrap py-5"
     >
       <div
-        class="w-full lg:w-3/4 md:w-3/4 mx-auto"
+        class="w-full mx-auto"
       >
         <article>
           <header
@@ -233,7 +233,11 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
               </svg>
             </button>
           </header>
-          sample blog
+          <article
+            class="prose prose-invert lg:prose-xl"
+          >
+            sample blog
+          </article>
           <a
             class="badge bg-secondary text-dark m-2"
             href="/blog/tags/tag1"
@@ -437,7 +441,7 @@ exports[`BlogPost Template page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold"
+            class="self-stretch text-center text-white text-4xl lg:text-5xl font-semibold"
           >
             MDX Page title
           </div>
@@ -451,13 +455,13 @@ exports[`BlogPost Template page > renders correctly 1`] = `
     </div>
   </div>
   <section
-    class="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center"
+    class="mx-auto w-full p-6 lg:px-0 flex flex-col items-center justify-center"
   >
     <div
       class="flex flex-wrap py-5"
     >
       <div
-        class="w-full lg:w-3/4 md:w-3/4 mx-auto"
+        class="w-full mx-auto"
       >
         <article>
           <header
@@ -598,7 +602,11 @@ exports[`BlogPost Template page > renders correctly 1`] = `
               </svg>
             </button>
           </header>
-          sample blog
+          <article
+            class="prose prose-invert lg:prose-xl"
+          >
+            sample blog
+          </article>
           <a
             class="badge bg-secondary text-dark m-2"
             href="/blog/tags/tag1"

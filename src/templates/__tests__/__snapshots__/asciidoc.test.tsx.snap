@@ -63,7 +63,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
             </div>
           </div>
           <div
-            class="self-stretch text-center text-white text-5xl lg:text-7xl font-semibold"
+            class="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold"
           >
             Asciidoc Page title
           </div>
@@ -80,7 +80,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
     class="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center"
   >
     <div
-      class="asciidoc-container container-adoc row"
+      class="asciidoc-container w-full"
       id="asciidoc-container"
     >
       <div
@@ -298,7 +298,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                     >
                       Read documentation
                       <i
-                        class="fas fa-external-link-alt ml-1 text-xs"
+                        class="fa fa-external-link fa-xs p-1"
                       />
                     </a>
                   </div>
@@ -320,7 +320,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
           </div>
         </section>
         <div
-          class="asciidoc-content"
+          class="asciidoc-content prose prose-invert lg:prose-xl"
         >
           
             
@@ -456,12 +456,8 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
           </pre>
           
             
-          <table
-            class="min-w-full divide-y divide-gray-200 shadow-sm"
-          >
-            <thead
-              class="bg-gray-50"
-            >
+          <table>
+            <thead>
               <tr>
                 <td>
                   Header 1
@@ -481,7 +477,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                 >
                   Cell 2
                   <i
-                    class="fas fa-circle-info text-xl"
+                    class="fa fa-circle-info fa-xl"
                   />
                 </td>
               </tr>
@@ -495,7 +491,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
           >
             Eclipse
             <i
-              class="fas fa-external-link-alt ml-1 text-xs"
+              class="fa fa-external-link fa-xs p-1"
             />
           </a>
           
@@ -511,10 +507,10 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
           
             
           <details
-            class="p-3 my-3 bg-gray-100"
+            class="p-3 my-3 bg-grey"
           >
             <summary
-              class="text-lg font-semibold"
+              class="lead"
             >
               asciidoc.table.of.contents
             </summary>
@@ -685,7 +681,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="self-stretch text-center text-white text-5xl lg:text-7xl font-semibold"
+            class="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold"
           >
             Asciidoc Page title
           </div>
@@ -702,7 +698,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
     class="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center"
   >
     <div
-      class="asciidoc-container container-adoc row"
+      class="asciidoc-container w-full"
       id="asciidoc-container"
     >
       <div
@@ -712,7 +708,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
         class="asciidoc col-lg-6 col-md-12"
       >
         <div
-          class="asciidoc-content"
+          class="asciidoc-content prose prose-invert lg:prose-xl"
         >
           
             
@@ -848,12 +844,8 @@ exports[`Asciidoc pages > renders correctly 1`] = `
           </pre>
           
             
-          <table
-            class="min-w-full divide-y divide-gray-200 shadow-sm"
-          >
-            <thead
-              class="bg-gray-50"
-            >
+          <table>
+            <thead>
               <tr>
                 <td>
                   Header 1
@@ -873,7 +865,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                 >
                   Cell 2
                   <i
-                    class="fas fa-circle-info text-xl"
+                    class="fa fa-circle-info fa-xl"
                   />
                 </td>
               </tr>
@@ -887,7 +879,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
           >
             Eclipse
             <i
-              class="fas fa-external-link-alt ml-1 text-xs"
+              class="fa fa-external-link fa-xs p-1"
             />
           </a>
           
@@ -903,10 +895,10 @@ exports[`Asciidoc pages > renders correctly 1`] = `
           
             
           <details
-            class="p-3 my-3 bg-gray-100"
+            class="p-3 my-3 bg-grey"
           >
             <summary
-              class="text-lg font-semibold"
+              class="lead"
             >
               asciidoc.table.of.contents
             </summary>

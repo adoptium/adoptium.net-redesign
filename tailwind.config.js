@@ -3,9 +3,24 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,jsx,ts,tsx}",
     "./src/components/**/*.{js,jsx,ts,tsx}",
+    "./src/templates/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            "code::before": {
+              content: '""',
+              "padding-left": "0.25rem",
+            },
+            "code::after": {
+              content: '""',
+              "padding-right": "0.25rem",
+            },
+          },
+        },
+      },
       fontFamily: {
         hanken: ["Hanken Grotesk", "sans-serif"],
       },
@@ -33,5 +48,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

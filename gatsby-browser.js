@@ -1,3 +1,3 @@
 import "@popperjs/core/dist/umd/popper.min.js"
-import "prismjs/themes/prism.css"
+import "prism-themes/themes/prism-shades-of-purple.css"
 import "./src/styles/global.scss"

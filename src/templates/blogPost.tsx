@@ -25,18 +25,7 @@ export const formatDiv = props => {
 }
 
 const components = {
-  GuestPost,
-  blockquote: props => (
-    <blockquote className="pl-6 border-l-4 border-gray-900" {...props} />
-  ),
-  table: props => (
-    <table
-      className="min-w-full divide-y divide-gray-200 shadow-sm"
-      {...props}
-    />
-  ),
-  thead: props => <thead className="bg-gray-50" {...props} />,
-  li: props => <li className="mb-6" {...props} />,
+  GuestPost,  
   img: props => <ImagePopup {...props} />,
   div: formatDiv,
 }
@@ -59,7 +48,7 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
                   News article
                 </div>
               </div>
-              <div className="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold">
+              <div className="self-stretch text-center text-white text-4xl lg:text-5xl font-semibold">
                 {post.frontmatter.title}
               </div>
             </div>
@@ -69,9 +58,9 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
           </div>
         </div>
       </div>
-      <section className="mx-auto max-w-[832px] w-full p-6 lg:px-0 flex flex-col items-center justify-center">
+      <section className="mx-auto w-full p-6 lg:px-0 flex flex-col items-center justify-center">
         <div className="flex flex-wrap py-5">
-          <div className="w-full lg:w-3/4 md:w-3/4 mx-auto">
+          <div className="w-full mx-auto">
             <article>
               <header className="pb-5">
                 <Byline
@@ -85,7 +74,9 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
                   post={post.frontmatter}
                 />
               </header>
-              <MDXProvider components={components}>{children}</MDXProvider>
+              <article className="prose prose-invert lg:prose-xl">
+                <MDXProvider components={components}>{children}</MDXProvider>
+              </article>
               <Tags tags={tags} />
               <Comments />
               <hr className="my-3" />

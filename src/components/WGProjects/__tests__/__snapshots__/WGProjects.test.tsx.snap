@@ -1,0 +1,230 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`WGProjects component > renders correctly 1`] = `
+<div>
+  <div
+    class="bg-blue py-24 sm:py-28"
+  >
+    <div
+      class="mx-auto max-w-[1264px] w-full px-6 xl:px-0"
+    >
+      <div
+        class="mx-auto max-w-4xl sm:text-center"
+      >
+        <h2
+          class="text-center text-l md:text-[48px] font-semibold text-white md:leading-[56px] leading-[44px] "
+        >
+          A short title about products
+        </h2>
+      </div>
+      <p
+        class="mx-auto mt-6 max-w-2xl mb-0 text-base leading-6 text-grey text-center"
+      >
+        Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+      </p>
+      <div
+        class="mt-16 flex justify-around lg:justify-between flex-wrap lg:flex-nowrap  gap-6 xl:gap-8"
+      >
+        <div
+          class="max-w-[400px] h-[420px] sm:h-[520px] w-full"
+        >
+          <div
+            class="bg-white flex justify-between flex-col bg-opacity-5 p-8 xl:p-[64px] h-full rounded-3xl border-2 border-white border-opacity-50"
+          >
+            <img
+              alt="Eclipse Temurin™ logo"
+              class="w-[140px]"
+              src="/images/projects/temurin-project.svg"
+            />
+            <div
+              class=" flex-col justify-center items-start gap-2"
+            >
+              <div
+                class="justify-start items-center gap-3 inline-flex"
+              >
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+                <p
+                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
+                >
+                  Overline
+                </p>
+              </div>
+              <h2
+                class="text-white text-[26px] md:text-[32px] font-hanken leading-8 md:leading-10 font-semibold mt-2"
+              >
+                Eclipse Temurin™
+              </h2>
+              <a
+                href="/temurin"
+              >
+                <button
+                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
+                >
+                  Learn More
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="max-w-[400px] h-[420px] sm:h-[520px] w-full"
+        >
+          <div
+            class="bg-white flex justify-between flex-col bg-opacity-5 p-8 xl:p-[64px] h-full rounded-3xl border-2 border-white border-opacity-50"
+          >
+            <img
+              alt="Eclipse AQAvit logo"
+              class="w-[140px]"
+              src="/images/projects/aqavit-project.svg"
+            />
+            <div
+              class=" flex-col justify-center items-start gap-2"
+            >
+              <div
+                class="justify-start items-center gap-3 inline-flex"
+              >
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+                <p
+                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
+                >
+                  Overline
+                </p>
+              </div>
+              <h2
+                class="text-white text-[26px] md:text-[32px] font-hanken leading-8 md:leading-10 font-semibold mt-2"
+              >
+                Eclipse AQAvit
+              </h2>
+              <a
+                href="/aqavit"
+              >
+                <button
+                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
+                >
+                  Learn More
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="max-w-[400px] h-[420px] sm:h-[520px] w-full"
+        >
+          <div
+            class="bg-white flex justify-between flex-col bg-opacity-5 p-8 xl:p-[64px] h-full rounded-3xl border-2 border-white border-opacity-50"
+          >
+            <img
+              alt="Eclipse Mission Control logo"
+              class="w-[140px]"
+              src="/images/projects/mc-project.svg"
+            />
+            <div
+              class=" flex-col justify-center items-start gap-2"
+            >
+              <div
+                class="justify-start items-center gap-3 inline-flex"
+              >
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+                <p
+                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
+                >
+                  Overline
+                </p>
+              </div>
+              <h2
+                class="text-white text-[26px] md:text-[32px] font-hanken leading-8 md:leading-10 font-semibold mt-2"
+              >
+                Eclipse Mission Control
+              </h2>
+              <a
+                href="/jmc"
+              >
+                <button
+                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
+                >
+                  Learn More
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

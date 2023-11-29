@@ -2,7 +2,7 @@ import { graphql } from "gatsby"
 import { convert } from "html-to-text"
 import React, { useEffect } from "react"
 
-import asciidocFormatter from "../util/asciidocFormatter"
+import AsciiDocFormatter from "../util/asciidocFormatter"
 import highlightCode from "../util/highlightCode"
 import Layout from "../components/Layout"
 import EditLink from "../components/EditLink"
@@ -11,17 +11,15 @@ import InstallTabs from "../components/InstallTabs"
 import Seo from "../components/Seo"
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
 import LinkText from "../components/LinkText"
+import PageHeader from "../components/PageHeader"
 
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import "@fortawesome/fontawesome-free/css/v4-shims.min.css"
-import PageHeader from "../components/PageHeader"
-import { as } from "vitest/dist/reporters-5f784f42"
 
 const AsciidocTemplate = ({ data, pageContext }) => {
   const { t } = useTranslation()
 
   useEffect(() => {
-    asciidocFormatter(t)
     highlightCode()
   })
 
@@ -112,8 +110,9 @@ const AsciidocTemplate = ({ data, pageContext }) => {
             )}
             <div
               className="asciidoc-content prose prose-invert lg:prose-lg max-w-none"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
+            >
+              <AsciiDocFormatter content={html} t={t} />
+            </div>
             <hr className="m-5" />
             <AuthorsList authors={pageAuthorList.split(",")} />
             <EditLink relativePath={relativePath} />

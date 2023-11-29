@@ -23,10 +23,6 @@ AQAvit can be run in various CI/CD environments as well as directly via command-
 .Run AQAvit via Command-line
 [%collapsible]
 ====
-|===
-| | 
-a|image::aqacert_basic_steps.png["basic steps",350,350]
-a|
 [source, bash, subs="attributes"]
 ----
 git clone --depth 1 --branch {aqavit-branch} https://github.com/adoptium/aqa-tests.git 
@@ -49,7 +45,6 @@ Collect *.tap file and metadata file
 Archive <results>.zip 
 Publish <results>.zip
 ----
-|===
 ====
 
 .Run AQAvit via Github Workflow

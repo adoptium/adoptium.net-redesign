@@ -1,52 +1,63 @@
-export default function asciidocFormatter(
-  t /* 't' from useI18next to retrieve translations */,
-) {
-  // Mark external links appropriately
-  const asciidocContent = document.getElementById("asciidoc-container")
-  const links = asciidocContent.querySelectorAll("a")
-  links.forEach(link => {
-    if (
-      !link.href.includes(location.host) &&
-      !link.className.includes("btn") &&
-      !link.className.includes("author-icon")
-    ) {
-      const anchorIcon = document.createElement("i")
-      anchorIcon.className = "fa fa-external-link fa-xs p-1"
-      link.target = "_blank"
-      link.append(anchorIcon)
+import React  from 'react';
+import parse, { domToReact } from 'html-react-parser';
+
+import AccordionItem from '../components/AccordionItem';
+
+const AsciiDocFormatter = ({ content, t }) => {
+  const replaceFunction = (node) => {
+    // Transform <a> tags
+    if (node.type === 'tag' && node.name === 'a') {
+      const isExternal = !node.attribs.href.includes(window.location.host);
+      return (
+        <a href={node.attribs.href} target={isExternal ? "_blank" : "_self"} className={node.attribs.class}>
+          {domToReact(node.children)}
+          {isExternal && <i className="fa fa-external-link fa-xs p-1" />}
+        </a>
+      );
     }
-  })
-  // Look for i class="fa fa-docker" and replace with fab fa-docker
-  const icons = asciidocContent.querySelectorAll("i")
-  icons.forEach(icon => {
-    if (icon.className.includes("fa-docker")) {
-      icon.className = icon.className.replace("fa", "fab")
+
+    // Transform <i> tags
+    if (node.type === 'tag' && node.name === 'i' && node.attribs.class.includes('fa-docker')) {
+      return <i className={node.attribs.class.replace('fa', 'fab')} />;
     }
-  })
-  const tds = document.querySelectorAll("td")
-  tds.forEach(td => {
-    if (td.className === "icon") {
-      const archiveTypeIcon = document.createElement("i")
-      archiveTypeIcon.className = "fa fa-circle-info fa-xl"
-      archiveTypeIcon.ariaHidden = true
-      td.appendChild(archiveTypeIcon)
+
+    // Transform <td> tags
+    if (node.type === 'tag' && node.name === 'td' && node.attribs.class === 'icon') {
+      return (
+        <td>
+          {domToReact(node.children)}
+          <i className="fa fa-circle-info fa-xl" aria-hidden="true" />
+        </td>
+      );
     }
-  })
-  const divs = document.querySelectorAll("div")
-  divs.forEach(div => {
-    if (div.className === "toc") {
-      const tocDetails = document.createElement("details")
-      tocDetails.className = "p-3 my-3 bg-grey"
-      const tocSummary = document.createElement("summary")
-      tocSummary.innerHTML = t(
-        "asciidoc.table.of.contents",
-        "Table of Contents",
-      )
-      tocSummary.className = "lead"
-      tocDetails.appendChild(tocSummary)
-      const tocList = div.getElementsByClassName("sectlevel1")[0]
-      tocDetails.appendChild(tocList)
-      div.replaceWith(tocDetails)
+
+    // Transform Table of Contents
+    if (node.type === 'tag' && node.name === 'div' && node.attribs.class === 'toc') {
+      // Get the ul element class="sectlevel1"
+      const tocList = node.children.find(child => child.attribs && child.attribs.class && child.attribs.class.includes('sectlevel1'));
+      return (
+        <details className="p-3 my-3 bg-grey">
+          <summary className="lead">{t("asciidoc.table.of.contents", "Table of Contents")}</summary>
+          {tocList ? <ul>{domToReact(tocList.children)}</ul> : null}
+        </details>
+      );
     }
-  })
-}
+
+    // Transform <details> and <summary> tags into Accordion
+    if (node.type === 'tag' && node.name === 'details') {
+      const summary = node.children.find(child => child.type === 'tag' && child.name === 'summary');
+      const summaryContent = summary ? domToReact(summary.children) : 'Details';
+      const detailsContent = node.children.filter(child => !(child.type === 'tag' && child.name === 'summary'));
+
+      return (
+        <AccordionItem title={summaryContent}>
+          {domToReact(detailsContent, { replace: replaceFunction })}
+        </AccordionItem>
+      );
+    }
+  };
+
+  return <div>{parse(content, { replace: replaceFunction })}</div>;
+};
+
+export default AsciiDocFormatter;

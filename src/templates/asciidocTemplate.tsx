@@ -2,7 +2,7 @@ import { graphql } from "gatsby"
 import { convert } from "html-to-text"
 import React, { useEffect } from "react"
 
-import asciidocFormatter from '../util/asciidocFormatter'
+import asciidocFormatter from "../util/asciidocFormatter"
 import highlightCode from "../util/highlightCode"
 import Layout from "../components/Layout"
 import EditLink from "../components/EditLink"
@@ -46,10 +46,7 @@ const AsciidocTemplate = ({ data, pageContext }) => {
         description="fooBar"
       />
       <section className="mx-auto max-w-4xl w-full p-6 lg:px-0 flex flex-col items-center justify-center">
-        <div
-          className="asciidoc-container w-full"
-          id="asciidoc-container"
-        >
+        <div className="asciidoc-container w-full" id="asciidoc-container">
           <div className="col-lg-3 hide-on-mobile">
             {/* Leaving space for a table of contents (side bar) */}
           </div>

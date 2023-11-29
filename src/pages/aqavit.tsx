@@ -16,7 +16,7 @@ const AQAvit = () => {
       <div className="bg-purple sm:bg-contain bg-aqavit-hero bg-center bg-no-repeat relative">
         <div className="relative isolate">
           <div className="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]">
-            <HeroBgImg alt={"background-image"} />
+            <HeroBgImg alt="background-image" />
           </div>
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"

@@ -26,6 +26,6 @@
     "gatsby-node.ts",
     "gatsby-config.ts",
     "vitest.config.ts",
-    "vitest-setup.ts"
+    "vitest-setup.tsx"
   ]
 }

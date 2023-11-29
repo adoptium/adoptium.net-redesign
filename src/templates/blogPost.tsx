@@ -25,7 +25,7 @@ export const formatDiv = props => {
 }
 
 const components = {
-  GuestPost,  
+  GuestPost,
   img: props => <ImagePopup {...props} />,
   div: formatDiv,
 }

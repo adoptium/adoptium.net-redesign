@@ -29,9 +29,9 @@ const projects: Project[] = [
 const WGProjects = () => {
   return (
     <div className="bg-blue py-24 sm:py-28">
-      <div className="mx-auto max-w-[1264px] w-full px-6 xl:px-0">
+      <div className="mx-auto max-w-3xl md:max-w-7xl w-xl md:w-full px-6 xl:px-0">
         <div className="mx-auto max-w-4xl sm:text-center">
-          <h2 className="text-center text-l md:text-[48px] font-semibold text-white md:leading-[56px] leading-[44px] ">
+          <h2 className="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] ">
             A short title about products
           </h2>
         </div>
@@ -40,13 +40,13 @@ const WGProjects = () => {
           Java runtime binaries that are enterprise-ready and Java SE TCK-tested
           for general use in the Java ecosystem.
         </p>
-        <div className="mt-16 flex justify-around lg:justify-between flex-wrap lg:flex-nowrap  gap-6 xl:gap-8">
+        <div className="mt-16 mb-8 flex md:h-[30em] justify-around lg:justify-between flex-wrap lg:flex-nowrap gap-6 xl:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="max-w-[400px] h-[420px] sm:h-[520px] w-full"
+              className="max-w-xl w-full h-full"
             >
-              <div className="bg-white flex justify-between flex-col bg-opacity-5 p-8 xl:p-[64px] h-full rounded-3xl border-2 border-white border-opacity-50">
+              <div className="bg-white flex justify-between h-full flex-col bg-opacity-5 p-8 xl:p-12 rounded-3xl border-2 border-white border-opacity-50">
                 <img
                   src={`/images/projects/${project.imagePath}`}
                   alt={`${project.title} logo`}
@@ -59,7 +59,7 @@ const WGProjects = () => {
                       Overline
                     </p>
                   </div>
-                  <h2 className="text-white text-[26px] md:text-[32px] font-hanken leading-8 md:leading-10 font-semibold mt-2">
+                  <h2 className="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2">
                     {project.title}
                   </h2>
                   <Link to={project.link}>

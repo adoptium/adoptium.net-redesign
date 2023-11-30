@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby-plugin-react-i18next"
 import UiVirtualScroll from "../../UiVirtualScroll"
 
 const PowerOfTemurin = () => {
@@ -13,9 +14,11 @@ const PowerOfTemurin = () => {
           Java&trade; runtime binaries that are enterprise-ready and Java SE
           TCK-tested for general use in the Java ecosystem.
         </h3>
-        <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border">
-          Business Benefits
-        </button>
+        <Link to="/business-benefits">
+          <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border">
+            Business Benefits
+          </button>
+        </Link>
       </div>
       <UiVirtualScroll />
     </div>

@@ -34,7 +34,7 @@ exports[`Index page > renders correctly 1`] = `
               The Power of Eclipse Temurin™
             </h1>
             <p
-              class="lg:my-10 mt-6  mb-10 text-2xl leading-8 text-white-600  font-semibold"
+              class="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold"
             >
               Text
             </p>
@@ -383,11 +383,15 @@ exports[`Index page > renders correctly 1`] = `
       >
         Eclipse Temurin offers high-performance, cross-platform, open-source Java™ runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
       </h3>
-      <button
-        class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+      <a
+        href="/business-benefits"
       >
-        Business Benefits
-      </button>
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+        >
+          Business Benefits
+        </button>
+      </a>
     </div>
     <div
       class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
@@ -1420,7 +1424,7 @@ exports[`Index page > renders correctly 1`] = `
           class="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8"
         >
           <div
-            class="newscard p-8 xl:p-10"
+            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -1470,7 +1474,7 @@ exports[`Index page > renders correctly 1`] = `
             </a>
           </div>
           <div
-            class="newscard p-8 xl:p-10"
+            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -1521,10 +1525,10 @@ exports[`Index page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="max-w-[374px] w-full  lg:flex hidden flex-col space-y-4 xl:space-y-8 mt-16"
+          class="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8 mt-16"
         >
           <div
-            class="newscard p-8 xl:p-10"
+            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -1574,7 +1578,7 @@ exports[`Index page > renders correctly 1`] = `
             </a>
           </div>
           <div
-            class="newscard p-8 xl:p-10"
+            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -1906,10 +1910,10 @@ exports[`Index page > renders correctly 1`] = `
     </div>
   </div>
   <div
-    class="mx-auto max-w-[1264px] px-4 xl:px-0 flex flex-col gap-[64px] lg:gap-3 items-center lg:items-start lg:flex-row justify-between"
+    class="mx-auto max-w-[1264px] py-8 lg:py-12 px-4 xl:px-0 flex flex-col gap-[64px] lg:gap-3 items-center lg:items-start lg:flex-row justify-between"
   >
     <div
-      class=" md:max-w-[420px] newscard w-full  md:h-[552px] p-[24px] flex flex-col justify-between"
+      class=" md:max-w-[420px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between"
     >
       <div>
         <h3
@@ -2250,11 +2254,11 @@ exports[`Index page > renders correctly 1`] = `
       class="flex w-fit space-x-4 sm:space-x-[210px] md:mx-auto justify-between items-end mt-[81px] xl:ml-[461px] overflow-hidden"
     >
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
         style="margin-bottom: 100px; width: 305px;"
       />
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
         style="width: 305px;"
       />
     </div>
@@ -2300,11 +2304,11 @@ exports[`Index page > renders correctly 1`] = `
         class="absolute flex justify-between h-full w-full"
       >
         <div
-          class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+          class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
           style="left: -80px; top: 0px; position: absolute;"
         />
         <div
-          class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+          class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
           style="right: -80px; bottom: 0px; position: absolute;"
         />
       </div>
@@ -2313,10 +2317,10 @@ exports[`Index page > renders correctly 1`] = `
       class="flex w-fit xl:ml-[244px] justify-between mt-10 mb-[87px] sm:space-x-[233px] space-x-10 md:mx-auto overflow-hidden sm:ml-0"
     >
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
       />
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
         style="margin-top: 40px;"
       />
     </div>

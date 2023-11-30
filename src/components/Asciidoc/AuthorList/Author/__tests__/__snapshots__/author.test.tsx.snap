@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Author component > does not render without a username 1`] = `<div />`;
+
+exports[`Author component > renders correctly 1`] = `
+<div>
+  <a
+    aria-label="test-author"
+    href="https://github.com/test-author"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <img
+      alt="test-author"
+      class="rounded-full border-solid border-4 border-purple"
+      src="https://github.com/test-author.png?size=60"
+      style="max-width: 60px;"
+    />
+  </a>
+</div>
+`;

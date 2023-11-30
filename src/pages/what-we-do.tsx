@@ -6,13 +6,11 @@ import Seo from "../components/Seo"
 
 import PageHeader from "../components/PageHeader"
 import PowerOfTemurin from "../components/Temurin/PowerOfTemurin"
-import DownloadCounter from "../components/Temurin/DownloadCounter"
-import TemurinFeatures from "../components/Temurin/Features"
+import LatestReleases from "../components/Temurin/LatestReleases"
 import WGProjects from "../components/WGProjects"
+import ContactUs from "../components/ContactUs"
 import Testimonials from "../components/Testimonials"
 import LatestNews from "../components/LatestNews"
-import FAQ from "../components/FAQ"
-import Contributors from "../components/Contributors/home"
 
 const WhatWeDo = () => {
   return (
@@ -23,7 +21,9 @@ const WhatWeDo = () => {
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
       />
       <PowerOfTemurin />
+      <LatestReleases />
       <WGProjects />
+      <ContactUs title="Connect with the community" />
       <Testimonials />
       <LatestNews />
     </Layout>

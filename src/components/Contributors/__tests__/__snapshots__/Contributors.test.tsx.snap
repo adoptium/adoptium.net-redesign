@@ -9,11 +9,11 @@ exports[`ContributorsHome component > Contributors renders correctly 1`] = `
       class="flex w-fit space-x-4 sm:space-x-[210px] md:mx-auto justify-between items-end mt-[81px] xl:ml-[461px] overflow-hidden"
     >
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
         style="margin-bottom: 100px; width: 305px;"
       />
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
         style="width: 305px;"
       />
     </div>
@@ -59,11 +59,11 @@ exports[`ContributorsHome component > Contributors renders correctly 1`] = `
         class="absolute flex justify-between h-full w-full"
       >
         <div
-          class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+          class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
           style="left: -80px; top: 0px; position: absolute;"
         />
         <div
-          class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+          class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
           style="right: -80px; bottom: 0px; position: absolute;"
         />
       </div>
@@ -72,10 +72,10 @@ exports[`ContributorsHome component > Contributors renders correctly 1`] = `
       class="flex w-fit xl:ml-[244px] justify-between mt-10 mb-[87px] sm:space-x-[233px] space-x-10 md:mx-auto overflow-hidden sm:ml-0"
     >
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
       />
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
         style="margin-top: 40px;"
       />
     </div>

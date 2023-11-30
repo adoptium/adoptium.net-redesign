@@ -1,0 +1,58 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EditLink component > does not render without a path 1`] = `<div />`;
+
+exports[`EditLink component > renders correctly 1`] = `
+<div>
+  <div
+    class="w-full px-6 py-8 rounded-2xl border-2 border-white border-opacity-50 flex-col justify-center items-start gap-2 inline-flex"
+  >
+    <div
+      class="self-stretch justify-start items-center gap-4 inline-flex"
+    >
+      <div
+        class="w-20 h-20 relative"
+      >
+        <img
+          aria-label="edit icon"
+          class="w-20 h-20 absolute border border-white backdrop-blur-md"
+          src="/images/icons/edit.svg"
+        />
+      </div>
+      <div
+        class="grow shrink basis-0 flex-col justify-center items-start gap-6 inline-flex"
+      >
+        <div
+          class="self-stretch flex-col justify-center items-start gap-2 flex"
+        >
+          <div
+            class="self-stretch text-white text-xl md:text-2xl font-semibold md:leading-loose"
+          >
+            Text
+          </div>
+          <div
+            class="self-stretch"
+          >
+            <span
+              class="text-white text-base font-normal leading-normal"
+            >
+              Text
+            </span>
+          </div>
+        </div>
+        <a
+          href="https://github.com/adoptium/adoptium.net/edit/main/content/asciidoc-pages//fake/path.adoc"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <button
+            class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block "
+          >
+            Text
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

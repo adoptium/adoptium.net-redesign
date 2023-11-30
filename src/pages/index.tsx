@@ -7,7 +7,7 @@ import Seo from "../components/Seo"
 // @ts-ignore
 import HeroBgImg from "../images/backgrounds/temurin-hero-bg.svg"
 
-import LatestTemurin from "../components/LatestTemurin"
+import LatestTemurin from "../components/Temurin/LatestTemurin"
 import LogoCarousel from "../components/LogoCarousel"
 import PowerOfTemurin from "../components/Temurin/PowerOfTemurin"
 import DownloadCounter from "../components/Temurin/DownloadCounter"
@@ -20,7 +20,7 @@ import Contributors from "../components/Contributors/home"
 
 const Index = ({ data }) => {
   return (
-    <Layout>
+    <Layout page="home">
       <div className="bg-purple sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative">
         <div className="relative isolate">
           <div className="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]">

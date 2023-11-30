@@ -106,13 +106,13 @@ exports[`NavBar component > navbar renders correctly 1`] = `
         </div>
         <a
           class="text-sm font-semibold leading-6 text-white-900"
-          href="#"
+          href="/temurin/releases"
         >
           Latest Releases
         </a>
         <a
           class="text-sm font-semibold leading-6 text-white-900"
-          href="#"
+          href="/marketplace"
         >
           Marketplace
         </a>

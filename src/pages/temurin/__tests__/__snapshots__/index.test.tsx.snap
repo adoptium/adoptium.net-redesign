@@ -34,7 +34,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
               The Power of Eclipse Temurin™
             </h1>
             <p
-              class="lg:my-10 mt-6  mb-10 text-2xl leading-8 text-white-600  font-semibold"
+              class="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold"
             >
               Text
             </p>
@@ -384,11 +384,15 @@ exports[`Temurin Index page > renders correctly 1`] = `
       >
         Eclipse Temurin offers high-performance, cross-platform, open-source Java™ runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
       </h3>
-      <button
-        class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+      <a
+        href="/business-benefits"
       >
-        Business Benefits
-      </button>
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+        >
+          Business Benefits
+        </button>
+      </a>
     </div>
     <div
       class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"

@@ -1,0 +1,24 @@
+.community {
+  position: relative;
+  width: 100%;
+}
+.community::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-size: 100% 100%;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-image: url("/images/gradient-overlay.png");
+}
+
+@media screen and (max-width: 767px) {
+  .community::after {
+    background-image: url("/images/gradient-overlay-mobile.png");
+    z-index: -1;
+  }
+}

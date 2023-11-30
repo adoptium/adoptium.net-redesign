@@ -7,7 +7,7 @@ import Seo from "../../components/Seo"
 // @ts-ignore
 import HeroBgImg from "../../images/backgrounds/temurin-hero-bg.svg"
 
-import LatestTemurin from "../../components/LatestTemurin"
+import LatestTemurin from "../../components/Temurin/LatestTemurin"
 import LogoCarousel from "../../components/LogoCarousel"
 import PowerOfTemurin from "../../components/Temurin/PowerOfTemurin"
 

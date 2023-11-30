@@ -1,0 +1,148 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LatestTemurin component > should render correctly - Linux 1`] = `
+<div>
+  <div
+    class="text-center w-full"
+  >
+    <h1
+      class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
+    >
+      The Power of Eclipse Temurin™
+    </h1>
+    <p
+      class="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold"
+    >
+      Text
+    </p>
+    <div
+      class="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6"
+    >
+      <a
+        class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
+        href="/temurin/releases"
+      >
+        Other Downloads
+      </a>
+      <a
+        class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out  border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+        href="/download"
+        state="[object Object]"
+      >
+        <svg
+          fill="currentColor"
+          height="25"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          width="25"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"
+          />
+        </svg>
+        Download Temurin™
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LatestTemurin component > should render correctly - Windows 1`] = `
+<div>
+  <div
+    class="text-center w-full"
+  >
+    <h1
+      class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
+    >
+      The Power of Eclipse Temurin™
+    </h1>
+    <p
+      class="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold"
+    >
+      Text
+    </p>
+    <div
+      class="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6"
+    >
+      <a
+        class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
+        href="/temurin/releases"
+      >
+        Other Downloads
+      </a>
+      <a
+        class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out  border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+        href="/download"
+        state="[object Object]"
+      >
+        <svg
+          fill="currentColor"
+          height="25"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          width="25"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"
+          />
+        </svg>
+        Download Temurin™
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LatestTemurin component > should render correctly 1`] = `
+<div>
+  <div
+    class="text-center w-full"
+  >
+    <h1
+      class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
+    >
+      The Power of Eclipse Temurin™
+    </h1>
+    <p
+      class="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold"
+    >
+      Text
+    </p>
+    <div
+      class="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6"
+    >
+      <a
+        class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
+        href="/temurin/releases"
+      >
+        Other Downloads
+      </a>
+      <a
+        class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out  border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+        href="/download"
+        state="[object Object]"
+      >
+        <svg
+          fill="currentColor"
+          height="25"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          width="25"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"
+          />
+        </svg>
+        Download Temurin™
+      </a>
+    </div>
+  </div>
+</div>
+`;

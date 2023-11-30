@@ -34,7 +34,7 @@ exports[`Latest News component > renders correctly 1`] = `
           class="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8"
         >
           <div
-            class="newscard p-8 xl:p-10"
+            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -84,7 +84,7 @@ exports[`Latest News component > renders correctly 1`] = `
             </a>
           </div>
           <div
-            class="newscard p-8 xl:p-10"
+            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -135,10 +135,10 @@ exports[`Latest News component > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="max-w-[374px] w-full  lg:flex hidden flex-col space-y-4 xl:space-y-8 mt-16"
+          class="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8 mt-16"
         >
           <div
-            class="newscard p-8 xl:p-10"
+            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -188,7 +188,7 @@ exports[`Latest News component > renders correctly 1`] = `
             </a>
           </div>
           <div
-            class="newscard p-8 xl:p-10"
+            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"

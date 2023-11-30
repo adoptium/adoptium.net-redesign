@@ -23,14 +23,14 @@ const navigation: NavItem[] = [
     name: "About Us",
     children: [
       { name: "What We do", href: "/what-we-do" },
-      { name: "Business Benefits", href: "#" },
+      { name: "Business Benefits", href: "/business-benefits" },
       { name: "Our Supporters", href: "#" },
       { name: "Our Adopters", href: "#" },
       { name: "Support Us", href: "#" },
     ],
   },
-  { name: "Latest Releases", href: "#" },
-  { name: "Marketplace", href: "#" },
+  { name: "Latest Releases", href: "/temurin/releases" },
+  { name: "Marketplace", href: "/marketplace" },
   {
     name: "Projects",
     children: [
@@ -55,7 +55,7 @@ const navigation: NavItem[] = [
     name: "Community",
     children: [
       { name: "Our Community", href: "#" },
-      { name: "Support", href: "#" },
+      { name: "Support", href: "/support" },
       { name: "News & Updates", href: "#" },
       { name: "Events", href: "#" },
     ],

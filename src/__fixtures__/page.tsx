@@ -10,7 +10,7 @@ export const createAsciidocData = (): {
             <pre><code class="language-java">public static void main(String[] args) {
                 System.out.println("Hello World");
             }</code></pre>
-            <table><thead><td>Header 1</td><td>Header 2</td></thead><tbody><tr><td>Cell 1</td><td class="icon">Cell 2</td></tr></tbody></table>
+            <table><thead><tr><td>Header 1</td><td>Header 2</td></tr></thead><tbody><tr><td>Cell 1</td><td class="icon">Cell 2</td></tr></tbody></table>
             <a href="https://www.eclipse.org">Eclipse</a>
             <i class="fa fa-docker"></i>
             <i class="fa fa-check"></i>

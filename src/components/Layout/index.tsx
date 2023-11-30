@@ -8,17 +8,19 @@
 import * as React from "react"
 import { Slice } from "gatsby"
 
+import Contributor from "../Contributors"
+
 import "./layout.scss"
-// import "../styles/latest.scss"
 
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, page = "" }) => {
   return (
     <>
       <Slice alias="navbar" />
       <main>{children}</main>
+      {page !== "home" && <Contributor />}
       <Slice alias="footer" />
     </>
   )

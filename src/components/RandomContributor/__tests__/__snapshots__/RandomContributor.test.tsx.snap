@@ -3,7 +3,7 @@
 exports[`RandomContributor component > 1 contribution should render as contribution (not contributions) 1`] = `
 <div>
   <div
-    class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+    class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
   >
     <div
       class="random-contributor__avatar"
@@ -32,7 +32,7 @@ exports[`RandomContributor component > 1 contribution should render as contribut
 exports[`RandomContributor component > should render correctly 1`] = `
 <div>
   <div
-    class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+    class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
   >
     <div
       class="random-contributor__avatar"
@@ -61,7 +61,7 @@ exports[`RandomContributor component > should render correctly 1`] = `
 exports[`RandomContributor component > should render loading animation until data will be fetched 1`] = `
 <div>
   <div
-    class="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+    class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
   >
     <div
       class="animated-placeholder"

@@ -5,13 +5,15 @@ import React, { useEffect } from "react"
 import AsciiDocFormatter from "../util/asciidocFormatter"
 import highlightCode from "../util/highlightCode"
 import Layout from "../components/Layout"
-import EditLink from "../components/EditLink"
-import AuthorsList from "../components/AuthorList"
+import PageHeader from "../components/PageHeader"
+import EditLink from "../components/Asciidoc/EditLink"
+import AuthorsList from "../components/Asciidoc/AuthorList"
 import InstallTabs from "../components/InstallTabs"
 import Seo from "../components/Seo"
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
 import LinkText from "../components/LinkText"
-import PageHeader from "../components/PageHeader"
+import ContactUs from "../components/ContactUs"
+import FAQ from "../components/FAQ"
 
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import "@fortawesome/fontawesome-free/css/v4-shims.min.css"
@@ -108,18 +110,18 @@ const AsciidocTemplate = ({ data, pageContext }) => {
                 </div>
               </section>
             )}
-            <div
-              className="asciidoc-content prose prose-invert lg:prose-lg max-w-none"
-            >
+            <div className="asciidoc-content prose prose-invert lg:prose-lg max-w-none">
               <AsciiDocFormatter content={html} t={t} />
             </div>
-            <hr className="m-5" />
+            <div className="h-px my-5 border border-gray-700"></div>
             <AuthorsList authors={pageAuthorList.split(",")} />
             <EditLink relativePath={relativePath} />
           </div>
           <div className="col-lg-3 hide-on-mobile"></div>
         </div>
       </section>
+      <ContactUs title="Connect with the community" />
+      <FAQ />
     </Layout>
   )
 }

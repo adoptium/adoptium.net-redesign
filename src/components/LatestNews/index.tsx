@@ -48,7 +48,10 @@ const LatestNews = () => {
             {/* First set of news items */}
             <div className="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8">
               {set1.map((card, more) => (
-                <div key={more} className="newscard p-8 xl:p-10">
+                <div
+                  key={more}
+                  className="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+                >
                   <h2 className="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3">
                     <RedIcon />
                     News
@@ -69,9 +72,12 @@ const LatestNews = () => {
               ))}
             </div>
             {/* Second set of news items */}
-            <div className="max-w-[374px] w-full  lg:flex hidden flex-col space-y-4 xl:space-y-8 mt-16">
+            <div className="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8 mt-16">
               {set2.map((card, more) => (
-                <div key={more} className="newscard p-8 xl:p-10">
+                <div
+                  key={more}
+                  className="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+                >
                   <h2 className="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3">
                     <RedIcon />
                     News

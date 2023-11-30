@@ -13,7 +13,7 @@ const RandomContributor = ({ style }): JSX.Element => {
   return (
     <div
       ref={ref}
-      className="flex items-center justify-center p-4 space-x-4 w-[325px] newscard"
+      className="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
       style={style}
     >
       {!contributor && isVisible && <AnimatedPlaceholder />}

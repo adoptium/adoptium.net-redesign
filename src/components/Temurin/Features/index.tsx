@@ -115,7 +115,7 @@ const Features = () => {
           >
             {features.map((feature, index) => (
               <SwiperSlide
-                className="!w-[256px] p-8 lg:p-16 lg:w-[256px] newscard"
+                className="!w-[256px] p-8 lg:p-16 lg:w-[256px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl"
                 key={index}
               >
                 <span>

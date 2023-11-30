@@ -69,7 +69,6 @@ const Testimonials = () => {
     slideDirection === "right" ? "slide-in-right" : "slide-in-left"
   const testimonialKey = `${currentTestimonial}-${slideDirection}`
   const logoSliderChangeHandler = value => {
-    console.log(value)
     if (value === currentTestimonial) {
       return
     } else {

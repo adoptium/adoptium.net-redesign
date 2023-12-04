@@ -82,6 +82,19 @@ const AsciiDocFormatter = ({ content, t }) => {
       )
     }
 
+    // Transform iframe tags
+    if (node.type === "tag" && node.name === "iframe") {
+      return (
+          <iframe
+            {...node.attribs}
+            className="w-full aspect-video"
+            height="400"
+          >
+            {domToReact(node.children)}
+          </iframe>
+      )
+    }
+
     // Transform <details> and <summary> tags into Accordion
     if (node.type === "tag" && node.name === "details") {
       const summary = node.children.find(

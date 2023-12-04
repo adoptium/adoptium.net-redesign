@@ -5,7 +5,6 @@ import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi"
 import SwiperCore from "swiper"
 import { Navigation } from "swiper/modules"
 
-import "swiper/swiper-bundle.css"
 import "./Features.scss"
 
 SwiperCore.use([Navigation])

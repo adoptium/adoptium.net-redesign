@@ -231,67 +231,15 @@ exports[`Business Benefits page > renders correctly 1`] = `
                 class="grid grid-cols-4 gap-4 md:gap-6 min-w-[850px] md:min-w-[1220px]"
               >
                 <a
-                  href="https://www.gematik.de/"
+                  href="https://open-elements.com/"
                 >
                   <div
                     class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                   >
                     <img
-                      alt="gematik GmbH"
+                      alt="OpenElements"
                       class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-gematik.png"
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://jenkins.io/"
-                >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                  >
-                    <img
-                      alt="Jenkins"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-jenkins.svg"
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://www.delphix.com/"
-                >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                  >
-                    <img
-                      alt="Delphix"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/delphix.svg"
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://www.redhat.com/"
-                >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                  >
-                    <img
-                      alt="Red Hat"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/redhat.svg"
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://www.cosmo-one.gr/"
-                >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                  >
-                    <img
-                      alt="cosmoONE"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-cosmoone.png"
+                      src="/images/openelements.svg"
                     />
                   </div>
                 </a>
@@ -309,15 +257,28 @@ exports[`Business Benefits page > renders correctly 1`] = `
                   </div>
                 </a>
                 <a
-                  href="https://r3mscore.com/"
+                  href="https://opensource.microsoft.com/"
                 >
                   <div
                     class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                   >
                     <img
-                      alt="R3m Score"
+                      alt="Microsoft"
                       class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-r3m-score.png"
+                      src="/images/microsoft.svg"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://www.cosmo-one.gr/"
+                >
+                  <div
+                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  >
+                    <img
+                      alt="cosmoONE"
+                      class="w-5/6 max-h-5/6 m-0"
+                      src="/images/adopters/logo-cosmoone.png"
                     />
                   </div>
                 </a>
@@ -335,15 +296,54 @@ exports[`Business Benefits page > renders correctly 1`] = `
                   </div>
                 </a>
                 <a
-                  href="https://dopingtech.net/"
+                  href="https://www.totalvalidator.com/"
                 >
                   <div
                     class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                   >
                     <img
-                      alt="Doping Technology"
+                      alt="Total Validator"
                       class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-doping-tech.svg"
+                      src="/images/adopters/logo-total-validator.svg"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://jenkins.io/"
+                >
+                  <div
+                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  >
+                    <img
+                      alt="Jenkins"
+                      class="w-5/6 max-h-5/6 m-0"
+                      src="/images/adopters/logo-jenkins.svg"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://www.tirasa.net/"
+                >
+                  <div
+                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  >
+                    <img
+                      alt="Tirasa"
+                      class="w-5/6 max-h-5/6 m-0"
+                      src="/images/adopters/logo-tirasa.svg"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://blockbax.com/"
+                >
+                  <div
+                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  >
+                    <img
+                      alt="Blockbax"
+                      class="w-5/6 max-h-5/6 m-0"
+                      src="/images/adopters/logo-blockbax.svg"
                     />
                   </div>
                 </a>
@@ -361,41 +361,54 @@ exports[`Business Benefits page > renders correctly 1`] = `
                   </div>
                 </a>
                 <a
-                  href="https://www.gocd.org/"
+                  href="https://mongodb.com/"
                 >
                   <div
                     class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                   >
                     <img
-                      alt="GoCD"
+                      alt="MongoDB"
                       class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-gocd.svg"
+                      src="/images/adopters/logo-mongodb.svg"
                     />
                   </div>
                 </a>
                 <a
-                  href="https://www.radiantlogic.com/"
+                  href="https://timefold.ai/"
                 >
                   <div
                     class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                   >
                     <img
-                      alt="Radiant Logic"
+                      alt="Timefold"
                       class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-radiant-logic.png"
+                      src="/images/adopters/logo-timefold.png"
                     />
                   </div>
                 </a>
                 <a
-                  href="https://www.arm.com/"
+                  href="https://www.gematik.de/"
                 >
                   <div
                     class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                   >
                     <img
-                      alt="Arm"
+                      alt="gematik GmbH"
                       class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-arm.svg"
+                      src="/images/adopters/logo-gematik.png"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://r3mscore.com/"
+                >
+                  <div
+                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  >
+                    <img
+                      alt="R3m Score"
+                      class="w-5/6 max-h-5/6 m-0"
+                      src="/images/adopters/logo-r3m-score.png"
                     />
                   </div>
                 </a>
@@ -413,28 +426,54 @@ exports[`Business Benefits page > renders correctly 1`] = `
                   </div>
                 </a>
                 <a
-                  href="https://mongodb.com/"
+                  href="https://www.t-systems.com/"
                 >
                   <div
                     class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                   >
                     <img
-                      alt="MongoDB"
+                      alt="T-Systems"
                       class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-mongodb.svg"
+                      src="/images/adopters/logo-t-systems.svg"
                     />
                   </div>
                 </a>
                 <a
-                  href="https://www.mindus.co/"
+                  href="https://kestra.io/"
                 >
                   <div
                     class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                   >
                     <img
-                      alt="Mindus SARL"
+                      alt="Kestra"
                       class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-mindus.svg"
+                      src="/images/adopters/logo-kestra.svg"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://www.delphix.com/"
+                >
+                  <div
+                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  >
+                    <img
+                      alt="Delphix"
+                      class="w-5/6 max-h-5/6 m-0"
+                      src="/images/delphix.svg"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://mms.tech/"
+                >
+                  <div
+                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  >
+                    <img
+                      alt="MediaMarktSaturn Technology"
+                      class="w-5/6 max-h-5/6 m-0"
+                      src="/images/adopters/logo-mediamarktsaturn.png"
                     />
                   </div>
                 </a>
@@ -452,28 +491,67 @@ exports[`Business Benefits page > renders correctly 1`] = `
                   </div>
                 </a>
                 <a
-                  href="https://www.totalvalidator.com/"
+                  href="https://www.gocd.org/"
                 >
                   <div
                     class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                   >
                     <img
-                      alt="Total Validator"
+                      alt="GoCD"
                       class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-total-validator.svg"
+                      src="/images/adopters/logo-gocd.svg"
                     />
                   </div>
                 </a>
                 <a
-                  href="https://www.tirasa.net/"
+                  href="https://dopingtech.net/"
                 >
                   <div
                     class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                   >
                     <img
-                      alt="Tirasa"
+                      alt="Doping Technology"
                       class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-tirasa.svg"
+                      src="/images/adopters/logo-doping-tech.svg"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://www.arm.com/"
+                >
+                  <div
+                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  >
+                    <img
+                      alt="Arm"
+                      class="w-5/6 max-h-5/6 m-0"
+                      src="/images/adopters/logo-arm.svg"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://www.scentbird.com"
+                >
+                  <div
+                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  >
+                    <img
+                      alt="Scentbird"
+                      class="w-5/6 max-h-5/6 m-0"
+                      src="/images/adopters/logo-scentbird.png"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://www.mindus.co/"
+                >
+                  <div
+                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  >
+                    <img
+                      alt="Mindus SARL"
+                      class="w-5/6 max-h-5/6 m-0"
+                      src="/images/adopters/logo-mindus.svg"
                     />
                   </div>
                 </a>
@@ -504,15 +582,28 @@ exports[`Business Benefits page > renders correctly 1`] = `
                   </div>
                 </a>
                 <a
-                  href="https://mms.tech/"
+                  href="https://www.redhat.com/"
                 >
                   <div
                     class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                   >
                     <img
-                      alt="MediaMarktSaturn Technology"
+                      alt="Red Hat"
                       class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-mediamarktsaturn.png"
+                      src="/images/redhat.svg"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://www.radiantlogic.com/"
+                >
+                  <div
+                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  >
+                    <img
+                      alt="Radiant Logic"
+                      class="w-5/6 max-h-5/6 m-0"
+                      src="/images/adopters/logo-radiant-logic.png"
                     />
                   </div>
                 </a>
@@ -526,97 +617,6 @@ exports[`Business Benefits page > renders correctly 1`] = `
                       alt="Dynatrace"
                       class="w-5/6 max-h-5/6 m-0"
                       src="/images/adopters/logo-dynatrace.png"
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://kestra.io/"
-                >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                  >
-                    <img
-                      alt="Kestra"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-kestra.svg"
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://open-elements.com/"
-                >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                  >
-                    <img
-                      alt="OpenElements"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/openelements.svg"
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://blockbax.com/"
-                >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                  >
-                    <img
-                      alt="Blockbax"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-blockbax.svg"
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://timefold.ai/"
-                >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                  >
-                    <img
-                      alt="Timefold"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-timefold.png"
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://www.scentbird.com"
-                >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                  >
-                    <img
-                      alt="Scentbird"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-scentbird.png"
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://www.t-systems.com/"
-                >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                  >
-                    <img
-                      alt="T-Systems"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/adopters/logo-t-systems.svg"
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://opensource.microsoft.com/"
-                >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                  >
-                    <img
-                      alt="Microsoft"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/microsoft.svg"
                     />
                   </div>
                 </a>

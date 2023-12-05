@@ -629,7 +629,7 @@ exports[`Index page > renders correctly 1`] = `
           </svg>
         </span>
         <p
-          class="text-[16px] font-normal leading-6 text-white font-hanken mb-0"
+          class="text-[16px] font-normal leading-6 text-white mb-0"
         >
           Total Downloads/Docker pulls ever
         </p>
@@ -915,13 +915,13 @@ exports[`Index page > renders correctly 1`] = `
     class="bg-blue py-24 sm:py-28"
   >
     <div
-      class="mx-auto max-w-[1264px] w-full px-6 xl:px-0"
+      class="mx-auto max-w-3xl md:max-w-7xl w-xl md:w-full px-6 xl:px-0"
     >
       <div
         class="mx-auto max-w-4xl sm:text-center"
       >
         <h2
-          class="text-center text-l md:text-[48px] font-semibold text-white md:leading-[56px] leading-[44px] "
+          class="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] "
         >
           A short title about products
         </h2>
@@ -932,13 +932,13 @@ exports[`Index page > renders correctly 1`] = `
         Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
       </p>
       <div
-        class="mt-16 flex justify-around lg:justify-between flex-wrap lg:flex-nowrap  gap-6 xl:gap-8"
+        class="mt-16 mb-8 flex md:h-[30em] justify-around lg:justify-between flex-wrap lg:flex-nowrap gap-6 xl:gap-8"
       >
         <div
-          class="max-w-[400px] h-[420px] sm:h-[520px] w-full"
+          class="max-w-xl w-full h-full"
         >
           <div
-            class="bg-white flex justify-between flex-col bg-opacity-5 p-8 xl:p-[64px] h-full rounded-3xl border-2 border-white border-opacity-50"
+            class="bg-white flex justify-between h-full flex-col bg-opacity-5 p-8 xl:p-12 rounded-3xl border-2 border-white border-opacity-50"
           >
             <img
               alt="Eclipse Temurin™ logo"
@@ -984,7 +984,7 @@ exports[`Index page > renders correctly 1`] = `
                 </p>
               </div>
               <h2
-                class="text-white text-[26px] md:text-[32px] font-hanken leading-8 md:leading-10 font-semibold mt-2"
+                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
               >
                 Eclipse Temurin™
               </h2>
@@ -1001,10 +1001,10 @@ exports[`Index page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="max-w-[400px] h-[420px] sm:h-[520px] w-full"
+          class="max-w-xl w-full h-full"
         >
           <div
-            class="bg-white flex justify-between flex-col bg-opacity-5 p-8 xl:p-[64px] h-full rounded-3xl border-2 border-white border-opacity-50"
+            class="bg-white flex justify-between h-full flex-col bg-opacity-5 p-8 xl:p-12 rounded-3xl border-2 border-white border-opacity-50"
           >
             <img
               alt="Eclipse AQAvit logo"
@@ -1050,7 +1050,7 @@ exports[`Index page > renders correctly 1`] = `
                 </p>
               </div>
               <h2
-                class="text-white text-[26px] md:text-[32px] font-hanken leading-8 md:leading-10 font-semibold mt-2"
+                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
               >
                 Eclipse AQAvit
               </h2>
@@ -1067,10 +1067,10 @@ exports[`Index page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="max-w-[400px] h-[420px] sm:h-[520px] w-full"
+          class="max-w-xl w-full h-full"
         >
           <div
-            class="bg-white flex justify-between flex-col bg-opacity-5 p-8 xl:p-[64px] h-full rounded-3xl border-2 border-white border-opacity-50"
+            class="bg-white flex justify-between h-full flex-col bg-opacity-5 p-8 xl:p-12 rounded-3xl border-2 border-white border-opacity-50"
           >
             <img
               alt="Eclipse Mission Control logo"
@@ -1116,7 +1116,7 @@ exports[`Index page > renders correctly 1`] = `
                 </p>
               </div>
               <h2
-                class="text-white text-[26px] md:text-[32px] font-hanken leading-8 md:leading-10 font-semibold mt-2"
+                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
               >
                 Eclipse Mission Control
               </h2>
@@ -1160,7 +1160,7 @@ exports[`Index page > renders correctly 1`] = `
           style="min-height: 204px;"
         >
           <span
-            class="md:text-[32px] text-[26px] leading-[34px] md:leading-10 font-semibold font-hanken  text-white"
+            class="md:text-[32px] text-[26px] leading-[34px] md:leading-10 font-semibold  text-white"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           </span>
@@ -1917,19 +1917,19 @@ exports[`Index page > renders correctly 1`] = `
     >
       <div>
         <h3
-          class="text-[30px]  sm:text-[40px] font-semibold leading-9 sm:leading-[48px] font-hanken"
+          class="text-[30px]  sm:text-[40px] font-semibold leading-9 sm:leading-[48px]"
         >
           Frequently asked questions
         </h3>
         <p
-          class="text-[20px] font-normal font-hanken leading-[28px] text-grey mt-[24px]"
+          class="text-[20px] font-normal leading-[28px] text-grey mt-[24px]"
         >
           Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime.
         </p>
       </div>
       <div>
         <p
-          class="text-[20px] font-semibold font-hanken"
+          class="text-[20px] font-semibold"
         >
           Have a question that hasn’t been answered? Get in touch
         </p>
@@ -2273,7 +2273,7 @@ exports[`Index page > renders correctly 1`] = `
         <br />
          to our 
         <span
-          class="text-primary"
+          class="text-pink"
         >
           300+
         </span>
@@ -2292,7 +2292,7 @@ exports[`Index page > renders correctly 1`] = `
         >
           Thank you to our 
           <span
-            class="text-primary"
+            class="text-pink"
           >
             300+
           </span>

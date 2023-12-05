@@ -189,7 +189,7 @@ const Footer = (props): JSX.Element => {
                         {isInternalLink ? (
                           <Link
                             to={link.url}
-                            className="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                            className="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                           >
                             <Trans
                               i18nKey={link.text.key}
@@ -201,7 +201,7 @@ const Footer = (props): JSX.Element => {
                             href={link.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                            className="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                           >
                             <Trans
                               i18nKey={link.text.key}

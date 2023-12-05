@@ -662,19 +662,19 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
     >
       <div>
         <h3
-          class="text-[30px]  sm:text-[40px] font-semibold leading-9 sm:leading-[48px] font-hanken"
+          class="text-[30px]  sm:text-[40px] font-semibold leading-9 sm:leading-[48px]"
         >
           Frequently asked questions
         </h3>
         <p
-          class="text-[20px] font-normal font-hanken leading-[28px] text-grey mt-[24px]"
+          class="text-[20px] font-normal leading-[28px] text-grey mt-[24px]"
         >
           Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime.
         </p>
       </div>
       <div>
         <p
-          class="text-[20px] font-semibold font-hanken"
+          class="text-[20px] font-semibold"
         >
           Have a question that hasn’t been answered? Get in touch
         </p>
@@ -1431,19 +1431,19 @@ exports[`Asciidoc pages > renders correctly 1`] = `
     >
       <div>
         <h3
-          class="text-[30px]  sm:text-[40px] font-semibold leading-9 sm:leading-[48px] font-hanken"
+          class="text-[30px]  sm:text-[40px] font-semibold leading-9 sm:leading-[48px]"
         >
           Frequently asked questions
         </h3>
         <p
-          class="text-[20px] font-normal font-hanken leading-[28px] text-grey mt-[24px]"
+          class="text-[20px] font-normal leading-[28px] text-grey mt-[24px]"
         >
           Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime.
         </p>
       </div>
       <div>
         <p
-          class="text-[20px] font-semibold font-hanken"
+          class="text-[20px] font-semibold"
         >
           Have a question that hasn’t been answered? Get in touch
         </p>

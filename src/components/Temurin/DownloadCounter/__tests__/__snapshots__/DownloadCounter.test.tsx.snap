@@ -43,7 +43,7 @@ exports[`DownloadCounter component > should render correctly 1`] = `
           </svg>
         </span>
         <p
-          class="text-[16px] font-normal leading-6 text-white font-hanken mb-0"
+          class="text-[16px] font-normal leading-6 text-white mb-0"
         >
           Total Downloads/Docker pulls ever
         </p>

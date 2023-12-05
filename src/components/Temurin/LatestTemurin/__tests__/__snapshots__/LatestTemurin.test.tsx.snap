@@ -25,7 +25,7 @@ exports[`LatestTemurin component > should render correctly - Linux 1`] = `
         Other Downloads
       </a>
       <a
-        class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out  border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+        class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
         href="/download"
         state="[object Object]"
       >
@@ -74,7 +74,7 @@ exports[`LatestTemurin component > should render correctly - Windows 1`] = `
         Other Downloads
       </a>
       <a
-        class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out  border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+        class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
         href="/download"
         state="[object Object]"
       >
@@ -123,7 +123,7 @@ exports[`LatestTemurin component > should render correctly 1`] = `
         Other Downloads
       </a>
       <a
-        class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out  border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+        class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
         href="/download"
         state="[object Object]"
       >

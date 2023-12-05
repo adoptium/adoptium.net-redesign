@@ -14,9 +14,8 @@ const LogosGrid = ({ logos, type }) => {
             <div className="min-w-full overflow-auto">
               <div className="grid grid-cols-4 gap-4 md:gap-6 min-w-[850px] md:min-w-[1220px]">
                 {logos.map(data => (
-                  <a href={data.url}>
+                  <a key={data.name} href={data.url}>
                     <div
-                      key={data.id}
                       className="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
                     >
                       <img

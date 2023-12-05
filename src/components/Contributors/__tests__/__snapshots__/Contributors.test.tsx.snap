@@ -28,7 +28,7 @@ exports[`ContributorsHome component > Contributors renders correctly 1`] = `
         <br />
          to our 
         <span
-          class="text-primary"
+          class="text-pink"
         >
           300+
         </span>
@@ -47,7 +47,7 @@ exports[`ContributorsHome component > Contributors renders correctly 1`] = `
         >
           Thank you to our 
           <span
-            class="text-primary"
+            class="text-pink"
           >
             300+
           </span>

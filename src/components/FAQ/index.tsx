@@ -10,16 +10,16 @@ const FAQ = () => {
     <div className="mx-auto max-w-[1264px] py-8 lg:py-12 px-4 xl:px-0 flex flex-col gap-[64px] lg:gap-3 items-center lg:items-start lg:flex-row justify-between">
       <div className=" md:max-w-[420px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between">
         <div>
-          <h3 className="text-[30px]  sm:text-[40px] font-semibold leading-9 sm:leading-[48px] font-hanken">
+          <h3 className="text-[30px]  sm:text-[40px] font-semibold leading-9 sm:leading-[48px]">
             Frequently asked questions
           </h3>
-          <p className="text-[20px] font-normal font-hanken leading-[28px] text-grey mt-[24px]">
+          <p className="text-[20px] font-normal leading-[28px] text-grey mt-[24px]">
             Eclipse Temurin offers high-performance, cross-platform, open-source
             Java runtime.
           </p>
         </div>
         <div>
-          <p className="text-[20px] font-semibold font-hanken">
+          <p className="text-[20px] font-semibold">
             Have a question that hasn’t been answered? Get in touch
           </p>
           <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block ">

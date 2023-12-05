@@ -1,9 +1,9 @@
 import React from "react"
 import { render } from "@testing-library/react"
 import { describe, expect, it } from "vitest"
-import MembersGrid from ".."
+import LogosGrid from ".."
 
-describe("MembersGrid component", () => {
+describe("LogosGrid component", () => {
   const members = [
     {
       name: "Member 1",
@@ -19,7 +19,7 @@ describe("MembersGrid component", () => {
   ]
 
   it("Members grid renders correctly", () => {
-    const { container } = render(<MembersGrid members={members} />)
+    const { container } = render(<LogosGrid logos={members} type="foo" />)
     expect(container).toMatchSnapshot()
   })
 })

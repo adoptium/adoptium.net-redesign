@@ -47,7 +47,7 @@ const ContributorsHome = () => {
         {/* ==========================================SET-2=============================================== */}{" "}
         <div className="mx-auto max-w-[848px] w-full lg:space-x-8 xl:space-x-16 xl:hidden flex flex-col justify-center items-center text-center z-10 ">
           <h2 className="font-semibold text-white text-[64px] leading-[72px]">
-            Thank you <br /> to our <span className="text-primary">300+</span>{" "}
+            Thank you <br /> to our <span className="text-pink">300+</span>{" "}
             contributors
           </h2>
         </div>
@@ -55,7 +55,7 @@ const ContributorsHome = () => {
           {/* Centered content for Set 2 */}
           <div className="mx-auto max-w-[848px] w-full lg:space-x-8 xl:space-x-16 flex flex-col justify-center items-center text-center z-10">
             <h2 className="font-semibold text-white thank-greeting !text-[104px] leading-[120px]">
-              Thank you to our <span className="text-primary">300+</span>{" "}
+              Thank you to our <span className="text-pink">300+</span>{" "}
               contributors
             </h2>
           </div>

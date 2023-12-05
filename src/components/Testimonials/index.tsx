@@ -100,7 +100,7 @@ const Testimonials = () => {
             className={testimonialClassName}
             style={{ minHeight: "204px" }}
           >
-            <span className="md:text-[32px] text-[26px] leading-[34px] md:leading-10 font-semibold font-hanken  text-white">
+            <span className="md:text-[32px] text-[26px] leading-[34px] md:leading-10 font-semibold  text-white">
               {testimonial.quote}
             </span>
           </blockquote>

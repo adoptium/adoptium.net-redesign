@@ -25,7 +25,7 @@ exports[`Footer component > renders correctly 1`] = `
             >
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/org/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -35,7 +35,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/org/foundation/contact.php"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -45,7 +45,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/donate/adoptium"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -55,7 +55,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/membership"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -65,7 +65,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/org/documents/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -75,7 +75,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/org/documents/Community_Code_of_Conduct.php"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -85,7 +85,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/artwork/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -95,7 +95,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/org/foundation/directors.php"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -116,7 +116,7 @@ exports[`Footer component > renders correctly 1`] = `
             >
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/legal/privacy.php"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -126,7 +126,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/legal/termsofuse.php"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -136,7 +136,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/legal/copyright.php"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -146,7 +146,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/legal/epl-2.0/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -156,7 +156,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/legal/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -177,7 +177,7 @@ exports[`Footer component > renders correctly 1`] = `
             >
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://github.com/adoptium/adoptium-support/issues"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -187,7 +187,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="/docs"
                 >
                   Text
@@ -195,7 +195,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="/contributing"
                 >
                   Text
@@ -203,7 +203,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/mail/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -213,7 +213,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/forums/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -223,7 +223,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://marketplace.eclipse.org/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -233,7 +233,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://store.adoptium.net/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -254,7 +254,7 @@ exports[`Footer component > renders correctly 1`] = `
             >
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/ide/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -264,7 +264,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/projects"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -274,7 +274,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/org/workinggroups/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -284,7 +284,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/org/research/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -294,7 +294,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://www.eclipse.org/security/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -304,7 +304,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://status.eclipse.org/"
                   rel="noopener noreferrer"
                   target="_blank"

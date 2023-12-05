@@ -65,7 +65,7 @@ const DownloadCounter = () => {
           <span>
             <GithubIcon2 />
           </span>
-          <p className="text-[16px] font-normal leading-6 text-white font-hanken mb-0">
+          <p className="text-[16px] font-normal leading-6 text-white mb-0">
             Total Downloads/Docker pulls ever
           </p>
           <button className="bg-transparent border-2 border-pink-500/0 text-white font-bold w-[148px] h-[48px] rounded-2xl gradient-border">

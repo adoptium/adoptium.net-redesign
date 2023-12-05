@@ -1,0 +1,58 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LogosGrid component > Members grid renders correctly 1`] = `
+<div>
+  <div
+    class="w-full flex flex-col items-center justify-center mt-3"
+  >
+    <button
+      aria-hidden="true"
+      style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
+      type="button"
+    />
+    <div
+      class="w-full flex justify-between"
+      id="foo"
+    >
+      <div
+        class="w-full"
+      >
+        <div
+          class="min-w-full overflow-auto"
+        >
+          <div
+            class="grid grid-cols-4 gap-4 md:gap-6 min-w-[850px] md:min-w-[1220px]"
+          >
+            <a
+              href="https://member1.com"
+            >
+              <div
+                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+              >
+                <img
+                  alt="Member 1"
+                  class="w-5/6 max-h-5/6 m-0"
+                  src="/images/member1.png"
+                />
+              </div>
+            </a>
+            <a
+              href="https://member2.com"
+            >
+              <div
+                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white bg-opacity-50 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+              >
+                <img
+                  alt="Member 2"
+                  class="w-5/6 max-h-5/6 m-0"
+                  src="/images/member2.png"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

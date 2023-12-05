@@ -1,70 +1,78 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
-import { Link, Trans } from 'gatsby-plugin-react-i18next'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
-import LatestTemurin from '../components/LatestTemurin'
 
-const IndexPage = ({data}) => {
-  const latestLTS = data.mostRecentLts.version
+import { AppleIcon, HeroBgImg } from "../components/Common/Icon"
+
+import LogoCarousel from "../components/LogoCarousel"
+import PowerOfTemurin from "../components/Temurin/PowerOfTemurin"
+import DownloadCounter from "../components/Temurin/DownloadCounter"
+import TemurinFeatures from "../components/Temurin/Features"
+import WGProjects from "../components/WGProjects"
+import Testimonials from "../components/Testimonials"
+import LatestNews from "../components/LatestNews"
+import FAQ from "../components/FAQ"
+import Contributors from "../components/Contributors/home"
+
+const Index = () => {
   return (
     <Layout>
-      <section id='home' className='home' style={{ overflowX: 'hidden' }}>
-        <div className='container-flex'>
-          <div className='main-banner row justify-content-center align-items-center'>
-            <div className='col-md-6 p-md-5'>
-              <div className='w-75 m-auto'>
-                <div data-aos='zoom-in-up' className='aos-init aos-animate'>
-                  <div className='my-3 my-md-5 text-center text-md-start banner-title'>
-                    <h1 className='display-4'>
-                      <Trans>Prebuilt OpenJDK</Trans>
-                      <br />
-                      <Trans>Binaries for Free!</Trans>
-                    </h1>
-                  </div>
-                  <p className='mt-3 text-center text-md-start'>
-                    <Trans i18nKey='Intro'>
-                      Java&trade; is the world's leading programming language and platform. The Adoptium Working Group promotes and supports high-quality, TCK certified runtimes and associated technology for use across the Java ecosystem. Eclipse Temurin is the name of the OpenJDK distribution from Adoptium.
-                    </Trans>
-                  </p>
+      <div className="bg-purple sm:bg-contain bg-img-hero bg-center bg-no-repeat relative">
+        <div className="relative isolate">
+          <div className="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]">
+            <HeroBgImg />
+          </div>
+          <div
+            className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+            aria-hidden="true"
+          ></div>
+          <div className="max-w-[1264px] mx-auto flex justify-center items-center">
+            <div className="mx-auto max-w-[832px] w-full h-[680px] sm:h-[720px] px-8 lg:px-0 flex items-center">
+              <div className="text-center w-full">
+                <h1 className="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]">
+                  The Power of Eclipse Temurin™
+                </h1>
+                <p className="lg:my-10 mt-6  mb-10 text-2xl leading-8 text-white-600  font-semibold">
+                  Download Temurin™ for macOS aarch64
+                </p>
+                <div className="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6">
+                  <a
+                    href="#"
+                    className="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
+                  >
+                    Learn More
+                  </a>
+                  <a
+                    href="#"
+                    className="rounded-[80px] bg-[#FF1464] hover:bg-transparent border transition duration-300 ease-in-out hover:text-[#FF1464] border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+                  >
+                    <span>
+                      <AppleIcon />
+                    </span>
+                    Download Temurin™
+                  </a>
                 </div>
-                <LatestTemurin latestLTS={latestLTS} page='home' />
               </div>
             </div>
-            <div className='col-md-6'>
-              <StaticImage
-                src='../images/servers-min.png'
-                width={1000}
-                alt='Image showing server, cloud and laptop'
-                style={{ opacity: '0.999', mixBlendMode: 'luminosity' }}
-              />
-            </div>
           </div>
         </div>
-        <div className='p-3 mt-4 mb-4 bg-light rounded-3 text-start'>
-          <div className='container py-5'>
-            <h2 className='text-pink'><Trans>The Adoptium&reg; Working Group</Trans></h2>
-            <p>
-              <Trans i18nKey='wg-description'>
-                The Adoptium Working Group promotes and supports high-quality runtimes and associated technology for use across the Java ecosystem.
-                Our vision is to meet the needs of Eclipse and the broader Java community by providing runtimes for Java-based applications. We
-                embrace existing standards and a wide variety of hardware and cloud platforms.
-              </Trans>
-            </p>
-            <div className='btn-group'>
-              <Link to='/join' className='btn btn-lg btn-primary m-3 text-white'><Trans>Join the Working Group</Trans></Link>
-              <Link to='/members' className='btn btn-lg btn-secondary m-3'><Trans>View our Members</Trans></Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+      <LogoCarousel />
+      <div className="w-full h-[1px] my-8 lg:my-16 bg-[#3E3355]"></div>
+      <PowerOfTemurin />
+      <DownloadCounter />
+      <TemurinFeatures />
+      <WGProjects />
+      <Testimonials />
+      <LatestNews />
+      <FAQ />
+      <Contributors />
     </Layout>
   )
 }
-
-export default IndexPage
+export default Index
 
 export const Head = () => (
   <Seo title='Home' />

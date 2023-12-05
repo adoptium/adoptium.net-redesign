@@ -1,7 +1,5 @@
 import React from 'react';
 import { useI18next, Trans } from 'gatsby-plugin-react-i18next';
-import Dropdown from 'react-bootstrap/Dropdown';
-import Form from 'react-bootstrap/Form';
 import Flag from 'react-world-flags'
 import ISO6391 from 'iso-639-1';
 import './LanguageSelector.scss';
@@ -37,18 +35,23 @@ const LanguageSelector = (): JSX.Element => {
 
   return (
     <div className="App lngg">
-      <Form>
-        <Dropdown>
-          <Dropdown.Toggle aria-label="Language Selector" id="dropdown-flags" className="text-left text-white">
-            <Trans>Change Language</Trans>
-          </Dropdown.Toggle>
-          <Dropdown.Menu className="dropdown-menu">
+      <div className="relative inline-block text-left">
+        <button
+          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-700 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+          aria-label="Language Selector"
+          id="dropdown-flags"
+        >
+          <Trans>Change Language</Trans>
+        </button>
+        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="py-1">
             {languages.map((lng: string) => (
-              <Dropdown.Item
+              <a
+                href="#"
                 id={lng}
                 data-testid={lng}
                 key={lng}
-                eventKey={lng}
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 onClick={(e) => {
                   e.preventDefault();
                   changeLanguage(lng);
@@ -56,11 +59,11 @@ const LanguageSelector = (): JSX.Element => {
               >
                 <Flag code={ISO3166(lng)} width='35' /> 
                 {ISO6391.getNativeName(ISO639(lng))}
-              </Dropdown.Item>
+              </a>
             ))}
-          </Dropdown.Menu>
-        </Dropdown>
-      </Form>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

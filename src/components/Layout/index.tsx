@@ -1,31 +1,27 @@
-import * as React from 'react'
-import PropTypes from 'prop-types'
+/**
+ * Layout component that queries for data
+ * with Gatsby's useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
+ */
+
+import * as React from "react"
 import { Slice } from 'gatsby'
 
-import './layout.scss'
+import "./layout.scss"
+// import "../styles/latest.scss"
+
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const Layout = ({ children }) => {
   return (
-    <div
-      className='container-fluid p-0'
-      style={{
-        backgroundColor: 'var(--bg)',
-        color: 'var(--text-normal)',
-        transition: 'color 0.2s ease-out, background 0.2s ease-out'
-      }}
-    >
+    <>
       <Slice alias='navbar' />
-      <Slice alias='banner' />
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
       <Slice alias='footer' />
-    </div>
+    </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
 }
 
 export default Layout

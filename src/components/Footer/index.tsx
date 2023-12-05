@@ -1,92 +1,147 @@
-import { Link } from 'gatsby-plugin-react-i18next';
-import React from 'react';
-import { FaYoutube, FaGithub, FaSlack, FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
-import RandomContributor from '../RandomContributor';
-import LanguageSelector from '../LanguageSelector';
-import { Trans } from 'gatsby-plugin-react-i18next';
-import './Footer.scss';
+import React from "react"
+import { Link, Trans } from 'gatsby-plugin-react-i18next';
+import { SmallLogoIcon } from "../Common/Icon"
+import MobileFooter from "./MobileFooter"
+import IconSocial from "../IconSocial"
+
+interface FooterData {
+  title: {
+    key: string
+    defaultText: string
+  }
+  links: Array<{
+    text: {
+      key: string
+      defaultText: string
+    }
+    url: string
+  }>
+}
+
+const footerData: FooterData[] = [
+  {
+    title: { key: 'footer.eclipse.foundation', defaultText: 'Eclipse Foundation' },
+    links: [
+      { text: { key: 'footer.about.us', defaultText: 'About Us' }, url: 'https://www.eclipse.org/org/' },
+      { text: { key: 'footer.contact.us', defaultText: 'Contact Us' }, url: 'https://www.eclipse.org/org/foundation/contact.php' },
+      { text: { key: 'footer.donate', defaultText: 'Donate' }, url: 'https://www.eclipse.org/donate/adoptium' },
+      { text: { key: 'footer.members', defaultText: 'Members' }, url: 'https://www.eclipse.org/membership' },
+      { text: { key: 'footer.governance', defaultText: 'Governance' }, url: 'https://www.eclipse.org/org/documents/' },
+      { text: { key: 'footer.code.of.conduct', defaultText: 'Code of Conduct' }, url: 'https://www.eclipse.org/org/documents/Community_Code_of_Conduct.php' },
+      { text: { key: 'footer.logo.and.artwork', defaultText: 'Logo and Artwork' }, url: 'https://www.eclipse.org/artwork/' },
+      { text: { key: 'footer.board.of.directors', defaultText: 'Board of Directors' }, url: 'https://www.eclipse.org/org/foundation/directors.php' }
+    ],
+  },
+  {
+    title: { key: 'footer.legal', defaultText: 'Legal' },
+    links: [
+      { text: { key: 'footer.privacy.policy', defaultText: 'Privacy Policy' }, url: 'https://www.eclipse.org/legal/privacy.php' },
+      { text: { key: 'footer.terms.of.use', defaultText: 'Terms of Use' }, url: 'https://www.eclipse.org/legal/termsofuse.php' },
+      { text: { key: 'footer.copyright.agent', defaultText: 'Copyright Agent' }, url: 'https://www.eclipse.org/legal/copyright.php' },
+      { text: { key: 'footer.eclipse.public.license', defaultText: 'Eclipse Public License' }, url: 'https://www.eclipse.org/legal/epl-2.0/' },
+      { text: { key: 'footer.legal.resources', defaultText: 'Legal Resources' }, url: 'https://www.eclipse.org/legal/' }
+    ],
+  },
+  {
+    title: { key: 'footer.useful.links', defaultText: 'Useful Links' },
+    links: [
+      { text: { key: 'footer.report.a.bug', defaultText: 'Report a Bug' }, url: 'https://github.com/adoptium/adoptium-support/issues' },
+      { text: { key: 'footer.documentation', defaultText: 'Documentation' }, url: '/docs' },
+      { text: { key: 'footer.how.to.contribute', defaultText: 'How to Contribute' }, url: '/contributing' },
+      { text: { key: 'footer.mailing.lists', defaultText: 'Mailing Lists' }, url: 'https://www.eclipse.org/mail/' },
+      { text: { key: 'footer.forums', defaultText: 'Forums' }, url: 'https://www.eclipse.org/forums/' },
+      { text: { key: 'footer.marketplace', defaultText: 'Marketplace' }, url: 'https://marketplace.eclipse.org/' },
+      { text: { key: 'footer.swag.store', defaultText: 'Swag Store' }, url: 'https://store.adoptium.net/' }
+    ],
+  },
+  {
+    title: { key: 'footer.useful.other', defaultText: 'Other' },
+    links: [
+      { text: { key: 'footer.ide.and.tools', defaultText: 'IDE and Tools' }, url: 'https://www.eclipse.org/ide/' },
+      { text: { key: 'footer.projects', defaultText: 'Projects' }, url: 'https://www.eclipse.org/projects' },
+      { text: { key: 'footer.working.groups', defaultText: 'Working Groups' }, url: 'https://www.eclipse.org/org/workinggroups/' },
+      { text: { key: 'footer.research.eclipse', defaultText: 'Research@Eclipse' }, url: 'https://www.eclipse.org/org/research/' },
+      { text: { key: 'footer.report.a.vulnerability', defaultText: 'Report a Vulnerability' }, url: 'https://www.eclipse.org/security/' },
+      { text: { key: 'footer.service.status', defaultText: 'Service Status' }, url: 'https://status.eclipse.org/' },
+    ],
+  },
+]
 
 const Footer = (): JSX.Element => {
   return (
-    <>
-    <section className="bottom-info">
-      <RandomContributor />
-    </section>
-      <div className="bg-grey">
-        <div className="container mt-5">
-          <footer className="row row-cols-4 py-5 border-top">
+    <footer className="bg-blue">
+      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-8 md:py-16 sm:px-6 lg:space-y-16 lg:px-8">
+        <div className="hidden md:block">
+          <div className="grid grid-cols-1 gap-8 border-b border-gray-800 mb-3 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16">
+          {footerData.map((section, index) => (
+            <div key={index}>
+              <p className="font-medium text-pink">
+                <Trans i18nKey={section.title.key} defaults={section.title.defaultText} />
+              </p>
+              <ul className="mt-6 space-y-2 text-sm">
+                {section.links.map((link, linkIndex) => {
+                  const isInternalLink = !/^https?:\/\//.test(link.url);
 
-            <div className="col-sm-3 col-12">
-              <p className="h5 pb-1"><Trans i18nKey='footer.eclipse.foundation' defaults='Eclipse Foundation'/></p>
-              <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/org/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.about.us' defaults='About Us'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/org/foundation/contact.php" className="nav-link p-0 text-muted"><Trans i18nKey='footer.contact.us' defaults='Contact Us'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/donate/adoptium" className="nav-link p-0 text-muted"><Trans i18nKey='footer.donate' defaults='Donate'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/membership" className="nav-link p-0 text-muted"><Trans i18nKey='footer.members' defaults='Members'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/org/documents/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.governance' defaults='Governance'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/org/documents/Community_Code_of_Conduct.php" className="nav-link p-0 text-muted"><Trans i18nKey='footer.code.of.conduct' defaults='Code of Conduct'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/artwork/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.logo.and.artwork' defaults='Logo and Artwork'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/org/foundation/directors.php" className="nav-link p-0 text-muted"><Trans i18nKey='footer.board.of.directors' defaults='Board of Directors'/></a></li>
+                  return (
+                    <li key={linkIndex}>
+                      {isInternalLink ? (
+                        <Link
+                          to={link.url}
+                          className="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                        >
+                          <Trans i18nKey={link.text.key} defaults={link.text.defaultText} />
+                        </Link>
+                      ) : (
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white text-base font-normal leading-6 font-hanken transition hover:opacity-75 dark:text-gray-200"
+                        >
+                          <Trans i18nKey={link.text.key} defaults={link.text.defaultText} />
+                        </a>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
-
-            <div className="col-sm-3 col-12">
-            <p className="h5 pb-1"><Trans i18nKey='footer.legal' defaults='Legal'/></p>
-              <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/legal/privacy.php" className="nav-link p-0 text-muted"><Trans i18nKey='footer.privacy.policy' defaults='Privacy Policy'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/legal/termsofuse.php" className="nav-link p-0 text-muted"><Trans i18nKey='footer.terms.of.use' defaults='Terms of Use'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/legal/copyright.php" className="nav-link p-0 text-muted"><Trans i18nKey='footer.copyright.agent' defaults='Copyright Agent'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/legal/epl-2.0/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.eclipse.public.license' defaults='Eclipse Public License'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/legal/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.legal.resources' defaults='Legal Resources'/></a></li>
-              </ul>
+          ))}
+          </div>
+          <div className="sm:flex sm:items-center sm:justify-between">
+            <div className="text-teal-600 flex dark:text-teal-300">
+            <SmallLogoIcon />
+              <p className="text-sm ml-3 flex items-center gap-4 text-white font-normal leading-5">
+                Copyright © Eclipse Foundation. All Rights Reserved.
+              </p>
             </div>
 
-            <div className="col-sm-3 col-12">
-            <p className="h5 pb-1"><Trans i18nKey='footer.useful.links' defaults='Useful Links'/></p>
-              <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="https://github.com/adoptium/adoptium-support/issues" className="nav-link p-0 text-muted"><Trans i18nKey='footer.report.a.bug' defaults='Report a Bug'/></a></li>
-                <li className="nav-item mb-2"><Link to="/docs" className="nav-link p-0 text-muted"><Trans i18nKey='footer.documentation' defaults='Documentation'/></Link></li>
-                <li className="nav-item mb-2"><Link to="/contributing" className="nav-link p-0 text-muted"><Trans i18nKey='footer.how.to.contribute' defaults='How to Contribute'/></Link></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/mail/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.mailing.lists' defaults='Mailing Lists'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/forums/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.forums' defaults='Forums'/></a></li>
-                <li className="nav-item mb-2"><a href="https://marketplace.eclipse.org/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.marketplace' defaults='Marketplace'/></a></li>
-                <li className="nav-item mb-2"><a href="https://store.adoptium.net/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.swag.store' defaults='Swag Store'/></a></li>
-              </ul>
-            </div>
+            <ul className="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
+              <li>
+                <a
+                  href="https://www.netlify.com"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="leading-6 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <img
+                    src="/images/netlify-light.svg"
+                    alt="Deploys by Netlify"
+                    className="h-6"
+                  />
+                </a>
+              </li>
 
-            <div className="col-sm-3 col-12">
-            <p className="h5 pb-1"><Trans i18nKey='footer.useful.other' defaults='Other'/></p>
-              <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/ide/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.ide.and.tools' defaults='IDE and Tools'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/projects" className="nav-link p-0 text-muted"><Trans i18nKey='footer.projects' defaults='Projects'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/org/workinggroups/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.working.groups' defaults='Working Groups'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/org/research/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.research.eclipse' defaults='Research@Eclipse'/></a></li>
-                <li className="nav-item mb-2"><a href="https://www.eclipse.org/security/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.report.a.vulnerability' defaults='Report a Vulnerability'/></a></li>
-                <li className="nav-item mb-2"><a href="https://status.eclipse.org/" className="nav-link p-0 text-muted"><Trans i18nKey='footer.service.status' defaults='Service Status'/></a></li>
-              </ul>
-            </div>
-
-            <div className="col-sm-6 col-12 py-2 d-flex">
-              <span className="text-muted"><Trans i18nKey='footer.all.rights.reserved' defaults='Copyright © Eclipse Foundation. All Rights Reserved.'/></span>
-            </div>
-            <ul className="nav col-md-5 col-9 pb-4 justify-content-end list-unstyled d-flex">
-              <li className="ms-3"><a href="https://www.netlify.com"> <img src="/images/netlify-light.svg" alt="Deploys by Netlify" style={{height: '25px'}}/> </a></li>
-              <li className="ms-3"><a className="text-muted" aria-label="Adoptium Twitter Account" href="https://x.com/adoptium"><FaXTwitter size={25} /></a></li>
-              <li className="ms-3"><a className="text-muted" aria-label="Adoptium Linkedin Account" href="https://www.linkedin.com/showcase/adoptium/"><FaLinkedin size={25} /></a></li>
-              <li className="ms-3"><a className="text-muted" aria-label="Adoptium YouTube Account" href="https://www.youtube.com/c/EclipseAdoptium"><FaYoutube size={25} /></a></li>
-              <li className="ms-3"><a className="text-muted" aria-label="Adoptium GitHub Account" href="https://github.com/adoptium"><FaGithub size={25} /></a></li>
-              <li className="ms-3"><Link className="text-muted" aria-label="Adoptium Slack Account" to="/slack"><FaSlack size={25} /></Link></li>
+              <IconSocial />
             </ul>
-            <div className="col-12 d-flex ">
-              <span className="text-muted"><Trans i18nKey='footer.trademarks' defaults='Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.'/></span>
-            </div>
-          </footer>
+          </div>
+        </div>
+        <div className="w-full px-4  md:hidden block">
+          <MobileFooter footerData={footerData} />
         </div>
       </div>
-      <LanguageSelector />
-    </>
-  );
-};
+    </footer>
+  )
+}
 
-export default Footer;
+export default Footer

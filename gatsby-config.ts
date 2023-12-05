@@ -42,6 +42,21 @@ const config: GatsbyConfig = {
     }
   },
   plugins: [
+    'gatsby-plugin-postcss',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        sassOptions: {
+          precision: 6
+        },
+        cssLoaderOptions: {
+          modules: {
+            namedExport: false,
+            exportLocalsConvention: 'camelCaseOnly'
+          }
+        }
+      }
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',
@@ -264,20 +279,6 @@ const config: GatsbyConfig = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        sassOptions: {
-          precision: 6
-        },
-        cssLoaderOptions: {
-          modules: {
-            namedExport: false,
-            exportLocalsConvention: 'camelCaseOnly'
-          }
-        }
-      }
-    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

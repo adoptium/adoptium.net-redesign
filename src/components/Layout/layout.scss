@@ -1,171 +1,214 @@
-// Here you can customize bootstrap
-$primary: #14003c;
-$secondary: #dadada;
-
-@import "~bootstrap/scss/bootstrap";
-
-/* set a max-width for horizontal fluid layout and make it centered */
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 60rem;
+:root {
+  --border-radius: 4px;
+  --color-text: white;
+  --color-primary: #7026b9;
+  --color-code-bg: #fff4db;
+  --color-code: #8a6534;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --font-lg: 18px;
+  --font-md: 16px;
+  --font-sm: 14px;
+  --font-sx: 12px;
+  --line-height-loose: 1.75;
+  --line-height-normal: 1.5;
+  --line-height-dense: 1.1;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 64px;
+  --size-content: 54rem;
+  --size-gutter: var(--space-5);
+  --size-gap: var(--space-6);
 }
-
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font: sans-serif;
+  font-size: var(--font-md);
+  line-height: var(--line-height-normal);
+  overflow-y: scroll;
+}
 body {
-  --black4: #cbd4d9;
-  --black9: #2c3437;
-  --brand4: #c52158;
-  --brand1: #14003c;
-  --page-pink: #fcf4f6;
-  --bg: white;
-  --text-normal: #222;
-  --color-fill-banner: #9992;
-  --color-text-primary: var(--black9);
-  --color-text-accent: var(--color-brand-primary);
-
-  background-color: var(--bg);
-
-  .support-matrix th {
-    background-color: #aeadad97;
-  }
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-text);
+  font-family: sans-serif;
+  font-family: var(--font-sans);
+  font-weight: normal;
+  margin: 0;
+  word-wrap: break-word;
+}
+a {
+  background-color: transparent;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 10px;
+}
+a:active,
+a:hover {
+  outline-width: 0;
+  text-decoration: none;
+}
+abbr[title] {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+  text-decoration: none;
+}
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+dfn {
+  font-style: italic;
 }
 
-.text-pink {
-  color: var(--brand4);
+h1 > b {
+  color: var(--color-primary);
+}
+img {
+  border-style: none;
+  max-width: 100%;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-mono);
+  font-size: 1em;
+  line-height: inherit;
+}
+hr {
+  box-sizing: content-box;
+  overflow: visible;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: calc(var(--space-4) - 1px);
+  background: hsla(0, 0%, 0%, 0.2);
+  border: none;
+  height: 1px;
+}
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+hgroup,
+img,
+figure,
+fieldset,
+ul,
+ol,
+dl,
+dd,
+p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: var(--space-4);
+}
+ul,
+ol {
+  list-style-position: outside;
+  list-style-image: none;
+}
+pre {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  font-size: 0.875rem;
+  line-height: var(--line-height-normal);
+  background: hsla(0, 0%, 0%, 0.04);
+  border-radius: var(--border-radius);
+  overflow: auto;
+  word-wrap: normal;
+  padding: var(--space-4);
+}
+b,
+strong,
+dt,
+th {
+  font-weight: bold;
+}
+li {
+  margin-bottom: calc(var(--space-4) / 2);
+}
+ol li,
+ul li {
+  padding-left: 0;
+}
+li > ol,
+li > ul {
+  margin-bottom: calc(var(--space-4) / 2);
+  margin-left: var(--space-4);
+  margin-top: calc(var(--space-4) / 2);
+}
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+li *:last-child {
+  margin-bottom: 0;
+}
+p *:last-child {
+  margin-bottom: 0;
+}
+li > p {
+  margin-bottom: calc(var(--space-4) / 2);
 }
 
-.halign-center {
-  text-align: center;
+code {
+  font-size: 0.875rem;
 }
-
-.valign-middle {
-  vertical-align: middle;
+kbd {
+  font-size: 0.875rem;
 }
-
-.bg-pink {
-  background-color: var(--brand4) !important;
+samp {
+  font-size: 0.875rem;
 }
-
-.bg-purple {
-  background-color: var(--brand1) !important;
+abbr {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
 }
-
-.bg-grey {
-  background-color: rgb(237, 234, 234) !important;
+acronym {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
 }
-
-.table-secondary {
-  --bs-table-bg: #333;
+tt,
+code {
+  background-color: var(--color-code-bg);
+  border-radius: var(--border-radius);
+  color: var(--color-code);
+  font-family: var(--font-mono);
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
+  word-break: normal;
 }
-
-body:not(.dark) .dark-mode-only,
-.dark .light-mode-only {
-  display: none;
+pre code {
+  background: none;
 }
-
-.hide-on-mobile {
-  @media only screen and (width <= 500px) {
-    display: none !important;
-  }
+code:before,
+code:after,
+tt:before,
+tt:after {
+  content: "\00a0";
+  letter-spacing: -0.2em;
 }
-
-.adopt-demo-container {
-  position: relative;
-}
-
-.adopt-demo {
-  background: #1f272a;
-  border-radius: 0.4rem;
-  box-shadow: 5px 10px 50px rgba(0, 0, 0, 25%);
-  color: #fff;
-  height: 450px;
-  max-width: 832px;
-  width: 90vw;
-  z-index: 2;
-}
-
-.callout {
-  padding: 20px;
-  margin: 20px 0;
-  border: 1px solid #eee;
-  border-left-width: 5px;
-  border-radius: 3px;
-
-  h4 {
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-  }
-
-  code {
-    border-radius: 3px;
-  }
-
-  & + .bs-callout {
-    margin-top: -5px;
-  }
-}
-
-@each $name,$color in (default,#777),(primary,#428bca),
-  (success,#5cb85c),(danger,#d9534f),(warning,#f0ad4e),
-  (info,#5bc0de), (bdc,#29527a) {
-  .callout-#{$name} {
-    border-left-color: $color;
-
-    h4 {
-      color: $color;
-    }
-  }
-}
-
-.w-20 {
-  width: 20% !important;
-}
-
-.table-borderless td,
-.table-borderless th {
-  border: 0;
-  padding: 0.1em 0.5rem;
-
-  .table td,
-  .table th,
-  .table a {
-    font-size: 0.9rem;
-  }
-}
-
-.cc-color-override-1434350510.cc-window {
-  background-color: var(--brand4) !important;
-}
-
-iframe {
-  width: 100%;
-  height: 25em;
-}
-
-.font-nunito {
-  font-family: Nunito, sans-serif;
-}
-
-.font-poppins {
-  font-family: Poppins, sans-serif;
-}
-
-.release-notes {
-  padding: 5px 0 10px;
-  border-top: 4px solid #333;
-  background-color: #f8f9fa !important;
-  margin-bottom: 5px;
-  border-right: 1px solid var(--bs-border-color);
-
-  a:not(:last-child) {
-    padding-right: 20px;
-  }
-
-  a svg {
-      margin-right: 5px;
-  }
+pre code:before,
+pre code:after,
+pre tt:before,
+pre tt:after {
+  content: none;
 }

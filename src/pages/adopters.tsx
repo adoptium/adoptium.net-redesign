@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import { MembersProps } from "./members"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import MembersGrid from "../components/MembersGrid"
+import LogosGrid from "../components/LogosGrid"
 import { shuffle } from "../util/shuffle"
 
 import Adopters from "../json/adopters.json"
@@ -26,7 +26,7 @@ const AdoptersPage = () => (
           <p className="lead text-muted">
             Companies that use Eclipse Temurin in production.
           </p>
-          <MembersGrid members={adopters} columns={4} />
+          <LogosGrid members={adopters} columns={4} />
           <a
             className="btn btn-secondary mt-5"
             data-bs-toggle="collapse"

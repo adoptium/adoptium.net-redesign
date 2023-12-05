@@ -26,9 +26,12 @@ const TemurinReleases = () => (
               <br />
               The following notice applies to intermediate builds:
               <br />
-              &ldquo;This is an intermediate build made available for testing purposes only. The code is untested and presumed incompatible with the Java SE specification.
-              You should not deploy or write to this code, but instead use the tested and certified Java SE compatible version of the code.
-              Redistribution of this build must retain this notice.&rdquo;
+              &ldquo;This is an intermediate build made available for testing
+              purposes only. The code is untested and presumed incompatible with
+              the Java SE specification. You should not deploy or write to this
+              code, but instead use the tested and certified Java SE compatible
+              version of the code. Redistribution of this build must retain this
+              notice.&rdquo;
               <br />
               <br />
               <p className="text-warning">

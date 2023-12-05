@@ -8,6 +8,7 @@ import PageHeader from "../components/PageHeader"
 import ImageText from "../components/ImageText"
 import UsingTemurin from "../components/About/UsingTemurin"
 import Testimonials from "../components/Testimonials"
+import Logos, { LogoType } from "../components/Logos"
 import ContactUs from "../components/ContactUs"
 
 const BusinessBenefits = () => {
@@ -25,6 +26,11 @@ const BusinessBenefits = () => {
         link="#"
       />
       <UsingTemurin />
+      <Logos
+        members={LogoType.ADOPTERS}
+        title="Eclipse Temurin&trade; Adopters"
+        description="Companies that use Eclipse Temurin in production."
+      />
       <Testimonials />
       <ImageText
         title="Need support with Temurin?"

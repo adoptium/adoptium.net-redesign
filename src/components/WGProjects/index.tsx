@@ -42,10 +42,7 @@ const WGProjects = () => {
         </p>
         <div className="mt-16 mb-8 flex md:h-[30em] justify-around lg:justify-between flex-wrap lg:flex-nowrap gap-6 xl:gap-8">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="max-w-xl w-full h-full"
-            >
+            <div key={index} className="max-w-xl w-full h-full">
               <div className="bg-white flex justify-between h-full flex-col bg-opacity-5 p-8 xl:p-12 rounded-3xl border-2 border-white border-opacity-50">
                 <img
                   src={`/images/projects/${project.imagePath}`}

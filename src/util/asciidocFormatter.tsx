@@ -85,13 +85,9 @@ const AsciiDocFormatter = ({ content, t }) => {
     // Transform iframe tags
     if (node.type === "tag" && node.name === "iframe") {
       return (
-          <iframe
-            {...node.attribs}
-            className="w-full aspect-video"
-            height="400"
-          >
-            {domToReact(node.children)}
-          </iframe>
+        <iframe {...node.attribs} className="w-full aspect-video" height="400">
+          {domToReact(node.children)}
+        </iframe>
       )
     }
 

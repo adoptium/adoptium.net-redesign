@@ -5,7 +5,7 @@ import { SiGithubsponsors } from "react-icons/si"
 import { MembersProps } from "./members"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import MembersGrid from "../components/MembersGrid"
+import LogosGrid from "../components/LogosGrid"
 import { shuffle } from "../util/shuffle"
 
 import Members from "../json/members.json"
@@ -40,12 +40,12 @@ const SponsorsPage = () => (
             Adoptium is proud to receive financial donations (both one-off and
             regularly) from the following companies.
           </p>
-          <MembersGrid members={sponsors} />
+          <LogosGrid members={sponsors} />
           <p className="lead text-muted pt-5">
             The Adoptium Working Group collaborates with the following companies
             who contribute various kinds of cloud and physical hardware.
           </p>
-          <MembersGrid members={infra} />
+          <LogosGrid members={infra} />
           <div className="btn-group-vertical">
             <a
               target="_blank"

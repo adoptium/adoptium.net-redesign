@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import MembersGrid from "../components/MembersGrid"
+import LogosGrid from "../components/LogosGrid"
 import { shuffle } from "../util/shuffle"
 
 import Members from "../json/members.json"
@@ -46,7 +46,7 @@ const MembersPage = () => (
             are investing significant resources to sustain and define the core
             activities that are the responsibility of the working group.
           </p>
-          <MembersGrid members={strategicMembers} />
+          <LogosGrid members={strategicMembers} />
           <h2 className="fw-light pt-5">Enterprise Members</h2>
           <p className="lead text-muted">
             Enterprise Members are typically organizations that view the
@@ -55,7 +55,7 @@ const MembersPage = () => (
             want to influence the direction and support the development of a
             runtime technology ecosystem through Eclipse Adoptium.
           </p>
-          <MembersGrid members={enterpriseMembers} />
+          <LogosGrid members={enterpriseMembers} />
           <h2 className="fw-light pt-5">Participant Members</h2>
           <p className="lead text-muted">
             Participant Members are typically organizations that deliver
@@ -63,7 +63,7 @@ const MembersPage = () => (
             organizations want to participate in the evolution of the Eclipse
             Adoptium ecosystem to ensure it continues to meet their needs.
           </p>
-          <MembersGrid members={participantMembers} />
+          <LogosGrid members={participantMembers} />
           <a
             style={{ margin: 20 }}
             href="https://membership.eclipse.org/application#sign-in"

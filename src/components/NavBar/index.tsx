@@ -25,7 +25,7 @@ const navigation: NavItem[] = [
     children: [
       { name: "What We do", href: "/what-we-do" },
       { name: "Business Benefits", href: "/business-benefits" },
-      { name: "Our Supporters", href: "#" },
+      { name: "Our Supporters", href: "/supporters" },
       { name: "Our Adopters", href: "#" },
       { name: "Support Us", href: "#" },
     ],
@@ -193,9 +193,9 @@ const NavBar = () => {
             ),
           )}
         </div>
-        <div className="space-x-3">
+        <div className="hidden sm:block space-x-3 h-12">
           <LanguageSelector />
-          <div className="w-12 h-12 p-3 rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex">
+          <div className="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex">
             <a href="#">
               <FaRegBell size={20} />
             </a>

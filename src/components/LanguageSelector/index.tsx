@@ -11,7 +11,7 @@ function classNames(...classes) {
 
 const LanguageSelector = (): JSX.Element => {
   const { languages, changeLanguage, language } = useI18next()
-  const [selectedLanguage, setSelectedLanguage] = useState(language);
+  const [selectedLanguage, setSelectedLanguage] = useState(language)
 
   function ISO3166(lng: string) {
     // Convert locale to ISO 3166-1 alpha-2 https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
@@ -42,12 +42,13 @@ const LanguageSelector = (): JSX.Element => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent px-4 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-700 focus:outline-none">
-          <Flag className="mb-0" code={ISO3166(language)} width="35" />
+        <Menu.Button className="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-sm border-2 border-gray-700">
+          <Flag className="mb-0 h-5" code={ISO3166(language)} />
           <span>{ISO6391.getNativeName(ISO639(selectedLanguage))}</span>
           <FaChevronDown
             className="-mr-1 h-5 w-5 text-white"
             aria-hidden="true"
+            size={15}
           />
         </Menu.Button>
       </div>

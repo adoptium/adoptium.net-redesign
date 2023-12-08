@@ -1,9 +1,10 @@
 import React, { useState, useEffect, Fragment } from "react"
 import { Link } from "gatsby-plugin-react-i18next"
 import { Dialog, Menu, Transition } from "@headlessui/react"
-import { FaChevronDown } from "react-icons/fa"
+import { FaChevronDown, FaRegBell } from "react-icons/fa"
 
 import IconSocial from "../IconSocial"
+import LanguageSelector from "../LanguageSelector"
 
 // @ts-ignore
 import Logo from "../../images/adoptium-logo-dark.svg"
@@ -192,9 +193,14 @@ const NavBar = () => {
             ),
           )}
         </div>
-        <button className="rounded-[88px] hidden sm:block bg-transparent gradient-border border-2  border-pink-500/0 text-white text-sm font-semibold w-[153px] h-[48px]">
-          Contact Us
-        </button>
+        <div className="space-x-3">
+          <LanguageSelector />
+          <div className="w-12 h-12 p-3 rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex">
+            <a href="#">
+              <FaRegBell size={20} />
+            </a>
+          </div>
+        </div>
       </nav>
       <Dialog
         as="div"

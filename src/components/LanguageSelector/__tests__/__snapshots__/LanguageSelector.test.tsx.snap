@@ -3,70 +3,142 @@
 exports[`Language Selector component > renders correctly - expanded 1`] = `
 <div>
   <div
-    class="App lngg"
+    class="relative inline-block text-left"
+    data-headlessui-state="open"
   >
-    <div
-      class="relative inline-block text-left"
-    >
+    <div>
       <button
-        aria-label="Language Selector"
-        class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-700 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-        id="dropdown-flags"
+        aria-controls="headlessui-menu-items-:r2:"
+        aria-expanded="true"
+        aria-haspopup="menu"
+        class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent px-4 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-700 focus:outline-none"
+        data-headlessui-state="open"
+        id="headlessui-menu-button-:r1:"
+        type="button"
       >
-        Text
-      </button>
-      <div
-        class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-      >
-        <div
-          class="py-1"
+        Flag
+        <span>
+          English
+        </span>
+        <svg
+          aria-hidden="true"
+          class="-mr-1 h-5 w-5 text-white"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <a
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            data-testid="en"
-            href="#"
-            id="en"
+          <path
+            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      aria-labelledby="headlessui-menu-button-:r1:"
+      class="absolute right-0 z-10 mt-2 w-26 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition ease-out duration-100 transform opacity-0 scale-95"
+      data-headlessui-state="open"
+      id="headlessui-menu-items-:r2:"
+      role="menu"
+      tabindex="0"
+    >
+      <div
+        class="py-1"
+        role="none"
+      >
+        <a
+          class="text-gray-700 block px-4 py-2 text-sm"
+          data-headlessui-state=""
+          data-testid="en"
+          href="#"
+          id="headlessui-menu-item-:r3:"
+          role="menuitem"
+          tabindex="-1"
+        >
+          <div
+            class="flex items-center space-x-2"
           >
             Flag
-            English
-          </a>
-          <a
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            data-testid="en-GB"
-            href="#"
-            id="en-GB"
+            <span>
+              English
+            </span>
+          </div>
+        </a>
+        <a
+          class="text-gray-700 block px-4 py-2 text-sm"
+          data-headlessui-state=""
+          data-testid="en-GB"
+          href="#"
+          id="headlessui-menu-item-:r4:"
+          role="menuitem"
+          tabindex="-1"
+        >
+          <div
+            class="flex items-center space-x-2"
           >
             Flag
-            English
-          </a>
-          <a
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            data-testid="es"
-            href="#"
-            id="es"
+            <span>
+              English
+            </span>
+          </div>
+        </a>
+        <a
+          class="text-gray-700 block px-4 py-2 text-sm"
+          data-headlessui-state=""
+          data-testid="es"
+          href="#"
+          id="headlessui-menu-item-:r5:"
+          role="menuitem"
+          tabindex="-1"
+        >
+          <div
+            class="flex items-center space-x-2"
           >
             Flag
-            Español
-          </a>
-          <a
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            data-testid="de"
-            href="#"
-            id="de"
+            <span>
+              Español
+            </span>
+          </div>
+        </a>
+        <a
+          class="text-gray-700 block px-4 py-2 text-sm"
+          data-headlessui-state=""
+          data-testid="de"
+          href="#"
+          id="headlessui-menu-item-:r6:"
+          role="menuitem"
+          tabindex="-1"
+        >
+          <div
+            class="flex items-center space-x-2"
           >
             Flag
-            Deutsch
-          </a>
-          <a
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            data-testid="zh-CN"
-            href="#"
-            id="zh-CN"
+            <span>
+              Deutsch
+            </span>
+          </div>
+        </a>
+        <a
+          class="text-gray-700 block px-4 py-2 text-sm"
+          data-headlessui-state=""
+          data-testid="zh-CN"
+          href="#"
+          id="headlessui-menu-item-:r7:"
+          role="menuitem"
+          tabindex="-1"
+        >
+          <div
+            class="flex items-center space-x-2"
           >
             Flag
-            中文
-          </a>
-        </div>
+            <span>
+              中文
+            </span>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -76,71 +148,38 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
 exports[`Language Selector component > renders correctly 1`] = `
 <div>
   <div
-    class="App lngg"
+    class="relative inline-block text-left"
+    data-headlessui-state=""
   >
-    <div
-      class="relative inline-block text-left"
-    >
+    <div>
       <button
-        aria-label="Language Selector"
-        class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-700 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-        id="dropdown-flags"
+        aria-expanded="false"
+        aria-haspopup="menu"
+        class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent px-4 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-700 focus:outline-none"
+        data-headlessui-state=""
+        id="headlessui-menu-button-:r0:"
+        type="button"
       >
-        Text
-      </button>
-      <div
-        class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-      >
-        <div
-          class="py-1"
+        Flag
+        <span>
+          English
+        </span>
+        <svg
+          aria-hidden="true"
+          class="-mr-1 h-5 w-5 text-white"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <a
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            data-testid="en"
-            href="#"
-            id="en"
-          >
-            Flag
-            English
-          </a>
-          <a
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            data-testid="en-GB"
-            href="#"
-            id="en-GB"
-          >
-            Flag
-            English
-          </a>
-          <a
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            data-testid="es"
-            href="#"
-            id="es"
-          >
-            Flag
-            Español
-          </a>
-          <a
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            data-testid="de"
-            href="#"
-            id="de"
-          >
-            Flag
-            Deutsch
-          </a>
-          <a
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            data-testid="zh-CN"
-            href="#"
-            id="zh-CN"
-          >
-            Flag
-            中文
-          </a>
-        </div>
-      </div>
+          <path
+            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>

@@ -1,11 +1,17 @@
-import React from "react"
+import React, { Fragment, useState } from "react"
 import { useI18next, Trans } from "gatsby-plugin-react-i18next"
+import { Menu, Transition } from "@headlessui/react"
+import { FaChevronDown } from "react-icons/fa"
 import Flag from "react-world-flags"
 import ISO6391 from "iso-639-1"
-import "./LanguageSelector.scss"
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ")
+}
 
 const LanguageSelector = (): JSX.Element => {
-  const { languages, changeLanguage } = useI18next()
+  const { languages, changeLanguage, language } = useI18next()
+  const [selectedLanguage, setSelectedLanguage] = useState(language);
 
   function ISO3166(lng: string) {
     // Convert locale to ISO 3166-1 alpha-2 https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
@@ -34,37 +40,57 @@ const LanguageSelector = (): JSX.Element => {
   }
 
   return (
-    <div className="App lngg">
-      <div className="relative inline-block text-left">
-        <button
-          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-700 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-          aria-label="Language Selector"
-          id="dropdown-flags"
-        >
-          <Trans>Change Language</Trans>
-        </button>
-        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+    <Menu as="div" className="relative inline-block text-left">
+      <div>
+        <Menu.Button className="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent px-4 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-700 focus:outline-none">
+          <Flag className="mb-0" code={ISO3166(language)} width="35" />
+          <span>{ISO6391.getNativeName(ISO639(selectedLanguage))}</span>
+          <FaChevronDown
+            className="-mr-1 h-5 w-5 text-white"
+            aria-hidden="true"
+          />
+        </Menu.Button>
+      </div>
+
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Menu.Items className="absolute right-0 z-10 mt-2 w-26 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
             {languages.map((lng: string) => (
-              <a
-                href="#"
-                id={lng}
-                data-testid={lng}
-                key={lng}
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                onClick={e => {
-                  e.preventDefault()
-                  changeLanguage(lng)
-                }}
-              >
-                <Flag code={ISO3166(lng)} width="35" />
-                {ISO6391.getNativeName(ISO639(lng))}
-              </a>
+              <Menu.Item key={lng}>
+                {({ active }) => (
+                  <a
+                    href="#"
+                    id={lng}
+                    data-testid={lng}
+                    onClick={e => {
+                      e.preventDefault()
+                      changeLanguage(lng)
+                    }}
+                    className={classNames(
+                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      "block px-4 py-2 text-sm",
+                    )}
+                  >
+                    <div className="flex items-center space-x-2">
+                      <Flag className="mb-0" code={ISO3166(lng)} width="35" />
+                      <span>{ISO6391.getNativeName(ISO639(lng))}</span>
+                    </div>
+                  </a>
+                )}
+              </Menu.Item>
             ))}
           </div>
-        </div>
-      </div>
-    </div>
+        </Menu.Items>
+      </Transition>
+    </Menu>
   )
 }
 

@@ -2,11 +2,19 @@ import { renderHook, waitFor } from '@testing-library/react'
 import { vi } from 'vitest';
 import { useAdoptiumContributorsApi } from '../useAdoptiumContributorsApi';
 import { createMockAdoptiumContributorsApi } from '../../__fixtures__/hooks';
+import axios from 'axios'
+import MockAdapter from 'axios-mock-adapter';
 
+const mock = new MockAdapter(axios);
 const mockResponse = [createMockAdoptiumContributorsApi()];
 
 afterEach(() => {
   vi.clearAllMocks();
+  mock.reset();
+});
+
+afterAll(() => {
+  mock.restore();
 });
 
 describe('useAdoptiumContributorsApi hook', () => {
@@ -34,18 +42,8 @@ describe('useAdoptiumContributorsApi hook', () => {
   });
 
   it('fetches data when isVisible is true', async () => {
-    // @ts-ignore
-    global.fetch = vi.fn(() => Promise.resolve({
-      json: () => Promise.resolve(mockResponse),
-      headers: {
-        get: (header: string) => {
-          if (header === 'Link') {
-            return '<https://api.github.com/repositories/1/contributors?per_page=1&page=2>; rel="next", <https://api.github.com/repositories/1/contributors?per_page=1&page=50>; rel="last"';
-          }
-          return null;
-        }
-      }
-    }));
+    mock.onGet().reply(200, mockResponse, {'Link': '<https://api.github.com/repositories/1/contributors?per_page=1&page=2>; rel="next", <https://api.github.com/repositories/1/contributors?per_page=1&page=50>; rel="last"'});
+
     const { result } = renderHook(() => useAdoptiumContributorsApi(true));
 
     await waitFor(() => {
@@ -68,12 +66,40 @@ describe('useAdoptiumContributorsApi hook', () => {
   });
 
   it('returns null if error is caught in fetch', async () => {
-    global.fetch = vi.fn(() => Promise.reject('error'));
-    
+    mock.onGet().reply(500);
+    let spy = vi.spyOn(axios, "get");
+
     const { result } = renderHook(() => useAdoptiumContributorsApi(true));
     
     await waitFor(() => {
-      expect(global.fetch).toHaveBeenCalledTimes(1);
+      expect(spy).toHaveBeenCalledTimes(1);
+    });
+
+    expect(result.current).toBeNull();
+  });
+
+  it('getMaxContributors fails on error', async () => {
+    mock.onGet().reply(500);
+    let spy = vi.spyOn(axios, "get");
+
+    const { result } = renderHook(() => useAdoptiumContributorsApi(true));
+    
+    await waitFor(() => {
+      expect(spy).toHaveBeenCalledTimes(1);
+    });
+
+    expect(result.current).toBeNull();
+  });
+
+  it('getContributor fails on error', async () => {
+    mock.onGet(/.*\/contributors\?per_page=1$/).reply(200, mockResponse, {'Link': '<https://api.github.com/repositories/1/contributors?per_page=1&page=2>; rel="next", <https://api.github.com/repositories/1/contributors?per_page=1&page=50>; rel="last"'});
+    mock.onGet().reply(500);
+    let spy = vi.spyOn(axios, "get");
+
+    const { result } = renderHook(() => useAdoptiumContributorsApi(true));
+
+    await waitFor(() => {
+      expect(spy).toHaveBeenCalledTimes(2);
     });
 
     expect(result.current).toBeNull();

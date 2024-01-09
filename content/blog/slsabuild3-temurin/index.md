@@ -83,7 +83,7 @@ familiar with the API for downloading JDKs, then replacing `jdk` with `sbom`
 in the URL will let you download the SBoM. For example, this will download
 the latest GA SBoM for Temurin 21 on Linux/x64:
 
-- https://api.adoptopenjdk.net/v3/binary/latest/21/ga/linux/x64/sbom/hotspot/normal/adoptopenjdk?project=jdk
+- https://api.adoptium.net/v3/binary/latest/21/ga/linux/x64/sbom/hotspot/normal/eclipse
 
 Note that there is an enhanced version of the SBoM which includes more
 details on the artifacts that is already in the nightly builds and will be

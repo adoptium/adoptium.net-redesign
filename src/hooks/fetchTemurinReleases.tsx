@@ -1,14 +1,8 @@
-import { VersionMetaData } from '.';
+import { VersionMetaData, compareVersions, getVersionAsString } from '.';
 import { fetchExtension } from '../util/fetchExtension';
 import axios from 'axios';
 
 const baseUrl = 'https://api.adoptium.net/v3';
-
-Date.prototype.withoutTime = function () {
-    var d = new Date(this);
-    d.setHours(0, 0, 0, 0);
-    return d;
-};
 
 export async function loadLatestAssets(
     version: number,
@@ -67,16 +61,22 @@ function renderReleases(pkgs: Array<TemurinRelease>): ReleaseAsset[] {
                 platform_name: `${releaseAsset.binary.os}-${releaseAsset.binary.architecture}`,
                 os: releaseAsset.binary.os,
                 architecture: releaseAsset.binary.architecture,
-                release_name: releaseAsset.release_name,
+                release_name: getVersionAsString(releaseAsset.version),
                 release_link: new URL(releaseAsset.release_link),
                 release_date: new Date(releaseAsset.binary.updated_at),
-                binaries: []
+                version: releaseAsset.version,
+                binaries: [],
             };
         } else {
             // update the release date if this asset is newer
             const rabua = new Date(releaseAsset.binary.updated_at);
             if (release.release_date < rabua) {
                 release.release_date = rabua;
+            }
+            // update the version if this asset is newer
+            if(compareVersions(releaseAsset.version, release.version) === 1) {
+                release.version = releaseAsset.version;
+                release.release_name = getVersionAsString(releaseAsset.version);
             }
         }
 
@@ -106,16 +106,27 @@ function renderReleases(pkgs: Array<TemurinRelease>): ReleaseAsset[] {
 
     // well sort releases
     releases.sort((pkg1: ReleaseAsset, pkg2: ReleaseAsset) => {
-        // order by date DESC
-        let comparison = pkg2.release_date.withoutTime() - pkg1.release_date.withoutTime();
+        // order by version DESC
+        let comparison = compareVersions(pkg2.version, pkg1.version);
+        // let comparison = 0;
+
         if (comparison === 0) {
-            // for the same date, sort by OS ASC
-            comparison = pkg1.os.localeCompare(pkg2.os);
-            if (comparison ===  0) {
-                // for the same OS, sort by architecture ASC
-                const arch1 = pkg1.architecture === 'x32' ? 'x86' : pkg1.architecture
-                const arch2 = pkg2.architecture === 'x32' ? 'x86' : pkg2.architecture
-                comparison = arch1.localeCompare(arch2);
+            // NOTE: Ordering by date DESC is disabled because it's less intuitive than by version done previously
+            // order by date DESC
+            // const releaseDateUTCInMillis1 = Date.UTC(pkg1.release_date.getUTCFullYear(), pkg1.release_date.getUTCMonth(), pkg1.release_date.getUTCDate(), 0, 0, 0, 0);
+            // const releaseDateUTCInMillis2 = Date.UTC(pkg2.release_date.getUTCFullYear(), pkg2.release_date.getUTCMonth(), pkg2.release_date.getUTCDate(), 0, 0, 0, 0);
+            // comparison = releaseDateUTCInMillis2 - releaseDateUTCInMillis1;
+
+            if (comparison === 0) {
+                // for the same date, sort by OS ASC
+                comparison = pkg1.os.localeCompare(pkg2.os);
+
+                if (comparison === 0) {
+                    // for the same OS, sort by architecture ASC
+                    const arch1 = pkg1.architecture === 'x32' ? 'x86' : pkg1.architecture;
+                    const arch2 = pkg2.architecture === 'x32' ? 'x86' : pkg2.architecture;
+                    comparison = arch1.localeCompare(arch2);
+                }
             }
         }
         return comparison;
@@ -136,6 +147,7 @@ export interface ReleaseAsset {
     release_name: string;
     release_link: URL;
     release_date: Date;
+    version: VersionMetaData;
     binaries: Array<Binary>;
 }
 
@@ -146,6 +158,7 @@ interface TemurinRelease {
     platform_name: string;
     release_name: string;
     release_date: Date;
+    version: VersionMetaData;
     binary: {
         updated_at: Date;
         os: string;
@@ -170,7 +183,7 @@ interface TemurinRelease {
             metadata_link: URL;
             size: number;
         }
-    }
+    };
 }
 
 interface Binary {

@@ -1,13 +1,21 @@
-import { renderHook, waitFor } from "@testing-library/react"
-import { vi } from "vitest"
-import { useAdoptiumContributorsApi } from "../useAdoptiumContributorsApi"
-import { createMockAdoptiumContributorsApi } from "../../__fixtures__/hooks"
+import { renderHook, waitFor } from '@testing-library/react'
+import { vi } from 'vitest';
+import { useAdoptiumContributorsApi } from '../useAdoptiumContributorsApi';
+import { createMockAdoptiumContributorsApi } from '../../__fixtures__/hooks';
+import axios from 'axios'
+import MockAdapter from 'axios-mock-adapter';
 
-const mockResponse = [createMockAdoptiumContributorsApi()]
+const mock = new MockAdapter(axios);
+const mockResponse = [createMockAdoptiumContributorsApi()];
 
 afterEach(() => {
-  vi.clearAllMocks()
-})
+  vi.clearAllMocks();
+  mock.reset();
+});
+
+afterAll(() => {
+  mock.restore();
+});
 
 describe("useAdoptiumContributorsApi hook", () => {
   // Mock the localStorage
@@ -28,27 +36,15 @@ describe("useAdoptiumContributorsApi hook", () => {
         removeItem: function (key) {
           delete store[key]
         },
-      }
-    })()
-    Object.defineProperty(window, "localStorage", { value: localStorageMock })
-  })
+      };
+    })();
+    Object.defineProperty(window, 'localStorage', { value: localStorageMock });
+  });
 
-  it("fetches data when isVisible is true", async () => {
-    // @ts-ignore
-    global.fetch = vi.fn(() =>
-      Promise.resolve({
-        json: () => Promise.resolve(mockResponse),
-        headers: {
-          get: (header: string) => {
-            if (header === "Link") {
-              return '<https://api.github.com/repositories/1/contributors?per_page=1&page=2>; rel="next", <https://api.github.com/repositories/1/contributors?per_page=1&page=50>; rel="last"'
-            }
-            return null
-          },
-        },
-      }),
-    )
-    const { result } = renderHook(() => useAdoptiumContributorsApi(true))
+  it('fetches data when isVisible is true', async () => {
+    mock.onGet().reply(200, mockResponse, {'Link': '<https://api.github.com/repositories/1/contributors?per_page=1&page=2>; rel="next", <https://api.github.com/repositories/1/contributors?per_page=1&page=50>; rel="last"'});
+
+    const { result } = renderHook(() => useAdoptiumContributorsApi(true));
 
     await waitFor(() => {
       expect(result.current).not.toBeNull()
@@ -76,9 +72,42 @@ describe("useAdoptiumContributorsApi hook", () => {
 
     const { result } = renderHook(() => useAdoptiumContributorsApi(true))
 
+  it('returns null if error is caught in fetch', async () => {
+    mock.onGet().reply(500);
+    let spy = vi.spyOn(axios, "get");
+
+    const { result } = renderHook(() => useAdoptiumContributorsApi(true));
+    
     await waitFor(() => {
-      expect(global.fetch).toHaveBeenCalledTimes(1)
-    })
+      expect(spy).toHaveBeenCalledTimes(1);
+    });
+
+    expect(result.current).toBeNull();
+  });
+
+  it('getMaxContributors fails on error', async () => {
+    mock.onGet().reply(500);
+    let spy = vi.spyOn(axios, "get");
+
+    const { result } = renderHook(() => useAdoptiumContributorsApi(true));
+    
+    await waitFor(() => {
+      expect(spy).toHaveBeenCalledTimes(1);
+    });
+
+    expect(result.current).toBeNull();
+  });
+
+  it('getContributor fails on error', async () => {
+    mock.onGet(/.*\/contributors\?per_page=1$/).reply(200, mockResponse, {'Link': '<https://api.github.com/repositories/1/contributors?per_page=1&page=2>; rel="next", <https://api.github.com/repositories/1/contributors?per_page=1&page=50>; rel="last"'});
+    mock.onGet().reply(500);
+    let spy = vi.spyOn(axios, "get");
+
+    const { result } = renderHook(() => useAdoptiumContributorsApi(true));
+
+    await waitFor(() => {
+      expect(spy).toHaveBeenCalledTimes(2);
+    });
 
     expect(result.current).toBeNull()
   })

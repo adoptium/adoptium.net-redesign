@@ -1,36 +1,46 @@
-import { renderHook, waitFor } from "@testing-library/react"
-import { describe, expect, it, vi } from "vitest"
-import { fetchNewsItems } from "../fetchNews"
-import { mockNewsAPI, mockEventsAPI } from "../../__fixtures__/hooks"
+import { renderHook, waitFor } from '@testing-library/react'
+import { describe, expect, it, vi } from 'vitest'
+import { fetchNewsItems } from '../fetchNews';
+import { mockNewsAPI, mockEventsAPI  } from '../../__fixtures__/hooks';
+import axios from 'axios'
+import MockAdapter from 'axios-mock-adapter';
 
-global.fetch = vi.fn().mockImplementation((url: URL) => {
-  switch (url.pathname) {
-    case "/api/news":
-      return Promise.resolve({
-        json: () => Promise.resolve(mockNewsAPI()),
-      })
-    case "/api/events":
-      return Promise.resolve({
-        json: () => Promise.resolve(mockEventsAPI()),
-      })
-  }
-})
+const mock = new MockAdapter(axios);
 
 afterEach(() => {
-  vi.clearAllMocks()
-})
+  vi.clearAllMocks();
+  mock.reset();
+});
 
-describe("fetchNewsItems", () => {
-  it("returns valid news and events object", async () => {
-    const { result } = renderHook(() => fetchNewsItems(true, 1))
-    await waitFor(
-      () => {
-        expect(result.current?.news.news[0].title).toBe("news_title_mock")
-        expect(result.current?.events[0].title).toBe("events_title_mock")
-      },
-      { interval: 1 },
-    )
-    expect(global.fetch).toHaveBeenCalledTimes(2)
+afterAll(() => {
+  mock.restore();
+});
+
+describe('fetchNewsItems', () => {
+  it('returns valid news and events object', async () => {
+    mock.onGet(/.*\/api\/news.*/).reply(200, mockNewsAPI());
+    mock.onGet(/.*\/api\/events.*/).reply(200, mockEventsAPI());
+    let spy = vi.spyOn(axios, "get");
+
+    const { result } = renderHook(() => fetchNewsItems(true, 1));
+    await waitFor(() => {
+      expect(result.current?.news.news[0].title).toBe('news_title_mock')
+      expect(result.current?.events[0].title).toBe('events_title_mock')
+    }, { interval: 1 });
+    expect(spy).toHaveBeenCalledTimes(2)
     expect(result.current).toMatchSnapshot()
   })
-})
+
+  it('newsAndEvents to be empty on error', async() => {
+    mock.onGet().reply(500);
+    let spy = vi.spyOn(axios, "get");
+
+    const { result } = renderHook(() => fetchNewsItems(true, 1));
+    await waitFor(() => {
+      expect(result.current?.news.news).toStrictEqual([])
+      expect(result.current?.events).toStrictEqual([])
+    }, { interval: 1 });
+
+    expect(spy).toHaveBeenCalledTimes(2)
+  })
+});

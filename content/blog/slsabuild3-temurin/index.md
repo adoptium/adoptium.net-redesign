@@ -12,19 +12,19 @@ tags:
 
 Supply-chain Levels for Software Artifacts, or [SLSA](https://slsa.dev), is a framework with individual levels that software
 producers can work towards to make their software more secure, and consumers
-can use to make decisions based on the software package’s security posture.  The
+can use to make decisions based on the software package’s security posture. The
 Adoptium project has worked closely with the Eclipse Foundation security
 team to work towards making the Eclipse Temurin compliant with the SLSA
 specification's build requirements.
 
 [At the end](https://adoptium.net/blog/2022/11/slsa2-temurin/)
 [of 2022](https://newsroom.eclipse.org/eclipse-newsletter/2022/december/eclipse-temurin-slsa-level-two-compliant)
-we achieved compliance with level 2 of the SLSA v0.1 specification.  In
+we achieved compliance with level 2 of the SLSA v0.1 specification. In
 April 2023 SLSA version 1.0 was released and split the specification into
 multiple "tracks", of which the build track is the only one currently
-published.  If you're not familiar with the changes, check out
+published. If you're not familiar with the changes, check out
 [this lightning talk](https://youtu.be/uLXzyutZEmQ?si=XjD9H6uO_GEjJVBG) from one
-of my colleagues.  We have been able to build on our work done previously to
+of my colleagues. We have been able to build on our work done previously to
 meet build level 3 for Linux and macOS for Eclipse Temurin's build and
 distribution.
 
@@ -54,16 +54,16 @@ claiming SLSA build level 3 for those builds.
 
 We have introduced a build verification step which can take the Software
 Bill of Materials (SBoM) produced as part of the build output and verify its
-contents as far as is practical.  This will do some checks to ensure that
+contents as far as is practical. This will do some checks to ensure that
 the fields are valid and match expectations about how the product has been
-built.  This job is stored in
+built. This job is stored in
 https://github.com/adoptium/temurin-build/blob/master/tooling as
 release_download_test.sh which performs SHA and GPG checks as well as
-running some basic checks on the downloads.  It also calls
+running some basic checks on the downloads. It also calls
 validateSBOMcontent.sh to check the SBoM contents to make sure the
-dependencies, including compilers, listed in there match expectations.  The
+dependencies, including compilers, listed in there match expectations. The
 SBoM contents now also includes the SHA256 checksums of all of the build
-artifacts in the `components` section.  There is information on
+artifacts in the `components` section. There is information on
 programatically verifying the GPG signatures in
 [an earlier blog](https://adoptium.net/blog/2022/07/gpg-signed-releases/)
 
@@ -78,7 +78,7 @@ then these will be trapped early on.
 We expect that all of these checks will be enhanced over time, particularly
 as we add more details into the SBoM.
 
-The current SBoM can be downloaded via the adoptium API.  If you are already
+The current SBoM can be downloaded via the adoptium API. If you are already
 familiar with the API for downloading JDKs, then replacing `jdk` with `sbom`
 in the URL will let you download the SBoM. For example, this will download
 the latest GA SBoM for Temurin 21 on Linux/x64:
@@ -87,7 +87,7 @@ the latest GA SBoM for Temurin 21 on Linux/x64:
 
 Note that there is an enhanced version of the SBoM which includes more
 details on the artifacts that is already in the nightly builds and will be
-included for the January 2024 GA releases and beyond.  We will not (and
+included for the January 2024 GA releases and beyond. We will not (and
 should not) regenerate the SBoM for older releases.
 
 ### Prevent secret material used to sign the provenance from being accessible to user-defined build steps
@@ -107,6 +107,6 @@ source code.
 We are also continuing to work on our [reproducible builds](https://adoptium.net/blog/2023/09/Reproducible-Comparison-Builds/) which gives an
 extra layer of confidence that any customers of Temurin are able to rebuild
 from source code in order to independently verify that nothing in our build
-systems have been tampered with or introduced any unexpected code.  Anyone
+systems have been tampered with or introduced any unexpected code. Anyone
 (yes, even you!) can use our fully open-source setup and build scripts to
 rebuild the Temurin JDK, and we encourage you to give it a try!

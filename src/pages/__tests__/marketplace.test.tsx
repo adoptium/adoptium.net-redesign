@@ -1,12 +1,12 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest'
-import { axe } from 'vitest-axe';
-import Marketplace, { Head } from '../marketplace';
-import AxiosInstance from 'axios'
-import MockAdapter from 'axios-mock-adapter';
+import React from "react"
+import { render } from "@testing-library/react"
+import { describe, expect, it, vi } from "vitest"
+import { axe } from "vitest-axe"
+import Marketplace, { Head } from "../marketplace"
+import AxiosInstance from "axios"
+import MockAdapter from "axios-mock-adapter"
 
-const mock = new MockAdapter(AxiosInstance);
+const mock = new MockAdapter(AxiosInstance)
 
 vi.mock("../../util/shuffle", () => {
   return {
@@ -27,30 +27,30 @@ afterEach(() => {
   vi.clearAllMocks()
 })
 
-describe('Marketplace page', () => {
-  it('renders correctly', () => {
-    mock.onGet().reply(200, []);
+describe("Marketplace page", () => {
+  it("renders correctly", () => {
+    mock.onGet().reply(200, [])
 
-    const { container } = render(<Marketplace />);
+    const { container } = render(<Marketplace />)
     // eslint-disable-next-line
     const pageContent = container.querySelector("main")
     expect(pageContent).toMatchSnapshot()
   })
 
-  it('head renders correctly', () => {
-    mock.onGet().reply(200, []);
+  it("head renders correctly", () => {
+    mock.onGet().reply(200, [])
 
-    const { container } = render(<Head />);
+    const { container } = render(<Head />)
     // eslint-disable-next-line
     const title = container.querySelector("title")
     expect(title?.textContent).toEqual("Marketplace | Adoptium")
   })
 
-  it('has no accessibility violations', async () => {
-    mock.onGet().reply(200, []);
+  it("has no accessibility violations", async () => {
+    mock.onGet().reply(200, [])
 
-    const { container } = render(<Marketplace />);
-    const results = await axe(container);
-    expect(results).toHaveNoViolations();
-  });
-});
+    const { container } = render(<Marketplace />)
+    const results = await axe(container)
+    expect(results).toHaveNoViolations()
+  })
+})

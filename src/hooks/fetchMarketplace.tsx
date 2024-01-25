@@ -1,7 +1,7 @@
-import { VersionMetaData } from ".";
-import axios from 'axios';
+import { VersionMetaData } from "."
+import axios from "axios"
 
-const baseUrl = 'https://marketplace-api.adoptium.net';
+const baseUrl = "https://marketplace-api.adoptium.net"
 
 export async function getAllPkgsForVersion(
   version: number,
@@ -25,16 +25,17 @@ export async function getAllPkgsForVersion(
     params += "&architecture=" + architecture
   }
 
-    const url = baseUrl + '/v1/assets/latestForVendors' + params;
-    const data = await axios.get(url)
-        .then(function (response) {
-            return response.data;
-        })
-        .catch(function (error) {
-            return null;
-        });
+  const url = baseUrl + "/v1/assets/latestForVendors" + params
+  const data = await axios
+    .get(url)
+    .then(function (response) {
+      return response.data
+    })
+    .catch(function (error) {
+      return null
+    })
 
-    return data
+  return data
 }
 
 export function getImageForDistribution(distribution: string) {

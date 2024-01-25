@@ -1,6 +1,6 @@
-import { VersionMetaData } from '.';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { VersionMetaData } from "."
+import { useEffect, useState } from "react"
+import axios from "axios"
 
 const baseUrl = "https://api.adoptium.net/v3/info/release_notes"
 
@@ -13,27 +13,29 @@ export function fetchReleaseNotesForVersion(
     return null
   }
 
-    const [releaseNotes, setReleaseNotes] = useState<ReleaseNoteAPIResponse | null>(null);
+  const [releaseNotes, setReleaseNotes] =
+    useState<ReleaseNoteAPIResponse | null>(null)
 
-    useEffect(() => {
-        if (isVisible) {
-        (async () => {
-            const url = `${baseUrl}/${version}`;
+  useEffect(() => {
+    if (isVisible) {
+      ;(async () => {
+        const url = `${baseUrl}/${version}`
 
-            await axios.get(url.toString())
-                .then(function (response) {
-                    let result = response.data
-                    if(sortReleaseNotesByCallback) sortReleaseNotesByCallback(result);
-                    setReleaseNotes(result)
-                })
-                .catch(function (error) {
-                    setReleaseNotes(null)
-                });
-        })();
-        }
-    }, [isVisible, version]);
+        await axios
+          .get(url.toString())
+          .then(function (response) {
+            let result = response.data
+            if (sortReleaseNotesByCallback) sortReleaseNotesByCallback(result)
+            setReleaseNotes(result)
+          })
+          .catch(function (error) {
+            setReleaseNotes(null)
+          })
+      })()
+    }
+  }, [isVisible, version])
 
-    return releaseNotes;
+  return releaseNotes
 }
 
 export interface ReleaseNoteAPIResponse {

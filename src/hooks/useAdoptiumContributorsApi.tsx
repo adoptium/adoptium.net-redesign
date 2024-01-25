@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from "react"
+import axios from "axios"
 
 // List of repos that will be checked for contributions
 const repositories = [
@@ -72,13 +72,14 @@ function linkParser(linkHeader: string): {
 async function getMaxContributors(): Promise<[number, number]> {
   // this call is used to know how many contributors there are in this repo
   // check the Link header to compute first and last
-  const linksHeaderValue = await axios.get(CONTRIBUTORS_API_URI)
+  const linksHeaderValue = await axios
+    .get(CONTRIBUTORS_API_URI)
     .then(function (response) {
-      return response.headers.get('Link')
+      return response.headers.get("Link")
     })
     .catch(function (error) {
-        return undefined
-    });
+      return undefined
+    })
 
   if (linksHeaderValue) {
     const links = linkParser(linksHeaderValue)
@@ -98,16 +99,17 @@ async function getMaxContributors(): Promise<[number, number]> {
  * @param randomPage
  */
 async function getContributor(randomPage: number): Promise<Contributor | null> {
-  const contributor = await axios.get(`${CONTRIBUTORS_API_URI}&page=${randomPage}`)
+  const contributor = await axios
+    .get(`${CONTRIBUTORS_API_URI}&page=${randomPage}`)
     .then(function (response) {
-      return response.data[0] as ContributorApiResponse;
+      return response.data[0] as ContributorApiResponse
     })
     .catch(function (error) {
-        return undefined
-    });
+      return undefined
+    })
 
-  if(!contributor) {
-    return null;
+  if (!contributor) {
+    return null
   }
 
   return {
@@ -138,8 +140,10 @@ async function fetchRandomContributor() {
       window.localStorage.getItem(wlsMaxContributors)
     const fetchDateStored = window.localStorage.getItem(wlsFetchDate)
 
-    maxContributors = maxContributorsStored ? parseInt(maxContributorsStored, 10) : null;
-    fetchDate = fetchDateStored ? parseInt(fetchDateStored, 10) : null;
+    maxContributors = maxContributorsStored
+      ? parseInt(maxContributorsStored, 10)
+      : null
+    fetchDate = fetchDateStored ? parseInt(fetchDateStored, 10) : null
   }
 
   if (fetchDate && Date.now() - fetchDate >= ONE_MONTH_MS) {

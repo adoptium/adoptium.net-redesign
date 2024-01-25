@@ -66,7 +66,7 @@ const Supporters = () => {
         title="Participant Members"
         description="Companies that use Eclipse Temurin in production."
       />
-            <div className="flex justify-center flex-wrap items-center gap-5 md:gap-14 m-5">
+      <div className="flex justify-center flex-wrap items-center gap-5 md:gap-14 m-5">
         <p className="text-[20px] leading-[28px] text-white my-0 text-center">
           Are you interested in becoming a member?
         </p>

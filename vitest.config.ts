@@ -15,26 +15,26 @@ export default defineConfig({
   ],
   test: {
     globals: true,
-    setupFiles: './vitest-setup.ts',
-    environment: 'jsdom',
+    setupFiles: "./vitest-setup.ts",
+    environment: "jsdom",
     deps: {
       // >= 0.34
       optimizer: {
         web: {
-          include: ['vitest-canvas-mock']
-        }
-      }
+          include: ["vitest-canvas-mock"],
+        },
+      },
     },
     coverage: {
       all: true,
-      include: ['src/**/*.{ts,tsx}'],
-      exclude: ['src/types/**', 'src/**/__tests__/**', 'src/**/__mocks__/**'],
-      reporter: ['text', 'json', 'html']
+      include: ["src/**/*.{ts,tsx}"],
+      exclude: ["src/types/**", "src/**/__tests__/**", "src/**/__mocks__/**"],
+      reporter: ["text", "json", "html"],
     },
     environmentOptions: {
       jsdom: {
-        resources: 'usable',
+        resources: "usable",
       },
-    },  
-  }
+    },
+  },
 })

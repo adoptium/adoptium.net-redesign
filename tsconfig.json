@@ -18,13 +18,13 @@
     "esModuleInterop": true,
     "downlevelIteration": true,
     "resolveJsonModule": true,
-    "plugins": []
+    "plugins": [],
   },
   "include": [
     "**/*.{ts,tsx,mdx}",
     "gatsby-node.ts",
     "gatsby-config.ts",
     "vitest.config.ts",
-    "vitest-setup.tsx"
-  ]
+    "vitest-setup.tsx",
+  ],
 }

@@ -1,6 +1,6 @@
 # Adoptium Site
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/359195e4-6832-4457-b67c-e79ddaf8c549/deploy-status)](https://app.netlify.com/sites/eclipsefdn-adoptium/deploys) [![codecov](https://codecov.io/gh/adoptium/adoptium.net/branch/main/graph/badge.svg?token=XGJMJVT8BA)](https://codecov.io/gh/adoptium/adoptium.net) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/adoptium/adoptium.net/badge)](https://api.securityscorecards.dev/projects/github.com/adoptium/adoptium.net)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f5031db7-5401-4342-a6d9-6f8de4b09fcf/deploy-status)](https://app.netlify.com/sites/adoptium-rewrite/deploys) [![codecov](https://codecov.io/gh/adoptium/adoptium.net/branch/main/graph/badge.svg?token=XGJMJVT8BA)](https://codecov.io/gh/adoptium/adoptium.net) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/adoptium/adoptium.net/badge)](https://api.securityscorecards.dev/projects/github.com/adoptium/adoptium.net)
 
 This repository contains the source code for [https://adoptium.net](https://adoptium.net).
 

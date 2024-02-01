@@ -1099,10 +1099,161 @@ exports[`What We Do page > renders correctly 1`] = `
               Read More
             </a>
           </div>
+          <div
+            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+          >
+            <h2
+              class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+              News
+            </h2>
+            <p
+              class="text-white text-lg xl:text-xl font-normal leading-6 xl:leading-7 my-2"
+            >
+              Mock Title 2
+            </p>
+            <span
+              class="text-sm text-grey font-normal leading-5 block"
+            >
+              2021-01-01
+            </span>
+            <a
+              class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+            >
+              Read More
+            </a>
+          </div>
         </div>
         <div
           class="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8 mt-16"
-        />
+        >
+          <div
+            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+          >
+            <h2
+              class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+              News
+            </h2>
+            <p
+              class="text-white text-lg xl:text-xl font-normal leading-6 xl:leading-7 my-2"
+            >
+              Mock Title 3
+            </p>
+            <span
+              class="text-sm text-grey font-normal leading-5 block"
+            >
+              2021-01-01
+            </span>
+            <a
+              class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+            >
+              Read More
+            </a>
+          </div>
+          <div
+            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+          >
+            <h2
+              class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+              News
+            </h2>
+            <p
+              class="text-white text-lg xl:text-xl font-normal leading-6 xl:leading-7 my-2"
+            >
+              Mock Title 4
+            </p>
+            <span
+              class="text-sm text-grey font-normal leading-5 block"
+            >
+              2021-01-01
+            </span>
+            <a
+              class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
       </div>
       <div
         class="w-full flex relative lg:hidden"
@@ -1111,63 +1262,207 @@ exports[`What We Do page > renders correctly 1`] = `
           class="overflow-hidden pl-6 max-w-full relative"
         >
           <div
-            class="swiper swiper-initialized swiper-horizontal mySwiper lg:hidden"
+            data-testid="Swiper"
           >
             <div
-              class="swiper-wrapper"
-              style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+              data-testid="SwiperSlide"
             >
-              <div
-                class="swiper-slide !w-[256px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-6 m-auto"
-                data-swiper-slide-index="0"
+              <h2
+                class="text-primary text-base leading-6 font-bold m-0 flex items-center gap-x-3"
               >
-                <h2
-                  class="text-primary text-base leading-6 font-bold m-0 flex items-center gap-x-3"
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    fill="none"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    width="14"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      fill="#FF1464"
-                      height="8"
-                      rx="2"
-                      width="8"
-                      x="3"
-                      y="3"
-                    />
-                    <rect
-                      height="11"
-                      rx="3.5"
-                      stroke="#FF1464"
-                      stroke-opacity="0.25"
-                      stroke-width="3"
-                      width="11"
-                      x="1.5"
-                      y="1.5"
-                    />
-                  </svg>
-                  News
-                </h2>
-                <p
-                  class="text-white text-xl  font-normal leading-7 mt-6"
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+                News
+              </h2>
+              <p
+                class="text-white text-xl  font-normal leading-7 mt-6"
+              >
+                Mock Title 1
+              </p>
+              <span
+                class="text-sm text-grey font-normal leading-5 block mt-2 mb-6"
+              >
+                2021-01-01
+              </span>
+              <a
+                class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              >
+                Read More
+              </a>
+            </div>
+            <div
+              data-testid="SwiperSlide"
+            >
+              <h2
+                class="text-primary text-base leading-6 font-bold m-0 flex items-center gap-x-3"
+              >
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  Mock Title 1
-                </p>
-                <span
-                  class="text-sm text-grey font-normal leading-5 block mt-2 mb-6"
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+                News
+              </h2>
+              <p
+                class="text-white text-xl  font-normal leading-7 mt-6"
+              >
+                Mock Title 2
+              </p>
+              <span
+                class="text-sm text-grey font-normal leading-5 block mt-2 mb-6"
+              >
+                2021-01-01
+              </span>
+              <a
+                class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              >
+                Read More
+              </a>
+            </div>
+            <div
+              data-testid="SwiperSlide"
+            >
+              <h2
+                class="text-primary text-base leading-6 font-bold m-0 flex items-center gap-x-3"
+              >
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  2021-01-01
-                </span>
-                <a
-                  class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+                News
+              </h2>
+              <p
+                class="text-white text-xl  font-normal leading-7 mt-6"
+              >
+                Mock Title 3
+              </p>
+              <span
+                class="text-sm text-grey font-normal leading-5 block mt-2 mb-6"
+              >
+                2021-01-01
+              </span>
+              <a
+                class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              >
+                Read More
+              </a>
+            </div>
+            <div
+              data-testid="SwiperSlide"
+            >
+              <h2
+                class="text-primary text-base leading-6 font-bold m-0 flex items-center gap-x-3"
+              >
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  Read More
-                </a>
-              </div>
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+                News
+              </h2>
+              <p
+                class="text-white text-xl  font-normal leading-7 mt-6"
+              >
+                Mock Title 4
+              </p>
+              <span
+                class="text-sm text-grey font-normal leading-5 block mt-2 mb-6"
+              >
+                2021-01-01
+              </span>
+              <a
+                class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              >
+                Read More
+              </a>
             </div>
           </div>
           <div

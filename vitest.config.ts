@@ -15,7 +15,7 @@ export default defineConfig({
   ],
   test: {
     globals: true,
-    setupFiles: "./vitest-setup.ts",
+    setupFiles: "./vitest-setup.tsx",
     environment: "jsdom",
     deps: {
       // >= 0.34

@@ -202,8 +202,11 @@ const IntersectionObserverMock = vi.fn(() => ({
 
 vi.stubGlobal("IntersectionObserver", IntersectionObserverMock)
 
-window.matchMedia =
-  window.matchMedia ||
+/**
+ * fix: `matchMedia` not present, legacy browsers require a polyfill
+ */
+global.matchMedia =
+  global.matchMedia ||
   function () {
     return {
       matches: false,

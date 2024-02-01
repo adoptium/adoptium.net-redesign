@@ -1,9 +1,13 @@
-import { expect, vi } from "vitest"
-import * as axeMatchers from "vitest-axe/matchers"
 import React from "react"
-import "vitest-axe/extend-expect"
+import { expect, vi } from "vitest
+
 import "@testing-library/jest-dom"
+
 import "vitest-canvas-mock"
+import "vitest-axe/extend-expect"
+import * as axeMatchers from "vitest-axe/matchers"
+
+vi.stubGlobal("jest", vi);
 
 expect.extend(axeMatchers)
 

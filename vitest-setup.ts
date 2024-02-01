@@ -25,6 +25,26 @@ vi.mock("gatsby", async () => {
     mostRecentFeatureVersion: {
       version: 2,
     },
+    downloadCount: {
+      total: 100,
+    },
+    allMdx: {
+      edges: [
+        {
+          node: {
+            id: "mock-id-1",
+            fields: {
+              slug: "/mock-slug-1",
+            },
+            frontmatter: {
+              title: "Mock Title 1",
+              description: "Mock Description 1",
+              date: "2021-01-01",
+            },
+          },
+        },
+      ],
+    },
     allVersions: {
       edges: [
         {

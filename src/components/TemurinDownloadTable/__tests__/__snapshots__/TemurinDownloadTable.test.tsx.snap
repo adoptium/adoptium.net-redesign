@@ -107,7 +107,8 @@ exports[`TemurinDownloadTable component > renders correctly - with source 1`] = 
           <span
             class="text-white d-block m-2"
           >
-            Temurin 
+            Temurin
+             
             <svg
               data-placement="bottom"
               data-toggle="tooltip"
@@ -250,7 +251,8 @@ exports[`TemurinDownloadTable component > renders correctly - with source 1`] = 
           <span
             class="text-white d-block m-2"
           >
-            Temurin 
+            Temurin
+             
             <svg
               data-placement="bottom"
               data-toggle="tooltip"
@@ -467,7 +469,8 @@ exports[`TemurinDownloadTable component > renders correctly 1`] = `
           <span
             class="text-white d-block m-2"
           >
-            Temurin 
+            Temurin
+             
             <svg
               data-placement="bottom"
               data-toggle="tooltip"
@@ -610,7 +613,8 @@ exports[`TemurinDownloadTable component > renders correctly 1`] = `
           <span
             class="text-white d-block m-2"
           >
-            Temurin 
+            Temurin
+             
             <svg
               data-placement="bottom"
               data-toggle="tooltip"

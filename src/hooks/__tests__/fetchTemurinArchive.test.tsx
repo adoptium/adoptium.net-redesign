@@ -1,24 +1,30 @@
-import { renderHook } from '@testing-library/react'
-import { describe, expect, it, vi } from 'vitest'
-import { getAssetsForVersion } from '../fetchTemurinArchive';
-import { createMockTemurinFeatureReleaseAPI  } from '../../__fixtures__/hooks';
-import AxiosInstance from 'axios'
-import MockAdapter from 'axios-mock-adapter';
+import { renderHook } from "@testing-library/react"
+import { afterEach, describe, expect, it, vi } from "vitest"
+import { getAssetsForVersion } from "../fetchTemurinArchive"
+import { createMockTemurinFeatureReleaseAPI } from "../../__fixtures__/hooks"
+import AxiosInstance from "axios"
+import MockAdapter from "axios-mock-adapter"
 
-const mock = new MockAdapter(AxiosInstance);
-let mockResponse = [createMockTemurinFeatureReleaseAPI(false)];
+const mock = new MockAdapter(AxiosInstance)
+let mockResponse = [createMockTemurinFeatureReleaseAPI(false)]
 
 afterEach(() => {
   vi.clearAllMocks()
   mockResponse = [createMockTemurinFeatureReleaseAPI(false)]
 })
 
-describe('getAssetsForVersion', () => {
-  it('returns valid JSON', async() => {
-    mock.onGet().reply(200, mockResponse, { 'pagecount': '3' });
+describe("getAssetsForVersion", () => {
+  it("returns valid JSON", async () => {
+    mock.onGet().reply(200, mockResponse, { pagecount: "3" })
 
-    renderHook(async() => {
-      await getAssetsForVersion(8, 'ga', 5, new Date(Date.UTC(2020, 0, 1)), 0).then((data) => {
+    renderHook(async () => {
+      await getAssetsForVersion(
+        8,
+        "ga",
+        5,
+        new Date(Date.UTC(2020, 0, 1)),
+        0,
+      ).then(data => {
         expect(data).toMatchSnapshot()
       })
     })
@@ -41,16 +47,9 @@ describe('getAssetsForVersion', () => {
     }
 
     // add a second binary same as the first but with invalid image_type
-    mockResponse[0].binaries.push(newBinary);
-    
-    mock.onGet().reply(200, mockResponse, { 'pagecount': '3' });
+    mockResponse[0].binaries.push(newBinary)
 
-    renderHook(async() => {
-      await getAssetsForVersion(8, 'ea', 5, new Date(Date.UTC(2020, 0, 1)), 0).then((data) => {
-        expect(data).toMatchSnapshot()
-      });
-    });
-  });
+    mock.onGet().reply(200, mockResponse, { pagecount: "3" })
 
     renderHook(async () => {
       await getAssetsForVersion(
@@ -64,71 +63,102 @@ describe('getAssetsForVersion', () => {
       })
     })
   })
+})
 
-  it("returns valid JSON - with source", async () => {
-    mockResponse[0].source = {
-      name: "source_mock",
-      size: 100,
-      link: new URL("https://source_mock/"),
-    }
-    
-    mock.onGet().reply(200, mockResponse, { 'pagecount': '3' });
+it("returns valid JSON - with source", async () => {
+  mockResponse[0].source = {
+    name: "source_mock",
+    size: 100,
+    link: new URL("https://source_mock/"),
+  }
 
-    renderHook(async() => {
-      await getAssetsForVersion(8, 'ga', 5, new Date(Date.UTC(2020, 0, 1)), 0).then((data) => {
-        expect(data).toMatchSnapshot()
-      })
+  mock.onGet().reply(200, mockResponse, { pagecount: "3" })
+
+  renderHook(async () => {
+    await getAssetsForVersion(
+      8,
+      "ga",
+      5,
+      new Date(Date.UTC(2020, 0, 1)),
+      0,
+    ).then(data => {
+      expect(data).toMatchSnapshot()
     })
   })
+})
 
-  it("returns valid JSON - with release notes", async () => {
-    mockResponse[0].release_notes = {
-      name: "release_notes_mock",
-      size: 100,
-      link: new URL("https://release_notes_mock/"),
-    }
+it("returns valid JSON - with release notes", async () => {
+  mockResponse[0].release_notes = {
+    name: "release_notes_mock",
+    size: 100,
+    link: new URL("https://release_notes_mock/"),
+  }
 
-    mock.onGet().reply(200, mockResponse, { 'pagecount': '3' });
+  mock.onGet().reply(200, mockResponse, { pagecount: "3" })
 
-    renderHook(async() => {
-      await getAssetsForVersion(8, 'ga', 5, new Date(Date.UTC(2020, 0, 1)), 0).then((data) => {
-        expect(data).toMatchSnapshot()
-      })
+  renderHook(async () => {
+    await getAssetsForVersion(
+      8,
+      "ga",
+      5,
+      new Date(Date.UTC(2020, 0, 1)),
+      0,
+    ).then(data => {
+      expect(data).toMatchSnapshot()
     })
   })
+})
 
-  it('returns valid JSON - invalid image_type', async() => {
-    mockResponse[0].binaries[0].image_type = 'foobar';
+it("returns valid JSON - invalid image_type", async () => {
+  mockResponse[0].binaries[0].image_type = "foobar"
 
-    mock.onGet().reply(200, mockResponse, { 'pagecount': '3' });
+  mock.onGet().reply(200, mockResponse, { pagecount: "3" })
 
-    renderHook(async() => {
-      await getAssetsForVersion(8, 'ga', 5, new Date(Date.UTC(2020, 0, 1)), 0).then((data) => {
-        expect(data?.releases[0].platforms).toStrictEqual({})
-      })
+  renderHook(async () => {
+    await getAssetsForVersion(
+      8,
+      "ga",
+      5,
+      new Date(Date.UTC(2020, 0, 1)),
+      0,
+    ).then(data => {
+      expect(data?.releases[0].platforms).toStrictEqual({})
     })
   })
+})
 
-  it('returns valid JSON - with installers', async() => {
-    mockResponse = [createMockTemurinFeatureReleaseAPI(true)];
+it("returns valid JSON - with installers", async () => {
+  mockResponse = [createMockTemurinFeatureReleaseAPI(true)]
 
-    mock.onGet().reply(200, mockResponse, { 'pagecount': '3' });
+  mock.onGet().reply(200, mockResponse, { pagecount: "3" })
 
-    renderHook(async() => {
-      await getAssetsForVersion(8, 'ga', 5, new Date(Date.UTC(2020, 0, 1)), 0).then((data) => {
-        expect(data).toMatchSnapshot()
-      })
-    });
-  });
+  renderHook(async () => {
+    await getAssetsForVersion(
+      8,
+      "ga",
+      5,
+      new Date(Date.UTC(2020, 0, 1)),
+      0,
+    ).then(data => {
+      expect(data).toMatchSnapshot()
+    })
+  })
+})
 
-  it('ReturnedReleases to be empty on error', async() => {
-    mock.onGet().reply(500);
+it("ReturnedReleases to be empty on error", async () => {
+  mock.onGet().reply(500)
 
-    renderHook(async() => {
-      await getAssetsForVersion(8, 'ga', 5, new Date(Date.UTC(2020, 0, 1)), 0).then((data) => {
-        expect(data?.releases).toStrictEqual([])
-        expect(data?.pagecount).toBe(0)
-      })
-    });
-  });
-});
+  renderHook(async () => {
+    await getAssetsForVersion(
+      8,
+      "ga",
+      5,
+      new Date(Date.UTC(2020, 0, 1)),
+      0,
+    ).then(data => {
+      expect(data?.releases).toStrictEqual([])
+      expect(data?.pagecount).toBe(0)
+    })
+  })
+})
+// });

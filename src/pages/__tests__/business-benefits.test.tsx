@@ -1,8 +1,24 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import { describe, expect, it } from "vitest"
+import { describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
 import Index, { Head } from "../business-benefits"
+
+vi.mock("../../util/shuffle", () => {
+  return {
+    shuffle: array => {
+      array = [
+        {
+          name: "mock_member",
+          logo: "mock_logo.png",
+          url: "https://mock.com",
+          tier: "mock_tier",
+        },
+      ]
+      return array
+    },
+  }
+})
 
 describe("Business Benefits page", () => {
   it("renders correctly", () => {

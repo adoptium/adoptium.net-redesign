@@ -1,5 +1,5 @@
 import { renderHook, waitFor } from "@testing-library/react"
-import { describe, expect, it, vi } from "vitest"
+import { afterAll, afterEach, describe, expect, it, vi } from "vitest"
 import { fetchReleaseNotesForVersion } from "../fetchReleaseNotes"
 import { createMockReleaseNotesAPI } from "../../__fixtures__/hooks"
 import axios from "axios"

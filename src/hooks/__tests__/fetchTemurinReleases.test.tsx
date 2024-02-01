@@ -1,5 +1,5 @@
 import { renderHook } from "@testing-library/react"
-import { describe, expect, it, vi } from "vitest"
+import { afterEach, describe, expect, it, vi } from "vitest"
 import { loadLatestAssets } from "../fetchTemurinReleases"
 import { createMockTemurinReleaseAPI } from "../../__fixtures__/hooks"
 import AxiosInstance from "axios"

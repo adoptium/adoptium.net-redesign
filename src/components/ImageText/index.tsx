@@ -13,7 +13,7 @@ const ImageText = ({ title, description, link, linkText }) => {
           />
         </div>
         <div className="lg:max-w-[560px] w-full  ">
-          <h2 className="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]">
+          <h2 className="md:text-5xl text-[40px] font-semibold leading-[48px] md:leading-[56px]">
             {title}
           </h2>
           <p className="md:mt-6 my-10 text-[#C4BFCE] text-base leading-6 font-normal">

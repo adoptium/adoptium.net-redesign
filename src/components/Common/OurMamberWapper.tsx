@@ -1,8 +1,8 @@
 import React from "react"
-import { GithubIcon3 } from "../Common/Icon"
+import { GithubIcon3 } from "./Icon"
 import { Link } from "gatsby"
 
-const OurMamber = () => {
+const OurMamberWapper = () => {
   const github = [
     { id: 1, svg: <GithubIcon3 /> },
     { id: 2, svg: <GithubIcon3 /> },
@@ -22,15 +22,14 @@ const OurMamber = () => {
     { id: 16, svg: <GithubIcon3 /> },
   ]
   return (
-    <div className="text-white max-w-[1264px] md:px-0 px-4 w-full mx-auto flex flex-col items-center justify-center ">
-      OurMamber
+    <div className=" max-w-[1264px] md:px-0 px-4 w-full mx-auto flex flex-col items-center justify-center mb-5  mt-14">
       <div className="min-w-full w-full overflow-auto">
         <div className="grid grid-cols-4  gap-4 md:gap-6 min-w-[850px] md:min-w-[1230px]   mx-auto">
           {github.map(data => (
             <Link to="">
               <div
                 key={data.id}
-                className="w-[200px]   md:!w-[296px] h-[86px] md:h-[110px] flex justify-center items-center  rounded-[20px] bg-white  "
+                className="w-[200px]  md:!w-[296px] h-[86px] md:h-[110px] flex justify-center items-center  rounded-[20px] bg-white "
               >
                 {data.svg}
               </div>
@@ -42,4 +41,4 @@ const OurMamber = () => {
   )
 }
 
-export default OurMamber
+export default OurMamberWapper

@@ -17,7 +17,7 @@ const PageHeader = ({
   }
 
   return (
-    <div className="py-32 overflow-hidden">
+    <div className="pt-48 pb-20 overflow-hidden">
       <div className="w-full relative">
         <div className="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[171px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"></div>
         <div className="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[120px] md:top-[395px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"></div>
@@ -37,7 +37,7 @@ const PageHeader = ({
               dangerouslySetInnerHTML={{ __html: title }}
             />
           </div>
-          <div className="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7">
+          <div className="self-stretch text-center text-grey text-grey-300 text-[20px] font-normal leading-7">
             {description}
           </div>
         </div>

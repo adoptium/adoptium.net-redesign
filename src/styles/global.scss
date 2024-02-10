@@ -47,10 +47,11 @@ body {
   background-origin: border-box;
   background-clip: content-box, border-box;
   cursor: pointer;
+  transition: ease-in-out;
+  transition-duration: 300ms;
 
   &:hover {
     transform: scale(110%);
-    transition-duration: 300ms;
   }
 }
 

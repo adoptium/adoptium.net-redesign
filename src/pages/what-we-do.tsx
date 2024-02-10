@@ -24,7 +24,7 @@ const WhatWeDo = () => {
       <LatestReleases />
       <WGProjects />
       <ContactUs title="Connect with the community" />
-      <Testimonials />
+      <Testimonials className={undefined} />
       <LatestNews />
     </Layout>
   )

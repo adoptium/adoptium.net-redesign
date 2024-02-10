@@ -22,8 +22,12 @@ const BusinessBenefits = () => {
       <ImageText
         title="More than 10 years' experience, and a focus firmly on your future"
         description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
+        description2={undefined}
         linkText="Learn More"
         link="#"
+        linkText2={undefined}
+        className={undefined}
+        icon={undefined}
       />
       <UsingTemurin />
       <Logos
@@ -31,14 +35,21 @@ const BusinessBenefits = () => {
         title="Eclipse Temurin&trade; Adopters"
         description="Companies that use Eclipse Temurin in production."
       />
-      <Testimonials />
+      <Testimonials className={undefined} />
       <ImageText
         title="Need support with Temurin?"
         description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
+        description2={undefined}
         linkText="Get Support"
         link="/support"
+        linkText2={undefined}
+        className={undefined}
+        icon={undefined}
       />
-      <ContactUs title="Contact us about how Temurin can help your business" />
+      <ContactUs
+        title="Contact us about how Temurin can help your business"
+        className={undefined}
+      />
     </Layout>
   )
 }

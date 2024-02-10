@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-
 import NavBar from "../components/NavBar"
 import Layout from "../components/Layout"
 import PageHeader from "../components/PageHeader"
@@ -9,33 +8,39 @@ import OurMamberWapper from "../components/Common/OurMamberWapper"
 import OurMamberButton from "../components/Business-Benefits2/OurMamberButton"
 import Testimonials from "../components/Testimonials"
 import ContactUs from "../components/ContactUs"
-
+import myImage from "../img/page-divider.png"
+import { NeedSupportIcon } from "../components/Common/Icon"
 const benefits = () => {
   const [active, setActive] = useState(1)
   return (
     <div>
       <Layout>
         <NavBar />
-        <div className=" ">
-          <PageHeader
-            title="How Temurin can benefit your business"
-            subtitle="Business Benefits"
-            description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
-          />
-        </div>
+        <PageHeader
+          title="How Temurin can benefit your business"
+          subtitle="Business Benefits"
+          description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
+        />
         <ImageText
+          className={undefined}
           title="More than 10 years' experience, and a focus firmly on your future"
           description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
+          description2="Vestibulum feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis."
           linkText="Learn More"
+          linkText2="Get a Quote"
           link="#"
+          icon={undefined}
         />
+        <div className="py-[30px] md:py-[56px]  block lg:hidden">
+          <img src={myImage} className="w-full h-6" alt="scroll-divider" />
+        </div>{" "}
         <UsingTemurin />
         <div className="py-10 max-w-[1264px] mx-auto">
           <div className="max-w-[700px] mx-auto">
             <h3 className="text-[36px] sm:text-[42px] font-hanken leading-[56px] text-center">
               Our Partners
             </h3>
-            <p className="text-[16px] font-hanken leading-[24px] text-[#C4BFCE] text-center mt-3">
+            <p className="text-[16px] font-hanken leading-[24px] text-[#C4BFCE] text-center mt-3 px-4">
               Eclipse Temurin offers high-performance, cross-platform,
               open-source Java runtime binaries that are enterprise-ready and
               Java SE TCK-tested for general use in the Java ecosystem.
@@ -59,15 +64,23 @@ const benefits = () => {
             </div>
           </div>
         </div>
-        <Testimonials />
+        <Testimonials className={"!bg-transparent !border-none"} />
         <ImageText
-          title="More than 10 years' experience, and a focus firmly on your future"
+          className={
+            "flex flex-col md:flex-row  w-full items-center text-center md:text-start"
+          }
+          title="Need support with Temurin?"
           description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
-          linkText="Learn More"
+          description2="Vestibulum feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis."
+          linkText="Get Support"
+          linkText2=" Support"
           link="#"
+          icon={<NeedSupportIcon />}
         />
-
-        <ContactUs title="Contact us about how Temurin can help your business" />
+        <ContactUs
+          title="Contact us about how Temurin can help your business"
+          className={"!pt-0"}
+        />
       </Layout>
     </div>
   )

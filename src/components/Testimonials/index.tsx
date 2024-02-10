@@ -39,7 +39,7 @@ const testimonialData = [
   },
 ]
 
-const Testimonials = () => {
+const Testimonials = ({ className }) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [slideDirection, setSlideDirection] = useState("right")
 
@@ -82,7 +82,9 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="bg-[#0E002A] overflow-x-hidden border-t border-[#3E3355]">
+    <section
+      className={`bg-[#0E002A] overflow-x-hidden border-t border-[#3E3355] ${className}`}
+    >
       <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
         <figure className="max-w-screen-md mx-auto" key={testimonialKey}>
           <svg

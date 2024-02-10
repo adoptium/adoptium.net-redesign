@@ -70,11 +70,14 @@ const SupportUs = () => {
                 description={
                   "Svennekoloni paheten fronta didoling. Grönt körfält mitt, och astrongar fastän animoji. Doxa exosm morotsmobb diska. Såsuss bröllopsklänning i preppare. Fulparkerare nirad mms biorat. "
                 }
+                className={undefined}
               />
               <CommonHeading
                 description={
                   "Eurosinde processturism vasiminade. Äga frågan bekymringssamtal, alltså prens. Drevkultur tredönde bilmålvakt i ypren. Exoska semiras digt, eller makror. Cosplay faras attefallshus ber. "
                 }
+                title={undefined}
+                className={undefined}
               />
             </div>
             <div>
@@ -86,7 +89,7 @@ const SupportUs = () => {
             </div>
           </div>
         </section>
-        <ContactUs title={"Connect with the community"} />
+        <ContactUs title={"Connect with the community"} className={undefined} />
       </Layout>
     </div>
   )

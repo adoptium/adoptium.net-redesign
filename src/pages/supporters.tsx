@@ -75,7 +75,7 @@ const Supporters = () => {
         </button>
       </div>
       <PowerOfTemurin />
-      <ContactUs title="Speak to our team today" />
+      <ContactUs title="Speak to our team today" className={undefined} />
     </Layout>
   )
 }

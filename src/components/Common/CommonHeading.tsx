@@ -1,11 +1,13 @@
 import React from "react"
 
-const CommonHeading = ({ title, description }) => (
-  <div>
-    <h3 className="text-4xl md:text-5xl text-white font-semibold  text-center">
+// ====================================== add text-alignment what you needed  ==============================================
+
+const CommonHeading = ({ title, description, className }) => (
+  <div className={className}>
+    <h3 className="text-4xl leading-[122%] md:text-5xl md:[116%] text-white  font-semibold">
       {title}
     </h3>
-    <h6 className="text-[#C4BFCE] text-center mt-6 text-base">{description}</h6>
+    <h6 className="text-[#C4BFCE] mt-6 font-normal text-base">{description}</h6>
   </div>
 )
 

@@ -190,6 +190,7 @@ const Footer = (props): JSX.Element => {
                           <Link
                             to={link.url}
                             className="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
+                            placeholder={undefined}
                           >
                             <Trans
                               i18nKey={link.text.key}
@@ -216,15 +217,15 @@ const Footer = (props): JSX.Element => {
               </div>
             ))}
           </div>
-          <div className="sm:flex sm:items-center sm:justify-between">
+          <div className="sm:flex sm:items-center sm:justify-between pt-5">
             <div className="text-teal-600 flex dark:text-teal-300">
               <SmallLogoIcon />
-              <p className="text-sm ml-3 flex items-center gap-4 text-white font-normal leading-5">
+              <p className="text-sm ml-3 flex items-center gap-4 !mb-0 text-white font-normal leading-5">
                 Copyright © Eclipse Foundation. All Rights Reserved.
               </p>
             </div>
 
-            <ul className="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
+            <ul className="mt-8 !mb-0 flex  !items-center justify-start gap-6 sm:mt-0 sm:justify-end">
               <li>
                 <a
                   href="https://www.netlify.com"
@@ -235,7 +236,7 @@ const Footer = (props): JSX.Element => {
                   <img
                     src="/images/netlify-light.svg"
                     alt="Deploys by Netlify"
-                    className="h-6"
+                    className="h-6 !mb-0"
                   />
                 </a>
               </li>

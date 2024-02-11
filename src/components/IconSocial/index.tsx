@@ -14,7 +14,7 @@ const SocialIcons = () => {
           className="leading-6 transition hover:opacity-75 dark:text-gray-200"
         >
           <span className="sr-only">Xcom</span>
-          <FaXTwitter className="h-6 w-6" />
+          <FaXTwitter className="h-6 w-6 !mb-0" />
         </a>
       </li>
 
@@ -26,7 +26,7 @@ const SocialIcons = () => {
           className="leading-6 transition hover:opacity-75 dark:text-gray-200"
         >
           <span className="sr-only">LinkedIn</span>
-          <FaLinkedin className="h-6 w-6" />
+          <FaLinkedin className="h-6 w-6 !mb-0" />
         </a>
       </li>
 
@@ -38,7 +38,7 @@ const SocialIcons = () => {
           className="leading-6 transition hover:opacity-75 dark:text-gray-200"
         >
           <span className="sr-only">YouTube</span>
-          <FaYoutube className="h-6 w-6" />
+          <FaYoutube className="h-6 w-6 !mb-0" />
         </a>
       </li>
 
@@ -50,7 +50,7 @@ const SocialIcons = () => {
           className="leading-6 transition hover:opacity-75 dark:text-gray-200"
         >
           <span className="sr-only">GitHub</span>
-          <FaGithub className="h-6 w-6" />
+          <FaGithub className="h-6 w-6 !mb-0" />
         </a>
       </li>
 
@@ -60,9 +60,10 @@ const SocialIcons = () => {
           rel="noreferrer"
           target="_blank"
           className="leading-6 transition hover:opacity-75 dark:text-gray-200"
+          placeholder={undefined}
         >
           <span className="sr-only">Slack</span>
-          <FaSlack className="h-6 w-6" />
+          <FaSlack className="h-6 w-6 !mb-0" />
         </Link>
       </li>
     </>

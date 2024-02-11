@@ -23,7 +23,7 @@ const WhatWeDo = () => {
       <PowerOfTemurin />
       <LatestReleases />
       <WGProjects />
-      <ContactUs title="Connect with the community" />
+      <ContactUs title="Connect with the community" className={undefined} />
       <Testimonials className={undefined} />
       <LatestNews />
     </Layout>

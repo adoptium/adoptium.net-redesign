@@ -21,7 +21,10 @@ const OperatingSystemSelector = ({ operatingSystem, svgComponent }) => {
           {/* ========================================= USESTATE ===================================== */}
           <div className="flex gap-4"></div>
         </div>
-        <CommonSelector options={dropdownOptions} />
+        <CommonSelector
+          options={dropdownOptions}
+          title="Package: Standard JDK"
+        />
       </div>
     </div>
   )

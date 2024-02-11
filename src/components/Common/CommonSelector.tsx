@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Menu, Transition } from "@headlessui/react"
 import { DownArrowIcon } from "./AppIcon"
 
-const CommonSelector = ({ options }) => {
+const CommonSelector = ({ options, title }) => {
   const [selectedOption, setSelectedOption] = useState(null)
   const [isOpen, setIsOpen] = useState(false)
 
@@ -20,7 +20,7 @@ const CommonSelector = ({ options }) => {
               <div>
                 <Menu.Button className="w-full rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]">
                   <span className="flex items-center justify-between">
-                    {selectedOption || "Package: Standard JDK"}
+                    {selectedOption ? title : " " + title}
                     <DownArrowIcon />
                   </span>
                 </Menu.Button>

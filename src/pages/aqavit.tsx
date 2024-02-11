@@ -35,12 +35,14 @@ const AQAvit = () => {
                   <Link
                     to="/temurin/releases"
                     className="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
+                    placeholder={undefined}
                   >
                     Learn More
                   </Link>
                   <Link
                     to="#"
                     className="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out  border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+                    placeholder={undefined}
                   >
                     Download AQAvit
                   </Link>

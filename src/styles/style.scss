@@ -23,3 +23,15 @@
   mask-composite: exclude;
   z-index: -1;
 }
+
+.scroll-container::-webkit-scrollbar {
+  width: 4px;
+
+  background-color: #200d46;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #ff1464;
+  border-radius: 6px;
+  height: 5px;
+}

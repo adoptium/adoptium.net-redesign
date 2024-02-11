@@ -2,11 +2,12 @@ import React from "react"
 import CommonHeading from "../Common/CommonHeading"
 
 import { RedIcon } from "../Common/Icon"
+import ReleaseCardWarrper from "./ReleaseCardWarrper"
 
 export const ReleaseNot = () => {
   return (
     <div className="flex justify-between gap-4 flex-wrap max-w-[1264px] mx-auto px-4 py-20">
-      <div className="w-full md:w-[45%]">
+      <div className="w-full md:w-[35%]">
         <CommonHeading
           title="Latest Release Note"
           description={
@@ -15,76 +16,23 @@ export const ReleaseNot = () => {
           className={"text-center md:text-start"}
         />
       </div>
-      <div className="w-full md:w-[50%]">
-        <div className="p-8 flex flex-col w-full newscard-2 bg-[#200E46]">
-          <div className="">
-            <h3 className="text-white text-[22px] font-semibold  leading-[28px]">
-              October 18, 2023
-            </h3>
-            <p className=" text-base text-white font-normal">
-              jdk-21+35 - Eclipse Temurin™
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-4 ">
-            <div className="  flex items-start  gap-3 justify-start">
-              <div className="pt-1">
-                <RedIcon />
-              </div>
-              <div className="text-rose-600 text-base font-bold leading-normal">
-                Fixed
-              </div>
-            </div>
-            <div>
-              <h3 className=" text-base pb-2 text-white font-normal">
-                <span className="font-semibold">
-                  {" "}
-                  jdk-21+35 - Eclipse Temurin™{" "}
-                </span>{" "}
-                Vobba tev och embrejsa.
-              </h3>
-              <p className=" text-base text-white font-normal mb-0 pb-2">
-                Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar
-                dystik, osm. Talepunkt hest med dekabepp. Väggord burkini bepån.
-                Stafettläkare pogen inte ultrav. Pimpa vulkanresa asymmetrisk
-                krigföring. Lav svajpa sedan kropos.
-              </p>
-              <p className=" text-base text-white font-normal">
-                Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar
-                dystik, osm. Talepunkt hest med dekabepp.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-wrap gap-4 ">
-            <div className="  flex items-start  gap-3 justify-start">
-              <div className="pt-1">
-                <RedIcon />
-              </div>
-              <div className="text-rose-600 text-base font-bold leading-normal">
-                Fixed
-              </div>
-            </div>
-            <div>
-              <h3 className=" text-base pb-2 text-white font-normal">
-                <span className="font-semibold">
-                  {" "}
-                  jdk-21+35 - Eclipse Temurin™{" "}
-                </span>{" "}
-                Vobba tev och embrejsa.
-              </h3>
-              <p className=" text-base text-white font-normal mb-0 pb-2">
-                Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar
-                dystik, osm. Talepunkt hest med dekabepp. Väggord burkini bepån.
-                Stafettläkare pogen inte ultrav. Pimpa vulkanresa asymmetrisk
-                krigföring. Lav svajpa sedan kropos.
-              </p>
-              <p className=" text-base text-white font-normal mb-0">
-                Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar
-                dystik, osm. Talepunkt hest med dekabepp.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <ReleaseCardWarrper
+        date="October 18, 2023"
+        icon={<RedIcon />}
+        icontitle="Fixed"
+        title="jdk-21+35 - Eclipse Temurin™"
+        description="Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar dystik, osm. Talepunkt hest med dekabepp. Väggord burkini bepån. Stafettläkare pogen inte ultrav. Pimpa vulkanresa asymmetrisk krigföring. Lav svajpa sedan kropos. "
+        subtitle=" Vobba tev och embrejsa."
+        description2="Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar dystik, osm. Talepunkt hest med dekabepp. "
+        className={undefined}
+        icontitle2="Announcement"
+        title2="jdk-21+35 - Eclipse Temurin™"
+        subtitle2=" Vobba tev och embrejsa."
+        description1="Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar dystik, osm. Talepunkt hest med dekabepp. Väggord burkini bepån. Stafettläkare pogen inte ultrav. Pimpa vulkanresa asymmetrisk krigföring. Lav svajpa sedan kropos. "
+        description3="Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar dystik, osm. Talepunkt hest med dekabepp. "
+        icon2={undefined}
+      />
     </div>
   )
 }

@@ -68,6 +68,7 @@ const LatestReleases = () => {
               <Link
                 to={card.link}
                 className="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
+                placeholder={undefined}
               >
                 <span>
                   <FaApple />
@@ -81,7 +82,7 @@ const LatestReleases = () => {
           <p className="text-xl text-white font-normal leadig-7 !mb-0 text-center">
             Eclipse Temurin offers high-performance
           </p>
-          <Link to="/temurin/releases">
+          <Link to="/temurin/releases" placeholder={undefined}>
             <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px] ">
               See all Releases
             </button>

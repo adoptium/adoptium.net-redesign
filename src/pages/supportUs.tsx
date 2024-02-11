@@ -54,6 +54,7 @@ const SupportUs = () => {
               "If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group"
             }
           />
+
           <div className="mt-16  gap-4 md:gap-8  flex flex-wrap justify-center items-center ">
             {data.map((item, index) => (
               <div key={index} className="">
@@ -70,11 +71,14 @@ const SupportUs = () => {
                 description={
                   "Svennekoloni paheten fronta didoling. Grönt körfält mitt, och astrongar fastän animoji. Doxa exosm morotsmobb diska. Såsuss bröllopsklänning i preppare. Fulparkerare nirad mms biorat. "
                 }
+                className={undefined}
               />
               <CommonHeading
                 description={
                   "Eurosinde processturism vasiminade. Äga frågan bekymringssamtal, alltså prens. Drevkultur tredönde bilmålvakt i ypren. Exoska semiras digt, eller makror. Cosplay faras attefallshus ber. "
                 }
+                title={undefined}
+                className={undefined}
               />
             </div>
             <div>
@@ -86,7 +90,7 @@ const SupportUs = () => {
             </div>
           </div>
         </section>
-        <ContactUs title={"Connect with the community"} />
+        <ContactUs title={"Connect with the community"} className={undefined} />
       </Layout>
     </div>
   )

@@ -54,6 +54,7 @@ const SupportUs = () => {
               "If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group"
             }
           />
+
           <div className="mt-16  gap-4 md:gap-8  flex flex-wrap justify-center items-center ">
             {data.map((item, index) => (
               <div key={index} className="">

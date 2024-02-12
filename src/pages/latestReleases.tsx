@@ -22,7 +22,7 @@ const latestReleases = () => {
             "Pick a version, package type, JDK/JRE, and download the binaries."
           }
         />
-        <section className="my-16">
+        <section className="py-16">
           <div className="w-full flex flex-col items-start justify-start sm:items-center sm:justify-center mt-[15px] md:mt-[64px]  ">
             <Buttons active={active} setActive={setActive} />
             {active === 1 && <ButtonContent />}
@@ -32,7 +32,7 @@ const latestReleases = () => {
             {active === 5 && <ButtonContent />}
           </div>
         </section>
-        <section className="py-16 ">
+        <section className="pt-16 pb-32 ">
           <h2 className="text-center text-4xl mb-10 font-semibold md:text-5xl leading-[116%] ">
             Latest Temurin
           </h2>

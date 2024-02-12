@@ -6,7 +6,7 @@ import AllReleaseCard from "../Early-Access-Build/AllReleaseCard"
 const MarketPlaceAll = () => {
   const [market, setMarket] = useState(1)
   return (
-    <div className="max-w-[1264px] mx-auto px-4">
+    <div className="max-w-[1264px] mx-auto px-4 pb-20">
       <ReleasingSelector />
 
       <MarketPlaceTabButton market={market} setMarket={setMarket} />

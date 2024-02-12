@@ -3,7 +3,7 @@ import { CopyIcon, DownloadIcon } from "./AppIcon"
 
 const CommonDownloader = ({ obj }) => {
   return (
-    <div className="text-white  w-[100%] py-6 border-b-[1px] border-[#3E3355]">
+    <div className="text-white  w-[100%] py-6 border-b-[1px]  border-[#3E3355]">
       <div className="flex justify-between w-full items-center">
         <div className="flex items-center gap-2">
           <span className="cursor-pointer">

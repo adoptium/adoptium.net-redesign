@@ -18,8 +18,8 @@ const CommonSelector = ({ options, title }) => {
           {({ open }) => (
             <>
               <div>
-                <Menu.Button className="w-full rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]">
-                  <span className="flex items-center justify-between">
+                <Menu.Button className="w-full rounded-[80px] border-[2px] font-normal bg-transparent py-3 pl-8 pr-4 border-[#3E3355]">
+                  <span className="flex items-center whitespace-nowrap justify-between">
                     {selectedOption ? title : " " + title}
                     <DownArrowIcon />
                   </span>

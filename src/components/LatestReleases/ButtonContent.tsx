@@ -2,6 +2,23 @@ import React from "react"
 import { CrossIcon, DownloadIcon, MacIcon, WindowIcon } from "../Common/AppIcon"
 
 const ButtonContent = () => {
+  const navigationItem = [
+    {
+      title: "Release notes",
+    },
+    {
+      title: "Installation guide",
+    },
+    {
+      title: "Supported Configurations",
+    },
+    {
+      title: "Terms of use",
+    },
+    {
+      title: "Source code",
+    },
+  ]
   const CardData = [
     {
       icon: <WindowIcon />,
@@ -18,37 +35,18 @@ const ButtonContent = () => {
   return (
     <>
       <div className="max-w-[1264px] mx-auto w-full">
-        <ul className="flex md:flex-row flex-col gap-4 lg:gap-8 items-start  w-full  justify-start px-4 lg:px-6 my-8 lg:my-16">
-          <li className="flex gap-3 items-center  text-xl font-normal cursor-pointer">
-            <span>
-              <CrossIcon />
-            </span>{" "}
-            Release notes
-          </li>
-          <li className="flex gap-3 items-center text-xl font-normal cursor-pointer ">
-            <span>
-              <CrossIcon />
-            </span>{" "}
-            Installation guide
-          </li>
-          <li className="flex gap-3 items-center  text-xl font-normal cursor-pointer">
-            <span>
-              <CrossIcon />
-            </span>{" "}
-            Supported Configurations
-          </li>
-          <li className="flex gap-3 items-center text-xl font-normal  cursor-pointer">
-            <span>
-              <CrossIcon />
-            </span>{" "}
-            Terms of use
-          </li>
-          <li className="flex gap-3 items-center text-xl font-normal  cursor-pointer">
-            <span>
-              <CrossIcon />
-            </span>{" "}
-            Source code
-          </li>
+        <ul className="flex md:flex-row flex-col gap-4 lg:gap-8 items-start  w-full  justify-start px-6 my-8 lg:my-16">
+          {navigationItem.map((item, index) => (
+            <li
+              key={index}
+              className="flex gap-3 items-center  text-xl font-normal cursor-pointer"
+            >
+              <span>
+                <CrossIcon />
+              </span>{" "}
+              {item.title}
+            </li>
+          ))}
         </ul>
 
         <div className="flex justify-between flex-col md:flex-row px-6  w-full items-center gap-8">

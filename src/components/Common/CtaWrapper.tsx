@@ -2,6 +2,7 @@ import React from "react"
 import OperatingSystemSelector from "./OperatingSystemSelector"
 import { MacIcon, SolarisIcon, WindowIcon } from "./AppIcon"
 import CommonDownloader from "./CommonDownloader"
+import { LinuxIcon } from "./Icon"
 
 const CtaWrapper = () => {
   const arr = [
@@ -96,7 +97,7 @@ const CtaWrapper = () => {
           <div className="w-full lg:w-[35%] flex flex-col">
             <OperatingSystemSelector
               operatingSystem={"Linux"}
-              svgComponent={<MacIcon />}
+              svgComponent={<LinuxIcon />}
             />
           </div>
           <div className="flex flex-col w-full lg:w-[60%] mt-8 lg:mt-0">
@@ -113,7 +114,7 @@ const CtaWrapper = () => {
           <div className="w-full lg:w-[35%] flex flex-col">
             <OperatingSystemSelector
               operatingSystem={"Linux"}
-              svgComponent={<WindowIcon />}
+              svgComponent={<LinuxIcon />}
             />
           </div>
           <div className=" flex-col w-full lg:w-[60%] mt-8 lg:mt-0">

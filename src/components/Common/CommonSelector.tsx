@@ -19,13 +19,12 @@ const CommonSelector = ({ options, title }) => {
             <>
               <div>
                 <Menu.Button className="w-full rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]">
-                  <span className="flex items-center justify-between">
+                  <span className="flex items-center justify-between text-nowrap">
                     {selectedOption ? title : " " + title}
                     <DownArrowIcon />
                   </span>
                 </Menu.Button>
               </div>
-
               <Transition
                 show={open}
                 enter="transition ease-out duration-100"
@@ -37,9 +36,9 @@ const CommonSelector = ({ options, title }) => {
               >
                 <Menu.Items
                   static
-                  className="origin-top-left absolute overflow-hidden left-0 mt-2 w-full rounded-[16px] bg-[#3E3355] border-[2px] text-white z-10 border-[#3E3355]"
+                  className="origin-top-left absolute overflow-hidden left-0 mt-2 w-full rounded-[16px] bg-[#200D46] border-[2px] text-white z-10 border-[#3E3355]"
                 >
-                  <div className="bg-[#3E3355] overflow-hidden">
+                  <div className="bg-[#200D46] overflow-hidden">
                     {options.map(item => (
                       <Menu.Item key={item}>
                         {({ active }) => (

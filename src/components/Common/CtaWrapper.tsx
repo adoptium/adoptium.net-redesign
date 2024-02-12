@@ -58,7 +58,7 @@ const CtaWrapper = () => {
 
   return (
     <div className="">
-      <div className="max-w-[1264px] space-y-6  w-full   mx-auto mt-8 px-6  lg:px-8 sm:px-4 xl:px-0  rounded-[24px]  border-white ">
+      <div className="max-w-[1264px] space-y-6  w-full   mx-auto mt-8 px-6  lg:px-8  xl:px-0  rounded-[24px]  border-white ">
         <div className="flex justify-center lg:justify-between flex-wrap   border border-[#554772] rounded-[24px] !bg-[#200E46] items-start  p-6 lg:p-8">
           <div className="w-full lg:w-[35%] flex flex-col">
             <OperatingSystemSelector

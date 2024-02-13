@@ -35,7 +35,7 @@ const ButtonContent = () => {
   return (
     <>
       <div className="max-w-[1264px] mx-auto w-full">
-        <ul className="flex md:flex-row flex-col gap-4 lg:gap-8 items-start  w-full  justify-start px-6 my-8 lg:my-16">
+        <ul className="flex md:flex-row flex-col gap-4 lg:gap-8 items-start  w-full  justify-start sm:justify-center sm:items-center px-6 my-8 lg:my-16">
           {navigationItem.map((item, index) => (
             <li
               key={index}

@@ -4,7 +4,7 @@ import CommonSelector from "./CommonSelector"
 const SelectorHeader = ({ data }) => {
   return (
     <>
-      <div className="max-w-[1264px] mx-auto  w-full my-8">
+      <div className="max-w-[1264px] mx-auto  w-full">
         <button className="sm:hidden flex justify-between items-center w-full text-[16px] font-normal leading-[24px] px-4 py-3 rounded-[80px] border-[2px] border-[#3E3355]">
           Filter
           <span>

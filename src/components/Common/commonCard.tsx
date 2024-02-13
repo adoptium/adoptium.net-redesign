@@ -11,7 +11,7 @@ const CommonCard = ({ data }) => {
           {data.description}
         </p>
       </div>
-      <button className="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[146px] h-[48px] rounded-[80px] gradient-border ">
+      <button className="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border ">
         {data.button}
       </button>
     </div>

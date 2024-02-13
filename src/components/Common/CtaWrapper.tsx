@@ -1,7 +1,8 @@
 import React from "react"
 import OperatingSystemSelector from "./OperatingSystemSelector"
-import { WindowIcon } from "./AppIcon"
+import { MacIcon, SolarisIcon, WindowIcon } from "./AppIcon"
 import CommonDownloader from "./CommonDownloader"
+import { LinuxIcon } from "./Icon"
 
 const CtaWrapper = () => {
   const arr = [
@@ -57,15 +58,15 @@ const CtaWrapper = () => {
 
   return (
     <div className="">
-      <div className="max-w-[1264px] space-y-6  w-full   mx-auto mt-8 px-8 sm:px-4 xl:px-0  rounded-[24px]  border-white ">
-        <div className="flex justify-center lg:justify-between flex-wrap  border border-[#554772] rounded-[24px] !bg-[#200E46] items-start p-8">
+      <div className="max-w-[1264px] space-y-6  w-full   mx-auto mt-8 px-6  lg:px-8  xl:px-0  rounded-[24px]  border-white ">
+        <div className="flex justify-center lg:justify-between flex-wrap   border border-[#554772] rounded-[24px] !bg-[#200E46] items-start  p-6 lg:p-8">
           <div className="w-full lg:w-[35%] flex flex-col">
             <OperatingSystemSelector
               operatingSystem={"Window"}
               svgComponent={<WindowIcon />}
             />
           </div>
-          <div className="flex flex-col w-full lg:w-[60%]">
+          <div className="flex flex-col w-full lg:w-[60%] mt-8 lg:mt-0">
             <h5 className="pb-6 border-b-[1px] text-2xl font-semibold  border-[#3E3355]">
               {" "}
               jdk-11.0.14+3 - 27th October 2023
@@ -75,68 +76,68 @@ const CtaWrapper = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-between border border-[#554772] rounded-[24px] !bg-[#200E46] items-start p-8">
+        <div className="flex justify-between border flex-wrap border-[#554772] rounded-[24px] !bg-[#200E46] items-start p-6 lg:p-8">
           <div className="w-full lg:w-[35%] flex flex-col">
             <OperatingSystemSelector
-              operatingSystem={"Window"}
-              svgComponent={<WindowIcon />}
+              operatingSystem={"macOS"}
+              svgComponent={<MacIcon />}
             />
           </div>
-          <div className="flex flex-col w-full lg:w-[60%]">
+          <div className="flex flex-col w-full lg:w-[60%] mt-8 lg:mt-0">
             <h5 className="pb-6 border-b-[1px] text-2xl font-semibold  border-[#3E3355]">
               {" "}
-              jdk-11.0.14+3 - 27th October 2023
+              jdk-11.0.13+1 - 12th June 2023
             </h5>
             {arrOne.map(obj => (
               <CommonDownloader obj={obj} />
             ))}
           </div>
         </div>
-        <div className="flex justify-between border border-[#554772] !bg-[#200E46] rounded-[24px] items-start p-8">
+        <div className="flex justify-between border border-[#554772] !bg-[#200E46] rounded-[24px] items-start flex-wrap p-6 lg:p-8">
           <div className="w-full lg:w-[35%] flex flex-col">
             <OperatingSystemSelector
-              operatingSystem={"Window"}
-              svgComponent={<WindowIcon />}
+              operatingSystem={"Linux"}
+              svgComponent={<LinuxIcon />}
             />
           </div>
-          <div className="flex flex-col w-full lg:w-[60%]">
+          <div className="flex flex-col w-full lg:w-[60%] mt-8 lg:mt-0">
             <h5 className="pb-6 border-b-[1px] text-2xl font-semibold  border-[#3E3355]">
               {" "}
-              jdk-11.0.14+3 - 27th October 2023
+              jdk-11.0.13+1 - 12th June 2023
             </h5>
             {arrTwo.map(obj => (
               <CommonDownloader obj={obj} />
             ))}
           </div>
         </div>
-        <div className="flex justify-between border border-[#554772] !bg-[#200E46] rounded-[24px] items-start p-8">
+        <div className="flex justify-between border flex-wrap border-[#554772] !bg-[#200E46] rounded-[24px] items-start p-6 lg:p-8">
           <div className="w-full lg:w-[35%] flex flex-col">
             <OperatingSystemSelector
-              operatingSystem={"Window"}
-              svgComponent={<WindowIcon />}
+              operatingSystem={"Linux"}
+              svgComponent={<LinuxIcon />}
             />
           </div>
-          <div className=" flex-col w-full lg:w-[60%]">
+          <div className=" flex-col w-full lg:w-[60%] mt-8 lg:mt-0">
             <h5 className="pb-6 border-b-[1px] text-2xl font-semibold  border-[#3E3355]">
               {" "}
-              jdk-11.0.14+3 - 27th October 2023
+              jdk-11.0.13+1 - 12th June 2023
             </h5>
             {arrThree.map(obj => (
               <CommonDownloader obj={obj} />
             ))}
           </div>
         </div>
-        <div className="flex justify-between border border-[#554772] !bg-[#200E46] rounded-[24px] items-start p-8">
+        <div className="flex justify-between border flex-wrap border-[#554772] !bg-[#200E46] rounded-[24px] items-start p-6 lg:p-8">
           <div className="w-full lg:w-[35%] flex flex-col">
             <OperatingSystemSelector
-              operatingSystem={"Window"}
-              svgComponent={<WindowIcon />}
+              operatingSystem={"Solaris"}
+              svgComponent={<SolarisIcon />}
             />
           </div>
-          <div className="flex flex-col w-full lg:w-[60%]">
+          <div className="flex flex-col w-full lg:w-[60%] mt-8 lg:mt-0">
             <h5 className="pb-6 text-2xl font-semibold  border-b-[1px] border-[#3E3355]">
               {" "}
-              jdk-11.0.14+3 - 27th October 2023
+              jdk-11.0.13+1 - 12th June 2023
             </h5>
             {arrFour.map(obj => (
               <CommonDownloader obj={obj} />

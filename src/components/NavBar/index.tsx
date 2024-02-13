@@ -27,10 +27,10 @@ const navigation: NavItem[] = [
       { name: "Business Benefits", href: "/business-benefits" },
       { name: "Our Supporters", href: "/supporters" },
       { name: "Our Adopters", href: "#" },
-      { name: "Support Us", href: "#" },
+      { name: "Support Us", href: "/supportUs" },
     ],
   },
-  { name: "Latest Releases", href: "/temurin/releases" },
+  { name: "Latest Releases", href: "/latestReleases" },
   { name: "Marketplace", href: "/marketplace" },
   {
     name: "Projects",

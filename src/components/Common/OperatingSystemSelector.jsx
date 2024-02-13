@@ -3,9 +3,9 @@ import CommonSelector from "./CommonSelector"
 
 const OperatingSystemSelector = ({ operatingSystem, svgComponent }) => {
   const dropdownOptions = [
-    "Package: Standard JDK",
-    "Package: Standard JDK",
-    "Package: Standard JDK",
+    "Package: Standard JDK 1",
+    "Package: Standard JDK 2",
+    "Package: Standard JDK 3",
   ]
   return (
     <div>

@@ -6,8 +6,7 @@ const ImageText = ({
   description,
   link,
   linkText,
-  linkText2,
-  description2,
+
   className,
   icon,
 }) => {
@@ -33,19 +32,12 @@ const ImageText = ({
           <p className="md:mt-6 mt-10 mb-5s text-[#C4BFCE] text-xl md:text-base leading-6 font-normal">
             {description}
           </p>
-          <p className="  text-[#C4BFCE]  text-base leading-6 font-normal block md:hidden">
-            {description2}
-          </p>
+
           <div className={`${className}`}>
             <Link to={link} placeholder={undefined}>
-              <button className="bg-transparent mt-6 md:mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden">
+              <button className="bg-transparent mt-6 md:mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border ">
                 {linkText}
               </button>{" "}
-            </Link>
-            <Link to={link} placeholder={undefined}>
-              <button className="bg-transparent mt-6 md:mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden">
-                {linkText2}
-              </button>
             </Link>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React from "react"
 
 import "./style.scss"
 
-const ContactUs = ({ title, className }) => {
+const ContactUs = ({ title, className, buttontitle }) => {
   return (
     <>
       <section className={`community xl:px-0 px-6 md:py-32 py-16 ${className}`}>
@@ -17,7 +17,7 @@ const ContactUs = ({ title, className }) => {
             TCK-tested for general use in the Java ecosystem.
           </span>
           <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[146px] h-[48px] rounded-[80px] gradient-border ">
-            Contact Us
+            {buttontitle}
           </button>
         </div>
       </section>

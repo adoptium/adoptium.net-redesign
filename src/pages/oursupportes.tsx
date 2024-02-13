@@ -55,8 +55,9 @@ const oursupportes = () => {
         </div>
         <PowerOfTemurin />
         <ContactUs
-          title="Contact us about how Temurin can help your business"
+          title="Speak to our team today"
           className={" !pt-0 !mt-0 md:!mt-24"}
+          buttontitle="Contact Us"
         />
       </Layout>
     </div>

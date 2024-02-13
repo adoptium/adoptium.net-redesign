@@ -133,7 +133,7 @@ const AllReleaseCard = () => {
         {releasecarddata.map((data, index) => (
           <div
             key={index}
-            className="newscard-2 px-6 py-6 lg:flex  justify-between items-center mt-4"
+            className="newscard-2 !blur-0 px-6 py-6 lg:flex  justify-between items-center mt-4"
           >
             <div className="flex flex-col lg:flex-row justify-between gap-4 lg:items-center">
               <span className="block md:hidden">{data.icon}</span>

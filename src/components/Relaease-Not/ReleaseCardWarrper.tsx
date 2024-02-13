@@ -29,7 +29,7 @@ const ReleaseCardWarrper = ({
               jdk-21+35 - Eclipse Temurin™
             </p>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-[86px] ">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-[73px] ">
             <div className="  flex items-start   gap-2 justify-start">
               <div className="pt-1">{icon}</div>
               <div className="text-rose-600 text-base font-bold leading-normal">

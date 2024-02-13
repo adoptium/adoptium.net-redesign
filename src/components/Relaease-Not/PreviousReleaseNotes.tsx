@@ -1,6 +1,7 @@
 import React from "react"
 import ReleaseCardWarrper from "./ReleaseCardWarrper"
 import { RedIcon } from "../Common/Icon"
+import CommonButton from "../Common/CommonButton"
 const datarepeate = [
   {
     id: 1,
@@ -137,9 +138,7 @@ const PreviousReleaseNotes = () => {
             TCK-tested for general use in the Java ecosystem.
           </p>
         </div>
-        <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out ">
-          Issue a report
-        </button>
+        <CommonButton className={undefined}>Issue a report</CommonButton>
       </div>
       <div className="flex gap-8 mt-[40px]">
         <div className="bg-[#0E002A] rounded-[24px] p-8 w-full lg:w-[60%] flex flex-col gap-5">

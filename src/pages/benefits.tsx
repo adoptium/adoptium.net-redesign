@@ -27,9 +27,7 @@ const benefits = () => {
           className={undefined}
           title="More than 10 years' experience, and a focus firmly on your future"
           description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
-          description2="Vestibulum feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis."
           linkText="Learn More"
-          linkText2="Get a Quote"
           link="#"
           icon={undefined}
         />
@@ -65,15 +63,14 @@ const benefits = () => {
           }
           title="Need support with Temurin?"
           description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
-          description2="Vestibulum feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis."
           linkText="Get Support"
-          linkText2=" Support"
           link="#"
           icon={<NeedSupportIcon />}
         />
         <ContactUs
           title="Contact us about how Temurin can help your business"
           className={"!pt-0"}
+          buttontitle="Contact"
         />
       </Layout>
     </div>

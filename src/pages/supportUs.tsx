@@ -90,7 +90,11 @@ const SupportUs = () => {
             </div>
           </div>
         </section>
-        <ContactUs title={"Connect with the community"} className={undefined} />
+        <ContactUs
+          title={"Connect with the community"}
+          className={undefined}
+          buttontitle="Learn More"
+        />
       </Layout>
     </div>
   )

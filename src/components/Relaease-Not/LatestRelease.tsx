@@ -1,9 +1,10 @@
 import React from "react"
 import CommonHeading from "../Common/CommonHeading"
 import OurMamberFooter from "../Business-Benefits2/OurMamberFooter"
-import { RedIcon } from "../Common/Icon"
+import { AdobeIcon2, RedIcon } from "../Common/Icon"
 import { Link } from "gatsby"
 import { FaApple } from "react-icons/fa"
+import CommonButton from "../Common/CommonButton"
 
 const LatestRelease = () => {
   return (
@@ -22,15 +23,16 @@ const LatestRelease = () => {
               <p className="text-[20px] font-hanken leading-[28px] text-white my-0 text-center">
                 Eclipse Temurin offers high-performance
               </p>
-              <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out ">
+              <CommonButton className={"!w-[169px] !mt-2"}>
                 See all Releases
-              </button>
+              </CommonButton>
             </div>
           </div>
         </div>
-        <div className="sm:max-w-[290px] mx-auto w-full">
+        <div className="sm:max-w-[300px] mx-auto w-full">
           <div className="p-8 border-[2px] border-[#FF1464]  rounded-3xl w-full ">
-            <h2 className="text-primary text-base leading-6 font-normal flex items-center gap-x-3">
+            <AdobeIcon2 />
+            <h2 className="text-primary text-base leading-6 mt-7 font-normal flex items-center gap-x-3">
               <span className="">
                 <RedIcon />
               </span>

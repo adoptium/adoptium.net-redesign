@@ -76,7 +76,7 @@ const realeaseArchieve = () => {
         </div>
       </section>
 
-      <section className="pb-32 ">
+      <section className="pb-14 md:pb-32 ">
         <div className="w-full gap-4 px-6 xl:px-0 justify-between max-w-[1264px] mx-auto items-center hidden sm:flex ">
           <div className="h-[1px] bg-[#3E3355] w-full "></div>
           <h5 className="whitespace-nowrap text-base font-normal  text-[#C4BFCE]">
@@ -87,7 +87,7 @@ const realeaseArchieve = () => {
         <CtaWrapper />
       </section>
       <LibericaMethod />
-      <FAQ />
+      <FAQ className={"!py-16 md:!py-24"} />
     </Layout>
   )
 }

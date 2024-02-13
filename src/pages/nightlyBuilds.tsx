@@ -75,7 +75,7 @@ const nightlyBuilds = () => {
             </h4>
           </div>
         </section>
-        <section className="py-16">
+        <section className="pt-7 pb-16">
           <h2 className="text-center text-4xl mb-10 font-semibold md:text-5xl leading-[116%] ">
             Temurin Builds on 01/04/23
           </h2>
@@ -91,7 +91,7 @@ const nightlyBuilds = () => {
             <SelectorHeader data={data} />
           </div>
         </section>
-        <section className="pb-32 ">
+        <section className="pb-16 md:pb-32 ">
           <div className="w-full gap-4 px-6  justify-between max-w-[1264px] mx-auto items-center hidden sm:flex ">
             <div className="h-[1px] bg-[#3E3355] w-full "></div>
             <h5 className="whitespace-nowrap text-base font-normal  text-[#C4BFCE]">
@@ -102,7 +102,7 @@ const nightlyBuilds = () => {
           <CtaWrapper />
         </section>
         <LibericaMethod />
-        <FAQ />
+        <FAQ className={"!py-16 md:!py-24"} />
       </Layout>
     </div>
   )

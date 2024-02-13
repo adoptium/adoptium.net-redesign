@@ -34,11 +34,11 @@ const latestReleases = () => {
             {active === 5 && <ButtonContent />}
           </div>
         </section>
-        <section className="pt-16 pb-32 ">
+        <section className="pt-0 pb-16 md:pt-16 md:pb-32 ">
           <h2 className="text-center text-4xl mb-10 font-semibold md:text-5xl leading-[116%] ">
             Latest Temurin
           </h2>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center !mb-4">
             <button className="bg-transparent  flex items-center justify-center  border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border">
               Source Code{" "}
               <span className="ml-2">
@@ -49,7 +49,7 @@ const latestReleases = () => {
           <CtaWrapper />
         </section>
         <LibericaMethod />
-        <FAQ />
+        <FAQ className={"!py-16 md:!py-24"} />
       </Layout>
     </div>
   )

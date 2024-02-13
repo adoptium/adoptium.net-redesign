@@ -126,7 +126,7 @@ const datarepeate = [
 
 const PreviousReleaseNotes = () => {
   return (
-    <div className="max-w-[1264px] mx-auto px-4 py-10">
+    <div className="max-w-[1264px] mx-auto px-6 py-10">
       <div className="flex justify-center lg:justify-between flex-wrap  items-start gap-5 ">
         <div className="flex flex-col max-w-[900px] gap-3">
           <h3 className="text-[36px] md:text-[48px] font-hanken text-center lg:text-start leading-[48px] md:leading-[56px] font-semibold text-white my-0 ">
@@ -138,7 +138,7 @@ const PreviousReleaseNotes = () => {
             TCK-tested for general use in the Java ecosystem.
           </p>
         </div>
-        <CommonButton className={undefined}>Issue a report</CommonButton>
+        <CommonButton className={"!mt-0"}>Issue a report</CommonButton>
       </div>
       <div className="flex gap-8 mt-[40px]">
         <div className="bg-[#0E002A] rounded-[24px] p-8 w-full lg:w-[60%] flex flex-col gap-5">

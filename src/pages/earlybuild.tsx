@@ -4,6 +4,7 @@ import PageHeader from "../components/PageHeader"
 import ImageText from "../components/ImageText"
 import Documentation from "../components/Early-Access-Build/Documentation"
 import AllReleases from "../components/Early-Access-Build/AllReleases"
+import ApiInformation from "../components/Early-Access-Build/ApiInformation"
 
 const earlybuild = () => {
   return (
@@ -16,16 +17,7 @@ const earlybuild = () => {
         />
 
         <AllReleases />
-        <ImageText
-          className={
-            "flex flex-col md:flex-row  w-full items-center text-center md:text-start"
-          }
-          title="A short title for API information"
-          description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
-          linkText="Get Support"
-          link={undefined}
-          icon={undefined}
-        />
+        <ApiInformation />
 
         <Documentation />
       </Layout>

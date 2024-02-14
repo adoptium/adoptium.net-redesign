@@ -11,37 +11,59 @@ import SelectorHeader from "../components/Common/SelectorHeader"
 import { RedIcon } from "../components/Common/Icon"
 
 const nightlyBuilds = () => {
-  const data = [
+  const titles = [
+    "Java Version",
+    "Release Version",
+    "Operating system",
+    "Architecture",
+    "Bitness",
+    "Package Type",
+  ]
+  const Java = [
+    { name: "Java 20" },
+    { name: "Mac OS 2" },
+    { name: "Mac OS 3" },
+    { name: " Mac os Version" },
+  ]
+  const Operating = [
+    { name: "Any" },
+    { name: "aarch64" },
     {
-      subtitle: "Java Version",
-      title: "Java 20",
-      options: ["Mac OS", "Mac OS 2", "Mac OS 3"],
+      name: "aarch 2",
     },
+    { name: "aarch 3" },
+  ]
+  const Release = [
     {
-      subtitle: "Release Version",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
+      name: "Any",
     },
+    { name: "Operating" },
+    { name: "Operating System" },
+    { name: "Operating System Window" },
+  ]
+  const Architecture = [
+    { name: "Any" },
+    { name: "aarch64" },
     {
-      subtitle: "Operating system",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
+      name: "aarch 2",
     },
+    { name: "aarch 3" },
+  ]
+  const Bitness = [
     {
-      subtitle: "Architecture",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
+      name: "Any",
     },
+    { name: "Operating" },
+    { name: "Operating System" },
+    { name: "Operating System Window" },
+  ]
+  const Package = [
+    { name: "Any" },
+    { name: "aarch64" },
     {
-      subtitle: "Bitness",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
+      name: "aarch 2",
     },
-    {
-      subtitle: "Package Type",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
-    },
+    { name: "aarch 3" },
   ]
   return (
     <div>
@@ -88,7 +110,10 @@ const nightlyBuilds = () => {
             </button>
           </div>
           <div className="w-full px-6 xl:px-0 flex  flex-col items-start justify-start sm:items-center sm:justify-center mt-[15px] md:mt-[64px]  ">
-            <SelectorHeader data={data} />
+            <SelectorHeader
+              data={[Java, Operating, Release, Architecture, Bitness, Package]}
+              title={titles}
+            />
           </div>
         </section>
         <section className="pb-16 md:pb-32 ">

@@ -12,38 +12,61 @@ import SelectorHeader from "../components/Common/SelectorHeader"
 
 const realeaseArchieve = () => {
   const [active, setActive] = useState(1)
-  const data = [
-    {
-      subtitle: "Java Version",
-      title: "Java 20",
-      options: ["Mac OS", "Mac OS 2", "Mac OS 3"],
-    },
-    {
-      subtitle: "Release Version",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
-    },
-    {
-      subtitle: "Operating system",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
-    },
-    {
-      subtitle: "Architecture",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
-    },
-    {
-      subtitle: "Bitness",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
-    },
-    {
-      subtitle: "Package Type",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
-    },
+  const titles = [
+    "Java Version",
+    "Release Version",
+    "Operating system",
+    "Architecture",
+    "Bitness",
+    "Package Type",
   ]
+  const Java = [
+    { name: "Java 20" },
+    { name: "Mac OS 2" },
+    { name: "Mac OS 3" },
+    { name: " Mac os Version" },
+  ]
+  const Operating = [
+    { name: "Any" },
+    { name: "aarch64" },
+    {
+      name: "aarch 2",
+    },
+    { name: "aarch 3" },
+  ]
+  const Release = [
+    {
+      name: "Any",
+    },
+    { name: "Operating" },
+    { name: "Operating System" },
+    { name: "Operating System Window" },
+  ]
+  const Architecture = [
+    { name: "Any" },
+    { name: "aarch64" },
+    {
+      name: "aarch 2",
+    },
+    { name: "aarch 3" },
+  ]
+  const Bitness = [
+    {
+      name: "Any",
+    },
+    { name: "Operating" },
+    { name: "Operating System" },
+    { name: "Operating System Window" },
+  ]
+  const Package = [
+    { name: "Any" },
+    { name: "aarch64" },
+    {
+      name: "aarch 2",
+    },
+    { name: "aarch 3" },
+  ]
+
   return (
     <Layout>
       <NavBar />
@@ -72,7 +95,10 @@ const realeaseArchieve = () => {
           </button>
         </div>
         <div className="w-full px-6 xl:px-0 flex  flex-col items-start justify-start sm:items-center sm:justify-center mt-8 md:mt-[64px]  ">
-          <SelectorHeader data={data} />
+          <SelectorHeader
+            data={[Java, Operating, Release, Architecture, Bitness, Package]}
+            title={titles}
+          />
         </div>
       </section>
 

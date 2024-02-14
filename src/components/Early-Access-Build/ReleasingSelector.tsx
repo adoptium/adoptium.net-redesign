@@ -1,34 +1,42 @@
 import React from "react"
 import SelectorHeader from "../Common/SelectorHeader"
+const tokenlist = [
+  { name: "Mac OS" },
+  { name: "Mac OS 2" },
+  { name: "Mac OS version 3" },
+  { name: "Mac OS 3" },
+]
 
+const Architeccture = [
+  { name: "aarch64" },
+  { name: "aarch2" },
+  { name: "aarch53" },
+  { name: "aarch6478" },
+]
+const Package = [
+  { name: "JDK" },
+  { name: "JDK 2" },
+  { name: "JDK version3" },
+  { name: "JDK 4" },
+]
+const Version = [
+  { name: "21 - LTS" },
+  {
+    name: "21 - LTS 3",
+  },
+  { name: "21 - LTS 4" },
+  { name: "21 - LTS 5" },
+]
+
+const titles = ["Operating System", "Architecture", "Package Type", "Version"]
 const ReleasingSelector = () => {
   return (
     <div>
       {" "}
       <div className="my-[50px]">
         <SelectorHeader
-          data={[
-            {
-              subtitle: "Operating System",
-              title: "Mac OS ",
-              options: ["Mac OS", "Mac OS 2", "Mac OS 3"],
-            },
-            {
-              subtitle: "Architecture",
-              title: "aarch64",
-              options: ["aarch64", "aarch 2", "aarch 3"],
-            },
-            {
-              title: "JDK",
-              subtitle: "Package Type",
-              options: ["JDK12", "JDK 2", "JDK 3"],
-            },
-            {
-              title: "21 - LTS",
-              subtitle: "Version",
-              options: ["LTS23", "LTS 2", "LTS 3"],
-            },
-          ]}
+          data={[tokenlist, Architeccture, Package, Version]}
+          title={titles}
         />
       </div>
     </div>

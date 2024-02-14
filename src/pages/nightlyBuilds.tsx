@@ -11,37 +11,59 @@ import SelectorHeader from "../components/Common/SelectorHeader"
 import { RedIcon } from "../components/Common/Icon"
 
 const nightlyBuilds = () => {
-  const data = [
+  const titles = [
+    "Java Version",
+    "Release Version",
+    "Operating system",
+    "Architecture",
+    "Bitness",
+    "Package Type",
+  ]
+  const Java = [
+    { name: "Java 20" },
+    { name: "Mac OS 2" },
+    { name: "Mac OS 3" },
+    { name: " Mac os Version" },
+  ]
+  const Operating = [
+    { name: "Any" },
+    { name: "aarch64" },
     {
-      subtitle: "Java Version",
-      title: "Java 20",
-      options: ["Mac OS", "Mac OS 2", "Mac OS 3"],
+      name: "aarch 2",
     },
+    { name: "aarch 3" },
+  ]
+  const Release = [
     {
-      subtitle: "Release Version",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
+      name: "Any",
     },
+    { name: "Operating" },
+    { name: "Operating System" },
+    { name: "Operating System Window" },
+  ]
+  const Architecture = [
+    { name: "Any" },
+    { name: "aarch64" },
     {
-      subtitle: "Operating system",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
+      name: "aarch 2",
     },
+    { name: "aarch 3" },
+  ]
+  const Bitness = [
     {
-      subtitle: "Architecture",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
+      name: "Any",
     },
+    { name: "Operating" },
+    { name: "Operating System" },
+    { name: "Operating System Window" },
+  ]
+  const Package = [
+    { name: "Any" },
+    { name: "aarch64" },
     {
-      subtitle: "Bitness",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
+      name: "aarch 2",
     },
-    {
-      subtitle: "Package Type",
-      title: "Any",
-      options: ["aarch64", "aarch 2", "aarch 3"],
-    },
+    { name: "aarch 3" },
   ]
   return (
     <div>
@@ -75,7 +97,7 @@ const nightlyBuilds = () => {
             </h4>
           </div>
         </section>
-        <section className="py-16">
+        <section className="pt-7 pb-16">
           <h2 className="text-center text-4xl mb-10 font-semibold md:text-5xl leading-[116%] ">
             Temurin Builds on 01/04/23
           </h2>
@@ -88,10 +110,13 @@ const nightlyBuilds = () => {
             </button>
           </div>
           <div className="w-full px-6 xl:px-0 flex  flex-col items-start justify-start sm:items-center sm:justify-center mt-[15px] md:mt-[64px]  ">
-            <SelectorHeader data={data} />
+            <SelectorHeader
+              data={[Java, Operating, Release, Architecture, Bitness, Package]}
+              title={titles}
+            />
           </div>
         </section>
-        <section className="pb-32 ">
+        <section className="pb-16 md:pb-32 ">
           <div className="w-full gap-4 px-6  justify-between max-w-[1264px] mx-auto items-center hidden sm:flex ">
             <div className="h-[1px] bg-[#3E3355] w-full "></div>
             <h5 className="whitespace-nowrap text-base font-normal  text-[#C4BFCE]">
@@ -102,7 +127,7 @@ const nightlyBuilds = () => {
           <CtaWrapper />
         </section>
         <LibericaMethod />
-        <FAQ />
+        <FAQ className={"!py-16 md:!py-24"} />
       </Layout>
     </div>
   )

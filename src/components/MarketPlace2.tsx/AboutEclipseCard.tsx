@@ -4,7 +4,7 @@ import CommonHeading from "../Common/CommonHeading"
 
 const AboutEclipseCard = () => {
   return (
-    <div className="community flex justify-center items-center px-4 pt-10 pb-24 md:py-24">
+    <div className="community flex justify-center items-center px-6 pt-10 pb-24 md:py-24">
       <div className="newscard-2 gap-4 md:gap-10 flex flex-col md:flex-row justify-between md:items-center max-w-[1000px] mx-auto p-[32px] md:p-[64px]">
         <div className="max-w-[110px] ">
           <img className="w-full" src={logoimg} alt="" />

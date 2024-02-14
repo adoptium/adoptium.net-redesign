@@ -3,10 +3,11 @@ import CommonSelector from "./CommonSelector"
 
 const OperatingSystemSelector = ({ operatingSystem, svgComponent }) => {
   const dropdownOptions = [
-    "Package: Standard JDK 1",
-    "Package: Standard JDK 2",
-    "Package: Standard JDK 3",
+    { name: "Package: Standard JDK" },
+    { name: "Package: Standard JDK" },
+    { name: "Package: Standard JDK" },
   ]
+
   return (
     <div>
       <div className="p-6 bg-[#2B1A4F] flex flex-col rounded-[24px] gap-6">
@@ -21,10 +22,7 @@ const OperatingSystemSelector = ({ operatingSystem, svgComponent }) => {
           {/* ========================================= USESTATE ===================================== */}
           <div className="flex gap-4"></div>
         </div>
-        <CommonSelector
-          options={dropdownOptions}
-          title="Package: Standard JDK"
-        />
+        <CommonSelector list={dropdownOptions} />
       </div>
     </div>
   )

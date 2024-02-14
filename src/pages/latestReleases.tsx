@@ -28,7 +28,7 @@ const latestReleases = () => {
         <Heading />
         <CtaWrapper />
         <LibericaMethod />
-        <FAQ />
+        <FAQ className={"!py-16 md:!py-24"} />
       </Layout>
     </div>
   )

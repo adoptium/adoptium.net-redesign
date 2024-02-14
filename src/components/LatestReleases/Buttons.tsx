@@ -4,7 +4,7 @@ const Buttons = ({ active, setActive }) => {
   return (
     <div className="w-full px-4 ">
       <div className="overflow-auto min-w-full w-full ">
-        <div className="flex space-x-10 whitespace-nowrap border-b-[1px] border-[#3E3355]  max-w-[1264px] mx-auto justify-center py-2">
+        <div className="flex space-x-10 whitespace-nowrap border-b-[1px] border-[#3E3355]  max-w-[1264px] mx-auto lg:justify-center py-2">
           <button onClick={() => setActive(1)}>
             <span
               className={` py-2  w-full text-base font-normal leading-6 

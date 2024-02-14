@@ -43,7 +43,7 @@ const LibericaMethod = () => {
     },
   ]
   return (
-    <section className="py-32 bg-[#0E002A] px-6">
+    <section className="py-16 md:py-32 bg-[#0E002A] px-6">
       <CommonHeading
         title={"Other ways to install Liberica"}
         description={

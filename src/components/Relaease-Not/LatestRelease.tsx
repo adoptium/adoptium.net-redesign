@@ -8,7 +8,7 @@ import CommonButton from "../Common/CommonButton"
 
 const LatestRelease = () => {
   return (
-    <div className="py-6 md:py-20 px-4 max-w-[1264px] mx-auto">
+    <div className="py-6 md:py-20 px-6 max-w-[1264px] mx-auto">
       <div className="flex items-center  flex-wrap gap-14">
         <div className="w-full lg:w-[60%]">
           <CommonHeading

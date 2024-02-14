@@ -1,69 +1,65 @@
-import React, { useState } from "react"
-import { Menu, Transition } from "@headlessui/react"
-import { DownArrowIcon } from "./AppIcon"
+import { Listbox, Transition } from "@headlessui/react"
+import React from "react"
+import { Fragment, useState } from "react"
+import { DownArrowIcon } from "../Common/AppIcon"
 
-const CommonSelector = ({ options, title }) => {
-  const [selectedOption, setSelectedOption] = useState(null)
-  const [isOpen, setIsOpen] = useState(false)
-
-  const handleMenuClick = item => {
-    console.log("Menu item clicked:", item)
-    setSelectedOption(item)
-    setIsOpen(false)
-  }
-  return (
-    <div>
-      <div className="relative">
-        <Menu as="div" className="inline-block w-full text-left">
-          {({ open }) => (
-            <>
-              <div>
-                <Menu.Button className="w-full rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]">
-                  <span className="flex items-center justify-between text-nowrap">
-                    {selectedOption ? title : " " + title}
-                    <DownArrowIcon />
-                  </span>
-                </Menu.Button>
-              </div>
-              <Transition
-                show={open}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items
-                  static
-                  className="origin-top-left absolute overflow-hidden left-0 mt-2 w-full rounded-[16px] bg-[#200D46] border-[2px] text-white z-10 border-[#3E3355]"
-                >
-                  <div className="bg-[#200D46] overflow-hidden">
-                    {options.map(item => (
-                      <Menu.Item key={item}>
-                        {({ active }) => (
-                          <div
-                            onClick={() => handleMenuClick(item)}
-                            className={`${
-                              active
-                                ? " text-white bg-[#3E3355]"
-                                : " text-white hover:bg-[#2a223a]"
-                            } block px-4 py-2 text-sm cursor-pointer`}
-                          >
-                            {item}
-                          </div>
-                        )}
-                      </Menu.Item>
-                    ))}
-                  </div>
-                </Menu.Items>
-              </Transition>
-            </>
-          )}
-        </Menu>
-      </div>
-    </div>
-  )
+interface ListItem {
+  name: string
 }
 
-export default CommonSelector
+interface ListBoxSelectProps {
+  list: ListItem[]
+}
+
+export default function CommonSelector({ list }: ListBoxSelectProps) {
+  const [selected, setSelected] = useState<ListItem>(list[0])
+
+  return (
+    <Listbox value={selected} onChange={setSelected}>
+      <div className="relative mt-1">
+        <Listbox.Button className="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]">
+          <span className="flex items-center justify-between text-nowrap">
+            {selected.name}
+          </span>
+          <span>
+            <DownArrowIcon />
+          </span>
+        </Listbox.Button>
+        <Transition
+          as={Fragment}
+          leave="transition ease-in duration-100"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <Listbox.Options className="origin-top-left absolute overflow-hidden left-0 mt-2 w-full rounded-[16px] bg-[#200D46] border-[2px] text-white z-10 border-[#3E3355]">
+            {list.map((obj, index) => (
+              <Listbox.Option
+                key={index}
+                className={({ active }) =>
+                  `relative cursor-pointer select-none py-2 px-4 ${
+                    active
+                      ? "text-white bg-[#3E3355]"
+                      : "text-white hover:bg-[#2a223a]"
+                  }`
+                }
+                value={obj}
+              >
+                {({ selected }) => (
+                  <>
+                    <span
+                      className={`block truncate ${
+                        selected ? "font-medium" : "font-normal"
+                      }`}
+                    >
+                      {obj.name}
+                    </span>
+                  </>
+                )}
+              </Listbox.Option>
+            ))}
+          </Listbox.Options>
+        </Transition>
+      </div>
+    </Listbox>
+  )
+}

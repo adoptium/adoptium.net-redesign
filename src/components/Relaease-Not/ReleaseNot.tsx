@@ -6,7 +6,7 @@ import ReleaseCardWarrper from "./ReleaseCardWarrper"
 
 export const ReleaseNot = () => {
   return (
-    <div className="flex justify-between gap-4 flex-wrap max-w-[1264px] mx-auto px-4 py-20">
+    <div className="flex justify-between gap-4 flex-wrap max-w-[1264px] mx-auto px-6 py-20">
       <div className="w-full md:w-[35%]">
         <CommonHeading
           title="Latest Release Note"

@@ -51,7 +51,7 @@ const LibericaMethod = () => {
         }
         className={"text-center max-w-[680px] mx-auto"}
       />
-      <div className="mt-16">
+      <div className=" mt-8 md:mt-16">
         <div className=" justify-between max-w-[1064px] mx-auto grid  gap-8 md:gap-12 w-full grid-cols-1 md:grid-cols-2  lg:grid-cols-3 ">
           {LibericaMethod.map((method, index) => (
             <div className="flex gap-4 max-w-[366px] xl:max-w-[322px]">
@@ -62,7 +62,7 @@ const LibericaMethod = () => {
                 <h4 className="max-w-[270px] text-xl font-normal xl:max-w-[226px]">
                   {method.title}
                 </h4>
-                <div className="flex gap-2 mt-2 ">
+                <div className="flex gap-4 mt-2 ">
                   {method.buttons.map((button, buttonIndex) => (
                     <button
                       key={buttonIndex}

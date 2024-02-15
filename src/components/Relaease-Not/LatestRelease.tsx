@@ -23,7 +23,7 @@ const LatestRelease = () => {
               <p className="text-[20px] font-hanken leading-[28px] text-white my-0 text-center">
                 Eclipse Temurin offers high-performance
               </p>
-              <CommonButton className={"!w-[169px] !mt-2"}>
+              <CommonButton className={"!w-[169px] !mt-2"} icon={undefined}>
                 See all Releases
               </CommonButton>
             </div>

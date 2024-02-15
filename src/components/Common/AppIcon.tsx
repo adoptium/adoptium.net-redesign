@@ -91,6 +91,7 @@ export const CopyIcon = () => {
           <path
             d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
             stroke="#C4BFCE"
+            className="group-hover:stroke-primary group-hover:transition-all  group-hover:duration-300  group-hover:ease-in-out"
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -98,6 +99,7 @@ export const CopyIcon = () => {
           <path
             d="M3.33203 9.99967H2.66536C2.31174 9.99967 1.9726 9.8592 1.72256 9.60915C1.47251 9.3591 1.33203 9.01996 1.33203 8.66634V2.66634C1.33203 2.31272 1.47251 1.97358 1.72256 1.72353C1.9726 1.47348 2.31174 1.33301 2.66536 1.33301H8.66536C9.01899 1.33301 9.35813 1.47348 9.60817 1.72353C9.85822 1.97358 9.9987 2.31272 9.9987 2.66634V3.33301"
             stroke="#C4BFCE"
+            className="group-hover:stroke-primary group-hover:transition-all  group-hover:duration-300  group-hover:ease-in-out"
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"

@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import OperatingSystemSelector from "./OperatingSystemSelector"
 import { MacIcon, SolarisIcon, WindowIcon } from "./AppIcon"
 import CommonDownloader from "./CommonDownloader"
 import { LinuxIcon } from "./Icon"
 
 const CommonCtaWrapper = () => {
+  const [active, setActive] = useState(0)
   const arr = [
     {
       label: "MSI, 185.41Mb",
@@ -55,6 +56,18 @@ const CommonCtaWrapper = () => {
       label: "TAR.GZ, 198.61Mb",
     },
   ]
+  const FirstTabs = [
+    {
+      id: "1",
+      label: "x86",
+    },
+    {
+      id: "2",
+      label: "ARM",
+    },
+  ]
+  const ThreeTabs = [{ label: "x86" }, { label: "ARM" }, { label: "PPC" }]
+  const TwoTabs = [{ label: "x86" }, { label: "ARM" }]
 
   return (
     <div className="max-w-[1264px] space-y-8  w-full pb-16 md:pb-32  mx-auto px-6    xl:px-0  rounded-[24px]  border-white ">
@@ -63,6 +76,9 @@ const CommonCtaWrapper = () => {
           <OperatingSystemSelector
             operatingSystem={"Window"}
             svgComponent={<WindowIcon />}
+            active={active}
+            setActive={setActive}
+            buttons={FirstTabs}
           />
         </div>
         <div className="flex flex-col w-full lg:w-[60%] mt-8 lg:mt-0">
@@ -80,6 +96,9 @@ const CommonCtaWrapper = () => {
           <OperatingSystemSelector
             operatingSystem={"macOS"}
             svgComponent={<MacIcon />}
+            active={active}
+            setActive={setActive}
+            buttons={TwoTabs}
           />
         </div>
         <div className="flex flex-col w-full lg:w-[60%] mt-8 lg:mt-0">
@@ -97,6 +116,9 @@ const CommonCtaWrapper = () => {
           <OperatingSystemSelector
             operatingSystem={"Linux"}
             svgComponent={<LinuxIcon />}
+            active={active}
+            setActive={setActive}
+            buttons={ThreeTabs}
           />
         </div>
         <div className="flex flex-col w-full lg:w-[60%] mt-8 lg:mt-0">
@@ -114,6 +136,9 @@ const CommonCtaWrapper = () => {
           <OperatingSystemSelector
             operatingSystem={"Linux"}
             svgComponent={<LinuxIcon />}
+            active={active}
+            setActive={setActive}
+            buttons={TwoTabs}
           />
         </div>
         <div className=" flex-col w-full lg:w-[60%] mt-8 lg:mt-0">
@@ -131,6 +156,9 @@ const CommonCtaWrapper = () => {
           <OperatingSystemSelector
             operatingSystem={"Solaris"}
             svgComponent={<SolarisIcon />}
+            active={active}
+            setActive={setActive}
+            buttons={TwoTabs}
           />
         </div>
         <div className="flex flex-col w-full lg:w-[60%] mt-8 lg:mt-0">

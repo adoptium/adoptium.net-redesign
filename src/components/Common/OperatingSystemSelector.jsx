@@ -1,7 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import CommonSelector from "./CommonSelector"
 
-const OperatingSystemSelector = ({ operatingSystem, svgComponent }) => {
+const OperatingSystemSelector = ({
+  operatingSystem,
+  svgComponent,
+  active,
+  setActive,
+  buttons,
+}) => {
   const dropdownOptions = [
     { name: "Package: Standard JDK" },
     { name: "Package: Standard JDK" },
@@ -20,7 +26,18 @@ const OperatingSystemSelector = ({ operatingSystem, svgComponent }) => {
           </div>
 
           {/* ========================================= USESTATE ===================================== */}
-          <div className="flex gap-4"></div>
+          <div className="flex gap-4">
+            {buttons.map((data, index) => (
+              <button key={index} onClick={() => setActive(index)}>
+                <span
+                  className={`py-3 w-full text-base font-normal leading-6 
+          outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === index ? "border-primary  border-b-[2px] text-white" : "text-[#8a809e] border-transparent  border-b"}`}
+                >
+                  {data.label}
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
         <CommonSelector list={dropdownOptions} />
       </div>

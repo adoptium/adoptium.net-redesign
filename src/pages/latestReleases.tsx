@@ -1,4 +1,3 @@
-import CtaWrapper from "../components/Common/CtaWrapper"
 import Layout from "../components/Layout"
 import NavBar from "../components/NavBar"
 import PageHeader from "../components/PageHeader"
@@ -11,6 +10,7 @@ import ButtonContent from "../components/LatestReleases/ButtonContent"
 import LibericaMethod from "../components/Common/LibericaMethod"
 import Heading from "../components/LatestReleases/Heading"
 import Tabs from "../components/LatestReleases/Tabs"
+import CommonCtaWrapper from "../components/Common/CommonCtaWrapper"
 
 const latestReleases = () => {
   return (
@@ -26,7 +26,7 @@ const latestReleases = () => {
         />
         <Tabs />
         <Heading />
-        <CtaWrapper />
+        <CommonCtaWrapper />
         <LibericaMethod />
         <FAQ className={"!py-16 md:!py-24"} />
       </Layout>

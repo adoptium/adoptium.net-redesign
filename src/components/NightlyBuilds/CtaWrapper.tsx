@@ -1,7 +1,7 @@
 import React from "react"
-import CtaWrapper from "../Common/CtaWrapper"
+import CommonCtaWrapper from "../Common/CommonCtaWrapper"
 
-const NightlyCtaWrapper = () => {
+const CtaWrapper = () => {
   return (
     <>
       <div className="w-full gap-4 px-6 mb-8 xl:px-0 justify-between max-w-[1264px] mx-auto items-center hidden sm:flex ">
@@ -11,9 +11,9 @@ const NightlyCtaWrapper = () => {
         </h5>
         <div className="h-[1px] bg-[#3E3355] w-full "></div>
       </div>
-      <CtaWrapper />
+      <CommonCtaWrapper />
     </>
   )
 }
 
-export default NightlyCtaWrapper
+export default CtaWrapper

@@ -39,9 +39,9 @@ const ButtonContent = () => {
           {navigationItem.map((item, index) => (
             <li
               key={index}
-              className="flex gap-3 items-center  text-xl font-normal cursor-pointer"
+              className="flex gap-3 group items-center text-white hover:text-primary transition-colors duration-300 ease-in text-xl font-normal cursor-pointer"
             >
-              <span>
+              <span className="transition-all duration-300 ease-in text-xl font-normal cursor-pointer">
                 <CrossIcon />
               </span>{" "}
               {item.title}
@@ -53,7 +53,7 @@ const ButtonContent = () => {
           {CardData.map((card, index) => (
             <div
               key={index}
-              className="p-8 bg-[#200E46]  justify-between w-full border rounded-[24px] border-[#564873] h-[264px] flex flex-col   transition-all duration-200 ease-in-out hover:border-transparent hover:shadow-[0_4px_8px_rgba(90,77,108,0.5)]"
+              className="p-8 bg-[#200E46]  justify-between w-full border rounded-[24px] border-[#564873] h-[264px] flex flex-col   transition-all duration-300 ease-in-out hover:border-primary shadow-[0_2px_4px_rgba(255,20,100,0.2)]"
             >
               <span className="p-6 rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76]">
                 {card.icon}
@@ -65,7 +65,7 @@ const ButtonContent = () => {
                     {card.description}
                   </h5>
                 </div>
-                <span className="p-3 group cursor-pointer rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76] hover:border-primary  transition-all duration-200 ease-in-out">
+                <span className="p-3 group cursor-pointer rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76] hover:border-primary  transition-all duration-300 ease-in-out">
                   <DownloadIcon />
                 </span>
               </div>

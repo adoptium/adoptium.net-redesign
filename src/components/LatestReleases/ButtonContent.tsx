@@ -39,9 +39,9 @@ const ButtonContent = () => {
           {navigationItem.map((item, index) => (
             <li
               key={index}
-              className="flex gap-3 group items-center text-white hover:text-primary transition-colors duration-300 ease-in text-xl font-normal cursor-pointer"
+              className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer"
             >
-              <span className="transition-all duration-300 ease-in text-xl font-normal cursor-pointer">
+              <span className=" group  ">
                 <CrossIcon />
               </span>{" "}
               {item.title}

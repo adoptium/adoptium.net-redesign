@@ -25,7 +25,7 @@ const UsingTemurin = () => {
     <>
       <section className="py-7 md:py-16 max-w-[1048px] w-full mx-auto items-center lg:flex justify-center lg:justify-between xl:px-0 px-6 ">
         <div className="lg:max-w-[560px] w-full">
-          <h2 className="md:text-5xl text-[40px] font-semibold leading-[48px] md:leading-[56px]">
+          <h2 className="md:text-5xl text-white text-[40px] font-semibold leading-[48px] md:leading-[56px]">
             How other companies are using Temurin
           </h2>
           <p className="md:mt-6 my-10 text-[#C4BFCE] text-base leading-6 font-normal">

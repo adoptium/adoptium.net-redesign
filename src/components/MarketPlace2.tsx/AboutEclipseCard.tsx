@@ -1,6 +1,7 @@
 import React from "react"
 import logoimg from "../../img/About-Eclipse-img.png"
 import CommonHeading from "../Common/CommonHeading"
+import CommonButton from "../Common/CommonButton"
 
 const AboutEclipseCard = () => {
   return (
@@ -16,9 +17,9 @@ const AboutEclipseCard = () => {
             className={"!mt-0"}
           />
 
-          <button className=" mt-6  border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border">
+          <CommonButton className={"mt-6"} icon={undefined}>
             Learn More
-          </button>
+          </CommonButton>
         </div>
       </div>
     </div>

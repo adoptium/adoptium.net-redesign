@@ -65,7 +65,7 @@ const ButtonContent = () => {
                     {card.description}
                   </h5>
                 </div>
-                <span className="p-3 cursor-pointer rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76]">
+                <span className="p-3 group cursor-pointer transition-all duration-300 ease-in-out rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76]">
                   <DownloadIcon />
                 </span>
               </div>

@@ -12,9 +12,7 @@ const ImageText = ({
 }) => {
   return (
     <>
-      <section
-        className={`py-16 max-w-[1048px] w-full mx-auto flex justify-center items-center lg:justify-between xl:px-0 px-6 ${className}`}
-      >
+      <section className={`image-text ${className}`}>
         <div className="max-w-[400px] w-full hidden lg:block">
           <img
             src="/images/icons/experience.png"
@@ -29,7 +27,7 @@ const ImageText = ({
           <h2 className="md:text-5xl text-[40px] font-semibold leading-[48px] md:leading-[56px]">
             {title}
           </h2>
-          <p className="md:mt-6 mt-10 mb-5s text-[#C4BFCE] text-xl md:text-base leading-6 font-normal">
+          <p className="md:mt-6 mt-10 mb-5 text-[#C4BFCE] text-xl md:text-base leading-6 font-normal">
             {description}
           </p>
 

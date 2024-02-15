@@ -5,6 +5,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "variables.scss";
 
+@layer components {
+  .image-text {
+    @apply py-16 max-w-[1048px] w-full mx-auto flex justify-center items-center lg:justify-between xl:px-0 px-6;
+  }
+  .tab-button-text {
+    @apply text-base font-normal leading-6;
+  }
+}
+
 body {
   font-family: "Hanken Grotesk", sans-serif !important;
   background-color: $purple;

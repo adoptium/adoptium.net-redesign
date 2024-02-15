@@ -8,7 +8,7 @@ const OurMamberButton = ({ active, setActive }) => {
         <div className="flex space-x-10 whitespace-nowrap md:justify-center  py-3">
           <button onClick={() => setActive(1)}>
             <span
-              className={` py-3  w-full text-base font-normal leading-6 
+              className={` py-3  w-full tab-button-text
                 outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === 1 ? "border-primary  border-b text-white" : "text-[#8a809e] border-transparent  border-b"}`}
             >
               Strategic Members
@@ -16,7 +16,7 @@ const OurMamberButton = ({ active, setActive }) => {
           </button>
           <button onClick={() => setActive(2)}>
             <span
-              className={` py-3  w-full text-base font-normal leading-6
+              className={` py-3  w-full tab-button-text
                 outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === 2 ? "border-primary  border-b text-white" : "text-[#8a809e] border-transparent  border-b"}`}
             >
               Strategic Members
@@ -24,7 +24,7 @@ const OurMamberButton = ({ active, setActive }) => {
           </button>
           <button onClick={() => setActive(3)}>
             <span
-              className={` py-3  w-full text-base font-normal leading-6
+              className={` py-3  w-full tab-button-text
                 outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === 3 ? "border-primary  border-b text-white" : "text-[#8a809e] border-transparent  border-b"}`}
             >
               Strategic Members
@@ -32,7 +32,7 @@ const OurMamberButton = ({ active, setActive }) => {
           </button>
           <button onClick={() => setActive(4)}>
             <span
-              className={` py-3  w-full text-base font-normal leading-6
+              className={` py-3  w-full tab-button-text
                 outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === 4 ? "border-primary  border-b text-white" : "text-[#8a809e] border-transparent  border-b"}`}
             >
               Strategic Members
@@ -40,7 +40,7 @@ const OurMamberButton = ({ active, setActive }) => {
           </button>
           <button onClick={() => setActive(5)}>
             <span
-              className={` py-3  w-full text-base font-normal leading-6
+              className={` py-3  w-full tab-button-text
                 outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === 5 ? "border-primary  border-b text-white" : "text-[#8a809e] border-transparent  border-b"}`}
             >
               Strategic Members
@@ -48,7 +48,7 @@ const OurMamberButton = ({ active, setActive }) => {
           </button>
           <button onClick={() => setActive(6)}>
             <span
-              className={` py-3  w-full text-base font-normal leading-6
+              className={` py-3  w-full tab-button-text
                 outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === 6 ? "border-primary  border-b text-white" : "text-[#8a809e] border-transparent  border-b"}`}
             >
               Strategic Members

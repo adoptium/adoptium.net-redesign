@@ -5,7 +5,6 @@ import CommonDownloader from "./CommonDownloader"
 import { LinuxIcon } from "./Icon"
 
 const CommonCtaWrapper = () => {
-  const [active, setActive] = useState(0)
   const arr = [
     {
       label: "MSI, 185.41Mb",
@@ -76,8 +75,6 @@ const CommonCtaWrapper = () => {
           <OperatingSystemSelector
             operatingSystem={"Window"}
             svgComponent={<WindowIcon />}
-            active={active}
-            setActive={setActive}
             buttons={FirstTabs}
           />
         </div>
@@ -96,8 +93,6 @@ const CommonCtaWrapper = () => {
           <OperatingSystemSelector
             operatingSystem={"macOS"}
             svgComponent={<MacIcon />}
-            active={active}
-            setActive={setActive}
             buttons={TwoTabs}
           />
         </div>
@@ -116,8 +111,6 @@ const CommonCtaWrapper = () => {
           <OperatingSystemSelector
             operatingSystem={"Linux"}
             svgComponent={<LinuxIcon />}
-            active={active}
-            setActive={setActive}
             buttons={ThreeTabs}
           />
         </div>
@@ -136,8 +129,6 @@ const CommonCtaWrapper = () => {
           <OperatingSystemSelector
             operatingSystem={"Linux"}
             svgComponent={<LinuxIcon />}
-            active={active}
-            setActive={setActive}
             buttons={TwoTabs}
           />
         </div>
@@ -156,8 +147,6 @@ const CommonCtaWrapper = () => {
           <OperatingSystemSelector
             operatingSystem={"Solaris"}
             svgComponent={<SolarisIcon />}
-            active={active}
-            setActive={setActive}
             buttons={TwoTabs}
           />
         </div>

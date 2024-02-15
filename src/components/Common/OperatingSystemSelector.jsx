@@ -4,8 +4,7 @@ import CommonSelector from "./CommonSelector"
 const OperatingSystemSelector = ({
   operatingSystem,
   svgComponent,
-  active,
-  setActive,
+
   buttons,
 }) => {
   const dropdownOptions = [
@@ -13,6 +12,7 @@ const OperatingSystemSelector = ({
     { name: "Package: Standard JDK" },
     { name: "Package: Standard JDK" },
   ]
+  const [active, setActive] = useState(0)
 
   return (
     <div>
@@ -31,7 +31,7 @@ const OperatingSystemSelector = ({
               <button key={index} onClick={() => setActive(index)}>
                 <span
                   className={`py-3 w-full text-base font-normal leading-6 
-          outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === index ? "border-primary  border-b-[2px] text-white" : "text-[#8a809e] border-transparent  border-b"}`}
+                     outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === index ? "border-primary  border-b-[2px] text-white" : "text-[#8a809e] border-transparent  border-b"}`}
                 >
                   {data.label}
                 </span>

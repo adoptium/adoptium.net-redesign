@@ -10,7 +10,7 @@ const OperatingSystemSelector = ({ operatingSystem, svgComponent }) => {
 
   return (
     <div>
-      <div className="p-6 bg-[#2B1A4F] flex flex-col rounded-[24px] gap-6">
+      <div className="p-6 bg-[#2B1A4F] flex flex-col rounded-[24px] gap-6 ">
         <div className="flex justify-between items-center">
           <div className="flex gap-4 justify-start items-center">
             {svgComponent}

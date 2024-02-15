@@ -4,9 +4,7 @@ import { DownloadIcon } from "../Common/AppIcon"
 const Heading = () => {
   return (
     <section className=" py-8 md:py-16">
-      <h2 className="text-center text-4xl mb-10 font-semibold md:text-5xl leading-[116%] ">
-        Latest Temurin
-      </h2>
+      <h2 className="main-heading mb-10 ">Latest Temurin</h2>
       <div className="flex justify-center items-center">
         <button className="bg-transparent  flex items-center justify-center  border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border">
           Source Code{" "}

@@ -8,46 +8,52 @@ import PageHeader from "../components/PageHeader"
 import ImageText from "../components/ImageText"
 import UsingTemurin from "../components/About/UsingTemurin"
 import Testimonials from "../components/Testimonials"
-import Logos, { LogoType } from "../components/Logos"
+
 import ContactUs from "../components/ContactUs"
+import PageDivider from "../components/Business-Benefits2/PageDivider"
+import OurTabContent from "../components/Business-Benefits2/OurTabContent"
+import { NeedSupportIcon } from "../components/Common/Icon"
+import NavBar from "../components/NavBar"
 
 const BusinessBenefits = () => {
   return (
-    <Layout>
-      <PageHeader
-        title="How Temurin can benefit your business"
-        subtitle="Business Benefits"
-        description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
-      />
-      <ImageText
-        title="More than 10 years' experience, and a focus firmly on your future"
-        description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
-        linkText="Learn More"
-        link="#"
-        className={undefined}
-        icon={undefined}
-      />
-      <UsingTemurin />
-      <Logos
-        members={LogoType.ADOPTERS}
-        title="Eclipse Temurin&trade; Adopters"
-        description="Companies that use Eclipse Temurin in production."
-      />
-      <Testimonials className={undefined} />
-      <ImageText
-        title="Need support with Temurin?"
-        description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
-        linkText="Get Support"
-        link="/support"
-        className={undefined}
-        icon={undefined}
-      />
-      <ContactUs
-        title="Contact us about how Temurin can help your business"
-        className={undefined}
-        buttontitle="Contact"
-      />
-    </Layout>
+    <>
+      <Layout>
+        <NavBar />
+        <PageHeader
+          title="How Temurin can benefit your business"
+          subtitle="Business Benefits"
+          description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
+        />
+        <ImageText
+          className={undefined}
+          title="More than 10 years' experience, and a focus firmly on your future"
+          description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
+          linkText="Learn More"
+          link="#"
+          icon={undefined}
+        />
+        <PageDivider />
+        <UsingTemurin />
+        <OurTabContent />
+        <Testimonials className={"!bg-transparent !border-none"} />
+        <ImageText
+          className={
+            "flex flex-col md:flex-row  w-full items-center text-center md:text-start"
+          }
+          title="Need support with Temurin?"
+          description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
+          linkText="Get Support"
+          link="#"
+          icon={<NeedSupportIcon />}
+        />
+        <ContactUs
+          title="Contact us about how Temurin can help your business"
+          className={""}
+          buttontitle="Contact"
+        />
+      </Layout>
+    </>
   )
 }
 export default BusinessBenefits

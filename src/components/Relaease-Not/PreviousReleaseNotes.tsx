@@ -138,7 +138,9 @@ const PreviousReleaseNotes = () => {
             TCK-tested for general use in the Java ecosystem.
           </p>
         </div>
-        <CommonButton className={"!mt-0"}>Issue a report</CommonButton>
+        <CommonButton className={"!mt-0"} icon={undefined}>
+          Issue a report
+        </CommonButton>
       </div>
       <div className="flex gap-8 mt-[40px]">
         <div className="bg-[#0E002A] rounded-[24px] p-8 w-full lg:w-[60%] flex flex-col gap-5">

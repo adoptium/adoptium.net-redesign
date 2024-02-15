@@ -43,7 +43,7 @@ const PageHeader = ({
               dangerouslySetInnerHTML={{ __html: title }}
             />
           </div>
-          <div className="self-stretch text-center text-grey text-grey-300 text-[20px] font-normal   leading-7">
+          <div className="self-stretch  text-center text-gray-300  text-[20px] font-normal   leading-7">
             {description}
           </div>
         </div>

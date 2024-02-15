@@ -138,7 +138,7 @@ const AllReleaseCard = () => {
             <div className="flex flex-col lg:flex-row justify-between gap-4 lg:items-center">
               <span className="block md:hidden">{data.icon}</span>
               <div className="lg:w-[160px] mt-3 md:mt-0">
-                <h3 className="text-[24px] whitespace-nowrap md:text-[16px] font-bold leading-[32px] md:leading-[24px]">
+                <h3 className="text-[24px] whitespace-nowrap md:whitespace-normal md:text-[16px] font-bold leading-[32px] md:leading-[24px]">
                   {data.title}
                 </h3>
               </div>

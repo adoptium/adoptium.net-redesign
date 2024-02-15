@@ -2,17 +2,12 @@ import React from "react"
 import Layout from "../components/Layout"
 import NavBar from "../components/NavBar"
 import PageHeader from "../components/PageHeader"
-import Buttons from "../components/LatestReleases/Buttons"
-import { DownloadIcon } from "../components/Common/AppIcon"
-import CtaWrapper from "../components/Common/CtaWrapper"
 import LibericaMethod from "../components/Common/LibericaMethod"
 import FAQ from "../components/FAQ"
-import SelectorHeader from "../components/Common/SelectorHeader"
-import { RedIcon } from "../components/Common/Icon"
 import NightlyBulidParagraph from "../components/NightlyBuilds/NightlyBulidParagraph"
-import TemurinBUilds from "../components/NightlyBuilds/TemurinBUilds"
-import NightlyCtaWrapper from "../components/NightlyBuilds/NightlyCtaWrapper"
+
 import TemurinBuilds from "../components/NightlyBuilds/TemurinBUilds"
+import CtaWrapper from "../components/NightlyBuilds/CtaWrapper"
 
 const nightlyBuilds = () => {
   return (
@@ -27,8 +22,8 @@ const nightlyBuilds = () => {
           }
         />
         <NightlyBulidParagraph />
-        <TemurinBuilds />
-        <NightlyCtaWrapper />
+        <TemurinBuilds title={"Temurin Builds on 01/04/23"} />
+        <CtaWrapper />
         <LibericaMethod />
         <FAQ className={"!py-16 md:!py-24"} />
       </Layout>

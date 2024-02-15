@@ -2,7 +2,7 @@ import React from "react"
 import SelectorHeader from "../Common/SelectorHeader"
 import { DownloadIcon } from "../Common/AppIcon"
 
-const TemurinBuilds = () => {
+const TemurinBuilds = ({ title }) => {
   const titles = [
     "Java Version",
     "Release Version",
@@ -59,8 +59,8 @@ const TemurinBuilds = () => {
   ]
   return (
     <>
-      <h2 className="text-center text-4xl mb-10 font-semibold md:text-5xl leading-[116%] ">
-        Temurin Builds on 01/04/23
+      <h2 className="text-center text-4xl mb-10 text-white font-semibold md:text-5xl leading-[116%] ">
+        {title}
       </h2>
       <div className="flex justify-center items-center">
         <button className="bg-transparent  flex items-center justify-center  border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border">

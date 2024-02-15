@@ -4,7 +4,7 @@ import { MacIcon, SolarisIcon, WindowIcon } from "./AppIcon"
 import CommonDownloader from "./CommonDownloader"
 import { LinuxIcon } from "./Icon"
 
-const CtaWrapper = () => {
+const CommonCtaWrapper = () => {
   const arr = [
     {
       label: "MSI, 185.41Mb",
@@ -147,4 +147,4 @@ const CtaWrapper = () => {
   )
 }
 
-export default CtaWrapper
+export default CommonCtaWrapper

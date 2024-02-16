@@ -18,7 +18,7 @@ const PageHeader = ({
   }
 
   return (
-    <div className=" relative  pt-40 pb-24 md:pb-32 md:pt-48  overflow-hidden">
+    <div className=" relative  pt-40 pb-24 md:pb-32 md:pt-52  overflow-hidden">
       <img
         className="absolute top-0 left-0  z-[-10] right-0 w-full h-full"
         src={herobg}
@@ -43,7 +43,7 @@ const PageHeader = ({
               dangerouslySetInnerHTML={{ __html: title }}
             />
           </div>
-          <div className="self-stretch  text-center text-gray-300  text-[20px] font-normal   leading-7">
+          <div className="self-stretch  text-center text-[#C4BFCE]  text-[20px] font-normal   leading-7">
             {description}
           </div>
         </div>

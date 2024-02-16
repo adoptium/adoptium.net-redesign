@@ -31,9 +31,9 @@ const ImageText = ({
             {description}
           </p>
 
-          <div className={`${className}`}>
+          <div className="mt-12">
             <Link to={link} placeholder={undefined}>
-              <button className="bg-transparent mt-6 md:mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border ">
+              <button className="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border ">
                 {linkText}
               </button>{" "}
             </Link>

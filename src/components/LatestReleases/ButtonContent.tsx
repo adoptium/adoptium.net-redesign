@@ -1,5 +1,6 @@
 import React from "react"
 import { CrossIcon, DownloadIcon, MacIcon, WindowIcon } from "../Common/AppIcon"
+import Heading from "../Common/Heading"
 
 const ButtonContent = () => {
   const navigationItem = [
@@ -49,7 +50,7 @@ const ButtonContent = () => {
           ))}
         </ul>
 
-        <div className="flex justify-between flex-col md:flex-row  w-full items-center  gap-8">
+        <div className="flex justify-between flex-col md:flex-row mb-8 md:mb-16  w-full items-center  gap-8">
           {CardData.map((card, index) => (
             <div
               key={index}
@@ -72,6 +73,8 @@ const ButtonContent = () => {
             </div>
           ))}
         </div>
+
+        <Heading title={"Latest Temurin"} />
       </div>
     </>
   )

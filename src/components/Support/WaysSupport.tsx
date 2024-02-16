@@ -24,7 +24,7 @@ const WaysSupport = () => {
     },
   ]
   return (
-    <section className="py-16 md:py-32 mx-auto bg-[#14003C] max-w-[1264px] w-full lg:px-2   xl:px-0 px-8">
+    <section className="py-16 md:py-32 mx-auto bg-[#14003C] max-w-[1264px] w-full lg:px-2   xl:px-0 px-6">
       <CommonHeading
         className="text-center"
         title={"Ways to support us"}

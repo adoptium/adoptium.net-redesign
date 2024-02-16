@@ -30,12 +30,14 @@ const TemurinBuilds = ({ headingTitle }) => {
     { name: "Window" },
   ]
   const Release = [
+    { name: "Any" },
+    { name: "Linux" },
     {
-      name: "Any",
+      name: "Alpine Linux",
     },
-    { name: "Operating" },
-    { name: "Operating System" },
-    { name: "Operating System Window" },
+    { name: "Solaris" },
+    { name: "macOS" },
+    { name: "Window" },
   ]
   const Architecture = [
     { name: "Any" },

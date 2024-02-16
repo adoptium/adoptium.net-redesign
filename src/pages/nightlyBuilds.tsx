@@ -5,9 +5,8 @@ import PageHeader from "../components/PageHeader"
 import LibericaMethod from "../components/Common/LibericaMethod"
 import FAQ from "../components/FAQ"
 import NightlyBulidParagraph from "../components/NightlyBuilds/NightlyBulidParagraph"
-
 import TemurinBuilds from "../components/NightlyBuilds/TemurinBUilds"
-import CtaWrapper from "../components/NightlyBuilds/CtaWrapper"
+import CommonCtaWrapper from "../components/Common/CommonCtaWrapper"
 
 const nightlyBuilds = () => {
   return (
@@ -23,8 +22,8 @@ const nightlyBuilds = () => {
           className={"max-w-[860px] mx-auto"}
         />
         <NightlyBulidParagraph />
-        <TemurinBuilds title={"Temurin Builds on 01/04/23"} />
-        <CtaWrapper />
+        <TemurinBuilds headingTitle={"Temurin Builds on 01/04/23"} />
+        <CommonCtaWrapper />
         <LibericaMethod />
         <FAQ className={"!py-16 md:!py-24"} />
       </Layout>

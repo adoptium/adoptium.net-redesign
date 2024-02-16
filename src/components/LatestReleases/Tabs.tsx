@@ -11,7 +11,9 @@ const Tabs = () => {
         <Buttons active={active} setActive={setActive} />
         {active === 1 && <ButtonContent />}
         {active === 2 && <ButtonContent />}
-        {active === 3 && <TemurinBuilds />}
+        {active === 3 && (
+          <TemurinBuilds headingTitle={"Liberica JDK 20.0.2+10"} />
+        )}
         {active === 4 && <ButtonContent />}
         {active === 5 && <ButtonContent />}
       </div>

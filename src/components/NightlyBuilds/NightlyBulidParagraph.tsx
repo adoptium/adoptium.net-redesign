@@ -3,8 +3,8 @@ import { RedIcon } from "../Common/Icon"
 
 const NightlyBulidParagraph = () => {
   return (
-    <section className="my-16 px-6   max-w-[1264px] w-full mx-auto">
-      <div className="bg-[#200E46]  p-6   lg:p-8 rounded-[24px] border border-[#2D1C51] ">
+    <section className="mt-16 px-6   max-w-[1264px] w-full mx-auto">
+      <div className="bg-[#200E46]  p-6   lg:p-8 rounded-[24px] border border-[#584A75] ">
         <p className="text-base font-normal text-[#C4BFCE]">
           Please be aware that this archive contains intermediate builds created
           as a development step towards a full release. Intermediate builds are

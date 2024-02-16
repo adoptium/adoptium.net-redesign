@@ -3,7 +3,7 @@ import SelectorHeader from "../Common/SelectorHeader"
 import { DownloadIcon } from "../Common/AppIcon"
 import Heading from "../Common/Heading"
 
-const TemurinBuilds = () => {
+const TemurinBuilds = ({ headingTitle }) => {
   const titles = [
     "Java Version",
     "Release Version",
@@ -61,7 +61,7 @@ const TemurinBuilds = () => {
   return (
     <>
       <div className="w-full px-6 xl:px-0 flex  flex-col items-start justify-start sm:items-center sm:justify-center mb-8 md:mb-16">
-        <Heading title={"Liberica JDK 20.0.2+10"} />
+        <Heading title={headingTitle} />
         <SelectorHeader
           data={[Java, Operating, Release, Architecture, Bitness, Package]}
           title={titles}

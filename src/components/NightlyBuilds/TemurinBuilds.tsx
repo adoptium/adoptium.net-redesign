@@ -14,17 +14,20 @@ const TemurinBuilds = ({ headingTitle }) => {
   ]
   const Java = [
     { name: "Java 20" },
-    { name: "Mac OS 2" },
-    { name: "Mac OS 3" },
-    { name: " Mac os Version" },
+    { name: "Java 21" },
+    { name: "Java 17" },
+    { name: " Java 11" },
+    { name: " Java 8" },
   ]
   const Operating = [
     { name: "Any" },
-    { name: "aarch64" },
+    { name: "Linux" },
     {
-      name: "aarch 2",
+      name: "Alpine Linux",
     },
-    { name: "aarch 3" },
+    { name: "Solaris" },
+    { name: "macOS" },
+    { name: "Window" },
   ]
   const Release = [
     {
@@ -46,17 +49,14 @@ const TemurinBuilds = ({ headingTitle }) => {
     {
       name: "Any",
     },
-    { name: "Operating" },
-    { name: "Operating System" },
-    { name: "Operating System Window" },
+    { name: "32 bit" },
+    { name: "64 bit" },
   ]
   const Package = [
     { name: "Any" },
-    { name: "aarch64" },
-    {
-      name: "aarch 2",
-    },
-    { name: "aarch 3" },
+    { name: "Standard  JDK" },
+    { name: "Standard  JRE" },
+    { name: "Lite JDK" },
   ]
   return (
     <>

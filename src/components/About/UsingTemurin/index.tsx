@@ -44,7 +44,7 @@ const UsingTemurin = () => {
         <div className="w-full lg:hidden block mt-10">
           {LatestReleasesCard.map((card, more) => (
             <div key={more} className="w-full ">
-              <p className="p-4 rounded-2xl w-full bg-[#1C0D3B] gap-y-4 text-base font-normal leading-[150%] text-white backdrop-blur-12">
+              <p className="p-4 rounded-2xl w-full bg-[#1C0D3B]  mb-5 text-base font-normal leading-[150%] text-white backdrop-blur-12">
                 {card.content}
               </p>
             </div>

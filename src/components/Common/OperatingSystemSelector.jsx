@@ -8,9 +8,12 @@ const OperatingSystemSelector = ({
   buttons,
 }) => {
   const dropdownOptions = [
-    { name: "Package: Standard JDK" },
-    { name: "Package: Standard JDK" },
-    { name: "Package: Standard JDK" },
+    { name: " Standard JDK" },
+    { name: "Full JDK" },
+    { name: "Lite JDK" },
+    { name: "Standard JRE" },
+    { name: "Full JRE" },
+    { name: "CRaC JDK" },
   ]
   const [active, setActive] = useState(0)
 

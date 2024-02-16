@@ -1,5 +1,5 @@
 import React from "react"
-import { DownloadIcon } from "./AppIcon"
+import { DownloadIcon } from "../Common/AppIcon"
 
 const Heading = ({ title }) => {
   return (

@@ -54,7 +54,7 @@ const ButtonContent = () => {
           {CardData.map((card, index) => (
             <div
               key={index}
-              className="p-8 bg-[#200E46]  justify-between w-full border rounded-[24px] border-[#564873] h-[264px] flex flex-col   transition-all duration-300 ease-in-out hover:border-primary shadow-[0_2px_4px_rgba(255,20,100,0.2)]"
+              className="p-8 bg-[#200E46]  justify-between w-full border rounded-[24px] border-[#564873] h-[264px] flex flex-col   transition-all duration-300 ease-in-out hover:border-primary"
             >
               <span className="p-6 rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76]">
                 {card.icon}

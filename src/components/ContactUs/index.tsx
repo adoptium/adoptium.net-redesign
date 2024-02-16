@@ -21,7 +21,7 @@ const ContactUs = ({ title, className, buttontitle }) => {
           <p className="text-white text-4xl md:text-5xl leading-[44px] md:leading-[56px] font-normal mt-8">
             {title}
           </p>
-          <span className=" text-[#C4BFCE] tab-button-text">
+          <span className=" text-lightgrey tab-button-text">
             Eclipse Temurin offers high-performance, cross-platform, open-source
             Java runtime binaries that are enterprise-ready and Java SE
             TCK-tested for general use in the Java ecosystem.

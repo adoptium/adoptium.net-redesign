@@ -23,6 +23,7 @@ const latestReleases = () => {
           description={
             "Pick a version, package type, JDK/JRE, and download the binaries."
           }
+          className={"mx-auto max-w-[1048px] w-full"}
         />
         <Tabs />
         <CommonCtaWrapper />

@@ -12,7 +12,7 @@ const ImageText = ({
 }) => {
   return (
     <>
-      <section className={`image-text ${className}`}>
+      <section className={`image-text  ${className}`}>
         <div className="max-w-[400px] w-full hidden lg:block">
           <img
             src="/images/icons/experience.png"
@@ -27,13 +27,13 @@ const ImageText = ({
           <h2 className="md:text-5xl text-[40px] font-semibold leading-[48px] md:leading-[56px]">
             {title}
           </h2>
-          <p className="md:mt-6 mt-10 mb-5 text-[#C4BFCE] text-xl md:text-base leading-6 font-normal">
+          <p className="md:mt-6 mt-10 mb-5 text-lightgrey text-xl md:text-base leading-6 font-normal">
             {description}
           </p>
 
-          <div className={`${className}`}>
+          <div className="mt-12">
             <Link to={link} placeholder={undefined}>
-              <button className="bg-transparent mt-6 md:mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border ">
+              <button className="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border ">
                 {linkText}
               </button>{" "}
             </Link>

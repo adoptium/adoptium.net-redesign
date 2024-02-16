@@ -19,6 +19,7 @@ const nightlyBuilds = () => {
           description={
             "Pick a version, package type, JDK/JRE, and download the binaries."
           }
+          className={"max-w-[860px] mx-auto"}
         />
         <NightlyBulidParagraph />
         <TemurinBuilds headingTitle={"Temurin Builds on 01/04/23"} />

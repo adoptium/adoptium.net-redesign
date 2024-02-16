@@ -82,3 +82,37 @@ body {
 .underline {
   text-underline-offset: 1em;
 }
+
+.gradient-btn {
+  border-radius: 80px;
+  border: solid 2px transparent;
+  background-image: linear-gradient($purple, $purple),
+    linear-gradient(90deg, #ff1464, #ff14620b);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  cursor: pointer;
+  cursor: pointer;
+  transition: ease-in-out;
+  transition-duration: 300ms;
+  &:hover {
+    transform: scale(110%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gradient-btn {
+    border-radius: 80px;
+    border: solid 2px transparent;
+    background-image: linear-gradient(#541473, #541473),
+      linear-gradient(90deg, #ff1464, #ff14620b);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    cursor: pointer;
+
+    transition: ease-in-out;
+    transition-duration: 300ms;
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+}

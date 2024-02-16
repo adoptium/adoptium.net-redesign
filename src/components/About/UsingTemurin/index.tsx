@@ -28,11 +28,10 @@ const UsingTemurin = () => {
           <h2 className="md:text-5xl text-white text-[40px] font-semibold leading-[48px] md:leading-[56px]">
             How other companies are using Temurin
           </h2>
-          <p className="md:mt-6 my-10 text-[#C4BFCE] text-base leading-6 font-normal">
-            How other companies are using Temurin Feugiat ullamcorper justo
-            dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus
-            viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere
-            ornare dignissim orci consequat.
+          <p className="md:mt-6 my-10 text-lightgrey text-base leading-6 font-normal">
+            Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum.
+            Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus
+            diam turpis. Massa posuere ornare dignissim orci consequat.
           </p>
         </div>
         <div className="max-w-[400px] w-full hidden lg:block">

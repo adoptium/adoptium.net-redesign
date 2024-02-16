@@ -24,12 +24,13 @@ const BusinessBenefits = () => {
           title="How Temurin can benefit your business"
           subtitle="Business Benefits"
           description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
+          className={"max-w-[860px] mx-auto"}
         />
         <ImageText
-          className={"mt-0 lg:mt-10"}
+          className={"mt-0 lg:mt-16"}
           title="More than 10 years' experience, and a focus firmly on your future"
           description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
-          linkText="Learn More"
+          linkText="Who we are"
           link="#"
           icon={undefined}
         />
@@ -39,7 +40,7 @@ const BusinessBenefits = () => {
         <Testimonials className={"!bg-transparent !border-none"} />
         <ImageText
           className={
-            "flex flex-col md:flex-row  w-full items-center text-center md:text-start"
+            "flex flex-col md:flex-row  w-full items-center text-center md:text-start mb-0 md:mb-8"
           }
           title="Need support with Temurin?"
           description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
@@ -49,7 +50,7 @@ const BusinessBenefits = () => {
         />
         <ContactUs
           title="Contact us about how Temurin can help your business"
-          className={""}
+          className={"pt-0 md:py-32"}
           buttontitle="Contact"
         />
       </Layout>

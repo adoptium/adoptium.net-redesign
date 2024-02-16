@@ -23,14 +23,14 @@ const LatestRelease = () => {
               <p className="text-[20px] font-hanken leading-[28px] text-white my-0 text-center">
                 Eclipse Temurin offers high-performance
               </p>
-              <CommonButton className={"!w-[169px] !mt-2"} icon={undefined}>
+              <CommonButton className={"!w-[175px] !mt-2"} icon={undefined}>
                 See all Releases
               </CommonButton>
             </div>
           </div>
         </div>
         <div className="sm:max-w-[300px] mx-auto w-full">
-          <div className="p-8 border-[2px] border-[#FF1464]  rounded-3xl w-full ">
+          <div className="p-8 border-[2px] border-primary bg-[#200D46] rounded-3xl w-full ">
             <AdobeIcon2 />
             <h2 className="text-primary text-base leading-6 mt-7 font-normal flex items-center gap-x-3">
               <span className="">
@@ -42,15 +42,15 @@ const LatestRelease = () => {
             <p className="text-white text-2xl font-normal leading-8 mt-2">
               jdk-21+35 - Temurin
             </p>
-            <span className="text-base text-[#C4BFCE] font-normal leading-6 block mt-4">
+            <span className="text-base text-lightgrey font-normal leading-6 block mt-4">
               Release Date: 12 October 2023
             </span>
-            <h5 className="text-base text-[#C4BFCE] font-normal leading-6 block mt-4">
+            <h5 className="text-base text-lightgrey font-normal leading-6 block mt-4">
               Build Date: 12 October 2023 • macOS • aarch64
             </h5>
             <Link
               to={""}
-              className="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
+              className="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-primary border ease-in-out border-primary flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
             >
               <span>
                 <FaApple />

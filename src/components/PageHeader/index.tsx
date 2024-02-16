@@ -41,12 +41,12 @@ const PageHeader = ({
               </div>
             </div>
             <div
-              className="self-stretch text-center text-white text-5xl lg:text-[80px] leading-[64px] md:leading-[96px] font-semibold"
+              className="self-stretch text-center text-white text-5xl lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
               dangerouslySetInnerHTML={{ __html: title }}
             />
           </div>
           <div
-            className={`self-stretch   text-center text-lightgrey  text-[20px] font-normal   leading-7 ${className}`}
+            className={`self-stretch   text-center text-lightgrey  text-[20px] font-normal   leading-[140%] ${className}`}
           >
             {description}
           </div>

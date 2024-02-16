@@ -8,7 +8,7 @@ const OurSupportTabContent = () => {
   const [active, setActive] = useState(1)
   return (
     <div>
-      <div className="py-10 mt-12 max-w-[1264px] mx-auto">
+      <div className="py-10 mt-12 max-w-[1264px] px-6 md:px-4 mx-auto">
         <div className="max-w-[700px] mx-auto ">
           <CommonHeading
             title="Our Members"

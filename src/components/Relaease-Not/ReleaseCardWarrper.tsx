@@ -27,10 +27,10 @@ const ReleaseCardWarrper = ({
             </h3>
             <p className=" tab-button-text">jdk-21+35 - Eclipse Temurin™</p>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-[73px] ">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-[86px] ">
             <div className="  flex items-start   gap-2 justify-start">
               <div className="pt-1">{icon}</div>
-              <div className="text-rose-600 text-base font-bold leading-normal">
+              <div className="text-primary text-base font-bold leading-normal">
                 {icontitle}
               </div>
             </div>
@@ -45,12 +45,12 @@ const ReleaseCardWarrper = ({
           <div className="flex flex-col md:flex-row  gap-4 ">
             <div className="  flex items-start   gap-2 justify-start">
               <div className="pt-1">{icon2}</div>
-              <div className="text-rose-600 text-base font-bold leading-normal">
+              <div className="text-primary tab-button-text font-bold">
                 {icontitle2}
               </div>
             </div>
             <div>
-              <h3 className=" text-base pb-2 text-white font-normal">
+              <h3 className=" tab-button-text pb-2 text-white ">
                 <span className="font-semibold"> {title2}</span> {subtitle2}
               </h3>
               <p className=" tab-button-text mb-0 pb-2">{description1}</p>

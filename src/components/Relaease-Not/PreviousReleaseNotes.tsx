@@ -160,7 +160,7 @@ const PreviousReleaseNotes = () => {
             subtitle2=" Vobba tev och embrejsa."
             description1="Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar dystik, osm. Talepunkt hest med dekabepp. Väggord burkini bepån. Stafettläkare pogen inte ultrav. Pimpa vulkanresa asymmetrisk krigföring. Lav svajpa sedan kropos. "
             description3="Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar dystik, osm. Talepunkt hest med dekabepp. "
-            icon2={undefined}
+            icon2={<RedIcon />}
           />
           <ReleaseCardWarrper
             date="October 18, 2023"
@@ -196,7 +196,7 @@ const PreviousReleaseNotes = () => {
             subtitle2=" Vobba tev och embrejsa."
             description1="Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar dystik, osm. Talepunkt hest med dekabepp. Väggord burkini bepån. Stafettläkare pogen inte ultrav. Pimpa vulkanresa asymmetrisk krigföring. Lav svajpa sedan kropos. "
             description3="Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar dystik, osm. Talepunkt hest med dekabepp. "
-            icon2={undefined}
+            icon2={<RedIcon />}
           />
         </div>
         <div className=" hidden w-[30%] lg:flex flex-col h-[1605px] scroll-container overflow-auto">

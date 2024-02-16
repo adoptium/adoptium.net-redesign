@@ -24,16 +24,16 @@ const ImageText = ({
           {icon}
         </div>
         <div className="lg:max-w-[560px] w-full  ">
-          <h2 className="md:text-5xl text-[40px] font-semibold leading-[48px] md:leading-[56px]">
+          <h2 className="md:text-5xl text-[40px] font-semibold leading-[116.667%] md:leading-[120%]">
             {title}
           </h2>
-          <p className="md:mt-6 mt-10 mb-5 text-lightgrey text-xl md:text-base leading-6 font-normal">
+          <p className="md:mt-6 mt-10 mb-5 text-lightgrey text-xl md:text-base leading-[140%] md:leading-[150%] font-normal">
             {description}
           </p>
 
           <div className="mt-12">
             <Link to={link} placeholder={undefined}>
-              <button className="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border ">
+              <button className="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-[150%] font-normal w-[150px] h-[48px] rounded-2xl gradient-border ">
                 {linkText}
               </button>{" "}
             </Link>

@@ -24,7 +24,7 @@ const ContactUs = ({ title, className, buttontitle }) => {
             src="/images/icons/message.svg"
             aria-label="message icon"
           />
-          <p className="text-white text-4xl md:text-5xl leading-[44px] md:leading-[56px] font-normal mt-8">
+          <p className="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8">
             {title}
           </p>
           <span className=" text-lightgrey tab-button-text">
@@ -32,7 +32,7 @@ const ContactUs = ({ title, className, buttontitle }) => {
             Java runtime binaries that are enterprise-ready and Java SE
             TCK-tested for general use in the Java ecosystem.
           </span>
-          <button className="bg-transparent mt-10 gradient-btn border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[146px] h-[48px] rounded-[80px]  ">
+          <button className="bg-transparent mt-10 gradient-btn border-2 border-pink-500/0 text-white text-base leading-[125%] font-normal w-[146px] h-[48px] rounded-[80px]  ">
             {buttontitle}
           </button>
         </div>

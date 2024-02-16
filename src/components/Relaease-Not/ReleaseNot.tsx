@@ -31,7 +31,7 @@ export const ReleaseNot = () => {
         subtitle2=" Vobba tev och embrejsa."
         description1="Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar dystik, osm. Talepunkt hest med dekabepp. Väggord burkini bepån. Stafettläkare pogen inte ultrav. Pimpa vulkanresa asymmetrisk krigföring. Lav svajpa sedan kropos. "
         description3="Vobba tev och embrejsa. Tekrol trängselskatt lägt. Exorar dystik, osm. Talepunkt hest med dekabepp. "
-        icon2={undefined}
+        icon2={<RedIcon />}
       />
     </div>
   )

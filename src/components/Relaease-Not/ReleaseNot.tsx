@@ -6,14 +6,14 @@ import ReleaseCardWarrper from "./ReleaseCardWarrper"
 
 export const ReleaseNot = () => {
   return (
-    <div className="flex justify-between gap-4 flex-wrap max-w-[1264px] mx-auto px-6 py-20">
-      <div className="w-full md:max-w-[456px]">
+    <div className="flex justify-between gap-14 lg:gap-4 flex-wrap max-w-[1264px] mx-auto px-6 py-20">
+      <div className="w-full mx-auto lg:max-w-[456px]">
         <CommonHeading
           title="Latest Release Note"
           description={
             "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem. "
           }
-          className={"text-center md:text-start"}
+          className={"text-center lg:text-start"}
         />
       </div>
 

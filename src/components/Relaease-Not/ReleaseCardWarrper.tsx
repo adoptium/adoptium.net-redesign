@@ -19,13 +19,15 @@ const ReleaseCardWarrper = ({
 }) => {
   return (
     <>
-      <div className={`w-full md:w-[55%] ${className}`}>
+      <div className={`w-full mx-auto lg:w-[55%] ${className}`}>
         <div className="p-8 flex flex-col w-full newscard-2 bg-[#200E46]">
           <div className="">
-            <h3 className="text-white text-[22px] font-semibold  leading-[28px]">
+            <h3 className="text-white text-[22px] font-semibold  leading-[140%]">
               {date}
             </h3>
-            <p className=" tab-button-text">jdk-21+35 - Eclipse Temurin™</p>
+            <p className=" tab-button-text pt-3">
+              jdk-21+35 - Eclipse Temurin™
+            </p>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-[86px] ">
             <div className="  flex items-start   gap-2 justify-start">

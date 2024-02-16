@@ -19,7 +19,7 @@ const ReleaseCardWarrper = ({
 }) => {
   return (
     <>
-      <div className={`w-full md:w-[60%] ${className}`}>
+      <div className={`w-full md:w-[55%] ${className}`}>
         <div className="p-8 flex flex-col w-full newscard-2 bg-[#200E46]">
           <div className="">
             <h3 className="text-white text-[22px] font-semibold  leading-[28px]">

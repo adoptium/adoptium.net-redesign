@@ -2,7 +2,7 @@ import React from "react"
 
 const OurMamberButton = ({ active, setActive }) => {
   return (
-    <div className="w-full px-4 ">
+    <div className="w-full  ">
       <div className="overflow-auto min-w-full w-full relative">
         <span className="h-[1px] w-full bg-[#3E3355] inline-block absolute bottom-[1px] z-[-1]"></span>
         <div className="flex space-x-10 whitespace-nowrap md:justify-center  py-3">

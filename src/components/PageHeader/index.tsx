@@ -6,14 +6,16 @@ interface Props {
   title: string
   subtitle: string
   description: string
+  className: string
 }
 
 const PageHeader = ({
   title,
   subtitle,
   description,
+  className,
 }: Props): null | JSX.Element => {
-  if (!title || !subtitle || !description) {
+  if (!title || !subtitle || !description || !className) {
     return null
   }
 
@@ -43,7 +45,9 @@ const PageHeader = ({
               dangerouslySetInnerHTML={{ __html: title }}
             />
           </div>
-          <div className="self-stretch  text-center text-lightgrey  text-[20px] font-normal   leading-7">
+          <div
+            className={`self-stretch   text-center text-lightgrey  text-[20px] font-normal   leading-7 ${className}`}
+          >
             {description}
           </div>
         </div>

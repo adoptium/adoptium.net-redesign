@@ -2,14 +2,20 @@ import React from "react"
 
 import "./style.scss"
 import contactbg from "../../img/gredient-overlay-bg.png"
+import contactbgmobile from "../../img/gradient-overlay-mobile.png"
 
 const ContactUs = ({ title, className, buttontitle }) => {
   return (
     <>
       <section className={`relative  xl:px-0 px-6 md:py-32 py-16 ${className}`}>
         <img
-          className=" absolute bg-center top-0 left-0  right-0 w-full h-full z-[-10]"
+          className="hidden md:block absolute bg-center top-0 left-0  right-0 w-full h-full z-[-10]"
           src={contactbg}
+          alt=""
+        />
+        <img
+          className="block md:hidden absolute bg-center top-0 left-0  right-0 w-full h-full z-[-10]"
+          src={contactbgmobile}
           alt=""
         />
         <div className="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center md:bg-transparent bg-tones-white rounded-3xl md:backdrop-blur-0 backdrop-blur-12 ">
@@ -26,7 +32,7 @@ const ContactUs = ({ title, className, buttontitle }) => {
             Java runtime binaries that are enterprise-ready and Java SE
             TCK-tested for general use in the Java ecosystem.
           </span>
-          <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[146px] h-[48px] rounded-[80px] gradient-border ">
+          <button className="bg-transparent mt-10 gradient-btn border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[146px] h-[48px] rounded-[80px]  ">
             {buttontitle}
           </button>
         </div>

@@ -8,7 +8,7 @@ import Buttons from "../components/LatestReleases/Buttons"
 import ButtonContent from "../components/LatestReleases/ButtonContent"
 
 import LibericaMethod from "../components/Common/LibericaMethod"
-import Heading from "../components/LatestReleases/Heading"
+
 import Tabs from "../components/LatestReleases/Tabs"
 import CommonCtaWrapper from "../components/Common/CommonCtaWrapper"
 
@@ -25,7 +25,6 @@ const latestReleases = () => {
           }
         />
         <Tabs />
-        <Heading />
         <CommonCtaWrapper />
         <LibericaMethod />
         <FAQ className={"!py-16 md:!py-24"} />

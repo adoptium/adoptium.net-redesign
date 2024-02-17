@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby-plugin-react-i18next"
-import { RedIcon } from "../../Common/Icon"
+import { AdobeIcon2, AdobeIcon3, RedIcon } from "../../Common/Icon"
 import { FaApple, FaWindows } from "react-icons/fa"
 
 const LatestReleases = () => {
@@ -9,28 +9,32 @@ const LatestReleases = () => {
       id: 1,
       release: "Latest Release",
       content: "jdk-21+35 - Temurin",
-      Date: "12 October 2023 •  macOS • aarch64",
+      Date: "Release Date: 12 October 2023",
+      builddate: "Build Date: 12 October 2023 •  macOS • aarch64",
       link: "/",
     },
     {
       id: 2,
       release: "Latest Release",
       content: "jdk-21+35 - Temurin",
-      Date: "12 October 2023 •  macOS • aarch64",
+      Date: "Release Date: 12 October 2023",
+      builddate: "Build Date: 12 October 2023 •  macOS • aarch64",
       link: "/",
     },
     {
       id: 3,
       release: "Latest Release",
       content: "jdk-21+35 - Temurin",
-      Date: "12 October 2023 •  macOS • aarch64",
+      Date: "Release Date: 12 October 2023",
+      builddate: "Build Date: 12 October 2023 •  macOS • aarch64",
       link: "/",
     },
     {
       id: 4,
       release: "Latest Release",
       content: "jdk-21+35 - Temurin",
-      Date: "12 October 2023 •  macOS • aarch64",
+      Date: "Release Date: 12 October 2023",
+      builddate: "Build Date: 12 October 2023 •  macOS • aarch64",
       link: "/",
     },
   ]
@@ -45,25 +49,32 @@ const LatestReleases = () => {
           Java runtime <br /> binaries that are enterprise-ready and Java SE
           TCK-tested for general use in the Java ecosystem.
         </p>
-        <div className="flex xl:flex-nowrap flex-wrap justify-center max-w-[1264px] w-full mx-auto gap-x-8 gap-y-4 py-16">
+        <div className="flex xl:flex-nowrap flex-wrap justify-center max-w-[1264px] w-full mx-auto gap-x-8 gap-y-4 py-16 ">
           {LatestReleasesCard.map((card, index) => (
             <div
               key={index}
-              className="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+              className="p-8 release-card     backdrop-blur-12 bg-[#200D46]"
             >
+              <div className="mb-14">
+                <AdobeIcon2 />
+              </div>
+
               {index === 0 && (
-                <h2 className="text-primary text-base leading-6 font-normal flex items-center gap-x-3">
+                <h2 className="text-primary text-base leading-[150%] font-normal flex items-center gap-x-3">
                   <span className="">
                     <RedIcon />
                   </span>
                   {card.release}
                 </h2>
               )}
-              <p className="text-white text-2xl font-normal leading-8 mt-2">
+              <p className="text-white text-2xl font-normal leading-[133.333%] mt-2">
                 {card.content}
               </p>
-              <span className="text-base text-[#C4BFCE] font-normal leading-6 block mt-4">
+              <span className="text-base text-lightgrey font-normal leading-[150%] block mt-4">
                 {card.Date}
+              </span>
+              <span className="text-base text-lightgrey font-normal leading-[150%] block mt-4">
+                {card.builddate}
               </span>
               <Link
                 to={card.link}

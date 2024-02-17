@@ -12,7 +12,7 @@ const MediaAndPromotion = () => {
     },
   ]
   return (
-    <section className="bg-[#0E002A] pt-0 md:pt-16 ">
+    <section className=" bg-[#0E002A] pt-0 md:pt-16 ">
       <div className="pt-16   pb-8 md:pb-16 max-w-[1048px] flex-col lg:flex-row mx-auto w-full px-6 lg:px-2 xl:px-0 flex justify-center gap-16 items-center">
         <div className=" w-full lg:w-[55%] text-center lg:text-left">
           <CommonHeading

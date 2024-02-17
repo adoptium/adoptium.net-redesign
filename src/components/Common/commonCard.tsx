@@ -7,7 +7,7 @@ const CommonCard = ({ data }) => {
         <h3 className="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]">
           {data.title}
         </h3>
-        <p className="mt-6 text-xl text-[#C4BFCE] font-normal">
+        <p className="mt-6 text-xl text-lightgrey font-normal">
           {data.description}
         </p>
       </div>

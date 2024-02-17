@@ -5,7 +5,7 @@ import OurMamberWapper from "../Common/OurMamberWapper"
 const OurSponsors = () => {
   return (
     <>
-      <div className="my-6 px-6 md:px-4 md:my-20">
+      <div className="my-6  md:my-20 max-w-[1264px] px-6 md:px-4 mx-auto">
         <div className="max-w-[700px] mx-auto  ">
           <CommonHeading
             title="Our Sponsors"

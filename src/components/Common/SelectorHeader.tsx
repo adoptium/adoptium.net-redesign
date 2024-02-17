@@ -35,9 +35,7 @@ const SelectorHeader = ({ title, data }) => {
         <div className="flex items-center gap-5 justify-between flex-nowrap min-w-[1039px]">
           {data.map((list, index) => (
             <div key={index} className="flex flex-col gap-4 w-full">
-              <h3 className="text-[16px] font-normal leading-[24px] text-[#C4BFCE]">
-                {title[index]}
-              </h3>
+              <h3 className="tab-button-text text-[#C4BFCE]">{title[index]}</h3>
               <CommonSelector list={list} />
             </div>
           ))}

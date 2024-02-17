@@ -25,8 +25,8 @@ const ApiInformation = () => {
 
           <div>
             <Link to={""}>
-              <button className="bg-transparent mt-6 md:mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border ">
-                Get Support
+              <button className="bg-transparent mt-6 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border ">
+                Who we are
               </button>
             </Link>
           </div>

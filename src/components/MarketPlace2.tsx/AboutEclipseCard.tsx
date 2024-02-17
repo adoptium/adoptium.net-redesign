@@ -1,11 +1,17 @@
 import React from "react"
 import logoimg from "../../img/About-Eclipse-img.png"
+import abouteclipsebg from "../../img/About-Eclipse-bg-img.png"
 import CommonHeading from "../Common/CommonHeading"
 import CommonButton from "../Common/CommonButton"
 
 const AboutEclipseCard = () => {
   return (
-    <div className="community flex justify-center items-center px-6 pt-10 pb-24 md:py-24">
+    <div className="relative flex justify-center items-center px-6 pt-10 pb-16 md:py-24">
+      <img
+        className="absolute z-[-1] top-0 left-0 w-full h-full"
+        src={abouteclipsebg}
+        alt=""
+      />
       <div className="newscard-2 gap-4 md:gap-10 flex flex-col md:flex-row justify-between md:items-center max-w-[1000px] mx-auto p-[32px] md:p-[64px]">
         <div className="max-w-[110px] ">
           <img className="w-full" src={logoimg} alt="" />
@@ -17,9 +23,9 @@ const AboutEclipseCard = () => {
             className={"!mt-0"}
           />
 
-          <CommonButton className={"mt-6"} icon={undefined}>
+          <button className="bg-transparent mt-6 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[146px] h-[48px] rounded-[80px] about-eclips-btn ">
             Learn More
-          </CommonButton>
+          </button>
         </div>
       </div>
     </div>

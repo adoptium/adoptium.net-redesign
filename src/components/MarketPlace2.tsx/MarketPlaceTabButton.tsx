@@ -14,18 +14,18 @@ const MarketPlaceTabButton = ({ market, setMarket }) => {
       <div className="overflow-auto min-w-full w-full  ">
         <div className="flex lg:justify-center space-x-5  py-2">
           <button
-            onClick={() => setMarket(1)}
+            onClick={() => setMarket("microsoft")}
             className={` py-2  flex justify-center items-center  min-w-[200px] 
-                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-[80px] ${market === 1 ? "border-primary  border-2" : " border-white  border-2"}`}
+                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-[80px] ${market === "microsoft" ? "border-primary  border-2" : " border-white  border-2"}`}
           >
             <span>
               <MicrosoftIcon />
             </span>
           </button>
           <button
-            onClick={() => setMarket(2)}
+            onClick={() => setMarket("adoptium")}
             className={` py-2   flex justify-center items-center   min-w-[200px] 
-                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-[80px] ${market === 2 ? "border-primary  border-2" : " border-white  border-2"}`}
+                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-[80px] ${market === "adoptium" ? "border-primary  border-2" : " border-white  border-2"}`}
           >
             <span>
               <svg
@@ -90,25 +90,25 @@ const MarketPlaceTabButton = ({ market, setMarket }) => {
             </span>
           </button>
           <button
-            onClick={() => setMarket(3)}
+            onClick={() => setMarket("huawei")}
             className={` py-2 flex justify-center items-center    min-w-[200px] 
-                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-[80px] ${market === 3 ? "border-primary  border-2" : " border-white  border-2"}`}
+                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-[80px] ${market === "huawei" ? "border-primary  border-2" : " border-white  border-2"}`}
           >
             <span>
               <HuaweiIcon />
             </span>
           </button>
           <button
-            onClick={() => setMarket(4)}
+            onClick={() => setMarket("ibm")}
             className={` py-2   flex justify-center items-center   min-w-[200px] 
-                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-[80px] ${market === 4 ? "border-primary  border-2" : " border-white  border-2"}`}
+                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-[80px] ${market === "ibm" ? "border-primary  border-2" : " border-white  border-2"}`}
           >
             <IBMIcon />
           </button>
           <button
-            onClick={() => setMarket(5)}
+            onClick={() => setMarket("azul")}
             className={` py-2    flex justify-center items-center    min-w-[200px] 
-                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-[80px] ${market === 5 ? "border-primary  border-2" : " border-white  border-2"}`}
+                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-[80px] ${market === "azul" ? "border-primary  border-2" : " border-white  border-2"}`}
           >
             <AzulIcon />
           </button>

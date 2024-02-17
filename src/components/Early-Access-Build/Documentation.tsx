@@ -49,11 +49,11 @@ const Documentation = () => {
             className={"text-center "}
           />
         </div>
-        <div className="max-w-[1048px] mx-auto flex  justify-center gap-4 md:gap-6 flex-wrap items-center mt-10">
+        <div className="max-w-[1048px] mx-auto flex  justify-center gap-4 md:gap-6 flex-wrap items-center mt-14">
           {DocumentationData.map((data, index) => (
             <div
               key={index}
-              className="relative newscard-2 cursor-pointer max-w-[420px] sm:max-w-[290px] w-full  flex justify-start gap-4 items-center rounded-[22px] bg-tones-white backdrop-blur-[12px] px-6 py-5"
+              className="relative newscard-2 cursor-pointer max-w-[420px] sm:max-w-[290px] w-full  flex justify-start gap-4 items-center rounded-[22px] bg-tones-white backdrop-blur-[12px] px-6 py-6"
             >
               <span>{data.icon}</span>
               <p className="text-[24px] font-hanken leading-[32px] text-white my-0">
@@ -62,11 +62,11 @@ const Documentation = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center flex-wrap items-center gap-6 md:gap-10 mt-10">
-          <p className="text-[20px] font-hanken leading-[28px] text-white my-0 text-center">
-            Are you interested in becoming a member?
+        <div className="flex justify-center flex-wrap items-center gap-6 md:gap-10 mt-12">
+          <p className="text-[20px] font-hanken leading-[140%] text-white my-0 text-center">
+            Eclipse Temurin offers high-performance
           </p>
-          <CommonButton className={"!w-[200px] !mt-0"} icon={undefined}>
+          <CommonButton className={"!w-[230px] !mt-0"} icon={undefined}>
             See all Documentation
           </CommonButton>
         </div>

@@ -29,11 +29,11 @@ const Version = [
 ]
 
 const titles = ["Operating System", "Architecture", "Package Type", "Version"]
-const ReleasingSelector = () => {
+const ReleasingSelector = ({ className }) => {
   return (
     <div>
       {" "}
-      <div className="my-[50px]">
+      <div className={`my-[50px] ${className}`}>
         <SelectorHeader
           data={[tokenlist, Architeccture, Package, Version]}
           title={titles}

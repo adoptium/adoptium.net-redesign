@@ -9,6 +9,7 @@ const MediaAndPromotion = () => {
       description:
         "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime",
       button: "Learn More",
+      buttonWidth: "146px",
     },
   ]
   return (

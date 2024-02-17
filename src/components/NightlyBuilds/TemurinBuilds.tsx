@@ -62,7 +62,7 @@ const TemurinBuilds = ({ headingTitle }) => {
   ]
   return (
     <>
-      <div className="w-full px-6 xl:px-0 flex  flex-col items-start justify-start sm:items-center sm:justify-center mb-8 md:mb-16">
+      <div className="w-full  xl:px-0 flex  flex-col items-start justify-start sm:items-center sm:justify-center mb-8 md:mb-16">
         <Heading title={headingTitle} />
         <SelectorHeader
           data={[Java, Operating, Release, Architecture, Bitness, Package]}

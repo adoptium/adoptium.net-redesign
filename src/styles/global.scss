@@ -11,6 +11,10 @@ body {
   z-index: -10 !important;
 }
 
+.main-heading {
+  @apply text-center text-4xl mb-10 font-semibold md:text-5xl leading-[116%];
+}
+
 .bg-purple {
   background-color: $purple;
 }

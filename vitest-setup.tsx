@@ -7,7 +7,7 @@ import "vitest-canvas-mock"
 import "vitest-axe/extend-expect"
 import * as axeMatchers from "vitest-axe/matchers"
 
-vi.stubGlobal("jest", vi);
+vi.stubGlobal("jest", vi)
 
 expect.extend(axeMatchers)
 

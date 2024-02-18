@@ -14,7 +14,7 @@ const earlybuild = () => {
           subtitle="Early Access Builds"
           title="Early Access Builds"
           description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
-          className={"max-w-[860px] mx-auto"}
+          className={"max-w-[860px] mx-auto px-2"}
         />
 
         <AllReleases />

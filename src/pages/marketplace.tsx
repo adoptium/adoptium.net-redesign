@@ -16,7 +16,7 @@ const DownloadPage = () => (
         subtitle="Marketplace"
         title="Adoptium® Marketplace"
         description="Java™ is the world's leading programming language and platform. The Adoptium Marketplace promotes high-quality, TCK certified and AQAvit verified runtimes for use across the Java ecosystem."
-        className={"mx-auto max-w-[1048px] w-full"}
+        className={"mx-auto max-w-[1048px] px-2 w-full"}
       />
       <MarketPlaceAll />
       <AboutEclipseCard />

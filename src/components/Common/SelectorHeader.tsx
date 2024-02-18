@@ -31,7 +31,7 @@ const SelectorHeader = ({ title, data }) => {
           </svg>
         </span>
       </button>
-      <div className="w-full lg:overflow-visible overflow-auto hidden sm:block">
+      <div className="w-full xl:overflow-visible overflow-auto hidden sm:block">
         <div className="flex items-center gap-5 justify-between flex-nowrap min-w-[1039px]">
           {data.map((list, index) => (
             <div key={index} className="flex flex-col gap-4 w-full">

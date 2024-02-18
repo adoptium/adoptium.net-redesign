@@ -12,7 +12,7 @@ const MarketPlaceTabButton = ({ market, setMarket }) => {
   return (
     <div className="w-full  ">
       <div className="overflow-auto min-w-full w-full  ">
-        <div className="flex lg:justify-center space-x-5  py-2">
+        <div className="flex  xl:justify-center space-x-5  py-2">
           <button
             onClick={() => setMarket("microsoft")}
             className={` py-2  flex justify-center items-center  min-w-[200px] 

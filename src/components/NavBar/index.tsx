@@ -87,7 +87,7 @@ const NavBar = () => {
         <Link to="/">
           <Logo alt="Adoptium Logo" className="h-10" />
         </Link>
-        <div className="flex lg:hidden">
+        <div className="flex xl:hidden">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white-700"
@@ -134,7 +134,7 @@ const NavBar = () => {
             </svg>
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-6 xl:gap-x-12">
+        <div className="hidden xl:flex lg:gap-6 xl:gap-x-12">
           {navigation.map(item =>
             item.children ? (
               <Menu
@@ -204,7 +204,7 @@ const NavBar = () => {
       </nav>
       <Dialog
         as="div"
-        className="lg:hidden"
+        className="xl:hidden"
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >

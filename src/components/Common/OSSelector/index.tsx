@@ -1,16 +1,28 @@
-import React, { useState } from "react"
+import React from "react"
 import CommonSelector from "../CommonSelector"
 
 import { packageTypes } from "../../../util/defaults"
-import { capitalize } from "../../../util/capitalize";
+import { capitalize } from "../../../util/capitalize"
 
-const OSSelector = ({
+interface OSSelectorProps {
+  operatingSystem: string
+  svgComponent: JSX.Element
+  activeIndex: string
+  onActiveChange: (arch: string) => void
+  onPackageTypeChange: (newType: any) => void // Consider specifying a more precise type than 'any'
+  buttons: {
+    label: string
+    active: boolean
+  }[]
+}
+
+const OSSelector: React.FC<OSSelectorProps> = ({
   operatingSystem,
   svgComponent,
-  buttons,
   activeIndex,
   onActiveChange,
   onPackageTypeChange,
+  buttons,
 }) => {
   return (
     <div>
@@ -36,10 +48,13 @@ const OSSelector = ({
             ))}
           </div>
         </div>
-        <CommonSelector list={packageTypes} onSelect={onPackageTypeChange} />
+        <CommonSelector
+          list={packageTypes}
+          selectorUpdater={onPackageTypeChange}
+        />
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default OSSelector

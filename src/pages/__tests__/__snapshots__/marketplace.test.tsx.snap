@@ -2,388 +2,317 @@
 
 exports[`Marketplace page > renders correctly 1`] = `
 <main>
-  <section
-    class="py-5 text-center container"
+  <div
+    class="pt-32 pb-12 overflow-hidden"
   >
     <div
-      class="row py-lg-5"
+      class="w-full relative"
     >
       <div
-        class="col-lg-8 col-md-8 mx-auto"
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[171px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[120px] md:top-[395px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[618px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+    >
+      <div
+        class="self-stretch h-52 flex-col justify-center items-center gap-6 flex"
       >
-        <h1
-          class="fw-light"
-        >
-          Adoptium® Marketplace
-        </h1>
-        <p
-          class="pt-3"
-        >
-          Text
-        </p>
         <div
-          class="row align-items-center pt-3"
+          class="self-stretch h-32 flex-col justify-center items-center gap-4 flex"
         >
           <div
-            class="col-6 col-md-4"
+            class="justify-start items-center gap-3 inline-flex"
           >
-            <img
-              alt="AQAvit logo"
-              class="img-fluid"
-              src="/images/aqavit-light.png"
-              width="150"
-            />
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              Marketplace
+            </div>
           </div>
           <div
-            class="col-12 col-sm-6 col-md-8 "
+            class="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold"
           >
-            <p
-              class="text-start"
+            Adoptium® Marketplace
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7"
+        >
+          Java™ is the world's leading programming language and platform. The Adoptium Marketplace promotes high-quality, TCK certified and AQAvit verified runtimes for use across the Java ecosystem.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="max-w-[1264px] mx-auto px-6 pb-20"
+  >
+    <div>
+       
+      <div
+        class="my-[50px]"
+      >
+        <div
+          class="max-w-[1264px] mx-auto w-full"
+        >
+          <button
+            class="sm:hidden flex justify-between items-center w-full text-[16px] font-normal leading-[24px] px-4 py-3 rounded-[80px] border-[2px] border-[#3E3355]"
+          >
+            Filter
+            <span>
+              <svg
+                fill="none"
+                height="20"
+                viewBox="0 0 20 20"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 4.16699V15.8337"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M4.16602 10H15.8327"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </span>
+          </button>
+          <div
+            class="w-full lg:overflow-visible overflow-auto hidden sm:block"
+          >
+            <div
+              class="flex items-center gap-5 justify-between flex-nowrap min-w-[1039px]"
             >
-              Text
-            </p>
+              <div
+                class="flex flex-col gap-4 w-full"
+              >
+                <h3
+                  class="text-[16px] font-normal leading-[24px] text-[#C4BFCE]"
+                >
+                  Operating System
+                </h3>
+                <div
+                  class="relative mt-1"
+                >
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
+                    data-headlessui-state=""
+                    id="headlessui-listbox-button-:r0:"
+                    type="button"
+                  >
+                    <span
+                      class="flex items-center justify-between text-nowrap"
+                    >
+                      Linux
+                    </span>
+                    <span>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 448 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-4 w-full"
+              >
+                <h3
+                  class="text-[16px] font-normal leading-[24px] text-[#C4BFCE]"
+                >
+                  Architecture
+                </h3>
+                <div
+                  class="relative mt-1"
+                >
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
+                    data-headlessui-state=""
+                    id="headlessui-listbox-button-:r1:"
+                    type="button"
+                  >
+                    <span
+                      class="flex items-center justify-between text-nowrap"
+                    >
+                      x64
+                    </span>
+                    <span>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 448 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-4 w-full"
+              >
+                <h3
+                  class="text-[16px] font-normal leading-[24px] text-[#C4BFCE]"
+                >
+                  Version
+                </h3>
+                <div
+                  class="relative mt-1"
+                >
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
+                    data-headlessui-state=""
+                    id="headlessui-listbox-button-:r2:"
+                    type="button"
+                  >
+                    <span
+                      class="flex items-center justify-between text-nowrap"
+                    >
+                      1 - LTS
+                    </span>
+                    <span>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 448 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <ul
-      class="vendor-list pt-5"
-    >
-      <li
-        class="vendor-li"
-        data-testid="li-adoptium"
-      >
-        <input
-          checked=""
-          class="vendor-name"
-          data-testid="checkbox-adoptium"
-          id="vendor-adoptium"
-          readonly=""
-          type="checkbox"
-        />
-        <label
-          class="vendor-label"
-          for="vendor-adoptium"
-          title="Adoptium"
-        >
-          <img
-            alt="Adoptium icon"
-            src="/images/vendors/vendor-adoptium.png"
-          />
-        </label>
-      </li>
-    </ul>
     <div
-      class="input-group mb-5 row g-2"
+      class="w-full"
     >
       <div
-        class="input-group-prepend flex-colunm col-12 col-md-3"
-      >
-        <label
-          class="px-2 fw-bold"
-          for="os"
-        >
-          Text
-        </label>
-        <select
-          aria-label="OS Filter"
-          class="form-select form-select-sm"
-          data-testid="os-filter"
-          id="os-filter"
-        >
-          <option
-            value="any"
-          >
-            Text
-          </option>
-          <option
-            value="aix"
-          >
-            AIX
-          </option>
-          <option
-            value="alpine-linux"
-          >
-            Alpine Linux
-          </option>
-          <option
-            value="linux"
-          >
-            Linux
-          </option>
-          <option
-            value="mac"
-          >
-            macOS
-          </option>
-          <option
-            value="solaris"
-          >
-            Solaris
-          </option>
-          <option
-            value="windows"
-          >
-            Windows
-          </option>
-        </select>
-      </div>
-      <div
-        class="input-group-prepend flex-colunm col-12 col-md-3"
-      >
-        <label
-          class="px-2 fw-bold"
-          for="arch"
-        >
-          Text
-        </label>
-        <select
-          aria-label="Architecture Filter"
-          class="form-select form-select-sm"
-          data-testid="arch-filter"
-          id="arch-filter"
-        >
-          <option
-            value="any"
-          >
-            Text
-          </option>
-          <option
-            value="aarch64"
-          >
-            aarch64
-          </option>
-          <option
-            value="arm"
-          >
-            arm
-          </option>
-          <option
-            value="ppc64"
-          >
-            ppc64
-          </option>
-          <option
-            value="ppc64le"
-          >
-            ppc64le
-          </option>
-          <option
-            value="s390x"
-          >
-            s390x
-          </option>
-          <option
-            value="sparcv9"
-          >
-            sparcv9
-          </option>
-          <option
-            value="x64"
-          >
-            x64
-          </option>
-          <option
-            value="x86"
-          >
-            x86
-          </option>
-        </select>
-      </div>
-      <div
-        class="input-group-prepend flex-colunm col-12 col-md-3"
-      >
-        <label
-          class="px-2 fw-bold"
-          for="package-type"
-        >
-          Text
-        </label>
-        <select
-          aria-label="Package Type Filter"
-          class="form-select form-select-sm"
-          data-testid="package-type-filter"
-          id="package-type-filter"
-        >
-          <option
-            value="any"
-          >
-            Text
-          </option>
-          <option
-            value="jdk"
-          >
-            JDK
-          </option>
-          <option
-            value="jre"
-          >
-            JRE
-          </option>
-        </select>
-      </div>
-      <div
-        class="input-group-prepend flex-colunm col-12 col-md-3"
-      >
-        <label
-          class="px-2 fw-bold"
-          for="version"
-        >
-          Text
-        </label>
-        <select
-          aria-label="Version Filter"
-          class="form-select form-select-sm"
-          data-testid="version-filter"
-          id="version-filter"
-        >
-          <option
-            value="1"
-          >
-            1 - LTS
-          </option>
-        </select>
-      </div>
-    </div>
-    <table
-      class="table table-bordered releases-table"
-      id="download-table"
-      style="border-spacing: 0 10px; border-collapse: separate;"
-    >
-      <thead
-        class="table-dark"
-      >
-        <tr
-          class="table-head"
-        >
-          <td
-            class="table-head"
-          >
-            Text
-          </td>
-          <td
-            class="table-head"
-          >
-            Text
-          </td>
-          <td
-            class="table-head"
-          >
-            Text
-          </td>
-          <td
-            class="table-head"
-          >
-            Text
-          </td>
-          <td
-            class="table-head"
-          >
-            Text
-          </td>
-          <td
-            class="table-head"
-          >
-            Text
-          </td>
-        </tr>
-      </thead>
-      <tbody
-        class="table-light"
-      >
-        <tr />
-      </tbody>
-    </table>
-    <div
-      aria-hidden="true"
-      aria-labelledby="checksumModalLabel"
-      class="modal fade"
-      id="checksumModal"
-      style="z-index: 10000;"
-      tabindex="-1"
-    >
-      <div
-        class="modal-dialog modal-lg"
+        class="overflow-auto min-w-full w-full"
       >
         <div
-          class="modal-content"
+          class="flex xl:justify-center space-x-5 py-2"
         >
-          <div
-            class="modal-header"
+          <button
+            class="flex justify-center items-center
+                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-2xl border-primary border-2"
           >
-            <h5
-              class="modal-title"
-              id="checksumModalLabel"
+            <span
+              class="w-20 h-20"
             >
-              Checksum (SHA256)
-            </h5>
-            <button
-              aria-label="Close"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              type="button"
-            />
-          </div>
-          <div
-            class="modal-body text-start"
-          >
-            <p>
-              The checksum is used to ensure the file has not been corrupted during download. You should compare the checksum of the file you received with the value below to ensure the file you received is complete and unmodified.
-            </p>
-            <p>
-              On Windows use
-               
-              <code>
-                certUtil -hashfile 
-                <var>
-                  file
-                </var>
-                 SHA256
-              </code>
-              , on Linux use
-               
-              <code>
-                sha256sum 
-                <var>
-                  file
-                </var>
-              </code>
-              , and on macOS use
-               
-              <code>
-                shasum -a 256 
-                <var>
-                  file
-                </var>
-              </code>
-              .
-            </p>
-            <input
-              readonly=""
-              style="width: 100%;"
-              value=""
-            />
-          </div>
-          <div
-            class="modal-footer"
-          >
-            <button
-              class="btn btn-primary"
-              type="button"
-            >
-              Copy
-            </button>
-            <button
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-              type="button"
-            >
-              Close
-            </button>
-          </div>
+              <img
+                alt="Adoptium icon"
+                class="mb-0 p-1"
+                src="/images/vendors/vendor-adoptium.png"
+              />
+            </span>
+          </button>
         </div>
       </div>
     </div>
-  </section>
+    <div
+      class="hidden md:flex items-center gap-20 border-t border-[#3E3355] pt-5 mb-5 mt-12"
+    >
+      <p
+        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+      >
+        Build Version
+      </p>
+      <p
+        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+      >
+        Release Date
+      </p>
+      <p
+        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+      >
+        Build Date
+      </p>
+      <p
+        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+      >
+        Vendor
+      </p>
+      <p
+        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+      >
+        OS
+      </p>
+      <p
+        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+      >
+        Architecture
+      </p>
+    </div>
+  </div>
 </main>
 `;

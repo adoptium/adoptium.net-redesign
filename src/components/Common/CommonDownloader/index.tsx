@@ -1,5 +1,6 @@
 import React from "react"
-import { CopyIcon, DownloadIcon } from "../AppIcon"
+import { Link } from "gatsby-plugin-react-i18next"
+import { BsCopy, BsDownload } from "react-icons/bs"
 
 const CommonDownloader = ({ obj }) => {
   return (
@@ -7,15 +8,26 @@ const CommonDownloader = ({ obj }) => {
       <div className="flex justify-between w-full items-center">
         <div className="flex items-center gap-2">
           <span className="cursor-pointer group">
-            <a href={obj.link} target="_blank" rel="noopener noreferrer">
-            <DownloadIcon />
-            </a>
+            <Link
+              to="/download"
+              state={{
+                link: obj.link,
+                checksum: obj.checksum,
+                os: obj.os,
+                arch: obj.arch,
+                pkg_type: obj.pkg_type,
+                java_version: obj.java_version,
+              }}
+              placeholder={"Download"}
+            >
+              <BsDownload size={20} />
+            </Link>
           </span>
           <h5 className="text-base font-normal">{obj.label}</h5>
         </div>
         <div className="flex items-center gap-2">
           <span className="cursor-pointer group">
-            <CopyIcon />
+            <BsCopy size={20} />
           </span>
           <h5 className="text-base font-normal">SHA256</h5>
         </div>

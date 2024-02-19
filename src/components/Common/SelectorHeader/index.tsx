@@ -1,7 +1,7 @@
 import React from "react"
 import CommonSelector from "../CommonSelector"
 
-const SelectorHeader = ({ title, data }) => {
+const SelectorHeader = ({ title, data, selectorUpdater }) => {
   return (
     <div className="max-w-[1264px] mx-auto w-full">
       <button className="sm:hidden flex justify-between items-center w-full text-[16px] font-normal leading-[24px] px-4 py-3 rounded-[80px] border-[2px] border-[#3E3355]">
@@ -40,10 +40,7 @@ const SelectorHeader = ({ title, data }) => {
               </h3>
               <CommonSelector
                 list={list}
-                onSelect={(selectedItem) => {
-                  console.log("Selected item:", selectedItem.name);
-                  // Here, you would handle the selection, e.g., by setting state or passing it up further.
-                }}
+                selectorUpdater={selectorUpdater[index]}
               />
             </div>
           ))}

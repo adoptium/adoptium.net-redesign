@@ -255,6 +255,7 @@ exports[`NavBar component > navbar renders correctly 1`] = `
           class="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex"
         >
           <a
+            aria-label="checksum"
             href="#"
           >
             <svg

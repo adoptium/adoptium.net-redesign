@@ -1,5 +1,6 @@
 import * as React from "react"
 import Layout from "../../components/Layout"
+import Seo from "../../components/Seo"
 import NavBar from "../../components/NavBar"
 import PageHeader from "../../components/PageHeader"
 import FAQ from "../../components/FAQ"
@@ -7,7 +8,7 @@ import DownloadMethods from "../../components/Temurin/DownloadMethods"
 import Tabs from "../../components/Temurin/Tabs"
 import CommonCtaWrapper from "../../components/Common/CommonCtaWrapper"
 
-import { loadLatestAssets } from '../../hooks'
+import { loadLatestAssets } from "../../hooks"
 
 const ReleasesPage = () => {
   return (
@@ -30,3 +31,5 @@ const ReleasesPage = () => {
 }
 
 export default ReleasesPage
+
+export const Head = () => <Seo title="Latest Releases" />

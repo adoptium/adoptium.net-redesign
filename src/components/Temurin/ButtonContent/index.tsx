@@ -1,12 +1,22 @@
 import React from "react"
-import {
-  CrossIcon,
-  DownloadIcon,
-  MacIcon,
-  WindowIcon,
-} from "../../Common/AppIcon"
+import { Link } from "gatsby-plugin-react-i18next"
+import { BsDownload } from "react-icons/bs"
+import { RxCrossCircled } from "react-icons/rx"
+import { FaApple, FaWindows } from "react-icons/fa"
 
-const ButtonContent = () => {
+interface CardData {
+  icon: React.ReactNode
+  title: string
+  description: string
+  link: string
+  os: string
+  arch: string
+  pkg_type: string
+  checksum: string
+  java_version: string
+}
+
+const ButtonContent = ({ results }) => {
   const navigationItem = [
     {
       title: "Release notes",
@@ -20,23 +30,39 @@ const ButtonContent = () => {
     {
       title: "Terms of use",
     },
-    {
-      title: "Source code",
-    },
   ]
-  const CardData = [
-    {
-      icon: <WindowIcon />,
-      title: "Windows",
-      description: "Temurin11.0.21+10, Windows 64 bit, Standard",
-    },
-    {
-      icon: <MacIcon />,
-      title: "Mac",
-      description: "Temurin11.0.21+10, macOS 64 bit, Standard",
-    },
-    // Add more objects for additional cards
-  ]
+  const CardData: CardData[] = []
+  // loop through results and find macOS and Windows installers
+  results &&
+    results.map(result => {
+      if (result.os === "mac" && result.architecture === "aarch64") {
+        CardData.push({
+          icon: <FaApple size={30} />,
+          title: "macOS",
+          os: result.os,
+          arch: result.architecture,
+          checksum: result.binaries[0].installer_checksum,
+          java_version: result.release_name,
+          pkg_type: result.binaries[0].type,
+          description: `Temurin ${result.release_name}, macOS aarch64 (M1) (${result.binaries[0].installer_extension.toUpperCase()})`,
+          link: result.binaries[0].installer_link,
+        })
+      }
+      if (result.os === "windows" && result.architecture === "x64") {
+        CardData.push({
+          icon: <FaWindows size={30} />,
+          title: "Windows",
+          os: result.os,
+          arch: result.architecture,
+          checksum: result.binaries[0].installer_checksum,
+          java_version: result.release_name,
+          pkg_type: result.binaries[0].type,
+          description: `Temurin ${result.release_name}, Windows 64 bit (${result.binaries[0].installer_extension.toUpperCase()})`,
+          link: result.binaries[0].installer_link,
+        })
+      }
+    })
+
   return (
     <>
       <div className=" w-full max-w-[1264px] mx-auto">
@@ -47,7 +73,7 @@ const ButtonContent = () => {
               className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer"
             >
               <span className=" group  ">
-                <CrossIcon />
+                <RxCrossCircled />
               </span>{" "}
               {item.title}
             </li>
@@ -70,8 +96,21 @@ const ButtonContent = () => {
                     {card.description}
                   </h5>
                 </div>
-                <span className="p-3 group cursor-pointer rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76] hover:border-primary  transition-all duration-300 ease-in-out">
-                  <DownloadIcon />
+                <span className="p-3 group cursor-pointer rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76] hover:border-primary transition-all duration-300 ease-in-out">
+                  <Link
+                    to="/download"
+                    state={{
+                      link: card.link,
+                      checksum: card.checksum,
+                      os: card.os,
+                      arch: card.arch,
+                      pkg_type: card.pkg_type,
+                      java_version: card.java_version,
+                    }}
+                    placeholder={"Download"}
+                  >
+                    <BsDownload size={25} />
+                  </Link>
                 </span>
               </div>
             </div>

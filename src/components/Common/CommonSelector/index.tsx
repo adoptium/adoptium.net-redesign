@@ -1,24 +1,28 @@
-import { Listbox, Transition } from "@headlessui/react"
 import React from "react"
+import { Listbox, Transition } from "@headlessui/react"
 import { Fragment, useState } from "react"
 import { FaChevronDown } from "react-icons/fa"
 
 interface ListItem {
   name: string
+  value: string
 }
 
 interface ListBoxSelectProps {
   list: ListItem[]
-  onSelect: (item: ListItem) => void
+  selectorUpdater: (value: string) => void
 }
 
-export default function CommonSelector({ list, onSelect }: ListBoxSelectProps) {
+export default function CommonSelector({
+  list,
+  selectorUpdater,
+}: ListBoxSelectProps) {
   const [selected, setSelected] = useState<ListItem>(list[0])
 
   const handleChange = (newValue: ListItem) => {
-    setSelected(newValue);
-    onSelect(newValue);
-  };
+    setSelected(newValue)
+    selectorUpdater(newValue.value)
+  }
 
   return (
     <Listbox value={selected} onChange={handleChange}>

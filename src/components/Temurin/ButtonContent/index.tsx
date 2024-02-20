@@ -92,7 +92,7 @@ const ButtonContent = ({ results }) => {
               <div className="flex justify-between items-center gap-8">
                 <div className="flex flex-col  space-y-2">
                   <h4 className="text-4xl font-semibold">{card.title}</h4>
-                  <h5 className="text-base font-normal text-[#C4BFCE]">
+                  <h5 className="text-base font-normal text-grey">
                     {card.description}
                   </h5>
                 </div>

@@ -57,7 +57,7 @@ const SelectorHeader: React.FC<SelectorHeaderProps> = ({
               
             return (
             <div key={index} className="flex flex-col gap-4 w-full">
-              <h3 className="text-[16px] font-normal leading-[24px] text-[#C4BFCE]">
+              <h3 className="text-[16px] font-normal leading-[24px] text-grey">
                 {title[index]}
               </h3>
               <CommonSelector

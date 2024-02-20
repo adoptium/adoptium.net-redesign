@@ -126,7 +126,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                 class="flex flex-col gap-4 w-full"
               >
                 <h3
-                  class="text-[16px] font-normal leading-[24px] text-[#C4BFCE]"
+                  class="text-[16px] font-normal leading-[24px] text-grey"
                 >
                   Operating System
                 </h3>
@@ -168,7 +168,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                 class="flex flex-col gap-4 w-full"
               >
                 <h3
-                  class="text-[16px] font-normal leading-[24px] text-[#C4BFCE]"
+                  class="text-[16px] font-normal leading-[24px] text-grey"
                 >
                   Architecture
                 </h3>
@@ -210,7 +210,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                 class="flex flex-col gap-4 w-full"
               >
                 <h3
-                  class="text-[16px] font-normal leading-[24px] text-[#C4BFCE]"
+                  class="text-[16px] font-normal leading-[24px] text-grey"
                 >
                   Version
                 </h3>
@@ -252,7 +252,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                 class="flex flex-col gap-4 w-full"
               >
                 <h3
-                  class="text-[16px] font-normal leading-[24px] text-[#C4BFCE]"
+                  class="text-[16px] font-normal leading-[24px] text-grey"
                 >
                   Package Type
                 </h3>
@@ -325,32 +325,32 @@ exports[`Marketplace page > renders correctly 1`] = `
       class="hidden md:flex items-center gap-20 border-t border-[#3E3355] pt-5 mb-5 mt-12"
     >
       <p
-        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+        class="text-grey text-[16px] leading-[24px] mb-0"
       >
         Text
       </p>
       <p
-        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+        class="text-grey text-[16px] leading-[24px] mb-0"
       >
         Text
       </p>
       <p
-        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+        class="text-grey text-[16px] leading-[24px] mb-0"
       >
         Text
       </p>
       <p
-        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+        class="text-grey text-[16px] leading-[24px] mb-0"
       >
         Build Date
       </p>
       <p
-        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+        class="text-grey text-[16px] leading-[24px] mb-0"
       >
         Text
       </p>
       <p
-        class="text-[#C4BFCE] text-[16px] leading-[24px] mb-0"
+        class="text-grey text-[16px] leading-[24px] mb-0"
       >
         Text
       </p>
@@ -383,7 +383,7 @@ exports[`Marketplace page > renders correctly 1`] = `
             About Eclipse AQAvit
           </h3>
           <p
-            class="text-[#C4BFCE] mt-6 font-normal text-base"
+            class="text-grey mt-6 font-normal text-base"
           >
             The AQAvit open source test suite (Adoptium Quality Assurance) can be found here. There is also a blog post and brief presentation that explains what testing is run and how it fits into the overall delivery pipeline.
           </p>

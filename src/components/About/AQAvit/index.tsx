@@ -20,7 +20,7 @@ const AQAvit = () => {
             className={"!mt-0"}
           />
 
-          <CommonButton className={"mt-6"} icon={undefined}>
+          <CommonButton className="mt-6" icon={undefined}>
             Learn More
           </CommonButton>
         </div>

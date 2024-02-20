@@ -49,7 +49,7 @@ const Logos = ({ members, title, description }: LogosGridProps) => {
         <h3 className="text-[36px] sm:text-[42px] leading-[56px] text-center">
           {title}
         </h3>
-        <p className="text-[16px] leading-[24px] text-[#C4BFCE] text-center mt-3">
+        <p className="text-[16px] leading-[24px] text-grey text-center mt-3">
           {description}
         </p>
       </div>

@@ -17,7 +17,7 @@ const CommonHeading: React.FC<CommonHeadingProps> = ({
         {title}
       </h3>
     )}
-    <p className="text-[#C4BFCE] mt-6 font-normal text-base">{description}</p>
+    <p className="text-grey mt-6 font-normal text-base">{description}</p>
   </div>
 )
 

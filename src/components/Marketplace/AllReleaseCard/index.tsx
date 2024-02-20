@@ -36,13 +36,13 @@ const AllReleaseCard = ({ results }) => {
                   src={getImageForDistribution(release.binary.distribution)}
                 />
               </span>
-              <p className="text-base text-[#C4BFCE] leading-[150%] mb-0  hidden lg:block">
+              <p className="text-base text-grey leading-[150%] mb-0  hidden lg:block">
                 {new Date(release.binary.timestamp).toLocaleDateString()}
               </p>
-              <p className="text-base text-[#C4BFCE] leading-[150%] hidden lg:block mb-0">
+              <p className="text-base text-grey leading-[150%] hidden lg:block mb-0">
                 {capitalize(release.binary.os)}
               </p>
-              <p className="text-base text-[#C4BFCE] leading-[150%] mb-0 hidden lg:block">
+              <p className="text-base text-grey leading-[150%] mb-0 hidden lg:block">
                 {release.binary.architecture}
               </p>
             </div>

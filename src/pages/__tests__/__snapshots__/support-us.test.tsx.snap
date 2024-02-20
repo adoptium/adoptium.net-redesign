@@ -366,7 +366,7 @@ exports[`Support Us page > renders correctly 1`] = `
         Ways to support us
       </h3>
       <p
-        class="text-[#C4BFCE] mt-6 font-normal text-base"
+        class="text-grey mt-6 font-normal text-base"
       >
         If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group
       </p>
@@ -389,7 +389,7 @@ exports[`Support Us page > renders correctly 1`] = `
               How to contribute
             </h3>
             <p
-              class="mt-6 text-xl text-[#C4BFCE] font-normal"
+              class="mt-6 text-xl text-grey font-normal"
             >
               Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
             </p>
@@ -416,7 +416,7 @@ exports[`Support Us page > renders correctly 1`] = `
               Become a sponsor
             </h3>
             <p
-              class="mt-6 text-xl text-[#C4BFCE] font-normal"
+              class="mt-6 text-xl text-grey font-normal"
             >
               Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
             </p>
@@ -443,7 +443,7 @@ exports[`Support Us page > renders correctly 1`] = `
               Become a member
             </h3>
             <p
-              class="mt-6 text-xl text-[#C4BFCE] font-normal"
+              class="mt-6 text-xl text-grey font-normal"
             >
               Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
             </p>
@@ -473,7 +473,7 @@ exports[`Support Us page > renders correctly 1`] = `
             Help promote Temurin
           </h3>
           <p
-            class="text-[#C4BFCE] mt-6 font-normal text-base"
+            class="text-grey mt-6 font-normal text-base"
           >
             Svennekoloni paheten fronta didoling. Grönt körfält mitt, och astrongar fastän animoji. Doxa exosm morotsmobb diska. Såsuss bröllopsklänning i preppare. Fulparkerare nirad mms biorat.
 
@@ -481,7 +481,7 @@ exports[`Support Us page > renders correctly 1`] = `
         </div>
         <div>
           <p
-            class="text-[#C4BFCE] mt-6 font-normal text-base"
+            class="text-grey mt-6 font-normal text-base"
           >
             Eurosinde processturism vasiminade. Äga frågan bekymringssamtal, alltså prens. Drevkultur tredönde bilmålvakt i ypren. Exoska semiras digt, eller makror. Cosplay faras attefallshus ber.
           </p>
@@ -503,7 +503,7 @@ exports[`Support Us page > renders correctly 1`] = `
                 Media & Promotion
               </h3>
               <p
-                class="mt-6 text-xl text-[#C4BFCE] font-normal"
+                class="mt-6 text-xl text-grey font-normal"
               >
                 Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
               </p>

@@ -306,7 +306,7 @@ exports[`What We Do page > renders correctly 1`] = `
       Latest Releases
     </h2>
     <p
-      class="text-center mt-6 text-[#C4BFCE] text-base font-normal leading-6"
+      class="text-center mt-6 text-grey text-base font-normal leading-6"
     >
       Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime 
       <br />
@@ -359,7 +359,7 @@ exports[`What We Do page > renders correctly 1`] = `
           jdk-21+35 - Temurin
         </p>
         <span
-          class="text-base text-[#C4BFCE] font-normal leading-6 block mt-4"
+          class="text-base text-grey font-normal leading-6 block mt-4"
         >
           12 October 2023 •  macOS • aarch64
         </span>
@@ -394,7 +394,7 @@ exports[`What We Do page > renders correctly 1`] = `
           jdk-21+35 - Temurin
         </p>
         <span
-          class="text-base text-[#C4BFCE] font-normal leading-6 block mt-4"
+          class="text-base text-grey font-normal leading-6 block mt-4"
         >
           12 October 2023 •  macOS • aarch64
         </span>
@@ -429,7 +429,7 @@ exports[`What We Do page > renders correctly 1`] = `
           jdk-21+35 - Temurin
         </p>
         <span
-          class="text-base text-[#C4BFCE] font-normal leading-6 block mt-4"
+          class="text-base text-grey font-normal leading-6 block mt-4"
         >
           12 October 2023 •  macOS • aarch64
         </span>
@@ -464,7 +464,7 @@ exports[`What We Do page > renders correctly 1`] = `
           jdk-21+35 - Temurin
         </p>
         <span
-          class="text-base text-[#C4BFCE] font-normal leading-6 block mt-4"
+          class="text-base text-grey font-normal leading-6 block mt-4"
         >
           12 October 2023 •  macOS • aarch64
         </span>

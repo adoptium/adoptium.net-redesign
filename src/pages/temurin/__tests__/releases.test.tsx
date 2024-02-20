@@ -1,6 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import { describe, expect, it, vi } from "vitest"
+import { afterEach, describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
 import Releases, { Head } from "../releases"
 import AxiosInstance from "axios"
@@ -37,6 +37,7 @@ describe("Releases page", () => {
 
     const { container } = render(<Releases />)
     const results = await axe(container)
+    // @ts-ignore
     expect(results).toHaveNoViolations()
   })
 })

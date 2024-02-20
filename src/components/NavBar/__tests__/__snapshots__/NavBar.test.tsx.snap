@@ -11,6 +11,7 @@ exports[`NavBar component > navbar renders correctly 1`] = `
     >
       <a
         href="/"
+        placeholder="homepage"
       >
         <img
           alt="Adoptium Logo"

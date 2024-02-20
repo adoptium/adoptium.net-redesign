@@ -7,7 +7,7 @@ import "./Testimonials.scss"
 const testimonialData = [
   {
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "In talking with Azul, the trust came quickly, and was continually reinforced by the excellent support we received. Azul gives us peace of mind. ",
     name: "Joe Bloggs",
     role: "CEO at GitHub",
     image:
@@ -15,7 +15,7 @@ const testimonialData = [
   },
   {
     quote:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      "In talking with Azul, the trust came quickly, and was continually reinforced by the excellent support we received. Azul gives us peace of mind. ",
     name: "Jane Doe",
     role: "CTO at Asana",
     image:
@@ -23,7 +23,7 @@ const testimonialData = [
   },
   {
     quote:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      "In talking with Azul, the trust came quickly, and was continually reinforced by the excellent support we received. Azul gives us peace of mind. ",
     name: "Jane Doe",
     role: "Cleaner at Google",
     image:
@@ -31,7 +31,7 @@ const testimonialData = [
   },
   {
     quote:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      "In talking with Azul, the trust came quickly, and was continually reinforced by the excellent support we received. Azul gives us peace of mind. ",
     name: "Jane Doe",
     role: "Slacker at Slack",
     image:
@@ -39,7 +39,7 @@ const testimonialData = [
   },
 ]
 
-const Testimonials = () => {
+const Testimonials = ({ className }) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [slideDirection, setSlideDirection] = useState("right")
 
@@ -82,7 +82,9 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="bg-[#0E002A] overflow-x-hidden border-t border-[#3E3355]">
+    <section
+      className={`bg-[#0E002A] overflow-x-hidden border-t border-[#3E3355] ${className}`}
+    >
       <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
         <figure className="max-w-screen-md mx-auto" key={testimonialKey}>
           <svg
@@ -121,21 +123,21 @@ const Testimonials = () => {
           </figcaption>
         </figure>
         {/* Navigation Arrows */}
-        <div className="flex justify-center items-center max-w-screen-md mx-auto">
+        <div className="flex justify-center gap-3 items-center max-w-screen-md mx-auto">
           <button
-            className="arrow-button p-2"
+            className="arrow-button p-2 border-[#3E3355] border-[3px]"
             onClick={prevTestimonial}
             aria-label="Previous Testimonial"
           >
             <FaArrowLeft size={20} strokeWidth={1} />
           </button>
           <button
-            className="arrow-button arrow-button-progress p-2"
+            className="arrow-button relative arrow-button-progress p-2 "
             onClick={nextTestimonial}
             aria-label="Next Testimonial"
           >
             <FaArrowRight size={20} strokeWidth={1} />
-            <div className="progress-border"></div>
+            <div className="progress-border absolute "></div>
           </button>
         </div>
         <div className="max-w-[896px] mx-auto flex flex-wrap justify-center items-center mt-10 gap-6 md:space-x-16">

@@ -1,10 +1,18 @@
 import React from "react"
 import { Link } from "gatsby-plugin-react-i18next"
 
-const ImageText = ({ title, description, link, linkText }) => {
+const ImageText = ({
+  title,
+  description,
+  link,
+  linkText,
+
+  className,
+  icon,
+}) => {
   return (
     <>
-      <section className="py-16 max-w-[1048px] w-full mx-auto flex justify-center lg:justify-between xl:px-0 px-6">
+      <section className={`image-text  ${className}`}>
         <div className="max-w-[400px] w-full hidden lg:block">
           <img
             src="/images/icons/experience.png"
@@ -12,23 +20,24 @@ const ImageText = ({ title, description, link, linkText }) => {
             alt="scroll-divider"
           />
         </div>
+        <div className=" md:hidden flex justify-center items-center mb-4">
+          {icon}
+        </div>
         <div className="lg:max-w-[560px] w-full  ">
-          <h2 className="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]">
+          <h2 className="md:text-5xl text-[40px] font-semibold leading-[116.667%] md:leading-[120%]">
             {title}
           </h2>
-          <p className="md:mt-6 my-10 text-[#C4BFCE] text-base leading-6 font-normal">
+          <p className="md:mt-6 mt-10 mb-5 text-lightgrey text-xl md:text-base leading-[140%] md:leading-[150%] font-normal">
             {description}
           </p>
-          <Link to={link}>
-            <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden">
-              {linkText}
-            </button>{" "}
-          </Link>
-          <Link to={link}>
-            <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden">
-              {linkText}
-            </button>
-          </Link>
+
+          <div className="mt-12">
+            <Link to={link} placeholder={undefined}>
+              <button className="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-[150%] font-normal w-[150px] h-[48px] rounded-2xl gradient-border ">
+                {linkText}
+              </button>{" "}
+            </Link>
+          </div>
         </div>
       </section>
     </>

@@ -26,6 +26,7 @@ module.exports = {
       },
       colors: {
         primary: "#FF1464",
+        lightgrey: "#C4BFCE",
       },
       screens: {
         vs: "360px",

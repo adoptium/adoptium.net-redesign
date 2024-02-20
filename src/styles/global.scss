@@ -1,9 +1,8 @@
+@import "https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import "variables";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import "variables.scss";
 
 body {
   font-family: "Hanken Grotesk", sans-serif !important;
@@ -59,13 +58,13 @@ body {
 }
 
 .bg-temurin-hero {
-  @media (min-width: 640px) {
+  @media (width >= 640px) {
     background-image: url("/images/temurin-hero-img.png");
   }
 }
 
 .bg-aqavit-hero {
-  @media (min-width: 640px) {
+  @media (width >= 640px) {
     background-image: url("/images/aqavit-hero-img.png");
   }
 }
@@ -76,13 +75,12 @@ body {
 
 .newscard-2 {
   border-radius: 24px;
-  background: var(--tones-white-5, rgba(255, 255, 255, 0.05));
+  background: var(--tones-white-5, rgba(255, 255, 255, 5%));
   backdrop-filter: blur(12px);
-}
-.newscard-2 {
   position: relative;
   transition: 0.3s ease-in-out;
 }
+
 .newscard-2::after {
   content: "";
   position: absolute;

@@ -659,7 +659,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
         Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
       </span>
       <button
-        class="bg-transparent mt-10 gradient-btn border-2 border-pink-500/0 text-white text-base leading-[125%] font-normal w-[146px] h-[48px] rounded-[80px]"
+        class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[146px] h-[48px] rounded-[80px] gradient-border lg:block hidden"
       >
         Learn More
       </button>
@@ -1439,7 +1439,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
         Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
       </span>
       <button
-        class="bg-transparent mt-10 gradient-btn border-2 border-pink-500/0 text-white text-base leading-[125%] font-normal w-[146px] h-[48px] rounded-[80px]"
+        class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[146px] h-[48px] rounded-[80px] gradient-border lg:block hidden"
       >
         Learn More
       </button>

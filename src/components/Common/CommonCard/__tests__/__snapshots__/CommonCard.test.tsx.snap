@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CommonButton component > should render correctly 1`] = `
+<div>
+  <div
+    class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
+  >
+    <div
+      class="grow"
+    >
+      <h3
+        class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
+      >
+        test
+      </h3>
+      <p
+        class="mt-6 text-xl text-grey font-normal"
+      >
+        test
+      </p>
+    </div>
+    <button
+      class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+    >
+      test
+    </button>
+  </div>
+</div>
+`;

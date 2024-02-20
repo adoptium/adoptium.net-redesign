@@ -3,21 +3,23 @@ import { Listbox, Transition } from "@headlessui/react"
 import { Fragment, useState } from "react"
 import { FaChevronDown } from "react-icons/fa"
 
-interface ListItem {
+export interface ListItem {
   name: string
   value: string
 }
 
 interface ListBoxSelectProps {
   list: ListItem[]
+  defaultValue?: ListItem | undefined
   selectorUpdater: (value: string) => void
 }
 
 export default function CommonSelector({
   list,
+  defaultValue,
   selectorUpdater,
 }: ListBoxSelectProps) {
-  const [selected, setSelected] = useState<ListItem>(list[0])
+  const [selected, setSelected] = useState<ListItem>(defaultValue ? defaultValue : list[0])
 
   const handleChange = (newValue: ListItem) => {
     setSelected(newValue)

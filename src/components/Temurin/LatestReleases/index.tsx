@@ -40,7 +40,7 @@ const LatestReleases = () => {
         <h2 className="text-white md:text-[56px] text-5xl font-normal leading-[44px] md:leading-[56px] text-center">
           Latest Releases
         </h2>
-        <p className="text-center mt-6 text-[#C4BFCE] text-base font-normal leading-6">
+        <p className="text-center mt-6 text-grey text-base font-normal leading-6">
           Eclipse Temurin offers high-performance, cross-platform, open-source
           Java runtime <br /> binaries that are enterprise-ready and Java SE
           TCK-tested for general use in the Java ecosystem.
@@ -62,7 +62,7 @@ const LatestReleases = () => {
               <p className="text-white text-2xl font-normal leading-8 mt-2">
                 {card.content}
               </p>
-              <span className="text-base text-[#C4BFCE] font-normal leading-6 block mt-4">
+              <span className="text-base text-grey font-normal leading-6 block mt-4">
                 {card.Date}
               </span>
               <Link

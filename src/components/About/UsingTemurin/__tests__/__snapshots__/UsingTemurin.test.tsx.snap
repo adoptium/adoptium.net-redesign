@@ -1,0 +1,73 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`UsingTemurin component > should render correctly 1`] = `
+<div>
+  <section
+    class="py-16 max-w-[1048px] w-full mx-auto lg:flex justify-center lg:justify-between xl:px-0 px-6 "
+  >
+    <div
+      class="lg:max-w-[560px] w-full"
+    >
+      <h2
+        class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
+      >
+        How other companies are using Temurin
+      </h2>
+      <p
+        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
+      >
+        How other companies are using Temurin Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
+      </p>
+    </div>
+    <div
+      class="max-w-[400px] w-full hidden lg:block"
+    >
+      <img
+        alt="scroll-divider"
+        class="mb-0"
+        src="/images/icons/experience.png"
+      />
+    </div>
+    <div
+      class="w-full lg:hidden block mt-10"
+    >
+      <div
+        class="w-full "
+      >
+        <p
+          class="p-4 rounded-2xl w-full bg-tones-white gap-y-4 text-base font-normal leading-6 text-white backdrop-blur-12"
+        >
+          Aliquam sollicitudin, augue eget gravida imperdiet
+        </p>
+      </div>
+      <div
+        class="w-full "
+      >
+        <p
+          class="p-4 rounded-2xl w-full bg-tones-white gap-y-4 text-base font-normal leading-6 text-white backdrop-blur-12"
+        >
+          Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis.
+        </p>
+      </div>
+      <div
+        class="w-full "
+      >
+        <p
+          class="p-4 rounded-2xl w-full bg-tones-white gap-y-4 text-base font-normal leading-6 text-white backdrop-blur-12"
+        >
+          Bibendum at ut eu feugiat tellus diam turpis.
+        </p>
+      </div>
+      <div
+        class="w-full "
+      >
+        <p
+          class="p-4 rounded-2xl w-full bg-tones-white gap-y-4 text-base font-normal leading-6 text-white backdrop-blur-12"
+        >
+          Aliquam sollicitudin, augue eget gravida imperdiet, eros lorem euismod mi, ac commodo leo nulla eget.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;

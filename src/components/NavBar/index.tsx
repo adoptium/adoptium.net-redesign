@@ -211,14 +211,14 @@ const NavBar = () => {
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed flex-col h-full flex inset-y-0 right-0 z-50 w-full overflow-y-auto bg-purple px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link to="/" placeholder="home" className="-m-1.5 p-1.5">
               <span className="sr-only">Eclipse Adoptium</span>
               <img
                 className="h-8 mb-0 w-auto"
                 src="https://raw.githubusercontent.com/adoptium/adoptium.net/main/src/images/adoptium-logo-dark.svg"
                 alt=""
               />
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-white-700"

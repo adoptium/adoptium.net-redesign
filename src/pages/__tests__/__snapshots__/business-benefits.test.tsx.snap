@@ -97,7 +97,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
         More than 10 years' experience, and a focus firmly on your future
       </h2>
       <p
-        class="md:mt-6 my-10 text-[#C4BFCE] text-base leading-6 font-normal"
+        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
       >
         Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
       </p>
@@ -134,7 +134,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
         How other companies are using Temurin
       </h2>
       <p
-        class="md:mt-6 my-10 text-[#C4BFCE] text-base leading-6 font-normal"
+        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
       >
         How other companies are using Temurin Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
       </p>
@@ -201,7 +201,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
         Eclipse Temurin™ Adopters
       </h3>
       <p
-        class="text-[16px] leading-[24px] text-[#C4BFCE] text-center mt-3"
+        class="text-[16px] leading-[24px] text-grey text-center mt-3"
       >
         Companies that use Eclipse Temurin in production.
       </p>
@@ -528,7 +528,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
         Need support with Temurin?
       </h2>
       <p
-        class="md:mt-6 my-10 text-[#C4BFCE] text-base leading-6 font-normal"
+        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
       >
         Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
       </p>

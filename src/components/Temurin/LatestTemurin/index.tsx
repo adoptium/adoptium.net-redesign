@@ -2,7 +2,7 @@ import React, { MutableRefObject, useRef } from "react"
 import { Link, Trans } from "gatsby-plugin-react-i18next"
 import { detectOS, UserOS } from "../../../util/detectOS"
 import { fetchLatestForOS, useOnScreen } from "../../../hooks"
-import { FaApple, FaWindows } from "react-icons/fa"
+import { FaApple, FaWindows, FaLinux } from "react-icons/fa"
 
 let userOSName: string
 let userOSAPIName: string
@@ -77,6 +77,7 @@ const LatestTemurin = (props): JSX.Element => {
       </p>
       <div className="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6">
         <Link
+          placeholder={"Other Downloads"}
           to="/temurin/releases"
           className="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
         >
@@ -84,6 +85,7 @@ const LatestTemurin = (props): JSX.Element => {
         </Link>
         {binary ? (
           <Link
+            placeholder={"Download Temurin"}
             to="/download"
             state={{
               link: binary.link,
@@ -97,10 +99,12 @@ const LatestTemurin = (props): JSX.Element => {
           >
             {userOS === UserOS.MAC ? (
               <FaApple size={25} />
-            ) : (
+            ) : userOS === UserOS.WIN ? (
               <FaWindows size={25} />
+            ) : (
+              <FaLinux size={25} />
             )}
-            Download Temurin™
+            Download Temurin&trade;
           </Link>
         ) : (
           <a
@@ -109,10 +113,12 @@ const LatestTemurin = (props): JSX.Element => {
           >
             {userOS === UserOS.MAC ? (
               <FaApple size={25} />
-            ) : (
+            ) : userOS === UserOS.WIN ? (
               <FaWindows size={25} />
+            ) : (
+              <FaLinux size={25} />
             )}
-            Download Temurin™
+            Download Temurin&trade;
           </a>
         )}
       </div>

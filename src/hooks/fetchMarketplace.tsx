@@ -28,6 +28,10 @@ export async function getAllPkgsForVersion(
     })
   }
 
+  if (package_type !== "any") {
+    params += "&image_type=" + package_type
+  }
+
   if (architecture !== "any") {
     params += "&architecture=" + architecture
   }

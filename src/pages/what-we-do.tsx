@@ -19,12 +19,17 @@ const WhatWeDo = () => {
         title="About Eclipse Adoptium®"
         subtitle="What we do"
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
+        className={""}
       />
       <PowerOfTemurin />
       <LatestReleases />
       <WGProjects />
-      <ContactUs title="Connect with the community" />
-      <Testimonials />
+      <ContactUs
+        title="Connect with the community"
+        className={undefined}
+        buttontitle={undefined}
+      />
+      <Testimonials className={undefined} />
       <LatestNews />
     </Layout>
   )

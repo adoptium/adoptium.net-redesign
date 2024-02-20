@@ -5,6 +5,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "variables.scss";
 
+@layer components {
+  .image-text {
+    @apply py-16 max-w-[1048px] w-full mx-auto flex justify-center items-center lg:justify-between xl:px-0 px-6;
+  }
+  .tab-button-text {
+    @apply text-base font-normal leading-[150%];
+  }
+}
+
 body {
   font-family: "Hanken Grotesk", sans-serif !important;
   background-color: $purple;
@@ -47,13 +56,46 @@ body {
   background-origin: border-box;
   background-clip: content-box, border-box;
   cursor: pointer;
+  transition: ease-in-out;
+  transition-duration: 300ms;
 
   &:hover {
     transform: scale(110%);
-    transition-duration: 300ms;
+  }
+}
+.gradient-btn {
+  border-radius: 80px;
+  border: solid 2px transparent;
+  background-image: linear-gradient($purple, $purple),
+    linear-gradient(90deg, #ff1464, #ff14620b);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  cursor: pointer;
+  cursor: pointer;
+  transition: ease-in-out;
+  transition-duration: 300ms;
+  &:hover {
+    transform: scale(110%);
   }
 }
 
+@media screen and (max-width: 767px) {
+  .gradient-btn {
+    border-radius: 80px;
+    border: solid 2px transparent;
+    background-image: linear-gradient(#541473, #541473),
+      linear-gradient(90deg, #ff1464, #ff14620b);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    cursor: pointer;
+
+    transition: ease-in-out;
+    transition-duration: 300ms;
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+}
 .bg-temurin-hero {
   @media (min-width: 640px) {
     background-image: url("/images/temurin-hero-img.png");

@@ -1,6 +1,10 @@
 import React, { useState } from "react"
 
-const FAQ = ({ className }) => {
+interface FAQProps {
+  className?: string
+}
+
+const FAQ: React.FC<FAQProps> = ({ className }) => {
   const [openFaq, setOpenFaq] = useState(null)
   const handleToggleFaq = index => {
     setOpenFaq(prevOpenFaq => (prevOpenFaq === index ? null : index))

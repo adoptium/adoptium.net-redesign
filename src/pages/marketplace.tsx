@@ -7,7 +7,7 @@ import Seo from "../components/Seo"
 
 import PageHeader from "../components/PageHeader"
 import DownloadTable from "../components/Marketplace/DownloadTable"
-// import AboutEclipseCard from "../components/Marketplace/AboutEclipseCard"
+import AboutAQAvit from "../components/About/AQAvit"
 
 const DownloadPage = () => (
   <>
@@ -18,7 +18,7 @@ const DownloadPage = () => (
         description="Java™ is the world's leading programming language and platform. The Adoptium Marketplace promotes high-quality, TCK certified and AQAvit verified runtimes for use across the Java ecosystem."
       />
       <DownloadTable />
-      {/* <AboutEclipseCard /> */}
+      <AboutAQAvit />
     </Layout>
   </>
 )

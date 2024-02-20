@@ -38,7 +38,10 @@ const BusinessBenefits = () => {
         linkText="Get Support"
         link="/support"
       />
-      <ContactUs title="Contact us about how Temurin can help your business" />
+      <ContactUs
+        title="Contact us about how Temurin can help your business"
+        buttontitle="Contact Us"
+      />
     </Layout>
   )
 }

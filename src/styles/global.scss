@@ -1,14 +1,17 @@
+@import "https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import "variables";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import "variables.scss";
 
 body {
   font-family: "Hanken Grotesk", sans-serif !important;
   background-color: $purple;
   z-index: -10 !important;
+}
+
+.main-heading {
+  @apply text-center text-4xl mb-10 font-semibold md:text-5xl leading-[116%];
 }
 
 .bg-purple {
@@ -55,17 +58,54 @@ body {
 }
 
 .bg-temurin-hero {
-  @media (min-width: 640px) {
+  @media (width >= 640px) {
     background-image: url("/images/temurin-hero-img.png");
   }
 }
 
 .bg-aqavit-hero {
-  @media (min-width: 640px) {
+  @media (width >= 640px) {
     background-image: url("/images/aqavit-hero-img.png");
   }
 }
 
 .underline {
   text-underline-offset: 1em;
+}
+
+.newscard-2 {
+  border-radius: 24px;
+  background: var(--tones-white-5, rgba(255, 255, 255, 5%));
+  backdrop-filter: blur(12px);
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.newscard-2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  padding: 2px;
+  background: linear-gradient(285deg, #30195edb 40.01%, #574974f7 63.36%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 4px;
+
+  background-color: #200d46;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #ff1464;
+  border-radius: 6px;
+  height: 5px;
 }

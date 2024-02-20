@@ -196,7 +196,7 @@ const NavBar = () => {
         <div className="hidden sm:block space-x-3 h-12">
           <LanguageSelector />
           <div className="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex">
-            <a href="#">
+            <a aria-label="checksum" href="#">
               <FaRegBell size={20} />
             </a>
           </div>

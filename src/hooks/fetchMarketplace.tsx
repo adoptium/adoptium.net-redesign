@@ -21,6 +21,13 @@ export async function getAllPkgsForVersion(
     }
   }
 
+  // loop through vendors and add to params
+  if (vendors.length > 0) {
+    vendors.forEach(vendor => {
+      params += "&vendor=" + vendor
+    })
+  }
+
   if (architecture !== "any") {
     params += "&architecture=" + architecture
   }

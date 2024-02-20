@@ -1,0 +1,560 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Support Us page > renders correctly 1`] = `
+<main>
+  <header
+    class="absolute max-w-[1288px] w-full mx-auto px-3 inset-x-0 top-0 z-50"
+  >
+    <nav
+      aria-label="Global"
+      class="flex items-center gap-5 justify-between py-6"
+    >
+      <a
+        href="/"
+        placeholder="homepage"
+      >
+        <img
+          alt="Adoptium Logo"
+          class="h-10"
+        />
+      </a>
+      <div
+        class="flex lg:hidden"
+      >
+        <button
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white-700"
+          type="button"
+        >
+          <span
+            class="sr-only"
+          >
+            Open main menu
+          </span>
+          <svg
+            fill="none"
+            height="48"
+            viewBox="0 0 48 48"
+            width="48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              height="46"
+              rx="23"
+              stroke="#3E3355"
+              stroke-width="2"
+              width="46"
+              x="1"
+              y="1"
+            />
+            <path
+              d="M15 24H33"
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+            <path
+              d="M15 18H33"
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+            <path
+              d="M15 30H33"
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="hidden lg:flex lg:gap-6 xl:gap-x-12"
+      >
+        <div
+          class="relative inline-block text-left"
+          data-headlessui-state=""
+        >
+          <div>
+            <button
+              aria-expanded="false"
+              aria-haspopup="menu"
+              class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
+              data-headlessui-state=""
+              id="headlessui-menu-button-:r0:"
+              type="button"
+            >
+              About Us
+              <svg
+                aria-hidden="true"
+                class="-mr-1 mt-1"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <a
+          class="text-sm font-semibold leading-6 text-white-900"
+          href="/temurin/releases"
+        >
+          Latest Releases
+        </a>
+        <a
+          class="text-sm font-semibold leading-6 text-white-900"
+          href="/marketplace"
+        >
+          Marketplace
+        </a>
+        <div
+          class="relative inline-block text-left"
+          data-headlessui-state=""
+        >
+          <div>
+            <button
+              aria-expanded="false"
+              aria-haspopup="menu"
+              class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
+              data-headlessui-state=""
+              id="headlessui-menu-button-:r1:"
+              type="button"
+            >
+              Projects
+              <svg
+                aria-hidden="true"
+                class="-mr-1 mt-1"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="relative inline-block text-left"
+          data-headlessui-state=""
+        >
+          <div>
+            <button
+              aria-expanded="false"
+              aria-haspopup="menu"
+              class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
+              data-headlessui-state=""
+              id="headlessui-menu-button-:r2:"
+              type="button"
+            >
+              Resources
+              <svg
+                aria-hidden="true"
+                class="-mr-1 mt-1"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="relative inline-block text-left"
+          data-headlessui-state=""
+        >
+          <div>
+            <button
+              aria-expanded="false"
+              aria-haspopup="menu"
+              class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
+              data-headlessui-state=""
+              id="headlessui-menu-button-:r3:"
+              type="button"
+            >
+              Community
+              <svg
+                aria-hidden="true"
+                class="-mr-1 mt-1"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="hidden sm:block space-x-3 h-12"
+      >
+        <div
+          class="relative inline-block text-left"
+          data-headlessui-state=""
+        >
+          <div>
+            <button
+              aria-expanded="false"
+              aria-haspopup="menu"
+              class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-sm border-2 border-gray-700"
+              data-headlessui-state=""
+              id="headlessui-menu-button-:r4:"
+              type="button"
+            >
+              Flag
+              <span>
+                English
+              </span>
+              <svg
+                aria-hidden="true"
+                class="-mr-1 h-5 w-5 text-white"
+                fill="currentColor"
+                height="15"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex"
+        >
+          <a
+            aria-label="checksum"
+            href="#"
+          >
+            <svg
+              fill="currentColor"
+              height="20"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M439.39 362.29c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71zM67.53 368c21.22-27.97 44.42-74.33 44.53-159.42 0-.2-.06-.38-.06-.58 0-61.86 50.14-112 112-112s112 50.14 112 112c0 .2-.06.38-.06.58.11 85.1 23.31 131.46 44.53 159.42H67.53zM224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div
+      style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+    />
+  </header>
+  <div
+    class="pt-32 pb-12 overflow-hidden"
+  >
+    <div
+      class="w-full relative"
+    >
+      <div
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[171px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[120px] md:top-[395px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[618px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+    >
+      <div
+        class="self-stretch h-52 flex-col justify-center items-center gap-6 flex"
+      >
+        <div
+          class="self-stretch h-32 flex-col justify-center items-center gap-4 flex"
+        >
+          <div
+            class="justify-start items-center gap-3 inline-flex"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              Support Us
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold"
+          >
+            What we’re trying to achieve
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7"
+        >
+          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    class="py-16 md:py-32 mx-auto bg-[#14003C] max-w-[1264px] w-full lg:px-2   xl:px-0 px-8"
+  >
+    <div
+      class="text-center"
+    >
+      <h3
+        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white  font-semibold"
+      >
+        Ways to support us
+      </h3>
+      <p
+        class="text-[#C4BFCE] mt-6 font-normal text-base"
+      >
+        If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group
+      </p>
+    </div>
+    <div
+      class="mt-16  gap-4 md:gap-8  flex flex-wrap justify-center items-center "
+    >
+      <div
+        class=""
+      >
+        <div
+          class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
+        >
+          <div
+            class="grow"
+          >
+            <h3
+              class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
+            >
+              How to contribute
+            </h3>
+            <p
+              class="mt-6 text-xl text-[#C4BFCE] font-normal"
+            >
+              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
+            </p>
+          </div>
+          <button
+            class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+      <div
+        class=""
+      >
+        <div
+          class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
+        >
+          <div
+            class="grow"
+          >
+            <h3
+              class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
+            >
+              Become a sponsor
+            </h3>
+            <p
+              class="mt-6 text-xl text-[#C4BFCE] font-normal"
+            >
+              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
+            </p>
+          </div>
+          <button
+            class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+          >
+            Become a sponsor
+          </button>
+        </div>
+      </div>
+      <div
+        class=""
+      >
+        <div
+          class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
+        >
+          <div
+            class="grow"
+          >
+            <h3
+              class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
+            >
+              Become a member
+            </h3>
+            <p
+              class="mt-6 text-xl text-[#C4BFCE] font-normal"
+            >
+              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
+            </p>
+          </div>
+          <button
+            class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="bg-[#0E002A] pt-16"
+  >
+    <div
+      class="pt-16   pb-8 md:pb-16 max-w-[1048px] flex-col lg:flex-row mx-auto w-full px-8 lg:px-2 xl:px-0 flex justify-center gap-16 items-center"
+    >
+      <div
+        class=" w-full lg:w-[55%] text-center lg:text-left"
+      >
+        <div>
+          <h3
+            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white  font-semibold"
+          >
+            Help promote Temurin
+          </h3>
+          <p
+            class="text-[#C4BFCE] mt-6 font-normal text-base"
+          >
+            Svennekoloni paheten fronta didoling. Grönt körfält mitt, och astrongar fastän animoji. Doxa exosm morotsmobb diska. Såsuss bröllopsklänning i preppare. Fulparkerare nirad mms biorat.
+
+          </p>
+        </div>
+        <div>
+          <p
+            class="text-[#C4BFCE] mt-6 font-normal text-base"
+          >
+            Eurosinde processturism vasiminade. Äga frågan bekymringssamtal, alltså prens. Drevkultur tredönde bilmålvakt i ypren. Exoska semiras digt, eller makror. Cosplay faras attefallshus ber.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div
+          class=""
+        >
+          <div
+            class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
+          >
+            <div
+              class="grow"
+            >
+              <h3
+                class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
+              >
+                Media & Promotion
+              </h3>
+              <p
+                class="mt-6 text-xl text-[#C4BFCE] font-normal"
+              >
+                Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
+              </p>
+            </div>
+            <button
+              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="relative  xl:px-0 px-6 md:py-32 py-16 undefined"
+  >
+    <img
+      alt="gradient overlay"
+      class="hidden md:block absolute bg-center top-0 left-0  right-0 w-full h-full z-[-10]"
+      src="/images/gradient-overlay.png"
+    />
+    <img
+      alt="gradient overlay mobile"
+      class="block md:hidden absolute bg-center top-0 left-0  right-0 w-full h-full z-[-10]"
+      src="/images/gradient-overlay-mobile.png"
+    />
+    <div
+      class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center md:bg-transparent bg-tones-white rounded-3xl md:backdrop-blur-0 backdrop-blur-12 "
+    >
+      <img
+        aria-label="message icon"
+        class="!mb-0"
+        src="/images/icons/message.svg"
+      />
+      <p
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8"
+      >
+        Connect with the community
+      </p>
+      <span
+        class=" text-lightgrey tab-button-text"
+      >
+        Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+      </span>
+      <button
+        class="bg-transparent mt-10 gradient-btn border-2 border-pink-500/0 text-white text-base leading-[125%] font-normal w-[146px] h-[48px] rounded-[80px]"
+      >
+        Learn More
+      </button>
+    </div>
+  </section>
+</main>
+`;

@@ -1,4 +1,5 @@
 import * as React from "react"
+import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 import NavBar from "../../components/NavBar"
@@ -33,3 +34,17 @@ const ReleasesPage = () => {
 export default ReleasesPage
 
 export const Head = () => <Seo title="Latest Releases" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`

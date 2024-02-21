@@ -4,7 +4,7 @@ const OurMamberButton = ({ active, setActive }) => {
   return (
     <div className="w-full  ">
       <div className="overflow-auto min-w-full w-full relative">
-        <span className="h-[1px] w-full bg-[#3E3355] inline-block absolute bottom-[1px] z-[-1]"></span>
+        <span className="h-[1px] w-full bg-[#3E3355] inline-block absolute bottom-[0.7px] z-[-1]"></span>
         <div className="flex space-x-10 whitespace-nowrap md:justify-center  py-3">
           <button onClick={() => setActive(1)}>
             <span

@@ -5,9 +5,7 @@ import UsingTemurin from "../index"
 
 describe("UsingTemurin component", () => {
   it("should render correctly", () => {
-    const { container } = render(
-      <UsingTemurin />,
-    )
+    const { container } = render(<UsingTemurin />)
 
     expect(container).toMatchSnapshot()
   })

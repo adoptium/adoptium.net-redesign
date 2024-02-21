@@ -19,7 +19,9 @@ export default function CommonSelector({
   defaultValue,
   selectorUpdater,
 }: ListBoxSelectProps) {
-  const [selected, setSelected] = useState<ListItem>(defaultValue ? defaultValue : list[0])
+  const [selected, setSelected] = useState<ListItem>(
+    defaultValue ? defaultValue : list[0],
+  )
 
   const handleChange = (newValue: ListItem) => {
     setSelected(newValue)

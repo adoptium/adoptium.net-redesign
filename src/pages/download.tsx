@@ -169,7 +169,7 @@ const DownloadPage = ({ location }) => {
             </Link>
           </div>
         </div>
-        <ChecksumModal />
+        {/* <ChecksumModal /> */}
       </section>
     </Layout>
   )

@@ -6,6 +6,11 @@ description: Adoptium are publishing early access "tagged" builds instead of nig
 tags:
   - temurin
 ---
+
+NOTE: Much of the information in this blog has been superceded by
+https://adoptium.net/blog/2024/02/early-access-builds-feb2024 - please refer
+to that one instead
+
 In addition to the generally available release builds of all currently supported
 versions of openjdk (Currently 8, 11, 17 and 20) Temurin also publishes "nightly"
 development builds of all of those streams as well as the upcoming releases (JDK21/22

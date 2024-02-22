@@ -58,4 +58,6 @@ if temurin_project is not None:
         # Sort the list of adopters alphabetically
         current_adopters.sort(key=lambda x: x["name"].lower())
         # format JSON to be human readable
-        json.dump(current_adopters, f, indent=4)
+        json.dump(current_adopters, f, indent=2)
+        # Add a newline at the end of the file
+        f.write("\n")

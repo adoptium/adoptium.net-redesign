@@ -27,7 +27,7 @@ const navigation: NavItem[] = [
       { name: "Business Benefits", href: "/business-benefits" },
       { name: "Our Supporters", href: "/supporters" },
       { name: "Our Adopters", href: "#" },
-      { name: "Support Us", href: "#" },
+      { name: "Support Us", href: "/supportUs" },
     ],
   },
   { name: "Latest Releases", href: "/temurin/releases" },
@@ -84,7 +84,7 @@ const NavBar = () => {
         className="flex items-center gap-5 justify-between py-6"
         aria-label="Global"
       >
-        <Link to="/">
+        <Link to="/" placeholder={undefined}>
           <Logo alt="Adoptium Logo" className="h-10" />
         </Link>
         <div className="flex lg:hidden">

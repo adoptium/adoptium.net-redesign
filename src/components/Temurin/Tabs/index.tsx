@@ -10,15 +10,9 @@ import ReleaseSelector from "../ReleaseSelector"
 
 import { setURLParam } from "../../../util/setURLParam"
 
-import {
-  oses,
-  arches,
-  packageTypes,
-  defaultArchitecture,
-  defaultPackageType,
-} from "../../../util/defaults"
+import { oses, arches, packageTypes } from "../../../util/defaults"
 
-const Tabs = ({ updaterAction, Table }) => {
+const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
   const data = useStaticQuery(graphql`
     query TabVersionsQuery {
       allVersions(sort: { version: DESC }) {
@@ -152,7 +146,7 @@ const Tabs = ({ updaterAction, Table }) => {
         </div>
       </section>
       <Heading />
-      <Table results={releases} />
+      <Table results={releases} openModalWithChecksum={openModalWithChecksum} />
     </>
   )
 }

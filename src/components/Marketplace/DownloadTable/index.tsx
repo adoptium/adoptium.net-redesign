@@ -188,19 +188,17 @@ const DownloadTable = () => {
           <Trans>Build Version</Trans>
         </p>
         <p className="text-grey text-[16px] leading-[24px] mb-0">
-        <Trans>Distribution</Trans>
+          <Trans>Distribution</Trans>
         </p>
         <p className="text-grey text-[16px] leading-[24px] mb-0">
-        <Trans>Vendor</Trans>
+          <Trans>Vendor</Trans>
         </p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0">
-          Build Date
-        </p>
+        <p className="text-grey text-[16px] leading-[24px] mb-0">Build Date</p>
         <p className="text-grey text-[16px] leading-[24px] mb-0">
           <Trans>Operating System</Trans>
         </p>
         <p className="text-grey text-[16px] leading-[24px] mb-0">
-        <Trans>Architecture</Trans>
+          <Trans>Architecture</Trans>
         </p>
       </div>
       {releases && <AllReleaseCard results={releases} />}

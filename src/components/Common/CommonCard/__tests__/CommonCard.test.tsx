@@ -6,13 +6,13 @@ import CommonCard from "../index"
 describe("CommonButton component", () => {
   it("should render correctly", () => {
     const { container } = render(
-        <CommonCard
-            data={{
-                title: "test",
-                description: "test",
-                button: "test",
-            }}
-        />
+      <CommonCard
+        data={{
+          title: "test",
+          description: "test",
+          button: "test",
+        }}
+      />,
     )
 
     expect(container).toMatchSnapshot()

@@ -51,23 +51,25 @@ const SelectorHeader: React.FC<SelectorHeaderProps> = ({
               defaultVal = {
                 value: defaultValues[index],
                 // iterate the list to find the default value name
-                name: list.find((item) => item.value === defaultValues[index])?.name || "",
+                name:
+                  list.find(item => item.value === defaultValues[index])
+                    ?.name || "",
               }
             }
-              
+
             return (
-            <div key={index} className="flex flex-col gap-4 w-full">
-              <h3 className="text-[16px] font-normal leading-[24px] text-grey">
-                {title[index]}
-              </h3>
-              <CommonSelector
-                list={list}
-                defaultValue={defaultVal ? defaultVal : undefined}
-                selectorUpdater={selectorUpdater[index]}
-              />
-            </div>
-          )
-    })}
+              <div key={index} className="flex flex-col gap-4 w-full">
+                <h3 className="text-[16px] font-normal leading-[24px] text-grey">
+                  {title[index]}
+                </h3>
+                <CommonSelector
+                  list={list}
+                  defaultValue={defaultVal ? defaultVal : undefined}
+                  selectorUpdater={selectorUpdater[index]}
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>

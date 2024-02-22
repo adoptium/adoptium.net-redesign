@@ -45,7 +45,7 @@ const TemurinReleases = () => (
         releaseType="ga"
         Table={TemurinArchiveTable}
       />
-      <ChecksumModal />
+      {/* <ChecksumModal /> */}
     </section>
   </Layout>
 )

@@ -26,7 +26,7 @@ const AllReleaseCard = ({ results }) => {
               </h3>
             </div>
             <div className="lg:flex items-center gap-20">
-            <p className="text-base font-bold leading-[150%] mb-0  hidden lg:block">
+              <p className="text-base font-bold leading-[150%] mb-0  hidden lg:block">
                 {capitalize(release.binary.distribution)}
               </p>
               <span className="fill-primary hidden md:block">

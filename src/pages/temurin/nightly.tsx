@@ -54,7 +54,7 @@ const TemurinReleases = () => (
         releaseType="ea"
         Table={TemurinNightlyTable}
       />
-      <ChecksumModal />
+      {/* <ChecksumModal /> */}
     </section>
   </Layout>
 )

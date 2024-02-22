@@ -5,9 +5,7 @@ import AQAvit from "../index"
 
 describe("AQAvit component", () => {
   it("should render correctly", () => {
-    const { container } = render(
-      <AQAvit />,
-    )
+    const { container } = render(<AQAvit />)
 
     expect(container).toMatchSnapshot()
   })

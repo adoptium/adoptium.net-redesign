@@ -14,7 +14,9 @@ interface Binary {
   installer_link?: string
   installer_extension?: string
   installer_size?: number
+  installer_checksum?: string
   type: string
+  checksum: string
 }
 
 interface Architecture {
@@ -46,6 +48,7 @@ interface SelectedPackageType {
 
 interface CommonCtaWrapperProps {
   results: Result[]
+  openModalWithChecksum: (checksum: string) => void
 }
 
 const osIcons = {
@@ -57,7 +60,10 @@ const osIcons = {
   solaris: SolarisIcon,
 }
 
-const CommonCtaWrapper: React.FC<CommonCtaWrapperProps> = ({ results }) => {
+const CommonCtaWrapper: React.FC<CommonCtaWrapperProps> = ({
+  results,
+  openModalWithChecksum,
+}) => {
   if (!results || !Array.isArray(results)) {
     return <div>Loading...</div>
   }
@@ -143,9 +149,15 @@ const CommonCtaWrapper: React.FC<CommonCtaWrapperProps> = ({ results }) => {
                 .map((binary, index) => (
                   <React.Fragment key={index}>
                     <CommonDownloader
+                      openModalWithChecksum={openModalWithChecksum}
                       obj={{
                         label: `${binary.extension.toUpperCase()}, ${binary.size}Mb`,
                         link: binary.link,
+                        os: os,
+                        arch: activeArch,
+                        pkg_type: binary.type,
+                        java_version: archData.release_name,
+                        checksum: binary.checksum,
                       }}
                     />
                     {binary.installer_link &&
@@ -153,9 +165,15 @@ const CommonCtaWrapper: React.FC<CommonCtaWrapperProps> = ({ results }) => {
                         (selectedPackageType[os]?.toUpperCase() ||
                           defaultPackageType.toUpperCase()) && (
                         <CommonDownloader
+                          openModalWithChecksum={openModalWithChecksum}
                           obj={{
                             label: `${binary.installer_extension && binary.installer_extension.toUpperCase()}, ${binary.installer_size}Mb`,
                             link: binary.installer_link,
+                            os: os,
+                            arch: activeArch,
+                            pkg_type: binary.type,
+                            java_version: archData.release_name,
+                            checksum: binary.installer_checksum,
                           }}
                         />
                       )}

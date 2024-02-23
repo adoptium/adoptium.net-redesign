@@ -43,9 +43,9 @@ const Index = ({ data }) => {
       <DownloadCounter />
       <TemurinFeatures />
       <WGProjects />
-      <Testimonials />
+      <Testimonials className={undefined} />
       <LatestNews />
-      <FAQ />
+      <FAQ className={undefined} />
       <Contributors />
     </Layout>
   )

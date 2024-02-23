@@ -27,7 +27,7 @@ const navigation: NavItem[] = [
       { name: "Business Benefits", href: "/business-benefits" },
       { name: "Our Supporters", href: "/supporters" },
       { name: "Our Adopters", href: "#" },
-      { name: "Support Us", href: "#" },
+      { name: "Support Us", href: "/supportUs" },
     ],
   },
   { name: "Latest Releases", href: "/temurin/releases" },
@@ -84,10 +84,10 @@ const NavBar = () => {
         className="flex items-center gap-5 justify-between py-6"
         aria-label="Global"
       >
-        <Link to="/">
+        <Link to="/" placeholder={undefined}>
           <Logo alt="Adoptium Logo" className="h-10" />
         </Link>
-        <div className="flex lg:hidden">
+        <div className="flex xl:hidden">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white-700"
@@ -134,7 +134,7 @@ const NavBar = () => {
             </svg>
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-6 xl:gap-x-12">
+        <div className="hidden  xl:flex lg:gap-6 xl:gap-x-12">
           {navigation.map(item =>
             item.children ? (
               <Menu
@@ -204,7 +204,7 @@ const NavBar = () => {
       </nav>
       <Dialog
         as="div"
-        className="lg:hidden"
+        className="xl:hidden"
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >

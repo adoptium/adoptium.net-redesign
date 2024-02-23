@@ -7,7 +7,9 @@ const FAQ = ({ className }) => {
   }
 
   return (
-    <div className={`faq-container ${className} `}>
+    <div
+      className={`mx-auto max-w-[1264px] py-8 lg:py-12 px-6 xl:px-0 flex flex-col gap-[64px] lg:gap-3 items-center lg:items-start lg:flex-row justify-between ${className} `}
+    >
       <div className=" md:max-w-[420px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between">
         <div>
           <h3 className="text-[30px]  sm:text-[40px] font-semibold leading-9 sm:leading-[48px]">

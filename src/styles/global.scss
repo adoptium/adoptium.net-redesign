@@ -84,6 +84,21 @@ body {
     transform: scale(110%);
   }
 }
+.about-eclips-btn {
+  border-radius: 80px;
+  border: solid 2px transparent;
+  background-image: linear-gradient(#440e6c, #440e6c),
+    linear-gradient(90deg, #ff1464, #ff14620b);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  cursor: pointer;
+  cursor: pointer;
+  transition: ease-in-out;
+  transition-duration: 300ms;
+  &:hover {
+    transform: scale(110%);
+  }
+}
 
 @media screen and (max-width: 767px) {
   .gradient-btn {

@@ -50,7 +50,7 @@ const LogoCarousel = () => {
   }
   return (
     <div className=" max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8  ">
-      <h2 className="text-center text-xl font-normal leading-7 text-grey">
+      <h2 className="text-center text-xl font-normal leading-7 text-lightgrey">
         Temurin has been adopted by over 30 companies
       </h2>
       <Slider {...settings} className="mt-6">

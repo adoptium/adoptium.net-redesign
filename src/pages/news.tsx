@@ -30,6 +30,8 @@ const NewsPage = (): JSX.Element => {
       <PageHeader
         title="News & Events"
         subtitle="Follow the latest updates from the Eclipse Adoptium Project"
+        description={""}
+        className={""}
       />
       <section className="text-center container-flex">
         <div className="row py-lg-5 w-75 m-auto">

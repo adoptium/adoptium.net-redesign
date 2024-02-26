@@ -41,7 +41,7 @@
     y2="414.825"
     gradientUnits="userSpaceOnUse"
     >
-    <stop stopColor="#900A51" />
+    <stop stopColor="#5D0749" />
     <stop offset="1" stopColor="#430444" />
     </linearGradient>
     <linearGradient
@@ -52,8 +52,8 @@
     y2="414.25"
     gradientUnits="userSpaceOnUse"
     >
-    <stop stopColor="#A60D55" />
-    <stop offset="1" stopColor="#910B51" />
+    <stop stopColor="#5D0749" />
+    <stop offset="1" stopColor="#5D0749" />
     </linearGradient>
     <linearGradient
     id="paint3_linear_247_3658"
@@ -63,8 +63,8 @@
     y2="402.982"
     gradientUnits="userSpaceOnUse"
     >
-    <stop stopColor="#A90D55" />
-    <stop offset="1" stopColor="#FE1464" />
+    <stop stopColor="#7B094E" />
+    <stop offset="1" stopColor="#5D0749" />
     </linearGradient>
 </defs>
 </svg>

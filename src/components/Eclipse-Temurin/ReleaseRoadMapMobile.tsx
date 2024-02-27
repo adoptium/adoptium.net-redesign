@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { RedIcon } from "../Common/Icon"
+import { FaTruck } from "react-icons/fa"
 
 const ReleaseRoadMapMobile = () => {
   const [openFaqs, setOpenFaqs] = useState([false, false, false])
@@ -63,30 +64,19 @@ const ReleaseRoadMapMobile = () => {
                 </p>
               </div>
             </div>
-            <span>
+            <span className="rounded-full h-10 w-10 flex justify-center items-center border-[#3E3355] border-2">
               <svg
-                width="48"
-                height="48"
-                viewBox="0 0 48 48"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                className={`${openFaqs[index] === false ? "rotate-180 transform " : "rotate-0"} h-5 w-5 text-white transition-all duration-200 ease-in-out`}
               >
-                <rect
-                  x="1"
-                  y="1"
-                  width="46"
-                  height="46"
-                  rx="23"
-                  stroke="#3E3355"
-                  strokeWidth="2"
-                />
                 <path
-                  d="M18 21L24 27L30 21"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+                  fill-rule="evenodd"
+                  d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z"
+                  clip-rule="evenodd"
+                ></path>
               </svg>
             </span>
           </div>

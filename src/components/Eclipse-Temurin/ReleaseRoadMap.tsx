@@ -5,7 +5,7 @@ import { RedIcon } from "../Common/Icon"
 import ReleaseRoadMapMobile from "./ReleaseRoadMapMobile"
 
 const RoadMapCard = ({ title, itemCount, number }) => (
-  <div className="p-8 flex flex-col max-w-[400px] newscard-2 h-[416px]  bg-[#1A0D35]">
+  <div className="p-7 flex flex-col  max-w-[400px] newscard-2 h-[416px]  bg-[#1A0D35]">
     <div className="flex items-center gap-5">
       <h3 className="text-[32px] font-semibold text-white leading-[125%]">
         {title}
@@ -19,14 +19,19 @@ const RoadMapCard = ({ title, itemCount, number }) => (
         </p>
       </div>
     </div>
-    <div className="mt-[24px] overflow-auto scroll-container flex flex-col gap-3">
-      {[...Array(itemCount)].map((_, index) => (
-        <div key={index} className="flex rounded-2xl p-4 bg-[#26193F]   ">
-          <p className="text-[20px] text-white leading-[140%] mb-0">
-            Lorem ipsum dolor sit amet
-          </p>
-        </div>
-      ))}
+    <div className="mt-[24px] overflow-auto scroll-container  flex flex-col ">
+      <div className="flex flex-col  gap-3 justify-center  items-center  ">
+        {[...Array(itemCount)].map((_, index) => (
+          <div
+            key={index}
+            className={`flex rounded-2xl p-4 bg-[#26193F]   ${itemCount === 6 ? "mr-4" : "mr-0"} `}
+          >
+            <p className="text-[20px] text-white leading-[140%] mb-0">
+              Lorem ipsum dolor sit amet
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 )
@@ -41,7 +46,7 @@ const ReleaseRoadMap = () => {
 
   return (
     <div className="bg-[#0E002A]">
-      <div className="max-w-[1264px] mx-auto px-6 py-20">
+      <div className="max-w-[1264px] mx-auto px-6 py-24">
         <CommonHeading
           className="text-center max-w-[740px] mx-auto"
           title={"Release Roadmap"}

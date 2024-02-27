@@ -20,7 +20,7 @@ const InstallationGuideCard = () => {
     },
   ]
   return (
-    <section className="py-16 md:py-32 mx-auto max-w-[832px] w-full lg:px-2   xl:px-0 px-6">
+    <section className="pb-16 pt-0 md:py-32 mx-auto max-w-[832px] w-full lg:px-2   xl:px-0 px-6">
       <CommonHeading
         className="text-center"
         title={"Lorem ipsum dolor sit amet"}

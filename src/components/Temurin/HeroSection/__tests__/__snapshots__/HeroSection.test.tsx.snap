@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HeroSection component > should render correctly 1`] = `
+<div>
+  <div>
+    <div
+      class=" sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative"
+    >
+      <div
+        class="relative isolate"
+      >
+        <div
+          class="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]"
+        >
+          <img
+            alt="background-image"
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        />
+        <div
+          class="max-w-[1264px] mx-auto flex justify-center items-center"
+        >
+          <div
+            class="mx-auto max-w-[832px] w-full h-[680px] sm:h-[720px] px-8 lg:px-0 flex items-center"
+          >
+            <div>
+              latest-temurin
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

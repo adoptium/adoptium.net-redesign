@@ -13,9 +13,9 @@ const CommonHeading: React.FC<CommonHeadingProps> = ({
 }) => (
   <div className={className}>
     {title && (
-      <h3 className="text-4xl leading-[122%] md:text-5xl md:[116%] text-white  font-semibold">
+      <h2 className="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold">
         {title}
-      </h3>
+      </h2>
     )}
     <p className="text-grey mt-6 font-normal text-base">{description}</p>
   </div>

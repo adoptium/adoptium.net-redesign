@@ -2,73 +2,75 @@
 
 exports[`Temurin Index page > renders correctly 1`] = `
 <main>
-  <div
-    class="bg-purple sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative"
-  >
+  <div>
     <div
-      class="relative isolate"
+      class=" sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative"
     >
       <div
-        class="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]"
-      >
-        <img
-          alt="background-image"
-        />
-      </div>
-      <div
-        aria-hidden="true"
-        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-      />
-      <div
-        class="max-w-[1264px] mx-auto flex justify-center items-center"
+        class="relative isolate"
       >
         <div
-          class="mx-auto max-w-[832px] w-full h-[680px] sm:h-[720px] px-8 lg:px-0 flex items-center"
+          class="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]"
+        >
+          <img
+            alt="background-image"
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        />
+        <div
+          class="max-w-[1264px] mx-auto flex justify-center items-center"
         >
           <div
-            class="text-center w-full"
+            class="mx-auto max-w-[832px] w-full h-[680px] sm:h-[720px] px-8 lg:px-0 flex items-center"
           >
-            <h1
-              class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
-            >
-              The Power of Eclipse Temurin™
-            </h1>
-            <p
-              class="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold"
-            >
-              Text
-            </p>
             <div
-              class="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6"
+              class="text-center w-full"
             >
-              <a
-                class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
-                href="/temurin/releases"
-                placeholder="Other Downloads"
+              <h1
+                class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
               >
-                Other Downloads
-              </a>
-              <a
-                class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
-                href="/download"
-                placeholder="Download Temurin"
-                state="[object Object]"
+                The Power of Eclipse Temurin™
+              </h1>
+              <p
+                class="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold"
               >
-                <svg
-                  fill="currentColor"
-                  height="25"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 448 512"
-                  width="25"
-                  xmlns="http://www.w3.org/2000/svg"
+                Text
+              </p>
+              <div
+                class="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6"
+              >
+                <a
+                  class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
+                  href="/temurin/releases"
+                  placeholder="Other Downloads"
                 >
-                  <path
-                    d="M220.8 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7zm-21.9 1.7c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.6.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.4zM420 403.8c-3.6-4-5.3-11.6-7.2-19.7-1.8-8.1-3.9-16.8-10.5-22.4-1.3-1.1-2.6-2.1-4-2.9-1.3-.8-2.7-1.5-4.1-2 9.2-27.3 5.6-54.5-3.7-79.1-11.4-30.1-31.3-56.4-46.5-74.4-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0 132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7-18.9 22.5-45.5 58.8-58.1 96.7-6 17.9-8.8 36.1-6.2 53.3-6.5 5.8-11.4 14.7-16.6 20.2-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4 0 3.9.6 7.9 1.2 11.8 1.2 8.1 2.5 15.7.8 20.8-5.2 14.4-5.9 24.4-2.2 31.7 3.8 7.3 11.4 10.5 20.1 12.3 17.3 3.6 40.8 2.7 59.3 12.5 19.8 10.4 39.9 14.1 55.9 10.4 11.6-2.6 21.1-9.6 25.9-20.2 12.5-.1 26.3-5.4 48.3-6.6 14.9-1.2 33.6 5.3 55.1 4.1.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23 16.6-1.3 34.1-11 48.3-27.9 13.6-16.4 36-23.2 50.9-32.2 7.4-4.5 13.4-10.1 13.9-18.3.4-8.2-4.4-17.3-15.5-29.7zM223.7 87.3c9.8-22.2 34.2-21.8 44-.4 6.5 14.2 3.6 30.9-4.3 40.4-1.6-.8-5.9-2.6-12.6-4.9 1.1-1.2 3.1-2.7 3.9-4.6 4.8-11.8-.2-27-9.1-27.3-7.3-.5-13.9 10.8-11.8 23-4.1-2-9.4-3.5-13-4.4-1-6.9-.3-14.6 2.9-21.8zM183 75.8c10.1 0 20.8 14.2 19.1 33.5-3.5 1-7.1 2.5-10.2 4.6 1.2-8.9-3.3-20.1-9.6-19.6-8.4.7-9.8 21.2-1.8 28.1 1 .8 1.9-.2-5.9 5.5-15.6-14.6-10.5-52.1 8.4-52.1zm-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5 4.7-4.4 13.5-14.2 27.9-14.2 7.1 0 15.6 2.3 25.9 8.9 6.3 4.1 11.3 4.4 22.6 9.3 8.4 3.5 13.7 9.7 10.5 18.2-2.6 7.1-11 14.4-22.7 18.1-11.1 3.6-19.8 16-38.2 14.9-3.9-.2-7-1-9.6-2.1-8-3.5-12.2-10.4-20-15-8.6-4.8-13.2-10.4-14.7-15.3-1.4-4.9 0-9 4.2-12.3zm3.3 334c-2.7 35.1-43.9 34.4-75.3 18-29.9-15.8-68.6-6.5-76.5-21.9-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9-1.2-7.8-1.8-15 .9-20 3.5-6.7 8.5-9.1 14.8-11.3 10.3-3.7 11.8-3.4 19.6-9.9 5.5-5.7 9.5-12.9 14.3-18 5.1-5.5 10-8.1 17.7-6.9 8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9zm-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6 7.1 0 14.2-2.2 16.7-8.9 2.3-6.2 0-14.9-7.4-24.9-13.5-18.2-38.3-32.5-38.3-32.5-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2 2.3-1.7.8 3.2-8.7 20.8-8.5 16.1-24.4 53.3-2.6 82.4.6-20.7 5.5-41.8 13.8-61.5 12-27.4 37.3-74.9 39.3-112.7 1.1.8 4.6 3.2 6.2 4.1 4.6 2.7 8.1 6.7 12.6 10.3 12.4 10 28.5 9.2 42.4 1.2 6.2-3.5 11.2-7.5 15.9-9 9.9-3.1 17.8-8.6 22.3-15 7.7 30.4 25.7 74.3 37.2 95.7 6.1 11.4 18.3 35.5 23.6 64.6 3.3-.1 7 .4 10.9 1.4 13.8-35.7-11.7-74.2-23.3-84.9-4.7-4.6-4.9-6.6-2.6-6.5 12.6 11.2 29.2 33.7 35.2 59 2.8 11.6 3.3 23.7.4 35.7 16.4 6.8 35.9 17.9 30.7 34.8-2.2-.1-3.2 0-4.2 0 3.2-10.1-3.9-17.6-22.8-26.1-19.6-8.6-36-8.6-38.3 12.5-12.1 4.2-18.3 14.7-21.4 27.3-2.8 11.2-3.6 24.7-4.4 39.9-.5 7.7-3.6 18-6.8 29-32.1 22.9-76.7 32.9-114.3 7.2zm257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3 3.7-14.2 9.2-28.8 9.9-40.6.8-15.2 1.7-28.5 4.2-38.7 2.6-10.3 6.6-17.2 13.7-21.1.3-.2.7-.3 1-.5.8 13.2 7.3 26.6 18.8 29.5 12.6 3.3 30.7-7.5 38.4-16.3 9-.3 15.7-.9 22.6 5.1 9.9 8.5 7.1 30.3 17.1 41.6 10.6 11.6 14 19.5 13.7 24.6zM173.3 148.7c2 1.9 4.7 4.5 8 7.1 6.6 5.2 15.8 10.6 27.3 10.6 11.6 0 22.5-5.9 31.8-10.8 4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9-1.5-1.4-1.9-4.6-4.3-4.9-1.4-.1-1.8 3.7 1.7 6.5z"
-                  />
-                </svg>
-                Download Temurin™
-              </a>
+                  Other Downloads
+                </a>
+                <a
+                  class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+                  href="/download"
+                  placeholder="Download Temurin"
+                  state="[object Object]"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="25"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="25"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M220.8 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7zm-21.9 1.7c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.6.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.4zM420 403.8c-3.6-4-5.3-11.6-7.2-19.7-1.8-8.1-3.9-16.8-10.5-22.4-1.3-1.1-2.6-2.1-4-2.9-1.3-.8-2.7-1.5-4.1-2 9.2-27.3 5.6-54.5-3.7-79.1-11.4-30.1-31.3-56.4-46.5-74.4-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0 132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7-18.9 22.5-45.5 58.8-58.1 96.7-6 17.9-8.8 36.1-6.2 53.3-6.5 5.8-11.4 14.7-16.6 20.2-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4 0 3.9.6 7.9 1.2 11.8 1.2 8.1 2.5 15.7.8 20.8-5.2 14.4-5.9 24.4-2.2 31.7 3.8 7.3 11.4 10.5 20.1 12.3 17.3 3.6 40.8 2.7 59.3 12.5 19.8 10.4 39.9 14.1 55.9 10.4 11.6-2.6 21.1-9.6 25.9-20.2 12.5-.1 26.3-5.4 48.3-6.6 14.9-1.2 33.6 5.3 55.1 4.1.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23 16.6-1.3 34.1-11 48.3-27.9 13.6-16.4 36-23.2 50.9-32.2 7.4-4.5 13.4-10.1 13.9-18.3.4-8.2-4.4-17.3-15.5-29.7zM223.7 87.3c9.8-22.2 34.2-21.8 44-.4 6.5 14.2 3.6 30.9-4.3 40.4-1.6-.8-5.9-2.6-12.6-4.9 1.1-1.2 3.1-2.7 3.9-4.6 4.8-11.8-.2-27-9.1-27.3-7.3-.5-13.9 10.8-11.8 23-4.1-2-9.4-3.5-13-4.4-1-6.9-.3-14.6 2.9-21.8zM183 75.8c10.1 0 20.8 14.2 19.1 33.5-3.5 1-7.1 2.5-10.2 4.6 1.2-8.9-3.3-20.1-9.6-19.6-8.4.7-9.8 21.2-1.8 28.1 1 .8 1.9-.2-5.9 5.5-15.6-14.6-10.5-52.1 8.4-52.1zm-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5 4.7-4.4 13.5-14.2 27.9-14.2 7.1 0 15.6 2.3 25.9 8.9 6.3 4.1 11.3 4.4 22.6 9.3 8.4 3.5 13.7 9.7 10.5 18.2-2.6 7.1-11 14.4-22.7 18.1-11.1 3.6-19.8 16-38.2 14.9-3.9-.2-7-1-9.6-2.1-8-3.5-12.2-10.4-20-15-8.6-4.8-13.2-10.4-14.7-15.3-1.4-4.9 0-9 4.2-12.3zm3.3 334c-2.7 35.1-43.9 34.4-75.3 18-29.9-15.8-68.6-6.5-76.5-21.9-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9-1.2-7.8-1.8-15 .9-20 3.5-6.7 8.5-9.1 14.8-11.3 10.3-3.7 11.8-3.4 19.6-9.9 5.5-5.7 9.5-12.9 14.3-18 5.1-5.5 10-8.1 17.7-6.9 8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9zm-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6 7.1 0 14.2-2.2 16.7-8.9 2.3-6.2 0-14.9-7.4-24.9-13.5-18.2-38.3-32.5-38.3-32.5-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2 2.3-1.7.8 3.2-8.7 20.8-8.5 16.1-24.4 53.3-2.6 82.4.6-20.7 5.5-41.8 13.8-61.5 12-27.4 37.3-74.9 39.3-112.7 1.1.8 4.6 3.2 6.2 4.1 4.6 2.7 8.1 6.7 12.6 10.3 12.4 10 28.5 9.2 42.4 1.2 6.2-3.5 11.2-7.5 15.9-9 9.9-3.1 17.8-8.6 22.3-15 7.7 30.4 25.7 74.3 37.2 95.7 6.1 11.4 18.3 35.5 23.6 64.6 3.3-.1 7 .4 10.9 1.4 13.8-35.7-11.7-74.2-23.3-84.9-4.7-4.6-4.9-6.6-2.6-6.5 12.6 11.2 29.2 33.7 35.2 59 2.8 11.6 3.3 23.7.4 35.7 16.4 6.8 35.9 17.9 30.7 34.8-2.2-.1-3.2 0-4.2 0 3.2-10.1-3.9-17.6-22.8-26.1-19.6-8.6-36-8.6-38.3 12.5-12.1 4.2-18.3 14.7-21.4 27.3-2.8 11.2-3.6 24.7-4.4 39.9-.5 7.7-3.6 18-6.8 29-32.1 22.9-76.7 32.9-114.3 7.2zm257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3 3.7-14.2 9.2-28.8 9.9-40.6.8-15.2 1.7-28.5 4.2-38.7 2.6-10.3 6.6-17.2 13.7-21.1.3-.2.7-.3 1-.5.8 13.2 7.3 26.6 18.8 29.5 12.6 3.3 30.7-7.5 38.4-16.3 9-.3 15.7-.9 22.6 5.1 9.9 8.5 7.1 30.3 17.1 41.6 10.6 11.6 14 19.5 13.7 24.6zM173.3 148.7c2 1.9 4.7 4.5 8 7.1 6.6 5.2 15.8 10.6 27.3 10.6 11.6 0 22.5-5.9 31.8-10.8 4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9-1.5-1.4-1.9-4.6-4.3-4.9-1.4-.1-1.8 3.7 1.7 6.5z"
+                    />
+                  </svg>
+                  Download Temurin™
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -909,9 +911,6 @@ exports[`Temurin Index page > renders correctly 1`] = `
     </div>
   </div>
   <div
-    class="w-full h-[1px] my-8 lg:my-16 bg-[#3E3355]"
-  />
-  <div
     class="bg-purple py-16"
   >
     <div
@@ -1132,5 +1131,895 @@ exports[`Temurin Index page > renders correctly 1`] = `
       </div>
     </div>
   </div>
+  <section
+    class="pb-16 pt-0 md:py-32 mx-auto max-w-[832px] w-full lg:px-2   xl:px-0 px-6"
+  >
+    <div
+      class="text-center"
+    >
+      <h2
+        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+      >
+        Lorem ipsum dolor sit amet
+      </h2>
+      <p
+        class="text-grey mt-6 font-normal text-base"
+      >
+        If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group.
+      </p>
+    </div>
+    <div
+      class="mt-16  gap-4 md:gap-8  flex flex-wrap justify-center items-center"
+    >
+      <div
+        class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
+      >
+        <div
+          class="grow"
+        >
+          <h3
+            class="text-white text-[30px] font-semibold  leading-[120%] md:text-[40px]"
+          >
+            Installation Guide
+          </h3>
+          <p
+            class="mt-6 text-xl text-lightgrey font-normal"
+          >
+            Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime.
+          </p>
+        </div>
+        <button
+          class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-2xl gradient-border"
+        >
+          Installation Guide
+        </button>
+      </div>
+      <div
+        class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
+      >
+        <div
+          class="grow"
+        >
+          <h3
+            class="text-white text-[30px] font-semibold  leading-[120%] md:text-[40px]"
+          >
+            Documentation
+          </h3>
+          <p
+            class="mt-6 text-xl text-lightgrey font-normal"
+          >
+            Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime.
+          </p>
+        </div>
+        <button
+          class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-2xl gradient-border"
+        >
+          Documentation
+        </button>
+      </div>
+    </div>
+  </section>
+  <section
+    class="py-16 max-w-[1048px] w-full mx-auto flex justify-center lg:justify-between xl:px-0 px-6"
+  >
+    <div
+      class="max-w-[400px] w-full hidden lg:block"
+    >
+      <img
+        alt="scroll-divider"
+        class="mb-0"
+        src="/images/icons/experience.png"
+      />
+    </div>
+    <div
+      class="lg:max-w-[560px] w-full  "
+    >
+      <h2
+        class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
+      >
+        Want to discuss how Temurin can impact your company?
+      </h2>
+      <p
+        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
+      >
+        Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
+      </p>
+      <a
+        href="/contact-us"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
+        >
+          Contact Us
+        </button>
+         
+      </a>
+      <a
+        href="/contact-us"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"
+        >
+          Contact Us
+        </button>
+      </a>
+    </div>
+  </section>
+  <section
+    class="px-6 xl:px-0 flex flex-col items-center justify-center py-8 lg:py-16"
+  >
+    <h2
+      class="text-white md:text-[56px] text-5xl font-normal leading-[44px] md:leading-[56px] text-center"
+    >
+      Latest Releases
+    </h2>
+    <p
+      class="text-center mt-6 text-grey text-base font-normal leading-6"
+    >
+      Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime 
+      <br />
+       binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+    </p>
+    <div
+      class="flex xl:flex-nowrap flex-wrap justify-center max-w-[1264px] w-full mx-auto gap-x-8 gap-y-4 py-16"
+    >
+      <div
+        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+      >
+        <h2
+          class="text-primary text-base leading-6 font-normal flex items-center gap-x-3"
+        >
+          <span
+            class=""
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+          </span>
+          Latest Release
+        </h2>
+        <p
+          class="text-white text-2xl font-normal leading-8 mt-2"
+        >
+          jdk-21+35 - Temurin
+        </p>
+        <span
+          class="text-base text-grey font-normal leading-6 block mt-4"
+        >
+          12 October 2023 •  macOS • aarch64
+        </span>
+        <a
+          class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
+          href="/"
+        >
+          <span>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 384 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+              />
+            </svg>
+          </span>
+          Download
+        </a>
+      </div>
+      <div
+        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+      >
+        <p
+          class="text-white text-2xl font-normal leading-8 mt-2"
+        >
+          jdk-21+35 - Temurin
+        </p>
+        <span
+          class="text-base text-grey font-normal leading-6 block mt-4"
+        >
+          12 October 2023 •  macOS • aarch64
+        </span>
+        <a
+          class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
+          href="/"
+        >
+          <span>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 384 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+              />
+            </svg>
+          </span>
+          Download
+        </a>
+      </div>
+      <div
+        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+      >
+        <p
+          class="text-white text-2xl font-normal leading-8 mt-2"
+        >
+          jdk-21+35 - Temurin
+        </p>
+        <span
+          class="text-base text-grey font-normal leading-6 block mt-4"
+        >
+          12 October 2023 •  macOS • aarch64
+        </span>
+        <a
+          class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
+          href="/"
+        >
+          <span>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 384 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+              />
+            </svg>
+          </span>
+          Download
+        </a>
+      </div>
+      <div
+        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+      >
+        <p
+          class="text-white text-2xl font-normal leading-8 mt-2"
+        >
+          jdk-21+35 - Temurin
+        </p>
+        <span
+          class="text-base text-grey font-normal leading-6 block mt-4"
+        >
+          12 October 2023 •  macOS • aarch64
+        </span>
+        <a
+          class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
+          href="/"
+        >
+          <span>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 384 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+              />
+            </svg>
+          </span>
+          Download
+        </a>
+      </div>
+    </div>
+    <div
+      class="flex flex-wrap justify-center  items-center gap-x-10 sm:gap-y-0 gap-y-6"
+    >
+      <p
+        class="text-xl text-white font-normal leadig-7 !mb-0 text-center"
+      >
+        Eclipse Temurin offers high-performance
+      </p>
+      <a
+        href="/temurin/releases"
+      >
+        <button
+          class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px] "
+        >
+          See all Releases
+        </button>
+      </a>
+    </div>
+  </section>
+  <div
+    class="bg-[#0E002A]"
+  >
+    <div
+      class="max-w-[1264px] mx-auto px-6 py-24"
+    >
+      <div
+        class="text-center max-w-[740px] mx-auto"
+      >
+        <h2
+          class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+        >
+          Release Roadmap
+        </h2>
+        <p
+          class="text-grey mt-6 font-normal text-base"
+        >
+          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+        </p>
+      </div>
+      <div
+        class=" hidden md:flex items-center justify-center gap-7 flex-wrap mt-16"
+      >
+        <div
+          class="p-7 flex flex-col  max-w-[400px] newscard-2 h-[416px]  bg-[#1A0D35]"
+        >
+          <div
+            class="flex items-center gap-5"
+          >
+            <h3
+              class="text-[32px] font-semibold text-white leading-[125%]"
+            >
+              Now
+            </h3>
+            <div
+              class="flex items-center gap-3"
+            >
+              <span>
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+              </span>
+              <p
+                class="text-[16px] font-bold leading-[150%] text-primary mb-0"
+              >
+                6
+              </p>
+            </div>
+          </div>
+          <div
+            class="mt-[24px] overflow-auto scroll-container  flex flex-col "
+          >
+            <div
+              class="flex flex-col  gap-3 justify-center  items-center  "
+            >
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-4 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-4 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-4 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-4 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-4 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-4 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-7 flex flex-col  max-w-[400px] newscard-2 h-[416px]  bg-[#1A0D35]"
+        >
+          <div
+            class="flex items-center gap-5"
+          >
+            <h3
+              class="text-[32px] font-semibold text-white leading-[125%]"
+            >
+              Next
+            </h3>
+            <div
+              class="flex items-center gap-3"
+            >
+              <span>
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+              </span>
+              <p
+                class="text-[16px] font-bold leading-[150%] text-primary mb-0"
+              >
+                2
+              </p>
+            </div>
+          </div>
+          <div
+            class="mt-[24px] overflow-auto scroll-container  flex flex-col "
+          >
+            <div
+              class="flex flex-col  gap-3 justify-center  items-center  "
+            >
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-0 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-0 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-7 flex flex-col  max-w-[400px] newscard-2 h-[416px]  bg-[#1A0D35]"
+        >
+          <div
+            class="flex items-center gap-5"
+          >
+            <h3
+              class="text-[32px] font-semibold text-white leading-[125%]"
+            >
+              Later
+            </h3>
+            <div
+              class="flex items-center gap-3"
+            >
+              <span>
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+              </span>
+              <p
+                class="text-[16px] font-bold leading-[150%] text-primary mb-0"
+              >
+                2
+              </p>
+            </div>
+          </div>
+          <div
+            class="mt-[24px] overflow-auto scroll-container  flex flex-col "
+          >
+            <div
+              class="flex flex-col  gap-3 justify-center  items-center  "
+            >
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-0 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-0 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-0 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+              <div
+                class="flex rounded-2xl p-4 bg-[#26193F]   mr-0 "
+              >
+                <p
+                  class="text-[20px] text-white leading-[140%] mb-0"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="md:hidden flex items-center gap-3 flex-col mt-10"
+      >
+        <div
+          class="p-4 flex flex-col w-full newscard-2 bg-[#1A0D35]"
+        >
+          <div
+            class="flex justify-between items-center cursor-pointer"
+          >
+            <div
+              class="flex items-center gap-5"
+            >
+              <h3
+                class="text-[26px] leading-[130.769%] md:text-[32px] font-semibold text-white md:leading-[125%]"
+              >
+                Now
+              </h3>
+              <div
+                class="flex items-center gap-3"
+              >
+                <span>
+                  <svg
+                    fill="none"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    width="14"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      fill="#FF1464"
+                      height="8"
+                      rx="2"
+                      width="8"
+                      x="3"
+                      y="3"
+                    />
+                    <rect
+                      height="11"
+                      rx="3.5"
+                      stroke="#FF1464"
+                      stroke-opacity="0.25"
+                      stroke-width="3"
+                      width="11"
+                      x="1.5"
+                      y="1.5"
+                    />
+                  </svg>
+                </span>
+                <p
+                  class="text-[16px] font-bold leading-[150%] text-primary mb-0"
+                >
+                  2
+                </p>
+              </div>
+            </div>
+            <span
+              class="rounded-full h-10 w-10 flex justify-center items-center border-[#3E3355] border-2"
+            >
+              <svg
+                aria-hidden="true"
+                class="rotate-180 transform  h-5 w-5 text-white transition-all duration-200 ease-in-out"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          class="p-4 flex flex-col w-full newscard-2 bg-[#1A0D35]"
+        >
+          <div
+            class="flex justify-between items-center cursor-pointer"
+          >
+            <div
+              class="flex items-center gap-5"
+            >
+              <h3
+                class="text-[26px] leading-[130.769%] md:text-[32px] font-semibold text-white md:leading-[125%]"
+              >
+                Next
+              </h3>
+              <div
+                class="flex items-center gap-3"
+              >
+                <span>
+                  <svg
+                    fill="none"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    width="14"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      fill="#FF1464"
+                      height="8"
+                      rx="2"
+                      width="8"
+                      x="3"
+                      y="3"
+                    />
+                    <rect
+                      height="11"
+                      rx="3.5"
+                      stroke="#FF1464"
+                      stroke-opacity="0.25"
+                      stroke-width="3"
+                      width="11"
+                      x="1.5"
+                      y="1.5"
+                    />
+                  </svg>
+                </span>
+                <p
+                  class="text-[16px] font-bold leading-[150%] text-primary mb-0"
+                >
+                  2
+                </p>
+              </div>
+            </div>
+            <span
+              class="rounded-full h-10 w-10 flex justify-center items-center border-[#3E3355] border-2"
+            >
+              <svg
+                aria-hidden="true"
+                class="rotate-180 transform  h-5 w-5 text-white transition-all duration-200 ease-in-out"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          class="p-4 flex flex-col w-full newscard-2 bg-[#1A0D35]"
+        >
+          <div
+            class="flex justify-between items-center cursor-pointer"
+          >
+            <div
+              class="flex items-center gap-5"
+            >
+              <h3
+                class="text-[26px] leading-[130.769%] md:text-[32px] font-semibold text-white md:leading-[125%]"
+              >
+                Later
+              </h3>
+              <div
+                class="flex items-center gap-3"
+              >
+                <span>
+                  <svg
+                    fill="none"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    width="14"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      fill="#FF1464"
+                      height="8"
+                      rx="2"
+                      width="8"
+                      x="3"
+                      y="3"
+                    />
+                    <rect
+                      height="11"
+                      rx="3.5"
+                      stroke="#FF1464"
+                      stroke-opacity="0.25"
+                      stroke-width="3"
+                      width="11"
+                      x="1.5"
+                      y="1.5"
+                    />
+                  </svg>
+                </span>
+                <p
+                  class="text-[16px] font-bold leading-[150%] text-primary mb-0"
+                >
+                  2
+                </p>
+              </div>
+            </div>
+            <span
+              class="rounded-full h-10 w-10 flex justify-center items-center border-[#3E3355] border-2"
+            >
+              <svg
+                aria-hidden="true"
+                class="rotate-180 transform  h-5 w-5 text-white transition-all duration-200 ease-in-out"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    class="relative  xl:px-0 px-6 md:py-32 py-16 undefined"
+  >
+    <img
+      alt="gradient overlay"
+      class="hidden md:block absolute bg-center top-0 left-0  right-0 w-full h-full z-[-10]"
+      src="/images/gradient-overlay.png"
+    />
+    <img
+      alt="gradient overlay mobile"
+      class="block md:hidden absolute bg-center top-0 left-0  right-0 w-full h-full z-[-10]"
+      src="/images/gradient-overlay-mobile.png"
+    />
+    <div
+      class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center md:bg-transparent bg-tones-white rounded-3xl md:backdrop-blur-0 backdrop-blur-12 "
+    >
+      <img
+        aria-label="message icon"
+        class="!mb-0"
+        src="/images/icons/message.svg"
+      />
+      <p
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8"
+      >
+        Connect with the community
+      </p>
+      <span
+        class=" text-lightgrey tab-button-text"
+      >
+        Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+      </span>
+      <button
+        class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[146px] h-[48px] rounded-[80px] gradient-border lg:block hidden"
+      >
+        Learn More
+      </button>
+    </div>
+  </section>
 </main>
 `;

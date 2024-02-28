@@ -59,9 +59,9 @@ const DownloadMethods = () => {
                 {method.icon}
               </span>
               <div>
-                <h4 className="max-w-[270px] text-xl font-normal xl:max-w-[226px]">
+                <h3 className="max-w-[270px] text-xl font-normal xl:max-w-[226px]">
                   {method.title}
-                </h4>
+                </h3>
                 <div className="flex gap-4 mt-2 ">
                   {method.buttons.map((button, buttonIndex) => (
                     <button

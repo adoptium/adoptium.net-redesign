@@ -360,11 +360,11 @@ exports[`Support Us page > renders correctly 1`] = `
     <div
       class="text-center"
     >
-      <h3
-        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white  font-semibold"
+      <h2
+        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
       >
         Ways to support us
-      </h3>
+      </h2>
       <p
         class="text-grey mt-6 font-normal text-base"
       >
@@ -467,11 +467,11 @@ exports[`Support Us page > renders correctly 1`] = `
         class=" w-full lg:w-[55%] text-center lg:text-left"
       >
         <div>
-          <h3
-            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white  font-semibold"
+          <h2
+            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
           >
             Help promote Temurin
-          </h3>
+          </h2>
           <p
             class="text-grey mt-6 font-normal text-base"
           >

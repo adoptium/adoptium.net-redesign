@@ -23,11 +23,11 @@ exports[`AQAvit component > should render correctly 1`] = `
         <div
           class="!mt-0"
         >
-          <h3
-            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white  font-semibold"
+          <h2
+            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
           >
             About Eclipse AQAvit
-          </h3>
+          </h2>
           <p
             class="text-grey mt-6 font-normal text-base"
           >

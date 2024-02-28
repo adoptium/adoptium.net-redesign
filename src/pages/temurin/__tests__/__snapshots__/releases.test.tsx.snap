@@ -632,11 +632,11 @@ exports[`Releases page > renders correctly 1`] = `
     <div
       class="text-center max-w-[680px] mx-auto"
     >
-      <h3
-        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white  font-semibold"
+      <h2
+        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
       >
         Other ways to install Temurin
-      </h3>
+      </h2>
       <p
         class="text-grey mt-6 font-normal text-base"
       >
@@ -707,11 +707,11 @@ exports[`Releases page > renders correctly 1`] = `
             </svg>
           </span>
           <div>
-            <h4
+            <h3
               class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
             >
               Temurinruntime container + Alpaquita
-            </h4>
+            </h3>
             <div
               class="flex gap-4 mt-2 "
             >
@@ -747,11 +747,11 @@ exports[`Releases page > renders correctly 1`] = `
             </svg>
           </span>
           <div>
-            <h4
+            <h3
               class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
             >
               TemurinJDK Containers
-            </h4>
+            </h3>
             <div
               class="flex gap-4 mt-2 "
             >
@@ -1501,11 +1501,11 @@ exports[`Releases page > renders correctly 1`] = `
             </svg>
           </span>
           <div>
-            <h4
+            <h3
               class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
             >
               Linux Repositories
-            </h4>
+            </h3>
             <div
               class="flex gap-4 mt-2 "
             >
@@ -1572,11 +1572,11 @@ exports[`Releases page > renders correctly 1`] = `
             </svg>
           </span>
           <div>
-            <h4
+            <h3
               class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
             >
               Package Managers
-            </h4>
+            </h3>
             <div
               class="flex gap-4 mt-2 "
             >
@@ -1639,11 +1639,11 @@ exports[`Releases page > renders correctly 1`] = `
             </svg>
           </span>
           <div>
-            <h4
+            <h3
               class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
             >
               Clouds
-            </h4>
+            </h3>
             <div
               class="flex gap-4 mt-2 "
             >
@@ -1695,11 +1695,11 @@ exports[`Releases page > renders correctly 1`] = `
             </svg>
           </span>
           <div>
-            <h4
+            <h3
               class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
             >
               REST Discovery API
-            </h4>
+            </h3>
             <div
               class="flex gap-4 mt-2 "
             >

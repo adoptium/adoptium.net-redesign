@@ -4,6 +4,11 @@
   backdrop-filter: blur(12px);
 }
 .newscard-2 {
+  border-radius: 24px;
+  background: var(--tones-white-5, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(12px);
+}
+.newscard-2 {
   position: relative;
   transition: 0.3s ease-in-out;
 }
@@ -22,6 +27,40 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
+}
+.release-card {
+  position: relative;
+  transition: 0.3s ease-in-out;
+  border-radius: 24px;
+}
+
+.release-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 2px;
+  background: linear-gradient(285deg, #30195edb 40.01%, #574974f7 63.36%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.release-card:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 2px;
+  background: linear-gradient(269deg, #ff1464 99.5%, #ff1464 40.01%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .scroll-container::-webkit-scrollbar {

@@ -4,22 +4,22 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
-import PageHeader from "../components/PageHeader"
 import PowerOfTemurin from "../components/Temurin/PowerOfTemurin"
 import LatestReleases from "../components/Temurin/LatestReleases"
 import WGProjects from "../components/WGProjects"
 import ContactUs from "../components/ContactUs"
 import Testimonials from "../components/Testimonials"
 import LatestNews from "../components/LatestNews"
+import PageHeader from "../components/PageHeader"
 
 const WhatWeDo = () => {
   return (
     <Layout>
       <PageHeader
         title="About Eclipse Adoptium®"
-        subtitle="What we do"
+        subtitle="Who we are"
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
-        className={""}
+        className={"max-w-[860px] mx-auto"}
       />
       <PowerOfTemurin />
       <LatestReleases />
@@ -27,7 +27,7 @@ const WhatWeDo = () => {
       <ContactUs
         title="Connect with the community"
         className={undefined}
-        buttontitle={undefined}
+        buttontitle="Learn More"
       />
       <Testimonials className={undefined} />
       <LatestNews />

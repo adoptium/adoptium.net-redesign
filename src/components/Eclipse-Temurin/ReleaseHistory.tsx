@@ -45,7 +45,7 @@ const ReleaseHistory = () => {
         <h2 className="text-white text-[36px] leading-[122.222%]  md:text-5xl font-semibold  md:leading-[116.667%] text-center">
           Release History
         </h2>
-        <p className="text-center mt-6 text-lightgrey tab-button-text max-w-[760px] mx-auto">
+        <p className="text-center mt-6 text-lightgrey tab-button-text max-w-[690px] mx-auto">
           Eclipse Temurin offers high-performance, cross-platform, open-source
           Java runtime binaries that are enterprise-ready and Java SE TCK-tested
           for general use in the Java ecosystem.
@@ -54,7 +54,7 @@ const ReleaseHistory = () => {
           {ReleasesHistoryCard.map((card, index) => (
             <div
               key={index}
-              className="p-8 release-card     backdrop-blur-12 bg-[#200D46]"
+              className="p-8 newscard-2     backdrop-blur-12 bg-[#200D46]"
             >
               <div className="mb-14">
                 <AdobeIcon2 />

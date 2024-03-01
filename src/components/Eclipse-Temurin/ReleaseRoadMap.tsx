@@ -46,7 +46,7 @@ const ReleaseRoadMap = () => {
 
   return (
     <div className="bg-[#0E002A]">
-      <div className="max-w-[1264px] mx-auto px-6 py-24">
+      <div className="max-w-[1264px] mx-auto px-6 py-20 md:py-28">
         <CommonHeading
           className="text-center max-w-[740px] mx-auto"
           title={"Release Roadmap"}

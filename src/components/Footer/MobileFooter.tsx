@@ -68,7 +68,7 @@ const CustomDisclosure = ({ title, links }) => (
 
 // Main App component
 const MobileFooter = ({ footerData }) => (
-  <div className="flex flex-col space-y-4 p-4">
+  <div className="flex flex-col space-y-4 !p-0">
     {footerData.map((data, index) => (
       <CustomDisclosure key={index} {...data} />
     ))}

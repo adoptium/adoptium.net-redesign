@@ -22,7 +22,7 @@ const Index = ({ data }) => {
     <Layout>
       <HeroSection />
       <LogoCarousel className={"pt-8 pb-0 lg:py-16"} />
-      <PowerOfTemurin />
+      <PowerOfTemurin className={undefined} title="The power of Temurin™" />
       <InstallationGuideCard />
       <WantToDiscuss />
       <ReleaseHistory />

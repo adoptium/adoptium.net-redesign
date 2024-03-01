@@ -17,7 +17,7 @@ const HeroSection = () => {
           ></div>
           <div className="max-w-[1264px] mx-auto flex justify-center items-center">
             <div className="mx-auto max-w-[832px] w-full h-[680px] sm:h-[720px] px-8 lg:px-0 flex items-center">
-              <div className="text-center w-full mt-20 md:mt-14">
+              <div className="text-center w-full mt-20 md:mt-12">
                 <h1 className="font-semibold leading-[112.5%]  lg:leading-[115.385%] text-white text-[64px] lg:text-[104px]">
                   Eclipse Temurin™
                 </h1>

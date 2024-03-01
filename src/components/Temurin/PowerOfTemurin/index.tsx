@@ -2,12 +2,12 @@ import React from "react"
 import { Link } from "gatsby-plugin-react-i18next"
 import UiVirtualScroll from "../../UiVirtualScroll"
 
-const PowerOfTemurin = () => {
+const PowerOfTemurin = ({ className, title }) => {
   return (
-    <div className="bg-purple py-16">
+    <div className={`bg-purple py-16 ${className}`}>
       <div className="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-16">
         <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900">
-          The Power of Temurin&trade;
+          {title}
         </h2>
         <h3 className="text-center text-base leading-6 font-normal text-grey mt-6">
           Eclipse Temurin offers high-performance, cross-platform, open-source

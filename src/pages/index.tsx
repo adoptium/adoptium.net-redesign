@@ -37,9 +37,9 @@ const Index = ({ data }) => {
           </div>
         </div>
       </div>
-      <LogoCarousel />
+      <LogoCarousel className={undefined} />
       <div className="w-full h-[1px] my-8 lg:my-16 bg-[#3E3355]"></div>
-      <PowerOfTemurin />
+      <PowerOfTemurin className={undefined} title="The power of Temurin™" />
       <DownloadCounter />
       <TemurinFeatures />
       <WGProjects />

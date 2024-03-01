@@ -59,7 +59,7 @@ const WGProjects = () => {
                   <h2 className="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2">
                     {project.title}
                   </h2>
-                  <Link to={project.link}>
+                  <Link to={project.link} placeholder={undefined}>
                     <button className="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border">
                       Learn More
                     </button>

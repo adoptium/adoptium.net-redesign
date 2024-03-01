@@ -23,7 +23,7 @@ const Supporters = () => {
       <OurSupportTabContent />
       <OurSponsors />
 
-      <PowerOfTemurin />
+      <PowerOfTemurin className={undefined} title="The power of Temurin™" />
       <ContactUs
         title="Speak to our team today"
         className={""}

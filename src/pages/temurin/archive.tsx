@@ -20,8 +20,10 @@ const TemurinReleases = () => (
             <div className="callout callout-default text-start">
               Please be aware that this archive contains old releases of Eclipse
               Temurin kept for reference. The{" "}
-              <Link to="/temurin/releases">latest releases</Link> should be used
-              in development and production.
+              <Link to="/temurin/releases" placeholder={undefined}>
+                latest releases
+              </Link>{" "}
+              should be used in development and production.
               <br />
               <br />
               <p className="text-warning">
@@ -30,10 +32,18 @@ const TemurinReleases = () => (
               </p>
             </div>
             <div className="btn-group">
-              <Link to="/temurin/releases" className="btn btn-primary m-3">
+              <Link
+                to="/temurin/releases"
+                className="btn btn-primary m-3"
+                placeholder={undefined}
+              >
                 <Trans>Latest Releases</Trans> <FaArrowCircleRight />
               </Link>
-              <Link to="/temurin/nightly" className="btn btn-secondary m-3">
+              <Link
+                to="/temurin/nightly"
+                className="btn btn-secondary m-3"
+                placeholder={undefined}
+              >
                 <Trans>Nightly Builds</Trans> <FaArrowCircleRight />
               </Link>
             </div>

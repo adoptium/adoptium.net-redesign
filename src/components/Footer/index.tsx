@@ -169,7 +169,7 @@ const footerData: FooterData[] = [
 const Footer = (props): JSX.Element => {
   return (
     <footer className="bg-blue">
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-8 md:py-16 sm:px-6 lg:space-y-16 lg:px-8">
+      <div className="mx-auto max-w-screen-xl space-y-8 px-6 py-8 md:py-16 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="hidden md:block">
           <div className="grid grid-cols-1 gap-8 border-b border-gray-800 mb-3 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16">
             {footerData.map((section, index) => (
@@ -245,7 +245,7 @@ const Footer = (props): JSX.Element => {
             </ul>
           </div>
         </div>
-        <div className="w-full px-4 md:hidden block">
+        <div className="w-full  md:hidden block">
           <MobileFooter footerData={footerData} />
         </div>
       </div>

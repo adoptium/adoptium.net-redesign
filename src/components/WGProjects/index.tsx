@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby-plugin-react-i18next"
 import { RedIcon } from "../Common/Icon"
+import CommonHeading from "../Common/CommonHeading"
 
 interface Project {
   title: string
@@ -28,43 +29,43 @@ const projects: Project[] = [
 
 const WGProjects = () => {
   return (
-    <div className="bg-blue py-24 sm:py-28">
-      <div className="mx-auto max-w-3xl md:max-w-7xl w-xl md:w-full px-6 xl:px-0">
-        <div className="mx-auto max-w-4xl sm:text-center">
-          <h2 className="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] ">
-            A short title about products
-          </h2>
+    <div className="bg-blue py-16 sm:pt-32 pb-20">
+      <div className=" max-w-[1264px] mx-auto px-6 ">
+        <div className="max-w-[700px] mx-auto">
+          <CommonHeading
+            title="Other projects"
+            description={
+              "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem. "
+            }
+            className={"text-center "}
+          />
         </div>
-        <p className="mx-auto mt-6 max-w-2xl mb-0 text-base leading-6 text-grey text-center">
-          Eclipse Temurin offers high-performance, cross-platform, open-source
-          Java runtime binaries that are enterprise-ready and Java SE TCK-tested
-          for general use in the Java ecosystem.
-        </p>
-        <div className="mt-16 mb-8 flex md:h-[30em] justify-around lg:justify-between flex-wrap lg:flex-nowrap gap-6 xl:gap-8">
+        <div className="mt-16 mb-8 flex justify-center gap-6 flex-wrap ">
           {projects.map((project, index) => (
-            <div key={index} className="max-w-xl w-full h-full">
-              <div className="bg-white flex justify-between h-full flex-col bg-opacity-5 p-8 xl:p-12 rounded-3xl border-2 border-white border-opacity-50">
-                <img
-                  src={`/images/projects/${project.imagePath}`}
-                  alt={`${project.title} logo`}
-                  className="w-[140px]"
-                />
-                <div className=" flex-col justify-center items-start gap-2">
-                  <div className="justify-start items-center gap-3 inline-flex">
-                    <RedIcon />
-                    <p className="text-rose-600 mb-0 text-base leading-6 font-bold">
-                      Overline
-                    </p>
-                  </div>
-                  <h2 className="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2">
-                    {project.title}
-                  </h2>
-                  <Link to={project.link} placeholder={undefined}>
-                    <button className="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border">
-                      Learn More
-                    </button>
-                  </Link>
+            <div
+              key={index}
+              className=" w-full  p-8 flex justify-between  flex-col  max-w-[389px] newscard-2 h-[420px] md:h-[520px]  bg-[#1A0D35] "
+            >
+              <img
+                src={`/images/projects/${project.imagePath}`}
+                alt={`${project.title} logo`}
+                className="w-[140px]"
+              />
+              <div className=" flex-col justify-center items-start gap-2">
+                <div className="justify-start items-center gap-3 inline-flex">
+                  <RedIcon />
+                  <p className="text-rose-600 mb-0 text-base leading-6 font-bold">
+                    Overline
+                  </p>
                 </div>
+                <h2 className="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2">
+                  {project.title}
+                </h2>
+                <Link to={project.link} placeholder={undefined}>
+                  <button className="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-media-btn">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

@@ -132,7 +132,7 @@ const Testimonials = ({ className }) => {
             <FaArrowLeft size={20} strokeWidth={1} />
           </button>
           <button
-            className="arrow-button relative arrow-button-progress p-2 "
+            className="arrow-button  relative arrow-button-progress p-2 "
             onClick={nextTestimonial}
             aria-label="Next Testimonial"
           >

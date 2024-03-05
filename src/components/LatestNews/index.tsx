@@ -48,10 +48,7 @@ const LatestNews = () => {
             {/* First set of news items */}
             <div className="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8">
               {set1.map((card, more) => (
-                <div
-                  key={more}
-                  className="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
-                >
+                <div key={more} className="newscard-2 rounded-3xl  p-8 xl:p-10">
                   <h2 className="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3">
                     <RedIcon />
                     News
@@ -65,6 +62,7 @@ const LatestNews = () => {
                   <Link
                     to={card.node.fields.postPath}
                     className="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                    placeholder={undefined}
                   >
                     Read More
                   </Link>
@@ -76,7 +74,7 @@ const LatestNews = () => {
               {set2.map((card, more) => (
                 <div
                   key={more}
-                  className="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+                  className="newscard-2  !rounded-3xl p-8 xl:p-10"
                 >
                   <h2 className="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3">
                     <RedIcon />
@@ -91,6 +89,7 @@ const LatestNews = () => {
                   <Link
                     to={card.node.fields.postPath}
                     className="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                    placeholder={undefined}
                   >
                     Read More
                   </Link>
@@ -98,7 +97,7 @@ const LatestNews = () => {
               ))}
             </div>
           </div>
-          <div className="w-full flex relative lg:hidden">
+          <div className="w-full  flex relative lg:hidden">
             <LatestNewsSlider newsmap={newsmap} />
           </div>
         </div>

@@ -37,7 +37,7 @@ const navigation: NavItem[] = [
     children: [
       { name: "Eclipse Temurin", href: "/temurin" },
       { name: "Eclipse AQAvit", href: "/aqavit" },
-      { name: "Eclipse Mission Control", href: "/jmc" },
+      { name: "Eclipse Mission Control", href: "/eclispemission" },
     ],
   },
   {

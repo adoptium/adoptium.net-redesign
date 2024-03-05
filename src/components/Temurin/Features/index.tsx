@@ -71,7 +71,7 @@ const Features = () => {
                 open-source Java runtime binaries that are enterprise-ready and
                 Java SE TCK-tested for general use in the Java ecosystem.
               </h3>
-              <Link to="/temurin/releases">
+              <Link to="/temurin/releases" placeholder={undefined}>
                 <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[212px] h-[48px] ">
                   Download Temurin™
                 </button>

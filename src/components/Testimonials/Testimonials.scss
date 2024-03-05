@@ -17,7 +17,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -1;
+
   height: 100%;
   border-radius: 50%;
   border: 3px #3e3355 solid;
@@ -29,6 +29,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 20;
   height: 100%;
   border-radius: 50%;
   border: 3px solid transparent;

@@ -2,25 +2,9 @@ import React from "react"
 import { RedIcon } from "../Common/Icon"
 import herobg from "../../img/Page-Header-bg.png"
 
-interface Props {
-  title: string
-  subtitle: string
-  description: string
-  className: string
-}
-
-const PageHeader = ({
-  title,
-  subtitle,
-  description,
-  className,
-}: Props): null | JSX.Element => {
-  if (!title || !subtitle || !description || !className) {
-    return null
-  }
-
+const Header = () => {
   return (
-    <div className=" relative  pt-40 pb-20 md:pb-32 md:pt-52  overflow-hidden">
+    <div className=" relative  pt-36 pb-16 md:pb-32 md:pt-52  overflow-hidden">
       <img
         className="absolute top-0 left-0  z-[-10] right-0 w-full h-full"
         src={herobg}
@@ -33,18 +17,18 @@ const PageHeader = ({
             <div className="justify-start items-center gap-3 inline-flex">
               <RedIcon />
               <div className="text-rose-600 text-base font-bold leading-normal">
-                {subtitle}
+                Documentation
               </div>
             </div>
-            <div
-              className={`self-stretch text-center text-white   text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold`}
-              dangerouslySetInnerHTML={{ __html: title }}
-            />
+
+            <h1 className="self-stretch text-center text-white   text-[36px] lg:text-[80px] leading-[122.222%] md:leading-[120%] font-semibold">
+              Documentation
+            </h1>
           </div>
-          <div
-            className={`self-stretch   text-center text-lightgrey  text-[20px] font-normal   leading-[140%] ${className}`}
-          >
-            {description}
+          <div className="self-stretch   text-center text-lightgrey  text-[20px] font-normal   leading-[140%] max-w-[860px] mx-auto">
+            Eclipse Temurin offers high-performance, cross-platform, open-source
+            Java runtime binaries that are enterprise-ready and Java SE
+            TCK-tested for general use in the Java ecosystem.
           </div>
         </div>
       </div>
@@ -52,4 +36,4 @@ const PageHeader = ({
   )
 }
 
-export default PageHeader
+export default Header

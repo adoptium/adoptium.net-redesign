@@ -56,11 +56,11 @@ const ReleaseHistory = () => {
               key={index}
               className="p-8 newscard-2     backdrop-blur-12 bg-[#200D46]"
             >
-              <div className="mb-14">
+              <div className="mb-8">
                 <AdobeIcon2 />
               </div>
 
-              <p className="text-white text-2xl font-normal leading-[133.333%] mt-2">
+              <p className="text-white text-2xl font-normal leading-[133.333%] ">
                 {card.content}
               </p>
               <span className=" text-lightgrey tab-button-text block mt-4">

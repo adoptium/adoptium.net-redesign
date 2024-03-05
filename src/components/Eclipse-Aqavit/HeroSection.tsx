@@ -18,10 +18,10 @@ const HeroSection = () => {
           <div className="max-w-[1264px] mx-auto flex justify-center items-center">
             <div className="mx-auto max-w-[832px] w-full h-[680px] sm:h-[720px] px-8 lg:px-0 flex items-center">
               <div className="text-center w-full mt-20 md:mt-12">
-                <h1 className="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]">
+                <h1 className="font-semibold leading-[112.5%] lg:leading-[115.385%] text-white-900 text-[64px] lg:text-[104px]">
                   Eclipse AQAvit
                 </h1>
-                <p className="lg:my-10 mt-6  mb-10 text-2xl leading-8 text-white-600  font-semibold">
+                <p className="lg:my-10 mt-6  mb-10 text-[22px] leading-[127.273%] md:text-2xl md:leading-[133.333%] text-white-600  font-semibold">
                   Download AQAvit for macOS aarch64
                 </p>
                 <div className="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6">

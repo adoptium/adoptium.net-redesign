@@ -45,7 +45,7 @@ const Version = () => {
         <h2 className="text-white text-[36px] leading-[122.222%]  md:text-5xl font-semibold  md:leading-[116.667%] text-center">
           Versions
         </h2>
-        <p className="text-center mt-6 text-lightgrey tab-button-text max-w-[690px] mx-auto">
+        <p className="text-center m-0 pt-8 text-lightgrey tab-button-text max-w-[690px] mx-auto">
           Eclipse Temurin offers high-performance, cross-platform, open-source
           Java runtime binaries that are enterprise-ready and Java SE TCK-tested
           for general use in the Java ecosystem.
@@ -56,11 +56,11 @@ const Version = () => {
               key={index}
               className="p-8 release-card     backdrop-blur-12 bg-[#200D46]"
             >
-              <div className="mb-14">
+              <div className="mb-8">
                 <AdobeIcon2 />
               </div>
 
-              <p className="text-white text-2xl font-normal leading-[133.333%] mt-2">
+              <p className="text-white text-2xl font-normal leading-[133.333%] ">
                 {card.content}
               </p>
               <span className=" text-lightgrey tab-button-text block mt-4">

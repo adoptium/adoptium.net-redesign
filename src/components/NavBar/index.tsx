@@ -46,7 +46,7 @@ const navigation: NavItem[] = [
       { name: "Status", href: "https://status.adoptium.net" },
       { name: "Release Notes", href: "/temurin/release-notes" },
       { name: "Installation Guide", href: "#" },
-      { name: "Documentation", href: "#" },
+      { name: "Documentation", href: "/docs" },
       { name: "Resource Directory", href: "#" },
       { name: "FAQs", href: "#" },
       { name: "Brand & Promotion", href: "#" },

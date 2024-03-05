@@ -40,12 +40,12 @@ const OtherProject = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className=" w-full  p-8 flex justify-between  flex-col  max-w-[400px] newscard-2 h-[420px] md:h-[520px]  bg-[#1A0D35] "
+              className=" w-full  p-8 md:p-16 flex justify-between  flex-col  max-w-[400px] newscard-2 h-[420px] md:h-[520px]  bg-[#1A0D35] "
             >
               <img
                 src={`/images/projects/${project.imagePath}`}
                 alt={`${project.title} logo`}
-                className="w-[140px]"
+                className="w-[120px] mb-0"
               />
               <div className=" flex-col justify-center items-start gap-2">
                 <div className="justify-start items-center gap-3 inline-flex">
@@ -54,11 +54,11 @@ const OtherProject = () => {
                     Overline
                   </p>
                 </div>
-                <h2 className="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2">
+                <h2 className="text-white text-[26px] md:text-[32px] leading-[130.769%] md:leading-[125%] font-semibold mt-2">
                   {project.title}
                 </h2>
                 <Link to={project.link} placeholder={undefined}>
-                  <button className="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-media-btn">
+                  <button className="bg-transparent border-2 mt-8  border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-media-btn">
                     Learn More
                   </button>
                 </Link>

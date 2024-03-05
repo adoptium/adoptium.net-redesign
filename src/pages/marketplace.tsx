@@ -1,12 +1,11 @@
-import * as React from "react"
 import { graphql } from "gatsby"
-import { Trans } from "gatsby-plugin-react-i18next"
+import * as React from "react"
 
 import Layout from "../components/Layout"
-import Seo from "../components/Seo"
-import PageHeader from "../components/PageHeader"
-import MarketPlaceAll from "../components/MarketPlace/MarketPlaceAll"
 import AboutEclipseCard from "../components/MarketPlace/AboutEclipseCard"
+import MarketPlaceAll from "../components/MarketPlace/MarketPlaceAll"
+import PageHeader from "../components/PageHeader"
+import Seo from "../components/Seo"
 
 const DownloadPage = () => (
   <Layout>

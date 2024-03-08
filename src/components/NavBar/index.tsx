@@ -48,7 +48,7 @@ const navigation: NavItem[] = [
       { name: "Installation Guide", href: "#" },
       { name: "Documentation", href: "/docs" },
       { name: "Resource Directory", href: "#" },
-      { name: "FAQs", href: "#" },
+      { name: "FAQs", href: "/faqs" },
       { name: "Brand & Promotion", href: "#" },
     ],
   },

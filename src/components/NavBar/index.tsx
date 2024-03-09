@@ -49,7 +49,7 @@ const navigation: NavItem[] = [
       { name: "Documentation", href: "/docs" },
       { name: "Resource Directory", href: "#" },
       { name: "FAQs", href: "/faqs" },
-      { name: "Brand & Promotion", href: "#" },
+      { name: "Brand & Promotion", href: "/brandpromotion" },
     ],
   },
   {

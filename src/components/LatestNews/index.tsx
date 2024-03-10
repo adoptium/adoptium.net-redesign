@@ -4,7 +4,7 @@ import { Link } from "gatsby-plugin-react-i18next"
 import LatestNewsSlider from "./LatestNewsSlider"
 import { RedIcon } from "../Common/Icon"
 
-const LatestNews = () => {
+const LatestNews = ({ className }) => {
   const data = useStaticQuery(graphql`
     {
       allMdx(limit: 4, sort: { frontmatter: { date: DESC } }) {
@@ -29,7 +29,9 @@ const LatestNews = () => {
 
   return (
     <>
-      <div className="bg-purple py-16 lg:pt-32 pb-16 xl:px-0 lg:px-8 px-0">
+      <div
+        className={`bg-purple py-16 lg:pt-32 pb-16 xl:px-0 lg:px-8 px-0 ${className}`}
+      >
         <div className="mx-auto max-w-[1264px] w-full flex lg:flex-row flex-col items-start lg:items-center justify-center lg:space-x-8 xl:space-x-16 relative overflow-hidden">
           <div className="max-w-[436px] w-full mb-16 lg:mb-0 px-6">
             <h2 className="here text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900">

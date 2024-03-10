@@ -20,7 +20,7 @@ const PageHeader = ({
   }
 
   return (
-    <div className=" relative  pt-40 pb-16 md:pb-32 md:pt-52  overflow-hidden">
+    <div className=" relative  pt-40 pb-16 md:pb-36 md:pt-52  overflow-hidden">
       <img
         className="absolute top-0 left-0  z-[-10] right-0 w-full h-full"
         src={herobg}

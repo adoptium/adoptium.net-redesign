@@ -17,7 +17,7 @@ const EventWapper = () => {
         <EventCard />
         <EventCard />
       </div>
-      <div className="flex items-center flex-wrap justify-center gap-6">
+      <div className="flex items-center flex-wrap justify-center gap-8">
         <h3 className="text-[20px] leading-[140%] font-semibold text-white">
           Eclipse Temurin offers high-performance
         </h3>

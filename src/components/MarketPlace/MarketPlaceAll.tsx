@@ -6,8 +6,8 @@ import AllReleaseCard from "../Early-Access-Build/AllReleaseCard"
 const MarketPlaceAll = () => {
   const [market, setMarket] = useState("microsoft")
   return (
-    <div className="max-w-[1264px] mx-auto px-6 pb-20">
-      <ReleasingSelector className={"!mb-4"} />
+    <div className="max-w-[1264px] mx-auto px-6 pb-24">
+      <ReleasingSelector className={"!mb-4 !mt-[68px]"} />
 
       <MarketPlaceTabButton market={market} setMarket={setMarket} />
       <div className=" hidden md:flex items-center gap-20 border-t border-[#3E3355] pt-7 pl-8 mb-5 mt-12">

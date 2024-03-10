@@ -47,7 +47,7 @@ const navigation: NavItem[] = [
       { name: "Release Notes", href: "/temurin/release-notes" },
       { name: "Installation Guide", href: "#" },
       { name: "Documentation", href: "/docs" },
-      { name: "Resource Directory", href: "#" },
+      { name: "Resource Directory", href: "/resourcedirectory" },
       { name: "FAQs", href: "/faqs" },
       { name: "Brand & Promotion", href: "/brandpromotion" },
     ],

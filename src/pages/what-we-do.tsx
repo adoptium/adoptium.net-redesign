@@ -30,7 +30,7 @@ const WhatWeDo = () => {
         buttontitle="Learn More"
       />
       <Testimonials className={undefined} />
-      <LatestNews />
+      <LatestNews className={undefined} />
     </Layout>
   )
 }

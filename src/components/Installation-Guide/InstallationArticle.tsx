@@ -1,7 +1,7 @@
 import React from "react"
 import VerifyingResult from "../Doc-Article/VerifyingResult"
 
-const InstallisationArticle = () => {
+const InstallationArticle = () => {
   return (
     <div className="max-w-[860px] mx-auto px-6 pt-8 md:pt-32">
       <h3 className="text-lightgrey tab-button-text">
@@ -79,4 +79,4 @@ const InstallisationArticle = () => {
   )
 }
 
-export default InstallisationArticle
+export default InstallationArticle

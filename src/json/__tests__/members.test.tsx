@@ -1,4 +1,5 @@
 import Ajv from "ajv"
+import { describe, it, expect } from "vitest"
 import members from "../members.json"
 import membersSchema from "../members.schema.json"
 

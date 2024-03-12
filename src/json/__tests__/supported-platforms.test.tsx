@@ -1,13 +1,13 @@
 import Ajv from "ajv"
 import { describe, it, expect } from "vitest"
-import marketplace from "../marketplace.json"
-import marketplaceSchema from "../marketplace.schema.json"
+import supportedPlatforms from "../supported-platforms.json"
+import supportedPlatformsSchema from "../supported-platforms.schema.json"
 
 const ajv = new Ajv()
-const validate = ajv.compile(marketplaceSchema)
-const valid = validate(marketplace)
+const validate = ajv.compile(supportedPlatformsSchema)
+const valid = validate(supportedPlatforms)
 
-describe("marketplace.json", () => {
+describe("supported-platforms.json", () => {
   it("should be a valid JSON schema", () => {
     if (!valid) {
       if (validate.errors) {

@@ -4,7 +4,7 @@ import { Link } from "gatsby-plugin-react-i18next"
 import LatestNewsSlider from "./LatestNewsSlider"
 import { RedIcon } from "../Common/Icon"
 
-const LatestNews = ({ className }) => {
+const LatestNews = ({ className, title }) => {
   const data = useStaticQuery(graphql`
     {
       allMdx(limit: 4, sort: { frontmatter: { date: DESC } }) {
@@ -35,7 +35,7 @@ const LatestNews = ({ className }) => {
         <div className="mx-auto max-w-[1264px] w-full flex lg:flex-row flex-col items-start lg:items-center justify-center lg:space-x-8 xl:space-x-16 relative overflow-hidden">
           <div className="max-w-[436px] w-full mb-16 lg:mb-0 px-6">
             <h2 className="here text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900">
-              Latest news and updates
+              {title}
             </h2>
             <h3 className="text-xl font-normal leading-7 text-grey mt-6 mb-8">
               Eclipse Temurin offers high-performance, cross-platform,

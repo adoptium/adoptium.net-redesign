@@ -24,7 +24,10 @@ const ourcommunity = () => {
         <EventWapper />
         <div className="h-[1px] my-8 md:mt-14 md:mb-8 w-full bg-[#3E3355]"></div>
         <div className=" md:pb-20">
-          <LatestNews className={"!py-8 !lg:pt-32 lg:pb-16"} />
+          <LatestNews
+            className={"!py-8 !lg:pt-32 lg:pb-16"}
+            title={"Latest news and updates"}
+          />
         </div>
       </Layout>
     </>

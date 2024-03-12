@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import ButtonContent from "./ButtonContent"
-import TemurinBuilds from "../NightlyBuilds/TemurinBUilds"
+import TemurinBuilds from "../NightlyBuilds/TemurinBuilds"
 import TabButtons from "./TabButtons"
 
 const ReleaseVersionTab = () => {

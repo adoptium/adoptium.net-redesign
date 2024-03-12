@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { Trans } from "gatsby-plugin-react-i18next"
-import { FaCheck, FaTimes, FaDocker } from "react-icons/fa"
+import { FaDocker } from "react-icons/fa"
+import { IoMdCheckmarkCircleOutline } from "react-icons/io"
+import { LiaTimesSolid } from "react-icons/lia"
 import platformSupportData from "../../../json/supported-platforms.json"
 
 const PlatformMatrix = () => {
@@ -25,13 +27,14 @@ const PlatformMatrix = () => {
       </p>
       <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 items-center py-8 md:py-16">
         <div className="text-[14px] font-bold leading-[142.857%] text-white flex items-center gap-2">
-          <FaCheck size={25} className="text-pink" /> Supported
+          <IoMdCheckmarkCircleOutline size={25} className="text-pink" />{" "}
+          Supported
         </div>
         <div className="text-[14px] font-bold leading-[142.857%] text-white flex items-center gap-2">
           <FaDocker size={25} className="text-pink" /> Docker image available
         </div>
         <div className="text-[14px] font-bold leading-[142.857%] text-white flex items-center gap-2">
-          <FaTimes size={25} className="text-pink" /> Not supported
+          <LiaTimesSolid size={25} className="text-pink" /> Not supported
         </div>
       </div>
       <div className="bg-[#200D46] p-4 md:p-8 rounded-[24px] mb-4">
@@ -79,7 +82,7 @@ const PlatformMatrix = () => {
                     strokeWidth="2"
                   />
                   <path
-                    className={` transition duration-700 ease-in-out ${
+                    className={`transition duration-700 ease-in-out ${
                       openFaq === index ? "rotate-90" : "rotate-0"
                     }`}
                     d="M24 17V31"
@@ -98,39 +101,57 @@ const PlatformMatrix = () => {
                 </svg>
               </span>
             </div>
-            {openFaq === index && (
-              <div className="w-full overflow-auto min-w-full">
-                {platform.distros.map((distro, distroIndex) => (
-                  <div
-                    className={`flex items-center justify-center min-w-[1040px] md:px-3 py-5 rounded-[24px] ${isEven(distroIndex) && `bg-[#2B194F]`}`}
-                  >
-                    <h3 className="tab-button-text text-white flex justify-center items-center min-w-[194px] lg:min-w-[300px]">
-                      {distro.name}
-                    </h3>
-                    {Object.entries(distro.versions).map(
-                      ([version, { supported, docker }], versionIndex) => (
-                        <div
-                          key={versionIndex}
-                          className="flex items-center justify-center gap-3 min-w-[194px]"
-                        >
-                          <span>
-                            {supported ? (
-                              <FaCheck className="text-pink" />
-                            ) : (
-                              <FaTimes className="text-pink" />
-                            )}
-                          </span>
-                          <span>
-                            {docker ? <FaDocker className="text-pink" /> : ""}
-                          </span>
-                        </div>
-                      ),
-                    )}
-                  </div>
-                ))}
-                {/* </div> */}
-              </div>
-            )}
+            <div
+              className={`flex transition duration-700 ease-in-out items-center w-full ${
+                openFaq === index
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-7 opacity-0"
+              }`}
+            >
+              {openFaq === index && (
+                <div className="w-full overflow-auto min-w-full">
+                  {platform.distros.map((distro, distroIndex) => (
+                    <div
+                      className={`flex items-center justify-center min-w-[1040px] md:px-3 py-5 rounded-[24px] ${isEven(distroIndex) && `bg-[#2B194F]`}`}
+                    >
+                      <h3 className="tab-button-text text-white flex justify-center items-center min-w-[194px] lg:min-w-[300px]">
+                        {distro.name}
+                      </h3>
+                      {Object.entries(distro.versions).map(
+                        ([version, { supported, docker }], versionIndex) => (
+                          <div
+                            key={versionIndex}
+                            className="flex items-center justify-center gap-3 min-w-[194px]"
+                          >
+                            <span>
+                              {supported ? (
+                                <IoMdCheckmarkCircleOutline
+                                  size={25}
+                                  className="text-pink"
+                                />
+                              ) : (
+                                <LiaTimesSolid
+                                  size={25}
+                                  className="text-pink"
+                                />
+                              )}
+                            </span>
+                            <span>
+                              {docker ? (
+                                <FaDocker size={25} className="text-pink" />
+                              ) : (
+                                ""
+                              )}
+                            </span>
+                          </div>
+                        ),
+                      )}
+                    </div>
+                  ))}
+                  {/* </div> */}
+                </div>
+              )}
+            </div>
           </div>
         ))}
       </div>

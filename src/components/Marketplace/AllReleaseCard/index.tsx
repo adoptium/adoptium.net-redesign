@@ -11,11 +11,15 @@ const AllReleaseCard = ({ results }) => {
       {results.map((release, index) => (
         <div
           key={index}
-          className="newscard-2 !blur-0 px-6 py-6 lg:flex  justify-between items-center mt-6"
+          className="newscard-2 !blur-0 px-6 py-6 lg:flex justify-between items-center mt-6"
         >
           <div className="flex flex-col lg:flex-row justify-between gap-4 lg:items-center">
             <span className="block md:hidden">
-              {getImageForDistribution(release.vendor)}
+              <img
+                className="w-[100px] mb-0"
+                alt={`${release.vendor} logo`}
+                src={getImageForDistribution(release.vendor)}
+              />
             </span>
             <div className="lg:w-[160px] mt-3 md:mt-0">
               <h3 className="text-[24px] hidden md:block md:text-[16px] font-bold leading-[133.333%] md:leading-[150%]">

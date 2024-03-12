@@ -3,7 +3,7 @@
 exports[`Business Benefits page > renders correctly 1`] = `
 <main>
   <div
-    class="pt-32 pb-12 overflow-hidden"
+    class="relative pt-40 pb-16 md:pb-36 md:pt-60 overflow-hidden"
   >
     <div
       class="w-full relative"
@@ -19,13 +19,13 @@ exports[`Business Benefits page > renders correctly 1`] = `
       />
     </div>
     <div
-      class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
     >
       <div
-        class="self-stretch h-52 flex-col justify-center items-center gap-6 flex"
+        class="self-stretch flex-col justify-center items-center gap-6 flex"
       >
         <div
-          class="self-stretch h-32 flex-col justify-center items-center gap-4 flex"
+          class="self-stretch  flex-col justify-center items-center gap-4 flex"
         >
           <div
             class="justify-start items-center gap-3 inline-flex"
@@ -63,13 +63,13 @@ exports[`Business Benefits page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="self-stretch text-center text-white text-5xl lg:text-6xl font-semibold"
+            class="self-stretch text-center text-white   text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
           >
             How Temurin can benefit your business
           </div>
         </div>
         <div
-          class="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7"
+          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
         >
           Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
         </div>

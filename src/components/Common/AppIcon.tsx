@@ -14,25 +14,25 @@ export const DownloadIcon = () => {
           d="M17.5 12.5V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V12.5"
           stroke="white"
           className="group-hover:stroke-primary group-hover:transition-all  group-hover:duration-300  group-hover:ease-in-out"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M5.83203 8.33301L9.9987 12.4997L14.1654 8.33301"
           stroke="white"
           className="group-hover:stroke-primary  group-hover:transition-all group-hover:duration-300 group-hover:ease-in-out"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M10 12.5V2.5"
           stroke="white"
           className="group-hover:stroke-primary group-hover:transition-all  group-hover:duration-300 group-hover:ease-in-out"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </>
@@ -195,8 +195,8 @@ export const OperaIcon = () => {
             y2="30.6159"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#85D888" />
-            <stop offset="1" stop-color="#56A458" />
+            <stop stopColor="#85D888" />
+            <stop offset="1" stopColor="#56A458" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_1_15754"
@@ -206,8 +206,8 @@ export const OperaIcon = () => {
             y2="31.9999"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#56A458" />
-            <stop offset="1" stop-color="#85D888" />
+            <stop stopColor="#56A458" />
+            <stop offset="1" stopColor="#85D888" />
           </linearGradient>
         </defs>
       </svg>

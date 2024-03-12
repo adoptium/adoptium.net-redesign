@@ -6,7 +6,6 @@ import HeroBgImg from "../../../images/backgrounds/temurin-hero-bg.svg"
 import LatestTemurin from "../LatestTemurin"
 
 const HeroSection = () => {
-
   const data = useStaticQuery(graphql`
     query {
       mostRecentLts {
@@ -38,4 +37,3 @@ const HeroSection = () => {
 }
 
 export default HeroSection
-

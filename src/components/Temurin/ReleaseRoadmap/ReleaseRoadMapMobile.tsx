@@ -3,7 +3,6 @@ import { RedIcon } from "../../Common/Icon"
 
 const ReleaseRoadMapMobile = () => {
   const [openFaqs, setOpenFaqs] = useState([false, false, false])
-  console.log(openFaqs)
 
   const handleToggleFaq = index => {
     const updatedFaqs = [...openFaqs]

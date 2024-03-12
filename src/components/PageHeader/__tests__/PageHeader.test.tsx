@@ -8,18 +8,37 @@ describe("PageHeader component", () => {
   const subtitle = "test-subtitle"
   it("should render correctly", () => {
     const { container } = render(
-      <PageHeader title={title} subtitle={subtitle} />,
+      <PageHeader
+        title={title}
+        subtitle={subtitle}
+        className="foo"
+        description="foo"
+      />,
     )
     expect(container).toMatchSnapshot()
   })
 
   it("does not render without a subtitle", () => {
-    const { container } = render(<PageHeader title={title} subtitle="" />)
+    const { container } = render(
+      <PageHeader
+        title={title}
+        subtitle=""
+        className="foo"
+        description="foo"
+      />,
+    )
     expect(container).toMatchSnapshot()
   })
 
   it("does not render without a title", () => {
-    const { container } = render(<PageHeader title="" subtitle={subtitle} />)
+    const { container } = render(
+      <PageHeader
+        title=""
+        subtitle={subtitle}
+        className="foo"
+        description="foo"
+      />,
+    )
     expect(container).toMatchSnapshot()
   })
 })

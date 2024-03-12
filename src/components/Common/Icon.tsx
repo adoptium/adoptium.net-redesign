@@ -152,8 +152,8 @@ export const AdobeIcon2 = () => (
         y2="12.5461"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#4E1948" />
-        <stop offset="1" stop-color="#1C1537" />
+        <stop stopColor="#4E1948" />
+        <stop offset="1" stopColor="#1C1537" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_171_16504"
@@ -163,8 +163,8 @@ export const AdobeIcon2 = () => (
         y2="21.3191"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#A81255" />
-        <stop offset="1" stop-color="#4E1948" />
+        <stop stopColor="#A81255" />
+        <stop offset="1" stopColor="#4E1948" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_171_16504"
@@ -174,8 +174,8 @@ export const AdobeIcon2 = () => (
         y2="2.81944"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#E72867" />
-        <stop offset="1" stop-color="#A81255" />
+        <stop stopColor="#E72867" />
+        <stop offset="1" stopColor="#A81255" />
       </linearGradient>
     </defs>
   </svg>
@@ -213,8 +213,8 @@ export const AdobeIcon3 = () => (
         y2="12.5461"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#4E1948" />
-        <stop offset="1" stop-color="#1C1537" />
+        <stop stopColor="#4E1948" />
+        <stop offset="1" stopColor="#1C1537" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_171_16504"
@@ -224,8 +224,8 @@ export const AdobeIcon3 = () => (
         y2="21.3191"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#A81255" />
-        <stop offset="1" stop-color="#4E1948" />
+        <stop stopColor="#A81255" />
+        <stop offset="1" stopColor="#4E1948" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_171_16504"
@@ -235,8 +235,8 @@ export const AdobeIcon3 = () => (
         y2="2.81944"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#E72867" />
-        <stop offset="1" stop-color="#A81255" />
+        <stop stopColor="#E72867" />
+        <stop offset="1" stopColor="#A81255" />
       </linearGradient>
     </defs>
   </svg>
@@ -616,7 +616,7 @@ export const NeedSupportIcon = () => {
         <path
           d="M17.1424 100.408C7.84468 100.408 0.307376 92.8706 0.307376 83.5729C0.307377 74.2752 7.84468 66.7379 17.1424 66.7379C26.4402 66.7379 33.9775 74.2752 33.9775 83.5729C33.9775 92.8706 26.4402 100.408 17.1424 100.408Z"
           stroke="url(#paint3_linear_67_12621)"
-          stroke-width="0.615382"
+          strokeWidth="0.615382"
         />
       </g>
       <g filter="url(#filter1_b_67_12621)">
@@ -632,7 +632,7 @@ export const NeedSupportIcon = () => {
         <path
           d="M60.0018 48.9778C50.7041 48.9778 43.1668 41.4405 43.1668 32.1427C43.1668 22.845 50.7041 15.3077 60.0018 15.3077C69.2995 15.3077 76.8368 22.845 76.8368 32.1427C76.8368 41.4405 69.2995 48.9778 60.0018 48.9778Z"
           stroke="url(#paint4_linear_67_12621)"
-          stroke-width="0.615382"
+          strokeWidth="0.615382"
         />
       </g>
       <g filter="url(#filter2_b_67_12621)">
@@ -648,7 +648,7 @@ export const NeedSupportIcon = () => {
         <path
           d="M102.857 100.408C93.5595 100.408 86.0222 92.8706 86.0222 83.5729C86.0222 74.2752 93.5595 66.7379 102.857 66.7379C112.155 66.7379 119.692 74.2752 119.692 83.5729C119.692 92.8706 112.155 100.408 102.857 100.408Z"
           stroke="url(#paint5_linear_67_12621)"
-          stroke-width="0.615382"
+          strokeWidth="0.615382"
         />
       </g>
       <defs>
@@ -729,8 +729,8 @@ export const NeedSupportIcon = () => {
           y2="53.6349"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF2F76" />
-          <stop offset="1" stop-color="#FF1464" />
+          <stop stopColor="#FF2F76" />
+          <stop offset="1" stopColor="#FF1464" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_67_12621"
@@ -740,8 +740,8 @@ export const NeedSupportIcon = () => {
           y2="53.6349"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF2F76" />
-          <stop offset="1" stop-color="#FF1464" />
+          <stop stopColor="#FF2F76" />
+          <stop offset="1" stopColor="#FF1464" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_67_12621"
@@ -751,8 +751,8 @@ export const NeedSupportIcon = () => {
           y2="53.6349"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF2F76" />
-          <stop offset="1" stop-color="#FF1464" />
+          <stop stopColor="#FF2F76" />
+          <stop offset="1" stopColor="#FF1464" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_67_12621"
@@ -762,8 +762,8 @@ export const NeedSupportIcon = () => {
           y2="96.43"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_67_12621"
@@ -773,8 +773,8 @@ export const NeedSupportIcon = () => {
           y2="44.9998"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_67_12621"
@@ -784,8 +784,8 @@ export const NeedSupportIcon = () => {
           y2="96.43"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
@@ -1080,23 +1080,23 @@ export const CrossIcon = () => (
       <path
         d="M16 29.3334C23.3638 29.3334 29.3333 23.3639 29.3333 16.0001C29.3333 8.63628 23.3638 2.66675 16 2.66675C8.63619 2.66675 2.66666 8.63628 2.66666 16.0001C2.66666 23.3639 8.63619 29.3334 16 29.3334Z"
         stroke="#FF1464"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M20 12L12 20"
         stroke="#FF1464"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M12 12L20 20"
         stroke="#FF1464"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   </>
@@ -1575,9 +1575,9 @@ export const LinuxIcon = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(-2.3533 55.5533) rotate(-0.859373) scale(1.26088 1.92698)"
       >
-        <stop stop-color="#FEFEFC" />
-        <stop offset="0.757" stop-color="#FEFEFC" />
-        <stop offset="1" stop-color="#D4D4D4" />
+        <stop stopColor="#FEFEFC" />
+        <stop offset="0.757" stopColor="#FEFEFC" />
+        <stop offset="1" stopColor="#D4D4D4" />
       </radialGradient>
       <radialGradient
         id="paint1_radial_1_15980"
@@ -1587,9 +1587,9 @@ export const LinuxIcon = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(19.8626 20.3676) rotate(-1.45829) scale(1.67597 1.92723)"
       >
-        <stop stop-color="#FEFEFC" />
-        <stop offset="0.757" stop-color="#FEFEFC" />
-        <stop offset="1" stop-color="#D4D4D4" />
+        <stop stopColor="#FEFEFC" />
+        <stop offset="0.757" stopColor="#FEFEFC" />
+        <stop offset="1" stopColor="#D4D4D4" />
       </radialGradient>
       <radialGradient
         id="paint2_radial_1_15980"
@@ -1599,9 +1599,9 @@ export const LinuxIcon = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(63.0253 -5.10144) rotate(-44.8543) scale(1.60372 1.11552)"
       >
-        <stop stop-color="#020204" />
-        <stop offset="0.734" stop-color="#020204" />
-        <stop offset="1" stop-color="#5C5C5C" />
+        <stop stopColor="#020204" />
+        <stop offset="0.734" stopColor="#020204" />
+        <stop offset="1" stopColor="#5C5C5C" />
       </radialGradient>
       <linearGradient
         id="paint3_linear_1_15980"
@@ -1611,9 +1611,9 @@ export const LinuxIcon = () => (
         y2="7.33042"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#949494" stop-opacity="0.392" />
-        <stop offset="0.5" stop-color="#949494" />
-        <stop offset="1" stop-color="#949494" stop-opacity="0.392" />
+        <stop stopColor="#949494" stopOpacity="0.392" />
+        <stop offset="0.5" stopColor="#949494" />
+        <stop offset="1" stopColor="#949494" stopOpacity="0.392" />
       </linearGradient>
       <linearGradient
         id="paint4_linear_1_15980"
@@ -1623,11 +1623,11 @@ export const LinuxIcon = () => (
         y2="7.04079"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#646464" stop-opacity="0" />
-        <stop offset="0.306" stop-color="#646464" stop-opacity="0.584" />
-        <stop offset="0.47" stop-color="#646464" />
-        <stop offset="0.728" stop-color="#646464" stop-opacity="0.259" />
-        <stop offset="1" stop-color="#646464" stop-opacity="0" />
+        <stop stopColor="#646464" stopOpacity="0" />
+        <stop offset="0.306" stopColor="#646464" stopOpacity="0.584" />
+        <stop offset="0.47" stopColor="#646464" />
+        <stop offset="0.728" stopColor="#646464" stopOpacity="0.259" />
+        <stop offset="1" stopColor="#646464" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint5_linear_1_15980"
@@ -1637,11 +1637,11 @@ export const LinuxIcon = () => (
         y2="7.14029"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#646464" stop-opacity="0" />
-        <stop offset="0.306" stop-color="#646464" stop-opacity="0.584" />
-        <stop offset="0.47" stop-color="#646464" />
-        <stop offset="0.728" stop-color="#646464" stop-opacity="0.259" />
-        <stop offset="1" stop-color="#646464" stop-opacity="0" />
+        <stop stopColor="#646464" stopOpacity="0" />
+        <stop offset="0.306" stopColor="#646464" stopOpacity="0.584" />
+        <stop offset="0.47" stopColor="#646464" />
+        <stop offset="0.728" stopColor="#646464" stopOpacity="0.259" />
+        <stop offset="1" stopColor="#646464" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint6_linear_1_15980"
@@ -1651,10 +1651,10 @@ export const LinuxIcon = () => (
         y2="7.05063"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#757574" stop-opacity="0" />
-        <stop offset="0.263" stop-color="#757574" />
-        <stop offset="0.5" stop-color="#757574" />
-        <stop offset="1" stop-color="#757574" stop-opacity="0" />
+        <stop stopColor="#757574" stopOpacity="0" />
+        <stop offset="0.263" stopColor="#757574" />
+        <stop offset="0.5" stopColor="#757574" />
+        <stop offset="1" stopColor="#757574" stopOpacity="0" />
       </linearGradient>
       <radialGradient
         id="paint7_radial_1_15980"
@@ -1664,10 +1664,10 @@ export const LinuxIcon = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(12.146 -47.1893) rotate(-39.8918) scale(4.01958 1.94754)"
       >
-        <stop stop-color="#D2940A" />
-        <stop offset="0.751" stop-color="#D89C08" />
-        <stop offset="0.866" stop-color="#B67E07" />
-        <stop offset="1" stop-color="#946106" />
+        <stop stopColor="#D2940A" />
+        <stop offset="0.751" stopColor="#D89C08" />
+        <stop offset="0.866" stopColor="#B67E07" />
+        <stop offset="1" stopColor="#946106" />
       </radialGradient>
       <linearGradient
         id="paint8_linear_1_15980"
@@ -1677,13 +1677,13 @@ export const LinuxIcon = () => (
         y2="9.00302"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#AD780A" />
-        <stop offset="0.12" stop-color="#D89E08" />
-        <stop offset="0.255" stop-color="#EDB80B" />
-        <stop offset="0.392" stop-color="#EBC80D" />
-        <stop offset="0.527" stop-color="#F5D838" />
-        <stop offset="0.769" stop-color="#F6D811" />
-        <stop offset="1" stop-color="#F5CD31" />
+        <stop stopColor="#AD780A" />
+        <stop offset="0.12" stopColor="#D89E08" />
+        <stop offset="0.255" stopColor="#EDB80B" />
+        <stop offset="0.392" stopColor="#EBC80D" />
+        <stop offset="0.527" stopColor="#F5D838" />
+        <stop offset="0.769" stopColor="#F6D811" />
+        <stop offset="1" stopColor="#F5CD31" />
       </linearGradient>
       <radialGradient
         id="paint9_radial_1_15980"
@@ -1693,9 +1693,9 @@ export const LinuxIcon = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(-12.6753 -39.7952) scale(0.341763 0.198874)"
       >
-        <stop stop-color="#3A2903" />
-        <stop offset="0.555" stop-color="#735208" />
-        <stop offset="1" stop-color="#AC8C04" />
+        <stop stopColor="#3A2903" />
+        <stop offset="0.555" stopColor="#735208" />
+        <stop offset="1" stopColor="#AC8C04" />
       </radialGradient>
       <radialGradient
         id="paint10_radial_1_15980"
@@ -1705,9 +1705,9 @@ export const LinuxIcon = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(18.7516 16.6585) scale(0.162533 0.174962)"
       >
-        <stop stop-color="#3A2903" />
-        <stop offset="0.555" stop-color="#735208" />
-        <stop offset="1" stop-color="#AC8C04" />
+        <stop stopColor="#3A2903" />
+        <stop offset="0.555" stopColor="#735208" />
+        <stop offset="1" stopColor="#AC8C04" />
       </radialGradient>
       <linearGradient
         id="paint11_linear_1_15980"
@@ -1717,8 +1717,8 @@ export const LinuxIcon = () => (
         y2="9.4051"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#F5CE2D" />
-        <stop offset="1" stop-color="#D79B08" />
+        <stop stopColor="#F5CE2D" />
+        <stop offset="1" stopColor="#D79B08" />
       </linearGradient>
       <radialGradient
         id="paint12_radial_1_15980"
@@ -1729,7 +1729,7 @@ export const LinuxIcon = () => (
         gradientTransform="translate(166.766 30.4344) rotate(180) scale(2.34128 2.21669)"
       >
         <stop />
-        <stop offset="1" stop-opacity="0.247" />
+        <stop offset="1" stopOpacity="0.247" />
       </radialGradient>
       <radialGradient
         id="paint13_radial_1_15980"
@@ -1740,7 +1740,7 @@ export const LinuxIcon = () => (
         gradientTransform="translate(19.108 -19.0999) scale(2.90236 2.21527)"
       >
         <stop />
-        <stop offset="1" stop-opacity="0.247" />
+        <stop offset="1" stopOpacity="0.247" />
       </radialGradient>
       <radialGradient
         id="paint14_radial_1_15980"
@@ -1751,7 +1751,7 @@ export const LinuxIcon = () => (
         gradientTransform="translate(12.1722 26.9719) scale(1.1511 1.22984)"
       >
         <stop />
-        <stop offset="1" stop-opacity="0.247" />
+        <stop offset="1" stopOpacity="0.247" />
       </radialGradient>
       <linearGradient
         id="paint15_linear_1_15980"
@@ -1762,7 +1762,7 @@ export const LinuxIcon = () => (
         gradientUnits="userSpaceOnUse"
       >
         <stop />
-        <stop offset="1" stop-opacity="0" />
+        <stop offset="1" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint16_linear_1_15980"
@@ -1772,8 +1772,8 @@ export const LinuxIcon = () => (
         y2="23.6653"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#3E2A06" />
-        <stop offset="1" stop-color="#AD780A" />
+        <stop stopColor="#3E2A06" />
+        <stop offset="1" stopColor="#AD780A" />
       </linearGradient>
       <linearGradient
         id="paint17_linear_1_15980"
@@ -1783,8 +1783,8 @@ export const LinuxIcon = () => (
         y2="24.442"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#F3CD0C" />
-        <stop offset="1" stop-color="#F3CD0C" stop-opacity="0" />
+        <stop stopColor="#F3CD0C" />
+        <stop offset="1" stopColor="#F3CD0C" stopOpacity="0" />
       </linearGradient>
       <radialGradient
         id="paint18_radial_1_15980"
@@ -1794,9 +1794,9 @@ export const LinuxIcon = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(-34.3516 34.0166) rotate(17.3895) scale(2.44404 2.50601)"
       >
-        <stop stop-color="#110800" />
-        <stop offset="0.591" stop-color="#A65A00" stop-opacity="0.8" />
-        <stop offset="1" stop-color="#FF921E" stop-opacity="0" />
+        <stop stopColor="#110800" />
+        <stop offset="0.591" stopColor="#A65A00" stopOpacity="0.8" />
+        <stop offset="1" stopColor="#FF921E" stopOpacity="0" />
       </radialGradient>
       <radialGradient
         id="paint19_radial_1_15980"
@@ -1806,9 +1806,9 @@ export const LinuxIcon = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(-19.4766 32.7647) rotate(17.3895) scale(2.44397 1.81212)"
       >
-        <stop stop-color="#110800" />
-        <stop offset="0.591" stop-color="#A65A00" stop-opacity="0.8" />
-        <stop offset="1" stop-color="#FF921E" stop-opacity="0" />
+        <stop stopColor="#110800" />
+        <stop offset="0.591" stopColor="#A65A00" stopOpacity="0.8" />
+        <stop offset="1" stopColor="#FF921E" stopOpacity="0" />
       </radialGradient>
       <radialGradient
         id="paint20_radial_1_15980"
@@ -1818,8 +1818,8 @@ export const LinuxIcon = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(-152.527 6.89734) rotate(42.9251) scale(1.07031 0.314767)"
       >
-        <stop stop-color="#7C7C7C" />
-        <stop offset="1" stop-color="#7C7C7C" stop-opacity="0.329" />
+        <stop stopColor="#7C7C7C" />
+        <stop offset="1" stopColor="#7C7C7C" stopOpacity="0.329" />
       </radialGradient>
       <linearGradient
         id="paint21_linear_1_15980"
@@ -1829,8 +1829,8 @@ export const LinuxIcon = () => (
         y2="21.956"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#7C7C7C" />
-        <stop offset="1" stop-color="#7C7C7C" stop-opacity="0.329" />
+        <stop stopColor="#7C7C7C" />
+        <stop offset="1" stopColor="#7C7C7C" stopOpacity="0.329" />
       </linearGradient>
       <linearGradient
         id="paint22_linear_1_15980"
@@ -1840,8 +1840,8 @@ export const LinuxIcon = () => (
         y2="32.895"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#B98309" />
-        <stop offset="1" stop-color="#382605" />
+        <stop stopColor="#B98309" />
+        <stop offset="1" stopColor="#382605" />
       </linearGradient>
       <linearGradient
         id="paint23_linear_1_15980"
@@ -1851,8 +1851,8 @@ export const LinuxIcon = () => (
         y2="28.1677"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#EBC40C" />
-        <stop offset="1" stop-color="#EBC40C" stop-opacity="0" />
+        <stop stopColor="#EBC40C" />
+        <stop offset="1" stopColor="#EBC40C" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>

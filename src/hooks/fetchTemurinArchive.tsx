@@ -31,7 +31,7 @@ export async function getAssetsForVersion(
   releases = []
 
   let pagecount = 0
-  let pkgsFound: TemurinReleases[] = []
+  let pkgsFound: MockTemurinFeatureReleaseAPI[] = []
 
   await axios
     .get(url.toString())
@@ -49,7 +49,7 @@ export async function getAssetsForVersion(
   return renderReleases(pkgsFound, pagecount, releaseType)
 }
 
-function renderReleases(pkgs, pagecount, releaseType) {
+function renderReleases(pkgs: MockTemurinFeatureReleaseAPI[], pagecount: number, releaseType: ReleaseType) {
   pkgs.forEach(aRelease => {
     const release: TemurinReleases = {
       release_name: getVersionAsString(aRelease.version_data),

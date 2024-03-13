@@ -180,7 +180,7 @@ const Footer = (props): JSX.Element => {
 
   return (
     <footer className="bg-blue">
-      <LeavingSiteDisclaimerModal />
+      {/* <LeavingSiteDisclaimerModal /> */}
       <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-8 md:py-16 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="hidden md:block">
           <div className="grid grid-cols-1 gap-8 border-b border-gray-800 mb-3 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16">

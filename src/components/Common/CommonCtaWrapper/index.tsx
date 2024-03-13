@@ -136,8 +136,7 @@ const CommonCtaWrapper: React.FC<CommonCtaWrapperProps> = ({
             </div>
             <div className="flex flex-col w-full lg:w-[50%] mt-8 lg:mt-0">
               <h5 className="pb-6 border-b-[1px] text-2xl font-semibold border-[#3E3355]">
-                jdk-{archData.release_name} -{" "}
-                {new Date(archData.release_date).toLocaleDateString()}
+                {`${archData.release_name} - ${new Date(archData.release_date).toLocaleDateString()}`}
               </h5>
               {archData.binaries
                 .filter(

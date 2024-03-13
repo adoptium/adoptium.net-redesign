@@ -22,25 +22,20 @@ exports[`Temurin Nightly page > renders correctly 1`] = `
           <div
             class="callout callout-default text-start"
           >
-            Please be aware that this archive contains intermediate builds created as a development step towards a
-             
-            <a
-              href="/temurin/releases"
-            >
-              full release
-            </a>
-            . Intermediate builds are ephemeral, and may disappear in the future.
+            Text
             <br />
             <br />
-            The following notice applies to intermediate builds:
+            Text
             <br />
-            “This is an intermediate build made available for testing purposes only. The code is untested and presumed incompatible with the Java SE specification. You should not deploy or write to this code, but instead use the tested and certified Java SE compatible version of the code. Redistribution of this build must retain this notice.”
+            “
+            Text
+            ”
             <br />
             <br />
             <p
               class="text-warning"
             >
-              These builds are unsupported and not for use in production.
+              Text
             </p>
           </div>
           <div

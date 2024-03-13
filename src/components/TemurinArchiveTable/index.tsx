@@ -139,7 +139,7 @@ const TemurinArchiveTable = ({ results, updatePage }) => {
                                             backgroundColor: "#D7DEE9",
                                           }}
                                         >
-                                          Not Available
+                                          <Trans i18nKey='download.not.available' defaults='Not Available' />
                                         </a>
                                       )}
                                     </td>

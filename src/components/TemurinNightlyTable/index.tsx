@@ -69,7 +69,7 @@ const TemurinNightlyTable = ({ results }) => {
                               </Link>
                             </td>
                           ) : (
-                            <td>Not Available</td>
+                            <td><Trans i18nKey='download.not.available' defaults='Not Available' /></td>
                           )}
                           <td>
                             <a

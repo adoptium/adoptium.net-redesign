@@ -1,8 +1,9 @@
 import React from "react"
-import { Link, Trans } from "gatsby-plugin-react-i18next"
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next"
 import { SmallLogoIcon } from "../Common/Icon"
 import MobileFooter from "./MobileFooter"
 import IconSocial from "../IconSocial"
+import LeavingSiteDisclaimerModal from '../LeavingSiteDisclaimerModal';
 
 interface FooterData {
   title: {
@@ -15,7 +16,11 @@ interface FooterData {
       defaultText: string
     }
     url: string
-  }>
+    disclaimerMessage?: {
+      key: string
+      defaultText: string
+    }
+    }>
 }
 
 const footerData: FooterData[] = [
@@ -125,7 +130,10 @@ const footerData: FooterData[] = [
       },
       {
         text: { key: "footer.swag.store", defaultText: "Swag Store" },
-        url: "https://store.adoptium.net/",
+        url: "https://eclipse-foundation.store/collections/eclipse-adoptium",
+        disclaimerMessage: {
+          key: 'swag.store.disclaimer', defaultText: 'By clicking the continue button, you will leave our website. Please be aware that new terms of use will apply to the Eclipse Foundation store, powered by Fourthwall: https://eclipse-foundation.store/.'
+        }
       },
     ],
   },
@@ -167,8 +175,12 @@ const footerData: FooterData[] = [
 ]
 
 const Footer = (props): JSX.Element => {
+
+  const {t} = useTranslation();
+
   return (
     <footer className="bg-blue">
+      <LeavingSiteDisclaimerModal />
       <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-8 md:py-16 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="hidden md:block">
           <div className="grid grid-cols-1 gap-8 border-b border-gray-800 mb-3 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16">
@@ -196,7 +208,25 @@ const Footer = (props): JSX.Element => {
                               defaults={link.text.defaultText}
                             />
                           </Link>
-                        ) : (
+                        ) : 
+                        link.disclaimerMessage ? (
+                          <a
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
+                            data-bs-toggle="modal"
+                            data-bs-target="#leavingSiteDisclaimerModal"
+                            data-bs-message={t(link.disclaimerMessage.key, link.disclaimerMessage.defaultText)}
+                            data-bs-location={link.url}
+                          >
+                            <Trans
+                              i18nKey={link.text.key}
+                              defaults={link.text.defaultText}
+                            />
+                          </a>
+                        ) :
+                        (
                           <a
                             href={link.url}
                             target="_blank"

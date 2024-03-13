@@ -68,7 +68,7 @@ const TemurinArchiveTable = ({ results, updatePage }) => {
                         {release.release_notes && (
                           <p>
                             <Link
-                              to={`/temurin/release-notes?version=${release.release_name}`}
+                              to={`/temurin/release-notes?version=${release.release_notes_name}`}
                               className="link-light"
                             >
                               <MdNotes /> <Trans>Release Notes</Trans>

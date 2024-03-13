@@ -233,14 +233,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
-                  data-bs-location="https://eclipse-foundation.store/collections/eclipse-adoptium"
-                  data-bs-message="swag.store.disclaimer"
-                  data-bs-target="#leavingSiteDisclaimerModal"
-                  data-bs-toggle="modal"
-                  href="https://eclipse-foundation.store/collections/eclipse-adoptium"
-                  rel="noopener noreferrer"
-                  target="_blank"
+                  href="#"
                 >
                   Text
                 </a>

@@ -1,121 +1,33 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`LeavingSiteDisclaimerModal component > LeavingSiteDisclaimerModal continue correctly 1`] = `
-<div>
+exports[`LeavingSiteDisclaimerModal component > LeavingSiteDisclaimerModal continue correctly when cancel is clicked 1`] = `
+<div
+  aria-hidden="true"
+>
   <div
-    aria-hidden="true"
-    aria-labelledby="leavingSiteDisclaimerLabel"
-    class="modal fade"
-    id="leavingSiteDisclaimerModal"
-    style="z-index: 10000;"
-    tabindex="-1"
-  >
-    <div
-      class="modal-dialog modal-lg"
-    >
-      <div
-        class="modal-content"
-      >
-        <div
-          class="modal-header"
-        >
-          <h5
-            class="modal-title"
-            id="leavingSiteDisclaimerLabel"
-          >
-            Text
-          </h5>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
-        </div>
-        <div
-          class="modal-body text-start"
-        >
-          <p />
-        </div>
-        <div
-          class="modal-footer"
-        >
-          <button
-            class="btn btn-primary"
-            type="button"
-          >
-            Text
-          </button>
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
-          >
-            Text
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+  />
 </div>
 `;
 
-exports[`LeavingSiteDisclaimerModal component > LeavingSiteDisclaimerModal renders correctly 1`] = `
-<div>
+exports[`LeavingSiteDisclaimerModal component > LeavingSiteDisclaimerModal continue correctly when continue is clicked 1`] = `
+<div
+  aria-hidden="true"
+>
   <div
-    aria-hidden="true"
-    aria-labelledby="leavingSiteDisclaimerLabel"
-    class="modal fade"
-    id="leavingSiteDisclaimerModal"
-    style="z-index: 10000;"
-    tabindex="-1"
-  >
-    <div
-      class="modal-dialog modal-lg"
-    >
-      <div
-        class="modal-content"
-      >
-        <div
-          class="modal-header"
-        >
-          <h5
-            class="modal-title"
-            id="leavingSiteDisclaimerLabel"
-          >
-            Text
-          </h5>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
-        </div>
-        <div
-          class="modal-body text-start"
-        >
-          <p />
-        </div>
-        <div
-          class="modal-footer"
-        >
-          <button
-            class="btn btn-primary"
-            type="button"
-          >
-            Text
-          </button>
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
-          >
-            Text
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+  />
+</div>
+`;
+
+exports[`LeavingSiteDisclaimerModal component > LeavingSiteDisclaimerModal renders correctly when not open 1`] = `<div />`;
+
+exports[`LeavingSiteDisclaimerModal component > LeavingSiteDisclaimerModal renders correctly when open 1`] = `
+<div
+  aria-hidden="true"
+>
+  <div
+    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+  />
 </div>
 `;

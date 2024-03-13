@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next"
 import { SmallLogoIcon } from "../Common/Icon"
 import MobileFooter from "./MobileFooter"
@@ -176,11 +176,21 @@ const footerData: FooterData[] = [
 
 const Footer = (props): JSX.Element => {
 
-  const {t} = useTranslation();
+  const [openLeavingSiteDisclaimer, setOpenLeavingSiteDisclaimer] = useState(false)
+  const [leavingSiteDisclaimerMessage, setLeavingSiteDisclaimerMessage] = useState("")
+  const [leavingSiteDisclaimerLocation, setLeavingSiteDisclaimerLocation] = useState("")
+
+  const openWithLeavingSiteDisclaimer = (message: string, location: string) => {
+    setLeavingSiteDisclaimerMessage(message)
+    setLeavingSiteDisclaimerLocation(location)
+    setOpenLeavingSiteDisclaimer(true)
+  }
+
+  const {t} = useTranslation()
 
   return (
     <footer className="bg-blue">
-      {/* <LeavingSiteDisclaimerModal /> */}
+      <LeavingSiteDisclaimerModal open={openLeavingSiteDisclaimer} setOpen={setOpenLeavingSiteDisclaimer}  message={leavingSiteDisclaimerMessage} location={leavingSiteDisclaimerLocation} />
       <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-8 md:py-16 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="hidden md:block">
           <div className="grid grid-cols-1 gap-8 border-b border-gray-800 mb-3 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16">
@@ -211,14 +221,11 @@ const Footer = (props): JSX.Element => {
                         ) : 
                         link.disclaimerMessage ? (
                           <a
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
-                            data-bs-toggle="modal"
-                            data-bs-target="#leavingSiteDisclaimerModal"
-                            data-bs-message={t(link.disclaimerMessage.key, link.disclaimerMessage.defaultText)}
-                            data-bs-location={link.url}
+                            href="#"
+                            onClick={e => {
+                              e.preventDefault()
+                              openWithLeavingSiteDisclaimer(t(link.disclaimerMessage.key, link.disclaimerMessage.defaultText), link.url)
+                            }}
                           >
                             <Trans
                               i18nKey={link.text.key}

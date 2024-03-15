@@ -60,6 +60,10 @@ export const arches = [
     name: "sparcv9",
     value: "sparcv9",
   },
+  {
+    name: "riscv64",
+    value: "riscv64",
+  },
 ]
 
 export const packageTypes = [

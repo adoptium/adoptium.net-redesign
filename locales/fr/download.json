@@ -1,5 +1,6 @@
 {
   "Download Temurin for": "Télécharger Temurin {{defaultVersion}} pour {{userOSName}} {{arch}}",
+  "home.download.temurin.short": "Télécharger Temurin {{defaultVersion}}",
   "Latest LTS Release": "Dernière version LTS",
   "Latest Releases": "Dernières versions",
   "Nightly Builds": "Nightly Builds",

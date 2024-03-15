@@ -66,14 +66,24 @@ const LatestTemurin = (props): JSX.Element => {
         The Power of Eclipse Temurin™
       </h1>
       <p className="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold">
-        <Trans
-          i18nKey="Download Temurin for"
-          userOSName={userOSName}
-          arch={arch}
-          version={defaultVersion}
-        >
-          Download Temurin {{ defaultVersion }} for {{ userOSName }} {{ arch }}
-        </Trans>
+        {binary ? (
+          <Trans
+            i18nKey="Download Temurin for"
+            defaults="Download Temurin {{ defaultVersion }} for {{ userOSName }} {{ arch }}"
+            components={{
+              defaultVersion: defaultVersion,
+              userOSName: userOSName,
+              arch: arch
+            }}
+          />) : (
+          <Trans 
+            i18nKey="home.download.temurin.short" 
+            defaults="Download Temurin {{ defaultVersion }}"
+            components={{
+              defaultVersion: defaultVersion
+            }}
+             />
+        )}
       </p>
       <div className="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6">
         <Link

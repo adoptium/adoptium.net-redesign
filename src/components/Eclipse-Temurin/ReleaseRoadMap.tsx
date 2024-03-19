@@ -5,7 +5,7 @@ import { RedIcon } from "../Common/Icon"
 import ReleaseRoadMapMobile from "./ReleaseRoadMapMobile"
 
 const RoadMapCard = ({ title, itemCount, number }) => (
-  <div className="p-7 flex flex-col  max-w-[400px] newscard-2 h-[416px]  bg-[#1A0D35]">
+  <div className="p-7 flex flex-col  max-w-[384px] w-full newscard-2 h-[416px]  bg-[#1A0D35]">
     <div className="flex items-center gap-5">
       <h3 className="text-[32px] font-semibold text-white leading-[125%]">
         {title}
@@ -54,7 +54,7 @@ const ReleaseRoadMap = () => {
             "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
           }
         />
-        <div className=" hidden md:flex items-center justify-center gap-7 flex-wrap mt-16">
+        <div className=" hidden md:flex items-center justify-center xl:justify-between gap-7 flex-wrap mt-16">
           {roadmapcarddata.map(card => (
             <RoadMapCard
               key={card.id}

@@ -233,10 +233,7 @@ exports[`Footer component > renders correctly 1`] = `
               </li>
               <li>
                 <a
-                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
-                  href="https://store.adoptium.net/"
-                  rel="noopener noreferrer"
-                  target="_blank"
+                  href="#"
                 >
                   Text
                 </a>

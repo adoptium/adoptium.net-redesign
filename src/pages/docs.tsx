@@ -286,12 +286,12 @@ const DocumentationPage = ({ data }) => {
                     link: "https://www.eclipse.org/org/artwork/guidelines/adoptium-brand-guidelines.pdf",
                   },
                   {
-                    name: t(
-                      "docs.google.slide.template",
-                      "Google Slide Template",
-                    ),
+                    name: t("docs.google.slide.template", "Google Slide Template",),
                     link: "https://docs.google.com/presentation/d/1ChGhqZrAHCdk5S2Ii5s5RROng1saTaTtjZzsxWJ_MPA/copy",
                   },
+                  {
+                    name: t('footer.logo.and.artwork', 'Logo and Artwork'), 
+                    link: '/docs/logo-styleguide/' },
                   {
                     name: t("docs.download.buttons", "Download Buttons"),
                     link: "/temurin/buttons",

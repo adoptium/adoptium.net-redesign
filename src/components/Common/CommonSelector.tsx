@@ -9,15 +9,21 @@ interface ListItem {
 
 interface ListBoxSelectProps {
   list: ListItem[]
+  className?: string
 }
 
-export default function CommonSelector({ list }: ListBoxSelectProps) {
+export default function CommonSelector({
+  list,
+  className,
+}: ListBoxSelectProps) {
   const [selected, setSelected] = useState<ListItem>(list[0])
 
   return (
     <Listbox value={selected} onChange={setSelected}>
       <div className="relative mt-1">
-        <Listbox.Button className="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]">
+        <Listbox.Button
+          className={`relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355] ${className}`}
+        >
           <span className="flex items-center justify-between text-nowrap">
             {selected.name}
           </span>

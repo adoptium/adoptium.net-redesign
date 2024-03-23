@@ -101,3 +101,39 @@
     transform: scale(110%);
   }
 }
+
+.customradiobutton input[type="radio"] {
+  position: relative;
+  cursor: pointer;
+  appearance: none;
+}
+.customradiobutton input[type="radio"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border-radius: 8px !important;
+}
+
+.customradiobutton input[type="radio"]:checked:after {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 12px;
+  border: solid #008afc;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  overflow: hidden;
+}
+.customradiobutton input[type="radio"]:checked {
+  background-color: #e6f3ff;
+  border: 2px solid #008afc;
+}

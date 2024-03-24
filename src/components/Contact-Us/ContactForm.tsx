@@ -5,33 +5,13 @@ import {
   MobileFooterLinkedin,
   MobileFooterSlack,
   MobileFooterSocial,
-  MobileFooterYoutube,
 } from "../Common/Icon"
-import CommonSelector from "../Common/CommonSelector"
-import ReCAPTCHA from "react-google-recaptcha"
-import InputWapperHeader from "./InputWapperHeader"
 import InputWapperBottom from "./InputWapperBottom"
+import InputWapperHeader from "./InputWapperHeader"
 
 const ContactForm = () => {
-  function onChange(value) {
-    console.log("Captcha value:", value)
-  }
-  const JobTitle = [
-    { name: "Please select" },
-    { name: "Develpor" },
-    { name: "IT manager" },
-    { name: "Anlyst" },
-    { name: "Other" },
-  ]
-  const Industry = [
-    { name: "Please select" },
-    { name: "Energy / Utilities" },
-    { name: "Government & Research" },
-    { name: "Automotive" },
-    { name: "Other" },
-  ]
   return (
-    <div className="max-w-[1264px] mx-auto px-6 py-8 md:py-32">
+    <div className="max-w-[1264px] mx-auto py-8 md:pt-32 md:pb-16">
       <div className="flex flex-col lg:flex-row justify-between gap-7 items-start ">
         <div className="w-full lg:max-w-[400px] newscard-2 !bg-transparent p-6 md:p-10 ">
           <img

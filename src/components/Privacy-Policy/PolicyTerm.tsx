@@ -65,7 +65,7 @@ const PolicyTerm = () => {
         <h3 className="text-[24px] font-semibold leading-[133.333%] text-white">
           3. Third-Party Websites
         </h3>
-        <p className="tab-button-text text-white pt-6 mb-0">
+        <p className="tab-button-text text-white pt-6 pb-6 md:pb-8 mb-0">
           Triage rondellhund makrok. Ähet blockkedja nukonas. Grit derade
           funktionsrätt. Nyhetsbok säpojogg fast begogt. Sms-anställning
           solflygteknik prehab. Snippa dihånar dis. Krympflation vånde såsom

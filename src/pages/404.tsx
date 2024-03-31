@@ -3,13 +3,11 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
+import Error404 from "../components/Error-404/Error404"
 
 const NotFoundPage = () => (
   <Layout>
-    <div className="container text-center my-5">
-      <h1>404: Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
+    <Error404 />
   </Layout>
 )
 

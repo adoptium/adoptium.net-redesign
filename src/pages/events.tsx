@@ -5,6 +5,8 @@ import BlogCard from "../components/NewAndUpdate/BlogCard"
 import BlogCardList from "../components/NewAndUpdate/BlogCardList"
 import LatestNews from "../components/LatestNews"
 import ContactUs from "../components/ContactUs"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const events = () => {
   return (
@@ -29,3 +31,21 @@ const events = () => {
 }
 
 export default events
+export const Head = () => <Seo title="Events" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

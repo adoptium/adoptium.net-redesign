@@ -5,6 +5,8 @@ import Header from "../components/Confirmation-Download/Header"
 import WhatNow from "../components/Confirmation-Download/WhatNow"
 import AdoptiumWorking from "../components/Confirmation-Download/AdoptiumWorking"
 import ContactUs from "../components/ContactUs"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const confirmationdownload = () => {
   return (
@@ -23,3 +25,20 @@ const confirmationdownload = () => {
 }
 
 export default confirmationdownload
+export const Head = () => <Seo title="Confirmation Download" />
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

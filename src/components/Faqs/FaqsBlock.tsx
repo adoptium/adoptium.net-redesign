@@ -37,7 +37,7 @@ const FaqsBlock = () => {
                     height="46"
                     rx="23"
                     stroke="#3E3355"
-                    strokeWidth="2"
+                    stroke-Width="2"
                   />
                   <path
                     className={` transition duration-700 ease-in-out ${
@@ -45,14 +45,14 @@ const FaqsBlock = () => {
                     }`}
                     d="M24 17V31"
                     stroke="white"
-                    strokeWidth="1.5"
+                    stroke-Width="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                   <path
                     d="M17 24H31"
                     stroke="white"
-                    strokeWidth="1.5"
+                    stroke-Width="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />

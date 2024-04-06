@@ -129,14 +129,14 @@ const Testimonials = ({ className }) => {
             onClick={prevTestimonial}
             aria-label="Previous Testimonial"
           >
-            <FaArrowLeft size={20} strokeWidth={1} />
+            <FaArrowLeft size={20} stroke-Width={1} />
           </button>
           <button
             className="arrow-button  relative arrow-button-progress p-2 "
             onClick={nextTestimonial}
             aria-label="Next Testimonial"
           >
-            <FaArrowRight size={20} strokeWidth={1} />
+            <FaArrowRight size={20} stroke-Width={1} />
             <div className="progress-border absolute "></div>
           </button>
         </div>

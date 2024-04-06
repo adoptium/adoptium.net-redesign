@@ -10,7 +10,7 @@
 </g>
 <g id="Shape 2" filter="url(#filter1_b_2577_11604)">
 <rect width="15.0505" height="3.76263" rx="1.88132" transform="matrix(-0.734589 -0.678512 -0.678513 0.734589 57.6914 31.5325)" fill="url(#paint2_linear_2577_11604)" fill-opacity="0.9"/>
-<rect x="-0.345868" y="0.0137252" width="14.561" height="3.27312" rx="1.63656" transform="matrix(-0.734589 -0.678512 -0.678513 0.734589 57.1008 31.3014)" stroke="url(#paint3_linear_2577_11604)" stroke-width="0.489516"/>
+<rect x="-0.345868" y="0.0137252" width="14.561" height="3.27312" rx="1.63656" transform="matrix(-0.734589 -0.678512 -0.678513 0.734589 57.1008 31.3014)" stroke="url(#paint3_linear_2577_11604)" stroke-Width="0.489516"/>
 </g>
 <path id="Body 1" d="M29.0558 61.4256L19.1055 52.2349L17.0609 62.0525C16.7714 63.4429 18.0679 64.6405 19.431 64.2417L29.0558 61.4256Z" fill="url(#paint4_linear_2577_11604)"/>
 </g>

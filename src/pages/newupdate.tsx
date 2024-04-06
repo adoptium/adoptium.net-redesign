@@ -4,6 +4,8 @@ import PageHeader from "../components/PageHeader"
 import BlogCard from "../components/NewAndUpdate/BlogCard"
 import BlogCardList from "../components/NewAndUpdate/BlogCardList"
 import LatestNews from "../components/LatestNews"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const newupdate = () => {
   return (
@@ -27,3 +29,21 @@ const newupdate = () => {
 }
 
 export default newupdate
+export const Head = () => <Seo title="News & Updates" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

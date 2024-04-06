@@ -52,14 +52,14 @@ export const SearchIcon = () => (
     <path
       d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
       stroke="white"
-      stroke-width="1.5"
+      stroke-Width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M17.5 17.5L13.875 13.875"
       stroke="white"
-      stroke-width="1.5"
+      stroke-Width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -76,21 +76,21 @@ export const DocumentArrowIcon = () => (
     <path
       d="M15 10.8333V15.8333C15 16.2754 14.8244 16.6993 14.5118 17.0118C14.1993 17.3244 13.7754 17.5 13.3333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V6.66667C2.5 6.22464 2.67559 5.80072 2.98816 5.48816C3.30072 5.17559 3.72464 5 4.16667 5H9.16667"
       stroke="#FF1464"
-      stroke-width="1.5"
+      stroke-Width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M12.5 2.5H17.5V7.5"
       stroke="#FF1464"
-      stroke-width="1.5"
+      stroke-Width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M8.33203 11.6667L17.4987 2.5"
       stroke="#FF1464"
-      stroke-width="1.5"
+      stroke-Width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -391,7 +391,7 @@ export const RedIcon = () => {
         rx="3.5"
         stroke="#FF1464"
         strokeOpacity="0.25"
-        strokeWidth="3"
+        stroke-Width="3"
       />
     </svg>
   )
@@ -533,7 +533,7 @@ export const NeedSupportIcon = () => {
         <path
           d="M17.1424 100.408C7.84468 100.408 0.307376 92.8706 0.307376 83.5729C0.307377 74.2752 7.84468 66.7379 17.1424 66.7379C26.4402 66.7379 33.9775 74.2752 33.9775 83.5729C33.9775 92.8706 26.4402 100.408 17.1424 100.408Z"
           stroke="url(#paint3_linear_67_12621)"
-          stroke-width="0.615382"
+          stroke-Width="0.615382"
         />
       </g>
       <g filter="url(#filter1_b_67_12621)">
@@ -549,7 +549,7 @@ export const NeedSupportIcon = () => {
         <path
           d="M60.0018 48.9778C50.7041 48.9778 43.1668 41.4405 43.1668 32.1427C43.1668 22.845 50.7041 15.3077 60.0018 15.3077C69.2995 15.3077 76.8368 22.845 76.8368 32.1427C76.8368 41.4405 69.2995 48.9778 60.0018 48.9778Z"
           stroke="url(#paint4_linear_67_12621)"
-          stroke-width="0.615382"
+          stroke-Width="0.615382"
         />
       </g>
       <g filter="url(#filter2_b_67_12621)">
@@ -565,7 +565,7 @@ export const NeedSupportIcon = () => {
         <path
           d="M102.857 100.408C93.5595 100.408 86.0222 92.8706 86.0222 83.5729C86.0222 74.2752 93.5595 66.7379 102.857 66.7379C112.155 66.7379 119.692 74.2752 119.692 83.5729C119.692 92.8706 112.155 100.408 102.857 100.408Z"
           stroke="url(#paint5_linear_67_12621)"
-          stroke-width="0.615382"
+          stroke-Width="0.615382"
         />
       </g>
       <defs>
@@ -997,21 +997,21 @@ export const CrossIcon = () => (
       <path
         d="M16 29.3334C23.3638 29.3334 29.3333 23.3639 29.3333 16.0001C29.3333 8.63628 23.3638 2.66675 16 2.66675C8.63619 2.66675 2.66666 8.63628 2.66666 16.0001C2.66666 23.3639 8.63619 29.3334 16 29.3334Z"
         stroke="#FF1464"
-        stroke-width="1.5"
+        stroke-Width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M20 12L12 20"
         stroke="#FF1464"
-        stroke-width="1.5"
+        stroke-Width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M12 12L20 20"
         stroke="#FF1464"
-        stroke-width="1.5"
+        stroke-Width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1824,7 +1824,7 @@ export const PencilIcon = () => (
         rx="1.63656"
         transform="matrix(-0.734589 -0.678512 -0.678513 0.734589 57.1008 31.3014)"
         stroke="url(#paint3_linear_4754_31694)"
-        stroke-width="0.489516"
+        stroke-Width="0.489516"
       />
     </g>
     <path
@@ -1945,7 +1945,7 @@ export const PaginationLeftArrowIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M15.5 18L9.5 12L15.5 6" stroke="white" stroke-width="1.5" />
+    <path d="M15.5 18L9.5 12L15.5 6" stroke="white" stroke-Width="1.5" />
   </svg>
 )
 export const PaginationRightArrowIcon = () => (
@@ -1956,7 +1956,7 @@ export const PaginationRightArrowIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M9.5 18L15.5 12L9.5 6" stroke="white" stroke-width="1.5" />
+    <path d="M9.5 18L15.5 12L9.5 6" stroke="white" stroke-Width="1.5" />
   </svg>
 )
 

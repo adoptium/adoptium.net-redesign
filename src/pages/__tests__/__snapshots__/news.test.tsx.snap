@@ -299,7 +299,7 @@ exports[`News page > renders spinner when news not loaded 1`] = `
                 cy="44"
                 fill="none"
                 r="20.2"
-                stroke-width="3.6"
+                stroke-Width="3.6"
               />
             </svg>
           </span>

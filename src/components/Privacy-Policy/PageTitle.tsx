@@ -2,7 +2,7 @@ import React from "react"
 
 const PageTitle = () => {
   return (
-    <div className="pt-28 pb-16  md:pt-52  overflow-hidden">
+    <div className="py-8 md:py-16  overflow-hidden">
       <div className="mx-auto max-w-[858px] w-full px-6 lg:px-0 flex flex-col items-center justify-center">
         <div className="self-stretch flex-col justify-center items-center gap-5 flex">
           <div className="self-stretch  flex-col justify-center items-center gap-4 flex">

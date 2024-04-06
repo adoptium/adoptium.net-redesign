@@ -11,16 +11,12 @@ import ContactUs from "../components/ContactUs"
 import Testimonials from "../components/Testimonials"
 import LatestNews from "../components/LatestNews"
 import PageHeader from "../components/PageHeader"
+import Header from "../components/What-We-Do/Header"
 
 const WhatWeDo = () => {
   return (
     <Layout>
-      <PageHeader
-        title="About Eclipse Adoptium®"
-        subtitle="Who we are"
-        description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
-        className={"max-w-[860px] mx-auto"}
-      />
+      <Header />
       <PowerOfTemurin className={undefined} title="The power of Temurin™" />
       <LatestReleases />
       <WGProjects />
@@ -29,7 +25,9 @@ const WhatWeDo = () => {
         className={undefined}
         buttontitle="Learn More"
       />
-      <Testimonials className={undefined} />
+      <Testimonials
+        className={"!bg-transparent py-8 md:py-16 !border-transparent"}
+      />
       <LatestNews className={undefined} title={"Latest news and updates"} />
     </Layout>
   )

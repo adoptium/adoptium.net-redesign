@@ -5,6 +5,8 @@ import DocArticle from "../components/Doc-Article/DocArticle"
 import DocumentationAuthors from "../components/Doc-Article/DocumentationAuthors"
 import ContactUs from "../components/ContactUs"
 import FAQ from "../components/FAQ"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const docarticle = () => {
   return (
@@ -24,3 +26,22 @@ const docarticle = () => {
 }
 
 export default docarticle
+
+export const Head = () => <Seo title="Doc Article" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

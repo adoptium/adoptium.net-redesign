@@ -50,7 +50,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                 rx="3.5"
                 stroke="#FF1464"
                 stroke-opacity="0.25"
-                stroke-width="3"
+                stroke-Width="3"
                 width="11"
                 x="1.5"
                 y="1.5"
@@ -712,7 +712,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -723,14 +723,14 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -762,7 +762,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -773,14 +773,14 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -812,7 +812,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -823,14 +823,14 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -862,7 +862,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -873,14 +873,14 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -912,7 +912,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -923,14 +923,14 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -962,7 +962,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -973,14 +973,14 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -1045,7 +1045,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                 rx="3.5"
                 stroke="#FF1464"
                 stroke-opacity="0.25"
-                stroke-width="3"
+                stroke-Width="3"
                 width="11"
                 x="1.5"
                 y="1.5"
@@ -1481,7 +1481,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -1492,14 +1492,14 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -1531,7 +1531,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -1542,14 +1542,14 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -1581,7 +1581,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -1592,14 +1592,14 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -1631,7 +1631,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -1642,14 +1642,14 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -1681,7 +1681,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -1692,14 +1692,14 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -1731,7 +1731,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -1742,14 +1742,14 @@ exports[`Asciidoc pages > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>

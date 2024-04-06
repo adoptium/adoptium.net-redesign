@@ -117,18 +117,28 @@ body {
     }
   }
 }
+
 .bg-temurin-hero {
   @media (min-width: 640px) {
+    position: relative;
+    top: -95px;
+    pointer-events: none;
     background-image: url("/images/temurin-hero-img.png");
   }
 }
 
 .bg-aqavit-hero {
   @media (min-width: 640px) {
+    position: relative;
+    top: -95px;
+    pointer-events: none;
     background-image: url("../img/eclipse-avarik-hero-bg.png");
   }
 }
 .bg-eclipse-misson-hero {
+  position: relative;
+  top: -95px;
+  pointer-events: none;
   @media (min-width: 640px) {
     background-image: url("../img/Eclipse-Misson-bg-img.png");
   }

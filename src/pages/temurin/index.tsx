@@ -21,7 +21,7 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <HeroSection />
-      <LogoCarousel className={"pt-8 pb-0 lg:py-16"} />
+      <LogoCarousel className={"pt-20 pb-0 lg:py-16"} />
       <PowerOfTemurin className={undefined} title="The power of Temurin™" />
       <InstallationGuideCard />
       <WantToDiscuss />

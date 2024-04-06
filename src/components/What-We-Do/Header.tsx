@@ -4,7 +4,7 @@ import herobg from "../../img/Page-Header-bg.png"
 
 const Header = () => {
   return (
-    <div className=" relative  py-16 md:py-36   overflow-hidden">
+    <div className=" relative  py-16 md:pb-32 md:pt-10   overflow-hidden">
       <img
         className="absolute top-0 left-0  z-[-10] right-0 w-full h-full"
         src={herobg}
@@ -17,15 +17,18 @@ const Header = () => {
             <div className="justify-start items-center gap-3 inline-flex">
               <RedIcon />
               <div className="text-rose-600 text-base font-bold leading-normal">
-                Documentation
+                Who we are
               </div>
             </div>
-
-            <h1 className="self-stretch text-center text-white   text-[36px] lg:text-[80px] leading-[122.222%] md:leading-[120%] font-semibold">
-              Documentation
-            </h1>
+            <div
+              className={`self-stretch text-center text-white   text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold`}
+            >
+              About Eclipse Adoptium®
+            </div>
           </div>
-          <div className="self-stretch   text-center text-lightgrey  text-[20px] font-normal   leading-[140%] max-w-[860px] mx-auto">
+          <div
+            className={`self-stretch   text-center text-lightgrey  text-[20px] font-normal   leading-[140%] max-w-[860px] mx-auto`}
+          >
             Eclipse Temurin offers high-performance, cross-platform, open-source
             Java runtime binaries that are enterprise-ready and Java SE
             TCK-tested for general use in the Java ecosystem.

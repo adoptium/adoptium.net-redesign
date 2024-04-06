@@ -5,7 +5,7 @@ const AllReleasesHeader = () => {
     <section className="">
       <div className="max-w-[700px] mx-auto">
         <div className=" text-center">
-          <h3 className="text-4xl leading-[122%]  text-white  font-semibold">
+          <h3 className="text-[36px] md:text-[48px] leading-[122.222%] md:leading-[116.667%]  text-white  font-semibold">
             All Releases
           </h3>
           <h6 className="text-[#C4BFCE] mt-6 font-normal text-base leading-[150%]">

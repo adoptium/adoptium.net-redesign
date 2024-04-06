@@ -6,6 +6,8 @@ import SupportedPlatform from "../components/Supports/SupportedPlatform"
 import ReleaseRoadMap from "../components/Eclipse-Temurin/ReleaseRoadMap"
 import ContactUs from "../components/ContactUs"
 import Documentation from "../components/Early-Access-Build/Documentation"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const supports = () => {
   return (
@@ -35,3 +37,21 @@ const supports = () => {
 }
 
 export default supports
+export const Head = () => <Seo title="Support" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

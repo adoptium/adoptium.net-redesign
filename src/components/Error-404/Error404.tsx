@@ -5,7 +5,7 @@ import { Error404Icon, RedIcon } from "../Common/Icon"
 
 const Error404 = () => {
   return (
-    <div className="relative pt-24 pb-24 md:pt-52 md:pb-32 flex flex-col justify-center items-center">
+    <div className="relative pt-24 pb-24 md:pt-32 md:pb-32 flex flex-col justify-center items-center">
       <img
         className="absolute top-0 left-0 w-full h-full -z-10 hidden md:block"
         src={errorbg}

@@ -7,6 +7,8 @@ import OurMamber from "../components/Our-Community/OurMamber"
 import EventCard from "../components/Our-Community/EventCard"
 import EventWapper from "../components/Our-Community/EventWapper"
 import LatestNews from "../components/LatestNews"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const ourcommunity = () => {
   return (
@@ -35,3 +37,21 @@ const ourcommunity = () => {
 }
 
 export default ourcommunity
+export const Head = () => <Seo title="Our Community" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

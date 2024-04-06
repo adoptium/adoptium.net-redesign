@@ -1,36 +1,45 @@
 import React from "react"
 import { Link } from "gatsby-plugin-react-i18next"
-import { RedIcon } from "../../Common/Icon"
+
 import { FaApple, FaWindows } from "react-icons/fa"
+import { AdobeIcon2, RedIcon } from "../../Common/Icon"
 
 const LatestReleases = () => {
   const LatestReleasesCard = [
     {
       id: 1,
+      redicon: <RedIcon />,
       release: "Latest Release",
       content: "jdk-21+35 - Temurin",
-      Date: "12 October 2023 •  macOS • aarch64",
+      Date: "Release Date: 12 October 2023",
+      builddate: "Build Date: 12 October 2023 •  macOS • aarch64",
       link: "/",
     },
     {
       id: 2,
-      release: "Latest Release",
+      redicon: undefined,
+      release: undefined,
       content: "jdk-21+35 - Temurin",
-      Date: "12 October 2023 •  macOS • aarch64",
+      Date: "Release Date: 12 October 2023",
+      builddate: "Build Date: 12 October 2023 •  macOS • aarch64",
       link: "/",
     },
     {
       id: 3,
-      release: "Latest Release",
+      redicon: undefined,
+      release: undefined,
       content: "jdk-21+35 - Temurin",
-      Date: "12 October 2023 •  macOS • aarch64",
+      Date: "Release Date: 12 October 2023",
+      builddate: "Build Date: 12 October 2023 •  macOS • aarch64",
       link: "/",
     },
     {
       id: 4,
-      release: "Latest Release",
+      redicon: undefined,
+      release: undefined,
       content: "jdk-21+35 - Temurin",
-      Date: "12 October 2023 •  macOS • aarch64",
+      Date: "Release Date: 12 October 2023",
+      builddate: "Build Date: 12 October 2023 •  macOS • aarch64",
       link: "/",
     },
   ]
@@ -45,29 +54,33 @@ const LatestReleases = () => {
           Java runtime <br /> binaries that are enterprise-ready and Java SE
           TCK-tested for general use in the Java ecosystem.
         </p>
-        <div className="flex xl:flex-nowrap flex-wrap justify-center max-w-[1264px] w-full mx-auto gap-x-8 gap-y-4 py-16">
+        <div className="flex xl:flex-nowrap flex-wrap justify-center max-w-[1264px] w-full mx-auto gap-x-8 gap-y-4 pt-10 pb-8  md:py-16 ">
           {LatestReleasesCard.map((card, index) => (
             <div
               key={index}
-              className="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+              className="p-8 release-card     backdrop-blur-12 bg-[#200D46]"
             >
-              {index === 0 && (
-                <h2 className="text-primary text-base leading-6 font-normal flex items-center gap-x-3">
-                  <span className="">
-                    <RedIcon />
-                  </span>
-                  {card.release}
-                </h2>
-              )}
-              <p className="text-white text-2xl font-normal leading-8 mt-2">
+              <div className="mb-8">
+                <AdobeIcon2 />
+              </div>
+              <h3 className="flex items-center gap-2 pb-2 text-[16px] font-bold leading-[150%] text-primary  ">
+                <span>{card.redicon}</span>
+                {card.release}
+              </h3>
+
+              <p className="text-white text-2xl font-normal leading-[133.333%] ">
                 {card.content}
               </p>
-              <span className="text-base text-[#C4BFCE] font-normal leading-6 block mt-4">
+              <span className=" text-lightgrey tab-button-text block mt-4">
                 {card.Date}
+              </span>
+              <span className=" text-lightgrey tab-button-text block mt-4">
+                {card.builddate}
               </span>
               <Link
                 to={card.link}
                 className="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
+                placeholder={undefined}
               >
                 <span>
                   <FaApple />
@@ -81,7 +94,7 @@ const LatestReleases = () => {
           <p className="text-xl text-white font-normal leadig-7 !mb-0 text-center">
             Eclipse Temurin offers high-performance
           </p>
-          <Link to="/temurin/releases">
+          <Link to="/temurin/releases" placeholder={undefined}>
             <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px] ">
               See all Releases
             </button>

@@ -16,7 +16,7 @@ const AQAvit = () => {
     <Layout>
       <HeroSection />
       <PowerOfTemurin
-        className={"!py-0 md:!py-24"}
+        className={"!pt-28 !pb-0 md:!py-16"}
         title="The power of AQAvit"
       />
       <div className="pb-10">

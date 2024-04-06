@@ -4,6 +4,8 @@ import PageHeader from "../components/PageHeader"
 import FaqsBlock from "../components/Faqs/FaqsBlock"
 import Documentation from "../components/Early-Access-Build/Documentation"
 import ContactUs from "../components/ContactUs"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const faqs = () => {
   return (
@@ -30,3 +32,21 @@ const faqs = () => {
 }
 
 export default faqs
+export const Head = () => <Seo title="FAQS" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

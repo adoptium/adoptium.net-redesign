@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../components/Layout"
 import PageHeader from "../components/PageHeader"
 import ContactForm from "../components/Working-Form/ContactForm"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const sponsorform = () => {
   return (
@@ -18,3 +20,22 @@ const sponsorform = () => {
 }
 
 export default sponsorform
+
+export const Head = () => <Seo title="Sponsor Form" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

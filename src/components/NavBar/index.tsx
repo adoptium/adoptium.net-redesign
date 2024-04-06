@@ -65,6 +65,8 @@ const navigation: NavItem[] = [
 
 const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
+  console.log(isVisible)
   const [showLastSlide, setShowLastSlide] = useState(false)
   const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null)
   useEffect(() => {
@@ -77,11 +79,27 @@ const NavBar = () => {
     setShowLastSlide(true)
     setActiveLastSlide(item)
   }
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 100) {
+      setIsVisible(true)
+    } else {
+      setIsVisible(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility)
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility)
+    }
+  }, [])
 
   return (
-    <header className="absolute max-w-[1288px] w-full mx-auto px-3 inset-x-0 top-0 z-50">
+    <header
+      className={`${isVisible ? "bg-[#200D46] border-[#3E3355] border-b-2" : ""}   sticky  w-full px-3 inset-x-0 top-0 z-50`}
+    >
       <nav
-        className="flex items-center gap-5 justify-between py-6"
+        className="flex items-center gap-5 justify-between py-6   max-w-[1288px] w-full mx-auto"
         aria-label="Global"
       >
         <Link to="/" placeholder={undefined}>
@@ -108,26 +126,26 @@ const NavBar = () => {
                 height="46"
                 rx="23"
                 stroke="#3E3355"
-                strokeWidth="2"
+                stroke-Width="2"
               />
               <path
                 d="M15 24H33"
                 stroke="white"
-                strokeWidth="1.5"
+                stroke-Width="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
                 d="M15 18H33"
                 stroke="white"
-                strokeWidth="1.5"
+                stroke-Width="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
                 d="M15 30H33"
                 stroke="white"
-                strokeWidth="1.5"
+                stroke-Width="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -239,19 +257,19 @@ const NavBar = () => {
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  strokeWidth="2"
+                  stroke-Width="2"
                 />
                 <path
                   d="M30 18L18 30"
                   stroke="white"
-                  strokeWidth="1.5"
+                  stroke-Width="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
                   d="M18 18L30 30"
                   stroke="white"
-                  strokeWidth="1.5"
+                  stroke-Width="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
@@ -285,7 +303,7 @@ const NavBar = () => {
                           <path
                             d="M1.5 11L6.5 6L1.5 1"
                             stroke="white"
-                            strokeWidth="1.5"
+                            stroke-Width="1.5"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
@@ -333,19 +351,19 @@ const NavBar = () => {
                     height="46"
                     rx="23"
                     stroke="#3E3355"
-                    strokeWidth="2"
+                    stroke-Width="2"
                   />
                   <path
                     d="M31 24H17"
                     stroke="white"
-                    strokeWidth="1.5"
+                    stroke-Width="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                   <path
                     d="M24 31L17 24L24 17"
                     stroke="white"
-                    strokeWidth="1.5"
+                    stroke-Width="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />

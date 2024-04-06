@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../components/Layout"
 import PageHeader from "../components/PageHeader"
 import ContactForm from "../components/Working-Form/ContactForm"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const workingform = () => {
   return (
@@ -18,3 +20,21 @@ const workingform = () => {
 }
 
 export default workingform
+export const Head = () => <Seo title="Working Form" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

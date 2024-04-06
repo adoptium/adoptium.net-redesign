@@ -28,8 +28,8 @@
 	.st2{enable-background:new    ;}
 	.st3{fill:#009FE3;}
 	
-		.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#009FE3;stroke-width:4.4817;stroke-linejoin:round;stroke-miterlimit:15.1181;}
-	.st5{fill:none;stroke:#009FE3;stroke-width:5.9756;stroke-linecap:round;stroke-miterlimit:15.1181;}
+		.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#009FE3;stroke-Width:4.4817;stroke-linejoin:round;stroke-miterlimit:15.1181;}
+	.st5{fill:none;stroke:#009FE3;stroke-Width:5.9756;stroke-linecap:round;stroke-miterlimit:15.1181;}
 	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#009FE3;}
 	.st7{fill:#FFFFFF;}
 	.st8{fill:#1D1D1B;}

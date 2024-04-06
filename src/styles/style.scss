@@ -137,3 +137,27 @@
   background-color: #e6f3ff;
   border: 2px solid #008afc;
 }
+.filter-sidebar-show {
+  position: fixed;
+  right: 0;
+  transition: 0.3s ease-in-out;
+  top: 0;
+  height: 100vh;
+  z-index: 999;
+}
+
+.sidebar-show .filter-sidebar-show {
+  right: -100%;
+}
+
+.scroll-sidebar::-webkit-scrollbar {
+  width: 4px;
+
+  background-color: transparent;
+}
+
+.scroll-sidebar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 6px;
+  height: 5px;
+}

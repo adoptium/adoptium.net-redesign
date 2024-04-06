@@ -6,9 +6,9 @@ import { FaApple } from "react-icons/fa"
 const HeroSection = () => {
   return (
     <div>
-      <div className="bg-purple sm:bg-contain bg-aqavit-hero bg-center bg-no-repeat relative lg:mb-8">
+      <div className="bg-purple sm:bg-contain bg-aqavit-hero bg-center bg-no-repeat relative -z-10 lg:mb-8">
         <div className="relative isolate">
-          <div className="max-w-[414px] w-full  absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]">
+          <div className="max-w-[414px] w-full  absolute sm:hidden  z-[-1] left-[50%] translate-x-[-50%]">
             <img className="w-full h-full " src={herobgmoble} alt="" />
           </div>
           <div
@@ -16,7 +16,7 @@ const HeroSection = () => {
             aria-hidden="true"
           ></div>
           <div className="max-w-[1264px] mx-auto flex justify-center items-center">
-            <div className="mx-auto max-w-[832px] w-full h-[680px] sm:h-[720px] px-8 lg:px-0 flex items-center">
+            <div className="mx-auto max-w-[832px] w-full h-[507px] sm:h-[720px] px-8 lg:px-0 flex items-center">
               <div className="text-center w-full mt-20 md:mt-12">
                 <h1 className="font-semibold leading-[112.5%] lg:leading-[115.385%] text-white-900 text-[64px] lg:text-[104px]">
                   Eclipse AQAvit

@@ -5,6 +5,8 @@ import ImageText from "../components/ImageText"
 import Documentation from "../components/Early-Access-Build/Documentation"
 import AllReleases from "../components/Early-Access-Build/AllReleases"
 import ApiInformation from "../components/Early-Access-Build/ApiInformation"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const earlybuild = () => {
   return (
@@ -19,7 +21,7 @@ const earlybuild = () => {
 
         <AllReleases />
         <ApiInformation />
-
+        <div className="w-full h-[1px] my-8 lg:my-16 bg-[#3E3355]"></div>
         <Documentation />
       </Layout>
     </>
@@ -27,3 +29,22 @@ const earlybuild = () => {
 }
 
 export default earlybuild
+
+export const Head = () => <Seo title="Early Access Build" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

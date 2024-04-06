@@ -6,9 +6,9 @@ import { FaApple } from "react-icons/fa"
 const HeroSection = () => {
   return (
     <div>
-      <div className="bg-purple sm:bg-contain bg-eclipse-misson-hero bg-center bg-no-repeat relative lg:mb-8">
+      <div className="bg-purple sm:bg-contain bg-eclipse-misson-hero bg-center bg-no-repeat relative -z-10 lg:mb-8">
         <div className="relative isolate">
-          <div className="max-w-[414px] w-full  absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]">
+          <div className="max-w-[414px] w-full top-[80px] absolute sm:hidden z-[-1] left-[50%] translate-x-[-50%]">
             <img className="w-full h-full " src={herobgmoble} alt="" />
           </div>
           <div

@@ -17,14 +17,14 @@ const SelectorHeader = ({ title, data }) => {
             <path
               d="M10 4.16699V15.8337"
               stroke="white"
-              strokeWidth="1.5"
+              stroke-Width="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M4.16602 10H15.8327"
               stroke="white"
-              strokeWidth="1.5"
+              stroke-Width="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             />

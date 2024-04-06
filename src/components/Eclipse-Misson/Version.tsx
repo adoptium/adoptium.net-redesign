@@ -8,6 +8,7 @@ const Version = () => {
   const ReleasesHistoryCard = [
     {
       id: 1,
+      redicon: <RedIcon />,
       release: "Latest Release",
       content: "jdk-21+35 - Temurin",
       Date: "Release Date: 12 October 2023",
@@ -16,7 +17,8 @@ const Version = () => {
     },
     {
       id: 2,
-      release: "Latest Release",
+      redicon: undefined,
+      release: undefined,
       content: "jdk-21+35 - Temurin",
       Date: "Release Date: 12 October 2023",
       builddate: "Build Date: 12 October 2023 •  macOS • aarch64",
@@ -24,7 +26,8 @@ const Version = () => {
     },
     {
       id: 3,
-      release: "Latest Release",
+      redicon: undefined,
+      release: undefined,
       content: "jdk-21+35 - Temurin",
       Date: "Release Date: 12 October 2023",
       builddate: "Build Date: 12 October 2023 •  macOS • aarch64",
@@ -32,7 +35,8 @@ const Version = () => {
     },
     {
       id: 4,
-      release: "Latest Release",
+      redicon: undefined,
+      release: undefined,
       content: "jdk-21+35 - Temurin",
       Date: "Release Date: 12 October 2023",
       builddate: "Build Date: 12 October 2023 •  macOS • aarch64",
@@ -41,7 +45,7 @@ const Version = () => {
   ]
   return (
     <>
-      <section className="px-6 xl:px-0 flex flex-col items-center justify-center pt-8 lg:pt-24 lg:pb-0 ">
+      <section className="px-6 xl:px-0 flex flex-col items-center justify-center pt-8 lg:pt-0 lg:pb-0 ">
         <h2 className="text-white text-[36px] leading-[122.222%]  md:text-5xl font-semibold  md:leading-[116.667%] text-center">
           Versions
         </h2>
@@ -59,6 +63,10 @@ const Version = () => {
               <div className="mb-8">
                 <AdobeIcon2 />
               </div>
+              <h3 className="flex items-center gap-2 pb-2 text-[16px] font-bold leading-[150%] text-primary  ">
+                <span>{card.redicon}</span>
+                {card.release}
+              </h3>
 
               <p className="text-white text-2xl font-normal leading-[133.333%] ">
                 {card.content}

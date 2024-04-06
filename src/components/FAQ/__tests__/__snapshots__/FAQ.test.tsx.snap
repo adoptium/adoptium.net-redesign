@@ -60,7 +60,7 @@ exports[`FAQ component > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -71,14 +71,14 @@ exports[`FAQ component > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -110,7 +110,7 @@ exports[`FAQ component > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -121,14 +121,14 @@ exports[`FAQ component > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -160,7 +160,7 @@ exports[`FAQ component > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -171,14 +171,14 @@ exports[`FAQ component > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -210,7 +210,7 @@ exports[`FAQ component > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -221,14 +221,14 @@ exports[`FAQ component > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -260,7 +260,7 @@ exports[`FAQ component > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -271,14 +271,14 @@ exports[`FAQ component > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>
@@ -310,7 +310,7 @@ exports[`FAQ component > renders correctly 1`] = `
                   height="46"
                   rx="23"
                   stroke="#3E3355"
-                  stroke-width="2"
+                  stroke-Width="2"
                   width="46"
                   x="1"
                   y="1"
@@ -321,14 +321,14 @@ exports[`FAQ component > renders correctly 1`] = `
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
                 <path
                   d="M17 24H31"
                   stroke="white"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="1.5"
+                  stroke-Width="1.5"
                 />
               </svg>
             </span>

@@ -12,7 +12,7 @@ const SearchInput = () => {
   return (
     <>
       <div className="flex justify-between items-center flex-col sm:flex-row  gap-4">
-        <div className=" border-[#3E3355] border-2 rounded-[80px] px-4 py-3 flex justify-between items-center gap-2 sm:max-w-[436px] w-full">
+        <div className=" border-[#3E3355] border-2 rounded-[80px] px-6 py-3 flex justify-between items-center gap-2 sm:max-w-[436px] w-full">
           <input
             className="bg-transparent outline-none text-white tab-button-text w-full placeholder:text-white"
             placeholder="Search here..."

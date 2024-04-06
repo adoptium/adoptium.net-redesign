@@ -83,14 +83,14 @@ const Features = () => {
                 className="text-white"
                 aria-label="Previous Feature"
               >
-                <FiArrowLeftCircle size={50} strokeWidth={1} />
+                <FiArrowLeftCircle size={50} stroke-Width={1} />
               </button>
               <button
                 onClick={handleNextbase}
                 className="text-white"
                 aria-label="Next Feature"
               >
-                <FiArrowRightCircle size={50} strokeWidth={1} />
+                <FiArrowRightCircle size={50} stroke-Width={1} />
               </button>
             </div>
           </div>
@@ -135,14 +135,14 @@ const Features = () => {
             <button onClick={handlePrevbase} className="text-white">
               <FiArrowLeftCircle
                 size={50}
-                strokeWidth={1}
+                stroke-Width={1}
                 aria-label="Previous Feature"
               />
             </button>
             <button onClick={handleNextbase} className="text-white">
               <FiArrowRightCircle
                 size={50}
-                strokeWidth={1}
+                stroke-Width={1}
                 aria-label="Next Feature"
               />
             </button>

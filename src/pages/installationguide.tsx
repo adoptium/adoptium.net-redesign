@@ -5,6 +5,8 @@ import FAQ from "../components/FAQ"
 import InstallationArticle from "../components/Installation-Guide/InstallationArticle"
 import Layout from "../components/Layout"
 import PageHeader from "../components/PageHeader"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const installationguide = () => {
   return (
@@ -30,3 +32,22 @@ const installationguide = () => {
 }
 
 export default installationguide
+
+export const Head = () => <Seo title="Installation Guide" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

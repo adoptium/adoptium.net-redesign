@@ -4,6 +4,8 @@ import PageHeader from "../components/PageHeader"
 import DocumentationCategoryList from "../components/Documentation/DocumentationCategoryList"
 import TryDocumentation from "../components/Resource-Directory/TryDocumentation"
 import FAQ from "../components/FAQ"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const resourcedirectory = () => {
   return (
@@ -27,3 +29,21 @@ const resourcedirectory = () => {
 }
 
 export default resourcedirectory
+export const Head = () => <Seo title="Resource Directory" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

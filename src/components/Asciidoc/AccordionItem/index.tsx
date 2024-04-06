@@ -23,9 +23,9 @@ const AccordionItem = ({ title, children }) => {
           >
             <span>{title}</span>
             {isOpen ? (
-              <CiCircleMinus size={45} strokeWidth={0.1} />
+              <CiCircleMinus size={45} stroke-Width={0.1} />
             ) : (
-              <CiCirclePlus size={45} strokeWidth={0.1} />
+              <CiCirclePlus size={45} stroke-Width={0.1} />
             )}
           </button>
         </h2>

@@ -7,7 +7,7 @@ import contactbgmobile from "../../img/gradient-overlay-mobile.png"
 const ContactUs = ({ title, className, buttontitle }) => {
   return (
     <>
-      <section className={`relative  xl:px-0 px-6 md:py-32 py-16 ${className}`}>
+      <section className={`relative  xl:px-0 px-6 md:py-32 py-12 ${className}`}>
         <img
           className="hidden md:block absolute bg-center top-0 left-0  right-0 w-full h-full z-[-10]"
           src={contactbg}

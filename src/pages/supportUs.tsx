@@ -4,6 +4,8 @@ import PageHeader from "../components/PageHeader"
 import WaysSupport from "../components/Support-us/WaysSupport"
 import MediaAndPromotion from "../components/Support-us/Media&Promotion"
 import ContactUs from "../components/ContactUs"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const supportUs = () => {
   return (
@@ -28,3 +30,22 @@ const supportUs = () => {
 }
 
 export default supportUs
+
+export const Head = () => <Seo title="Support Us" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

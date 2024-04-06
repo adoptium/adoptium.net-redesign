@@ -13,7 +13,7 @@ export const DownArrowIcon = () => {
         <path
           d="M5 7.5L10 12.5L15 7.5"
           stroke="white"
-          stroke-width="1.5"
+          stroke-Width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -53,7 +53,7 @@ export const DownloadIcon = () => {
           d="M17.5 12.5V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V12.5"
           stroke="white"
           className="group-hover:stroke-primary group-hover:transition-all  group-hover:duration-300  group-hover:ease-in-out"
-          stroke-width="1.5"
+          stroke-Width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -61,7 +61,7 @@ export const DownloadIcon = () => {
           d="M5.83203 8.33301L9.9987 12.4997L14.1654 8.33301"
           stroke="white"
           className="group-hover:stroke-primary  group-hover:transition-all group-hover:duration-300 group-hover:ease-in-out"
-          stroke-width="1.5"
+          stroke-Width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -69,7 +69,7 @@ export const DownloadIcon = () => {
           d="M10 12.5V2.5"
           stroke="white"
           className="group-hover:stroke-primary group-hover:transition-all  group-hover:duration-300 group-hover:ease-in-out"
-          stroke-width="1.5"
+          stroke-Width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -92,7 +92,7 @@ export const CopyIcon = () => {
             d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
             stroke="#C4BFCE"
             className="group-hover:stroke-primary group-hover:transition-all  group-hover:duration-300  group-hover:ease-in-out"
-            stroke-width="1.5"
+            stroke-Width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
@@ -100,7 +100,7 @@ export const CopyIcon = () => {
             d="M3.33203 9.99967H2.66536C2.31174 9.99967 1.9726 9.8592 1.72256 9.60915C1.47251 9.3591 1.33203 9.01996 1.33203 8.66634V2.66634C1.33203 2.31272 1.47251 1.97358 1.72256 1.72353C1.9726 1.47348 2.31174 1.33301 2.66536 1.33301H8.66536C9.01899 1.33301 9.35813 1.47348 9.60817 1.72353C9.85822 1.97358 9.9987 2.31272 9.9987 2.66634V3.33301"
             stroke="#C4BFCE"
             className="group-hover:stroke-primary group-hover:transition-all  group-hover:duration-300  group-hover:ease-in-out"
-            stroke-width="1.5"
+            stroke-Width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
@@ -128,7 +128,7 @@ export const CrossIcon = () => {
           d="M12.5 22C18.0228 22 22.5 17.5228 22.5 12C22.5 6.47715 18.0228 2 12.5 2C6.97715 2 2.5 6.47715 2.5 12C2.5 17.5228 6.97715 22 12.5 22Z"
           stroke="#C4BFCE"
           className="group-hover:stroke-primary transition-all duration-300 ease-in-out"
-          stroke-width="1.5"
+          stroke-Width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -136,7 +136,7 @@ export const CrossIcon = () => {
           d="M15.5 9L9.5 15"
           stroke="#C4BFCE"
           className="group-hover:stroke-primary transition-all duration-300 ease-in-out"
-          stroke-width="1.5"
+          stroke-Width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -144,7 +144,7 @@ export const CrossIcon = () => {
           d="M9.5 9L15.5 15"
           stroke="#C4BFCE"
           className="group-hover:stroke-primary transition-all duration-300 ease-in-out"
-          stroke-width="1.5"
+          stroke-Width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -210,14 +210,14 @@ export const CheckIcon = () => (
     <path
       d="M22.5 11.08V12C22.4988 14.1564 21.8005 16.2547 20.5093 17.9818C19.2182 19.709 17.4033 20.9725 15.3354 21.5839C13.2674 22.1953 11.0573 22.1219 9.03447 21.3746C7.01168 20.6273 5.28465 19.2461 4.11096 17.4371C2.93727 15.628 2.37979 13.4881 2.52168 11.3363C2.66356 9.18455 3.49721 7.13631 4.89828 5.49706C6.29935 3.85781 8.19279 2.71537 10.2962 2.24013C12.3996 1.7649 14.6003 1.98232 16.57 2.85999"
       stroke="#FF1464"
-      stroke-width="1.5"
+      stroke-Width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M22.5 4L12.5 14.01L9.5 11.01"
       stroke="#FF1464"
-      stroke-width="1.5"
+      stroke-Width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -255,14 +255,14 @@ export const RedCrossIcon = () => (
     <path
       d="M18.5 6L6.5 18"
       stroke="#FF1464"
-      stroke-width="1.5"
+      stroke-Width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M6.5 6L18.5 18"
       stroke="#FF1464"
-      stroke-width="1.5"
+      stroke-Width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -565,3 +565,29 @@ export const AdobeIcon3 = () => {
     </>
   )
 }
+
+export const AnnouncementBarIcon = () => (
+  <svg
+    className="group-hover:translate-x-1 transition-all duration-150 ease-in-out"
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M4.16406 10H15.8307"
+      stroke="#FF1464"
+      stroke-Width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M10 4.16666L15.8333 9.99999L10 15.8333"
+      stroke="#FF1464"
+      stroke-Width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+)

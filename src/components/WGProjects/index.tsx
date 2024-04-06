@@ -29,11 +29,11 @@ const projects: Project[] = [
 
 const WGProjects = () => {
   return (
-    <div className="bg-blue py-16 sm:pt-32 pb-20">
+    <div className="bg-blue py-16 sm:pt-32 sm:pb-20">
       <div className=" max-w-[1264px] mx-auto px-6 ">
         <div className="max-w-[700px] mx-auto">
           <CommonHeading
-            title="Other projects"
+            title="A short title about products"
             description={
               "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem. "
             }

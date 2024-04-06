@@ -24,12 +24,12 @@ const OurMamberWapper = () => {
   return (
     <div className=" max-w-[1264px]  w-full mx-auto flex flex-col items-center justify-center mb-5  mt-14">
       <div className="min-w-full w-full overflow-auto">
-        <div className="grid grid-cols-4  gap-4 md:gap-6 min-w-[774px] md:min-w-[1230px]   mx-auto">
+        <div className="grid grid-cols-4  gap-4 md:gap-6 min-w-[740px] md:min-w-[1230px]   mx-auto">
           {github.map(data => (
             <Link to="">
               <div
                 key={data.id}
-                className="w-[178px]  md:!w-[290px] h-[86px] md:h-[110px] flex justify-center items-center  rounded-[20px] bg-white "
+                className="!w-[168px]  md:!w-[290px] h-[86px] md:h-[110px] flex justify-center items-center  rounded-[20px] bg-white "
               >
                 {data.svg}
               </div>

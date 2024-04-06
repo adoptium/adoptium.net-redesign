@@ -5,6 +5,8 @@ import BrandGuidline from "../components/Brand-Promotion/BrandGuidline"
 import TemriunDownloandButtons from "../components/Brand-Promotion/TemriunDownloandButtons"
 import WayToSupport from "../components/Brand-Promotion/WayToSupport"
 import ContactUs from "../components/ContactUs"
+import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 const brandpromotion = () => {
   return (
@@ -30,3 +32,21 @@ const brandpromotion = () => {
 }
 
 export default brandpromotion
+export const Head = () => <Seo title="Brand & Promotion" />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mostRecentLts {
+      version
+    }
+  }
+`

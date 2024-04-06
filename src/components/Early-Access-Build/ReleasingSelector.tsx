@@ -33,7 +33,7 @@ const ReleasingSelector = ({ className }) => {
   return (
     <div>
       {" "}
-      <div className={`my-[50px] ${className}`}>
+      <div className={`my-8 md:my-[64px] ${className}`}>
         <SelectorHeader
           data={[tokenlist, Architeccture, Package, Version]}
           title={titles}

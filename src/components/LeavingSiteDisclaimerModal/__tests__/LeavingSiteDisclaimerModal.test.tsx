@@ -15,14 +15,14 @@ describe('LeavingSiteDisclaimerModal component', () => {
     const { container } = render(
       <LeavingSiteDisclaimerModal open={false} setOpen={undefined}  message={""} location={""} />
     );
-    expect(container).toMatchSnapshot();
+    expect(container).toMatchSnapshot()
   });
 
   it('LeavingSiteDisclaimerModal renders correctly when open', () => {
     const { container } = render(
       <LeavingSiteDisclaimerModal open={true} setOpen={undefined}  message={"message_mock"} location={"location_mock"} />
     );
-    expect(container).toMatchSnapshot();
+    expect(container).toMatchSnapshot()
   });
 
   it('LeavingSiteDisclaimerModal continue correctly when continue is clicked', async () => {
@@ -36,7 +36,7 @@ describe('LeavingSiteDisclaimerModal component', () => {
 
     await userEvent.click(cancelButton).then(async() => {
       expect(setOpen).toBeCalledTimes(1)
-      expect(container).toMatchSnapshot();
+      expect(container).toMatchSnapshot()
     });
   });
 
@@ -51,7 +51,7 @@ describe('LeavingSiteDisclaimerModal component', () => {
 
     await userEvent.click(continueButton).then(async() => {
       expect(setOpen).toBeCalledTimes(0)
-      expect(container).toMatchSnapshot();
+      expect(container).toMatchSnapshot()
     });
   });
 });

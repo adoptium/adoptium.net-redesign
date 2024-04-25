@@ -64,6 +64,7 @@ const LeavingSiteDisclaimerModal = ({ open, setOpen, message, location }) => {
                 <div className="bg-purple px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                   <button
                     type="button"
+                    data-testid="continue"
                     className={`mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 text-base font-medium text-white sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm bg-pink hover:bg-pink-700`}
                     onClick={(event) => {
                       event.preventDefault();
@@ -74,6 +75,7 @@ const LeavingSiteDisclaimerModal = ({ open, setOpen, message, location }) => {
                   </button>
                   <button
                     type="button"
+                    data-testid="cancel"
                     className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 sm:mt-0 sm:w-auto sm:text-sm"
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}

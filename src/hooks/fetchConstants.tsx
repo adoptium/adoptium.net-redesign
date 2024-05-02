@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import {capitalize} from '../util/capitalize'
 
 const baseUrl = 'https://api.adoptium.net/v3';
 
@@ -14,10 +15,12 @@ export function fetchOses(isVisible: boolean): OperatingSystem[] {
 
             axios.get(url)
                 .then(function (response) {
-                    const newOses = response.data.map(s => {
-                        const o: OperatingSystem = { name: s, value: s.toLowerCase() }
-                        return o
-                    })
+                    const newOses = response.data
+                        .map(s => {
+                            const o: OperatingSystem = { name: capitalize(s), value: s.toLowerCase() }
+                            return o
+                        })
+                        .sort((o1, o2) => o1.name.localeCompare(o2.name))
 
                     setOses(newOses);
                 })
@@ -42,11 +45,13 @@ export function fetchArches(isVisible: boolean): Architecture[] {
 
             axios.get(url)
                 .then(function (response) {
-                    const newArches = response.data.map(s => {
-                        const a: Architecture = { name: s, value: s.toLowerCase() }
-                        if(a.name === 'x32') a.name = 'x86'
-                        return a;
-                    })
+                    const newArches = response.data
+                        .map(s => {
+                            const a: Architecture = { name: capitalize(s), value: s.toLowerCase() }
+                            if(a.name === 'x32') a.name = 'x86'
+                            return a;
+                        })
+                        .sort((a1, a2) => a1.name.localeCompare(a2.name))    
 
                     setArches(newArches);
                 })

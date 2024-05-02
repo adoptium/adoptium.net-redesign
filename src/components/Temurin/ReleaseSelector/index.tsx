@@ -1,7 +1,8 @@
 import React from "react"
 import SelectorHeader from "../../Common/SelectorHeader"
 
-import { oses, arches, packageTypes } from "../../../util/defaults"
+import { fetchOses, fetchArches} from '../../../hooks/fetchConstants'
+import { packageTypes } from "../../../util/defaults"
 
 interface ReleaseSelectorProps {
   marketplace?: boolean
@@ -42,7 +43,7 @@ const ReleaseSelector: React.FC<ReleaseSelectorProps> = ({
     }
   })
 
-  const data = [oses, arches, versionsList]
+  const data = [fetchOses(true), fetchArches(true), versionsList]
   if (marketplace) {
     data.push(packageTypes)
   }

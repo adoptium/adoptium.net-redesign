@@ -12,6 +12,8 @@ import {
   NewsResponse,
   ReleaseAsset,
   TemurinReleases,
+  OperatingSystem,
+  Architecture
 } from "../hooks"
 
 export const createRandomTemurinRelease = (installer): ReleaseAsset => ({
@@ -392,3 +394,12 @@ export const createMockAdoptiumContributorsApi =
       "https://api.github.com/users/test-user/received_events",
     site_admin: false,
   })
+
+  export const mockOsesAPI = (): OperatingSystem[] => (
+    [{name: "mock_macos", value: "mock_macos"}, {name: "mock_linux", value: "mock_linux"}, {name: "mock_windows", value: "mock_windows"}]
+  )
+  
+  export const mockArchesAPI = (): Architecture[] => (
+    [{name: "mock_aarch64", value: "mock_aarch64"}, {name: "mock_ppc64", value: "mock_ppc64"}, {name: "mock_x64", value: "mock_x64"}
+  ])
+  

@@ -7,13 +7,8 @@ import VendorSelector from "../VendorSelector"
 import { detectOS, UserOS } from "../../util/detectOS"
 import { setURLParam } from "../../util/setURLParam"
 import { capitalize } from "../../util/capitalize"
-import {
-  oses,
-  arches,
-  packageTypes,
-  defaultArchitecture,
-  defaultPackageType,
-} from "../../util/defaults"
+import { packageTypes, defaultArchitecture, defaultPackageType} from '../../util/defaults';
+import { fetchOses, fetchArches} from '../../hooks/fetchConstants'
 
 const DownloadDropdowns = ({ updaterAction, marketplace, Table }) => {
   const data = useStaticQuery(graphql`
@@ -47,7 +42,7 @@ const DownloadDropdowns = ({ updaterAction, marketplace, Table }) => {
   const osParam = queryStringParams.os
   if (osParam) {
     let sop = osParam.toString().toLowerCase()
-    if (oses.findIndex(os => os.toLowerCase() === sop) >= 0)
+    if (fetchOses(true).findIndex(os => os.value === sop) >= 0)
       defaultSelectedOS = sop
   }
 
@@ -56,7 +51,7 @@ const DownloadDropdowns = ({ updaterAction, marketplace, Table }) => {
   const archParam = queryStringParams.arch
   if (archParam) {
     let sap = archParam.toString().toLowerCase()
-    if (arches.findIndex(a => a.toLowerCase() === sap) >= 0)
+    if (fetchArches(true).findIndex(a => a.value === sap) >= 0)
       defaultSelectedArch = sap
   }
 
@@ -65,7 +60,7 @@ const DownloadDropdowns = ({ updaterAction, marketplace, Table }) => {
   const packageParam = queryStringParams.package
   if (packageParam) {
     let spp = packageParam.toString().toLowerCase()
-    if (packageTypes.findIndex(p => p.toLowerCase() === spp) >= 0)
+    if (packageTypes.findIndex(p => p.value === spp) >= 0)
       defaultSelectedPackageType = spp
   }
 
@@ -224,13 +219,13 @@ const DownloadDropdowns = ({ updaterAction, marketplace, Table }) => {
             <option key="any" value="any">
               <Trans>Any</Trans>
             </option>
-            {oses
-              .sort((os1, os2) => os1.localeCompare(os2))
+            {fetchOses(true)
+              .sort((os1, os2) => os1.name.localeCompare(os2.name))
               .map(
                 (os, i): string | JSX.Element =>
                   os && (
-                    <option key={`os-${i}`} value={os.toLowerCase()}>
-                      {capitalize(os)}
+                    <option key={`os-${i}`} value={os.value}>
+                      {capitalize(os.name)}
                     </option>
                   ),
               )}
@@ -251,13 +246,13 @@ const DownloadDropdowns = ({ updaterAction, marketplace, Table }) => {
             <option key="any" value="any">
               <Trans>Any</Trans>
             </option>
-            {arches
-              .sort((arch1, arch2) => arch1.localeCompare(arch2))
+            {fetchArches(true)
+              .sort((arch1, arch2) => arch1.name.localeCompare(arch2.name))
               .map(
                 (arch, i): string | JSX.Element =>
                   arch && (
-                    <option key={`arch-${i}`} value={arch.toLowerCase()}>
-                      {arch}
+                    <option key={`arch-${i}`} value={arch.value}>
+                      {arch.name}
                     </option>
                   ),
               )}
@@ -283,9 +278,9 @@ const DownloadDropdowns = ({ updaterAction, marketplace, Table }) => {
                 packageType && (
                   <option
                     key={`packageType-${i}`}
-                    value={packageType.toLowerCase()}
+                    value={packageType.value}
                   >
-                    {packageType}
+                    {packageType.name}
                   </option>
                 ),
             )}

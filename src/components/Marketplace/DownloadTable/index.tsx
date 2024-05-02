@@ -11,9 +11,8 @@ import AllReleaseCard from "../AllReleaseCard"
 import { setURLParam } from "../../../util/setURLParam"
 import { detectOS, UserOS } from "../../../util/detectOS"
 import { getAllPkgsForVersion, MarketplaceRelease } from "../../../hooks"
+import { fetchOses, fetchArches} from '../../../hooks/fetchConstants'
 import {
-  oses,
-  arches,
   packageTypes,
   defaultArchitecture,
   defaultPackageType,
@@ -44,7 +43,7 @@ const DownloadTable = () => {
   const archParam = queryStringParams.arch
   if (archParam) {
     let sap = archParam.toString().toLowerCase()
-    if (arches.findIndex(a => a.value.toLowerCase() === sap) >= 0)
+    if (fetchArches(true).findIndex(a => a.value === sap) >= 0)
       defaultSelectedArch = sap
   }
 
@@ -53,7 +52,7 @@ const DownloadTable = () => {
   const osParam = queryStringParams.os
   if (osParam) {
     let sop = osParam.toString().toLowerCase()
-    if (oses.findIndex(os => os.value.toLowerCase() === sop) >= 0)
+    if (fetchOses(true).findIndex(os => os.value === sop) >= 0)
       defaultSelectedOS = sop
   } else {
     const userOS = detectOS()
@@ -86,7 +85,7 @@ const DownloadTable = () => {
   const packageParam = queryStringParams.package
   if (packageParam) {
     let spp = packageParam.toString().toLowerCase()
-    if (packageTypes.findIndex(p => p.value.toLowerCase() === spp) >= 0)
+    if (packageTypes.findIndex(p => p.value === spp) >= 0)
       defaultSelectedPackageType = spp
   }
 

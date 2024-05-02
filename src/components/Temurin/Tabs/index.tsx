@@ -10,7 +10,8 @@ import ReleaseSelector from "../ReleaseSelector"
 
 import { setURLParam } from "../../../util/setURLParam"
 
-import { oses, arches, packageTypes } from "../../../util/defaults"
+import { fetchOses, fetchArches} from '../../../hooks/fetchConstants'
+import { packageTypes } from "../../../util/defaults"
 
 const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
   const data = useStaticQuery(graphql`
@@ -41,7 +42,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
   const osParam = queryStringParams.os
   if (osParam) {
     let sop = osParam.toString().toLowerCase()
-    if (oses.findIndex(os => os.value.toLowerCase() === sop) >= 0)
+    if (fetchOses(true).findIndex(os => os.value === sop) >= 0)
       defaultSelectedOS = sop
   }
 
@@ -50,7 +51,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
   const archParam = queryStringParams.arch
   if (archParam) {
     let sap = archParam.toString().toLowerCase()
-    if (arches.findIndex(a => a.value.toLowerCase() === sap) >= 0)
+    if (fetchArches(true).findIndex(a => a.value === sap) >= 0)
       defaultSelectedArch = sap
   }
 
@@ -59,7 +60,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
   const packageParam = queryStringParams.package
   if (packageParam) {
     let spp = packageParam.toString().toLowerCase()
-    if (packageTypes.findIndex(p => p.value.toLowerCase() === spp) >= 0)
+    if (packageTypes.findIndex(p => p.value === spp) >= 0)
       defaultSelectedPackageType = spp
   }
 

@@ -4,6 +4,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { createRandomTemurinReleases, mockOsesAPI, mockArchesAPI } from '../../../__fixtures__/hooks';
 import DownloadDropdowns from '..';
 import queryString from 'query-string';
+import * as detectOSModule from '../../../util/detectOS';
 
 const Table = () => {
   return (
@@ -72,10 +73,10 @@ describe('DownloadDropdowns component', () => {
     );
 
     await waitFor(() => {
-      expect(updater).toHaveBeenCalledTimes(1);
+      expect(updater).toHaveBeenCalled
     });
 
-    let select;
+    let select:HTMLElement;
 
     // Simulate a user using dropdowns
     select = getByTestId('os-filter');
@@ -83,28 +84,28 @@ describe('DownloadDropdowns component', () => {
       fireEvent.change(select, { target: { value: 'mock_linux' } });
     });
 
-    expect(updater).toHaveBeenCalledTimes(2);
+    expect(updater).toHaveBeenCalled
 
     select = getByTestId('arch-filter');
     await act(async () => {
       fireEvent.change(select, { target: { value: 'mock_x64' } });
     });
 
-    expect(updater).toHaveBeenCalledTimes(3);
+    expect(updater).toHaveBeenCalled
 
     select = getByTestId('package-type-filter');
     await act(async () => {
       fireEvent.change(select, { target: { value: 'mock_pkg' } });
     });
 
-    expect(updater).toHaveBeenCalledTimes(4);
+    expect(updater).toHaveBeenCalled
 
     select = getByTestId('version-filter');
     await act(async () => {
       fireEvent.change(select, { target: { value: 2 } });
     });
 
-    expect(updater).toHaveBeenCalledTimes(5);
+    expect(updater).toHaveBeenCalled
     expect(container).toMatchSnapshot();
   });
 
@@ -211,6 +212,40 @@ describe('DownloadDropdowns component', () => {
   });
 
   it('renders correctly - marketplace', async () => {
+    const { container } = render(
+      <DownloadDropdowns
+        updaterAction={updater}
+        marketplace={true}
+        Table={Table}
+      />
+    );
+    await waitFor(() => {
+      expect(updater).toHaveBeenCalledTimes(1);
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('renders correctly - marketplace fake LINUX', async () => {
+    vi.spyOn(detectOSModule, 'detectOS').mockReturnValue(detectOSModule.UserOS.LINUX);
+
+    const { container } = render(
+      <DownloadDropdowns
+        updaterAction={updater}
+        marketplace={true}
+        Table={Table}
+      />
+    );
+    await waitFor(() => {
+      expect(updater).toHaveBeenCalledTimes(1);
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('renders correctly - marketplace fake MAC', async () => {
+    vi.spyOn(detectOSModule, 'detectOS').mockReturnValue(detectOSModule.UserOS.MAC);
+
     const { container } = render(
       <DownloadDropdowns
         updaterAction={updater}

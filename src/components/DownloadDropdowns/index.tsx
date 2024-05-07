@@ -7,8 +7,8 @@ import VendorSelector from "../VendorSelector"
 import { detectOS, UserOS } from "../../util/detectOS"
 import { setURLParam } from "../../util/setURLParam"
 import { capitalize } from "../../util/capitalize"
-import { packageTypes, defaultArchitecture, defaultPackageType} from '../../util/defaults'
 import { fetchOses, fetchArches} from '../../hooks/fetchConstants'
+import { packageTypes, defaultArchitecture, defaultPackageType} from '../../util/defaults'
 
 const DownloadDropdowns = ({ updaterAction, marketplace, Table }) => {
 

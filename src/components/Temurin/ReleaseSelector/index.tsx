@@ -58,8 +58,11 @@ const ReleaseSelector: React.FC<ReleaseSelectorProps> = ({
     titles.push("Package Type")
   }
 
-  const defaultValues = [defaultOS, defaultArch, defaultVersion]
-  if (marketplace) {
+  const defaultValues: string[] = []
+  if(defaultOS) defaultValues.push(defaultOS)
+  if(defaultArch) defaultValues.push(defaultArch)
+  if(defaultVersion) defaultValues.push(defaultVersion)
+  if (marketplace && defaultPackageType) {
     defaultValues.push(defaultPackageType)
   }
 

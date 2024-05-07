@@ -144,7 +144,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                     <span
                       class="flex items-center justify-between text-nowrap"
                     >
-                      windows
+                      mock_macos
                     </span>
                     <span>
                       <svg
@@ -186,7 +186,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                     <span
                       class="flex items-center justify-between text-nowrap"
                     >
-                      x64
+                      mock_aarch64
                     </span>
                     <span>
                       <svg

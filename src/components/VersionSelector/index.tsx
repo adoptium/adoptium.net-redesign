@@ -64,7 +64,7 @@ const VersionSelector = ({ updater, releaseType, Table }) => {
   const [releases, setReleases] = useState(null)
 
   useEffect(() => {
-    ;(async () => {
+    (async () => {
       setReleases(
         await updater(version, releaseType, numBuilds, buildDate, page),
       )

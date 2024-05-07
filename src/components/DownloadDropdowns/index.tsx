@@ -66,7 +66,7 @@ const DownloadDropdowns = ({ updaterAction, marketplace, Table }) => {
       const osParam = queryStringParams.os
       if (osParam) {
         let osParamStr = osParam.toString().toLowerCase()
-        if (fetchOses(true).findIndex(os => os.value === osParamStr) >= 0)
+        if (oses.findIndex(os => os.value === osParamStr) >= 0)
           defaultSelectedOS = osParamStr
       }
 
@@ -75,7 +75,7 @@ const DownloadDropdowns = ({ updaterAction, marketplace, Table }) => {
       const archParam = queryStringParams.arch
       if (archParam) {
         let archParamStr = archParam.toString().toLowerCase()
-        if (fetchArches(true).findIndex(a => a.value === archParamStr) >= 0)
+        if (arches.findIndex(a => a.value === archParamStr) >= 0)
           defaultSelectedArch = archParamStr
       }
 

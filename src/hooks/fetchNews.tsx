@@ -9,7 +9,7 @@ export function fetchNewsItems(isVisible: boolean, page: number): News | null {
 
   useEffect(() => {
     if (isVisible) {
-      ;(async () => {
+      (async () => {
         setNews(await fetchLatestNews(page))
         setEvents(await fetchLatestEvents())
       })()

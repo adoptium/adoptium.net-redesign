@@ -61,8 +61,8 @@ const DownloadTable = () => {
       let defaultSelectedArch = defaultArchitecture
       const archParam = queryStringParams.arch
       if (archParam) {
-        let saarchParamStrp = archParam.toString().toLowerCase()
-        if (fetchArches(true).findIndex(a => a.value === archParamStr) >= 0)
+        let archParamStr = archParam.toString().toLowerCase()
+        if (arches.findIndex(a => a.value === archParamStr) >= 0)
           defaultSelectedArch = archParamStr
       }
 
@@ -71,7 +71,7 @@ const DownloadTable = () => {
       const osParam = queryStringParams.os
       if (osParam) {
         let osParamStr = osParam.toString().toLowerCase()
-        if (fetchOses(true).findIndex(os => os.value === osParamStr) >= 0)
+        if (oses.findIndex(os => os.value === osParamStr) >= 0)
           defaultSelectedOS = osParamStr
       } else {
         const userOS = detectOS()
@@ -157,7 +157,7 @@ const DownloadTable = () => {
     // do nothing while params are not ready
     if(!ready) return
 
-    ;(async () => {
+    (async () => {
       setReleases(
         await getAllPkgsForVersion(
           version,

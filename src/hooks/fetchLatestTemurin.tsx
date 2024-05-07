@@ -18,7 +18,7 @@ export function fetchLatestForOS(
 
   useEffect(() => {
     if (isVisible) {
-      ;(async () => {
+      (async () => {
         const url = `${baseUrl}/assets/feature_releases/${version}/ga?os=${os}&architecture=${arch}&image_type=jdk&jvm_impl=hotspot&page_size=1&vendor=eclipse`
 
         axios

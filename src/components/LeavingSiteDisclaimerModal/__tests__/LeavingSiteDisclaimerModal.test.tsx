@@ -32,10 +32,11 @@ describe('LeavingSiteDisclaimerModal component', () => {
       <LeavingSiteDisclaimerModal open={true} setOpen={setOpen}  message={"message_mock"} location={"location_mock"} />
     );
 
-    const cancelButton = container.querySelectorAll('button')[0];
+    // NOTE: buttons are in flex order
+    const continueButton = screen.getByTestId('continue')
 
-    await userEvent.click(cancelButton).then(async() => {
-      expect(setOpen).toBeCalledTimes(1)
+    await userEvent.click(continueButton).then(async() => {
+      expect(setOpen).toBeCalledTimes(0)
       expect(container).toMatchSnapshot()
     });
   });
@@ -47,10 +48,11 @@ describe('LeavingSiteDisclaimerModal component', () => {
       <LeavingSiteDisclaimerModal open={true} setOpen={setOpen}  message={"message_mock"} location={"location_mock"} />
     );
 
-    const continueButton = container.querySelectorAll('button')[1];
+    // NOTE: buttons are in flex order
+    const cancelButton = screen.getByTestId('cancel')
 
-    await userEvent.click(continueButton).then(async() => {
-      expect(setOpen).toBeCalledTimes(0)
+    await userEvent.click(cancelButton).then(async() => {
+      expect(setOpen).toBeCalledTimes(1)
       expect(container).toMatchSnapshot()
     });
   });

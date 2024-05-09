@@ -50,7 +50,6 @@ const SelectorHeader: React.FC<SelectorHeaderProps> = ({
             if (defaultValues && defaultValues[index]) {
               defaultVal = list.find(item => item.value === defaultValues[index])
             }
-              
             return (
               <div key={index} className="flex flex-col gap-4 w-full">
                 <h3 className="text-[16px] font-normal leading-[24px] text-grey">

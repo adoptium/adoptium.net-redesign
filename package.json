@@ -13,7 +13,7 @@
     "@headlessui/react": "^1.7.19",
     "@mdx-js/react": "^2.3.0",
     "@mui/lab": "^5.0.0-alpha.170",
-    "@mui/material": "^5.15.16",
+    "@mui/material": "^5.15.17",
     "@mui/x-data-grid": "^7.3.2",
     "@mui/x-date-pickers": "^7.3.2",
     "@popperjs/core": "^2.11.8",

@@ -11,15 +11,11 @@ import AllReleaseCard from "../AllReleaseCard"
 import { setURLParam } from "../../../util/setURLParam"
 import { detectOS, UserOS } from "../../../util/detectOS"
 import { getAllPkgsForVersion, MarketplaceRelease } from "../../../hooks"
-import {
-  oses,
-  arches,
-  packageTypes,
-  defaultArchitecture,
-  defaultPackageType,
-} from "../../../util/defaults"
+import { fetchOses, fetchArches} from '../../../hooks/fetchConstants'
+import { packageTypes, defaultArchitecture, defaultPackageType} from '../../../util/defaults'
 
 const DownloadTable = () => {
+
   const data = useStaticQuery(graphql`
     query MarketplaceVersionsQuery {
       allVersions(sort: { version: DESC }, filter: { lts: { eq: true } }) {
@@ -37,102 +33,142 @@ const DownloadTable = () => {
     }
   `)
 
+  // load OS and Arches from API
+  const oses = fetchOses(true)
+  const arches = fetchArches(true)
+  const [ready, setReady] = useState(false)
+
   const queryStringParams = queryString.parse(useLocation().search)
 
-  // init the default selected Architecture, if any from the param 'arch'
-  let defaultSelectedArch = defaultArchitecture
-  const archParam = queryStringParams.arch
-  if (archParam) {
-    let sap = archParam.toString().toLowerCase()
-    if (arches.findIndex(a => a.value.toLowerCase() === sap) >= 0)
-      defaultSelectedArch = sap
-  }
+  const [os, updateOS] = useState("")
+  const [arch, updateArch] = useState(defaultArchitecture)
+  const [version, udateVersion] = useState(data.mostRecentLts.version)
+  const [packageType, updatePackageType] = useState(defaultPackageType)
 
-  // init the default selected Operation System, if any from the param 'os'
-  let defaultSelectedOS = ""
-  const osParam = queryStringParams.os
-  if (osParam) {
-    let sop = osParam.toString().toLowerCase()
-    if (oses.findIndex(os => os.value.toLowerCase() === sop) >= 0)
-      defaultSelectedOS = sop
-  } else {
-    const userOS = detectOS()
-    switch (userOS) {
-      case UserOS.MAC:
-        defaultSelectedOS = "mac"
-        if (typeof document !== "undefined") {
-          let w = document.createElement("canvas").getContext("webgl")
-          // @ts-ignore
-          let d = w.getExtension("WEBGL_debug_renderer_info")
-          // @ts-ignore
-          let g = (d && w.getParameter(d.UNMASKED_RENDERER_WEBGL)) || ""
-          if (g.match(/Apple/) && !g.match(/Apple GPU/)) {
-            defaultSelectedArch = "aarch64"
-          }
+  const [selectedVendorIdentifiers, updateSelectedVendorIdentifiers] = useState<string[]>([])
+
+  const [releases, setReleases] = useState<MarketplaceRelease[] | null>(null)
+
+  /**
+   * This useEffect() is called when OS and arches are finaly loaded
+   */ 
+  useEffect(() => {
+    // do nothing while OS and arches are not loaded
+    if(oses.length === 0 || arches.length === 0) return;
+
+    (async () => {
+      // init the default selected Architecture, if any from the param 'arch'
+      let defaultSelectedArch = defaultArchitecture
+      const archParam = queryStringParams.arch
+      if (archParam) {
+        let archParamStr = archParam.toString().toLowerCase()
+        if (arches.findIndex(a => a.value === archParamStr) >= 0)
+          defaultSelectedArch = archParamStr
+      }
+
+      // init the default selected Operation System, if any from the param 'os'
+      let defaultSelectedOS = ""
+      const osParam = queryStringParams.os
+      if (osParam) {
+        let osParamStr = osParam.toString().toLowerCase()
+        if (oses.findIndex(os => os.value === osParamStr) >= 0)
+          defaultSelectedOS = osParamStr
+      } else {
+        const userOS = detectOS()
+        switch (userOS) {
+          case UserOS.MAC:
+            defaultSelectedOS = "mac"
+            if (typeof document !== "undefined") {
+              let gl = document.createElement("canvas").getContext("webgl")
+              // @ts-ignore
+              let ext = gl && gl.getExtension("WEBGL_debug_renderer_info")
+              // @ts-ignore
+              let param = (ext && ext.getParameter(d.UNMASKED_RENDERER_WEBGL)) || ""
+              if (param.match(/Apple/) && !param.match(/Apple GPU/)) {
+                defaultSelectedArch = "aarch64"
+              }
+            }
+            break
+          case UserOS.LINUX:
+          case UserOS.UNIX:
+            defaultSelectedOS = "linux"
+            break
+          default:
+            defaultSelectedOS = "windows"
+            break
         }
-        break
-      case UserOS.LINUX:
-      case UserOS.UNIX:
-        defaultSelectedOS = "linux"
-        break
-      default:
-        defaultSelectedOS = "windows"
-        break
-    }
-  }
+      }
 
-  // init the default selected Package Type, if any from the param 'package'
-  let defaultSelectedPackageType = defaultPackageType
-  const packageParam = queryStringParams.package
-  if (packageParam) {
-    let spp = packageParam.toString().toLowerCase()
-    if (packageTypes.findIndex(p => p.value.toLowerCase() === spp) >= 0)
-      defaultSelectedPackageType = spp
-  }
+      // init the default selected Package Type, if any from the param 'package'
+      let defaultSelectedPackageType = defaultPackageType
+      const packageParam = queryStringParams.package
+      if (packageParam) {
+        let packageParamStr = packageParam.toString().toLowerCase()
+        if (packageTypes.findIndex(p => p.value === packageParamStr) >= 0)
+          defaultSelectedPackageType = packageParamStr
+      }
 
-  // init the default selected Version, if any from the param 'version' or from 'variant'
-  let defaultSelectedVersion = data.mostRecentLts.version
-  const versionParam = queryStringParams.version
-  if (versionParam) {
-    let svp = versionParam.toString()
-    let nvp = Number(svp)
+      // init the default selected Version, if any from the param 'version' or from 'variant'
+      let defaultSelectedVersion = data.mostRecentLts.version
+      const versionParam = queryStringParams.version
+      if (versionParam) {
+        let versionParamStr = versionParam.toString()
+        let versionParamNum = Number(versionParamStr)
 
-    if (svp.toLowerCase() === "latest") {
-      // get the latest version of the list
-      defaultSelectedVersion = data.allVersions.sort(
-        (a, b) => b.node.version - a.node.version,
-      )[0].node.version
-    } else if (
-      data.allVersions.edges.findIndex(
-        version => version.node.version === nvp,
-      ) >= 0
-    ) {
-      defaultSelectedVersion = nvp
-    }
-  }
+        if (versionParamStr.toLowerCase() === "latest") {
+          // get the latest version of the list
+          defaultSelectedVersion = data.allVersions.sort(
+            (a, b) => b.node.version - a.node.version,
+          )[0].node.version
+        } else if (
+          data.allVersions.edges.findIndex(
+            version => version.node.version === versionParamNum,
+          ) >= 0
+        ) {
+          defaultSelectedVersion = versionParamNum
+        }
+      }
 
-  // init the default selected Version, if any from the param 'variant'
-  const variantParam = queryStringParams.variant
-  if (variantParam) {
-    // convert openjdk11 to 11
-    const parsedVersion = variantParam.toString().replace(/\D/g, "")
-    let nvp = Number(parsedVersion)
+      // init the default selected Version, if any from the param 'variant'
+      const variantParam = queryStringParams.variant
+      if (variantParam) {
+        // convert openjdk11 to 11
+        const parsedVersion = variantParam.toString().replace(/\D/g, "")
+        let variantParamNum = Number(parsedVersion)
 
-    if (
-      data.allVersions.findIndex(version => version.node.version === nvp) >= 0
-    ) {
-      defaultSelectedVersion = nvp
-    }
-  }
+        if (data.allVersions.findIndex(version => version.node.version === variantParamNum) >= 0) {
+          defaultSelectedVersion = variantParamNum
+        }
+      }
 
-  const [os, updateOS] = useState(defaultSelectedOS)
-  const [arch, updateArch] = useState(defaultSelectedArch)
-  const [version, udateVersion] = useState(defaultSelectedVersion)
-  const [packageType, updatePackageType] = useState(defaultSelectedPackageType)
+      osUpdater(defaultSelectedOS);
+      archUpdater(defaultSelectedArch);
+      versionUpdater(defaultSelectedVersion);
 
-  const [selectedVendorIdentifiers, updateSelectedVendorIdentifiers] = useState<
-    string[]
-  >([])
+      // OK we can loaded elements
+      setReady(true)
+    })();
+  }, [oses, arches]);
+
+  /**
+   * This useEffect() is called when a parameter is changed
+   */
+  useEffect(() => {
+    // do nothing while params are not ready
+    if(!ready) return
+
+    (async () => {
+      setReleases(
+        await getAllPkgsForVersion(
+          version,
+          os,
+          arch,
+          packageType,
+          selectedVendorIdentifiers,
+        ),
+      )
+    })()
+  }, [ready, version, os, arch, packageType, selectedVendorIdentifiers])
 
   const versionUpdater = version => {
     setURLParam("version", version)
@@ -148,22 +184,6 @@ const DownloadTable = () => {
     setURLParam("os", os)
     updateOS(os)
   }
-
-  const [releases, setReleases] = useState<MarketplaceRelease[] | null>(null)
-
-  useEffect(() => {
-    ;(async () => {
-      setReleases(
-        await getAllPkgsForVersion(
-          version,
-          os,
-          arch,
-          packageType,
-          selectedVendorIdentifiers,
-        ),
-      )
-    })()
-  }, [version, os, arch, packageType, selectedVendorIdentifiers])
 
   return (
     <div className="max-w-[1264px] mx-auto px-6 pb-20">

@@ -5,8 +5,22 @@ import { axe } from "vitest-axe"
 import Marketplace, { Head } from "../marketplace"
 import AxiosInstance from "axios"
 import MockAdapter from "axios-mock-adapter"
+import { mockOsesAPI, mockArchesAPI } from '../../__fixtures__/hooks'
 
 const mock = new MockAdapter(AxiosInstance)
+
+vi.mock('../../hooks/fetchConstants', () => {
+  return {
+    fetchOses: () => {
+      // NOTE: we need to have the windows entry because it's the default detectedOS
+      return [...mockOsesAPI(), {name: "windows", value: "windows"}];
+    },
+    fetchArches: () => {
+      // NOTE: we need to have the x64 entry because it's the default detectedOS
+      return [...mockArchesAPI(), {name: "x64", value: "x64"}];
+    }
+  };
+})
 
 vi.mock("../../util/shuffle", () => {
   return {

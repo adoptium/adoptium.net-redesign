@@ -458,7 +458,7 @@ exports[`Releases page > renders correctly 1`] = `
                       <span
                         class="flex items-center justify-between text-nowrap"
                       >
-                        Linux
+                        mock_macos
                       </span>
                       <span>
                         <svg
@@ -500,7 +500,7 @@ exports[`Releases page > renders correctly 1`] = `
                       <span
                         class="flex items-center justify-between text-nowrap"
                       >
-                        x64
+                        mock_aarch64
                       </span>
                       <span>
                         <svg

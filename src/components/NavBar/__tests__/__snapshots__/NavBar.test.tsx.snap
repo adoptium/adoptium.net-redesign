@@ -83,7 +83,7 @@ exports[`NavBar component > navbar renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r0:"
+              id="headlessui-menu-button-:r1:"
               type="button"
             >
               About Us
@@ -127,7 +127,7 @@ exports[`NavBar component > navbar renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r1:"
+              id="headlessui-menu-button-:r3:"
               type="button"
             >
               Projects
@@ -159,7 +159,7 @@ exports[`NavBar component > navbar renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r2:"
+              id="headlessui-menu-button-:r5:"
               type="button"
             >
               Resources
@@ -191,7 +191,7 @@ exports[`NavBar component > navbar renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r3:"
+              id="headlessui-menu-button-:r7:"
               type="button"
             >
               Community
@@ -227,7 +227,7 @@ exports[`NavBar component > navbar renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-sm border-2 border-gray-700"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r4:"
+              id="headlessui-menu-button-:r9:"
               type="button"
             >
               Flag

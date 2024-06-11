@@ -1,8 +1,17 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import { describe, expect, it } from "vitest"
+import { describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
 import Index, { Head } from "../support-us"
+
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: vi.fn().mockImplementation(() => ({
+    matches: false,
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+  })),
+})
 
 describe("Support Us page", () => {
   it("renders correctly", () => {

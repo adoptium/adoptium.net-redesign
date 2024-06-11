@@ -4,6 +4,12 @@ import userEvent from "@testing-library/user-event"
 import { describe, expect, it, vi } from "vitest"
 import LanguageSelector from ".."
 
+window.ResizeObserver = vi.fn().mockImplementation(() => ({
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+  disconnect: vi.fn(),
+}))
+
 describe("Language Selector component", () => {
   it("renders correctly", () => {
     const { container } = render(<LanguageSelector />)

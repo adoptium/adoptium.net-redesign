@@ -9,6 +9,15 @@ import { mockOsesAPI, mockArchesAPI } from '../../../__fixtures__/hooks'
 
 const mock = new MockAdapter(AxiosInstance)
 
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: vi.fn().mockImplementation(() => ({
+    matches: false,
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+  })),
+})
+
 vi.mock('../../../hooks/fetchConstants', () => {
   return {
     fetchOses: () => {

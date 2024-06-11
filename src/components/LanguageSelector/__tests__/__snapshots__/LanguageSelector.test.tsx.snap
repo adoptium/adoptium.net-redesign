@@ -5,15 +5,19 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
   <div
     class="relative inline-block text-left"
     data-headlessui-state="open"
+    data-open=""
   >
     <div>
       <button
-        aria-controls="headlessui-menu-items-:r2:"
+        aria-controls="headlessui-menu-items-:r4:"
         aria-expanded="true"
         aria-haspopup="menu"
         class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-sm border-2 border-gray-700"
-        data-headlessui-state="open"
-        id="headlessui-menu-button-:r1:"
+        data-active=""
+        data-headlessui-state="open active hover"
+        data-hover=""
+        data-open=""
+        id="headlessui-menu-button-:r3:"
         type="button"
       >
         Flag
@@ -38,11 +42,13 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
       </button>
     </div>
     <div
-      aria-labelledby="headlessui-menu-button-:r1:"
+      aria-labelledby="headlessui-menu-button-:r3:"
       class="absolute right-0 z-10 mt-2 w-26 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition ease-out duration-100 transform opacity-0 scale-95"
       data-headlessui-state="open"
-      id="headlessui-menu-items-:r2:"
+      data-open=""
+      id="headlessui-menu-items-:r4:"
       role="menu"
+      style="--button-width: 0px;"
       tabindex="0"
     >
       <div
@@ -54,7 +60,7 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
           data-headlessui-state=""
           data-testid="en"
           href="#"
-          id="headlessui-menu-item-:r3:"
+          id="headlessui-menu-item-:r5:"
           role="menuitem"
           tabindex="-1"
         >
@@ -72,7 +78,7 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
           data-headlessui-state=""
           data-testid="en-GB"
           href="#"
-          id="headlessui-menu-item-:r4:"
+          id="headlessui-menu-item-:r6:"
           role="menuitem"
           tabindex="-1"
         >
@@ -90,7 +96,7 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
           data-headlessui-state=""
           data-testid="es"
           href="#"
-          id="headlessui-menu-item-:r5:"
+          id="headlessui-menu-item-:r7:"
           role="menuitem"
           tabindex="-1"
         >
@@ -108,7 +114,7 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
           data-headlessui-state=""
           data-testid="de"
           href="#"
-          id="headlessui-menu-item-:r6:"
+          id="headlessui-menu-item-:r8:"
           role="menuitem"
           tabindex="-1"
         >
@@ -126,7 +132,7 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
           data-headlessui-state=""
           data-testid="zh-CN"
           href="#"
-          id="headlessui-menu-item-:r7:"
+          id="headlessui-menu-item-:r9:"
           role="menuitem"
           tabindex="-1"
         >
@@ -157,7 +163,7 @@ exports[`Language Selector component > renders correctly 1`] = `
         aria-haspopup="menu"
         class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-sm border-2 border-gray-700"
         data-headlessui-state=""
-        id="headlessui-menu-button-:r0:"
+        id="headlessui-menu-button-:r1:"
         type="button"
       >
         Flag

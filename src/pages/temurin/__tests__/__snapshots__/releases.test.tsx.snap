@@ -83,7 +83,7 @@ exports[`Releases page > renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r0:"
+              id="headlessui-menu-button-:r1:"
               type="button"
             >
               About Us
@@ -127,7 +127,7 @@ exports[`Releases page > renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r1:"
+              id="headlessui-menu-button-:r3:"
               type="button"
             >
               Projects
@@ -159,7 +159,7 @@ exports[`Releases page > renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r2:"
+              id="headlessui-menu-button-:r5:"
               type="button"
             >
               Resources
@@ -191,7 +191,7 @@ exports[`Releases page > renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r3:"
+              id="headlessui-menu-button-:r7:"
               type="button"
             >
               Community
@@ -227,7 +227,7 @@ exports[`Releases page > renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-sm border-2 border-gray-700"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r4:"
+              id="headlessui-menu-button-:r9:"
               type="button"
             >
               Flag
@@ -446,13 +446,14 @@ exports[`Releases page > renders correctly 1`] = `
                   </h3>
                   <div
                     class="relative mt-1"
+                    data-headlessui-state=""
                   >
                     <button
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                       data-headlessui-state=""
-                      id="headlessui-listbox-button-:r6:"
+                      id="headlessui-listbox-button-:rc:"
                       type="button"
                     >
                       <span
@@ -488,13 +489,14 @@ exports[`Releases page > renders correctly 1`] = `
                   </h3>
                   <div
                     class="relative mt-1"
+                    data-headlessui-state=""
                   >
                     <button
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                       data-headlessui-state=""
-                      id="headlessui-listbox-button-:r7:"
+                      id="headlessui-listbox-button-:re:"
                       type="button"
                     >
                       <span
@@ -530,13 +532,14 @@ exports[`Releases page > renders correctly 1`] = `
                   </h3>
                   <div
                     class="relative mt-1"
+                    data-headlessui-state=""
                   >
                     <button
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                       data-headlessui-state=""
-                      id="headlessui-listbox-button-:r8:"
+                      id="headlessui-listbox-button-:rg:"
                       type="button"
                     >
                       <span

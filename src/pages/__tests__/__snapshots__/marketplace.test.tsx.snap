@@ -139,7 +139,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                     aria-haspopup="listbox"
                     class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                     data-headlessui-state=""
-                    id="headlessui-listbox-button-:r1:"
+                    id="headlessui-listbox-button-:r2:"
                     type="button"
                   >
                     <span
@@ -182,7 +182,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                     aria-haspopup="listbox"
                     class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                     data-headlessui-state=""
-                    id="headlessui-listbox-button-:r3:"
+                    id="headlessui-listbox-button-:r5:"
                     type="button"
                   >
                     <span
@@ -225,7 +225,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                     aria-haspopup="listbox"
                     class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                     data-headlessui-state=""
-                    id="headlessui-listbox-button-:r5:"
+                    id="headlessui-listbox-button-:r8:"
                     type="button"
                   >
                     <span
@@ -268,7 +268,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                     aria-haspopup="listbox"
                     class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                     data-headlessui-state=""
-                    id="headlessui-listbox-button-:r7:"
+                    id="headlessui-listbox-button-:rb:"
                     type="button"
                   >
                     <span

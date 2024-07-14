@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: actions/checkout@1d96c772d19495a3b5c517cd2bc0cb401ea0529f # v4.1.3
+    - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       with:
         persist-credentials: false
         fetch-depth: 0
@@ -72,7 +72,7 @@ jobs:
           done
         fi
 
-    - uses: gr2m/create-or-update-pull-request-action@73b5860c078571041abd2e438b8377a24dbc2465 # v1
+    - uses: gr2m/create-or-update-pull-request-action@86ec1766034c8173518f61d2075cc2a173fb8c97 # v1.9.4
       env:
         GITHUB_TOKEN: ${{ secrets.ADOPTIUM_BOT_TOKEN }}
       with:

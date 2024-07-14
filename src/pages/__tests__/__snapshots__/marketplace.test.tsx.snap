@@ -132,19 +132,20 @@ exports[`Marketplace page > renders correctly 1`] = `
                 </h3>
                 <div
                   class="relative mt-1"
+                  data-headlessui-state=""
                 >
                   <button
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                     data-headlessui-state=""
-                    id="headlessui-listbox-button-:r0:"
+                    id="headlessui-listbox-button-:r2:"
                     type="button"
                   >
                     <span
                       class="flex items-center justify-between text-nowrap"
                     >
-                      Windows
+                      windows
                     </span>
                     <span>
                       <svg
@@ -174,13 +175,14 @@ exports[`Marketplace page > renders correctly 1`] = `
                 </h3>
                 <div
                   class="relative mt-1"
+                  data-headlessui-state=""
                 >
                   <button
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                     data-headlessui-state=""
-                    id="headlessui-listbox-button-:r1:"
+                    id="headlessui-listbox-button-:r5:"
                     type="button"
                   >
                     <span
@@ -216,13 +218,14 @@ exports[`Marketplace page > renders correctly 1`] = `
                 </h3>
                 <div
                   class="relative mt-1"
+                  data-headlessui-state=""
                 >
                   <button
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                     data-headlessui-state=""
-                    id="headlessui-listbox-button-:r2:"
+                    id="headlessui-listbox-button-:r8:"
                     type="button"
                   >
                     <span
@@ -258,13 +261,14 @@ exports[`Marketplace page > renders correctly 1`] = `
                 </h3>
                 <div
                   class="relative mt-1"
+                  data-headlessui-state=""
                 >
                   <button
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                     data-headlessui-state=""
-                    id="headlessui-listbox-button-:r3:"
+                    id="headlessui-listbox-button-:rb:"
                     type="button"
                   >
                     <span

@@ -18,7 +18,7 @@ export function fetchReleaseNotesForVersion(
 
   useEffect(() => {
     if (isVisible) {
-      ;(async () => {
+      (async () => {
         const url = `${baseUrl}/${version}`
 
         await axios

@@ -181,7 +181,7 @@ export function useAdoptiumContributorsApi(
   const [contributor, setContributor] = useState<Contributor | null>(null)
   useEffect(() => {
     if (isVisible) {
-      ;(async () => {
+      (async () => {
         setContributor(await fetchRandomContributor())
       })()
     }

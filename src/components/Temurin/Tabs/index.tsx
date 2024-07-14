@@ -10,9 +10,11 @@ import ReleaseSelector from "../ReleaseSelector"
 
 import { setURLParam } from "../../../util/setURLParam"
 
-import { oses, arches, packageTypes } from "../../../util/defaults"
+import { fetchOses, fetchArches} from '../../../hooks/fetchConstants'
+import { packageTypes } from "../../../util/defaults"
 
 const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
+
   const data = useStaticQuery(graphql`
     query TabVersionsQuery {
       allVersions(sort: { version: DESC }) {
@@ -34,69 +36,94 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
     version => version.node.lts === true,
   )
 
+  // load OS and Arches from API
+  const oses = fetchOses(true)
+  const arches = fetchArches(true)
+  const [ready, setReady] = useState(false)
+
   const queryStringParams = queryString.parse(useLocation().search)
 
-  // init the default selected Operation System, if any from the param 'os'
-  let defaultSelectedOS = "any"
-  const osParam = queryStringParams.os
-  if (osParam) {
-    let sop = osParam.toString().toLowerCase()
-    if (oses.findIndex(os => os.value.toLowerCase() === sop) >= 0)
-      defaultSelectedOS = sop
-  }
+  const [os, updateOS] = useState("any")
+  const [arch, updateArch] = useState("any")
+  const [version, udateVersion] = useState("any")
 
-  // init the default selected Architecture, if any from the param 'arch'
-  let defaultSelectedArch = "any"
-  const archParam = queryStringParams.arch
-  if (archParam) {
-    let sap = archParam.toString().toLowerCase()
-    if (arches.findIndex(a => a.value.toLowerCase() === sap) >= 0)
-      defaultSelectedArch = sap
-  }
+  const [active, setActive] = useState(data.mostRecentLts.version)
+  const [releases, setReleases] = useState(null)
 
-  // init the default selected Package Type, if any from the param 'package'
-  let defaultSelectedPackageType = "any"
-  const packageParam = queryStringParams.package
-  if (packageParam) {
-    let spp = packageParam.toString().toLowerCase()
-    if (packageTypes.findIndex(p => p.value.toLowerCase() === spp) >= 0)
-      defaultSelectedPackageType = spp
-  }
+  /**
+   * This useEffect() is called when OS and arches are finaly loaded
+   */ 
+  useEffect(() => {
+    // do nothing while OS and arches are not loaded
+    if(oses.length === 0 || arches.length === 0) return;
 
-  // init the default selected Version, if any from the param 'version' or from 'variant'
-  let defaultSelectedVersion = data.mostRecentLts.version
-  const versionParam = queryStringParams.version
-  if (versionParam) {
-    let svp = versionParam.toString()
-    let nvp = Number(svp)
+    (async () => {
+      // init the default selected Operation System, if any from the param 'os'
+      let defaultSelectedOS = "any"
+      const osParam = queryStringParams.os
+      if (osParam) {
+        let osParamStr = osParam.toString().toLowerCase()
+        if (oses.findIndex(os => os.value === osParamStr) >= 0)
+          defaultSelectedOS = osParamStr
+      }
 
-    if (svp.toLowerCase() === "latest") {
-      // get the latest version of the list
-      defaultSelectedVersion = LTSVersions.sort(
-        (a, b) => b.node.version - a.node.version,
-      )[0].node.version
-    } else if (
-      LTSVersions.findIndex(version => version.node.version === nvp) >= 0
-    ) {
-      defaultSelectedVersion = nvp
-    }
-  }
+      // init the default selected Architecture, if any from the param 'arch'
+      let defaultSelectedArch = "any"
+      const archParam = queryStringParams.arch
+      if (archParam) {
+        let archParamStr = archParam.toString().toLowerCase()
+        if (arches.findIndex(a => a.value === archParamStr) >= 0)
+          defaultSelectedArch = archParamStr
+      }
 
-  // init the default selected Version, if any from the param 'variant'
-  const variantParam = queryStringParams.variant
-  if (variantParam) {
-    // convert openjdk11 to 11
-    const parsedVersion = variantParam.toString().replace(/\D/g, "")
-    let nvp = Number(parsedVersion)
+      // init the default selected Package Type, if any from the param 'package'
+      let defaultSelectedPackageType = "any"
+      const packageParam = queryStringParams.package
+      if (packageParam) {
+        let packageParamStr = packageParam.toString().toLowerCase()
+        if (packageTypes.findIndex(p => p.value === packageParamStr) >= 0)
+          defaultSelectedPackageType = packageParamStr
+      }
 
-    if (LTSVersions.findIndex(version => version.node.version === nvp) >= 0) {
-      defaultSelectedVersion = nvp
-    }
-  }
+      // init the default selected Version, if any from the param 'version' or from 'variant'
+      let defaultSelectedVersion = data.mostRecentLts.version
+      const versionParam = queryStringParams.version
+      if (versionParam) {
+        let versionParamStr = versionParam.toString()
+        let versionParamNum = Number(versionParamStr)
 
-  const [os, updateOS] = useState(defaultSelectedOS)
-  const [arch, updateArch] = useState(defaultSelectedArch)
-  const [version, udateVersion] = useState(defaultSelectedVersion)
+        if (versionParamStr.toLowerCase() === "latest") {
+          // get the latest version of the list
+          defaultSelectedVersion = LTSVersions.sort(
+            (a, b) => b.node.version - a.node.version,
+          )[0].node.version
+        } else if (
+          LTSVersions.findIndex(version => version.node.version === versionParamNum) >= 0
+        ) {
+          defaultSelectedVersion = versionParamNum
+        }
+      }
+
+      // init the default selected Version, if any from the param 'variant'
+      const variantParam = queryStringParams.variant
+      if (variantParam) {
+        // convert openjdk11 to 11
+        const parsedVersion = variantParam.toString().replace(/\D/g, "")
+        let variantParamNum = Number(parsedVersion)
+
+        if (LTSVersions.findIndex(version => version.node.version === variantParamNum) >= 0) {
+          defaultSelectedVersion = variantParamNum
+        }
+      }
+
+      osUpdater(defaultSelectedOS);
+      archUpdater(defaultSelectedArch);
+      versionUpdater(defaultSelectedVersion);
+
+      // OK we can loaded elements
+      setReady(true)
+  })();
+  }, [ready, oses, arches]);
 
   const versionUpdater = version => {
     setURLParam("version", version)
@@ -113,15 +140,18 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
     updateOS(os)
   }
 
-  const [releases, setReleases] = useState(null)
-
+  /**
+   * This useEffect() is called when a parameter is changed
+   */
   useEffect(() => {
-    ;(async () => {
+    // do nothing while params are not ready
+    if(!ready) return
+
+    (async () => {
       setReleases(await updaterAction(version, os, arch))
     })()
   }, [version, os, arch])
 
-  const [active, setActive] = useState(data.mostRecentLts.version)
   return (
     <>
       <section className="py-8 md:pt-16 px-6 w-full">
@@ -137,8 +167,11 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
             <ReleaseSelector
               versions={data.allVersions}
               updateVersion={versionUpdater}
+              defaultVersion={version}
               updateOS={osUpdater}
+              defaultOS={os}
               updateArch={archUpdater}
+              defaultArch={arch}
             />
           ) : (
             <ButtonContent results={releases} />

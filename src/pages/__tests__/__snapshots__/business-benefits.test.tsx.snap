@@ -217,32 +217,34 @@ exports[`Business Benefits page > renders correctly 1`] = `
           style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
           type="button"
         />
-        <div
-          class="w-full flex justify-between"
-          id="adopters"
-        >
+        <div>
           <div
-            class="w-full"
+            class="w-full flex justify-between"
+            id="adopters"
           >
             <div
-              class="min-w-full overflow-auto"
+              class="w-full"
             >
               <div
-                class="grid grid-cols-4 gap-4 md:gap-6 min-w-[850px] md:min-w-[1220px]"
+                class="min-w-full overflow-auto"
               >
-                <a
-                  href="https://mock.com"
+                <div
+                  class="grid grid-cols-4 gap-4 md:gap-6 min-w-[850px] md:min-w-[1220px]"
                 >
-                  <div
-                    class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  <a
+                    href="https://mock.com"
                   >
-                    <img
-                      alt="mock_member"
-                      class="w-5/6 max-h-5/6 m-0"
-                      src="/images/mock_logo.png"
-                    />
-                  </div>
-                </a>
+                    <div
+                      class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                    >
+                      <img
+                        alt="mock_member"
+                        class="w-5/6 max-h-5/6 m-0"
+                        src="/images/mock_logo.png"
+                      />
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

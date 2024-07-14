@@ -83,7 +83,7 @@ exports[`Releases page > renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r0:"
+              id="headlessui-menu-button-:r2:"
               type="button"
             >
               About Us
@@ -127,7 +127,7 @@ exports[`Releases page > renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r1:"
+              id="headlessui-menu-button-:r5:"
               type="button"
             >
               Projects
@@ -159,7 +159,7 @@ exports[`Releases page > renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r2:"
+              id="headlessui-menu-button-:r8:"
               type="button"
             >
               Resources
@@ -191,7 +191,7 @@ exports[`Releases page > renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r3:"
+              id="headlessui-menu-button-:rb:"
               type="button"
             >
               Community
@@ -227,7 +227,7 @@ exports[`Releases page > renders correctly 1`] = `
               aria-haspopup="menu"
               class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-sm border-2 border-gray-700"
               data-headlessui-state=""
-              id="headlessui-menu-button-:r4:"
+              id="headlessui-menu-button-:re:"
               type="button"
             >
               Flag
@@ -276,9 +276,6 @@ exports[`Releases page > renders correctly 1`] = `
         </div>
       </div>
     </nav>
-    <div
-      style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
-    />
   </header>
   <div
     class="relative pt-40 pb-16 md:pb-36 md:pt-60 overflow-hidden"
@@ -445,19 +442,20 @@ exports[`Releases page > renders correctly 1`] = `
                   </h3>
                   <div
                     class="relative mt-1"
+                    data-headlessui-state=""
                   >
                     <button
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                       data-headlessui-state=""
-                      id="headlessui-listbox-button-:r6:"
+                      id="headlessui-listbox-button-:rh:"
                       type="button"
                     >
                       <span
                         class="flex items-center justify-between text-nowrap"
                       >
-                        Linux
+                        mock_macos
                       </span>
                       <span>
                         <svg
@@ -487,19 +485,20 @@ exports[`Releases page > renders correctly 1`] = `
                   </h3>
                   <div
                     class="relative mt-1"
+                    data-headlessui-state=""
                   >
                     <button
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                       data-headlessui-state=""
-                      id="headlessui-listbox-button-:r7:"
+                      id="headlessui-listbox-button-:rk:"
                       type="button"
                     >
                       <span
                         class="flex items-center justify-between text-nowrap"
                       >
-                        x64
+                        mock_aarch64
                       </span>
                       <span>
                         <svg
@@ -529,13 +528,14 @@ exports[`Releases page > renders correctly 1`] = `
                   </h3>
                   <div
                     class="relative mt-1"
+                    data-headlessui-state=""
                   >
                     <button
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       class="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
                       data-headlessui-state=""
-                      id="headlessui-listbox-button-:r8:"
+                      id="headlessui-listbox-button-:rn:"
                       type="button"
                     >
                       <span

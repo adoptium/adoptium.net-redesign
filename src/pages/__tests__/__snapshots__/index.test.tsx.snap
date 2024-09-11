@@ -1456,6 +1456,9 @@ exports[`Index page > renders correctly 1`] = `
     </div>
   </div>
   <div
+    class="slice--adoptiumNews"
+  />
+  <div
     class="bg-blue py-24 sm:py-28"
   >
     <div

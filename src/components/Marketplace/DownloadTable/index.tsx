@@ -83,7 +83,7 @@ const DownloadTable = () => {
               // @ts-ignore
               let ext = gl && gl.getExtension("WEBGL_debug_renderer_info")
               // @ts-ignore
-              let param = (ext && ext.getParameter(d.UNMASKED_RENDERER_WEBGL)) || ""
+              let param = (ext && gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)) || ""
               if (param.match(/Apple/) && !param.match(/Apple GPU/)) {
                 defaultSelectedArch = "aarch64"
               }

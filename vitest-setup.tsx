@@ -42,7 +42,7 @@ vi.mock("gatsby", async () => {
       version: 1,
     },
     mostRecentFeatureVersion: {
-      version: 2,
+      version: 24,
     },
     downloadCount: {
       total: 1000000,

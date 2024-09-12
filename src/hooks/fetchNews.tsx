@@ -28,7 +28,7 @@ async function fetchLatestNews(page) {
   const url = new URL(`${baseUrl}/news`)
   url.searchParams.append("parameters[publish_to]", "adoptium")
   url.searchParams.append("page", page)
-  url.searchParams.append("pagesize", "5")
+  url.searchParams.append("pagesize", "20")
 
   return axios
     .get(url.toString())
@@ -42,7 +42,8 @@ async function fetchLatestNews(page) {
 
 async function fetchLatestEvents() {
   const url = new URL(`${baseUrl}/events`)
-  url.searchParams.append("parameters[publish_to]", "adoptium")
+  url.searchParams.append('parameters[publish_to]', 'adoptium')
+  url.searchParams.append('pagesize', '20')
 
   return axios
     .get(url.toString())
@@ -61,13 +62,11 @@ export interface News {
 
 export interface NewsResponse {
   news: NewsItem[]
-  pagination: {
-    page: number
-    pagesize: number
-    result_start: number
-    result_end: number
-    result_size: number
-    total_result_size: number
+  pager: {
+    current_page: number;
+    items_per_page: number;
+    total_items: number;
+    total_pages: number;
   } | null
 }
 

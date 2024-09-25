@@ -22,63 +22,15 @@ GATSBY_CPU_COUNT = "1"
   status = 301
   force = true
 
+# List of pages to serve (this will get long but we can slowly move them)
 [[redirects]]
   from = "/"
-  query = {variant = ":variant"}
-  to = "/temurin/releases/"
-  status = 301
+  to = "/"
+  status = 200
   force = true
 
 [[redirects]]
-  from = "/releases.html"
-  to = "/temurin/releases"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/archive.html"
-  to = "/temurin/archive"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/nightly.html"
-  to = "/temurin/nightly"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/faq.html"
-  to = "/docs/faq"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/migration.html"
-  to = "/docs/migration"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/support.html"
-  to = "/support"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/supported_platforms.html"
-  to = "/supported-platforms"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/marketplace-policy"
-  to = "/docs/marketplace-policy"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/qvs-policy"
-  to = "/docs/qvs-policy"
+  from = "/*"
+  to = "https://adoptium.net/:splat"
   status = 301
   force = true

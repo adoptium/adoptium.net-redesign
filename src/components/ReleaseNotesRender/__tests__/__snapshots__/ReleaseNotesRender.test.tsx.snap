@@ -83,7 +83,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
         </p>
         <div
           aria-label="Release Notes"
-          class="MuiDataGrid-root MuiDataGrid-autoHeight MuiDataGrid-root--densityStandard MuiDataGrid-withBorderColor css-1e4tlmm-MuiDataGrid-root"
+          class="MuiDataGrid-root MuiDataGrid-autoHeight MuiDataGrid-root--densityStandard MuiDataGrid-withBorderColor css-1rfg99c-MuiDataGrid-root"
           style="--DataGrid-width: 0px; --DataGrid-hasScrollX: 1; --DataGrid-hasScrollY: 0; --DataGrid-scrollbarSize: 0px; --DataGrid-rowWidth: 1300px; --DataGrid-columnsTotalWidth: 1300px; --DataGrid-leftPinnedWidth: 0px; --DataGrid-rightPinnedWidth: 0px; --DataGrid-headerHeight: 56px; --DataGrid-headersTotalHeight: 56px; --DataGrid-topContainerHeight: 56px; --DataGrid-bottomContainerHeight: 0px; --height: 52px;"
         >
           <div
@@ -133,7 +133,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
             aria-colcount="5"
             aria-multiselectable="false"
             aria-rowcount="3"
-            class="MuiDataGrid-main css-3eek4p-MuiDataGrid-main"
+            class="MuiDataGrid-main css-1k1sjka-MuiDataGrid-main"
             role="grid"
             tabindex="-1"
           >
@@ -143,7 +143,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
               role="presentation"
             />
             <div
-              class="MuiDataGrid-virtualScroller MuiDataGrid-virtualScroller--hasScrollX css-1793420-MuiDataGrid-virtualScroller"
+              class="MuiDataGrid-virtualScroller MuiDataGrid-virtualScroller--hasScrollX css-mxjmbc-MuiDataGrid-virtualScroller"
               role="presentation"
               style="overflow-x: hidden; overflow-y: hidden;"
             >
@@ -166,7 +166,6 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     />
                     <div
                       aria-colindex="1"
-                      aria-label="Priority"
                       aria-sort="ascending"
                       class="MuiDataGrid-columnHeader MuiDataGrid-columnHeader--sortable MuiDataGrid-columnHeader--sorted MuiDataGrid-withBorderColor"
                       data-field="priority"
@@ -187,7 +186,6 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                             class="MuiDataGrid-columnHeaderTitleContainerContent"
                           >
                             <div
-                              aria-label=""
                               class="MuiDataGrid-columnHeaderTitle css-1qb993p-MuiDataGrid-columnHeaderTitle"
                               data-mui-internal-clone-element="true"
                             >
@@ -274,7 +272,6 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     </div>
                     <div
                       aria-colindex="2"
-                      aria-label="Type"
                       aria-sort="none"
                       class="MuiDataGrid-columnHeader MuiDataGrid-withBorderColor"
                       data-field="type"
@@ -295,7 +292,6 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                             class="MuiDataGrid-columnHeaderTitleContainerContent"
                           >
                             <div
-                              aria-label=""
                               class="MuiDataGrid-columnHeaderTitle css-1qb993p-MuiDataGrid-columnHeaderTitle"
                               data-mui-internal-clone-element="true"
                             >
@@ -355,7 +351,6 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     </div>
                     <div
                       aria-colindex="3"
-                      aria-label="Component"
                       aria-sort="none"
                       class="MuiDataGrid-columnHeader MuiDataGrid-withBorderColor"
                       data-field="component"
@@ -376,7 +371,6 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                             class="MuiDataGrid-columnHeaderTitleContainerContent"
                           >
                             <div
-                              aria-label=""
                               class="MuiDataGrid-columnHeaderTitle css-1qb993p-MuiDataGrid-columnHeaderTitle"
                               data-mui-internal-clone-element="true"
                             >
@@ -436,7 +430,6 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     </div>
                     <div
                       aria-colindex="4"
-                      aria-label="Issue"
                       aria-sort="none"
                       class="MuiDataGrid-columnHeader MuiDataGrid-withBorderColor"
                       data-field="id"
@@ -457,7 +450,6 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                             class="MuiDataGrid-columnHeaderTitleContainerContent"
                           >
                             <div
-                              aria-label=""
                               class="MuiDataGrid-columnHeaderTitle css-1qb993p-MuiDataGrid-columnHeaderTitle"
                               data-mui-internal-clone-element="true"
                             >
@@ -517,9 +509,8 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     </div>
                     <div
                       aria-colindex="5"
-                      aria-label="Title"
                       aria-sort="none"
-                      class="MuiDataGrid-columnHeader MuiDataGrid-withBorderColor MuiDataGrid-columnHeader--last"
+                      class="MuiDataGrid-columnHeader MuiDataGrid-withBorderColor MuiDataGrid-columnHeader--lastUnpinned MuiDataGrid-columnHeader--last"
                       data-field="title"
                       role="columnheader"
                       style="height: 56px; width: 800px;"
@@ -538,7 +529,6 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                             class="MuiDataGrid-columnHeaderTitleContainerContent"
                           >
                             <div
-                              aria-label=""
                               class="MuiDataGrid-columnHeaderTitle css-1qb993p-MuiDataGrid-columnHeaderTitle"
                               data-mui-internal-clone-element="true"
                             >
@@ -633,6 +623,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     <div
                       aria-colindex="1"
                       aria-colspan="1"
+                      aria-rowspan="1"
                       class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
                       data-colindex="0"
                       data-field="priority"
@@ -650,6 +641,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     <div
                       aria-colindex="2"
                       aria-colspan="1"
+                      aria-rowspan="1"
                       class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
                       data-colindex="1"
                       data-field="type"
@@ -664,6 +656,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     <div
                       aria-colindex="3"
                       aria-colspan="1"
+                      aria-rowspan="1"
                       class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
                       data-colindex="2"
                       data-field="component"
@@ -677,6 +670,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     <div
                       aria-colindex="4"
                       aria-colspan="1"
+                      aria-rowspan="1"
                       class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
                       data-colindex="3"
                       data-field="id"
@@ -695,6 +689,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     <div
                       aria-colindex="5"
                       aria-colspan="1"
+                      aria-rowspan="1"
                       class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
                       data-colindex="4"
                       data-field="title"
@@ -722,6 +717,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     <div
                       aria-colindex="1"
                       aria-colspan="1"
+                      aria-rowspan="1"
                       class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
                       data-colindex="0"
                       data-field="priority"
@@ -739,6 +735,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     <div
                       aria-colindex="2"
                       aria-colspan="1"
+                      aria-rowspan="1"
                       class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
                       data-colindex="1"
                       data-field="type"
@@ -753,6 +750,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     <div
                       aria-colindex="3"
                       aria-colspan="1"
+                      aria-rowspan="1"
                       class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
                       data-colindex="2"
                       data-field="component"
@@ -766,6 +764,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     <div
                       aria-colindex="4"
                       aria-colspan="1"
+                      aria-rowspan="1"
                       class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
                       data-colindex="3"
                       data-field="id"
@@ -784,6 +783,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     <div
                       aria-colindex="5"
                       aria-colspan="1"
+                      aria-rowspan="1"
                       class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
                       data-colindex="4"
                       data-field="title"
@@ -800,15 +800,16 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
               <div
                 class="MuiDataGrid-bottomContainer MuiDataGrid-container--bottom css-14egwce"
                 role="presentation"
+                style="transform: translateY(0px);"
               />
             </div>
             <div
               aria-hidden="true"
-              class="MuiDataGrid-scrollbar MuiDataGrid-scrollbar--horizontal css-1rtad1"
+              class="MuiDataGrid-scrollbar MuiDataGrid-scrollbar--horizontal css-w5zs33"
               tabindex="-1"
             >
               <div
-                class="MuiDataGrid-scrollbarContent css-1baulvz"
+                class="MuiDataGrid-scrollbarContent"
               />
             </div>
           </div>

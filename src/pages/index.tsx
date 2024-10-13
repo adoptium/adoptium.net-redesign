@@ -14,6 +14,7 @@ import Testimonials from "../components/Testimonials"
 import LatestNews from "../components/LatestNews"
 import FAQ from "../components/FAQ"
 import Contributors from "../components/Contributors/home"
+import { Slice } from 'gatsby'
 
 const Index = ({ data }) => {
   return (
@@ -40,6 +41,7 @@ const Index = ({ data }) => {
       <PowerOfTemurin />
       <DownloadCounter />
       <TemurinFeatures />
+      <Slice alias='adoptiumNews' />
       <WGProjects />
       <Testimonials />
       <LatestNews />

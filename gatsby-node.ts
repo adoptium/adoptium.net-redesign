@@ -346,6 +346,11 @@ export const createPages: GatsbyNode["createPages"] = async ({
   })
 
   createSlice({
+    id: 'adoptiumNews',
+    component: path.resolve('src', 'components', 'AdoptiumNews', 'index.tsx'),
+  })
+
+  createSlice({
     id: "banner",
     component: path.resolve("src", "components", "Banner", "index.tsx"),
   })

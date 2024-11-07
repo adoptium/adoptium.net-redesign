@@ -89,7 +89,7 @@
     "axios-mock-adapter": "^2.1.0",
     "babel-preset-gatsby": "^3.12.1",
     "gatsby-cli": "^5.13.3",
-    "gatsby-plugin-postcss": "^6.12.0",
+    "gatsby-plugin-postcss": "^6.14.0",
     "jest-canvas-mock": "^2.5.2",
     "jsdom": "^25.0.1",
     "postcss": "^8.4.47",

@@ -53,4 +53,22 @@ describe('MarketplaceDownloadTable component', () => {
     );
     expect(queryByText('Out of Date')).not.toBeInTheDocument();
   });
+
+  it('renders correctly - Without checksum', () => {
+    let releases = [
+      createRandomMarketplaceRelease(true, 1),
+    ];
+
+    // erase checksum
+    releases[0].binary.package.sha265sum = undefined;
+    releases[0].binary.installer[0].sha265sum = undefined;
+
+    const { container } = render(
+      <MarketplaceDownloadTable
+        results={releases}
+      />
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

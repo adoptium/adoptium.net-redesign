@@ -95,7 +95,7 @@
     "postcss": "^8.4.49",
     "prettier": "3.3.3",
     "tailwindcss": "^3.4.15",
-    "vitest": "^2.0.2",
+    "vitest": "^2.1.6",
     "vitest-axe": "^1.0.0-pre.3",
     "vitest-canvas-mock": "^0.3.3"
   },

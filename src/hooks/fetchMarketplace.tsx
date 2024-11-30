@@ -78,6 +78,7 @@ export interface MarketplaceRelease {
       name: string
       link: URL
       sha265sum: string
+      sha256sum: string
       sha256sum_link: URL
       signature_link: URL
     }
@@ -86,6 +87,7 @@ export interface MarketplaceRelease {
         name: string
         link: URL
         sha265sum: string
+        sha256sum: string
         sha256sum_link: URL
         signature_link: URL
       },

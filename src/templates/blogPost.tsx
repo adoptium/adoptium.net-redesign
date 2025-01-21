@@ -9,11 +9,13 @@ import Seo from "../components/Seo"
 import BlogAuthor from "../components/BlogAuthor"
 import AuthorData from "../json/authors.json"
 import GuestPost from "../components/GuestPost"
-import Byline from "../components/Byline"
+import Byline from "../components/News/Byline"
+import RelatedArticles from "../components/News/RelatedArticles"
 import ShareButton from "../components/Share"
 import Tags from "../components/Tags"
 import Comments from "../components/Comments"
 import ImagePopup from "../components/ImagePopup"
+import SharePost from "../components/News/SharePost"
 
 export const formatDiv = props => {
   // convert inline code to code blocks
@@ -38,7 +40,7 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
 
   return (
     <Layout>
-      <div className="pt-32 pb-12">
+      <div className="pt-48 pb-12">
         <div className="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center">
           <div className="self-stretch h-52 flex-col justify-center items-center gap-6 flex">
             <div className="self-stretch h-32 flex-col justify-center items-center gap-4 flex">
@@ -48,13 +50,18 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
                   News article
                 </div>
               </div>
-              <div className="self-stretch text-center text-white text-4xl lg:text-5xl font-semibold">
+              <h1 className="self-stretch text-center text-white   text-[36px] lg:text-[48px] leading-[122.222%] lg:leading-[116.667%] font-semibold">
                 {post.frontmatter.title}
-              </div>
+              </h1>
             </div>
-            <div className="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7">
+            <div className="self-stretch text-center text-grey text-grey-300 text-xl font-normal leading-7">
               {post.excerpt}
             </div>
+            <Byline
+              date={post.frontmatter.date}
+              author={author.name}
+              identifier={post.frontmatter.author}
+            />
           </div>
         </div>
       </div>
@@ -62,11 +69,6 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
         <div className="max-w-4xl">
           <article>
             <header className="pb-5">
-              <Byline
-                date={post.frontmatter.date}
-                author={author.name}
-                identifier={post.frontmatter.author}
-              />
               <ShareButton
                 location={location}
                 siteMetadata={data.site.siteMetadata}
@@ -76,15 +78,9 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
             <article className="prose prose-invert lg:prose-lg max-w-none">
               <MDXProvider components={components}>{children}</MDXProvider>
             </article>
-            <Tags tags={tags} />
-            <Comments />
-            <hr className="my-3" />
-            <footer className="pb-5">
-              <BlogAuthor
-                identifier={post.frontmatter.author}
-                author={author}
-              />
-            </footer>
+            {/* <Tags tags={tags} />
+            <Comments /> */}
+            <SharePost />
           </article>
 
           <div>
@@ -107,6 +103,7 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
           </div>
         </div>
       </section>
+      <RelatedArticles />
     </Layout>
   )
 }

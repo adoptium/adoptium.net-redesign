@@ -8,7 +8,7 @@ const RelatedArticleCard = ({title, date, postPath, tags}) => {
       <div className="relative">
         <img className=" mb-0 pb-5" src="/images/new-article-card-img.png" alt="" />
         {tags && tags.length > 0 && (
-        <button className="text-[12px] font-semibold  leading-[33.333%] bg-[#3E3355] rounded-[80px] px-4 py-4  absolute top-3 right-4">
+        <button className="text-[12px] font-semibold  leading-[33.333%] bg-[#3E3355] rounded-[80px] px-4 py-4 absolute top-3 right-4">
           {capitalize(tags[0])}
         </button>
         )}

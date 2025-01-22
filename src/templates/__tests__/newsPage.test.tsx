@@ -1,6 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import BlogPage, { Head } from "../blogPage"
+import NewsPage, { Head } from "../newsPage"
 import { describe, expect, it } from "vitest"
 import { axe } from "vitest-axe"
 import { createMDXData } from "../../__fixtures__/page"
@@ -12,10 +12,10 @@ const pageContext = {
   nextPageNumber: 3,
 }
 
-describe("Blog Template page", () => {
+describe("News Template page", () => {
   it("renders correctly", () => {
     const { container } = render(
-      <BlogPage data={mockData} pageContext={pageContext} />,
+      <NewsPage data={mockData} pageContext={pageContext} />,
     )
     // eslint-disable-next-line
     const pageContent = container.querySelector("main")
@@ -27,12 +27,12 @@ describe("Blog Template page", () => {
     const { container } = render(<Head pageContext={pageContext} />)
     // eslint-disable-next-line
     const title = container.querySelector("title")
-    expect(title?.textContent).toEqual("All posts – Page 2 | Adoptium")
+    expect(title?.textContent).toEqual("News & Events – Page 2 | Adoptium")
   })
 
   it("has no accessibility violations", async () => {
     const { container } = render(
-      <BlogPage data={mockData} pageContext={pageContext} />,
+      <NewsPage data={mockData} pageContext={pageContext} />,
     )
     const results = await axe(container)
     expect(results).toHaveNoViolations()

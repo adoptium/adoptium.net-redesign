@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby-plugin-react-i18next"
 import RelatedArticleCard from "./RelatedArticleCard"
 
 const RelatedArticle = () => {
@@ -32,9 +33,11 @@ const RelatedArticle = () => {
                     Java runtime binaries that are enterprise-ready and Java SE TCK-tested
                     for general use in the Java ecosystem.
                 </div>
-                <button className="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block ">
-                    See all articles
-                </button>
+                <Link to="/news">
+                    <button className="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block ">
+                        See all articles
+                    </button>
+                </Link>
             </div>
 
             <div className="flex justify-center flex-wrap items-center gap-5 pt-16">

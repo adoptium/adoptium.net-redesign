@@ -449,7 +449,7 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
       class="flex justify-center flex-wrap items-center gap-5 pt-16"
     >
       <div
-        class="flex flex-col max-w-[392px] newscard-2   bg-[#200D46] p-6"
+        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
       >
         <div
           class="relative"
@@ -459,33 +459,26 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
             class=" mb-0 pb-5"
             src="/images/new-article-card-img.png"
           />
-          <button
-            class="text-[12px] font-semibold  leading-[33.333%] bg-[#3E3355] rounded-[80px] px-4 py-4  absolute top-3 right-4"
-          >
-            Category
-          </button>
         </div>
         <h2
           class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
         >
-          Renist ekopod övervakningsekon. Köttnorm jast fidget spinner.
+          Mock Title 1
            
         </h2>
         <p
           class="mb-0"
         >
-          5 Jun, 2023
+          2021-01-01
         </p>
         <a
-          aria-current="page"
           class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-          href="/"
         >
           Read More
         </a>
       </div>
       <div
-        class="flex flex-col max-w-[392px] newscard-2   bg-[#200D46] p-6"
+        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
       >
         <div
           class="relative"
@@ -495,33 +488,26 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
             class=" mb-0 pb-5"
             src="/images/new-article-card-img.png"
           />
-          <button
-            class="text-[12px] font-semibold  leading-[33.333%] bg-[#3E3355] rounded-[80px] px-4 py-4  absolute top-3 right-4"
-          >
-            Category
-          </button>
         </div>
         <h2
           class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
         >
-          Renist ekopod övervakningsekon. Köttnorm jast fidget spinner.
+          Mock Title 2
            
         </h2>
         <p
           class="mb-0"
         >
-          5 Jun, 2023
+          2021-01-01
         </p>
         <a
-          aria-current="page"
           class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-          href="/"
         >
           Read More
         </a>
       </div>
       <div
-        class="flex flex-col max-w-[392px] newscard-2   bg-[#200D46] p-6"
+        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
       >
         <div
           class="relative"
@@ -531,27 +517,49 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
             class=" mb-0 pb-5"
             src="/images/new-article-card-img.png"
           />
-          <button
-            class="text-[12px] font-semibold  leading-[33.333%] bg-[#3E3355] rounded-[80px] px-4 py-4  absolute top-3 right-4"
-          >
-            Category
-          </button>
         </div>
         <h2
           class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
         >
-          Renist ekopod övervakningsekon. Köttnorm jast fidget spinner.
+          Mock Title 3
            
         </h2>
         <p
           class="mb-0"
         >
-          5 Jun, 2023
+          2021-01-01
         </p>
         <a
-          aria-current="page"
           class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-          href="/"
+        >
+          Read More
+        </a>
+      </div>
+      <div
+        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
+      >
+        <div
+          class="relative"
+        >
+          <img
+            alt=""
+            class=" mb-0 pb-5"
+            src="/images/new-article-card-img.png"
+          />
+        </div>
+        <h2
+          class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
+        >
+          Mock Title 4
+           
+        </h2>
+        <p
+          class="mb-0"
+        >
+          2021-01-01
+        </p>
+        <a
+          class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
         >
           Read More
         </a>
@@ -988,7 +996,7 @@ exports[`BlogPost Template page > renders correctly 1`] = `
       class="flex justify-center flex-wrap items-center gap-5 pt-16"
     >
       <div
-        class="flex flex-col max-w-[392px] newscard-2   bg-[#200D46] p-6"
+        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
       >
         <div
           class="relative"
@@ -998,33 +1006,26 @@ exports[`BlogPost Template page > renders correctly 1`] = `
             class=" mb-0 pb-5"
             src="/images/new-article-card-img.png"
           />
-          <button
-            class="text-[12px] font-semibold  leading-[33.333%] bg-[#3E3355] rounded-[80px] px-4 py-4  absolute top-3 right-4"
-          >
-            Category
-          </button>
         </div>
         <h2
           class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
         >
-          Renist ekopod övervakningsekon. Köttnorm jast fidget spinner.
+          Mock Title 1
            
         </h2>
         <p
           class="mb-0"
         >
-          5 Jun, 2023
+          2021-01-01
         </p>
         <a
-          aria-current="page"
           class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-          href="/"
         >
           Read More
         </a>
       </div>
       <div
-        class="flex flex-col max-w-[392px] newscard-2   bg-[#200D46] p-6"
+        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
       >
         <div
           class="relative"
@@ -1034,33 +1035,26 @@ exports[`BlogPost Template page > renders correctly 1`] = `
             class=" mb-0 pb-5"
             src="/images/new-article-card-img.png"
           />
-          <button
-            class="text-[12px] font-semibold  leading-[33.333%] bg-[#3E3355] rounded-[80px] px-4 py-4  absolute top-3 right-4"
-          >
-            Category
-          </button>
         </div>
         <h2
           class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
         >
-          Renist ekopod övervakningsekon. Köttnorm jast fidget spinner.
+          Mock Title 2
            
         </h2>
         <p
           class="mb-0"
         >
-          5 Jun, 2023
+          2021-01-01
         </p>
         <a
-          aria-current="page"
           class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-          href="/"
         >
           Read More
         </a>
       </div>
       <div
-        class="flex flex-col max-w-[392px] newscard-2   bg-[#200D46] p-6"
+        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
       >
         <div
           class="relative"
@@ -1070,27 +1064,49 @@ exports[`BlogPost Template page > renders correctly 1`] = `
             class=" mb-0 pb-5"
             src="/images/new-article-card-img.png"
           />
-          <button
-            class="text-[12px] font-semibold  leading-[33.333%] bg-[#3E3355] rounded-[80px] px-4 py-4  absolute top-3 right-4"
-          >
-            Category
-          </button>
         </div>
         <h2
           class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
         >
-          Renist ekopod övervakningsekon. Köttnorm jast fidget spinner.
+          Mock Title 3
            
         </h2>
         <p
           class="mb-0"
         >
-          5 Jun, 2023
+          2021-01-01
         </p>
         <a
-          aria-current="page"
           class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-          href="/"
+        >
+          Read More
+        </a>
+      </div>
+      <div
+        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
+      >
+        <div
+          class="relative"
+        >
+          <img
+            alt=""
+            class=" mb-0 pb-5"
+            src="/images/new-article-card-img.png"
+          />
+        </div>
+        <h2
+          class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
+        >
+          Mock Title 4
+           
+        </h2>
+        <p
+          class="mb-0"
+        >
+          2021-01-01
+        </p>
+        <a
+          class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
         >
           Read More
         </a>

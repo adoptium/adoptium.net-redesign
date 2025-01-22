@@ -1,7 +1,26 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import RelatedArticleCard from "./RelatedArticleCard"
 
 const RelatedArticle = () => {
+    const data = useStaticQuery(graphql`
+    {
+      allMdx(limit: 3, sort: { frontmatter: { date: DESC } }) {
+        edges {
+          node {
+            frontmatter {
+              title
+              tags
+              date(formatString: "MMMM DD, YYYY")
+            }
+            fields {
+              postPath
+            }
+          }
+        }
+      }
+    }
+  `)
     return (
         <div className="max-w-[1264px] px-6 mx-auto py-8 md:py-16">
             <div className="max-w-[670px] mx-auto flex flex-col items-center justify-center">
@@ -19,9 +38,15 @@ const RelatedArticle = () => {
             </div>
 
             <div className="flex justify-center flex-wrap items-center gap-5 pt-16">
-                <RelatedArticleCard />
-                <RelatedArticleCard />
-                <RelatedArticleCard />
+                {data.allMdx.edges.map((card, index) => (
+                    <RelatedArticleCard
+                        key={index}
+                        title={card.node.frontmatter.title}
+                        date={card.node.frontmatter.date}
+                        postPath={card.node.fields.postPath}
+                        tags={card.node.frontmatter.tags}
+                    />
+                ))}
             </div>
         </div>
     )

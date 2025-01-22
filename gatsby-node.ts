@@ -332,7 +332,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   actions,
 }) => {
   const { createPage, createSlice } = actions
-  const postsPerPage = 10
+  const postsPerPage = 6
 
   // Create Slice components https://www.gatsbyjs.com/docs/how-to/performance/using-slices/
   createSlice({
@@ -602,7 +602,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   // Make tag pages
   tags.forEach(tag => {
     createPage({
-      path: `/blog/tags/${tag.fieldValue}/`,
+      path: `/news/tags/${tag.fieldValue}/`,
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
@@ -619,8 +619,8 @@ export const createPages: GatsbyNode["createPages"] = async ({
       currentPageNumber === numPages ? null : currentPageNumber + 1
 
     createPage({
-      path: `/blog/page/${index + 1}`,
-      component: path.resolve("./src/templates/blogPage.tsx"),
+      path: `/news/page/${index + 1}`,
+      component: path.resolve("./src/templates/newsPage.tsx"),
       context: {
         limit: postsPerPage,
         skip: index * postsPerPage,

@@ -25,23 +25,30 @@ exports[`Blog Template page > renders correctly 1`] = `
               </a>
             </h2>
             <div
-              class="byline"
-              style="display: flex; align-items: center; margin-top: 1rem; margin-bottom: 1rem; text-decoration: none;"
+              class="flex justify-center items-center gap-5"
             >
-              2021-01-01
-               – posted by   
-              <a
-                href="/blog/author/pmc"
-              >
-                Adoptium PMC
-              </a>
-               
               <img
                 alt="Adoptium PMC"
                 image="[object Object]"
                 stlye="[object Object]"
                 style="margin-left: 0.5rem; margin-bottom: 0px; min-width: 30px; border-radius: 100%;"
               />
+              <span
+                class="text-[16px] font-bold leading-[150%] text-white"
+              >
+                <a
+                  href="/blog/author/pmc"
+                >
+                  <span
+                    class="text-primary pr-2"
+                  >
+                    Adoptium PMC
+                    ,
+                  </span>
+                   
+                  2021-01-01
+                </a>
+              </span>
             </div>
           </header>
           <section>

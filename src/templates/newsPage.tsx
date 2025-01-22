@@ -1,17 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby-plugin-react-i18next"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import PageHeader from "../components/PageHeader"
 import NewsCardList from "../components/News/NewsCardList"
-import AuthorData from "../json/authors.json"
-import ArticlePreview from "../components/ArticlePreview"
 
-const BlogIndex = ({ data }) => {
+const NewsPage = ({ data, pageContext }) => {
   const posts = data.allMdx.edges
-  const nextPageNumber = data.allMdx.totalCount > 10 ? 2 : null
+  const { previousPageNumber, nextPageNumber } = pageContext
+  const previousPageLink =
+    previousPageNumber === 1 ? "/news" : `/news/page/${previousPageNumber}`
 
   return (
     <Layout>
@@ -21,24 +20,26 @@ const BlogIndex = ({ data }) => {
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
         className={"mx-auto max-w-[860px] px-2 w-full"}
       />
-      <NewsCardList posts={posts} previousPageNumber={null} previousPageLink={null} nextPageNumber={nextPageNumber}  />
+      <NewsCardList posts={posts} previousPageNumber={previousPageNumber} previousPageLink={previousPageLink} nextPageNumber={nextPageNumber} />
     </Layout>
   )
 }
 
-export default BlogIndex
+export default NewsPage
 
-export const Head = () => <Seo title="News & Events" />
+export const Head = ({ pageContext }) => {
+  const { currentPageNumber } = pageContext
+  return <Seo title={`News & Events – Page ${currentPageNumber}`} />
+}
 
-export const pageQuery = graphql`
-  query ($language: String!) {
+export const newsPageQuery = graphql`
+  query newsPageQuery($skip: Int!, $limit: Int!, $language: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMdx(sort: { frontmatter: { date: DESC } }, limit: 10) {
-      totalCount
+    allMdx(sort: { frontmatter: { date: DESC } }, limit: $limit, skip: $skip) {
       edges {
         node {
           excerpt
@@ -47,10 +48,10 @@ export const pageQuery = graphql`
             postPath
           }
           frontmatter {
-            author
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            author
             tags
           }
         }

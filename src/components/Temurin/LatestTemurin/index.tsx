@@ -69,20 +69,19 @@ const LatestTemurin = (props): JSX.Element => {
         {binary ? (
           <Trans
             i18nKey="Download Temurin for"
-            defaults="Download Temurin {{ defaultVersion }} for {{ userOSName }} {{ arch }}"
-            components={{
-              defaultVersion: defaultVersion,
-              userOSName: userOSName,
-              arch: arch
+            defaults="Download Temurin {{defaultVersion}} for {{userOSName}} {{arch}}"
+            values={{
+              defaultVersion,
+              userOSName,
+              arch,
             }}
-          />) : (
-          <Trans 
-            i18nKey="home.download.temurin.short" 
+          />
+        ) : (
+          <Trans
+            i18nKey="home.download.temurin.short"
             defaults="Download Temurin {{ defaultVersion }}"
-            components={{
-              defaultVersion: defaultVersion
-            }}
-             />
+            value={{ defaultVersion }}
+          />
         )}
       </p>
       <div className="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6">

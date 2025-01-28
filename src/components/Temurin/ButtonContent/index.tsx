@@ -16,21 +16,26 @@ interface CardData {
   java_version: string
 }
 
+const navigationItem = [
+  {
+    title: "Release notes",
+    link: "/release-notes"
+  },
+  {
+    title: "Installation guide",
+    link: "/installation"
+  },
+  {
+    title: "Supported Platforms",
+    link: "/supported-platforms"
+  },
+  {
+    title: "Terms of use",
+    link: "#"
+  },
+]
+
 const ButtonContent = ({ results }) => {
-  const navigationItem = [
-    {
-      title: "Release notes",
-    },
-    {
-      title: "Installation guide",
-    },
-    {
-      title: "Supported Configurations",
-    },
-    {
-      title: "Terms of use",
-    },
-  ]
   const CardData: CardData[] = []
   // loop through results and find macOS and Windows installers
   results &&
@@ -68,15 +73,17 @@ const ButtonContent = ({ results }) => {
       <div className=" w-full max-w-[1264px] mx-auto">
         <ul className="flex md:flex-row flex-col gap-4 lg:gap-8 items-start  w-full  justify-start sm:justify-center sm:items-center  my-8 lg:my-16">
           {navigationItem.map((item, index) => (
-            <li
-              key={index}
-              className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer"
-            >
-              <span className=" group  ">
-                <RxCrossCircled />
-              </span>{" "}
-              {item.title}
-            </li>
+            <Link to={item.link}>
+              <li
+                key={index}
+                className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer"
+              >
+                <span className=" group">
+                  <RxCrossCircled />
+                </span>{" "}
+                {item.title}
+              </li>
+            </Link>
           ))}
         </ul>
 

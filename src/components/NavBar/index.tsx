@@ -8,6 +8,8 @@ import LanguageSelector from "../LanguageSelector"
 
 // @ts-ignore
 import Logo from "../../images/adoptium-logo-dark.svg"
+import { CloseIcon, SideBarIcon } from "../Common/Icon"
+import Announcements from "../Announcements"
 
 interface NavItem {
   name: string
@@ -66,6 +68,7 @@ const navigation: NavItem[] = [
 const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showLastSlide, setShowLastSlide] = useState(false)
+  const [showAnnouncement, setShowAnnouncement] = useState(false)
   const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null)
   useEffect(() => {
     if (!mobileMenuOpen) {
@@ -80,6 +83,9 @@ const NavBar = () => {
 
   return (
     <header className="absolute max-w-[1288px] w-full mx-auto px-3 inset-x-0 top-0 z-50">
+      {showAnnouncement && (
+        <Announcements handleClose={() => setShowAnnouncement(false)} />
+      )}
       <nav
         className="flex items-center gap-5 justify-between py-6"
         aria-label="Global"
@@ -87,118 +93,93 @@ const NavBar = () => {
         <Link to="/" placeholder="homepage">
           <Logo alt="Adoptium Logo" className="h-10" />
         </Link>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white-700"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 48 48"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="1"
-                y="1"
-                width="46"
-                height="46"
-                rx="23"
-                stroke="#3E3355"
-                strokeWidth="2"
-              />
-              <path
-                d="M15 24H33"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M15 18H33"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M15 30H33"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className="hidden lg:flex lg:gap-6 xl:gap-x-12">
-          {navigation.map(item =>
-            item.children ? (
-              <Menu
-                as="div"
-                key={`desktop-${item.name}`}
-                className="relative inline-block text-left"
-              >
-                <div>
-                  <Menu.Button className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50">
-                    {item.name}
-                    <FaChevronDown className="-mr-1 mt-1" aria-hidden="true" />
-                  </Menu.Button>
-                </div>
-
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-100"
-                  enterFrom="transform opacity-0 scale-95"
-                  enterTo="transform opacity-100 scale-100"
-                  leave="transition ease-in duration-75"
-                  leaveFrom="transform opacity-100 scale-100"
-                  leaveTo="transform opacity-0 scale-95"
+        <div className="flex items-center gap-4">
+          <div className="hidden lg:flex lg:gap-6 xl:gap-x-12">
+            {navigation.map(item =>
+              item.children ? (
+                <Menu
+                  as="div"
+                  key={`desktop-${item.name}`}
+                  className="relative inline-block text-left"
                 >
-                  <Menu.Items
-                    className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#0E002A] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                    style={{ minWidth: "max-content" }}
+                  <div>
+                    <Menu.Button className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50">
+                      {item.name}
+                      <FaChevronDown
+                        className="-mr-1 mt-1"
+                        aria-hidden="true"
+                      />
+                    </Menu.Button>
+                  </div>
+
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
                   >
-                    <div className="py-6 px-4">
-                      {item.children.map(child => (
-                        <Menu.Item key={`mobile-${child.name}`}>
-                          {({ active }) => (
-                            <a
-                              href={child.href}
-                              className={classNames(
-                                active ? " text-[#A80D55]" : "text-white-700",
-                                "block  py-3 text-sm border-b border-[#3E3355]",
-                              )}
-                            >
-                              {child.name}
-                            </a>
-                          )}
-                        </Menu.Item>
-                      ))}
-                    </div>
-                  </Menu.Items>
-                </Transition>
-              </Menu>
-            ) : (
-              <a
-                key={`desktop-${item.name}`}
-                href={item.href}
-                className="text-sm font-semibold leading-6 text-white-900"
+                    <Menu.Items
+                      className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#0E002A] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                      style={{ minWidth: "max-content" }}
+                    >
+                      <div className="py-6 px-4">
+                        {item.children.map(child => (
+                          <Menu.Item key={`mobile-${child.name}`}>
+                            {({ active }) => (
+                              <a
+                                href={child.href}
+                                className={classNames(
+                                  active ? " text-[#A80D55]" : "text-white-700",
+                                  "block  py-3 text-sm border-b border-[#3E3355]",
+                                )}
+                              >
+                                {child.name}
+                              </a>
+                            )}
+                          </Menu.Item>
+                        ))}
+                      </div>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+              ) : (
+                <a
+                  key={`desktop-${item.name}`}
+                  href={item.href}
+                  className="text-sm font-semibold leading-6 text-white-900"
+                >
+                  {item.name}
+                </a>
+              ),
+            )}
+          </div>
+          <div className="hidden sm:block space-x-3 h-12">
+            <LanguageSelector />
+            <div className="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex cursor-pointer">
+              <div
+                aria-label="checksum"
+                onClick={() => setShowAnnouncement(!showAnnouncement)}
+                className="relative"
               >
-                {item.name}
-              </a>
-            ),
-          )}
-        </div>
-        <div className="hidden sm:block space-x-3 h-12">
-          <LanguageSelector />
-          <div className="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex">
-            <a aria-label="checksum" href="#">
-              <FaRegBell size={20} />
-            </a>
+                <FaRegBell size={20} />
+                <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full text-xs text-white font-bold flex items-center justify-center">
+                  9
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="flex lg:hidden ml-3">
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white-700"
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <span className="sr-only">Open main menu</span>
+              <SideBarIcon />
+            </button>
           </div>
         </div>
       </nav>
@@ -225,37 +206,7 @@ const NavBar = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 48 48"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="1"
-                  y="1"
-                  width="46"
-                  height="46"
-                  rx="23"
-                  stroke="#3E3355"
-                  strokeWidth="2"
-                />
-                <path
-                  d="M30 18L18 30"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M18 18L30 30"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <CloseIcon />
             </button>
           </div>
           <div className="mt-6 grow relative w-full h-full overflow-hidden flow-root">

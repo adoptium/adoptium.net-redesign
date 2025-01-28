@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import { navigate } from "gatsby"
 
 // Extend the Window interface to include gtag
 declare global {
@@ -48,9 +49,9 @@ const DownloadPage = ({ location }) => {
   const shouldRedirect = !link
 
   useEffect(() => {
-    // if (shouldRedirect) {
-    //   navigate("/temurin/releases")
-    // }
+    if (shouldRedirect) {
+      navigate("/temurin/releases")
+    }
   }, [])
 
   if (shouldRedirect) {

@@ -2,13 +2,13 @@ import React, { useState, useEffect, Fragment } from "react"
 import { Link } from "gatsby-plugin-react-i18next"
 import { Dialog, Menu, Transition } from "@headlessui/react"
 import { FaChevronDown, FaRegBell } from "react-icons/fa"
+import { BsXLg, BsList } from "react-icons/bs"
 
 import IconSocial from "../IconSocial"
 import LanguageSelector from "../LanguageSelector"
 
 // @ts-ignore
 import Logo from "../../images/adoptium-logo-dark.svg"
-import { CloseIcon, SideBarIcon } from "../Common/Icon"
 import Announcements from "../Announcements"
 
 interface NavItem {
@@ -180,7 +180,9 @@ const NavBar = () => {
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
-              <SideBarIcon />
+              <div className="border-2 border-[#3e3355] p-3 rounded-full">
+                <BsList className="text-2xl" />
+              </div>
             </button>
           </div>
         </div>
@@ -208,7 +210,9 @@ const NavBar = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <CloseIcon />
+              <div className="border-2 border-[#3e3355] p-3 rounded-full">
+                <BsXLg className="text-xl" />
+              </div>
             </button>
           </div>
           <div className="mt-6 grow relative w-full h-full overflow-hidden flow-root">

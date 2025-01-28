@@ -156,8 +156,10 @@ const NavBar = () => {
               ),
             )}
           </div>
-          <div className="hidden sm:block space-x-3 h-12">
-            <LanguageSelector />
+          <div className="flex space-x-3 h-12">
+            <div className="hidden sm:block">
+              <LanguageSelector />
+            </div>
             <div className="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex cursor-pointer">
               <div
                 aria-label="checksum"
@@ -174,7 +176,7 @@ const NavBar = () => {
           <div className="flex lg:hidden ml-3">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white-700"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md text-white-700"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>

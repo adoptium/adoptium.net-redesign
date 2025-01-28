@@ -33,7 +33,7 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
           </p>
           <div
             aria-label="Release Notes"
-            class="MuiDataGrid-root MuiDataGrid-autoHeight MuiDataGrid-root--densityStandard MuiDataGrid-withBorderColor css-1rfg99c-MuiDataGrid-root"
+            class="MuiDataGrid-root MuiDataGrid-autoHeight MuiDataGrid-root--densityStandard MuiDataGrid-withBorderColor css-ql2u9f-MuiDataGrid-root"
             style="--DataGrid-width: 0px; --DataGrid-hasScrollX: 1; --DataGrid-hasScrollY: 0; --DataGrid-scrollbarSize: 0px; --DataGrid-rowWidth: 1300px; --DataGrid-columnsTotalWidth: 1300px; --DataGrid-leftPinnedWidth: 0px; --DataGrid-rightPinnedWidth: 0px; --DataGrid-headerHeight: 56px; --DataGrid-headersTotalHeight: 56px; --DataGrid-topContainerHeight: 56px; --DataGrid-bottomContainerHeight: 0px; --height: 52px;"
           >
             <div
@@ -68,9 +68,7 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                     </svg>
                     <span
                       class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorPrimary css-y2h6q0-MuiBadge-badge"
-                    >
-                      0
-                    </span>
+                    />
                   </span>
                 </span>
                 Filters
@@ -88,12 +86,12 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
               tabindex="-1"
             >
               <div
-                class="css-qtdhae"
+                class="css-1tj33pl"
                 data-id="gridPanelAnchor"
                 role="presentation"
               />
               <div
-                class="MuiDataGrid-virtualScroller MuiDataGrid-virtualScroller--hasScrollX css-mxjmbc-MuiDataGrid-virtualScroller"
+                class="MuiDataGrid-virtualScroller MuiDataGrid-virtualScroller--hasScrollX css-1ivhpui-MuiDataGrid-virtualScroller"
                 role="presentation"
                 style="overflow-x: hidden; overflow-y: hidden;"
               >
@@ -550,7 +548,7 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                 <div
                   class="MuiDataGrid-virtualScrollerContent css-1kwdphh-MuiDataGrid-virtualScrollerContent"
                   role="presentation"
-                  style="width: auto; height: 52px;"
+                  style="width: auto; flex-basis: 52px; flex-shrink: 0;"
                 >
                   <div
                     class="MuiDataGrid-virtualScrollerRenderZone css-s1v7zr-MuiDataGrid-virtualScrollerRenderZone"
@@ -650,18 +648,21 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                       >
                         title_mock
                       </div>
+                      <div
+                        class="MuiDataGrid-cell MuiDataGrid-cellEmpty"
+                        role="presentation"
+                      />
                     </div>
                   </div>
                 </div>
                 <div
                   class="MuiDataGrid-bottomContainer MuiDataGrid-container--bottom css-14egwce"
                   role="presentation"
-                  style="transform: translateY(0px);"
                 />
               </div>
               <div
                 aria-hidden="true"
-                class="MuiDataGrid-scrollbar MuiDataGrid-scrollbar--horizontal css-w5zs33"
+                class="MuiDataGrid-scrollbar MuiDataGrid-scrollbar--horizontal css-1oilzgs"
                 tabindex="-1"
               >
                 <div
@@ -674,7 +675,7 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
             >
               <div />
               <div
-                class="MuiTablePagination-root css-16mfp94-MuiTablePagination-root"
+                class="MuiTablePagination-root css-1o37pnf-MuiTablePagination-root"
               >
                 <div
                   class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular MuiTablePagination-toolbar css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar"

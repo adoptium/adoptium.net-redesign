@@ -1,0 +1,183 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Announcements component > Announcements renders correctly 1`] = `
+<div>
+  <div
+    class="z-[100] fixed top-0 right-0 w-full max-w-[480px] bg-[#0e002a] p-6 pt-8 h-screen rounded-s-3xl"
+  >
+    <div
+      class="flex items-center justify-between"
+    >
+      <h1
+        class="text-2xl font-semibold"
+      >
+        Announcements
+      </h1>
+      <button
+        class="-m-2.5 rounded-md p-2.5 text-white-700"
+        type="button"
+      >
+        <span
+          class="sr-only"
+        >
+          Close menu
+        </span>
+        <div
+          class="border-2 border-[#3e3355] p-3 rounded-full"
+        >
+          <svg
+            class="text-xl"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+            />
+          </svg>
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex items-center gap-12 relative"
+    >
+      <span
+        class="h-[1px] w-full bg-[#3E3355] inline-block absolute bottom-[0.7px] z-[-1]"
+      />
+      <div
+        class="flex space-x-10 whitespace-nowrap   py-3"
+      >
+        <button>
+          <span
+            class=" py-3  w-full tab-button-text
+                outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary  border-b-2 text-white"
+          >
+            Updates
+          </span>
+        </button>
+        <button>
+          <span
+            class=" py-3  w-full tab-button-text
+                outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent  border-b"
+          >
+            Ideas
+          </span>
+        </button>
+        <button>
+          <span
+            class=" py-3  w-full tab-button-text
+                outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent  border-b"
+          >
+            Roadmap
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="mt-6 grow overflow-hidden h-full pb-28"
+    >
+      <div
+        class="overflow-auto h-[88%] scroll-sidebar"
+      >
+        <article>
+          <div
+            class="text-[#c4bfce"
+          >
+            <p
+              class="text-xs leading-[133.333%] text-lightgrey mb-0"
+            >
+              2 weeks ago
+            </p>
+            <h3
+              class="text-[20px] leading-[140%] text-white"
+            >
+              Announcement Title
+            </h3>
+            <p
+              class="tab-button-text text-sm text-lightgrey pt-2"
+            >
+              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+            </p>
+          </div>
+          <div
+            class="bg-[#1A0D35] p-3 rounded-lg my-6"
+          >
+            <pre
+              class="!p-0 !bg-transparent text-white text-[8.889px] leading-[150%] !mb-0"
+            >
+              # Timestamp: Wed Mar 2 10:51:55 2022 UTC
+1..168
+ok 1 - MachineInfo_0
+  ---
+    duration_ms: 581
+  ...
+ok 2 - ClassLoadingTest_5m_0
+  ---
+    duration_ms: 304339
+  ...
+ok 3 - ClassLoadingTest_5m_1
+  ---
+    duration_ms: 303883
+  ...
+etc.
+  ...
+ok 168 - MauveMultiThrdLoad_5m_1
+  ---
+    duration_ms: 304296
+  ...
+            </pre>
+          </div>
+          <span
+            class="h-[1px] w-full bg-[#3E3355] inline-block  my-4"
+          />
+          <div
+            class="text-[#c4bfce"
+          >
+            <p
+              class="texxt-[12px] leading-[133.333%] text-lightgrey mb-0"
+            >
+              2 weeks ago
+            </p>
+            <h3
+              class="text-[20px] leading-[140%] text-white"
+            >
+              Announcement Title
+            </h3>
+            <p
+              class="tab-button-text text-sm text-lightgrey pt-2"
+            >
+              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+            </p>
+          </div>
+          <span
+            class="h-[1px] w-full bg-[#3E3355] inline-block  my-4"
+          />
+          <div
+            class="text-[#c4bfce"
+          >
+            <p
+              class="text-xs leading-[133.333%] text-lightgrey mb-0"
+            >
+              2 weeks ago
+            </p>
+            <h3
+              class="text-[20px] leading-[140%] text-white"
+            >
+              Announcement Title
+            </h3>
+            <p
+              class="tab-button-text text-sm text-lightgrey pt-2"
+            >
+              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+`;

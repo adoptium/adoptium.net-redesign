@@ -1,5 +1,6 @@
-import { defineConfig } from "vitest/config"
-import react from "@vitejs/plugin-react"
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
 export default defineConfig({
   plugins: [
     react(),
@@ -8,7 +9,7 @@ export default defineConfig({
       enforce: "pre",
       transform(_, id) {
         if (id.endsWith(".svg")) {
-          return "export default 'img'"
+          return "export default 'img'";
         }
       },
     },
@@ -18,7 +19,6 @@ export default defineConfig({
     setupFiles: "./vitest-setup.tsx",
     environment: "jsdom",
     deps: {
-      // >= 0.34
       optimizer: {
         web: {
           include: ["vitest-canvas-mock"],
@@ -37,4 +37,11 @@ export default defineConfig({
       },
     },
   },
-})
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler'
+      }
+    }
+  }
+});

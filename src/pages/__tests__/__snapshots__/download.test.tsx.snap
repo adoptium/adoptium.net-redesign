@@ -4,188 +4,204 @@ exports[`Download page > renders correctly - no link 1`] = `null`;
 
 exports[`Download page > renders correctly - vendor 1`] = `
 <main>
-  <section
-    class="py-5 text-center container"
+  <div
+    class="relative pt-40 pb-16 md:pb-36 md:pt-60 overflow-hidden"
   >
     <div
-      class="row py-lg-5"
+      class="w-full relative"
     >
       <div
-        class="col-lg-10 col-md-8 mx-auto"
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[171px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[120px] md:top-[395px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[618px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+    >
+      <div
+        class="self-stretch flex-col justify-center items-center gap-6 flex"
       >
-        <h1
-          class="fw-light"
+        <div
+          class="self-stretch  flex-col justify-center items-center gap-4 flex"
         >
-          Thank you for your download!
-        </h1>
-        <p
-          class="py-2"
+          <div
+            class="justify-start items-center gap-3 inline-flex"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              Download Success
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white   text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          >
+            Thank you for your download!
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
         >
+          <meta
+            content="0; url=https://fake-download.tar.gz"
+            http-equiv="refresh"
+          />
           You are downloading a build from 
           <strong>
             Azul
           </strong>
-          , a member of the Eclipse Adoptium Working Group.
-        </p>
-        <p
-          class="py-2"
-        >
-          For support and next steps please visit the 
-          <a
-            href="https://www.azul.com/downloads?utm_source=adoptium&os=linux&arch=x64&type=jre&version=1.0.0"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Azul
-             
-            Website
-          </a>
-          .
-        </p>
-        <p
-          class="text-muted py-3"
-        >
-          <a
-            class="btn btn-lg btn-outline-dark m-2"
-            data-bs-checksum="sha265sum_mock"
-            data-bs-target="#checksumModal"
-            data-bs-toggle="modal"
-            href=""
-          >
-            <small>
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"
-                />
-                <path
-                  d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"
-                />
-              </svg>
-               
-              Text
-            </small>
-          </a>
-        </p>
-        <meta
-          content="0; url=https://fake-download.tar.gz"
-          http-equiv="refresh"
-        />
-        <p
-          class="text-muted py-3"
-        >
-          If the download doesn't start in a few seconds, please
+          , a member of the Eclipse Adoptium Working Group. If the download doesn't start in a few seconds, please
            
-          <a
-            href="https://fake-download.tar.gz"
+          <span
+            class="text-primary underline !underline-offset-[1px]"
           >
-            click here
-          </a>
-           to start the download.
-        </p>
-        <h2
-          class="fw-light py-3"
-        >
-          Donate to the Eclipse Adoptium Working Group
-        </h2>
-        <p>
-          You can help power the Adoptium Community with a donation
-        </p>
-        <a
-          class="btn btn-primary btn-lg m-2"
-          href="https://eclipse.org/donate/adoptium"
-          rel="noreferrer"
-          target="_blank"
-        >
-          Donate 
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4 21h9.62a3.995 3.995 0 0 0 3.037-1.397l5.102-5.952a1 1 0 0 0-.442-1.6l-1.968-.656a3.043 3.043 0 0 0-2.823.503l-3.185 2.547-.617-1.235A3.98 3.98 0 0 0 9.146 11H4c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2zm0-8h5.146c.763 0 1.448.423 1.789 1.105l.447.895H7v2h6.014a.996.996 0 0 0 .442-.11l.003-.001.004-.002h.003l.002-.001h.004l.001-.001c.009.003.003-.001.003-.001.01 0 .002-.001.002-.001h.001l.002-.001.003-.001.002-.001.002-.001.003-.001.002-.001c.003 0 .001-.001.002-.001l.003-.002.002-.001.002-.001.003-.001.002-.001h.001l.002-.001h.001l.002-.001.002-.001c.009-.001.003-.001.003-.001l.002-.001a.915.915 0 0 0 .11-.078l4.146-3.317c.262-.208.623-.273.94-.167l.557.186-4.133 4.823a2.029 2.029 0 0 1-1.52.688H4v-6zM16 2h-.017c-.163.002-1.006.039-1.983.705-.951-.648-1.774-.7-1.968-.704L12.002 2h-.004c-.801 0-1.555.313-2.119.878C9.313 3.445 9 4.198 9 5s.313 1.555.861 2.104l3.414 3.586a1.006 1.006 0 0 0 1.45-.001l3.396-3.568C18.688 6.555 19 5.802 19 5s-.313-1.555-.878-2.121A2.978 2.978 0 0 0 16.002 2H16zm1 3c0 .267-.104.518-.311.725L14 8.55l-2.707-2.843C11.104 5.518 11 5.267 11 5s.104-.518.294-.708A.977.977 0 0 1 11.979 4c.025.001.502.032 1.067.485.081.065.163.139.247.222l.707.707.707-.707c.084-.083.166-.157.247-.222.529-.425.976-.478 1.052-.484a.987.987 0 0 1 .701.292c.189.189.293.44.293.707z"
-            />
-          </svg>
-        </a>
-        <a
-          class="btn btn-lg btn-outline-dark m-2"
-          href="https://github.com/sponsors/adoptium"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <svg
-            aria-label="GitHub Sponsors Icon"
-            color="#bf3989"
-            fill="currentColor"
-            height="1em"
-            role="img"
-            stroke="currentColor"
-            stroke-width="0"
-            style="color: rgb(191, 57, 137);"
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17.625 1.499c-2.32 0-4.354 1.203-5.625 3.03-1.271-1.827-3.305-3.03-5.625-3.03C3.129 1.499 0 4.253 0 8.249c0 4.275 3.068 7.847 5.828 10.227a33.14 33.14 0 0 0 5.616 3.876l.028.017.008.003-.001.003c.163.085.342.126.521.125.179.001.358-.041.521-.125l-.001-.003.008-.003.028-.017a33.14 33.14 0 0 0 5.616-3.876C20.932 16.096 24 12.524 24 8.249c0-3.996-3.129-6.75-6.375-6.75zm-.919 15.275a30.766 30.766 0 0 1-4.703 3.316l-.004-.002-.004.002a30.955 30.955 0 0 1-4.703-3.316c-2.677-2.307-5.047-5.298-5.047-8.523 0-2.754 2.121-4.5 4.125-4.5 2.06 0 3.914 1.479 4.544 3.684.143.495.596.797 1.086.796.49.001.943-.302 1.085-.796.63-2.205 2.484-3.684 4.544-3.684 2.004 0 4.125 1.746 4.125 4.5 0 3.225-2.37 6.216-5.048 8.523z"
-            />
-          </svg>
+            <a
+              href="https://fake-download.tar.gz"
+            >
+              click here
+            </a>
+          </span>
            
-          Become a GitHub Sponsor!
-        </a>
-        <h2
-          class="fw-light py-3"
+          to start the download.
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    class="py-16 max-w-[1048px] w-full mx-auto flex justify-center lg:justify-between xl:px-0 px-6"
+  >
+    <div
+      class="max-w-[400px] w-full hidden lg:block"
+    >
+      <img
+        alt="scroll-divider"
+        class="mb-0"
+        src="/images/icons/experience.png"
+      />
+    </div>
+    <div
+      class="lg:max-w-[560px] w-full  "
+    >
+      <h2
+        class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
+      >
+        What to do now?
+      </h2>
+      <p
+        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
+      >
+        Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
+      </p>
+      <a
+        href="/installation"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
         >
-          Get involved
-        </h2>
-        <p>
-          Whether you choose to
-           
-          <a
-            href="https://github.com/adoptium/adoptium-support/issues"
-            rel="noreferrer"
-            target="_blank"
+          Installation Guide
+        </button>
+         
+      </a>
+      <a
+        href="/installation"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"
+        >
+          Installation Guide
+        </button>
+      </a>
+    </div>
+  </section>
+  <section
+    class="pt-0 md:pt-14 md:pb-28"
+  >
+    <div
+      class="pt-12 pb-8 md:pb-16 max-w-[1048px] flex-col lg:flex-row mx-auto w-full px-6 lg:px-2 xl:px-0 flex justify-center gap-16 items-center"
+    >
+      <div
+        class=" w-full lg:w-[55%] text-center lg:text-left"
+      >
+        <div>
+          <h2
+            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
           >
-            report bugs
-          </a>
-          , request features, or
-           
-          <a
-            href="/docs/first-timer-support"
+            Support the Elcipse Adoptium Working Group 
+          </h2>
+          <p
+            class="text-grey mt-6 font-normal text-base"
           >
-            become a committer
-          </a>
-          , you can help improve the technology for yourself and the rest of the community.
-        </p>
-        <h2
-          class="fw-light py-3"
+            Lorem ipsum dolor sit amet consectetur. Ante cursus adipiscing feugiat aliquam. Adipiscing nulla arcu turpis tortor leo integer justo. Ut turpis adipiscing aliquam phasellus aliquam. Lectus etiam dictum nunc magna gravida bibendum nibh aliquam. Eget arcu neque cursus mattis sollicitudin malesuada urna ridiculus metus. Pharetra volutpat neque fames gravida tellus.
+          </p>
+        </div>
+        <div>
+          <p
+            class="text-grey mt-6 font-normal text-base"
+          >
+            Nibh arcu consequat aliquet in eget non. Turpis id posuere quam sit magnis. Aliquam imperdiet odio odio vulputate. Vel molestie porttitor tellus accumsan. Dui ipsum fringilla sit sit elementum.
+          </p>
+        </div>
+        <button
+          class="text-white text-base leading-6 font-normal bg-primary px-6 py-3 mt-8 rounded-[80px]"
         >
-          Join the Working Group
-        </h2>
-        <a
-          class="btn btn-lg btn-primary m-2"
-          href="/join"
+          Donate Now
+        </button>
+      </div>
+      <div>
+        <div
+          class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
         >
-          Join the Working group
-        </a>
-        <a
-          class="btn btn-lg btn-primary m-2"
-          href="/members"
-        >
-          View our Members
-        </a>
+          <div
+            class="grow"
+          >
+            <h3
+              class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
+            >
+              Media & Promotion
+            </h3>
+            <p
+              class="mt-6 text-xl text-lightgrey font-normal"
+            >
+              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
+            </p>
+          </div>
+          <button
+            class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-supportus"
+          >
+            Learn More
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -194,172 +210,200 @@ exports[`Download page > renders correctly - vendor 1`] = `
 
 exports[`Download page > renders correctly 1`] = `
 <main>
-  <section
-    class="py-5 text-center container"
+  <div
+    class="relative pt-40 pb-16 md:pb-36 md:pt-60 overflow-hidden"
   >
     <div
-      class="row py-lg-5"
+      class="w-full relative"
     >
       <div
-        class="col-lg-10 col-md-8 mx-auto"
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[171px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[120px] md:top-[395px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[618px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+    >
+      <div
+        class="self-stretch flex-col justify-center items-center gap-6 flex"
       >
-        <h1
-          class="fw-light"
+        <div
+          class="self-stretch  flex-col justify-center items-center gap-4 flex"
         >
-          Thank you for your download!
-        </h1>
-        <p
-          class="py-2"
-        >
-          You are downloading an Eclipse Temurin build, the open-source community build from the Eclipse Adoptium Working Group.
-        </p>
-        <p
-          class="text-muted py-3"
-        >
-          <a
-            class="btn btn-lg btn-outline-dark m-2"
-            data-bs-checksum="sha265sum_mock"
-            data-bs-target="#checksumModal"
-            data-bs-toggle="modal"
-            href=""
+          <div
+            class="justify-start items-center gap-3 inline-flex"
           >
-            <small>
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"
-                />
-                <path
-                  d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"
-                />
-              </svg>
-               
-              Text
-            </small>
-          </a>
-        </p>
-        <meta
-          content="0; url=https://fake-download.tar.gz"
-          http-equiv="refresh"
-        />
-        <p
-          class="text-muted py-3"
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              Download Success
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white   text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          >
+            Thank you for your download!
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
         >
-          If the download doesn't start in a few seconds, please
+          <meta
+            content="0; url=https://fake-download.tar.gz"
+            http-equiv="refresh"
+          />
+          You are downloading an Eclipse Temurin build, the open-source community build from the Eclipse Adoptium Working Group. If the download doesn't start in a few seconds, please
            
-          <a
-            href="https://fake-download.tar.gz"
+          <span
+            class="text-primary underline !underline-offset-[1px]"
           >
-            click here
-          </a>
-           to start the download.
-        </p>
-        <p>
-          Eclipse Temurin binaries are 100% free and open source and used by millions of developers every day. Here are three easy ways you can contribute toward the future development of Eclipse Adoptium projects and technologies.
-        </p>
-        <h2
-          class="fw-light py-3"
-        >
-          Donate to the Eclipse Adoptium Working Group
-        </h2>
-        <p>
-          You can help power the Adoptium Community with a donation
-        </p>
-        <a
-          class="btn btn-primary btn-lg m-2"
-          href="https://eclipse.org/donate/adoptium"
-          rel="noreferrer"
-          target="_blank"
-        >
-          Donate 
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4 21h9.62a3.995 3.995 0 0 0 3.037-1.397l5.102-5.952a1 1 0 0 0-.442-1.6l-1.968-.656a3.043 3.043 0 0 0-2.823.503l-3.185 2.547-.617-1.235A3.98 3.98 0 0 0 9.146 11H4c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2zm0-8h5.146c.763 0 1.448.423 1.789 1.105l.447.895H7v2h6.014a.996.996 0 0 0 .442-.11l.003-.001.004-.002h.003l.002-.001h.004l.001-.001c.009.003.003-.001.003-.001.01 0 .002-.001.002-.001h.001l.002-.001.003-.001.002-.001.002-.001.003-.001.002-.001c.003 0 .001-.001.002-.001l.003-.002.002-.001.002-.001.003-.001.002-.001h.001l.002-.001h.001l.002-.001.002-.001c.009-.001.003-.001.003-.001l.002-.001a.915.915 0 0 0 .11-.078l4.146-3.317c.262-.208.623-.273.94-.167l.557.186-4.133 4.823a2.029 2.029 0 0 1-1.52.688H4v-6zM16 2h-.017c-.163.002-1.006.039-1.983.705-.951-.648-1.774-.7-1.968-.704L12.002 2h-.004c-.801 0-1.555.313-2.119.878C9.313 3.445 9 4.198 9 5s.313 1.555.861 2.104l3.414 3.586a1.006 1.006 0 0 0 1.45-.001l3.396-3.568C18.688 6.555 19 5.802 19 5s-.313-1.555-.878-2.121A2.978 2.978 0 0 0 16.002 2H16zm1 3c0 .267-.104.518-.311.725L14 8.55l-2.707-2.843C11.104 5.518 11 5.267 11 5s.104-.518.294-.708A.977.977 0 0 1 11.979 4c.025.001.502.032 1.067.485.081.065.163.139.247.222l.707.707.707-.707c.084-.083.166-.157.247-.222.529-.425.976-.478 1.052-.484a.987.987 0 0 1 .701.292c.189.189.293.44.293.707z"
-            />
-          </svg>
-        </a>
-        <a
-          class="btn btn-lg btn-outline-dark m-2"
-          href="https://github.com/sponsors/adoptium"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <svg
-            aria-label="GitHub Sponsors Icon"
-            color="#bf3989"
-            fill="currentColor"
-            height="1em"
-            role="img"
-            stroke="currentColor"
-            stroke-width="0"
-            style="color: rgb(191, 57, 137);"
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17.625 1.499c-2.32 0-4.354 1.203-5.625 3.03-1.271-1.827-3.305-3.03-5.625-3.03C3.129 1.499 0 4.253 0 8.249c0 4.275 3.068 7.847 5.828 10.227a33.14 33.14 0 0 0 5.616 3.876l.028.017.008.003-.001.003c.163.085.342.126.521.125.179.001.358-.041.521-.125l-.001-.003.008-.003.028-.017a33.14 33.14 0 0 0 5.616-3.876C20.932 16.096 24 12.524 24 8.249c0-3.996-3.129-6.75-6.375-6.75zm-.919 15.275a30.766 30.766 0 0 1-4.703 3.316l-.004-.002-.004.002a30.955 30.955 0 0 1-4.703-3.316c-2.677-2.307-5.047-5.298-5.047-8.523 0-2.754 2.121-4.5 4.125-4.5 2.06 0 3.914 1.479 4.544 3.684.143.495.596.797 1.086.796.49.001.943-.302 1.085-.796.63-2.205 2.484-3.684 4.544-3.684 2.004 0 4.125 1.746 4.125 4.5 0 3.225-2.37 6.216-5.048 8.523z"
-            />
-          </svg>
+            <a
+              href="https://fake-download.tar.gz"
+            >
+              click here
+            </a>
+          </span>
            
-          Become a GitHub Sponsor!
-        </a>
-        <h2
-          class="fw-light py-3"
+          to start the download.
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    class="py-16 max-w-[1048px] w-full mx-auto flex justify-center lg:justify-between xl:px-0 px-6"
+  >
+    <div
+      class="max-w-[400px] w-full hidden lg:block"
+    >
+      <img
+        alt="scroll-divider"
+        class="mb-0"
+        src="/images/icons/experience.png"
+      />
+    </div>
+    <div
+      class="lg:max-w-[560px] w-full  "
+    >
+      <h2
+        class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
+      >
+        What to do now?
+      </h2>
+      <p
+        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
+      >
+        Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
+      </p>
+      <a
+        href="/installation"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
         >
-          Get involved
-        </h2>
-        <p>
-          Whether you choose to
-           
-          <a
-            href="https://github.com/adoptium/adoptium-support/issues"
-            rel="noreferrer"
-            target="_blank"
+          Installation Guide
+        </button>
+         
+      </a>
+      <a
+        href="/installation"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"
+        >
+          Installation Guide
+        </button>
+      </a>
+    </div>
+  </section>
+  <section
+    class="pt-0 md:pt-14 md:pb-28"
+  >
+    <div
+      class="pt-12 pb-8 md:pb-16 max-w-[1048px] flex-col lg:flex-row mx-auto w-full px-6 lg:px-2 xl:px-0 flex justify-center gap-16 items-center"
+    >
+      <div
+        class=" w-full lg:w-[55%] text-center lg:text-left"
+      >
+        <div>
+          <h2
+            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
           >
-            report bugs
-          </a>
-          , request features, or
-           
-          <a
-            href="/docs/first-timer-support"
+            Support the Elcipse Adoptium Working Group 
+          </h2>
+          <p
+            class="text-grey mt-6 font-normal text-base"
           >
-            become a committer
-          </a>
-          , you can help improve the technology for yourself and the rest of the community.
-        </p>
-        <h2
-          class="fw-light py-3"
+            Lorem ipsum dolor sit amet consectetur. Ante cursus adipiscing feugiat aliquam. Adipiscing nulla arcu turpis tortor leo integer justo. Ut turpis adipiscing aliquam phasellus aliquam. Lectus etiam dictum nunc magna gravida bibendum nibh aliquam. Eget arcu neque cursus mattis sollicitudin malesuada urna ridiculus metus. Pharetra volutpat neque fames gravida tellus.
+          </p>
+        </div>
+        <div>
+          <p
+            class="text-grey mt-6 font-normal text-base"
+          >
+            Nibh arcu consequat aliquet in eget non. Turpis id posuere quam sit magnis. Aliquam imperdiet odio odio vulputate. Vel molestie porttitor tellus accumsan. Dui ipsum fringilla sit sit elementum.
+          </p>
+        </div>
+        <button
+          class="text-white text-base leading-6 font-normal bg-primary px-6 py-3 mt-8 rounded-[80px]"
         >
-          Join the Working Group
-        </h2>
-        <a
-          class="btn btn-lg btn-primary m-2"
-          href="/join"
+          Donate Now
+        </button>
+      </div>
+      <div>
+        <div
+          class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
         >
-          Join the Working group
-        </a>
-        <a
-          class="btn btn-lg btn-primary m-2"
-          href="/members"
-        >
-          View our Members
-        </a>
+          <div
+            class="grow"
+          >
+            <h3
+              class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
+            >
+              Media & Promotion
+            </h3>
+            <p
+              class="mt-6 text-xl text-lightgrey font-normal"
+            >
+              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
+            </p>
+          </div>
+          <button
+            class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-supportus"
+          >
+            Learn More
+          </button>
+        </div>
       </div>
     </div>
   </section>

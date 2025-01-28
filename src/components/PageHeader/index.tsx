@@ -4,7 +4,7 @@ import { RedIcon } from "../Common/Icon"
 interface Props {
   title: string
   subtitle: string
-  description?: string
+  description?: string | React.ReactNode
   className?: string
 }
 

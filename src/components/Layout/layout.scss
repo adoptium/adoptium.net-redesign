@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables.scss" as *;
 
 :root {
   --border-radius: 4px;
@@ -6,9 +6,9 @@
   --color-primary: #7026b9;
   --color-code-bg: grey;
   --color-code: white;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+  --font-sans: -apple-system, blinkmacsystemfont, "Segoe UI", helvetica, arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  --font-mono: sfmono-regular, menlo, monaco, consolas, "Liberation Mono",
     "Courier New", monospace;
   --font-lg: 18px;
   --font-md: 16px;
@@ -27,6 +27,7 @@
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
 }
+
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
@@ -35,6 +36,7 @@ html {
   line-height: var(--line-height-normal);
   overflow-y: scroll;
 }
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -45,16 +47,19 @@ body {
   margin: 0;
   word-wrap: break-word;
 }
+
 abbr[title] {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted hsla(0deg, 0%, 0%, 50%);
   cursor: help;
   text-decoration: none;
 }
+
 b,
 strong {
   font-weight: inherit;
   font-weight: bolder;
 }
+
 dfn {
   font-style: italic;
 }
@@ -63,6 +68,7 @@ img {
   border-style: none;
   max-width: 100%;
 }
+
 code,
 kbd,
 pre,
@@ -71,27 +77,29 @@ samp {
   font-size: 1em;
   line-height: inherit;
 }
+
 hr {
   box-sizing: content-box;
   overflow: visible;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
+  margin: 0 0 calc(var(--space-4) - 1px) 0;
   padding: 0;
-  margin-bottom: calc(var(--space-4) - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
+  background: hsla(0deg, 0%, 0%, 20%);
   border: none;
   height: 1px;
 }
+
 * {
   box-sizing: inherit;
 }
-*:before {
+
+*::before {
   box-sizing: inherit;
 }
-*:after {
+
+*::after {
   box-sizing: inherit;
 }
+
 hgroup,
 img,
 figure,
@@ -105,28 +113,29 @@ p {
   padding: 0;
   margin-bottom: var(--space-4);
 }
+
 pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: var(--space-4);
+  margin: 0 0 var(--space-4) 0;
   font-size: 0.875rem;
   line-height: var(--line-height-normal);
-  background: hsla(0, 0%, 0%, 0.04);
+  background: hsla(0deg, 0%, 0%, 4%);
   border-radius: var(--border-radius);
   overflow: auto;
   word-wrap: normal;
   padding: var(--space-4);
 }
+
 b,
 strong,
 dt,
 th {
   font-weight: bold;
 }
+
 blockquote *:last-child {
   margin-bottom: 0;
 }
+
 p *:last-child {
   margin-bottom: 0;
 }
@@ -134,20 +143,25 @@ p *:last-child {
 code {
   font-size: 0.875rem;
 }
+
 kbd {
   font-size: 0.875rem;
 }
+
 samp {
   font-size: 0.875rem;
 }
+
 abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted hsla(0deg, 0%, 0%, 50%);
   cursor: help;
 }
+
 acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted hsla(0deg, 0%, 0%, 50%);
   cursor: help;
 }
+
 tt,
 code {
   background-color: var(--color-code-bg);
@@ -158,19 +172,22 @@ code {
   padding-top: 0.25em;
   word-break: normal;
 }
+
 pre code {
   background: none;
 }
-code:before,
-code:after,
-tt:before,
-tt:after {
+
+code::before,
+code::after,
+tt::before,
+tt::after {
   content: "\00a0";
   letter-spacing: -0.2em;
 }
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
+
+pre code::before,
+pre code::after,
+pre tt::before,
+pre tt::after {
   content: none;
 }

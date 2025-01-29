@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables.scss" as *;
 
 .scroll-container {
   position: relative;
@@ -43,6 +43,7 @@
   transition: 0.5s ease-in-out;
   transform: scale(0.95);
 }
+
 .ui-virtual-common.active {
   opacity: 1 !important;
   transform: scale(1);

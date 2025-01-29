@@ -1,0 +1,67 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Working Group Support component > should render correctly 1`] = `
+<div>
+  <section
+    class="pt-0 md:pt-14 md:pb-28"
+  >
+    <div
+      class="pt-12 pb-8 md:pb-16 max-w-[1048px] flex-col lg:flex-row mx-auto w-full px-6 lg:px-2 xl:px-0 flex justify-center gap-16 items-center"
+    >
+      <div
+        class=" w-full lg:w-[55%] text-center lg:text-left"
+      >
+        <div>
+          <h2
+            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+          >
+            Support the Elcipse Adoptium Working Group 
+          </h2>
+          <p
+            class="text-grey mt-6 font-normal text-base"
+          >
+            Lorem ipsum dolor sit amet consectetur. Ante cursus adipiscing feugiat aliquam. Adipiscing nulla arcu turpis tortor leo integer justo. Ut turpis adipiscing aliquam phasellus aliquam. Lectus etiam dictum nunc magna gravida bibendum nibh aliquam. Eget arcu neque cursus mattis sollicitudin malesuada urna ridiculus metus. Pharetra volutpat neque fames gravida tellus.
+          </p>
+        </div>
+        <div>
+          <p
+            class="text-grey mt-6 font-normal text-base"
+          >
+            Nibh arcu consequat aliquet in eget non. Turpis id posuere quam sit magnis. Aliquam imperdiet odio odio vulputate. Vel molestie porttitor tellus accumsan. Dui ipsum fringilla sit sit elementum.
+          </p>
+        </div>
+        <button
+          class="text-white text-base leading-6 font-normal bg-primary px-6 py-3 mt-8 rounded-[80px]"
+        >
+          Donate Now
+        </button>
+      </div>
+      <div>
+        <div
+          class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
+        >
+          <div
+            class="grow"
+          >
+            <h3
+              class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
+            >
+              Media & Promotion
+            </h3>
+            <p
+              class="mt-6 text-xl text-lightgrey font-normal"
+            >
+              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
+            </p>
+          </div>
+          <button
+            class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-supportus"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

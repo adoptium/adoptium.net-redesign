@@ -66,6 +66,7 @@ const LatestTemurin = (props): JSX.Element => {
         The Power of Eclipse Temurin™
       </h1>
       <p className="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold">
+
         {binary ? (
           <Trans
             i18nKey="Download Temurin for"
@@ -80,10 +81,11 @@ const LatestTemurin = (props): JSX.Element => {
           <Trans
             i18nKey="home.download.temurin.short"
             defaults="Download Temurin {{ defaultVersion }}"
-            value={{ defaultVersion }}
+            values={{ defaultVersion }}
           />
         )}
       </p>
+
       <div className="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6">
         <Link
           placeholder={"Other Downloads"}

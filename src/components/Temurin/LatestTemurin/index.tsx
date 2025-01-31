@@ -80,7 +80,7 @@ const LatestTemurin = (props): JSX.Element => {
           <Trans
             i18nKey="home.download.temurin.short"
             defaults="Download Temurin {{ defaultVersion }}"
-            value={{ defaultVersion }}
+            values={{ defaultVersion }}
           />
         )}
       </p>

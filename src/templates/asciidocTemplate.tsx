@@ -43,7 +43,7 @@ const AsciidocTemplate = ({ data, pageContext }) => {
       <PageHeader
         title={document.title}
         subtitle="Documentation"
-        description="fooBar"
+        description=""
       />
       <section className="mx-auto max-w-4xl w-full p-6 lg:px-0 flex flex-col items-center justify-center">
         <div className="asciidoc-container w-full" id="asciidoc-container">

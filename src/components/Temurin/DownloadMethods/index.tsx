@@ -54,7 +54,7 @@ const DownloadMethods = () => {
       <div className=" mt-8 md:mt-16">
         <div className=" justify-between max-w-[1064px] mx-auto grid  gap-8 md:gap-12 w-full grid-cols-1 md:grid-cols-2  lg:grid-cols-3 ">
           {TemurinMethod.map((method, index) => (
-            <div className="flex gap-4 max-w-[366px] xl:max-w-[322px]">
+            <div key={index} className="flex gap-4 max-w-[366px] xl:max-w-[322px]">
               <span className="p-6 rounded-full cursor-pointer flex justify-center items-center w-fit bg-[#2B1A4F] border border-[#5A4D76]">
                 {method.icon}
               </span>

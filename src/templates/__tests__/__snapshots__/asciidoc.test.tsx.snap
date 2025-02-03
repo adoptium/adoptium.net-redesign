@@ -70,9 +70,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
         </div>
         <div
           class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
-        >
-          fooBar
-        </div>
+        />
       </div>
     </div>
   </div>
@@ -541,7 +539,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
             Text
           </div>
           <div
-            class="justify-start items-center space-x-[-12px] inline-flex"
+            class="flex flex-wrap justify-start items-center space-x-[-12px]"
           >
             <a
               aria-label="author1"
@@ -1076,9 +1074,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
         </div>
         <div
           class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
-        >
-          fooBar
-        </div>
+        />
       </div>
     </div>
   </div>
@@ -1321,7 +1317,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
             Text
           </div>
           <div
-            class="justify-start items-center space-x-[-12px] inline-flex"
+            class="flex flex-wrap justify-start items-center space-x-[-12px]"
           >
             <a
               aria-label="author1"

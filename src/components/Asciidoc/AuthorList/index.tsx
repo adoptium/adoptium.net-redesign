@@ -16,7 +16,7 @@ const AuthorList = ({ authors }: Props): JSX.Element => {
             defaults="Documentation Authors"
           />
         </div>
-        <div className="justify-start items-center space-x-[-12px] inline-flex">
+        <div className="flex flex-wrap justify-start items-center space-x-[-12px]">
           {authors.map(
             (author, i): JSX.Element => (
               <Author username={author} key={author} size="48" />

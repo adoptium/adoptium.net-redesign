@@ -1,30 +1,35 @@
 import React from "react"
 import {
   TwitterShareButton,
-  XIcon,
   EmailShareButton,
-  EmailIcon,
   FacebookShareButton,
-  FacebookIcon,
   LinkedinShareButton,
-  LinkedinIcon,
   RedditShareButton,
-  RedditIcon,
 } from "react-share"
+
+import {
+  FaLinkedin,
+  FaFacebookSquare,
+  FaRedditSquare,
+} from "react-icons/fa";
+
+import {
+  FaSquareXTwitter,
+  FaSquareEnvelope,
+} from "react-icons/fa6";
 
 const ShareButton = props => {
   const { location, siteMetadata, post } = props
   const twitter = [siteMetadata.social.twitter]
   const url = siteMetadata.siteUrl + location.pathname
 
-  const iconSize = 30
   const iconStyle = {
     paddingRight: "0.3em",
     marginBottom: "0.2em",
   }
 
   return (
-    <>
+    <div id="share-buttons">
       <TwitterShareButton
         aria-label="x"
         url={url}
@@ -33,7 +38,7 @@ const ShareButton = props => {
         related={twitter}
         style={iconStyle}
       >
-        <XIcon size={iconSize} />
+        <FaSquareXTwitter size={30} />
       </TwitterShareButton>
 
       <LinkedinShareButton
@@ -43,11 +48,11 @@ const ShareButton = props => {
         source={siteMetadata.siteUrl}
         style={iconStyle}
       >
-        <LinkedinIcon size={iconSize} />
+        <FaLinkedin size={30}/>
       </LinkedinShareButton>
 
       <FacebookShareButton aria-label="facebook" url={url} style={iconStyle}>
-        <FacebookIcon size={iconSize} />
+        <FaFacebookSquare size={30} />
       </FacebookShareButton>
 
       <RedditShareButton
@@ -56,7 +61,7 @@ const ShareButton = props => {
         title={post.title}
         style={iconStyle}
       >
-        <RedditIcon size={iconSize} />
+        <FaRedditSquare size={30} />
       </RedditShareButton>
 
       <EmailShareButton
@@ -65,9 +70,9 @@ const ShareButton = props => {
         subject={post.title}
         style={iconStyle}
       >
-        <EmailIcon size={iconSize} />
+        <FaSquareEnvelope size={30} />
       </EmailShareButton>
-    </>
+    </div>
   )
 }
 

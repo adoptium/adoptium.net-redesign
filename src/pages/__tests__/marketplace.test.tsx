@@ -1,6 +1,6 @@
 import React from "react"
-import { render } from "@testing-library/react"
-import { describe, expect, it, vi } from "vitest"
+import { act, render } from "@testing-library/react"
+import { afterEach, describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
 import Marketplace, { Head } from "../marketplace"
 import AxiosInstance from "axios"
@@ -61,10 +61,15 @@ describe("Marketplace page", () => {
   })
 
   it("has no accessibility violations", async () => {
-    mock.onGet().reply(200, [])
-
-    const { container } = render(<Marketplace />)
-    const results = await axe(container)
-    expect(results).toHaveNoViolations()
-  })
+    mock.onGet().reply(200, []);
+    
+    let container;
+    await act(async () => {
+      const renderResult = render(<Marketplace />);
+      container = renderResult.container;
+    });
+    
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
 })

@@ -1,5 +1,5 @@
 import React from "react"
-import { render } from "@testing-library/react"
+import { act, render } from "@testing-library/react"
 import { afterEach, describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
 import Releases, { Head } from "../releases"
@@ -54,11 +54,16 @@ describe("Releases page", () => {
   })
 
   it("has no accessibility violations", async () => {
-    mock.onGet().reply(200, [], { pagecount: 0 })
+    mock.onGet().reply(200, [], { pagecount: 0 });
 
-    const { container } = render(<Releases />)
-    const results = await axe(container)
+    let container;
+    await act(async () => {
+      const renderResult = render(<Releases />);
+      container = renderResult.container;
+    });
+
+    const results = await axe(container);
     // @ts-ignore
-    expect(results).toHaveNoViolations()
-  })
+    expect(results).toHaveNoViolations();
+  });
 })

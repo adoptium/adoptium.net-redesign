@@ -69,10 +69,6 @@ const Seo = ({ title, description, twitterCard }: Props): JSX.Element => {
   )
 }
 
-Seo.defaultProps = {
-  title: "Adoptium",
-}
-
 Seo.propTypes = {
   title: PropTypes.string.isRequired,
 }

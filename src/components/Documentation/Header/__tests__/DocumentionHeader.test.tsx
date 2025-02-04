@@ -43,10 +43,6 @@ describe("DocumentationHeader", () => {
     render(<DocumentationHeader data={mockData} />)
   })
 
-  test("renders component correctly", () => {
-    expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument()
-  })
-
   test("renders Autocomplete component", () => {
     expect(screen.getByTestId("autocomplete")).toBeInTheDocument()
   })

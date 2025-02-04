@@ -3,125 +3,184 @@
 exports[`Docs page > renders correctly 1`] = `
 <main>
   <div
-    class="docs-header p-5 text-center"
+    class="relative pt-40 pb-16 md:pb-36 md:pt-60 overflow-hidden"
   >
     <div
-      class="container"
+      class="w-full relative"
     >
-      <h1>
-        Text
-      </h1>
       <div
-        class="lead"
-      >
-        Text
-      </div>
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[171px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+      />
       <div
-        class="main-search-box pt-3 d-block mx-auto"
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[120px] md:top-[395px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[618px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center pb-10"
+    >
+      <div
+        class="self-stretch flex-col justify-center items-center gap-6 flex"
       >
         <div
-          class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
-          data-testid="autocomplete"
+          class="self-stretch  flex-col justify-center items-center gap-4 flex"
         >
           <div
-            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+            class="justify-start items-center gap-3 inline-flex"
           >
-            <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-              data-shrink="false"
-              for="combo-box-demo"
-              id="combo-box-demo-label"
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
             >
               Text
-            </label>
-            <div
-              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-expanded="false"
-                aria-invalid="false"
-                autocapitalize="none"
-                autocomplete="off"
-                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
-                id="combo-box-demo"
-                role="combobox"
-                spellcheck="false"
-                type="text"
-                value=""
-              />
-              <div
-                class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
-              >
-                <button
-                  aria-label="Open"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-qzbt6i-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
-                  tabindex="-1"
-                  title="Open"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                    data-testid="ArrowDropDownIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7 10l5 5 5-5z"
-                    />
-                  </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </div>
-              <fieldset
-                aria-hidden="true"
-                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-              >
-                <legend
-                  class="css-yjsfm1"
-                >
-                  <span>
-                    Text
-                  </span>
-                </legend>
-              </fieldset>
             </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          >
+            Text
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%]"
+        >
+          Text
+        </div>
+      </div>
+    </div>
+    <div
+      class="main-search-box d-block mx-auto"
+    >
+      <div
+        class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
+        data-testid="autocomplete"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="combo-box-demo"
+            id="combo-box-demo-label"
+          >
+            Text
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-invalid="false"
+              autocapitalize="none"
+              autocomplete="off"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
+              id="combo-box-demo"
+              role="combobox"
+              spellcheck="false"
+              type="text"
+              value=""
+            />
+            <div
+              class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+            >
+              <button
+                aria-label="Open"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-qzbt6i-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                tabindex="-1"
+                title="Open"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="ArrowDropDownIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Text
+                </span>
+              </legend>
+            </fieldset>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    class="page-content"
+    class="py-10"
   >
     <div
-      class="container"
+      class="container mx-auto px-4"
     >
       <div
-        class="docs-overview py-5"
+        class="w-full lg:w-4/5 mx-auto py-8"
       >
         <div
-          class="row justify-content-center"
+          class="flex flex-wrap justify-center"
         >
           <div
-            class="col-12 col-lg-4 py-3"
+            class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="card shadow-sm"
+              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
             >
               <div
-                class="card-body"
+                class="p-4"
               >
                 <p
-                  class="card-title mb-3 h5"
+                  class="mb-3 text-xl font-semibold flex items-center"
                 >
                   <span
-                    class="theme-icon-holder card-icon-holder me-2"
+                    class="inline-block mr-2"
                   >
                     <svg
+                      class="text-pink"
                       fill="currentColor"
                       height="1em"
                       stroke="currentColor"
@@ -135,79 +194,74 @@ exports[`Docs page > renders correctly 1`] = `
                       />
                     </svg>
                   </span>
-                  <span
-                    class="card-title-text"
-                  >
+                  <span>
                     docs.get.temurin
                   </span>
                 </p>
                 <div
-                  class="card-text"
+                  class="divide-y divide-gray-200"
                 >
-                  <div
-                    class="list-group list-group-flush"
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/installation"
                   >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/installation"
+                    docs.install.temurin
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/temurin/releases"
+                  >
+                    docs.download.temurin
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://hub.docker.com/_/eclipse-temurin"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.container.images
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.install.temurin
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/temurin/releases"
-                    >
-                      docs.download.temurin
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://hub.docker.com/_/eclipse-temurin"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      docs.container.images
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/temurin/archive"
-                    >
-                      docs.release.archive
-                    </a>
-                  </div>
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/temurin/archive"
+                  >
+                    docs.release.archive
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="col-12 col-lg-4 py-3"
+            class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="card shadow-sm"
+              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
             >
               <div
-                class="card-body"
+                class="p-4"
               >
                 <p
-                  class="card-title mb-3 h5"
+                  class="mb-3 text-xl font-semibold flex items-center"
                 >
                   <span
-                    class="theme-icon-holder card-icon-holder me-2"
+                    class="inline-block mr-2"
                   >
                     <svg
+                      class="text-pink"
                       fill="currentColor"
                       height="1em"
                       stroke="currentColor"
@@ -221,85 +275,80 @@ exports[`Docs page > renders correctly 1`] = `
                       />
                     </svg>
                   </span>
-                  <span
-                    class="card-title-text"
-                  >
+                  <span>
                     docs.temurin.support
                   </span>
                 </p>
                 <div
-                  class="card-text"
+                  class="divide-y divide-gray-200"
                 >
-                  <div
-                    class="list-group list-group-flush"
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/support"
                   >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/support"
+                    docs.support.guide
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/temurin/commercial-support"
+                  >
+                    docs.commercial.support
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/docs/migration"
+                  >
+                    docs.migration.guide
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/supported-platforms"
+                  >
+                    docs.supported.platforms
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://github.com/adoptium/adoptium-support/issues"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.submit.an.issue
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.support.guide
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/temurin/commercial-support"
-                    >
-                      docs.commercial.support
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/docs/migration"
-                    >
-                      docs.migration.guide
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/supported-platforms"
-                    >
-                      docs.supported.platforms
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://github.com/adoptium/adoptium-support/issues"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      docs.submit.an.issue
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="col-12 col-lg-4 py-3"
+            class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="card shadow-sm"
+              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
             >
               <div
-                class="card-body"
+                class="p-4"
               >
                 <p
-                  class="card-title mb-3 h5"
+                  class="mb-3 text-xl font-semibold flex items-center"
                 >
                   <span
-                    class="theme-icon-holder card-icon-holder me-2"
+                    class="inline-block mr-2"
                   >
                     <svg
+                      class="text-pink"
                       fill="currentColor"
                       height="1em"
                       stroke="currentColor"
@@ -313,57 +362,52 @@ exports[`Docs page > renders correctly 1`] = `
                       />
                     </svg>
                   </span>
-                  <span
-                    class="card-title-text"
-                  >
+                  <span>
                     docs.aqavit.quality
                   </span>
                 </p>
                 <div
-                  class="card-text"
+                  class="divide-y divide-gray-200"
                 >
-                  <div
-                    class="list-group list-group-flush"
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/aqavit"
                   >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/aqavit"
-                    >
-                      docs.about.eclipse.aqavit
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/docs/qvs-policy"
-                    >
-                      docs.aqavit.quality.verification
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/docs/aqavit-verification"
-                    >
-                      docs.aqavit.verification.guide
-                    </a>
-                  </div>
+                    docs.about.eclipse.aqavit
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/docs/qvs-policy"
+                  >
+                    docs.aqavit.quality.verification
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/docs/aqavit-verification"
+                  >
+                    docs.aqavit.verification.guide
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="col-12 col-lg-4 py-3"
+            class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="card shadow-sm"
+              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
             >
               <div
-                class="card-body"
+                class="p-4"
               >
                 <p
-                  class="card-title mb-3 h5"
+                  class="mb-3 text-xl font-semibold flex items-center"
                 >
                   <span
-                    class="theme-icon-holder card-icon-holder me-2"
+                    class="inline-block mr-2"
                   >
                     <svg
+                      class="text-pink"
                       fill="currentColor"
                       height="1em"
                       stroke="currentColor"
@@ -377,57 +421,52 @@ exports[`Docs page > renders correctly 1`] = `
                       />
                     </svg>
                   </span>
-                  <span
-                    class="card-title-text"
-                  >
+                  <span>
                     docs.marketplace
                   </span>
                 </p>
                 <div
-                  class="card-text"
+                  class="divide-y divide-gray-200"
                 >
-                  <div
-                    class="list-group list-group-flush"
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/marketplace"
                   >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/marketplace"
-                    >
-                      docs.marketplace.downloads
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/docs/marketplace-policy"
-                    >
-                      docs.marketplace.listing.information
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/docs/marketplace-guide"
-                    >
-                      docs.marketplace.publisher.guide
-                    </a>
-                  </div>
+                    docs.marketplace.downloads
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/docs/marketplace-policy"
+                  >
+                    docs.marketplace.listing.information
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/docs/marketplace-guide"
+                  >
+                    docs.marketplace.publisher.guide
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="col-12 col-lg-4 py-3"
+            class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="card shadow-sm"
+              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
             >
               <div
-                class="card-body"
+                class="p-4"
               >
                 <p
-                  class="card-title mb-3 h5"
+                  class="mb-3 text-xl font-semibold flex items-center"
                 >
                   <span
-                    class="theme-icon-holder card-icon-holder me-2"
+                    class="inline-block mr-2"
                   >
                     <svg
+                      class="text-pink"
                       fill="currentColor"
                       height="1em"
                       stroke="currentColor"
@@ -441,85 +480,80 @@ exports[`Docs page > renders correctly 1`] = `
                       />
                     </svg>
                   </span>
-                  <span
-                    class="card-title-text"
-                  >
+                  <span>
                     docs.contributing
                   </span>
                 </p>
                 <div
-                  class="card-text"
+                  class="divide-y divide-gray-200"
                 >
-                  <div
-                    class="list-group list-group-flush"
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/contributing"
                   >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/contributing"
+                    docs.how.to.contribute
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/docs/first-timer-support"
+                  >
+                    docs.first.time.support
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/temurin/nightly"
+                  >
+                    docs.developer.nightly.builds
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/slack"
+                  >
+                    docs.join.our.slack.channel
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://github.com/adoptium/.github/blob/main/CODE_OF_CONDUCT.md"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.code.of.conduct
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.how.to.contribute
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/docs/first-timer-support"
-                    >
-                      docs.first.time.support
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/temurin/nightly"
-                    >
-                      docs.developer.nightly.builds
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/slack"
-                    >
-                      docs.join.our.slack.channel
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://github.com/adoptium/.github/blob/main/CODE_OF_CONDUCT.md"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      docs.code.of.conduct
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="col-12 col-lg-4 py-3"
+            class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="card shadow-sm"
+              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
             >
               <div
-                class="card-body"
+                class="p-4"
               >
                 <p
-                  class="card-title mb-3 h5"
+                  class="mb-3 text-xl font-semibold flex items-center"
                 >
                   <span
-                    class="theme-icon-holder card-icon-holder me-2"
+                    class="inline-block mr-2"
                   >
                     <svg
+                      class="text-pink"
                       fill="currentColor"
                       height="1em"
                       stroke="currentColor"
@@ -533,73 +567,68 @@ exports[`Docs page > renders correctly 1`] = `
                       />
                     </svg>
                   </span>
-                  <span
-                    class="card-title-text"
-                  >
+                  <span>
                     docs.secure.software
                   </span>
                 </p>
                 <div
-                  class="card-text"
+                  class="divide-y divide-gray-200"
                 >
-                  <div
-                    class="list-group list-group-flush"
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/docs/secure-software"
                   >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/docs/secure-software"
+                    docs.secure.software.pratices
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/docs/slsa"
+                  >
+                    docs.slsa.secure.supply.chain
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://github.com/adoptium/adoptium/security/policy"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.vulnerability.reporting
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.secure.software.pratices
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/docs/slsa"
-                    >
-                      docs.slsa.secure.supply.chain
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://github.com/adoptium/adoptium/security/policy"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      docs.vulnerability.reporting
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="col-12 col-lg-4 py-3"
+            class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="card shadow-sm"
+              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
             >
               <div
-                class="card-body"
+                class="p-4"
               >
                 <p
-                  class="card-title mb-3 h5"
+                  class="mb-3 text-xl font-semibold flex items-center"
                 >
                   <span
-                    class="theme-icon-holder card-icon-holder me-2"
+                    class="inline-block mr-2"
                   >
                     <svg
+                      class="text-pink"
                       fill="currentColor"
                       height="1em"
                       stroke="currentColor"
@@ -613,79 +642,74 @@ exports[`Docs page > renders correctly 1`] = `
                       />
                     </svg>
                   </span>
-                  <span
-                    class="card-title-text"
-                  >
+                  <span>
                     docs.governance
                   </span>
                 </p>
                 <div
-                  class="card-text"
+                  class="divide-y divide-gray-200"
                 >
-                  <div
-                    class="list-group list-group-flush"
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/about"
                   >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/about"
+                    docs.about.eclipse.adoptium
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/members"
+                  >
+                    docs.working.group.members
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/join"
+                  >
+                    docs.join.the.working.group
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://www.eclipse.org/org/workinggroups/sponsorship/working-group-sponsorship-agreement.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.sponsor.the.project
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.about.eclipse.adoptium
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/members"
-                    >
-                      docs.working.group.members
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/join"
-                    >
-                      docs.join.the.working.group
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://www.eclipse.org/org/workinggroups/sponsorship/working-group-sponsorship-agreement.pdf"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      docs.sponsor.the.project
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="col-12 col-lg-4 py-3"
+            class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="card shadow-sm"
+              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
             >
               <div
-                class="card-body"
+                class="p-4"
               >
                 <p
-                  class="card-title mb-3 h5"
+                  class="mb-3 text-xl font-semibold flex items-center"
                 >
                   <span
-                    class="theme-icon-holder card-icon-holder me-2"
+                    class="inline-block mr-2"
                   >
                     <svg
+                      class="text-pink"
                       fill="currentColor"
                       height="1em"
                       stroke="currentColor"
@@ -699,149 +723,144 @@ exports[`Docs page > renders correctly 1`] = `
                       />
                     </svg>
                   </span>
-                  <span
-                    class="card-title-text"
-                  >
+                  <span>
                     docs.source.code
                   </span>
                 </p>
                 <div
-                  class="card-text"
+                  class="divide-y divide-gray-200"
                 >
-                  <div
-                    class="list-group list-group-flush"
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://github.com/adoptium"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://github.com/adoptium"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    docs.adoptium.on.github
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.adoptium.on.github
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://github.com/adoptium/adoptium/blob/main/README.md"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://github.com/adoptium/adoptium/blob/main/README.md"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.repository.overview
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.repository.overview
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://github.com/adoptium/temurin-build"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://github.com/adoptium/temurin-build"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.build.scripts
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.build.scripts
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://github.com/adoptium/installer"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://github.com/adoptium/installer"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.installer.code
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.installer.code
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://github.com/adoptium/jmc-build"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://github.com/adoptium/jmc-build"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.mission.control.build
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.mission.control.build
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="col-12 col-lg-4 py-3"
+            class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="card shadow-sm"
+              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
             >
               <div
-                class="card-body"
+                class="p-4"
               >
                 <p
-                  class="card-title mb-3 h5"
+                  class="mb-3 text-xl font-semibold flex items-center"
                 >
                   <span
-                    class="theme-icon-holder card-icon-holder me-2"
+                    class="inline-block mr-2"
                   >
                     <svg
+                      class="text-pink"
                       fill="currentColor"
                       height="1em"
                       stroke="currentColor"
@@ -855,95 +874,90 @@ exports[`Docs page > renders correctly 1`] = `
                       />
                     </svg>
                   </span>
-                  <span
-                    class="card-title-text"
-                  >
+                  <span>
                     docs.other.resources
                   </span>
                 </p>
                 <div
-                  class="card-text"
+                  class="divide-y divide-gray-200"
                 >
-                  <div
-                    class="list-group list-group-flush"
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/docs/faq"
                   >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/docs/faq"
+                    docs.frequently.asked.questions
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://api.adoptium.net"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.adoptium.api
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.frequently.asked.questions
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://api.adoptium.net"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://adoptium.net/blog"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.adoptium.blog
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.adoptium.api
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://adoptium.net/blog"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      docs.adoptium.blog
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/support-us"
-                    >
-                      docs.support.us
-                    </a>
-                  </div>
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/support-us"
+                  >
+                    docs.support.us
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="col-12 col-lg-4 py-3"
+            class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="card shadow-sm"
+              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
             >
               <div
-                class="card-body"
+                class="p-4"
               >
                 <p
-                  class="card-title mb-3 h5"
+                  class="mb-3 text-xl font-semibold flex items-center"
                 >
                   <span
-                    class="theme-icon-holder card-icon-holder me-2"
+                    class="inline-block mr-2"
                   >
                     <svg
+                      class="text-pink"
                       fill="currentColor"
                       height="1em"
                       stroke="currentColor"
@@ -957,81 +971,75 @@ exports[`Docs page > renders correctly 1`] = `
                       />
                     </svg>
                   </span>
-                  <span
-                    class="card-title-text"
-                  >
+                  <span>
                     docs.branding
                   </span>
                 </p>
                 <div
-                  class="card-text"
+                  class="divide-y divide-gray-200"
                 >
-                  <div
-                    class="list-group list-group-flush"
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://www.eclipse.org/org/artwork/guidelines/adoptium-brand-guidelines.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://www.eclipse.org/org/artwork/guidelines/adoptium-brand-guidelines.pdf"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    docs.brand.guidelines
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.brand.guidelines
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="https://docs.google.com/presentation/d/1ChGhqZrAHCdk5S2Ii5s5RROng1saTaTtjZzsxWJ_MPA/copy"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://docs.google.com/presentation/d/1ChGhqZrAHCdk5S2Ii5s5RROng1saTaTtjZzsxWJ_MPA/copy"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.google.slide.template
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      docs.google.slide.template
-                       
-                      <svg
-                        fill="currentColor"
-                        height="13"
-                        stroke="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 512 512"
-                        width="13"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/docs/logo-styleguide/"
-                    >
-                      footer.logo.and.artwork
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/temurin/buttons"
-                    >
-                      docs.download.buttons
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      href="/docs/marketing-criteria"
-                    >
-                      docs.marketing.criteria
-                    </a>
-                  </div>
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/docs/logo-styleguide/"
+                  >
+                    footer.logo.and.artwork
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/temurin/buttons"
+                  >
+                    docs.download.buttons
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/docs/marketing-criteria"
+                  >
+                    docs.marketing.criteria
+                  </a>
                 </div>
               </div>
             </div>

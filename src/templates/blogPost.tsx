@@ -49,11 +49,11 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
                   News article
                 </div>
               </div>
-              <h1 className="self-stretch text-center text-white   text-[36px] lg:text-[48px] leading-[122.222%] lg:leading-[116.667%] font-semibold">
+              <h1 className="self-stretch text-center text-white text-2xl md:text-5xl pb-4 font-semibold">
                 {post.frontmatter.title}
               </h1>
             </div>
-            <div className="self-stretch text-center text-grey text-grey-300 text-xl font-normal leading-7">
+            <div className="self-stretch text-center text-grey text-grey-300 text-lg md:text-xl font-normal leading-7">
               {post.excerpt}
             </div>
             <Byline
@@ -64,10 +64,10 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
           </div>
         </div>
       </div>
-      <section className="mx-auto w-full p-6 lg:px-0 flex flex-col items-center justify-center">
-        <div className="max-w-4xl">
+      <section className="mx-auto p-0 md:p-6 lg:px-0 flex flex-col md:items-center justify-center w-full">
+        <div className="m-4 max-w-4/5 md:max-w-4xl">
           <article>
-            <header className="pb-5">
+            <header className="py-5">
               <ShareButton
                 location={location}
                 siteMetadata={data.site.siteMetadata}
@@ -83,7 +83,7 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
           </article>
 
           <div>
-            <ul className="flex flex-wrap justify-between list-none p-0">
+            <ul className="flex flex-wrap justify-between list-none pt-5 md:p-0">
               <li>
                 {next && (
                   <Link to={next.fields.postPath} rel="next">

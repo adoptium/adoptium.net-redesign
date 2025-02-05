@@ -2,7 +2,7 @@ import React from "react"
 import { render } from "@testing-library/react"
 import { describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
-import Sponsors, { Head } from "../sponsors"
+import Sustainers, { Head } from "../sustainers"
 
 vi.mock("../../components/Logos", () => {
   return {
@@ -14,7 +14,7 @@ vi.mock("../../components/Logos", () => {
 
 describe("Sponsors page", () => {
   it("renders correctly", () => {
-    const { container } = render(<Sponsors />)
+    const { container } = render(<Sustainers />)
     expect(container).toMatchSnapshot()
   })
 
@@ -26,7 +26,7 @@ describe("Sponsors page", () => {
   })
 
   it("has no accessibility violations", async () => {
-    const { container } = render(<Sponsors />)
+    const { container } = render(<Sustainers />)
     const results = await axe(container)
     expect(results).toHaveNoViolations()
   })

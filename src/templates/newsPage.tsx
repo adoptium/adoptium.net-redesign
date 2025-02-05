@@ -20,7 +20,7 @@ const NewsPage = ({ data, pageContext }) => {
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
         className={"mx-auto max-w-[860px] px-2 w-full"}
       />
-      <NewsCardList posts={posts} previousPageNumber={previousPageNumber} previousPageLink={previousPageLink} nextPageNumber={nextPageNumber} />
+      <NewsCardList posts={posts} previousPageNumber={previousPageNumber} previousPageLink={previousPageLink} nextPage={nextPageNumber ? `/news/page/${nextPageNumber}` : null} />
     </Layout>
   )
 }

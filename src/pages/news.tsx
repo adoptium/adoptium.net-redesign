@@ -1,13 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby-plugin-react-i18next"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import PageHeader from "../components/PageHeader"
 import NewsCardList from "../components/News/NewsCardList"
-import AuthorData from "../json/authors.json"
-import ArticlePreview from "../components/ArticlePreview"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMdx.edges
@@ -21,7 +18,7 @@ const BlogIndex = ({ data }) => {
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
         className={"mx-auto max-w-[860px] px-2 w-full"}
       />
-      <NewsCardList posts={posts} previousPageNumber={null} previousPageLink={null} nextPageNumber={nextPageNumber}  />
+      <NewsCardList posts={posts} previousPageNumber={null} previousPageLink={null} nextPage={nextPageNumber ? `/news/page/${nextPageNumber}` : null} />
     </Layout>
   )
 }

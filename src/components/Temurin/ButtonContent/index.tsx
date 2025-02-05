@@ -16,31 +16,33 @@ interface CardData {
   java_version: string
 }
 
-const navigationItem = [
-  {
-    title: "Release notes",
-    link: "/release-notes"
-  },
-  {
-    title: "Installation guide",
-    link: "/installation"
-  },
-  {
-    title: "Supported Platforms",
-    link: "/supported-platforms"
-  },
-  {
-    title: "Terms of use",
-    link: "#"
-  },
-]
-
 const ButtonContent = ({ results }) => {
+  const navigationItem = [
+    {
+      title: "Release notes",
+      link: results ? `/temurin/release-notes?version=${results['source'].release_name}` : "/temurin/release-notes"
+    },
+    {
+      title: "Installation guide",
+      link: "/installation"
+    },
+    {
+      title: "Supported Platforms",
+      link: "/supported-platforms"
+    },
+    {
+      title: "Terms of use",
+      link: "#"
+    },
+  ]
+
   const CardData: CardData[] = []
+  let foundmacos = false
   // loop through results and find macOS and Windows installers
   results &&
     results.map(result => {
       if (result.os === "mac" && result.architecture === "aarch64") {
+        foundmacos = true
         CardData.push({
           icon: <FaApple size={30} />,
           title: "macOS",
@@ -50,6 +52,19 @@ const ButtonContent = ({ results }) => {
           java_version: result.release_name,
           pkg_type: result.binaries[0].type,
           description: `Temurin ${result.release_name}, macOS aarch64 (M1) (${result.binaries[0].installer_extension.toUpperCase()})`,
+          link: result.binaries[0].installer_link,
+        })
+      } else if (result.os === "mac" && result.architecture === "x64" && !foundmacos) {
+        // Fall back to x64 if aarch64 is not found
+        CardData.push({
+          icon: <FaApple size={30} />,
+          title: "macOS",
+          os: result.os,
+          arch: result.architecture,
+          checksum: result.binaries[0].installer_checksum,
+          java_version: result.release_name,
+          pkg_type: result.binaries[0].type,
+          description: `Temurin ${result.release_name}, macOS 64 bit (${result.binaries[0].installer_extension.toUpperCase()})`,
           link: result.binaries[0].installer_link,
         })
       }

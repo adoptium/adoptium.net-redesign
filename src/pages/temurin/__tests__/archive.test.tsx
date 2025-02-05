@@ -1,6 +1,6 @@
 import React from "react"
-import { render } from "@testing-library/react"
-import { describe, expect, it, vi } from "vitest"
+import { act, render, waitFor } from "@testing-library/react"
+import { afterEach, describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
 import Archive, { Head } from "../archive"
 import AxiosInstance from "axios"
@@ -13,17 +13,21 @@ afterEach(() => {
 })
 
 describe("Temurin Archive page", () => {
-  it("renders correctly", () => {
+  it("renders correctly", async () => {
     mock.onGet().reply(200, [], { pagecount: 0 })
 
-    const { container } = render(<Archive />)
+    let container
+    await act(async () => {
+      const renderResult = render(<Archive />)
+      container = renderResult.container
+    })
     // eslint-disable-next-line
     const pageContent = container.querySelector("main")
 
     expect(pageContent).toMatchSnapshot()
   })
 
-  it("head renders correctly", () => {
+  it("head renders correctly", async () => {
     mock.onGet().reply(200, [], { pagecount: 0 })
 
     const { container } = render(<Head />)
@@ -33,10 +37,12 @@ describe("Temurin Archive page", () => {
   })
 
   it("has no accessibility violations", async () => {
-    mock.onGet().reply(200, [], { pagecount: 0 })
-
-    const { container } = render(<Archive />)
-    const results = await axe(container)
-    expect(results).toHaveNoViolations()
-  })
+    mock.onGet().reply(200, [], { pagecount: 0 });
+    const { container } = render(<Archive />);
+    await waitFor(() => {
+      expect(container.querySelector("table")).toBeInTheDocument();
+    });
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
 })

@@ -11,7 +11,7 @@ exports[`AuthorsList component > renders correctly 1`] = `
       Text
     </div>
     <div
-      class="justify-start items-center space-x-[-12px] inline-flex"
+      class="flex flex-wrap justify-start items-center space-x-[-12px]"
     >
       <a
         aria-label="test-author"

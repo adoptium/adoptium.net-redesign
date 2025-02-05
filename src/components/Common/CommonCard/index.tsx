@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby-plugin-react-i18next"
 
 const CommonCard = ({ data }) => {
   return (
@@ -9,9 +10,11 @@ const CommonCard = ({ data }) => {
         </h3>
         <p className="mt-6 text-xl text-grey font-normal">{data.description}</p>
       </div>
-      <button className="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border ">
-        {data.button}
-      </button>
+      <Link to={data.href}>
+        <button className="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border ">
+          {data.button}
+        </button>
+      </Link>
     </div>
   )
 }

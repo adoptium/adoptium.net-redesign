@@ -121,121 +121,130 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
         <header
           class="pb-5"
         >
-          <button
-            aria-label="x"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
+          <div
+            id="share-buttons"
           >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
+            <button
+              aria-label="Share on X (Twitter)"
+              class="react-share__ShareButton mr-2"
+              networkname="twitter"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              <rect
-                fill="#000000"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M 41.116 18.375 h 4.962 l -10.8405 12.39 l 12.753 16.86 H 38.005 l -7.821 -10.2255 L 21.235 47.625 H 16.27 l 11.595 -13.2525 L 15.631 18.375 H 25.87 l 7.0695 9.3465 z m -1.7415 26.28 h 2.7495 L 24.376 21.189 H 21.4255 z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="linkedin"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Linkedin"
+              class="react-share__ShareButton mr-2"
+              networkname="linkedin"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              <rect
-                fill="#0077B5"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="facebook"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Facebook"
+              class="react-share__ShareButton mr-2"
+              networkname="facebook"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              <rect
-                fill="#0965FE"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="reddit"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Reddit"
+              class="react-share__ShareButton mr-2"
+              networkname="reddit"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              <rect
-                fill="#FF5700"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M 53.34375 32 C 53.277344 30.160156 52.136719 28.53125 50.429688 27.839844 C 48.722656 27.148438 46.769531 27.523438 45.441406 28.800781 C 41.800781 26.324219 37.519531 24.957031 33.121094 24.863281 L 35.199219 14.878906 L 42.046875 16.320312 C 42.214844 17.882812 43.496094 19.09375 45.066406 19.171875 C 46.636719 19.253906 48.03125 18.183594 48.359375 16.644531 C 48.6875 15.105469 47.847656 13.558594 46.382812 12.992188 C 44.914062 12.425781 43.253906 13.007812 42.464844 14.367188 L 34.625 12.800781 C 34.363281 12.742188 34.09375 12.792969 33.871094 12.9375 C 33.648438 13.082031 33.492188 13.308594 33.441406 13.566406 L 31.070312 24.671875 C 26.617188 24.738281 22.277344 26.105469 18.59375 28.609375 C 17.242188 27.339844 15.273438 26.988281 13.570312 27.707031 C 11.863281 28.429688 10.746094 30.089844 10.71875 31.941406 C 10.691406 33.789062 11.757812 35.484375 13.441406 36.257812 C 13.402344 36.726562 13.402344 37.195312 13.441406 37.664062 C 13.441406 44.832031 21.792969 50.65625 32.097656 50.65625 C 42.398438 50.65625 50.753906 44.832031 50.753906 37.664062 C 50.789062 37.195312 50.789062 36.726562 50.753906 36.257812 C 52.363281 35.453125 53.371094 33.800781 53.34375 32 Z M 21.34375 35.199219 C 21.34375 33.433594 22.777344 32 24.542969 32 C 26.3125 32 27.742188 33.433594 27.742188 35.199219 C 27.742188 36.96875 26.3125 38.398438 24.542969 38.398438 C 22.777344 38.398438 21.34375 36.96875 21.34375 35.199219 Z M 39.9375 44 C 37.664062 45.710938 34.871094 46.582031 32.03125 46.464844 C 29.191406 46.582031 26.398438 45.710938 24.128906 44 C 23.847656 43.65625 23.871094 43.15625 24.183594 42.839844 C 24.5 42.527344 25 42.503906 25.34375 42.785156 C 27.269531 44.195312 29.617188 44.90625 32 44.800781 C 34.386719 44.929688 36.746094 44.242188 38.6875 42.847656 C 39.042969 42.503906 39.605469 42.511719 39.953125 42.863281 C 40.296875 43.21875 40.289062 43.785156 39.9375 44.128906 Z M 39.359375 38.527344 C 37.59375 38.527344 36.160156 37.09375 36.160156 35.328125 C 36.160156 33.5625 37.59375 32.128906 39.359375 32.128906 C 41.128906 32.128906 42.558594 33.5625 42.558594 35.328125 C 42.59375 36.203125 42.269531 37.054688 41.65625 37.6875 C 41.046875 38.316406 40.203125 38.664062 39.328125 38.65625 Z M 39.359375 38.527344"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="email"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Bluesky"
+              class="react-share__ShareButton mr-2"
+              networkname="bluesky"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              <rect
-                fill="#7f7f7f"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M17,22v20h30V22H17z M41.1,25L32,32.1L22.9,25H41.1z M20,39V26.6l12,9.3l12-9.3V39H20z"
-                fill="white"
-              />
-            </svg>
-          </button>
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 576 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share via Email"
+              class="react-share__ShareButton mr-2"
+              networkname="email"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                />
+              </svg>
+            </button>
+          </div>
         </header>
         <article
           class="prose prose-invert lg:prose-lg max-w-none"
@@ -259,136 +268,31 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
             <div
               class="flex items-center gap-4"
             >
-              <button
-                class="bg-primary px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3"
-              >
-                <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 21 20"
-                  width="21"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M15.5 6.66675C16.8807 6.66675 18 5.54746 18 4.16675C18 2.78604 16.8807 1.66675 15.5 1.66675C14.1193 1.66675 13 2.78604 13 4.16675C13 5.54746 14.1193 6.66675 15.5 6.66675Z"
-                    stroke="white"
-                    stroke-Width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5.5 12.5C6.88071 12.5 8 11.3807 8 10C8 8.61929 6.88071 7.5 5.5 7.5C4.11929 7.5 3 8.61929 3 10C3 11.3807 4.11929 12.5 5.5 12.5Z"
-                    stroke="white"
-                    stroke-Width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M15.5 18.3335C16.8807 18.3335 18 17.2142 18 15.8335C18 14.4528 16.8807 13.3335 15.5 13.3335C14.1193 13.3335 13 14.4528 13 15.8335C13 17.2142 14.1193 18.3335 15.5 18.3335Z"
-                    stroke="white"
-                    stroke-Width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M7.65625 11.2583L13.3479 14.575"
-                    stroke="white"
-                    stroke-Width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M13.3396 5.42505L7.65625 8.74172"
-                    stroke="white"
-                    stroke-Width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Share
-              </button>
               <a
-                aria-label="Share on FB"
-                href=""
+                href="#share-buttons"
               >
-                <svg
-                  fill="none"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="bg-primary px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3"
                 >
-                  <g
-                    clip-path="url(#clip0_501_4312)"
+                  <svg
+                    fill="currentColor"
+                    height="25"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="25"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
-                      fill="white"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_501_4312"
+                    <g
+                      id="Share_2"
                     >
-                      <rect
-                        fill="white"
-                        height="24"
-                        width="24"
+                      <path
+                        d="M18.44,15.94a2.5,2.5,0,0,0-1.96.95L7.97,12.64a2.356,2.356,0,0,0,0-1.29l8.5-4.25a2.5,2.5,0,1,0-.53-1.54,2.269,2.269,0,0,0,.09.65l-8.5,4.25a2.5,2.5,0,1,0,0,3.08l8.5,4.25a2.269,2.269,0,0,0-.09.65,2.5,2.5,0,1,0,2.5-2.5Zm0-11.88a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,18.44,4.06ZM5.56,13.5A1.5,1.5,0,1,1,7.06,12,1.5,1.5,0,0,1,5.56,13.5Zm12.88,6.44a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,18.44,19.94Z"
                       />
-                    </clippath>
-                  </defs>
-                </svg>
-              </a>
-              <a
-                aria-label="Share on X"
-                href=""
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18.3263 1.90381H21.6998L14.3297 10.3273L23 21.7898H16.2112L10.894 14.8378L4.80995 21.7898H1.43443L9.31743 12.7799L1 1.90381H7.96111L12.7674 8.25814L18.3263 1.90381ZM17.1423 19.7706H19.0116L6.94539 3.81694H4.93946L17.1423 19.7706Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-              <a
-                aria-label="Share on GitHub"
-                href=""
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_501_4316)"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M12.0099 0C5.36875 0 0 5.40833 0 12.0992C0 17.4475 3.43994 21.9748 8.21205 23.5771C8.80869 23.6976 9.02724 23.3168 9.02724 22.9965C9.02724 22.716 9.00757 21.7545 9.00757 20.7527C5.6667 21.474 4.97099 19.3104 4.97099 19.3104C4.43409 17.9082 3.63858 17.5478 3.63858 17.5478C2.54511 16.8066 3.71823 16.8066 3.71823 16.8066C4.93117 16.8868 5.56763 18.0486 5.56763 18.0486C6.64118 19.8913 8.37111 19.3707 9.06706 19.0501C9.16638 18.2688 9.48473 17.728 9.82275 17.4276C7.15817 17.1471 4.35469 16.1055 4.35469 11.458C4.35469 10.1359 4.8316 9.05428 5.58729 8.21304C5.46807 7.91263 5.0504 6.67043 5.70677 5.00787C5.70677 5.00787 6.72083 4.6873 9.00732 6.24981C9.98625 5.98497 10.9958 5.85024 12.0099 5.84911C13.024 5.84911 14.0577 5.98948 15.0123 6.24981C17.299 4.6873 18.3131 5.00787 18.3131 5.00787C18.9695 6.67043 18.5515 7.91263 18.4323 8.21304C19.2079 9.05428 19.6652 10.1359 19.6652 11.458C19.6652 16.1055 16.8617 17.1269 14.1772 17.4276C14.6148 17.8081 14.9924 18.5292 14.9924 19.6711C14.9924 21.2936 14.9727 22.5957 14.9727 22.9962C14.9727 23.3168 15.1915 23.6976 15.7879 23.5774C20.56 21.9745 23.9999 17.4475 23.9999 12.0992C24.0196 5.40833 18.6312 0 12.0099 0Z"
-                      fill="white"
-                      fill-rule="evenodd"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_501_4316"
-                    >
-                      <rect
-                        fill="white"
-                        height="24"
-                        width="24"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
+                    </g>
+                  </svg>
+                  Share
+                </button>
               </a>
             </div>
           </div>
@@ -423,152 +327,8 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
       </div>
     </div>
   </section>
-  <div
-    class="max-w-[1264px] px-6 mx-auto py-8 md:py-16"
-  >
-    <div
-      class="max-w-[670px] mx-auto flex flex-col items-center justify-center"
-    >
-      <div
-        class="text-5xl leading-[116%] text-white text-center font-semibold"
-      >
-        Related Articles
-      </div>
-      <div
-        class="text-lightgrey mt-6 tab-button-text text-center"
-      >
-        Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
-      </div>
-      <a
-        href="/news"
-      >
-        <button
-          class="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block "
-        >
-          See all articles
-        </button>
-      </a>
-    </div>
-    <div
-      class="flex justify-center flex-wrap items-center gap-5 pt-16"
-    >
-      <div
-        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
-      >
-        <div
-          class="relative"
-        >
-          <img
-            alt=""
-            class=" mb-0 pb-5"
-            src="/images/new-article-card-img.png"
-          />
-        </div>
-        <h2
-          class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
-        >
-          Mock Title 1
-           
-        </h2>
-        <p
-          class="mb-0"
-        >
-          2021-01-01
-        </p>
-        <a
-          class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-        >
-          Read More
-        </a>
-      </div>
-      <div
-        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
-      >
-        <div
-          class="relative"
-        >
-          <img
-            alt=""
-            class=" mb-0 pb-5"
-            src="/images/new-article-card-img.png"
-          />
-        </div>
-        <h2
-          class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
-        >
-          Mock Title 2
-           
-        </h2>
-        <p
-          class="mb-0"
-        >
-          2021-01-01
-        </p>
-        <a
-          class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-        >
-          Read More
-        </a>
-      </div>
-      <div
-        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
-      >
-        <div
-          class="relative"
-        >
-          <img
-            alt=""
-            class=" mb-0 pb-5"
-            src="/images/new-article-card-img.png"
-          />
-        </div>
-        <h2
-          class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
-        >
-          Mock Title 3
-           
-        </h2>
-        <p
-          class="mb-0"
-        >
-          2021-01-01
-        </p>
-        <a
-          class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-        >
-          Read More
-        </a>
-      </div>
-      <div
-        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
-      >
-        <div
-          class="relative"
-        >
-          <img
-            alt=""
-            class=" mb-0 pb-5"
-            src="/images/new-article-card-img.png"
-          />
-        </div>
-        <h2
-          class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
-        >
-          Mock Title 4
-           
-        </h2>
-        <p
-          class="mb-0"
-        >
-          2021-01-01
-        </p>
-        <a
-          class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-        >
-          Read More
-        </a>
-      </div>
-    </div>
+  <div>
+    related-articles
   </div>
 </main>
 `;
@@ -672,121 +432,130 @@ exports[`BlogPost Template page > renders correctly 1`] = `
         <header
           class="pb-5"
         >
-          <button
-            aria-label="x"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
+          <div
+            id="share-buttons"
           >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
+            <button
+              aria-label="Share on X (Twitter)"
+              class="react-share__ShareButton mr-2"
+              networkname="twitter"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              <rect
-                fill="#000000"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M 41.116 18.375 h 4.962 l -10.8405 12.39 l 12.753 16.86 H 38.005 l -7.821 -10.2255 L 21.235 47.625 H 16.27 l 11.595 -13.2525 L 15.631 18.375 H 25.87 l 7.0695 9.3465 z m -1.7415 26.28 h 2.7495 L 24.376 21.189 H 21.4255 z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="linkedin"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Linkedin"
+              class="react-share__ShareButton mr-2"
+              networkname="linkedin"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              <rect
-                fill="#0077B5"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="facebook"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Facebook"
+              class="react-share__ShareButton mr-2"
+              networkname="facebook"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              <rect
-                fill="#0965FE"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="reddit"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Reddit"
+              class="react-share__ShareButton mr-2"
+              networkname="reddit"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              <rect
-                fill="#FF5700"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M 53.34375 32 C 53.277344 30.160156 52.136719 28.53125 50.429688 27.839844 C 48.722656 27.148438 46.769531 27.523438 45.441406 28.800781 C 41.800781 26.324219 37.519531 24.957031 33.121094 24.863281 L 35.199219 14.878906 L 42.046875 16.320312 C 42.214844 17.882812 43.496094 19.09375 45.066406 19.171875 C 46.636719 19.253906 48.03125 18.183594 48.359375 16.644531 C 48.6875 15.105469 47.847656 13.558594 46.382812 12.992188 C 44.914062 12.425781 43.253906 13.007812 42.464844 14.367188 L 34.625 12.800781 C 34.363281 12.742188 34.09375 12.792969 33.871094 12.9375 C 33.648438 13.082031 33.492188 13.308594 33.441406 13.566406 L 31.070312 24.671875 C 26.617188 24.738281 22.277344 26.105469 18.59375 28.609375 C 17.242188 27.339844 15.273438 26.988281 13.570312 27.707031 C 11.863281 28.429688 10.746094 30.089844 10.71875 31.941406 C 10.691406 33.789062 11.757812 35.484375 13.441406 36.257812 C 13.402344 36.726562 13.402344 37.195312 13.441406 37.664062 C 13.441406 44.832031 21.792969 50.65625 32.097656 50.65625 C 42.398438 50.65625 50.753906 44.832031 50.753906 37.664062 C 50.789062 37.195312 50.789062 36.726562 50.753906 36.257812 C 52.363281 35.453125 53.371094 33.800781 53.34375 32 Z M 21.34375 35.199219 C 21.34375 33.433594 22.777344 32 24.542969 32 C 26.3125 32 27.742188 33.433594 27.742188 35.199219 C 27.742188 36.96875 26.3125 38.398438 24.542969 38.398438 C 22.777344 38.398438 21.34375 36.96875 21.34375 35.199219 Z M 39.9375 44 C 37.664062 45.710938 34.871094 46.582031 32.03125 46.464844 C 29.191406 46.582031 26.398438 45.710938 24.128906 44 C 23.847656 43.65625 23.871094 43.15625 24.183594 42.839844 C 24.5 42.527344 25 42.503906 25.34375 42.785156 C 27.269531 44.195312 29.617188 44.90625 32 44.800781 C 34.386719 44.929688 36.746094 44.242188 38.6875 42.847656 C 39.042969 42.503906 39.605469 42.511719 39.953125 42.863281 C 40.296875 43.21875 40.289062 43.785156 39.9375 44.128906 Z M 39.359375 38.527344 C 37.59375 38.527344 36.160156 37.09375 36.160156 35.328125 C 36.160156 33.5625 37.59375 32.128906 39.359375 32.128906 C 41.128906 32.128906 42.558594 33.5625 42.558594 35.328125 C 42.59375 36.203125 42.269531 37.054688 41.65625 37.6875 C 41.046875 38.316406 40.203125 38.664062 39.328125 38.65625 Z M 39.359375 38.527344"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="email"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Bluesky"
+              class="react-share__ShareButton mr-2"
+              networkname="bluesky"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              <rect
-                fill="#7f7f7f"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M17,22v20h30V22H17z M41.1,25L32,32.1L22.9,25H41.1z M20,39V26.6l12,9.3l12-9.3V39H20z"
-                fill="white"
-              />
-            </svg>
-          </button>
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 576 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share via Email"
+              class="react-share__ShareButton mr-2"
+              networkname="email"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                />
+              </svg>
+            </button>
+          </div>
         </header>
         <article
           class="prose prose-invert lg:prose-lg max-w-none"
@@ -810,136 +579,31 @@ exports[`BlogPost Template page > renders correctly 1`] = `
             <div
               class="flex items-center gap-4"
             >
-              <button
-                class="bg-primary px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3"
-              >
-                <svg
-                  fill="none"
-                  height="20"
-                  viewBox="0 0 21 20"
-                  width="21"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M15.5 6.66675C16.8807 6.66675 18 5.54746 18 4.16675C18 2.78604 16.8807 1.66675 15.5 1.66675C14.1193 1.66675 13 2.78604 13 4.16675C13 5.54746 14.1193 6.66675 15.5 6.66675Z"
-                    stroke="white"
-                    stroke-Width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5.5 12.5C6.88071 12.5 8 11.3807 8 10C8 8.61929 6.88071 7.5 5.5 7.5C4.11929 7.5 3 8.61929 3 10C3 11.3807 4.11929 12.5 5.5 12.5Z"
-                    stroke="white"
-                    stroke-Width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M15.5 18.3335C16.8807 18.3335 18 17.2142 18 15.8335C18 14.4528 16.8807 13.3335 15.5 13.3335C14.1193 13.3335 13 14.4528 13 15.8335C13 17.2142 14.1193 18.3335 15.5 18.3335Z"
-                    stroke="white"
-                    stroke-Width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M7.65625 11.2583L13.3479 14.575"
-                    stroke="white"
-                    stroke-Width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M13.3396 5.42505L7.65625 8.74172"
-                    stroke="white"
-                    stroke-Width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Share
-              </button>
               <a
-                aria-label="Share on FB"
-                href=""
+                href="#share-buttons"
               >
-                <svg
-                  fill="none"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="bg-primary px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3"
                 >
-                  <g
-                    clip-path="url(#clip0_501_4312)"
+                  <svg
+                    fill="currentColor"
+                    height="25"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="25"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
-                      fill="white"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_501_4312"
+                    <g
+                      id="Share_2"
                     >
-                      <rect
-                        fill="white"
-                        height="24"
-                        width="24"
+                      <path
+                        d="M18.44,15.94a2.5,2.5,0,0,0-1.96.95L7.97,12.64a2.356,2.356,0,0,0,0-1.29l8.5-4.25a2.5,2.5,0,1,0-.53-1.54,2.269,2.269,0,0,0,.09.65l-8.5,4.25a2.5,2.5,0,1,0,0,3.08l8.5,4.25a2.269,2.269,0,0,0-.09.65,2.5,2.5,0,1,0,2.5-2.5Zm0-11.88a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,18.44,4.06ZM5.56,13.5A1.5,1.5,0,1,1,7.06,12,1.5,1.5,0,0,1,5.56,13.5Zm12.88,6.44a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,18.44,19.94Z"
                       />
-                    </clippath>
-                  </defs>
-                </svg>
-              </a>
-              <a
-                aria-label="Share on X"
-                href=""
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18.3263 1.90381H21.6998L14.3297 10.3273L23 21.7898H16.2112L10.894 14.8378L4.80995 21.7898H1.43443L9.31743 12.7799L1 1.90381H7.96111L12.7674 8.25814L18.3263 1.90381ZM17.1423 19.7706H19.0116L6.94539 3.81694H4.93946L17.1423 19.7706Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-              <a
-                aria-label="Share on GitHub"
-                href=""
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g
-                    clip-path="url(#clip0_501_4316)"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M12.0099 0C5.36875 0 0 5.40833 0 12.0992C0 17.4475 3.43994 21.9748 8.21205 23.5771C8.80869 23.6976 9.02724 23.3168 9.02724 22.9965C9.02724 22.716 9.00757 21.7545 9.00757 20.7527C5.6667 21.474 4.97099 19.3104 4.97099 19.3104C4.43409 17.9082 3.63858 17.5478 3.63858 17.5478C2.54511 16.8066 3.71823 16.8066 3.71823 16.8066C4.93117 16.8868 5.56763 18.0486 5.56763 18.0486C6.64118 19.8913 8.37111 19.3707 9.06706 19.0501C9.16638 18.2688 9.48473 17.728 9.82275 17.4276C7.15817 17.1471 4.35469 16.1055 4.35469 11.458C4.35469 10.1359 4.8316 9.05428 5.58729 8.21304C5.46807 7.91263 5.0504 6.67043 5.70677 5.00787C5.70677 5.00787 6.72083 4.6873 9.00732 6.24981C9.98625 5.98497 10.9958 5.85024 12.0099 5.84911C13.024 5.84911 14.0577 5.98948 15.0123 6.24981C17.299 4.6873 18.3131 5.00787 18.3131 5.00787C18.9695 6.67043 18.5515 7.91263 18.4323 8.21304C19.2079 9.05428 19.6652 10.1359 19.6652 11.458C19.6652 16.1055 16.8617 17.1269 14.1772 17.4276C14.6148 17.8081 14.9924 18.5292 14.9924 19.6711C14.9924 21.2936 14.9727 22.5957 14.9727 22.9962C14.9727 23.3168 15.1915 23.6976 15.7879 23.5774C20.56 21.9745 23.9999 17.4475 23.9999 12.0992C24.0196 5.40833 18.6312 0 12.0099 0Z"
-                      fill="white"
-                      fill-rule="evenodd"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="clip0_501_4316"
-                    >
-                      <rect
-                        fill="white"
-                        height="24"
-                        width="24"
-                      />
-                    </clippath>
-                  </defs>
-                </svg>
+                    </g>
+                  </svg>
+                  Share
+                </button>
               </a>
             </div>
           </div>
@@ -974,152 +638,8 @@ exports[`BlogPost Template page > renders correctly 1`] = `
       </div>
     </div>
   </section>
-  <div
-    class="max-w-[1264px] px-6 mx-auto py-8 md:py-16"
-  >
-    <div
-      class="max-w-[670px] mx-auto flex flex-col items-center justify-center"
-    >
-      <div
-        class="text-5xl leading-[116%] text-white text-center font-semibold"
-      >
-        Related Articles
-      </div>
-      <div
-        class="text-lightgrey mt-6 tab-button-text text-center"
-      >
-        Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
-      </div>
-      <a
-        href="/news"
-      >
-        <button
-          class="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block "
-        >
-          See all articles
-        </button>
-      </a>
-    </div>
-    <div
-      class="flex justify-center flex-wrap items-center gap-5 pt-16"
-    >
-      <div
-        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
-      >
-        <div
-          class="relative"
-        >
-          <img
-            alt=""
-            class=" mb-0 pb-5"
-            src="/images/new-article-card-img.png"
-          />
-        </div>
-        <h2
-          class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
-        >
-          Mock Title 1
-           
-        </h2>
-        <p
-          class="mb-0"
-        >
-          2021-01-01
-        </p>
-        <a
-          class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-        >
-          Read More
-        </a>
-      </div>
-      <div
-        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
-      >
-        <div
-          class="relative"
-        >
-          <img
-            alt=""
-            class=" mb-0 pb-5"
-            src="/images/new-article-card-img.png"
-          />
-        </div>
-        <h2
-          class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
-        >
-          Mock Title 2
-           
-        </h2>
-        <p
-          class="mb-0"
-        >
-          2021-01-01
-        </p>
-        <a
-          class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-        >
-          Read More
-        </a>
-      </div>
-      <div
-        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
-      >
-        <div
-          class="relative"
-        >
-          <img
-            alt=""
-            class=" mb-0 pb-5"
-            src="/images/new-article-card-img.png"
-          />
-        </div>
-        <h2
-          class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
-        >
-          Mock Title 3
-           
-        </h2>
-        <p
-          class="mb-0"
-        >
-          2021-01-01
-        </p>
-        <a
-          class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-        >
-          Read More
-        </a>
-      </div>
-      <div
-        class="flex flex-col max-w-[392px] newscard-2 bg-[#200D46] p-6"
-      >
-        <div
-          class="relative"
-        >
-          <img
-            alt=""
-            class=" mb-0 pb-5"
-            src="/images/new-article-card-img.png"
-          />
-        </div>
-        <h2
-          class="text-[20px] font-semibold text-white leading-[140%] mb-0 pb-5"
-        >
-          Mock Title 4
-           
-        </h2>
-        <p
-          class="mb-0"
-        >
-          2021-01-01
-        </p>
-        <a
-          class="py-3 text-base underline font-bold leading-6 text-white mt-4 block border-white w-fit"
-        >
-          Read More
-        </a>
-      </div>
-    </div>
+  <div>
+    related-articles
   </div>
 </main>
 `;

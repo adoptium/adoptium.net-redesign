@@ -13,6 +13,15 @@ Object.defineProperty(window, "matchMedia", {
   })),
 })
 
+Object.defineProperty(window, 'location', {
+  configurable: true,
+  writable: true,
+  value: {
+    ...window.location,
+    assign: vi.fn(),
+  },
+});
+
 window.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
   unobserve: vi.fn(),

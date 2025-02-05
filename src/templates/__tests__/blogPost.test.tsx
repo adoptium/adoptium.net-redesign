@@ -1,9 +1,15 @@
 import React from "react"
 import { render } from "@testing-library/react"
 import BlogPost, { Head, formatDiv } from "../../templates/blogPost"
-import { describe, expect, it } from "vitest"
+import { describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
 import { createSingleMDXData } from "../../__fixtures__/page"
+
+vi.mock("../../components/News/RelatedArticles", () => {
+  return {
+    default: () => <div>related-articles</div>,
+  }
+})
 
 let mockData = createSingleMDXData()
 const pageContext = {

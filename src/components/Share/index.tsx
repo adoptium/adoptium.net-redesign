@@ -1,73 +1,88 @@
 import React from "react"
 import {
   TwitterShareButton,
-  XIcon,
   EmailShareButton,
-  EmailIcon,
   FacebookShareButton,
-  FacebookIcon,
   LinkedinShareButton,
-  LinkedinIcon,
   RedditShareButton,
-  RedditIcon,
+  BlueskyShareButton,
 } from "react-share"
+
+import {
+  FaLinkedin,
+  FaFacebook,
+  FaReddit,
+} from "react-icons/fa";
+
+import {
+  FaXTwitter,
+  FaBluesky,
+  FaEnvelope,
+} from "react-icons/fa6";
 
 const ShareButton = props => {
   const { location, siteMetadata, post } = props
   const twitter = [siteMetadata.social.twitter]
   const url = siteMetadata.siteUrl + location.pathname
 
-  const iconSize = 30
-  const iconStyle = {
-    paddingRight: "0.3em",
-    marginBottom: "0.2em",
-  }
-
   return (
-    <>
+    <div id="share-buttons">
       <TwitterShareButton
-        aria-label="x"
+        aria-label="Share on X (Twitter)"
         url={url}
+        className="mr-2"
         title={post.title}
         hashtags={post.tags}
         related={twitter}
-        style={iconStyle}
       >
-        <XIcon size={iconSize} />
+        <FaXTwitter size={25} />
       </TwitterShareButton>
 
       <LinkedinShareButton
-        aria-label="linkedin"
+        aria-label="Share on Linkedin"
         url={url}
+        className="mr-2"
         title={post.title}
         source={siteMetadata.siteUrl}
-        style={iconStyle}
       >
-        <LinkedinIcon size={iconSize} />
+        <FaLinkedin size={25} />
       </LinkedinShareButton>
 
-      <FacebookShareButton aria-label="facebook" url={url} style={iconStyle}>
-        <FacebookIcon size={iconSize} />
+      <FacebookShareButton
+        aria-label="Share on Facebook"
+        url={url}
+        className="mr-2"
+      >
+        <FaFacebook size={25} />
       </FacebookShareButton>
 
       <RedditShareButton
-        aria-label="reddit"
+        aria-label="Share on Reddit"
         url={url}
+        className="mr-2"
         title={post.title}
-        style={iconStyle}
       >
-        <RedditIcon size={iconSize} />
+        <FaReddit size={25} />
       </RedditShareButton>
 
-      <EmailShareButton
-        aria-label="email"
+      <BlueskyShareButton
+        aria-label="Share on Bluesky"
         url={url}
-        subject={post.title}
-        style={iconStyle}
+        className="mr-2"
+        title={post.title}
       >
-        <EmailIcon size={iconSize} />
+        <FaBluesky size={25} />
+      </BlueskyShareButton>
+
+      <EmailShareButton
+        aria-label="Share via Email"
+        url={url}
+        className="mr-2"
+        subject={post.title}
+      >
+        <FaEnvelope size={25} />
       </EmailShareButton>
-    </>
+    </div>
   )
 }
 

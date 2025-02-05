@@ -121,10 +121,9 @@ exports[`Temurin Archive page > renders correctly 1`] = `
       >
         <tbody
           class="table-light"
-        >
-          <tr />
-        </tbody>
+        />
       </table>
+      0
     </div>
   </section>
 </main>

@@ -9,21 +9,22 @@ exports[`DocumentationCard component > does not render without a title 1`] = `<d
 exports[`DocumentationCard component > renders correctly 1`] = `
 <div>
   <div
-    class="col-12 col-lg-4 py-3"
+    class="w-full lg:w-1/3 p-3"
   >
     <div
-      class="card shadow-sm"
+      class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
     >
       <div
-        class="card-body"
+        class="p-4"
       >
         <p
-          class="card-title mb-3 h5"
+          class="mb-3 text-xl font-semibold flex items-center"
         >
           <span
-            class="theme-icon-holder card-icon-holder me-2"
+            class="inline-block mr-2"
           >
             <svg
+              class="text-pink"
               fill="currentColor"
               height="1em"
               stroke="currentColor"
@@ -37,47 +38,41 @@ exports[`DocumentationCard component > renders correctly 1`] = `
               />
             </svg>
           </span>
-          <span
-            class="card-title-text"
-          >
+          <span>
             Test Title
           </span>
         </p>
         <div
-          class="card-text"
+          class="divide-y divide-gray-200"
         >
-          <div
-            class="list-group list-group-flush"
+          <a
+            class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+            href="/link1"
           >
-            <a
-              class="list-group-item list-group-item-action"
-              href="/link1"
+            Link1
+          </a>
+          <a
+            class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+            href="https://external-link"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Link2
+             
+            <svg
+              fill="currentColor"
+              height="13"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="13"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Link1
-            </a>
-            <a
-              class="list-group-item list-group-item-action"
-              href="https://external-link"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Link2
-               
-              <svg
-                fill="currentColor"
-                height="13"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 512 512"
-                width="13"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                />
-              </svg>
-            </a>
-          </div>
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>

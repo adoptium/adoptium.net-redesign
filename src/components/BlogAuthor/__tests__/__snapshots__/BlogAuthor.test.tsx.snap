@@ -85,7 +85,7 @@ exports[`BlogAuthor component > should render correctly 1`] = `
     <p>
       Posted by 
       <a
-        href="/blog/author/pmc"
+        href="/news/author/pmc"
       />
        
        

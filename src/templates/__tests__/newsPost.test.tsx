@@ -1,6 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import BlogPost, { Head, formatDiv } from "../../templates/blogPost"
+import NewsPost, { Head, formatDiv } from "../newsPost"
 import { describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
 import { createSingleMDXData } from "../../__fixtures__/page"
@@ -15,7 +15,7 @@ let mockData = createSingleMDXData()
 const pageContext = {
   previous: {
     fields: {
-      postPath: "/blog/previous",
+      postPath: "/news/previous",
     },
     frontmatter: {
       title: "Previous",
@@ -23,7 +23,7 @@ const pageContext = {
   },
   next: {
     fields: {
-      postPath: "/blog/next",
+      postPath: "/news/next",
     },
     frontmatter: {
       title: "Next",
@@ -31,10 +31,10 @@ const pageContext = {
   },
 }
 
-describe("BlogPost Template page", () => {
+describe("NewsPost Template page", () => {
   it("renders correctly", () => {
     const { container } = render(
-      <BlogPost
+      <NewsPost
         data={mockData}
         pageContext={pageContext}
         location={{}}
@@ -60,7 +60,7 @@ describe("BlogPost Template page", () => {
       },
     }
     const { container } = render(
-      <BlogPost
+      <NewsPost
         data={mockData}
         pageContext={pageContext}
         location={{}}
@@ -100,7 +100,7 @@ describe("BlogPost Template page", () => {
 
   it("has no accessibility violations", async () => {
     const { container } = render(
-      <BlogPost
+      <NewsPost
         data={mockData}
         pageContext={pageContext}
         location={{}}

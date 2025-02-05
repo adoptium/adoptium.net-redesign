@@ -2,7 +2,7 @@
 title: Eclipse Temurin 22 Available
 date: "2024-03-28"
 author: pmc
-description: Adoptium is happy to announce the immediate availability of Eclipse Temurin 22.0.0+36. As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
+description: Adoptium is happy to announce the immediate availability of Eclipse Temurin 22.0.0+36.
 tags:
   - temurin
   - announcement

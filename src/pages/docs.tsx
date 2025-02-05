@@ -240,8 +240,8 @@ const DocumentationPage = ({ data }) => {
                     link: "https://api.adoptium.net",
                   },
                   {
-                    name: t("docs.adoptium.blog", "Adoptium Blog"),
-                    link: "https://adoptium.net/blog",
+                    name: t("docs.adoptium.blog", "Adoptium News"),
+                    link: "/news",
                   },
                   {
                     name: t("docs.support.us", "Support Us"),

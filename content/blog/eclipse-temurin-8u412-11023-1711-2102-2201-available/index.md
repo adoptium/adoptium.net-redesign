@@ -2,7 +2,7 @@
 title: Eclipse Temurin 8u412, 11.0.23, 17.0.11, 21.0.3 and 22.0.1 Available
 date: "2024-04-25"
 author: pmc
-description: Adoptium is happy to announce the immediate availability of Eclipse Temurin 8u412, 11.0.23, 17.0.11 21.0.3 and 22.0.1 - our biggest release set so far. As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
+description: Adoptium is happy to announce the immediate availability of Eclipse Temurin 8u412, 11.0.23, 17.0.11 21.0.3 and 22.0.1 - our biggest release set so far.
 tags:
   - temurin
   - announcement

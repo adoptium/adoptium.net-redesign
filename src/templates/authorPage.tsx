@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, Slice } from "gatsby"
-import { Link } from "gatsby-plugin-react-i18next"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
@@ -15,18 +14,18 @@ const AuthorPage = ({ data, pageContext }) => {
   const { previousPageNumber, nextPageNumber } = pageContext
   const previousPageLink =
     previousPageNumber === 1
-      ? `/blog/author/${pageContext.author}`
-      : `/blog/author/${previousPageNumber}`
+      ? `/news/author/${pageContext.author}`
+      : `/news/author/${previousPageNumber}`
 
   return (
     <Layout>
       <PageHeader
-      subtitle="Author"
-      title={author.name}
-      description={<Slice alias="authorBio" />}
-      className={"mx-auto max-w-[860px] px-2 w-full"}
+        subtitle="Author"
+        title={author.name}
+        description={<Slice alias="authorBio" />}
+        className={"mx-auto max-w-[860px] px-2 w-full"}
       />
-      <NewsCardList posts={posts} previousPageNumber={previousPageNumber} previousPageLink={previousPageLink} nextPage={nextPageNumber ? `/blog/author/${pageContext.author}/page/${nextPageNumber}` : null} />
+      <NewsCardList posts={posts} previousPageNumber={previousPageNumber} previousPageLink={previousPageLink} nextPage={nextPageNumber ? `/news/author/${pageContext.author}/page/${nextPageNumber}` : null} />
     </Layout>
   )
 }
@@ -68,15 +67,22 @@ export const authorPageQuery = graphql`
     ) {
       edges {
         node {
+          excerpt
           fields {
             slug
             postPath
+            generatedFeaturedImage
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
             description
             tags
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: FIXED)
+              }
+            }
           }
         }
       }

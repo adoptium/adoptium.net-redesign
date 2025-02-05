@@ -31,7 +31,7 @@ const components = {
   div: formatDiv,
 }
 
-const BlogPostTemplate = ({ data, pageContext, location, children }) => {
+const NewsPostTemplate = ({ data, pageContext, location, children }) => {
   const post = data.mdx
   const { previous, next } = pageContext
   const author = AuthorData[post.frontmatter.author]
@@ -77,8 +77,8 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
             <article className="prose prose-invert lg:prose-lg max-w-none">
               <MDXProvider components={components}>{children}</MDXProvider>
             </article>
-            {/* <Tags tags={tags} />
-            <Comments /> */}
+            <Tags tags={tags} />
+            {/* <Comments /> */}
             <SharePost />
           </article>
 
@@ -107,16 +107,16 @@ const BlogPostTemplate = ({ data, pageContext, location, children }) => {
   )
 }
 
-export default BlogPostTemplate
+export default NewsPostTemplate
 
 export const Head = ({ data }) => {
   const post = data.mdx
   let twitterCard = ""
 
   if (post.frontmatter && post.frontmatter.featuredImage) {
-    twitterCard =
-      post.frontmatter.featuredImage.childImageSharp.gatsbyImageData.images
-        .fallback.src
+    twitterCard = post.frontmatter.featuredImage.childImageSharp.gatsbyImageData.images.fallback.src
+  } else if (post.fields.generatedFeaturedImage) {
+    twitterCard = `${data.site.siteMetadata.siteUrl}${post.fields.generatedFeaturedImage}`
   }
   return (
     <Seo
@@ -152,6 +152,9 @@ export const pageQuery = graphql`
             gatsbyImageData(layout: FIXED)
           }
         }
+      }
+      fields {
+        generatedFeaturedImage
       }
     }
     locales: allLocale(filter: { language: { eq: $language } }) {

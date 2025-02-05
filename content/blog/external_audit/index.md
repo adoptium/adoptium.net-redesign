@@ -3,6 +3,9 @@ title: External audit of Temurin build and distribution processes
 date: "2024-06-17T17:00:00+00:00"
 author: pmc
 description:
+  Last year, the Eclipse Foundation engaged the Open Source Technology Improvement Fund to
+  perform an independent audit of the build and distribution processes for
+  Eclipse Temurin.
 tags:
   - temurin
   - security

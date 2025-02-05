@@ -31,7 +31,7 @@ const NewsCardList = ({ posts, previousPageNumber, previousPageLink, nextPage })
                     </Link>
                 )}
                 {nextPage && (
-                    <Link to={nextPage} rel="next">
+                    <Link to={nextPage}>
                         <div className="flex items-center gap-3">
                             <p className="tab-button-text mb-0 hidden md:block">Next Page</p>
                             <span className="cursor-pointer">

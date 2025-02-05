@@ -169,7 +169,7 @@ const NavBar = () => {
               >
                 <FaRegBell size={20} />
                 <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full text-xs text-white font-bold flex items-center justify-center">
-                  9
+                  1 {/* TODO find a way to calculate the notification count */}
                 </span>
               </div>
             </div>

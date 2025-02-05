@@ -85,12 +85,11 @@ exports[`AuthorPage pages > renders correctly - with next and previous paginatio
       class="flex justify-center gap-6 items-center flex-wrap pt-8 md:pt-12"
     >
       <div
-        class=" flex flex-col max-w-[385px] newscard-2   bg-[#200D46] "
+        class="flex flex-col max-w-[385px] rounded-3xl newscard-2 bg-[#200D46]"
       >
         <img
-          alt=""
-          class="mb-0"
-          src="/images/new-article-card-img.png"
+          alt="blog banner image"
+          class="m-0.5 rounded-3xl"
         />
         <div
           class="p-8"
@@ -101,7 +100,7 @@ exports[`AuthorPage pages > renders correctly - with next and previous paginatio
             MDX Page title
           </h3>
           <div
-            class="flex justify-between pt-4"
+            class="flex justify-between py-4"
           >
             <h3
               class="flex flex-col gap-1 tab-button-text text-white"
@@ -111,6 +110,9 @@ exports[`AuthorPage pages > renders correctly - with next and previous paginatio
               </span>
             </h3>
           </div>
+          <span>
+            ...
+          </span>
           <a
             href="/mdx/mdx-page-title"
           >
@@ -130,7 +132,7 @@ exports[`AuthorPage pages > renders correctly - with next and previous paginatio
       class="flex justify-center items-center gap-8 md:gap-14"
     >
       <a
-        href="/blog/author/pmc"
+        href="/news/author/pmc"
         rel="prev"
       >
         <div
@@ -161,8 +163,7 @@ exports[`AuthorPage pages > renders correctly - with next and previous paginatio
         </div>
       </a>
       <a
-        href="/blog/author/pmc/page/2"
-        rel="next"
+        href="/news/author/pmc/page/2"
       >
         <div
           class="flex items-center gap-3"
@@ -281,12 +282,11 @@ exports[`AuthorPage pages > renders correctly - with next pagination 1`] = `
       class="flex justify-center gap-6 items-center flex-wrap pt-8 md:pt-12"
     >
       <div
-        class=" flex flex-col max-w-[385px] newscard-2   bg-[#200D46] "
+        class="flex flex-col max-w-[385px] rounded-3xl newscard-2 bg-[#200D46]"
       >
         <img
-          alt=""
-          class="mb-0"
-          src="/images/new-article-card-img.png"
+          alt="blog banner image"
+          class="m-0.5 rounded-3xl"
         />
         <div
           class="p-8"
@@ -297,7 +297,7 @@ exports[`AuthorPage pages > renders correctly - with next pagination 1`] = `
             MDX Page title
           </h3>
           <div
-            class="flex justify-between pt-4"
+            class="flex justify-between py-4"
           >
             <h3
               class="flex flex-col gap-1 tab-button-text text-white"
@@ -307,6 +307,9 @@ exports[`AuthorPage pages > renders correctly - with next pagination 1`] = `
               </span>
             </h3>
           </div>
+          <span>
+            ...
+          </span>
           <a
             href="/mdx/mdx-page-title"
           >
@@ -326,8 +329,7 @@ exports[`AuthorPage pages > renders correctly - with next pagination 1`] = `
       class="flex justify-center items-center gap-8 md:gap-14"
     >
       <a
-        href="/blog/author/pmc/page/2"
-        rel="next"
+        href="/news/author/pmc/page/2"
       >
         <div
           class="flex items-center gap-3"
@@ -446,12 +448,11 @@ exports[`AuthorPage pages > renders correctly - with previous pagination 1`] = `
       class="flex justify-center gap-6 items-center flex-wrap pt-8 md:pt-12"
     >
       <div
-        class=" flex flex-col max-w-[385px] newscard-2   bg-[#200D46] "
+        class="flex flex-col max-w-[385px] rounded-3xl newscard-2 bg-[#200D46]"
       >
         <img
-          alt=""
-          class="mb-0"
-          src="/images/new-article-card-img.png"
+          alt="blog banner image"
+          class="m-0.5 rounded-3xl"
         />
         <div
           class="p-8"
@@ -462,7 +463,7 @@ exports[`AuthorPage pages > renders correctly - with previous pagination 1`] = `
             MDX Page title
           </h3>
           <div
-            class="flex justify-between pt-4"
+            class="flex justify-between py-4"
           >
             <h3
               class="flex flex-col gap-1 tab-button-text text-white"
@@ -472,6 +473,9 @@ exports[`AuthorPage pages > renders correctly - with previous pagination 1`] = `
               </span>
             </h3>
           </div>
+          <span>
+            ...
+          </span>
           <a
             href="/mdx/mdx-page-title"
           >
@@ -491,7 +495,7 @@ exports[`AuthorPage pages > renders correctly - with previous pagination 1`] = `
       class="flex justify-center items-center gap-8 md:gap-14"
     >
       <a
-        href="/blog/author/pmc"
+        href="/news/author/pmc"
         rel="prev"
       >
         <div
@@ -611,12 +615,11 @@ exports[`AuthorPage pages > renders correctly 1`] = `
       class="flex justify-center gap-6 items-center flex-wrap pt-8 md:pt-12"
     >
       <div
-        class=" flex flex-col max-w-[385px] newscard-2   bg-[#200D46] "
+        class="flex flex-col max-w-[385px] rounded-3xl newscard-2 bg-[#200D46]"
       >
         <img
-          alt=""
-          class="mb-0"
-          src="/images/new-article-card-img.png"
+          alt="blog banner image"
+          class="m-0.5 rounded-3xl"
         />
         <div
           class="p-8"
@@ -627,7 +630,7 @@ exports[`AuthorPage pages > renders correctly 1`] = `
             MDX Page title
           </h3>
           <div
-            class="flex justify-between pt-4"
+            class="flex justify-between py-4"
           >
             <h3
               class="flex flex-col gap-1 tab-button-text text-white"
@@ -637,6 +640,9 @@ exports[`AuthorPage pages > renders correctly 1`] = `
               </span>
             </h3>
           </div>
+          <span>
+            ...
+          </span>
           <a
             href="/mdx/mdx-page-title"
           >

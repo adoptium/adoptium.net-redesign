@@ -10,18 +10,18 @@ const Tags = props => {
   }
 
   return (
-    <>
+    <div className="flex flex-wrap gap-2 pt-6">
       {tags.map(tag => (
         <Link
-          className="badge bg-secondary text-dark m-2"
           key={tag}
-          to={`/blog/tags/${tag}`}
+          to={`/news/tags/${tag}`}
+          className="bg-pink hover:bg-pink-800 py-1 px-2 rounded-lg text-sm flex items-center"
         >
-          <FaTag style={{ marginRight: ".75em" }} />
+          <FaTag className="mr-2" />
           {tag}
         </Link>
       ))}
-    </>
+    </div>
   )
 }
 

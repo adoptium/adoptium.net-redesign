@@ -42,6 +42,7 @@ export const pageQuery = graphql`
           fields {
             slug
             postPath
+            generatedFeaturedImage
           }
           frontmatter {
             author
@@ -49,6 +50,11 @@ export const pageQuery = graphql`
             title
             description
             tags
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: FIXED)
+              }
+            }
           }
         }
       }

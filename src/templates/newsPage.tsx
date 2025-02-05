@@ -46,6 +46,7 @@ export const newsPageQuery = graphql`
           fields {
             slug
             postPath
+            generatedFeaturedImage
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
@@ -53,6 +54,11 @@ export const newsPageQuery = graphql`
             description
             author
             tags
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: FIXED)
+              }
+            }
           }
         }
       }

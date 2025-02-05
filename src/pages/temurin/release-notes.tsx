@@ -4,17 +4,19 @@ import { Trans } from "gatsby-plugin-react-i18next"
 
 import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
+import PageHeader from "../../components/PageHeader"
 import ReleaseNotesRender from "../../components/ReleaseNotesRender"
 
 const ReleaseNotesPage = () => (
-  <Layout>
-    <section className="py-5 text-center container-xl">
-      <h1 className="fw-light">
-        <Trans>Release Notes</Trans>
-      </h1>
+    <Layout>
+      <PageHeader
+        subtitle="Temurin"
+        title={<Trans>Release Notes</Trans>}
+        description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
+        className="mx-auto max-w-[860px] px-2 w-full"
+      />
       <ReleaseNotesRender />
-    </section>
-  </Layout>
+    </Layout>
 )
 
 export default ReleaseNotesPage

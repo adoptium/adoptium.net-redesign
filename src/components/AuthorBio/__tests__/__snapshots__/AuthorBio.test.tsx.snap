@@ -3,20 +3,23 @@
 exports[`AuthorBio component > should render correctly 1`] = `
 <div>
   <div
-    class="pb-2"
-    style="display: flex;"
+    class="flex flex-wrap justify-center items-center gap-5 space-x-4"
   >
     <img
-      alt="Test Author"
+      alt="[object Object]"
       image="[object Object]"
       stlye="[object Object]"
-      style="margin-right: 0.5rem; margin-bottom: 0px; min-width: 50px; border-radius: 100%;"
+      style="margin-left: 0.5rem; margin-bottom: 0px; min-width: 30px; border-radius: 100%;"
     />
-    <p>
-       
+    <span
+      class="text-[16px] font-bold leading-[150%] text-white flex items-center"
+    >
+      <span
+        class="pr-2"
+      />
       <a
         aria-label="GitHub Profile"
-        class="no-underline"
+        class="px-1"
         href="https://github.com/adoptium"
       >
         <svg
@@ -33,10 +36,9 @@ exports[`AuthorBio component > should render correctly 1`] = `
           />
         </svg>
       </a>
-       
       <a
         aria-label="Twitter Profile"
-        class="no-underline"
+        class="px-1"
         href="https://x.com/adoptium"
       >
         <svg
@@ -53,10 +55,9 @@ exports[`AuthorBio component > should render correctly 1`] = `
           />
         </svg>
       </a>
-       
       <a
         aria-label="LinkedIn Profile"
-        class="no-underline"
+        class="px-1"
         href="https://www.linkedin.com/in/adoptium"
       >
         <svg
@@ -73,7 +74,7 @@ exports[`AuthorBio component > should render correctly 1`] = `
           />
         </svg>
       </a>
-    </p>
+    </span>
   </div>
 </div>
 `;

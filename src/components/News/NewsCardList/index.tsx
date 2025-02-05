@@ -4,7 +4,7 @@ import { Link } from "gatsby-plugin-react-i18next"
 
 import EventCard from "../../Events/EventCard"
 
-const NewsCardList = ({ posts, previousPageNumber, previousPageLink, nextPageNumber }) => {
+const NewsCardList = ({ posts, previousPageNumber, previousPageLink, nextPage }) => {
     const data1 = posts.slice(0, 3)
     const data2 = posts.slice(3, 6)
     return (
@@ -30,8 +30,8 @@ const NewsCardList = ({ posts, previousPageNumber, previousPageLink, nextPageNum
                         </div>
                     </Link>
                 )}
-                {nextPageNumber && (
-                    <Link to={`/news/page/${nextPageNumber}`} rel="next">
+                {nextPage && (
+                    <Link to={nextPage} rel="next">
                         <div className="flex items-center gap-3">
                             <p className="tab-button-text mb-0 hidden md:block">Next Page</p>
                             <span className="cursor-pointer">

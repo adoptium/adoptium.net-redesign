@@ -28,6 +28,7 @@ const navigation: NavItem[] = [
       { name: "What We do", href: "/what-we-do" },
       { name: "Business Benefits", href: "/business-benefits" },
       { name: "Our Members", href: "/members" },
+      { name: "Our Sustainers", href: "/sustainers" },
       { name: "Our Adopters", href: "#" },
       { name: "Support Us", href: "/support-us" },
     ],
@@ -46,12 +47,12 @@ const navigation: NavItem[] = [
     name: "Resources",
     children: [
       { name: "Status", href: "https://status.adoptium.net" },
-      { name: "Release Notes", href: "#" },
-      { name: "Installation Guide", href: "#" },
+      { name: "Release Notes", href: "/temurin/release-notes" },
+      { name: "Installation Guide", href: "/installation" },
       { name: "Documentation", href: "/docs" },
       { name: "Resource Directory", href: "#" },
       { name: "FAQs", href: "#" },
-      { name: "Brand & Promotion", href: "#" },
+      { name: "Brand & Promotion", href: "/docs/logo-styleguide" },
     ],
   },
   {

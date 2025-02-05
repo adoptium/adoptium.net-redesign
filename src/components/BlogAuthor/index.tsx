@@ -12,7 +12,7 @@ export const GitHubLink = props => {
 
   return (
     <a
-      className="no-underline"
+      className="px-1"
       aria-label="GitHub Profile"
       href={`https://github.com/${props.name}`}
     >
@@ -28,7 +28,7 @@ export const TwitterLink = props => {
 
   return (
     <a
-      className="no-underline"
+      className="px-1"
       aria-label="Twitter Profile"
       href={`https://x.com/${props.name}`}
     >
@@ -44,7 +44,7 @@ export const LinkedinLink = props => {
 
   return (
     <a
-      className="no-underline"
+      className="px-1"
       aria-label="LinkedIn Profile"
       href={`https://www.linkedin.com/in/${props.name}`}
     >

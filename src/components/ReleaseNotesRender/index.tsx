@@ -6,6 +6,7 @@ import {
   GridToolbarFilterButton,
   gridClasses,
 } from "@mui/x-data-grid"
+import CircularProgress from '@mui/material/CircularProgress';
 import { useLocation } from "@gatsbyjs/reach-router"
 import queryString from "query-string"
 import {
@@ -132,18 +133,10 @@ const ReleaseNotesRender = (): null | JSX.Element => {
 
   const ref = useRef<HTMLDivElement | null>(null)
   const isVisible = useOnScreen(ref as MutableRefObject<Element>, true)
-  const releaseNotes = fetchReleaseNotesForVersion(
-    isVisible,
-    version,
-    sortReleaseNotesBy,
-  )
 
-  // Set all priorities set as undefined to '?' to avoid errors
-  releaseNotes?.release_notes?.forEach(note => {
-    if (note.priority === undefined) {
-      note.priority = "6"
-    }
-  })
+  const releaseNoteDataBag = fetchReleaseNotesForVersion(isVisible, version, sortReleaseNotesBy);
+  const releaseNotes = releaseNoteDataBag ? releaseNoteDataBag.releaseNoteAPIResponse : null;
+  const releaseNotesVersion = releaseNotes ? releaseNotes.release_name : null;
 
   if (releaseNotes && Array.isArray(releaseNotes.release_notes)) {
     let priorities: string[] = []
@@ -151,6 +144,11 @@ const ReleaseNotesRender = (): null | JSX.Element => {
     let components: string[] = []
 
     releaseNotes.release_notes.forEach(release_note => {
+      // Set all priorities set as undefined to '?' to avoid errors
+      if (release_note.priority === undefined) {
+        release_note.priority = '6';
+      }
+
       if (
         release_note.priority &&
         priorities.indexOf(release_note.priority) < 0
@@ -191,7 +189,7 @@ const ReleaseNotesRender = (): null | JSX.Element => {
   // Set type to 'Enhancement' by default if version matches jdk-xx+xx
   const regex = /^jdk-(2\d|\d{3,})\+\d+$/
   let filterItems: FilterItem[] = []
-  if (version?.toString && regex.test(version.toString())) {
+  if (releaseNotesVersion?.toString && regex.test(releaseNotesVersion.toString())) {
     filterItems.push({
       field: "type",
       operator: "is",
@@ -204,69 +202,73 @@ const ReleaseNotesRender = (): null | JSX.Element => {
   ).length
 
   return (
-    <div ref={ref} className="text-center">
-      <h2>{version}</h2>
-      <div className="pt-3" style={{ display: "flex", height: "100%" }}>
-        <div style={{ flexGrow: 1 }}>
-          {!version || releaseNotes?.release_notes === null ? (
-            <>
-              <h2>Oops... We couldn't find those release notes</h2>
-              <span>
-                Please ensure that you have a specified a version using the
-                version URL parameter: <code>?version=x.x.x</code>
-              </span>
-            </>
-          ) : (
-            <>
-              <p>
-                This section organizes the changes in the selected update
-                release by the main component under which each issue is filed.
-              </p>
-              <p>
-                <strong>{`The total number of fixes marked as P1 is: ${totalP1}`}</strong>
-              </p>
-              <DataGrid
-                aria-label="Release Notes"
-                autoHeight
-                rows={
-                  releaseNotes && releaseNotes.release_notes
-                    ? releaseNotes.release_notes
-                    : []
-                }
-                loading={releaseNotes === null}
-                columns={columns}
-                initialState={{
-                  pagination: {
-                    paginationModel: {
-                      pageSize: 20,
+    <div ref={ref} className="mx-auto max-w-4xl p-6 lg:px-0 items-center text-center justify-center">
+      <div className="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full">
+        {releaseNotesVersion}
+      </div>
+      <div className="pt-3" style={{ display: "flex", justifyContent: "center", height: "100%" }}>
+        {!releaseNoteDataBag ? <div style={{ flexGrow: 1 }}><CircularProgress aria-label='loading spinner' /></div> :
+          (<div className="max-w-6xl" style={{ flexGrow: 1 }}>
+            {!releaseNotesVersion || releaseNoteDataBag?.isValid === false ? (
+              <>
+                <h2>Oops... We couldn't find those release notes</h2>
+                <span>
+                  Please ensure that you have a specified a version using the
+                  version URL parameter: <code>?version=x.x.x</code>
+                </span>
+              </>
+            ) : (
+              <>
+                <p>
+                  This section organizes the changes in the selected update
+                  release by the main component under which each issue is filed.
+                </p>
+                <p>
+                  <strong>{`The total number of fixes marked as P1 is: ${totalP1}`}</strong>
+                </p>
+                <DataGrid
+                  aria-label="Release Notes"
+                  autoHeight
+                  rows={
+                    releaseNotes && releaseNotes.release_notes
+                      ? releaseNotes.release_notes
+                      : []
+                  }
+                  loading={releaseNotes === null}
+                  columns={columns}
+                  initialState={{
+                    pagination: {
+                      paginationModel: {
+                        pageSize: 20,
+                      },
                     },
-                  },
-                  filter: {
-                    filterModel: {
-                      items: filterItems,
+                    filter: {
+                      filterModel: {
+                        items: filterItems,
+                      },
                     },
-                  },
-                  sorting: {
-                    sortModel: [{ field: "priority", sort: "asc" }],
-                  },
-                }}
-                sortingOrder={["desc", "asc"]}
-                pageSizeOptions={[20, 50, 75]}
-                pagination
-                isRowSelectable={() => false}
-                slots={{
-                  toolbar: CustomToolbar,
-                }}
-                getRowHeight={() => "auto"}
-                sx={{
-                  [`& .${gridClasses.cell}`]: {
-                    py: 1,
-                  },
-                }}
-              />
-            </>
+                    sorting: {
+                      sortModel: [{ field: "priority", sort: "asc" }],
+                    },
+                  }}
+                  sortingOrder={["desc", "asc"]}
+                  pageSizeOptions={[20, 50, 75]}
+                  pagination
+                  isRowSelectable={() => false}
+                  slots={{
+                    toolbar: CustomToolbar,
+                  }}
+                  getRowHeight={() => "auto"}
+                  sx={{
+                    [`& .${gridClasses.cell}`]: {
+                      py: 1,
+                    },
+                  }}
+                />
+              </>
+            )}
+          </div>
           )}
-        </div>
       </div>
     </div>
   )

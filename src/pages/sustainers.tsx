@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby-plugin-react-i18next"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import Navbar from "../components/NavBar"
@@ -142,12 +143,16 @@ const Sponsors = () => {
             className={"max-w-[1016px] mx-auto"}
           />
           <div className="flex flex-col md:flex-row gap-4 justify-center absolute items-center mt-[30px] md:-mt-[98px] w-full">
-            <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
-              Become an Individual Sustainer
-            </button>
+            <a href="https://github.com/sponsors/adoptium" target="_blank">
+              <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
+                Become an Individual Sustainer
+              </button>
+            </a>
+            <Link to="/become-a-sustainer">
             <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
               Become a Corporate Sustainer
             </button>
+            </Link>
           </div>
         </div>
 
@@ -283,12 +288,16 @@ const Sponsors = () => {
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-8 justify-center items-center mt-4 mb-40 w-full">
-              <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
-                Become an Individual Sustainer
-              </button>
+              <a href="https://github.com/sponsors/adoptium" target="_blank">
+                <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
+                  Become an Individual Sustainer
+                </button>
+              </a>
+              <Link to="/become-a-sustainer">
               <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
                 Become a Corporate Sustainer
               </button>
+              </Link>
             </div>
             <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-8 mt-16">
               Temurin’s Sustainers

@@ -4,7 +4,7 @@ exports[`BlogAuthor component > GitHub link - should render correctly 1`] = `
 <div>
   <a
     aria-label="GitHub Profile"
-    class="no-underline"
+    class="px-1"
     href="https://github.com/sample"
   >
     <svg
@@ -28,7 +28,7 @@ exports[`BlogAuthor component > Linkedin link - should render correctly 1`] = `
 <div>
   <a
     aria-label="LinkedIn Profile"
-    class="no-underline"
+    class="px-1"
     href="https://www.linkedin.com/in/sample"
   >
     <svg
@@ -52,7 +52,7 @@ exports[`BlogAuthor component > Twitter link - should render correctly 1`] = `
 <div>
   <a
     aria-label="Twitter Profile"
-    class="no-underline"
+    class="px-1"
     href="https://x.com/sample"
   >
     <svg

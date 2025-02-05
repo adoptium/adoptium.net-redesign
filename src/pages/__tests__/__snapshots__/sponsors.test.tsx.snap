@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Sponsors component > Sponsors renders correctly 1`] = `
+exports[`Sponsors page > renders correctly 1`] = `
 <div>
   <div
     class=""
@@ -492,6 +492,7 @@ exports[`Sponsors component > Sponsors renders correctly 1`] = `
                 class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
               >
                 <img
+                  alt="security"
                   class="mb-0"
                   src="/images/initiatives/security.svg"
                 />
@@ -505,6 +506,7 @@ exports[`Sponsors component > Sponsors renders correctly 1`] = `
                 class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
               >
                 <img
+                  alt="release"
                   class="mb-0"
                   src="/images/initiatives/release.svg"
                 />
@@ -518,6 +520,7 @@ exports[`Sponsors component > Sponsors renders correctly 1`] = `
                 class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
               >
                 <img
+                  alt="deploy"
                   class="mb-0"
                   src="/images/initiatives/deploy.svg"
                 />
@@ -531,6 +534,7 @@ exports[`Sponsors component > Sponsors renders correctly 1`] = `
                 class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
               >
                 <img
+                  alt="innovation"
                   class="mb-0"
                   src="/images/initiatives/innovation.svg"
                 />
@@ -544,6 +548,7 @@ exports[`Sponsors component > Sponsors renders correctly 1`] = `
                 class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
               >
                 <img
+                  alt="testing"
                   class="mb-0"
                   src="/images/initiatives/testing.svg"
                 />
@@ -557,6 +562,7 @@ exports[`Sponsors component > Sponsors renders correctly 1`] = `
                 class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
               >
                 <img
+                  alt="community"
                   class="mb-0"
                   src="/images/initiatives/community.svg"
                 />
@@ -1240,310 +1246,8 @@ exports[`Sponsors component > Sponsors renders correctly 1`] = `
           <div
             class="p-4"
           >
-            <section
-              class="max-w-[1264px] md:px-0 px-6 w-full mx-auto flex flex-col items-center justify-center py-10"
-            >
-              <div
-                class="max-w-[700px] mx-auto"
-              >
-                <h3
-                  class="text-[36px] sm:text-[42px] leading-[56px] text-center"
-                />
-                <p
-                  class="text-[16px] leading-[24px] text-grey text-center mt-3"
-                >
-                  Adoptium is proud to receive financial donations both one-off and regularly from the following companies.
-                </p>
-              </div>
-              <div
-                class="w-full flex flex-col items-center justify-center mt-3"
-              >
-                <div
-                  class="w-full flex flex-col items-center justify-center mt-3"
-                >
-                  <button
-                    aria-hidden="true"
-                    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-                    type="button"
-                  />
-                  <div>
-                    <div
-                      class="w-full flex justify-between"
-                      id="sponsor"
-                    >
-                      <div
-                        class="w-full"
-                      >
-                        <div
-                          class="min-w-full overflow-auto"
-                        >
-                          <div
-                            class="grid grid-cols-4 gap-4 md:gap-6 min-w-[850px] md:min-w-[1220px]"
-                          >
-                            <a
-                              href="https://www.delphix.com"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="Delphix"
-                                  class="max-h-20 m-0"
-                                  src="/images/delphix.svg"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://bedag.ch"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="Bedag"
-                                  class="max-h-20 m-0"
-                                  src="/images/bedag.png"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://www.cargurus.com"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="CarGurus"
-                                  class="max-h-20 m-0"
-                                  src="/images/cargurus.svg"
-                                />
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section
-              class="max-w-[1264px] md:px-0 px-6 w-full mx-auto flex flex-col items-center justify-center py-10"
-            >
-              <div
-                class="max-w-[700px] mx-auto"
-              >
-                <h3
-                  class="text-[36px] sm:text-[42px] leading-[56px] text-center"
-                />
-                <p
-                  class="text-[16px] leading-[24px] text-grey text-center mt-3"
-                >
-                  The Adoptium Working Group collaborates with the following companies who contribute various kinds of cloud and physical hardware.
-                </p>
-              </div>
-              <div
-                class="w-full flex flex-col items-center justify-center mt-3"
-              >
-                <div
-                  class="w-full flex flex-col items-center justify-center mt-3"
-                >
-                  <button
-                    aria-hidden="true"
-                    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"
-                    type="button"
-                  />
-                  <div>
-                    <div
-                      class="w-full flex justify-between"
-                      id="infra"
-                    >
-                      <div
-                        class="w-full"
-                      >
-                        <div
-                          class="min-w-full overflow-auto"
-                        >
-                          <div
-                            class="grid grid-cols-4 gap-4 md:gap-6 min-w-[850px] md:min-w-[1220px]"
-                          >
-                            <a
-                              href="https://ibm.com"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="IBM"
-                                  class="max-h-20 m-0"
-                                  src="/images/ibm-logo.png"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://spearhead.systems"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="Spearhead"
-                                  class="max-h-20 m-0"
-                                  src="/images/spearhead.jpg"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://fastly.com"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="Fastly"
-                                  class="max-h-20 m-0"
-                                  src="/images/fastly.svg"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://www.netlify.com"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="Netlify"
-                                  class="max-h-20 m-0"
-                                  src="/images/netlify-light.svg"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://www.macstadium.com"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="MacStadium"
-                                  class="max-h-20 m-0"
-                                  src="/images/macstadium.png"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://skytap.com"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="Skytap"
-                                  class="max-h-20 m-0"
-                                  src="/images/skytap.png"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://jfrog.com"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="JFrog"
-                                  class="max-h-20 m-0"
-                                  src="/images/jfrog.svg"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://riseproject.dev"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="Rise"
-                                  class="max-h-20 m-0"
-                                  src="/images/rise.svg"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://macincloud.com"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="Macincloud"
-                                  class="max-h-20 m-0"
-                                  src="/images/macincloud.png"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://metal.equinix.com"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="Equinix Metal"
-                                  class="max-h-20 m-0"
-                                  src="/images/equinix.png"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://osuosl.org"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="OSUOSL"
-                                  class="max-h-20 m-0"
-                                  src="/images/osuosl.png"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://www.marist.edu"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="Marist College"
-                                  class="max-h-20 m-0"
-                                  src="/images/marist.png"
-                                />
-                              </div>
-                            </a>
-                            <a
-                              href="https://azure.microsoft.com"
-                            >
-                              <div
-                                class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
-                              >
-                                <img
-                                  alt="Microsoft Azure"
-                                  class="max-h-20 m-0"
-                                  src="/images/azure.png"
-                                />
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+            <div />
+            <div />
           </div>
         </div>
       </div>

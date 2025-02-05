@@ -199,32 +199,35 @@ const Sponsors = () => {
                   <img
                     src="/images/initiatives/security.svg"
                     className="mb-0"
+                    alt="security"
                   />
                   <h3 className="text-[26px]">Enhanced Security</h3>
                 </div>
                 <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                  <img src="/images/initiatives/release.svg" className="mb-0" />
+                  <img src="/images/initiatives/release.svg" className="mb-0" alt="release" />
                   <h3 className="text-[26px]">Faster Release Cycles</h3>
                 </div>
                 <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                  <img src="/images/initiatives/deploy.svg" className="mb-0" />
+                  <img src="/images/initiatives/deploy.svg" className="mb-0" alt="deploy" />
                   <h3 className="text-[26px]">Ready-to-deploy Builds</h3>
                 </div>
                 <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
                   <img
                     src="/images/initiatives/innovation.svg"
                     className="mb-0"
+                    alt="innovation"
                   />
                   <h3 className="text-[26px]">Sustained Innovation</h3>
                 </div>
                 <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                  <img src="/images/initiatives/testing.svg" className="mb-0" />
+                  <img src="/images/initiatives/testing.svg" className="mb-0" alt="testing" />
                   <h3 className="text-[26px]">Quality Testing</h3>
                 </div>
                 <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
                   <img
                     src="/images/initiatives/community.svg"
                     className="mb-0"
+                    alt="community"
                   />
                   <h3 className="text-[26px]">Community Development</h3>
                 </div>

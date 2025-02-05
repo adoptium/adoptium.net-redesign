@@ -11,6 +11,8 @@ export enum LogoType {
   ENTERPRISE = "enterprise",
   PARTICIPANT = "participant",
   ADOPTERS = "adopters",
+  SPONSOR = "sponsor",
+  INFRA = "infra",
 }
 
 interface LogosGridProps {

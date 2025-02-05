@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby-plugin-react-i18next"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
@@ -9,12 +10,12 @@ import PowerOfTemurin from "../components/Temurin/PowerOfTemurin"
 import ContactUs from "../components/ContactUs"
 import Logos, { LogoType } from "../components/Logos"
 
-const Supporters = () => {
+const Members = () => {
   return (
     <Layout>
       <PageHeader
         title="Who we work with"
-        subtitle="Our Supporters"
+        subtitle="Our Members"
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
       />
       <div className="overflow-auto px-3 py-5 w-full md:w-auto">
@@ -70,18 +71,20 @@ const Supporters = () => {
         <p className="text-[20px] leading-[28px] text-white my-0 text-center">
           Are you interested in becoming a member?
         </p>
-        <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out ">
-          Become a Member
-        </button>
+        <Link to="/join">
+          <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out ">
+            Become a Member
+          </button>
+        </Link>
       </div>
       <PowerOfTemurin />
       <ContactUs title="Speak to our team today" buttontitle="Contact Us" />
     </Layout>
   )
 }
-export default Supporters
+export default Members
 
-export const Head = () => <Seo title="Our Supporters" />
+export const Head = () => <Seo title="Our Members" />
 
 export const query = graphql`
   query ($language: String!) {

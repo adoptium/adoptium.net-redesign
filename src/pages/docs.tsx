@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   FaDownload,
   FaQuestion,
@@ -15,10 +16,8 @@ import {
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import DocumentationHeader from "../components/DocumentationHeader"
-import DocumentationCard from "../components/DocumentationCard"
-
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import DocumentationHeader from "../components/Documentation/Header"
+import DocumentationCard from "../components/Documentation/Card"
 
 const DocumentationPage = ({ data }) => {
   const { t } = useTranslation()
@@ -27,10 +26,11 @@ const DocumentationPage = ({ data }) => {
     <Layout>
       <DocumentationHeader data={data} />
 
-      <div className="page-content">
-        <div className="container">
-          <div className="docs-overview py-5">
-            <div className="row justify-content-center">
+      <div className="py-10">
+        <div className="container mx-auto px-4">
+          {/* Wrap the flex container in a div that limits the width to 60% on large screens */}
+          <div className="w-full lg:w-4/5 mx-auto py-8">
+            <div className="flex flex-wrap justify-center">
               <DocumentationCard
                 title={t("docs.get.temurin", "Get Temurin")}
                 Icon={FaDownload}
@@ -84,23 +84,20 @@ const DocumentationPage = ({ data }) => {
                 Icon={FaGem}
                 links={[
                   {
-                    name: t(
-                      "docs.about.eclipse.aqavit",
-                      "About Eclipse AQAvit",
-                    ),
+                    name: t("docs.about.eclipse.aqavit", "About Eclipse AQAvit"),
                     link: "/aqavit",
                   },
                   {
                     name: t(
                       "docs.aqavit.quality.verification",
-                      "AQAvit Quality Verification",
+                      "AQAvit Quality Verification"
                     ),
                     link: "/docs/qvs-policy",
                   },
                   {
                     name: t(
                       "docs.aqavit.verification.guide",
-                      "AQAvit Verification Guide",
+                      "AQAvit Verification Guide"
                     ),
                     link: "/docs/aqavit-verification",
                   },
@@ -111,23 +108,20 @@ const DocumentationPage = ({ data }) => {
                 Icon={FaBox}
                 links={[
                   {
-                    name: t(
-                      "docs.marketplace.downloads",
-                      "Marketplace Downloads",
-                    ),
+                    name: t("docs.marketplace.downloads", "Marketplace Downloads"),
                     link: "/marketplace",
                   },
                   {
                     name: t(
                       "docs.marketplace.listing.information",
-                      "Marketplace Listing Information",
+                      "Marketplace Listing Information"
                     ),
                     link: "/docs/marketplace-policy",
                   },
                   {
                     name: t(
                       "docs.marketplace.publisher.guide",
-                      "Marketplace Publisher Guide",
+                      "Marketplace Publisher Guide"
                     ),
                     link: "/docs/marketplace-guide",
                   },
@@ -148,15 +142,12 @@ const DocumentationPage = ({ data }) => {
                   {
                     name: t(
                       "docs.developer.nightly.builds",
-                      "Developer Nightly Builds",
+                      "Developer Nightly Builds"
                     ),
                     link: "/temurin/nightly",
                   },
                   {
-                    name: t(
-                      "docs.join.our.slack.channel",
-                      "Join our Slack Channel",
-                    ),
+                    name: t("docs.join.our.slack.channel", "Join our Slack Channel"),
                     link: "/slack",
                   },
                   {
@@ -170,24 +161,18 @@ const DocumentationPage = ({ data }) => {
                 Icon={FaLock}
                 links={[
                   {
-                    name: t(
-                      "docs.secure.software.pratices",
-                      "Secure Software Practices",
-                    ),
+                    name: t("docs.secure.software.pratices", "Secure Software Practices"),
                     link: "/docs/secure-software",
                   },
                   {
                     name: t(
                       "docs.slsa.secure.supply.chain",
-                      "SLSA Secure Supply Chain",
+                      "SLSA Secure Supply Chain"
                     ),
                     link: "/docs/slsa",
                   },
                   {
-                    name: t(
-                      "docs.vulnerability.reporting",
-                      "Vulnerability Reporting",
-                    ),
+                    name: t("docs.vulnerability.reporting", "Vulnerability Reporting"),
                     link: "https://github.com/adoptium/adoptium/security/policy",
                   },
                 ]}
@@ -197,24 +182,15 @@ const DocumentationPage = ({ data }) => {
                 Icon={FaGlobe}
                 links={[
                   {
-                    name: t(
-                      "docs.about.eclipse.adoptium",
-                      "About Eclipse Adoptium",
-                    ),
+                    name: t("docs.about.eclipse.adoptium", "About Eclipse Adoptium"),
                     link: "/about",
                   },
                   {
-                    name: t(
-                      "docs.working.group.members",
-                      "Working Group Members",
-                    ),
+                    name: t("docs.working.group.members", "Working Group Members"),
                     link: "/members",
                   },
                   {
-                    name: t(
-                      "docs.join.the.working.group",
-                      "Join the Working Group",
-                    ),
+                    name: t("docs.join.the.working.group", "Join the Working Group"),
                     link: "/join",
                   },
                   {
@@ -244,10 +220,7 @@ const DocumentationPage = ({ data }) => {
                     link: "https://github.com/adoptium/installer",
                   },
                   {
-                    name: t(
-                      "docs.mission.control.build",
-                      "Mission Control Build",
-                    ),
+                    name: t("docs.mission.control.build", "Mission Control Build"),
                     link: "https://github.com/adoptium/jmc-build",
                   },
                 ]}
@@ -257,10 +230,7 @@ const DocumentationPage = ({ data }) => {
                 Icon={FaInfoCircle}
                 links={[
                   {
-                    name: t(
-                      "docs.frequently.asked.questions",
-                      "Frequently Asked Questions",
-                    ),
+                    name: t("docs.frequently.asked.questions", "Frequently Asked Questions"),
                     link: "/docs/faq",
                   },
                   {
@@ -286,12 +256,13 @@ const DocumentationPage = ({ data }) => {
                     link: "https://www.eclipse.org/org/artwork/guidelines/adoptium-brand-guidelines.pdf",
                   },
                   {
-                    name: t("docs.google.slide.template", "Google Slide Template",),
+                    name: t("docs.google.slide.template", "Google Slide Template"),
                     link: "https://docs.google.com/presentation/d/1ChGhqZrAHCdk5S2Ii5s5RROng1saTaTtjZzsxWJ_MPA/copy",
                   },
                   {
-                    name: t('footer.logo.and.artwork', 'Logo and Artwork'), 
-                    link: '/docs/logo-styleguide/' },
+                    name: t("footer.logo.and.artwork", "Logo and Artwork"),
+                    link: "/docs/logo-styleguide/",
+                  },
                   {
                     name: t("docs.download.buttons", "Download Buttons"),
                     link: "/temurin/buttons",

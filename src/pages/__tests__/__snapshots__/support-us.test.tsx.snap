@@ -385,11 +385,15 @@ exports[`Support Us page > renders correctly 1`] = `
               Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
             </p>
           </div>
-          <button
-            class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+          <a
+            href="#"
           >
-            Learn More
-          </button>
+            <button
+              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+            >
+              Learn More
+            </button>
+          </a>
         </div>
       </div>
       <div
@@ -412,11 +416,15 @@ exports[`Support Us page > renders correctly 1`] = `
               Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
             </p>
           </div>
-          <button
-            class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+          <a
+            href="/sponsors"
           >
-            Become a sponsor
-          </button>
+            <button
+              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+            >
+              Become a sponsor
+            </button>
+          </a>
         </div>
       </div>
       <div
@@ -439,11 +447,15 @@ exports[`Support Us page > renders correctly 1`] = `
               Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
             </p>
           </div>
-          <button
-            class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+          <a
+            href="/join"
           >
-            Learn More
-          </button>
+            <button
+              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+            >
+              Learn More
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -499,11 +511,13 @@ exports[`Support Us page > renders correctly 1`] = `
                 Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
               </p>
             </div>
-            <button
-              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
-            >
-              Learn More
-            </button>
+            <a>
+              <button
+                class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+              >
+                Learn More
+              </button>
+            </a>
           </div>
         </div>
       </div>

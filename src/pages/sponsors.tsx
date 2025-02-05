@@ -6,6 +6,9 @@ import Navbar from "../components/NavBar"
 import PageHeader from "../components/PageHeader"
 import UiMobileScroll from "../components/UiVirtualScroll/mobile"
 import UiVirtualContent from "../components/UiVirtualScroll/UiVirtualContent"
+import SavingsCalculator from "../components/SavingsCalculator"
+import Logos, { LogoType } from "../components/Logos"
+
 const Sponsors = () => {
   const data = [
     {
@@ -249,12 +252,7 @@ const Sponsors = () => {
                 <p className="text-xs text-[#c4bfce]">
                   *Self-reported number of employees, n = 211
                 </p>
-                <div className="w-full max-w-[644px] h-[398px]">
-                  {/* Add calculator */}
-                  <div className="involveme_embed" data-project="temurin-v1-1">
-                    <script src="https://eclipse-foundation.involve.me/embed"></script>
-                  </div>
-                </div>
+                <SavingsCalculator />
                 <p className="text-[#c4bfce] max-w-[900px] text-center">
                   With the recent increase in licensing costs for paid Java SE
                   options, we’ve seen Temurin downloads surge—from over 75M in
@@ -293,82 +291,16 @@ const Sponsors = () => {
               Temurin’s Sustainers
             </h2>
             <div className="p-4">
-              <p className="text-[#c4bfce] text-center">
-                Adoptium is proud to receive financial donations both one-off
-                and regularly from the following companies.
-              </p>
-              <div className="flex flex-wrap justify-center items-center gap-10">
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/delphix.svg" className="mb-0 w-[167px]" />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/cargurus.svg" className="mb-0 w-[195px]" />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/delphix.svg" className="mb-0 w-[167px]" />
-                </div>
-              </div>
-              <p className="text-[#c4bfce] text-center my-8 max-w-[770px] mx-auto">
-                The Adoptium Working Group collaborates with the following
-                companies who contribute various kinds of cloud and physical
-                hardware.
-              </p>
-              <div className="flex flex-wrap justify-center items-center gap-10 pb-[150px]">
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/ibm-logo.png" className="mb-0 w-[105px]" />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img
-                    src="/images/macstadium.png"
-                    className="mb-0 w-[167px]"
-                  />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img
-                    src="/images/spearhead.jpg"
-                    className="mb-0 w-[55px] lg:w-[96px]"
-                  />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/cloundflare.svg" className="mb-0" />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/azure.png" className="mb-0 w-[159px]" />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img
-                    src="/images/netlify-light.svg"
-                    className="mb-0 w-[107px]"
-                  />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/fastly.svg" className="mb-0 w-[115px]" />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/equinix.png" className="mb-0 w-[181px]" />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/rise.svg" className="mb-0" />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/osuosl.png" className="mb-0 w-[117px]" />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/skytap.png" className="mb-0 w-[143px]" />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/marist.png" className="mb-0 w-[151px]" />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img
-                    src="/images/macincloud.png"
-                    className="mb-0 w-[211px]"
-                  />
-                </div>
-                <div className="w-[139px] px-3 h-[48px] lg:w-[251px] lg:h-[72px] inline-flex justify-center items-center bg-white rounded-[11px]">
-                  <img src="/images/delphix.svg" className="mb-0 w-[167px]" />
-                </div>
-              </div>
+              <Logos
+                members={LogoType.SPONSOR}
+                title=""
+                description="Adoptium is proud to receive financial donations both one-off and regularly from the following companies."
+              />
+              <Logos
+                members={LogoType.INFRA}
+                title=""
+                description="The Adoptium Working Group collaborates with the following companies who contribute various kinds of cloud and physical hardware."
+              />
             </div>
           </div>
         </div>

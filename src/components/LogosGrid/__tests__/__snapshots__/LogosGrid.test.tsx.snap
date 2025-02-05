@@ -32,7 +32,7 @@ exports[`LogosGrid component > Members grid renders correctly 1`] = `
                 >
                   <img
                     alt="Member 1"
-                    class="w-5/6 max-h-5/6 m-0"
+                    class="max-h-20 m-0"
                     src="/images/member1.png"
                   />
                 </div>
@@ -45,7 +45,7 @@ exports[`LogosGrid component > Members grid renders correctly 1`] = `
                 >
                   <img
                     alt="Member 2"
-                    class="w-5/6 max-h-5/6 m-0"
+                    class="max-h-20 m-0"
                     src="/images/member2.png"
                   />
                 </div>

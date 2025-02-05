@@ -19,7 +19,7 @@ const LogosGrid = ({ logos, type }) => {
                       <img
                         src={`/images/${data.logo}`}
                         alt={data.name}
-                        className="w-5/6 max-h-5/6 m-0"
+                        className="max-h-20 m-0"
                       />
                     </div>
                   </a>

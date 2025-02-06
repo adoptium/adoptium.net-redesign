@@ -8,23 +8,38 @@ import NewsCardList from "../components/News/NewsCardList"
 import { capitalize } from "../util/capitalize"
 
 const Tags = ({ pageContext, data }) => {
-  const tags = data.allMdx.edges
+  const posts = data.allMdx.edges
+  const { tag, previousPageNumber, nextPageNumber, currentPageNumber, numTagPages } = pageContext
 
-  const { previousPageNumber, nextPageNumber } = pageContext
+  // Build previousPageLink: if previous is page 1, use the base URL; otherwise include /page/<number>
   const previousPageLink =
     previousPageNumber === 1
-      ? `/news/author/${pageContext.author}`
-      : `/news/author/${previousPageNumber}`
+      ? `/news/tags/${tag}`
+      : `/news/tags/${tag}/page/${previousPageNumber}`
+
+  // Build next page link if a next page exists.
+  const nextPageLink = nextPageNumber ? `/news/tags/${tag}/page/${nextPageNumber}` : null
+
+  // Base URL used for numbered pagination links.
+  const baseUrl = `/news/tags/${tag}`
 
   return (
     <Layout>
       <PageHeader
         subtitle="News articles"
-        title={capitalize(pageContext.tag)}
-        description={`Posts tagged with ${pageContext.tag}`}
-        className={"mx-auto max-w-[860px] px-2 w-full"}
+        title={capitalize(tag)}
+        description={`Posts tagged with ${tag}`}
+        className="mx-auto max-w-[860px] px-2 w-full"
       />
-      <NewsCardList posts={tags} previousPageNumber={previousPageNumber} previousPageLink={previousPageLink} nextPage={nextPageNumber ? `/news/tags/${pageContext.tag}/page/${nextPageNumber}` : null} />
+      <NewsCardList
+        posts={posts}
+        previousPageNumber={previousPageNumber}
+        previousPageLink={previousPageLink}
+        nextPage={nextPageLink}
+        currentPage={currentPageNumber}
+        totalPages={numTagPages}
+        baseUrl={baseUrl}
+      />
     </Layout>
   )
 }
@@ -32,7 +47,17 @@ const Tags = ({ pageContext, data }) => {
 export default Tags
 
 export const Head = ({ pageContext }) => {
-  return <Seo title={pageContext.tag} description={pageContext.tag} />
+  const { currentPageNumber, tag } = pageContext
+    return (
+      <Seo
+        title={
+          currentPageNumber === 1
+            ? tag
+            : `${tag} - Page ${currentPageNumber}`
+        }
+        description={tag}
+      />
+    )
 }
 
 export const tagsPageQuery = graphql`

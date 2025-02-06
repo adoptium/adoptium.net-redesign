@@ -23,7 +23,7 @@ describe("News page", () => {
     // eslint-disable-next-line
     const pageContent = container.querySelector("main")
 
-    expect(pageContent).toHaveTextContent("Next Page")
+    expect(pageContent).toHaveTextContent("Next")
   })
 
   it("head renders correctly", () => {

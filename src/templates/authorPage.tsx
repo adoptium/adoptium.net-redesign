@@ -10,12 +10,20 @@ import AuthorData from "../json/authors.json"
 const AuthorPage = ({ data, pageContext }) => {
   const author = AuthorData[pageContext.author]
   const posts = data.allMdx.edges
+  const { previousPageNumber, nextPageNumber, currentPageNumber, numAuthorPages } = pageContext
 
-  const { previousPageNumber, nextPageNumber } = pageContext
+  // For page 2, previousPageNumber === 1 should lead to the main author URL
+  // For pages > 2, include the "/page" segment in the URL.
   const previousPageLink =
     previousPageNumber === 1
       ? `/news/author/${pageContext.author}`
-      : `/news/author/${previousPageNumber}`
+      : `/news/author/${pageContext.author}/page/${previousPageNumber}`
+
+  const nextPageLink =
+    nextPageNumber ? `/news/author/${pageContext.author}/page/${nextPageNumber}` : null
+
+  // Base URL for numbered pagination links
+  const baseUrl = `/news/author/${pageContext.author}`
 
   return (
     <Layout>
@@ -23,9 +31,17 @@ const AuthorPage = ({ data, pageContext }) => {
         subtitle="Author"
         title={author.name}
         description={<Slice alias="authorBio" />}
-        className={"mx-auto max-w-[860px] px-2 w-full"}
+        className="mx-auto max-w-[860px] px-2 w-full"
       />
-      <NewsCardList posts={posts} previousPageNumber={previousPageNumber} previousPageLink={previousPageLink} nextPage={nextPageNumber ? `/news/author/${pageContext.author}/page/${nextPageNumber}` : null} />
+      <NewsCardList 
+        posts={posts}
+        previousPageNumber={previousPageNumber}
+        previousPageLink={previousPageLink}
+        nextPage={nextPageLink}
+        currentPage={currentPageNumber}
+        totalPages={numAuthorPages}
+        baseUrl={baseUrl}
+      />
     </Layout>
   )
 }

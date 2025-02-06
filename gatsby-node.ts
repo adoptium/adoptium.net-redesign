@@ -660,23 +660,22 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   const numPages = Math.ceil(posts.length / postsPerPage)
   Array.from({ length: numPages }).forEach((_, index) => {
-    const currentPageNumber = index + 1
-    const previousPageNumber =
-      currentPageNumber === 1 ? null : currentPageNumber - 1
-    const nextPageNumber =
-      currentPageNumber === numPages ? null : currentPageNumber + 1
-
+    const currentPage = index + 1;
+    const previousPageNumber = currentPage === 1 ? null : currentPage - 1;
+    const nextPageNumber = currentPage === numPages ? null : currentPage + 1;
+    
     createPage({
-      path: `/news/page/${index + 1}`,
+      path: currentPage === 1 ? `/news` : `/news/page/${currentPage}`,
       component: path.resolve("./src/templates/newsPage.tsx"),
       context: {
         limit: postsPerPage,
         skip: index * postsPerPage,
-        numPages,
-        currentPageNumber,
+        currentPage,
+        totalPages: numPages,
         previousPageNumber,
         nextPageNumber,
+        baseUrl: "/news",
       },
-    })
-  })
+    });
+  });
 }

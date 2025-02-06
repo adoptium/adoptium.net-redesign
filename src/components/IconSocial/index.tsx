@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../Link"
 import { FaGithub, FaLinkedin, FaSlack, FaYoutube } from "react-icons/fa"
 import { FaXTwitter, FaBluesky, FaMastodon } from "react-icons/fa6"
 

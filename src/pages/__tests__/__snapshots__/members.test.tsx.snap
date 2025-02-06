@@ -136,7 +136,7 @@ exports[`Members Page > renders correctly 1`] = `
         Are you interested in becoming a member?
       </p>
       <a
-        href="/join"
+        href="/en/join"
       >
         <button
           class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out "
@@ -162,7 +162,7 @@ exports[`Members Page > renders correctly 1`] = `
           Eclipse Temurin offers high-performance, cross-platform, open-source Java™ runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
         </h3>
         <a
-          href="/business-benefits"
+          href="/en/business-benefits"
         >
           <button
             class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"

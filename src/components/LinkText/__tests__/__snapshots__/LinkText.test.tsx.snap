@@ -15,7 +15,7 @@ exports[`LinkText component > external URL renders correctly 1`] = `
 exports[`LinkText component > internal link renders correctly 1`] = `
 <div>
   <a
-    href="/page1"
+    href="/en/page1"
   >
     Page 1
   </a>

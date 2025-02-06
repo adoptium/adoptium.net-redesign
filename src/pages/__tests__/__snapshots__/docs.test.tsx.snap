@@ -203,13 +203,13 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/installation"
+                    href="/en/installation"
                   >
                     docs.install.temurin
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/temurin/releases"
+                    href="/en/temurin/releases"
                   >
                     docs.download.temurin
                   </a>
@@ -237,7 +237,7 @@ exports[`Docs page > renders correctly 1`] = `
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/temurin/archive"
+                    href="/en/temurin/archive"
                   >
                     docs.release.archive
                   </a>
@@ -284,25 +284,25 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/support"
+                    href="/en/support"
                   >
                     docs.support.guide
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/temurin/commercial-support"
+                    href="/en/temurin/commercial-support"
                   >
                     docs.commercial.support
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/migration"
+                    href="/en/docs/migration"
                   >
                     docs.migration.guide
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/supported-platforms"
+                    href="/en/supported-platforms"
                   >
                     docs.supported.platforms
                   </a>
@@ -371,19 +371,19 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/aqavit"
+                    href="/en/aqavit"
                   >
                     docs.about.eclipse.aqavit
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/qvs-policy"
+                    href="/en/docs/qvs-policy"
                   >
                     docs.aqavit.quality.verification
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/aqavit-verification"
+                    href="/en/docs/aqavit-verification"
                   >
                     docs.aqavit.verification.guide
                   </a>
@@ -430,19 +430,19 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/marketplace"
+                    href="/en/marketplace"
                   >
                     docs.marketplace.downloads
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/marketplace-policy"
+                    href="/en/docs/marketplace-policy"
                   >
                     docs.marketplace.listing.information
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/marketplace-guide"
+                    href="/en/docs/marketplace-guide"
                   >
                     docs.marketplace.publisher.guide
                   </a>
@@ -489,25 +489,25 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/contributing"
+                    href="/en/contributing"
                   >
                     docs.how.to.contribute
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/first-timer-support"
+                    href="/en/docs/first-timer-support"
                   >
                     docs.first.time.support
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/temurin/nightly"
+                    href="/en/temurin/nightly"
                   >
                     docs.developer.nightly.builds
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/slack"
+                    href="/en/slack"
                   >
                     docs.join.our.slack.channel
                   </a>
@@ -576,13 +576,13 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/secure-software"
+                    href="/en/docs/secure-software"
                   >
                     docs.secure.software.pratices
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/slsa"
+                    href="/en/docs/slsa"
                   >
                     docs.slsa.secure.supply.chain
                   </a>
@@ -632,7 +632,7 @@ exports[`Docs page > renders correctly 1`] = `
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/reproducible-verification-builds"
+                    href="/en/docs/reproducible-verification-builds"
                   >
                     docs.reproducible.verification.builds
                   </a>
@@ -679,19 +679,19 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/about"
+                    href="/en/about"
                   >
                     docs.about.eclipse.adoptium
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/members"
+                    href="/en/members"
                   >
                     docs.working.group.members
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/join"
+                    href="/en/join"
                   >
                     docs.join.the.working.group
                   </a>
@@ -911,7 +911,7 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/faq"
+                    href="/en/docs/faq"
                   >
                     docs.frequently.asked.questions
                   </a>
@@ -939,13 +939,13 @@ exports[`Docs page > renders correctly 1`] = `
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/news"
+                    href="/en/news"
                   >
                     docs.adoptium.blog
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/support-us"
+                    href="/en/support-us"
                   >
                     docs.support.us
                   </a>
@@ -1036,19 +1036,19 @@ exports[`Docs page > renders correctly 1`] = `
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/logo-styleguide/"
+                    href="/en/docs/logo-styleguide/"
                   >
                     footer.logo.and.artwork
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/temurin/buttons"
+                    href="/en/temurin/buttons"
                   >
                     docs.download.buttons
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/marketing-criteria"
+                    href="/en/docs/marketing-criteria"
                   >
                     docs.marketing.criteria
                   </a>

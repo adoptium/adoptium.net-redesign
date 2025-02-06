@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link } from "../../Link"
 import { capitalize } from "../../../util/capitalize"
 
 const RelatedArticleCard = ({data}) => {

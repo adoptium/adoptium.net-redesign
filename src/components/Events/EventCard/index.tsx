@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../../Link"
 
 const EventCard = ({ post }) => {
     return (

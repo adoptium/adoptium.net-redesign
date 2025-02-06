@@ -132,8 +132,7 @@ exports[`TemurinNightlyTable component > renders correctly 1`] = `
           </td>
           <td>
             <a
-              href="/download"
-              state="[object Object]"
+              href="/en/download"
               title=""
             >
               extension_mock (0 MB)
@@ -172,8 +171,7 @@ exports[`TemurinNightlyTable component > renders correctly 1`] = `
           </td>
           <td>
             <a
-              href="/download"
-              state="[object Object]"
+              href="/en/download"
               title=""
             >
               extension_mock (0 MB)
@@ -181,8 +179,7 @@ exports[`TemurinNightlyTable component > renders correctly 1`] = `
           </td>
           <td>
             <a
-              href="/download"
-              state="[object Object]"
+              href="/en/download"
               title=""
             >
               installer_extension_mock

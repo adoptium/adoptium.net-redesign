@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../components/Link"
 import { MDXProvider } from "@mdx-js/react"
 
 import { RedIcon } from "../components/Common/Icon"

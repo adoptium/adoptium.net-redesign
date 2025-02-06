@@ -44,7 +44,7 @@ exports[`Index page > renders correctly 1`] = `
               >
                 <a
                   class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
-                  href="/temurin/releases"
+                  href="/en/temurin/releases"
                   placeholder="Other Downloads"
                 >
                   Other Downloads
@@ -928,7 +928,7 @@ exports[`Index page > renders correctly 1`] = `
         Eclipse Temurin offers high-performance, cross-platform, open-source Java™ runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
       </h3>
       <a
-        href="/business-benefits"
+        href="/en/business-benefits"
       >
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
@@ -1209,7 +1209,7 @@ exports[`Index page > renders correctly 1`] = `
               Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
             </h3>
             <a
-              href="/temurin/releases"
+              href="/en/temurin/releases"
             >
               <button
                 class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[212px] h-[48px] "
@@ -1533,7 +1533,7 @@ exports[`Index page > renders correctly 1`] = `
                 Eclipse Temurin™
               </h2>
               <a
-                href="/temurin"
+                href="/en/temurin"
               >
                 <button
                   class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
@@ -1599,7 +1599,7 @@ exports[`Index page > renders correctly 1`] = `
                 Eclipse AQAvit
               </h2>
               <a
-                href="/aqavit"
+                href="/en/aqavit"
               >
                 <button
                   class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
@@ -1665,7 +1665,7 @@ exports[`Index page > renders correctly 1`] = `
                 Eclipse Mission Control
               </h2>
               <a
-                href="/jmc"
+                href="/en/jmc"
               >
                 <button
                   class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
@@ -1956,7 +1956,7 @@ exports[`Index page > renders correctly 1`] = `
           Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
         </h3>
         <a
-          href="/news"
+          href="/en/news"
         >
           <button
             class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block "
@@ -2017,6 +2017,7 @@ exports[`Index page > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
@@ -2067,6 +2068,7 @@ exports[`Index page > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
@@ -2121,6 +2123,7 @@ exports[`Index page > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
@@ -2171,6 +2174,7 @@ exports[`Index page > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
@@ -2232,6 +2236,7 @@ exports[`Index page > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>
@@ -2282,6 +2287,7 @@ exports[`Index page > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>
@@ -2332,6 +2338,7 @@ exports[`Index page > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>
@@ -2382,6 +2389,7 @@ exports[`Index page > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>

@@ -80,7 +80,7 @@ exports[`WGProjects component > renders correctly 1`] = `
                 Eclipse Temurin™
               </h2>
               <a
-                href="/temurin"
+                href="/en/temurin"
               >
                 <button
                   class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
@@ -146,7 +146,7 @@ exports[`WGProjects component > renders correctly 1`] = `
                 Eclipse AQAvit
               </h2>
               <a
-                href="/aqavit"
+                href="/en/aqavit"
               >
                 <button
                   class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
@@ -212,7 +212,7 @@ exports[`WGProjects component > renders correctly 1`] = `
                 Eclipse Mission Control
               </h2>
               <a
-                href="/jmc"
+                href="/en/jmc"
               >
                 <button
                   class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"

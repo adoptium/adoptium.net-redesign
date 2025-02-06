@@ -1,8 +1,9 @@
 import React, { MutableRefObject, useRef } from "react"
-import { Link, Trans } from "gatsby-plugin-react-i18next"
+import { Trans } from "gatsby-plugin-react-i18next"
 import { detectOS, UserOS } from "../../../util/detectOS"
 import { fetchLatestForOS, useOnScreen } from "../../../hooks"
 import { FaApple, FaWindows, FaLinux } from "react-icons/fa"
+import { Link } from "../../Link"
 
 let userOSName: string
 let userOSAPIName: string

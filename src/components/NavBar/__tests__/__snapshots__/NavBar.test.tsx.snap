@@ -10,7 +10,7 @@ exports[`NavBar component > navbar renders correctly 1`] = `
       class="flex items-center gap-5 justify-between py-6"
     >
       <a
-        href="/"
+        href="/en/"
         placeholder="homepage"
       >
         <img
@@ -58,13 +58,13 @@ exports[`NavBar component > navbar renders correctly 1`] = `
           </div>
           <a
             class="text-sm font-semibold leading-6 text-white-900"
-            href="/temurin/releases"
+            href="/en/temurin/releases"
           >
             Latest Releases
           </a>
           <a
             class="text-sm font-semibold leading-6 text-white-900"
-            href="/marketplace"
+            href="/en/marketplace"
           >
             Marketplace
           </a>

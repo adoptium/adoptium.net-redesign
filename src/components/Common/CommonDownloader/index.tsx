@@ -1,7 +1,8 @@
 import React from "react"
-import { Link, Trans } from "gatsby-plugin-react-i18next"
+import { Trans } from "gatsby-plugin-react-i18next"
 import { BsCopy, BsDownload } from "react-icons/bs"
 import { MdVerifiedUser } from "react-icons/md"
+import { Link } from "../../Link"
 
 const CommonDownloader = ({ openModalWithChecksum, obj }) => {
   return (

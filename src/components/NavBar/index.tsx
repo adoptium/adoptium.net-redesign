@@ -29,7 +29,7 @@ const navigation: NavItem[] = [
       { name: "Business Benefits", href: "/business-benefits" },
       { name: "Our Members", href: "/members" },
       { name: "Our Sustainers", href: "/sustainers" },
-      { name: "Our Adopters", href: "#" },
+      { name: "Our Adopters", href: "/adopters" },
       { name: "Support Us", href: "/support-us" },
     ],
   },

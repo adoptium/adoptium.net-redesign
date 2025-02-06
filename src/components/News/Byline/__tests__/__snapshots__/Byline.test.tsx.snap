@@ -15,7 +15,7 @@ exports[`Byline component > should render correctly 1`] = `
       class="text-[16px] font-bold leading-[150%] text-white"
     >
       <a
-        href="/blog/author/pmc"
+        href="/news/author/pmc"
       >
         <span
           class="text-primary pr-2"

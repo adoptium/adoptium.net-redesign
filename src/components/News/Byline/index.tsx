@@ -5,7 +5,7 @@ import ProfilePicInline from "../../ProfilePicInline"
 const Byline = props => {
   const { author, date, identifier } = props
 
-  const href = `/blog/author/${identifier}`
+  const href = `/news/author/${identifier}`
 
   return (
     <div className="flex justify-center items-center gap-5">

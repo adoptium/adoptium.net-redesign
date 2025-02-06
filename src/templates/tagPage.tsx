@@ -3,38 +3,43 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import ArticlePreview from "../components/ArticlePreview"
-import AuthorData from "../json/authors.json"
+import PageHeader from "../components/PageHeader"
+import NewsCardList from "../components/News/NewsCardList"
+import { capitalize } from "../util/capitalize"
 
 const Tags = ({ pageContext, data }) => {
-  const tags = data.allMdx.edges
+  const posts = data.allMdx.edges
+  const { tag, previousPageNumber, nextPageNumber, currentPageNumber, numTagPages } = pageContext
+
+  // Build previousPageLink: if previous is page 1, use the base URL; otherwise include /page/<number>
+  const previousPageLink =
+    previousPageNumber === 1
+      ? `/news/tags/${tag}`
+      : `/news/tags/${tag}/page/${previousPageNumber}`
+
+  // Build next page link if a next page exists.
+  const nextPageLink = nextPageNumber ? `/news/tags/${tag}/page/${nextPageNumber}` : null
+
+  // Base URL used for numbered pagination links.
+  const baseUrl = `/news/tags/${tag}`
 
   return (
     <Layout>
-      <section className="py-5 container">
-        <div className="row py-lg-5">
-          <div className="col-lg-9 col-md-9 mx-auto">
-            <h1>{pageContext.tag}</h1>
-            <hr className="pb-5" />
-            {tags.map(({ node }) => {
-              const title = node.frontmatter.title
-              const author = AuthorData[node.frontmatter.author]
-              return (
-                <ArticlePreview
-                  key={node.fields.slug}
-                  author={author.name}
-                  date={node.frontmatter.date}
-                  postPath={node.fields.postPath}
-                  title={title}
-                  description={node.frontmatter.description}
-                  identifier={node.frontmatter.author}
-                  excerpt={node.excerpt}
-                />
-              )
-            })}
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        subtitle="News articles"
+        title={capitalize(tag)}
+        description={`Posts tagged with ${tag}`}
+        className="mx-auto max-w-[860px] px-2 w-full"
+      />
+      <NewsCardList
+        posts={posts}
+        previousPageNumber={previousPageNumber}
+        previousPageLink={previousPageLink}
+        nextPage={nextPageLink}
+        currentPage={currentPageNumber}
+        totalPages={numTagPages}
+        baseUrl={baseUrl}
+      />
     </Layout>
   )
 }
@@ -42,7 +47,17 @@ const Tags = ({ pageContext, data }) => {
 export default Tags
 
 export const Head = ({ pageContext }) => {
-  return <Seo title={pageContext.tag} description={pageContext.tag} />
+  const { currentPageNumber, tag } = pageContext
+    return (
+      <Seo
+        title={
+          currentPageNumber === 1
+            ? tag
+            : `${tag} - Page ${currentPageNumber}`
+        }
+        description={tag}
+      />
+    )
 }
 
 export const tagsPageQuery = graphql`
@@ -58,15 +73,22 @@ export const tagsPageQuery = graphql`
     ) {
       edges {
         node {
+          excerpt
           fields {
             slug
             postPath
+            generatedFeaturedImage
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
             description
             author
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: FIXED)
+              }
+            }
           }
         }
       }

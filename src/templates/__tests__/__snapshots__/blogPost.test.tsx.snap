@@ -95,7 +95,7 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
             class="text-[16px] font-bold leading-[150%] text-white"
           >
             <a
-              href="/blog/author/pmc"
+              href="/news/author/pmc"
             >
               <span
                 class="text-primary pr-2"
@@ -406,7 +406,7 @@ exports[`BlogPost Template page > renders correctly 1`] = `
             class="text-[16px] font-bold leading-[150%] text-white"
           >
             <a
-              href="/blog/author/pmc"
+              href="/news/author/pmc"
             >
               <span
                 class="text-primary pr-2"

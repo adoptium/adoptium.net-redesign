@@ -15,8 +15,10 @@ export const GitHubLink = props => {
       className="px-1"
       aria-label="GitHub Profile"
       href={`https://github.com/${props.name}`}
+      target="blank"
+      rel="noopener noreferrer"
     >
-      <FaGithub />
+      <FaGithub size={25} />
     </a>
   )
 }
@@ -31,8 +33,10 @@ export const TwitterLink = props => {
       className="px-1"
       aria-label="Twitter Profile"
       href={`https://x.com/${props.name}`}
+      target="blank"
+      rel="noopener noreferrer"
     >
-      <FaXTwitter />
+      <FaXTwitter size={25} />
     </a>
   )
 }
@@ -47,8 +51,10 @@ export const LinkedinLink = props => {
       className="px-1"
       aria-label="LinkedIn Profile"
       href={`https://www.linkedin.com/in/${props.name}`}
+      target="blank"
+      rel="noopener noreferrer"
     >
-      <FaLinkedin />
+      <FaLinkedin size={25} />
     </a>
   )
 }
@@ -56,7 +62,7 @@ export const LinkedinLink = props => {
 const BlogAuthor = props => {
   const author = props.author
   const identifier = props.identifier
-  const href = `/blog/author/${identifier}`
+  const href = `/news/author/${identifier}`
 
   return (
     <div

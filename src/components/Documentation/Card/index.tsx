@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby-plugin-react-i18next"
 import { FaExternalLinkAlt } from "react-icons/fa"
+import { Link } from "../../Link"
 
 interface LinkItem {
   link: string

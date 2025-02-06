@@ -112,7 +112,7 @@ exports[`News page > renders correctly 1`] = `
             MDX Page excerpt
           </span>
           <a
-            href="/mdx/mdx-page-title"
+            href="/en/mdx/mdx-page-title"
           >
             <button
               class="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block "
@@ -136,7 +136,7 @@ exports[`News page > renders correctly 1`] = `
           class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
         >
           <a
-            href="/news"
+            href="/en/news"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer font-bold text-pink"

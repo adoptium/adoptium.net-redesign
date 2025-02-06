@@ -102,7 +102,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
         Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
       </p>
       <a
-        href="#"
+        href="/en#"
       >
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
@@ -112,7 +112,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
          
       </a>
       <a
-        href="#"
+        href="/en#"
       >
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"
@@ -535,7 +535,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
         Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
       </p>
       <a
-        href="/support"
+        href="/en/support"
       >
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
@@ -545,7 +545,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
          
       </a>
       <a
-        href="/support"
+        href="/en/support"
       >
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"

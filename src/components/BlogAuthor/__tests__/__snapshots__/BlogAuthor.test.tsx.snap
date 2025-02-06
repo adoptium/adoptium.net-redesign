@@ -91,7 +91,7 @@ exports[`BlogAuthor component > should render correctly 1`] = `
     <p>
       Posted by 
       <a
-        href="/news/author/pmc"
+        href="/en/news/author/pmc"
       />
        
        

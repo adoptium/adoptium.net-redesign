@@ -1,6 +1,6 @@
 import React from "react"
 import { FaTag } from "react-icons/fa"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../Link"
 
 const Tags = props => {
   const tags = props.tags

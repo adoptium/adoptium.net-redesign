@@ -76,7 +76,9 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
         class="overflow-auto h-[88%] scroll-sidebar"
       >
         <article>
-          <a>
+          <a
+            href="/enundefined"
+          >
             <div
               class="text-[#c4bfce"
             >
@@ -101,7 +103,9 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
           <span
             class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
           />
-          <a>
+          <a
+            href="/enundefined"
+          >
             <div
               class="text-[#c4bfce"
             >
@@ -126,7 +130,9 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
           <span
             class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
           />
-          <a>
+          <a
+            href="/enundefined"
+          >
             <div
               class="text-[#c4bfce"
             >

@@ -1,8 +1,8 @@
 import React from "react"
-import { Link, Trans } from "gatsby-plugin-react-i18next"
+import { Trans } from "gatsby-plugin-react-i18next"
 import { Disclosure } from "@headlessui/react"
-
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci"
+import { Link } from "../Link"
 
 // Custom Disclosure component
 const CustomDisclosure = ({ title, links }) => (

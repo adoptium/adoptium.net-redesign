@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../../Link"
 import { BsDownload } from "react-icons/bs"
 import { RxCrossCircled } from "react-icons/rx"
 import { FaApple, FaWindows } from "react-icons/fa"

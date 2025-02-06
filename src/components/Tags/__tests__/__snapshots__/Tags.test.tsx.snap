@@ -9,7 +9,7 @@ exports[`Tags component > should render correctly 1`] = `
   >
     <a
       class="bg-pink hover:bg-pink-800 py-1 px-2 rounded-lg text-sm flex items-center"
-      href="/news/tags/foo"
+      href="/en/news/tags/foo"
     >
       <svg
         class="mr-2"
@@ -29,7 +29,7 @@ exports[`Tags component > should render correctly 1`] = `
     </a>
     <a
       class="bg-pink hover:bg-pink-800 py-1 px-2 rounded-lg text-sm flex items-center"
-      href="/news/tags/bar"
+      href="/en/news/tags/bar"
     >
       <svg
         class="mr-2"

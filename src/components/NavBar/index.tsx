@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react"
-import { Link } from "gatsby-plugin-react-i18next"
-import { Dialog, Menu, Transition } from "@headlessui/react"
+import { Link } from "../Link"
+import { Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react"
 import { FaChevronDown, FaRegBell } from "react-icons/fa"
 import { BsXLg, BsList } from "react-icons/bs"
 
@@ -50,18 +50,18 @@ const navigation: NavItem[] = [
       { name: "Release Notes", href: "/temurin/release-notes" },
       { name: "Installation Guide", href: "/installation" },
       { name: "Documentation", href: "/docs" },
-      { name: "Resource Directory", href: "#" },
-      { name: "FAQs", href: "#" },
+      { name: "Resource Directory", href: "" },
+      { name: "FAQs", href: "/docs/faq" },
       { name: "Brand & Promotion", href: "/docs/logo-styleguide" },
     ],
   },
   {
     name: "Community",
     children: [
-      { name: "Our Community", href: "#" },
+      { name: "Our Community", href: "" },
       { name: "Support", href: "/support" },
       { name: "News & Updates", href: "/news" },
-      { name: "Events", href: "#" },
+      { name: "Events", href: "" },
     ],
   },
 ]
@@ -104,13 +104,13 @@ const NavBar = () => {
                   className="relative inline-block text-left"
                 >
                   <div>
-                    <Menu.Button className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50">
+                    <MenuButton className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50">
                       {item.name}
                       <FaChevronDown
                         className="-mr-1 mt-1"
                         aria-hidden="true"
                       />
-                    </Menu.Button>
+                    </MenuButton>
                   </div>
 
                   <Transition
@@ -122,30 +122,51 @@ const NavBar = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items
+                    <MenuItems
                       className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#0E002A] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                       style={{ minWidth: "max-content" }}
                     >
                       <div className="py-6 px-4">
                         {item.children.map(child => (
-                          <Menu.Item key={`mobile-${child.name}`}>
-                            {({ active }) => (
-                              <a
-                                href={child.href}
-                                className={classNames(
-                                  active ? " text-[#A80D55]" : "text-white-700",
-                                  "block  py-3 text-sm border-b border-[#3E3355]",
-                                )}
-                              >
-                                {child.name}
-                              </a>
+                          <MenuItem key={`mobile-${child.name}`}>
+                            {({ focus }) => (
+                              child.href && child.href.startsWith("/") ? (
+                                <Link
+                                  to={child.href}
+                                  className={classNames(
+                                    focus ? " text-[#A80D55]" : "text-white-700",
+                                    "block  py-3 text-sm border-b border-[#3E3355]",
+                                  )}
+                                >
+                                  {child.name}
+                                </Link>
+                              ) : (
+                                <a
+                                  href={child.href}
+                                  className={classNames(
+                                    focus ? "text-[#A80D55]" : "text-white-700",
+                                    "block py-3 text-sm border-b border-[#3E3355]",
+                                  )}
+                                >
+                                  {child.name}
+                                </a>
+                              )
                             )}
-                          </Menu.Item>
+                          </MenuItem>
                         ))}
                       </div>
-                    </Menu.Items>
+                    </MenuItems>
                   </Transition>
                 </Menu>
+              ) : (
+                item.href && item.href.startsWith("/")) ? (
+                <Link
+                  key={`desktop-${item.name}`}
+                  to={item.href}
+                  className="text-sm font-semibold leading-6 text-white-900"
+                >
+                  {item.name}
+                </Link>
               ) : (
                 <a
                   key={`desktop-${item.name}`}
@@ -195,7 +216,7 @@ const NavBar = () => {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed flex-col h-full flex inset-y-0 right-0 z-50 w-full overflow-y-auto bg-purple px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white-900/10">
+        <DialogPanel className="fixed flex-col h-full flex inset-y-0 right-0 z-50 w-full overflow-y-auto bg-purple px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white-900/10">
           <div className="flex items-center justify-between">
             <Link to="/" placeholder="home" className="-m-1.5 p-1.5">
               <span className="sr-only">Eclipse Adoptium</span>
@@ -218,9 +239,8 @@ const NavBar = () => {
           </div>
           <div className="mt-6 grow relative w-full h-full overflow-hidden flow-root">
             <div
-              className={`-my-6 absolute duration-200 h-full left-0 w-full divide-y divide-white-500/10 ${
-                showLastSlide ? "left-[-100%]" : ""
-              }`}
+              className={`-my-6 absolute duration-200 h-full left-0 w-full divide-y divide-white-500/10 ${showLastSlide ? "left-[-100%]" : ""
+                }`}
             >
               <div className="space-y-2 py-6">
                 {navigation.map((item, index) => (
@@ -251,13 +271,22 @@ const NavBar = () => {
                       </div>
                     ) : (
                       <div className="flex justify-between">
-                        <a
-                          onClick={() => setMobileMenuOpen(false)}
-                          href={item.href}
-                          className="-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
-                        >
-                          {item.name}
-                        </a>
+                        {item.href && item.href.startsWith("/") ? (
+                          <Link
+                            to={item.href}
+                            className="-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
+                          >
+                            {item.name}
+                          </Link>
+                        ) : (
+                          <a
+                            onClick={() => setMobileMenuOpen(false)}
+                            href={item.href}
+                            className="-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
+                          >
+                            {item.name}
+                          </a>
+                        )}
                       </div>
                     )}
                     {navigation.length != index + 1 ? (
@@ -269,9 +298,8 @@ const NavBar = () => {
             </div>
 
             <div
-              className={`absolute duration-200 w-full h-full ${
-                showLastSlide ? "left-0" : " left-full"
-              }`}
+              className={`absolute duration-200 w-full h-full ${showLastSlide ? "left-0" : " left-full"
+                }`}
             >
               <div
                 onClick={() => setShowLastSlide(false)}
@@ -322,18 +350,26 @@ const NavBar = () => {
                   activeLastSlide.children.map((item, index) => (
                     <div key={index}>
                       <div className="flex w-full justify-between">
-                        <a
-                          onClick={() => setMobileMenuOpen(false)}
-                          key={item.name}
-                          href={item.href}
-                          className="-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
-                        >
-                          {item.name}
-                        </a>
+                        {item.href && item.href.startsWith("/") ? (
+                          <Link
+                            to={item.href}
+                            className="-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
+                          >
+                            {item.name}
+                          </Link>
+                        ) : (
+                          <a
+                            onClick={() => setMobileMenuOpen(false)}
+                            href={item.href}
+                            className="-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
+                          >
+                            {item.name}
+                          </a>
+                        )}
                       </div>
 
                       {navigation.length != index + 1 ? (
-                        <div className=" w-full px-3 bg-[#3E3355] h-[1px]"></div>
+                        <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
                       ) : null}
                     </div>
                   ))}
@@ -354,7 +390,7 @@ const NavBar = () => {
               <IconSocial />
             </ul>
           </div>
-        </Dialog.Panel>
+        </DialogPanel>
       </Dialog>
     </header>
   )

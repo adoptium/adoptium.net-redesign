@@ -10,7 +10,7 @@ exports[`Support Us page > renders correctly 1`] = `
       class="flex items-center gap-5 justify-between py-6"
     >
       <a
-        href="/"
+        href="/en/"
         placeholder="homepage"
       >
         <img
@@ -58,13 +58,13 @@ exports[`Support Us page > renders correctly 1`] = `
           </div>
           <a
             class="text-sm font-semibold leading-6 text-white-900"
-            href="/temurin/releases"
+            href="/en/temurin/releases"
           >
             Latest Releases
           </a>
           <a
             class="text-sm font-semibold leading-6 text-white-900"
-            href="/marketplace"
+            href="/en/marketplace"
           >
             Marketplace
           </a>
@@ -386,7 +386,7 @@ exports[`Support Us page > renders correctly 1`] = `
             </p>
           </div>
           <a
-            href="#"
+            href="/en#"
           >
             <button
               class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
@@ -417,7 +417,7 @@ exports[`Support Us page > renders correctly 1`] = `
             </p>
           </div>
           <a
-            href="/sponsors"
+            href="/en/sponsors"
           >
             <button
               class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
@@ -448,7 +448,7 @@ exports[`Support Us page > renders correctly 1`] = `
             </p>
           </div>
           <a
-            href="/join"
+            href="/en/join"
           >
             <button
               class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
@@ -511,7 +511,9 @@ exports[`Support Us page > renders correctly 1`] = `
                 Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
               </p>
             </div>
-            <a>
+            <a
+              href="/enundefined"
+            >
               <button
                 class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
               >

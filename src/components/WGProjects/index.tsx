@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../Link"
 import { RedIcon } from "../Common/Icon"
 
 interface Project {

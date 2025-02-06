@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../Link"
 import LatestNewsSlider from "./LatestNewsSlider"
 import { RedIcon } from "../Common/Icon"
 

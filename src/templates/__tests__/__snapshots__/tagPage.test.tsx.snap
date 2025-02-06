@@ -112,7 +112,7 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
             MDX Page excerpt
           </span>
           <a
-            href="/mdx/mdx-page-title"
+            href="/en/mdx/mdx-page-title"
           >
             <button
               class="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block "
@@ -131,7 +131,7 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
     >
       <a
         class="flex items-center gap-3"
-        href="/news/tags/test"
+        href="/en/news/tags/test"
         rel="prev"
       >
         <span
@@ -164,7 +164,7 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
           class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
         >
           <a
-            href="/news/tags/test"
+            href="/en/news/tags/test"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer font-bold text-pink"
@@ -173,7 +173,7 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
             </p>
           </a>
           <a
-            href="/news/tags/test/page/2"
+            href="/en/news/tags/test/page/2"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -182,7 +182,7 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
             </p>
           </a>
           <a
-            href="/news/tags/test/page/3"
+            href="/en/news/tags/test/page/3"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -191,7 +191,7 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
             </p>
           </a>
           <a
-            href="/news/tags/test/page/4"
+            href="/en/news/tags/test/page/4"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -200,7 +200,7 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
             </p>
           </a>
           <a
-            href="/news/tags/test/page/5"
+            href="/en/news/tags/test/page/5"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -212,7 +212,7 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
       </div>
       <a
         class="flex items-center gap-3"
-        href="/news/tags/test/page/2"
+        href="/en/news/tags/test/page/2"
       >
         <p
           class="tab-button-text mb-0 hidden md:block"
@@ -354,7 +354,7 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
             MDX Page excerpt
           </span>
           <a
-            href="/mdx/mdx-page-title"
+            href="/en/mdx/mdx-page-title"
           >
             <button
               class="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block "
@@ -378,7 +378,7 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
           class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
         >
           <a
-            href="/news/tags/test"
+            href="/en/news/tags/test"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer font-bold text-pink"
@@ -387,7 +387,7 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/2"
+            href="/en/news/tags/test/page/2"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -396,7 +396,7 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/3"
+            href="/en/news/tags/test/page/3"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -405,7 +405,7 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/4"
+            href="/en/news/tags/test/page/4"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -414,7 +414,7 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/5"
+            href="/en/news/tags/test/page/5"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -426,7 +426,7 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
       </div>
       <a
         class="flex items-center gap-3"
-        href="/news/tags/test/page/2"
+        href="/en/news/tags/test/page/2"
       >
         <p
           class="tab-button-text mb-0 hidden md:block"
@@ -568,7 +568,7 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
             MDX Page excerpt
           </span>
           <a
-            href="/mdx/mdx-page-title"
+            href="/en/mdx/mdx-page-title"
           >
             <button
               class="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block "
@@ -587,7 +587,7 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
     >
       <a
         class="flex items-center gap-3"
-        href="/news/tags/test"
+        href="/en/news/tags/test"
         rel="prev"
       >
         <span
@@ -620,7 +620,7 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
           class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
         >
           <a
-            href="/news/tags/test"
+            href="/en/news/tags/test"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer font-bold text-pink"
@@ -629,7 +629,7 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/2"
+            href="/en/news/tags/test/page/2"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -638,7 +638,7 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/3"
+            href="/en/news/tags/test/page/3"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -647,7 +647,7 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/4"
+            href="/en/news/tags/test/page/4"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -656,7 +656,7 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/5"
+            href="/en/news/tags/test/page/5"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -668,7 +668,7 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
       </div>
       <a
         class="flex items-center gap-3"
-        href="/news/tags/test/page/2"
+        href="/en/news/tags/test/page/2"
       >
         <p
           class="tab-button-text mb-0 hidden md:block"
@@ -810,7 +810,7 @@ exports[`TagPage pages > renders correctly 1`] = `
             MDX Page excerpt
           </span>
           <a
-            href="/mdx/mdx-page-title"
+            href="/en/mdx/mdx-page-title"
           >
             <button
               class="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block "
@@ -834,7 +834,7 @@ exports[`TagPage pages > renders correctly 1`] = `
           class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
         >
           <a
-            href="/news/tags/test"
+            href="/en/news/tags/test"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer font-bold text-pink"
@@ -843,7 +843,7 @@ exports[`TagPage pages > renders correctly 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/2"
+            href="/en/news/tags/test/page/2"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -852,7 +852,7 @@ exports[`TagPage pages > renders correctly 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/3"
+            href="/en/news/tags/test/page/3"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -861,7 +861,7 @@ exports[`TagPage pages > renders correctly 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/4"
+            href="/en/news/tags/test/page/4"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -870,7 +870,7 @@ exports[`TagPage pages > renders correctly 1`] = `
             </p>
           </a>
           <a
-            href="/news/tags/test/page/5"
+            href="/en/news/tags/test/page/5"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -882,7 +882,7 @@ exports[`TagPage pages > renders correctly 1`] = `
       </div>
       <a
         class="flex items-center gap-3"
-        href="/news/tags/test/page/2"
+        href="/en/news/tags/test/page/2"
       >
         <p
           class="tab-button-text mb-0 hidden md:block"

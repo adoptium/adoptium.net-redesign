@@ -3,14 +3,18 @@
 exports[`AuthorBio component > should render correctly 1`] = `
 <div>
   <div
-    class="flex flex-wrap justify-center items-center gap-5 space-x-4"
+    class="flex flex-wrap justify-center items-center gap-5 space-x-4 pb-4"
   >
     <img
       alt="[object Object]"
       image="[object Object]"
       stlye="[object Object]"
-      style="margin-left: 0.5rem; margin-bottom: 0px; min-width: 30px; border-radius: 100%;"
+      style="margin-right: 0.5rem; margin-bottom: 0px; min-width: 50px; border-radius: 100%;"
     />
+  </div>
+  <div
+    class="flex flex-wrap justify-center items-center gap-5 space-x-4"
+  >
     <span
       class="text-[16px] font-bold leading-[150%] text-white flex items-center"
     >
@@ -21,14 +25,16 @@ exports[`AuthorBio component > should render correctly 1`] = `
         aria-label="GitHub Profile"
         class="px-1"
         href="https://github.com/adoptium"
+        rel="noopener noreferrer"
+        target="blank"
       >
         <svg
           fill="currentColor"
-          height="1em"
+          height="25"
           stroke="currentColor"
           stroke-width="0"
           viewBox="0 0 496 512"
-          width="1em"
+          width="25"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -40,14 +46,16 @@ exports[`AuthorBio component > should render correctly 1`] = `
         aria-label="Twitter Profile"
         class="px-1"
         href="https://x.com/adoptium"
+        rel="noopener noreferrer"
+        target="blank"
       >
         <svg
           fill="currentColor"
-          height="1em"
+          height="25"
           stroke="currentColor"
           stroke-width="0"
           viewBox="0 0 512 512"
-          width="1em"
+          width="25"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -59,14 +67,16 @@ exports[`AuthorBio component > should render correctly 1`] = `
         aria-label="LinkedIn Profile"
         class="px-1"
         href="https://www.linkedin.com/in/adoptium"
+        rel="noopener noreferrer"
+        target="blank"
       >
         <svg
           fill="currentColor"
-          height="1em"
+          height="25"
           stroke="currentColor"
           stroke-width="0"
           viewBox="0 0 448 512"
-          width="1em"
+          width="25"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

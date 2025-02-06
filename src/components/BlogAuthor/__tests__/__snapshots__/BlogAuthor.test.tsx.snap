@@ -6,14 +6,16 @@ exports[`BlogAuthor component > GitHub link - should render correctly 1`] = `
     aria-label="GitHub Profile"
     class="px-1"
     href="https://github.com/sample"
+    rel="noopener noreferrer"
+    target="blank"
   >
     <svg
       fill="currentColor"
-      height="1em"
+      height="25"
       stroke="currentColor"
       stroke-width="0"
       viewBox="0 0 496 512"
-      width="1em"
+      width="25"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -30,14 +32,16 @@ exports[`BlogAuthor component > Linkedin link - should render correctly 1`] = `
     aria-label="LinkedIn Profile"
     class="px-1"
     href="https://www.linkedin.com/in/sample"
+    rel="noopener noreferrer"
+    target="blank"
   >
     <svg
       fill="currentColor"
-      height="1em"
+      height="25"
       stroke="currentColor"
       stroke-width="0"
       viewBox="0 0 448 512"
-      width="1em"
+      width="25"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -54,14 +58,16 @@ exports[`BlogAuthor component > Twitter link - should render correctly 1`] = `
     aria-label="Twitter Profile"
     class="px-1"
     href="https://x.com/sample"
+    rel="noopener noreferrer"
+    target="blank"
   >
     <svg
       fill="currentColor"
-      height="1em"
+      height="25"
       stroke="currentColor"
       stroke-width="0"
       viewBox="0 0 512 512"
-      width="1em"
+      width="25"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

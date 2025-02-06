@@ -109,7 +109,7 @@ exports[`News Template page > renders correctly 1`] = `
             </h3>
           </div>
           <span>
-            ...
+            MDX Page excerpt
           </span>
           <a
             href="/mdx/mdx-page-title"

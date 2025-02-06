@@ -116,7 +116,7 @@ export const Head = ({ data }) => {
   if (post.frontmatter && post.frontmatter.featuredImage) {
     twitterCard = post.frontmatter.featuredImage.childImageSharp.gatsbyImageData.images.fallback.src
   } else if (post.fields.generatedFeaturedImage) {
-    twitterCard = `${data.site.siteMetadata.siteUrl}${post.fields.generatedFeaturedImage}`
+    twitterCard = post.fields.generatedFeaturedImage
   }
   return (
     <Seo

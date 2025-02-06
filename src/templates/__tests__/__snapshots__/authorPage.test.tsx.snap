@@ -111,7 +111,7 @@ exports[`AuthorPage pages > renders correctly - with next and previous paginatio
             </h3>
           </div>
           <span>
-            ...
+            MDX Page excerpt
           </span>
           <a
             href="/mdx/mdx-page-title"
@@ -308,7 +308,7 @@ exports[`AuthorPage pages > renders correctly - with next pagination 1`] = `
             </h3>
           </div>
           <span>
-            ...
+            MDX Page excerpt
           </span>
           <a
             href="/mdx/mdx-page-title"
@@ -474,7 +474,7 @@ exports[`AuthorPage pages > renders correctly - with previous pagination 1`] = `
             </h3>
           </div>
           <span>
-            ...
+            MDX Page excerpt
           </span>
           <a
             href="/mdx/mdx-page-title"
@@ -641,7 +641,7 @@ exports[`AuthorPage pages > renders correctly 1`] = `
             </h3>
           </div>
           <span>
-            ...
+            MDX Page excerpt
           </span>
           <a
             href="/mdx/mdx-page-title"

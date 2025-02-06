@@ -3,38 +3,28 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import ArticlePreview from "../components/ArticlePreview"
-import AuthorData from "../json/authors.json"
+import PageHeader from "../components/PageHeader"
+import NewsCardList from "../components/News/NewsCardList"
+import { capitalize } from "../util/capitalize"
 
 const Tags = ({ pageContext, data }) => {
   const tags = data.allMdx.edges
 
+  const { previousPageNumber, nextPageNumber } = pageContext
+  const previousPageLink =
+    previousPageNumber === 1
+      ? `/news/author/${pageContext.author}`
+      : `/news/author/${previousPageNumber}`
+
   return (
     <Layout>
-      <section className="py-5 container">
-        <div className="row py-lg-5">
-          <div className="col-lg-9 col-md-9 mx-auto">
-            <h1>{pageContext.tag}</h1>
-            <hr className="pb-5" />
-            {tags.map(({ node }) => {
-              const title = node.frontmatter.title
-              const author = AuthorData[node.frontmatter.author]
-              return (
-                <ArticlePreview
-                  key={node.fields.slug}
-                  author={author.name}
-                  date={node.frontmatter.date}
-                  postPath={node.fields.postPath}
-                  title={title}
-                  description={node.frontmatter.description}
-                  identifier={node.frontmatter.author}
-                  excerpt={node.excerpt}
-                />
-              )
-            })}
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        subtitle="News articles"
+        title={capitalize(pageContext.tag)}
+        description={`Posts tagged with ${pageContext.tag}`}
+        className={"mx-auto max-w-[860px] px-2 w-full"}
+      />
+      <NewsCardList posts={tags} previousPageNumber={previousPageNumber} previousPageLink={previousPageLink} nextPage={nextPageNumber ? `/news/tags/${pageContext.tag}/page/${nextPageNumber}` : null} />
     </Layout>
   )
 }
@@ -58,15 +48,22 @@ export const tagsPageQuery = graphql`
     ) {
       edges {
         node {
+          excerpt
           fields {
             slug
             postPath
+            generatedFeaturedImage
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
             description
             author
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: FIXED)
+              }
+            }
           }
         }
       }

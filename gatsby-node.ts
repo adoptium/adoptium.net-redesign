@@ -566,6 +566,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     tagsGroup: {
       group: Array<{
         fieldValue: string
+        totalCount: number
       }>
     }
   }>(`
@@ -590,6 +591,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
       tagsGroup: allMdx(limit: 2000) {
         group(field: { frontmatter: { tags: SELECT } }) {
           fieldValue
+          totalCount
         }
       }
     }
@@ -626,12 +628,33 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   // Make tag pages
   tags.forEach(tag => {
-    createPage({
-      path: `/news/tags/${tag.fieldValue}/`,
-      component: tagTemplate,
-      context: {
-        tag: tag.fieldValue,
-      },
+    // Calculate how many pages we need for this tag.
+    const numTagPages = Math.ceil(tag.totalCount / postsPerPage)
+  
+    Array.from({ length: numTagPages }).forEach((_, index) => {
+      const currentPageNumber = index + 1
+      const previousPageNumber =
+        currentPageNumber === 1 ? null : currentPageNumber - 1
+      const nextPageNumber =
+        currentPageNumber === numTagPages ? null : currentPageNumber + 1
+  
+      createPage({
+        // Use a friendly URL for the first page; then add /page/2, etc.
+        path:
+          index === 0
+            ? `/news/tags/${tag.fieldValue}/`
+            : `/news/tags/${tag.fieldValue}/page/${index + 1}`,
+        component: tagTemplate,
+        context: {
+          tag: tag.fieldValue,
+          limit: postsPerPage,
+          skip: index * postsPerPage,
+          numTagPages,
+          currentPageNumber,
+          previousPageNumber,
+          nextPageNumber,
+        },
+      })
     })
   })
 

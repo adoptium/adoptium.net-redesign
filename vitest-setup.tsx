@@ -211,10 +211,19 @@ vi.stubGlobal("IntersectionObserver", IntersectionObserverMock)
  */
 global.matchMedia =
   global.matchMedia ||
-  function () {
+  function (query) {
     return {
       matches: false,
+      media: query,
+      onchange: null,
+      // Legacy API
       addListener: function () {},
       removeListener: function () {},
-    }
+      // Modern API used by MUI v6
+      addEventListener: function () {},
+      removeEventListener: function () {},
+      dispatchEvent: function () {
+        return false;
+      },
+    };
   }

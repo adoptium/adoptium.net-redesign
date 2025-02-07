@@ -10,8 +10,6 @@ import { Slice } from "gatsby"
 
 import Contributor from "../Contributors"
 
-import "./layout.scss"
-
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 

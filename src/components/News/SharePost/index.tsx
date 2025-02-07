@@ -8,10 +8,10 @@ const SharePost = () => {
         <div className="hidden md:flex justify-between items-center gap-10 py-10">
             <div className="bg-[#3E3355] w-full h-[1px] "></div>
             <div className="flex flex-col items-center">
-                <p className="tab-button-text">Share this post</p>
+                <p className="tab-button-text mb-4">Share this post</p>
                 <div className="flex items-center gap-4">
                     <Link to="#share-buttons">
-                        <button className="bg-primary px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3">
+                        <button className="bg-pink px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3">
                             <CiShare2 size={25} />
                             Share
                         </button>

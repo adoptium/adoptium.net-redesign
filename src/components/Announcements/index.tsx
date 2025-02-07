@@ -39,7 +39,7 @@ const Announcements = ({ handleClose }) => {
           <button onClick={() => setActive("Updates")}>
             <span
               className={`py-3 w-full tab-button-text
-                outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === "Updates" ? "border-primary border-b-2 text-white" : "text-[#8a809e] border-transparent border-b"}`}
+                outline-hidden cursor-pointer transition-all duration-200 ease-in-out ${active === "Updates" ? "border-primary border-b-2 text-white" : "text-[#8a809e] border-transparent border-b"}`}
             >
               Updates
             </span>
@@ -47,7 +47,7 @@ const Announcements = ({ handleClose }) => {
           {/* <button onClick={() => setActive("Events")}>
             <span
               className={`py-3 w-full tab-button-text
-                outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === "Events" ? "border-primary border-b-2 text-white" : "text-[#8a809e] border-transparent border-b"}`}
+                outline-hidden cursor-pointer transition-all duration-200 ease-in-out ${active === "Events" ? "border-primary border-b-2 text-white" : "text-[#8a809e] border-transparent border-b"}`}
             >
               Events
             </span>
@@ -55,7 +55,7 @@ const Announcements = ({ handleClose }) => {
           <button onClick={() => setActive("Releases")}>
             <span
               className={`py-3 w-full tab-button-text
-                outline-none cursor-pointer transition-all duration-200 ease-in-out ${active === "Releases" ? "border-primary border-b-2 text-white" : "text-[#8a809e] border-transparent border-b"}`}
+                outline-hidden cursor-pointer transition-all duration-200 ease-in-out ${active === "Releases" ? "border-primary border-b-2 text-white" : "text-[#8a809e] border-transparent border-b"}`}
             >
               Releases
             </span>

@@ -54,7 +54,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
         <button>
           <span
             class="py-3 w-full tab-button-text
-                outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary border-b-2 text-white"
+                outline-hidden cursor-pointer transition-all duration-200 ease-in-out border-primary border-b-2 text-white"
           >
             Updates
           </span>
@@ -62,7 +62,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
         <button>
           <span
             class="py-3 w-full tab-button-text
-                outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
+                outline-hidden cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
           >
             Releases
           </span>
@@ -89,7 +89,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
                   1 day ago
                 </p>
                 <h3
-                  class="text-[20px] leading-[140%] text-white"
+                  class="text-[20px] leading-[140%] text-white mb-4"
                 >
                   Test Announcement 1
                 </h3>
@@ -117,7 +117,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
                   3 weeks ago
                 </p>
                 <h3
-                  class="text-[20px] leading-[140%] text-white"
+                  class="text-[20px] leading-[140%] text-white mb-4"
                 >
                   Test Announcement 2
                 </h3>
@@ -145,7 +145,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
                   1 week ago
                 </p>
                 <h3
-                  class="text-[20px] leading-[140%] text-white"
+                  class="text-[20px] leading-[140%] text-white mb-4"
                 >
                   Test Announcement 3
                 </h3>
@@ -173,7 +173,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
                   8 weeks ago
                 </p>
                 <h3
-                  class="text-[20px] leading-[140%] text-white"
+                  class="text-[20px] leading-[140%] text-white mb-4"
                 >
                   Test Announcement 4
                 </h3>

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react"
-import { useI18next, Trans } from "gatsby-plugin-react-i18next"
-import { Menu, Transition } from "@headlessui/react"
+import { useI18next } from "gatsby-plugin-react-i18next"
+import { Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react"
 import { FaChevronDown } from "react-icons/fa"
 import Flag from "react-world-flags"
 import ISO6391 from "iso-639-1"
@@ -42,7 +42,7 @@ const LanguageSelector = (): JSX.Element => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-sm border-2 border-gray-700">
+        <MenuButton className="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-xs border-2 border-gray-700">
           <Flag className="mb-0 h-5" code={ISO3166(language)} />
           <span>{ISO6391.getNativeName(ISO639(selectedLanguage))}</span>
           <FaChevronDown
@@ -50,7 +50,7 @@ const LanguageSelector = (): JSX.Element => {
             aria-hidden="true"
             size={15}
           />
-        </Menu.Button>
+        </MenuButton>
       </div>
 
       <Transition
@@ -62,11 +62,11 @@ const LanguageSelector = (): JSX.Element => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-26 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <MenuItems className="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden">
           <div className="py-1">
             {languages.map((lng: string) => (
-              <Menu.Item key={lng}>
-                {({ active }) => (
+              <MenuItem key={lng}>
+                {({ focus }) => (
                   <a
                     href="#"
                     id={lng}
@@ -76,20 +76,20 @@ const LanguageSelector = (): JSX.Element => {
                       changeLanguage(lng)
                     }}
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
                       "block px-4 py-2 text-sm",
                     )}
                   >
                     <div className="flex items-center space-x-2">
                       <Flag className="mb-0" code={ISO3166(lng)} width="35" />
-                      <span>{ISO6391.getNativeName(ISO639(lng))}</span>
+                      <span className="ml-2">{ISO6391.getNativeName(ISO639(lng))}</span>
                     </div>
                   </a>
                 )}
-              </Menu.Item>
+              </MenuItem>
             ))}
           </div>
-        </Menu.Items>
+        </MenuItems>
       </Transition>
     </Menu>
   )

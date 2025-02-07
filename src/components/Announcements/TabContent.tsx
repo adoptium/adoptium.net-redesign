@@ -20,7 +20,7 @@ const TabContent = ({ posts }) => {
                 })()}
               </p>
 
-              <h3 className="text-[20px] leading-[140%] text-white">
+              <h3 className="text-[20px] leading-[140%] text-white mb-4">
                 {post.node.frontmatter.title}
               </h3>
               <p className="tab-button-text text-sm text-lightgrey pt-2">

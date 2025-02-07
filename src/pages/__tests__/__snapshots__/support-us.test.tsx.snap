@@ -278,7 +278,7 @@ exports[`Support Us page > renders correctly 1`] = `
         src="/images/icons/message.svg"
       />
       <p
-        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8"
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
       >
         Connect with the community
       </p>

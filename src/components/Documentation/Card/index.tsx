@@ -20,7 +20,7 @@ const DocumentationCard = ({ links, title, Icon }: Props): JSX.Element | null =>
 
   return (
     <div className="w-full lg:w-1/3 p-3">
-      <div className="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden">
+      <div className="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden">
         <div className="p-4">
           <p className="mb-3 text-xl font-semibold flex items-center">
             <span className="inline-block mr-2">
@@ -37,7 +37,7 @@ const DocumentationCard = ({ links, title, Icon }: Props): JSX.Element | null =>
                   key={link.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                  className="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                 >
                   {link.name} <FaExternalLinkAlt size={13} />
                 </a>
@@ -45,7 +45,7 @@ const DocumentationCard = ({ links, title, Icon }: Props): JSX.Element | null =>
                 <Link
                   to={link.link}
                   key={link.link}
-                  className="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                  className="block px-4 py-2 hover:bg-white/10"
                 >
                   {link.name}
                 </Link>

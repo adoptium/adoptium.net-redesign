@@ -166,7 +166,7 @@ exports[`Docs page > renders correctly 1`] = `
             class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
+              class="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden"
             >
               <div
                 class="p-4"
@@ -200,19 +200,19 @@ exports[`Docs page > renders correctly 1`] = `
                   class="divide-y divide-gray-200"
                 >
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/installation"
                   >
                     docs.install.temurin
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/temurin/releases"
                   >
                     docs.download.temurin
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://hub.docker.com/_/eclipse-temurin"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -234,7 +234,7 @@ exports[`Docs page > renders correctly 1`] = `
                     </svg>
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/temurin/archive"
                   >
                     docs.release.archive
@@ -247,7 +247,7 @@ exports[`Docs page > renders correctly 1`] = `
             class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
+              class="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden"
             >
               <div
                 class="p-4"
@@ -281,31 +281,31 @@ exports[`Docs page > renders correctly 1`] = `
                   class="divide-y divide-gray-200"
                 >
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/support"
                   >
                     docs.support.guide
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/temurin/commercial-support"
                   >
                     docs.commercial.support
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/migration"
                   >
                     docs.migration.guide
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/supported-platforms"
                   >
                     docs.supported.platforms
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://github.com/adoptium/adoptium-support/issues"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -334,7 +334,7 @@ exports[`Docs page > renders correctly 1`] = `
             class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
+              class="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden"
             >
               <div
                 class="p-4"
@@ -368,19 +368,19 @@ exports[`Docs page > renders correctly 1`] = `
                   class="divide-y divide-gray-200"
                 >
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/aqavit"
                   >
                     docs.about.eclipse.aqavit
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/qvs-policy"
                   >
                     docs.aqavit.quality.verification
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/aqavit-verification"
                   >
                     docs.aqavit.verification.guide
@@ -393,7 +393,7 @@ exports[`Docs page > renders correctly 1`] = `
             class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
+              class="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden"
             >
               <div
                 class="p-4"
@@ -427,19 +427,19 @@ exports[`Docs page > renders correctly 1`] = `
                   class="divide-y divide-gray-200"
                 >
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/marketplace"
                   >
                     docs.marketplace.downloads
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/marketplace-policy"
                   >
                     docs.marketplace.listing.information
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/marketplace-guide"
                   >
                     docs.marketplace.publisher.guide
@@ -452,7 +452,7 @@ exports[`Docs page > renders correctly 1`] = `
             class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
+              class="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden"
             >
               <div
                 class="p-4"
@@ -486,31 +486,31 @@ exports[`Docs page > renders correctly 1`] = `
                   class="divide-y divide-gray-200"
                 >
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/contributing"
                   >
                     docs.how.to.contribute
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/first-timer-support"
                   >
                     docs.first.time.support
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/temurin/nightly"
                   >
                     docs.developer.nightly.builds
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/slack"
                   >
                     docs.join.our.slack.channel
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://github.com/adoptium/.github/blob/main/CODE_OF_CONDUCT.md"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -539,7 +539,7 @@ exports[`Docs page > renders correctly 1`] = `
             class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
+              class="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden"
             >
               <div
                 class="p-4"
@@ -573,19 +573,19 @@ exports[`Docs page > renders correctly 1`] = `
                   class="divide-y divide-gray-200"
                 >
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/secure-software"
                   >
                     docs.secure.software.pratices
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/slsa"
                   >
                     docs.slsa.secure.supply.chain
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://github.com/adoptium/adoptium/security/policy"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -607,7 +607,7 @@ exports[`Docs page > renders correctly 1`] = `
                     </svg>
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://outreach.eclipse.foundation/adoptium-temurin-supply-chain-security?utm_campaign=Temurin%20Case%20Study&utm_source=website&utm_medium=adoptium%20docs"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -629,7 +629,7 @@ exports[`Docs page > renders correctly 1`] = `
                     </svg>
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/reproducible-verification-builds"
                   >
                     docs.reproducible.verification.builds
@@ -642,7 +642,7 @@ exports[`Docs page > renders correctly 1`] = `
             class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
+              class="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden"
             >
               <div
                 class="p-4"
@@ -676,25 +676,25 @@ exports[`Docs page > renders correctly 1`] = `
                   class="divide-y divide-gray-200"
                 >
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/about"
                   >
                     docs.about.eclipse.adoptium
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/members"
                   >
                     docs.working.group.members
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/join"
                   >
                     docs.join.the.working.group
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://www.eclipse.org/org/workinggroups/sponsorship/working-group-sponsorship-agreement.pdf"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -723,7 +723,7 @@ exports[`Docs page > renders correctly 1`] = `
             class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
+              class="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden"
             >
               <div
                 class="p-4"
@@ -757,7 +757,7 @@ exports[`Docs page > renders correctly 1`] = `
                   class="divide-y divide-gray-200"
                 >
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://github.com/adoptium"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -779,7 +779,7 @@ exports[`Docs page > renders correctly 1`] = `
                     </svg>
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://github.com/adoptium/adoptium/blob/main/README.md"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -801,7 +801,7 @@ exports[`Docs page > renders correctly 1`] = `
                     </svg>
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://github.com/adoptium/temurin-build"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -823,7 +823,7 @@ exports[`Docs page > renders correctly 1`] = `
                     </svg>
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://github.com/adoptium/installer"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -845,7 +845,7 @@ exports[`Docs page > renders correctly 1`] = `
                     </svg>
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://github.com/adoptium/jmc-build"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -874,7 +874,7 @@ exports[`Docs page > renders correctly 1`] = `
             class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
+              class="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden"
             >
               <div
                 class="p-4"
@@ -908,13 +908,13 @@ exports[`Docs page > renders correctly 1`] = `
                   class="divide-y divide-gray-200"
                 >
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/faq"
                   >
                     docs.frequently.asked.questions
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://api.adoptium.net"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -936,13 +936,13 @@ exports[`Docs page > renders correctly 1`] = `
                     </svg>
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/news"
                   >
                     docs.adoptium.blog
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/support-us"
                   >
                     docs.support.us
@@ -955,7 +955,7 @@ exports[`Docs page > renders correctly 1`] = `
             class="w-full lg:w-1/3 p-3"
           >
             <div
-              class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
+              class="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden"
             >
               <div
                 class="p-4"
@@ -989,7 +989,7 @@ exports[`Docs page > renders correctly 1`] = `
                   class="divide-y divide-gray-200"
                 >
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://www.eclipse.org/org/artwork/guidelines/adoptium-brand-guidelines.pdf"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1011,7 +1011,7 @@ exports[`Docs page > renders correctly 1`] = `
                     </svg>
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
                     href="https://docs.google.com/presentation/d/1ChGhqZrAHCdk5S2Ii5s5RROng1saTaTtjZzsxWJ_MPA/copy"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1033,19 +1033,19 @@ exports[`Docs page > renders correctly 1`] = `
                     </svg>
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/logo-styleguide/"
                   >
                     footer.logo.and.artwork
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/temurin/buttons"
                   >
                     docs.download.buttons
                   </a>
                   <a
-                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    class="block px-4 py-2 hover:bg-white/10"
                     href="/en/docs/marketing-criteria"
                   >
                     docs.marketing.criteria

@@ -52,7 +52,7 @@ const LatestNews = () => {
               {set1.map((card, more) => (
                 <div
                   key={more}
-                  className="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+                  className="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
                 >
                   <h2 className="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3">
                     <RedIcon />
@@ -78,7 +78,7 @@ const LatestNews = () => {
               {set2.map((card, more) => (
                 <div
                   key={more}
-                  className="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+                  className="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
                 >
                   <h2 className="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3">
                     <RedIcon />

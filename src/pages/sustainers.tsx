@@ -109,6 +109,21 @@ const Sponsors = () => {
     },
   ]
 
+  const BecomeSustainer = () => (
+    <div className="flex flex-col md:flex-row gap-4 justify-center absolute items-center mt-[30px] md:-mt-[98px] w-full">
+      <a href="https://github.com/sponsors/adoptium" target="_blank">
+        <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
+          Become an Individual Sustainer
+        </button>
+      </a>
+      <Link to="/become-a-sustainer">
+        <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
+          Become a Corporate Sustainer
+        </button>
+      </Link>
+    </div>
+  )
+
   const sustainerProgram = [
     {
       image: "temurin-light.png",
@@ -140,18 +155,7 @@ const Sponsors = () => {
           subtitle="Become a Corporate Sustainer"
           className={"max-w-[1016px] mx-auto"}
         />
-        <div className="flex flex-col md:flex-row gap-4 justify-center absolute items-center mt-[30px] md:-mt-[98px] w-full">
-          <a href="https://github.com/sponsors/adoptium" target="_blank">
-            <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
-              Become an Individual Sustainer
-            </button>
-          </a>
-          <Link to="/become-a-sustainer">
-            <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
-              Become a Corporate Sustainer
-            </button>
-          </Link>
-        </div>
+        <BecomeSustainer />
       </div>
 
       <div className="w-full flex flex-col justify-center items-center pt-[240px] md:pt-[100px]">
@@ -250,12 +254,12 @@ const Sponsors = () => {
               <h2 className="text-left max-w-[855px] md:text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900">
                 Calculate your savings and Invest in Temurin’s Future
               </h2>
-              <p className="text-[#ff1464] max-w-[740px] text-[20px] text-center font-bold mt-10">
+              <p className="text-[#ff1464] max-w-[740px] text-[20px] text-center font-bold mt-10 mb-6">
                 The average company* using Eclipse Temurin saves more than
                 $1.6M annually. Isn’t it time you invest in sustaining your
                 savings?
               </p>
-              <p className="text-xs text-[#c4bfce]">
+              <p className="text-xs text-[#c4bfce] my-5">
                 *Self-reported number of employees, n = 211
               </p>
               <SavingsCalculator />
@@ -285,18 +289,7 @@ const Sponsors = () => {
               <UiVirtualContent data={data} />
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-8 justify-center items-center mt-4 mb-40 w-full">
-            <a href="https://github.com/sponsors/adoptium" target="_blank">
-              <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
-                Become an Individual Sustainer
-              </button>
-            </a>
-            <Link to="/become-a-sustainer">
-              <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
-                Become a Corporate Sustainer
-              </button>
-            </Link>
-          </div>
+          <BecomeSustainer />
           <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-8 mt-16">
             Temurin’s Sustainers
           </h2>

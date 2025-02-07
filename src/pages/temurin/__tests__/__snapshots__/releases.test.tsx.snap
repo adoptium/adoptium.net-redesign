@@ -1400,7 +1400,7 @@ exports[`Releases page > renders correctly 1`] = `
     class="mx-auto max-w-[1264px] py-8 lg:py-12 px-4 xl:px-0 flex flex-col gap-[64px] lg:gap-3 items-center lg:items-start lg:flex-row justify-between !py-16 md:!py-24 "
   >
     <div
-      class=" md:max-w-[420px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between"
+      class=" md:max-w-[420px] bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between"
     >
       <div>
         <h3
@@ -1416,7 +1416,7 @@ exports[`Releases page > renders correctly 1`] = `
       </div>
       <div>
         <p
-          class="text-[20px] font-semibold"
+          class="text-[20px] font-semibold pb-4"
         >
           Have a question that hasn’t been answered? Get in touch
         </p>

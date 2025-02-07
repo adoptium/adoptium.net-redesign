@@ -26,7 +26,7 @@ exports[`Layout component > renders correctly with data 1`] = `
         contributors
       </p>
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
       />
     </div>
   </div>

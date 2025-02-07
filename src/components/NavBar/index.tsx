@@ -107,7 +107,7 @@ const NavBar = () => {
   return (
     <header
       className={`sticky inset-x-0 top-0 z-50 ${
-        scrolled ? "bg-[#200E46] border-b-2 border-[#3E3355] bg-opacity-85 backdrop-blur-xl" : ""
+        scrolled ? "bg-[#200E46] border-b-2 border-[#3E3355]/85 backdrop-blur-xl" : ""
       }`}
     >
       {showAnnouncement && (
@@ -144,7 +144,7 @@ const NavBar = () => {
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <MenuItems
-                        className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#0E002A] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                        className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#0E002A] shadow-lg ring-1 ring-black/5 focus:outline-hidden"
                         style={{ minWidth: "max-content" }}
                       >
                         <div className="py-6 px-4">

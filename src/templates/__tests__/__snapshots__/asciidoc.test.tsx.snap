@@ -549,7 +549,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
             >
               <img
                 alt="author1"
-                class="rounded-full border-solid border-4 border-purple"
+                class="rounded-full border-solid border-4 border-purple mb-6"
                 src="https://github.com/author1.png?size=48"
                 style="max-width: 48px;"
               />
@@ -562,7 +562,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
             >
               <img
                 alt=" author2"
-                class="rounded-full border-solid border-4 border-purple"
+                class="rounded-full border-solid border-4 border-purple mb-6"
                 src="https://github.com/author2.png?size=48"
                 style="max-width: 48px;"
               />
@@ -570,7 +570,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
           </div>
         </div>
         <div
-          class="w-full px-6 py-8 rounded-2xl border-2 border-white border-opacity-50 flex-col justify-center items-start gap-2 inline-flex"
+          class="w-full px-6 py-8 rounded-2xl border-2 border-white/50 flex-col justify-center items-start gap-2 inline-flex"
         >
           <div
             class="self-stretch justify-start items-center gap-4 inline-flex"
@@ -647,7 +647,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
         src="/images/icons/message.svg"
       />
       <p
-        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8"
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
       >
         Connect with the community
       </p>
@@ -667,7 +667,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
     class="mx-auto max-w-[1264px] py-8 lg:py-12 px-4 xl:px-0 flex flex-col gap-[64px] lg:gap-3 items-center lg:items-start lg:flex-row justify-between undefined "
   >
     <div
-      class=" md:max-w-[420px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between"
+      class=" md:max-w-[420px] bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between"
     >
       <div>
         <h3
@@ -683,7 +683,7 @@ exports[`Asciidoc pages > renders correctly - installation slug 1`] = `
       </div>
       <div>
         <p
-          class="text-[20px] font-semibold"
+          class="text-[20px] font-semibold pb-4"
         >
           Have a question that hasn’t been answered? Get in touch
         </p>
@@ -1327,7 +1327,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
             >
               <img
                 alt="author1"
-                class="rounded-full border-solid border-4 border-purple"
+                class="rounded-full border-solid border-4 border-purple mb-6"
                 src="https://github.com/author1.png?size=48"
                 style="max-width: 48px;"
               />
@@ -1340,7 +1340,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
             >
               <img
                 alt=" author2"
-                class="rounded-full border-solid border-4 border-purple"
+                class="rounded-full border-solid border-4 border-purple mb-6"
                 src="https://github.com/author2.png?size=48"
                 style="max-width: 48px;"
               />
@@ -1348,7 +1348,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="w-full px-6 py-8 rounded-2xl border-2 border-white border-opacity-50 flex-col justify-center items-start gap-2 inline-flex"
+          class="w-full px-6 py-8 rounded-2xl border-2 border-white/50 flex-col justify-center items-start gap-2 inline-flex"
         >
           <div
             class="self-stretch justify-start items-center gap-4 inline-flex"
@@ -1425,7 +1425,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
         src="/images/icons/message.svg"
       />
       <p
-        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8"
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
       >
         Connect with the community
       </p>
@@ -1445,7 +1445,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
     class="mx-auto max-w-[1264px] py-8 lg:py-12 px-4 xl:px-0 flex flex-col gap-[64px] lg:gap-3 items-center lg:items-start lg:flex-row justify-between undefined "
   >
     <div
-      class=" md:max-w-[420px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between"
+      class=" md:max-w-[420px] bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between"
     >
       <div>
         <h3
@@ -1461,7 +1461,7 @@ exports[`Asciidoc pages > renders correctly 1`] = `
       </div>
       <div>
         <p
-          class="text-[20px] font-semibold"
+          class="text-[20px] font-semibold pb-4"
         >
           Have a question that hasn’t been answered? Get in touch
         </p>

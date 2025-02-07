@@ -3,7 +3,7 @@ import React from "react"
 export const GithubSlider = ({ current }) => (
   <svg
     className={`hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] ${
-      current == 0 ? "opacity-1" : "opacity-[0.25]"
+      current == 0 ? "fill-white" : "opacity-[0.25]"
     } `}
     width="140"
     height="48"
@@ -28,7 +28,7 @@ export const GithubSlider = ({ current }) => (
 export const AsanaSlider = ({ current }) => (
   <svg
     className={`hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] ${
-      current == 1 ? "opacity-1" : "opacity-[0.25]"
+      current == 1 ? "fill-white" : "opacity-[0.25]"
     } `}
     width="140"
     height="48"
@@ -77,7 +77,7 @@ export const AsanaSlider = ({ current }) => (
 export const GoogleSlider = ({ current }) => (
   <svg
     className={`hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] ${
-      current == 2 ? "opacity-1" : "opacity-[0.25]"
+      current == 2 ? "fill-white" : "opacity-[0.25]"
     } `}
     width="140"
     height="48"
@@ -116,7 +116,7 @@ export const GoogleSlider = ({ current }) => (
 export const SlackSlider = ({ current }) => (
   <svg
     className={`hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] ${
-      current == 3 ? "opacity-1" : "opacity-[0.25]"
+      current == 3 ? "fill-white" : "opacity-[0.25]"
     } `}
     width="140"
     height="48"

@@ -30,7 +30,7 @@ exports[`Index page > renders correctly 1`] = `
               class="text-center w-full"
             >
               <h1
-                class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
+                class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px] mb-8"
               >
                 The Power of Eclipse Temurin™
               </h1>
@@ -1301,7 +1301,7 @@ exports[`Index page > renders correctly 1`] = `
               class=" space-y-6 mt-[106px]"
             >
               <h2
-                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3"
+                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
               >
                 OpenJDK-Based
               </h2>
@@ -1325,7 +1325,7 @@ exports[`Index page > renders correctly 1`] = `
               class=" space-y-6 mt-[106px]"
             >
               <h2
-                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3"
+                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
               >
                 OpenJDK-Based
               </h2>
@@ -1349,7 +1349,7 @@ exports[`Index page > renders correctly 1`] = `
               class=" space-y-6 mt-[106px]"
             >
               <h2
-                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3"
+                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
               >
                 OpenJDK-Based
               </h2>
@@ -1373,7 +1373,7 @@ exports[`Index page > renders correctly 1`] = `
               class=" space-y-6 mt-[106px]"
             >
               <h2
-                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3"
+                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
               >
                 OpenJDK-Based
               </h2>
@@ -1459,22 +1459,26 @@ exports[`Index page > renders correctly 1`] = `
     class="bg-blue py-24 sm:py-28"
   >
     <div
-      class="mx-auto max-w-3xl md:max-w-7xl w-xl md:w-full px-6 xl:px-0"
+      class="mx-auto max-w-3xl md:max-w-7xl w-full px-6 xl:px-0"
     >
       <div
         class="mx-auto max-w-4xl sm:text-center"
       >
         <h2
-          class="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] "
+          class="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] mb-4"
         >
           A short title about products
         </h2>
       </div>
-      <p
-        class="mx-auto mt-6 max-w-2xl mb-0 text-base leading-6 text-grey text-center"
+      <div
+        class="flex justify-center items-center"
       >
-        Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
-      </p>
+        <p
+          class="mt-6 max-w-2xl mb-0 text-base leading-6 text-grey text-center"
+        >
+          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+        </p>
+      </div>
       <div
         class="mt-16 mb-8 flex md:h-[30em] justify-around lg:justify-between flex-wrap lg:flex-nowrap gap-6 xl:gap-8"
       >
@@ -1482,7 +1486,7 @@ exports[`Index page > renders correctly 1`] = `
           class="max-w-xl w-full h-full"
         >
           <div
-            class="bg-white flex justify-between h-full flex-col bg-opacity-5 p-8 xl:p-12 rounded-3xl border-2 border-white border-opacity-50"
+            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
           >
             <img
               alt="Eclipse Temurin™ logo"
@@ -1490,10 +1494,10 @@ exports[`Index page > renders correctly 1`] = `
               src="/images/projects/temurin-project.svg"
             />
             <div
-              class=" flex-col justify-center items-start gap-2"
+              class="flex-col justify-center items-start gap-2"
             >
               <div
-                class="justify-start items-center gap-3 inline-flex"
+                class="justify-start items-center gap-3 inline-flex pt-4"
               >
                 <svg
                   fill="none"
@@ -1548,7 +1552,7 @@ exports[`Index page > renders correctly 1`] = `
           class="max-w-xl w-full h-full"
         >
           <div
-            class="bg-white flex justify-between h-full flex-col bg-opacity-5 p-8 xl:p-12 rounded-3xl border-2 border-white border-opacity-50"
+            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
           >
             <img
               alt="Eclipse AQAvit logo"
@@ -1556,10 +1560,10 @@ exports[`Index page > renders correctly 1`] = `
               src="/images/projects/aqavit-project.svg"
             />
             <div
-              class=" flex-col justify-center items-start gap-2"
+              class="flex-col justify-center items-start gap-2"
             >
               <div
-                class="justify-start items-center gap-3 inline-flex"
+                class="justify-start items-center gap-3 inline-flex pt-4"
               >
                 <svg
                   fill="none"
@@ -1614,7 +1618,7 @@ exports[`Index page > renders correctly 1`] = `
           class="max-w-xl w-full h-full"
         >
           <div
-            class="bg-white flex justify-between h-full flex-col bg-opacity-5 p-8 xl:p-12 rounded-3xl border-2 border-white border-opacity-50"
+            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
           >
             <img
               alt="Eclipse Mission Control logo"
@@ -1622,10 +1626,10 @@ exports[`Index page > renders correctly 1`] = `
               src="/images/projects/mc-project.svg"
             />
             <div
-              class=" flex-col justify-center items-start gap-2"
+              class="flex-col justify-center items-start gap-2"
             >
               <div
-                class="justify-start items-center gap-3 inline-flex"
+                class="justify-start items-center gap-3 inline-flex pt-4"
               >
                 <svg
                   fill="none"
@@ -1685,56 +1689,60 @@ exports[`Index page > renders correctly 1`] = `
     <div
       class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6"
     >
-      <figure
-        class="max-w-screen-md mx-auto"
-      >
-        <svg
-          class="h-12 mx-auto mb-3 text-pink text-pink-400"
-          fill="none"
-          viewBox="0 0 24 27"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-            fill="currentColor"
-          />
-        </svg>
-        <blockquote
-          class="slide-in-right"
-          style="min-height: 204px;"
-        >
-          <span
-            class="md:text-[32px] text-[26px] leading-[34px] md:leading-10 font-semibold  text-white"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          </span>
-        </blockquote>
-        <figcaption
-          class="flex items-center justify-center md:mt-6 mt-0 space-x-3"
-        >
-          <img
-            alt="Joe Bloggs"
-            class="w-6 h-6 mb-0 rounded-full"
-            src="https://th.bing.com/th/id/OIP.sYE4E2Y8K4hHU21bS0zx2QHaH4?rs=1&pid=ImgDetMain"
-          />
-          <div
-            class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
-          >
-            <div
-              class="pr-3 text-pink font-medium text-pink-900"
-            >
-              Joe Bloggs
-            </div>
-            <div
-              class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
-            >
-              CEO at GitHub
-            </div>
-          </div>
-        </figcaption>
-      </figure>
       <div
-        class="flex justify-center items-center max-w-screen-md mx-auto"
+        class="flex justify-center items-center"
+      >
+        <figure
+          class="max-w-screen-md mx-auto"
+        >
+          <svg
+            class="h-12 mx-auto mb-3 text-pink text-pink-400"
+            fill="none"
+            viewBox="0 0 24 27"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+              fill="currentColor"
+            />
+          </svg>
+          <blockquote
+            class="slide-in-right"
+            style="min-height: 204px;"
+          >
+            <span
+              class="md:text-[32px] text-[26px] leading-[34px] md:leading-10 font-semibold  text-white"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            </span>
+          </blockquote>
+          <figcaption
+            class="flex items-center justify-center md:mt-6 mt-0 space-x-3"
+          >
+            <img
+              alt="Joe Bloggs"
+              class="w-6 h-6 mb-0 rounded-full"
+              src="https://th.bing.com/th/id/OIP.sYE4E2Y8K4hHU21bS0zx2QHaH4?rs=1&pid=ImgDetMain"
+            />
+            <div
+              class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
+            >
+              <div
+                class="px-3 text-pink font-medium text-pink-900"
+              >
+                Joe Bloggs
+              </div>
+              <div
+                class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+              >
+                CEO at GitHub
+              </div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="flex justify-center items-center max-w-screen-md mx-auto pt-8"
       >
         <button
           aria-label="Previous Testimonial"
@@ -1783,7 +1791,7 @@ exports[`Index page > renders correctly 1`] = `
           aria-label="GitHub Testimonial"
         >
           <svg
-            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] opacity-1 "
+            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] fill-white "
             fill="none"
             height="48"
             viewBox="0 0 140 48"
@@ -1972,7 +1980,7 @@ exports[`Index page > renders correctly 1`] = `
           class="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8"
         >
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -2023,7 +2031,7 @@ exports[`Index page > renders correctly 1`] = `
             </a>
           </div>
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -2078,7 +2086,7 @@ exports[`Index page > renders correctly 1`] = `
           class="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8 mt-16"
         >
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -2129,7 +2137,7 @@ exports[`Index page > renders correctly 1`] = `
             </a>
           </div>
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -2469,7 +2477,7 @@ exports[`Index page > renders correctly 1`] = `
     class="mx-auto max-w-[1264px] py-8 lg:py-12 px-4 xl:px-0 flex flex-col gap-[64px] lg:gap-3 items-center lg:items-start lg:flex-row justify-between undefined "
   >
     <div
-      class=" md:max-w-[420px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between"
+      class=" md:max-w-[420px] bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between"
     >
       <div>
         <h3
@@ -2485,7 +2493,7 @@ exports[`Index page > renders correctly 1`] = `
       </div>
       <div>
         <p
-          class="text-[20px] font-semibold"
+          class="text-[20px] font-semibold pb-4"
         >
           Have a question that hasn’t been answered? Get in touch
         </p>
@@ -2810,11 +2818,11 @@ exports[`Index page > renders correctly 1`] = `
       class="flex w-fit space-x-4 sm:space-x-[210px] md:mx-auto justify-between items-end mt-[81px] xl:ml-[461px] overflow-hidden"
     >
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
         style="margin-bottom: 100px; width: 305px;"
       />
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
         style="width: 305px;"
       />
     </div>
@@ -2860,11 +2868,11 @@ exports[`Index page > renders correctly 1`] = `
         class="absolute flex justify-between h-full w-full"
       >
         <div
-          class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
+          class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
           style="left: -80px; top: 0px; position: absolute;"
         />
         <div
-          class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
+          class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
           style="right: -80px; bottom: 0px; position: absolute;"
         />
       </div>
@@ -2873,10 +2881,10 @@ exports[`Index page > renders correctly 1`] = `
       class="flex w-fit xl:ml-[244px] justify-between mt-10 mb-[87px] sm:space-x-[233px] space-x-10 md:mx-auto overflow-hidden sm:ml-0"
     >
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
       />
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
         style="margin-top: 40px;"
       />
     </div>

@@ -49,7 +49,7 @@ const LatestReleases = () => {
           {LatestReleasesCard.map((card, index) => (
             <div
               key={index}
-              className="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+              className="p-8 border-[2px] border-2 border-white/50 rounded-3xl bg-tones-white backdrop-blur-12"
             >
               {index === 0 && (
                 <h2 className="text-primary text-base leading-6 font-normal flex items-center gap-x-3">

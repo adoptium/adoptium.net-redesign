@@ -388,7 +388,7 @@ exports[`Members Page > renders correctly 1`] = `
           src="/images/icons/message.svg"
         />
         <p
-          class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8"
+          class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
         >
           Speak to our team today
         </p>
@@ -423,7 +423,7 @@ exports[`Members Page > renders correctly 1`] = `
         contributors
       </p>
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white border-opacity-50"
+        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
       />
     </div>
   </div>

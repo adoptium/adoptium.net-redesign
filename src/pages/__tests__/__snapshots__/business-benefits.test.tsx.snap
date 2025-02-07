@@ -235,7 +235,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
                     href="https://mock.com"
                   >
                     <div
-                      class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                      class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white/50 backdrop-blur-xl px-4 py-5"
                     >
                       <img
                         alt="mock_member"
@@ -258,56 +258,60 @@ exports[`Business Benefits page > renders correctly 1`] = `
     <div
       class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6"
     >
-      <figure
-        class="max-w-screen-md mx-auto"
-      >
-        <svg
-          class="h-12 mx-auto mb-3 text-pink text-pink-400"
-          fill="none"
-          viewBox="0 0 24 27"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-            fill="currentColor"
-          />
-        </svg>
-        <blockquote
-          class="slide-in-right"
-          style="min-height: 204px;"
-        >
-          <span
-            class="md:text-[32px] text-[26px] leading-[34px] md:leading-10 font-semibold  text-white"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          </span>
-        </blockquote>
-        <figcaption
-          class="flex items-center justify-center md:mt-6 mt-0 space-x-3"
-        >
-          <img
-            alt="Joe Bloggs"
-            class="w-6 h-6 mb-0 rounded-full"
-            src="https://th.bing.com/th/id/OIP.sYE4E2Y8K4hHU21bS0zx2QHaH4?rs=1&pid=ImgDetMain"
-          />
-          <div
-            class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
-          >
-            <div
-              class="pr-3 text-pink font-medium text-pink-900"
-            >
-              Joe Bloggs
-            </div>
-            <div
-              class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
-            >
-              CEO at GitHub
-            </div>
-          </div>
-        </figcaption>
-      </figure>
       <div
-        class="flex justify-center items-center max-w-screen-md mx-auto"
+        class="flex justify-center items-center"
+      >
+        <figure
+          class="max-w-screen-md mx-auto"
+        >
+          <svg
+            class="h-12 mx-auto mb-3 text-pink text-pink-400"
+            fill="none"
+            viewBox="0 0 24 27"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+              fill="currentColor"
+            />
+          </svg>
+          <blockquote
+            class="slide-in-right"
+            style="min-height: 204px;"
+          >
+            <span
+              class="md:text-[32px] text-[26px] leading-[34px] md:leading-10 font-semibold  text-white"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            </span>
+          </blockquote>
+          <figcaption
+            class="flex items-center justify-center md:mt-6 mt-0 space-x-3"
+          >
+            <img
+              alt="Joe Bloggs"
+              class="w-6 h-6 mb-0 rounded-full"
+              src="https://th.bing.com/th/id/OIP.sYE4E2Y8K4hHU21bS0zx2QHaH4?rs=1&pid=ImgDetMain"
+            />
+            <div
+              class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
+            >
+              <div
+                class="px-3 text-pink font-medium text-pink-900"
+              >
+                Joe Bloggs
+              </div>
+              <div
+                class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+              >
+                CEO at GitHub
+              </div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="flex justify-center items-center max-w-screen-md mx-auto pt-8"
       >
         <button
           aria-label="Previous Testimonial"
@@ -356,7 +360,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
           aria-label="GitHub Testimonial"
         >
           <svg
-            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] opacity-1 "
+            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] fill-white "
             fill="none"
             height="48"
             viewBox="0 0 140 48"
@@ -577,7 +581,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
         src="/images/icons/message.svg"
       />
       <p
-        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8"
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
       >
         Contact us about how Temurin can help your business
       </p>

@@ -63,7 +63,7 @@ const LatestTemurin = (props): JSX.Element => {
 
   return (
     <div ref={ref} className="text-center w-full">
-      <h1 className="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]">
+      <h1 className="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px] mb-8">
         The Power of Eclipse Temurin™
       </h1>
       <p className="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold">

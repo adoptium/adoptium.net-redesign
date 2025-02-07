@@ -305,7 +305,7 @@ exports[`NewsPost Template page > renders correctly - featured image 1`] = `
             class="flex flex-col items-center"
           >
             <p
-              class="tab-button-text"
+              class="tab-button-text mb-4"
             >
               Share this post
             </p>
@@ -316,7 +316,7 @@ exports[`NewsPost Template page > renders correctly - featured image 1`] = `
                 href="/en#share-buttons"
               >
                 <button
-                  class="bg-primary px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3"
+                  class="bg-pink px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3"
                 >
                   <svg
                     fill="currentColor"
@@ -660,7 +660,7 @@ exports[`NewsPost Template page > renders correctly 1`] = `
             class="flex flex-col items-center"
           >
             <p
-              class="tab-button-text"
+              class="tab-button-text mb-4"
             >
               Share this post
             </p>
@@ -671,7 +671,7 @@ exports[`NewsPost Template page > renders correctly 1`] = `
                 href="/en#share-buttons"
               >
                 <button
-                  class="bg-primary px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3"
+                  class="bg-pink px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3"
                 >
                   <svg
                     fill="currentColor"

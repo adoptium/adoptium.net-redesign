@@ -76,87 +76,118 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
         class="overflow-auto h-[88%] scroll-sidebar"
       >
         <article>
-          <a
-            href="/enundefined"
-          >
-            <div
-              class="text-[#c4bfce"
+          <div>
+            <a
+              href="/en/test-announcement-1"
             >
-              <p
-                class="texxt-[12px] leading-[133.333%] text-lightgrey mb-0"
+              <div
+                class="text-[#c4bfce"
               >
-                213
-                 weeks ago
-              </p>
-              <h3
-                class="text-[20px] leading-[140%] text-white"
-              >
-                Mock Title 1
-              </h3>
-              <p
-                class="tab-button-text text-sm text-lightgrey pt-2"
-              >
-                Mock Description 1
-              </p>
-            </div>
-          </a>
-          <span
-            class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
-          />
-          <a
-            href="/enundefined"
-          >
-            <div
-              class="text-[#c4bfce"
+                <p
+                  class="text-[12px] leading-[133.333%] text-lightgrey mb-0"
+                >
+                  1 day ago
+                </p>
+                <h3
+                  class="text-[20px] leading-[140%] text-white"
+                >
+                  Test Announcement 1
+                </h3>
+                <p
+                  class="tab-button-text text-sm text-lightgrey pt-2"
+                >
+                  Description for announcement 1
+                </p>
+              </div>
+            </a>
+            <span
+              class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
+            />
+          </div>
+          <div>
+            <a
+              href="/en/test-announcement-2"
             >
-              <p
-                class="texxt-[12px] leading-[133.333%] text-lightgrey mb-0"
+              <div
+                class="text-[#c4bfce"
               >
-                213
-                 weeks ago
-              </p>
-              <h3
-                class="text-[20px] leading-[140%] text-white"
-              >
-                Mock Title 2
-              </h3>
-              <p
-                class="tab-button-text text-sm text-lightgrey pt-2"
-              >
-                Mock Description 2
-              </p>
-            </div>
-          </a>
-          <span
-            class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
-          />
-          <a
-            href="/enundefined"
-          >
-            <div
-              class="text-[#c4bfce"
+                <p
+                  class="text-[12px] leading-[133.333%] text-lightgrey mb-0"
+                >
+                  3 weeks ago
+                </p>
+                <h3
+                  class="text-[20px] leading-[140%] text-white"
+                >
+                  Test Announcement 2
+                </h3>
+                <p
+                  class="tab-button-text text-sm text-lightgrey pt-2"
+                >
+                  Description for announcement 2
+                </p>
+              </div>
+            </a>
+            <span
+              class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
+            />
+          </div>
+          <div>
+            <a
+              href="/en/test-announcement-3"
             >
-              <p
-                class="texxt-[12px] leading-[133.333%] text-lightgrey mb-0"
+              <div
+                class="text-[#c4bfce"
               >
-                213
-                 weeks ago
-              </p>
-              <h3
-                class="text-[20px] leading-[140%] text-white"
+                <p
+                  class="text-[12px] leading-[133.333%] text-lightgrey mb-0"
+                >
+                  1 week ago
+                </p>
+                <h3
+                  class="text-[20px] leading-[140%] text-white"
+                >
+                  Test Announcement 3
+                </h3>
+                <p
+                  class="tab-button-text text-sm text-lightgrey pt-2"
+                >
+                  Description for announcement 3
+                </p>
+              </div>
+            </a>
+            <span
+              class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
+            />
+          </div>
+          <div>
+            <a
+              href="/en/test-announcement-4"
+            >
+              <div
+                class="text-[#c4bfce"
               >
-                Mock Title 3
-              </h3>
-              <p
-                class="tab-button-text text-sm text-lightgrey pt-2"
-              >
-                Mock Description 3
-              </p>
-            </div>
-          </a>
-          <span
-            class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
-          />
+                <p
+                  class="text-[12px] leading-[133.333%] text-lightgrey mb-0"
+                >
+                  8 weeks ago
+                </p>
+                <h3
+                  class="text-[20px] leading-[140%] text-white"
+                >
+                  Test Announcement 4
+                </h3>
+                <p
+                  class="tab-button-text text-sm text-lightgrey pt-2"
+                >
+                  Description for announcement 4
+                </p>
+              </div>
+            </a>
+            <span
+              class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
+            />
+          </div>
         </article>
       </div>
     </div>

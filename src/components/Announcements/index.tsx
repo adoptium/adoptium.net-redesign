@@ -7,25 +7,25 @@ const Announcements = ({ handleClose }) => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(sort: {frontmatter: {date: DESC}}) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date
-            description
-            tags
-          }
-          fields {
-            postPath
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              date
+              description
+              tags
+            }
+            fields {
+              postPath
+            }
           }
         }
       }
     }
-  }
   `)
 
-  const latest_posts = data.allMdx.edges.slice(0, 3)
+  const latest_posts = data.allMdx.edges.slice(0, 4)
   const latest_releases = data.allMdx.edges.filter(
     ({ node }) => node.frontmatter.tags.includes("release-notes")
   )
@@ -65,7 +65,7 @@ const Announcements = ({ handleClose }) => {
       <div className="mt-6 grow overflow-hidden h-full pb-28">
         <div className="overflow-auto h-[88%] scroll-sidebar">
           {active === "Updates" && <TabContent posts={latest_posts} />}
-          {active === "Events" && <TabContent posts={latest_posts} />}
+          {/* {active === "Events" && <TabContent posts={latest_posts} />} */}
           {active === "Releases" && <TabContent posts={latest_releases} />}
         </div>
       </div>

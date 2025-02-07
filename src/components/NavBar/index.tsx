@@ -1,6 +1,14 @@
 import React, { useState, useEffect, Fragment } from "react"
 import { Link } from "../Link"
-import { Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react"
+import {
+  Dialog,
+  DialogPanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+  Transition,
+} from "@headlessui/react"
 import { FaChevronDown, FaRegBell } from "react-icons/fa"
 import { BsXLg, BsList } from "react-icons/bs"
 
@@ -71,144 +79,157 @@ const NavBar = () => {
   const [showLastSlide, setShowLastSlide] = useState(false)
   const [showAnnouncement, setShowAnnouncement] = useState(false)
   const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null)
+
   useEffect(() => {
     if (!mobileMenuOpen) {
       setShowLastSlide(false)
     }
   }, [mobileMenuOpen])
 
-  const openLastSlideHandler = item => {
+  const openLastSlideHandler = (item) => {
     setShowLastSlide(true)
     setActiveLastSlide(item)
   }
 
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
-    <header className="absolute max-w-[1288px] w-full mx-auto px-3 inset-x-0 top-0 z-50">
+    <header
+      className={`sticky inset-x-0 top-0 z-50 ${
+        scrolled ? "bg-[#200E46] border-b-2 border-[#3E3355] bg-opacity-85 backdrop-blur-xl" : ""
+      }`}
+    >
       {showAnnouncement && (
         <Announcements handleClose={() => setShowAnnouncement(false)} />
       )}
-      <nav
-        className="flex items-center gap-5 justify-between py-6"
-        aria-label="Global"
-      >
-        <Link to="/" placeholder="homepage">
-          <Logo alt="Adoptium Logo" className="h-10" />
-        </Link>
-        <div className="flex items-center gap-4">
-          <div className="hidden lg:flex lg:gap-6 xl:gap-x-12">
-            {navigation.map(item =>
-              item.children ? (
-                <Menu
-                  as="div"
-                  key={`desktop-${item.name}`}
-                  className="relative inline-block text-left"
-                >
-                  <div>
-                    <MenuButton className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50">
-                      {item.name}
-                      <FaChevronDown
-                        className="-mr-1 mt-1"
-                        aria-hidden="true"
-                      />
-                    </MenuButton>
-                  </div>
-
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
+      {/* Container div to center the nav content */}
+      <div className="max-w-[1288px] w-full mx-auto px-3">
+        <nav className="flex items-center gap-5 justify-between py-6" aria-label="Global">
+          <Link to="/" placeholder="homepage">
+            <Logo alt="Adoptium Logo" className="h-10" />
+          </Link>
+          <div className="flex items-center gap-4">
+            <div className="hidden lg:flex lg:gap-6 xl:gap-x-12">
+              {navigation.map((item) =>
+                item.children ? (
+                  <Menu
+                    as="div"
+                    key={`desktop-${item.name}`}
+                    className="relative inline-block text-left"
                   >
-                    <MenuItems
-                      className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#0E002A] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                      style={{ minWidth: "max-content" }}
+                    <div>
+                      <MenuButton className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50">
+                        {item.name}
+                        <FaChevronDown className="-mr-1 mt-1" aria-hidden="true" />
+                      </MenuButton>
+                    </div>
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-100"
+                      enterFrom="transform opacity-0 scale-95"
+                      enterTo="transform opacity-100 scale-100"
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-95"
                     >
-                      <div className="py-6 px-4">
-                        {item.children.map(child => (
-                          <MenuItem key={`mobile-${child.name}`}>
-                            {({ focus }) => (
-                              child.href && child.href.startsWith("/") ? (
-                                <Link
-                                  to={child.href}
-                                  className={classNames(
-                                    focus ? " text-[#A80D55]" : "text-white-700",
-                                    "block  py-3 text-sm border-b border-[#3E3355]",
-                                  )}
-                                >
-                                  {child.name}
-                                </Link>
-                              ) : (
-                                <a
-                                  href={child.href}
-                                  className={classNames(
-                                    focus ? "text-[#A80D55]" : "text-white-700",
-                                    "block py-3 text-sm border-b border-[#3E3355]",
-                                  )}
-                                >
-                                  {child.name}
-                                </a>
-                              )
-                            )}
-                          </MenuItem>
-                        ))}
-                      </div>
-                    </MenuItems>
-                  </Transition>
-                </Menu>
-              ) : (
-                item.href && item.href.startsWith("/")) ? (
-                <Link
-                  key={`desktop-${item.name}`}
-                  to={item.href}
-                  className="text-sm font-semibold leading-6 text-white-900"
-                >
-                  {item.name}
-                </Link>
-              ) : (
-                <a
-                  key={`desktop-${item.name}`}
-                  href={item.href}
-                  className="text-sm font-semibold leading-6 text-white-900"
-                >
-                  {item.name}
-                </a>
-              ),
-            )}
-          </div>
-          <div className="flex space-x-3 h-12">
-            <div className="hidden sm:block">
-              <LanguageSelector />
+                      <MenuItems
+                        className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#0E002A] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                        style={{ minWidth: "max-content" }}
+                      >
+                        <div className="py-6 px-4">
+                          {item.children.map((child) => (
+                            <MenuItem key={`mobile-${child.name}`}>
+                              {({ focus }) =>
+                                child.href && child.href.startsWith("/") ? (
+                                  <Link
+                                    to={child.href}
+                                    className={classNames(
+                                      focus ? "text-[#A80D55]" : "text-white-700",
+                                      "block py-3 text-sm border-b border-[#3E3355]"
+                                    )}
+                                  >
+                                    {child.name}
+                                  </Link>
+                                ) : (
+                                  <a
+                                    href={child.href}
+                                    className={classNames(
+                                      focus ? "text-[#A80D55]" : "text-white-700",
+                                      "block py-3 text-sm border-b border-[#3E3355]"
+                                    )}
+                                  >
+                                    {child.name}
+                                  </a>
+                                )
+                              }
+                            </MenuItem>
+                          ))}
+                        </div>
+                      </MenuItems>
+                    </Transition>
+                  </Menu>
+                ) : item.href && item.href.startsWith("/") ? (
+                  <Link
+                    key={`desktop-${item.name}`}
+                    to={item.href}
+                    className="text-sm font-semibold leading-6 text-white-900"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={`desktop-${item.name}`}
+                    href={item.href}
+                    className="text-sm font-semibold leading-6 text-white-900"
+                  >
+                    {item.name}
+                  </a>
+                )
+              )}
             </div>
-            <div className="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex cursor-pointer">
-              <div
-                aria-label="checksum"
-                onClick={() => setShowAnnouncement(!showAnnouncement)}
-                className="relative"
+            <div className="flex space-x-3 h-12">
+              <div className="hidden sm:block">
+                <LanguageSelector />
+              </div>
+              <div className="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex cursor-pointer">
+                <div
+                  aria-label="checksum"
+                  onClick={() => setShowAnnouncement(!showAnnouncement)}
+                  className="relative"
+                >
+                  <FaRegBell size={20} />
+                  <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full text-xs text-white font-bold flex items-center justify-center">
+                    1 {/* TODO: calculate the notification count */}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="flex lg:hidden ml-3">
+              <button
+                type="button"
+                className="-m-2.5 inline-flex items-center justify-center rounded-md text-white-700"
+                onClick={() => setMobileMenuOpen(true)}
               >
-                <FaRegBell size={20} />
-                <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full text-xs text-white font-bold flex items-center justify-center">
-                  1 {/* TODO find a way to calculate the notification count */}
-                </span>
-              </div>
+                <span className="sr-only">Open main menu</span>
+                <div className="border-2 border-[#3e3355] p-3 rounded-full">
+                  <BsList className="text-2xl" />
+                </div>
+              </button>
             </div>
           </div>
-          <div className="flex lg:hidden ml-3">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md text-white-700"
-              onClick={() => setMobileMenuOpen(true)}
-            >
-              <span className="sr-only">Open main menu</span>
-              <div className="border-2 border-[#3e3355] p-3 rounded-full">
-                <BsList className="text-2xl" />
-              </div>
-            </button>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
       <Dialog
         as="div"
         className="lg:hidden"
@@ -239,8 +260,9 @@ const NavBar = () => {
           </div>
           <div className="mt-6 grow relative w-full h-full overflow-hidden flow-root">
             <div
-              className={`-my-6 absolute duration-200 h-full left-0 w-full divide-y divide-white-500/10 ${showLastSlide ? "left-[-100%]" : ""
-                }`}
+              className={`-my-6 absolute duration-200 h-full left-0 w-full divide-y divide-white-500/10 ${
+                showLastSlide ? "left-[-100%]" : ""
+              }`}
             >
               <div className="space-y-2 py-6">
                 {navigation.map((item, index) => (
@@ -289,17 +311,18 @@ const NavBar = () => {
                         )}
                       </div>
                     )}
-                    {navigation.length != index + 1 ? (
-                      <div className=" w-full px-3 bg-[#3E3355] h-[1px]"></div>
-                    ) : null}
+                    {navigation.length !== index + 1 && (
+                      <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
+                    )}
                   </div>
                 ))}
               </div>
             </div>
 
             <div
-              className={`absolute duration-200 w-full h-full ${showLastSlide ? "left-0" : " left-full"
-                }`}
+              className={`absolute duration-200 w-full h-full ${
+                showLastSlide ? "left-0" : "left-full"
+              }`}
             >
               <div
                 onClick={() => setShowLastSlide(false)}
@@ -336,18 +359,14 @@ const NavBar = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-
                 <span className="text-[20px] text-white font-[400]">
-                  {activeLastSlide &&
-                    activeLastSlide.name &&
-                    activeLastSlide.name}
+                  {activeLastSlide && activeLastSlide.name}
                 </span>
               </div>
 
               <div className="space-y-2 w-full py-6">
                 {activeLastSlide &&
-                  activeLastSlide.children?.length &&
-                  activeLastSlide.children.map((item, index) => (
+                  activeLastSlide.children?.map((item, index) => (
                     <div key={index}>
                       <div className="flex w-full justify-between">
                         {item.href && item.href.startsWith("/") ? (
@@ -367,10 +386,10 @@ const NavBar = () => {
                           </a>
                         )}
                       </div>
-
-                      {navigation.length != index + 1 ? (
-                        <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
-                      ) : null}
+                      {activeLastSlide.children &&
+                        index !== activeLastSlide.children.length - 1 && (
+                          <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
+                        )}
                     </div>
                   ))}
               </div>
@@ -380,12 +399,11 @@ const NavBar = () => {
             <div className="py-6">
               <a
                 href="#"
-                className="bg-primary w-full text-base flex justify-center items-center  text-white font-bold h-[48px] rounded-full"
+                className="bg-primary w-full text-base flex justify-center items-center text-white font-bold h-[48px] rounded-full"
               >
                 Contact Us
               </a>
             </div>
-
             <ul className="flex mb-0 space-x-8 justify-center">
               <IconSocial />
             </ul>

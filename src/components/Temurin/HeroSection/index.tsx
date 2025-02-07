@@ -16,7 +16,7 @@ const HeroSection = () => {
 
   return (
     <div>
-      <div className=" sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative">
+      <div className="-mt-24 sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative">
         <div className="relative isolate">
           <div className="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]">
             <HeroBgImg alt="background-image" />

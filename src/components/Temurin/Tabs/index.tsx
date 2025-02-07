@@ -47,7 +47,8 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
   const [arch, updateArch] = useState("any")
   const [version, udateVersion] = useState("any")
 
-  const [active, setActive] = useState(data.mostRecentLts.version)
+  const [activeVersionSelectorTab, setActiveVersionSelectorTab] = useState(data.mostRecentLts.version)
+
   const [releases, setReleases] = useState(null)
 
   /**
@@ -94,12 +95,9 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
 
         if (versionParamStr.toLowerCase() === "latest") {
           // get the latest version of the list
-          defaultSelectedVersion = LTSVersions.sort(
-            (a, b) => b.node.version - a.node.version,
-          )[0].node.version
-        } else if (
-          LTSVersions.findIndex(version => version.node.version === versionParamNum) >= 0
-        ) {
+          defaultSelectedVersion = LTSVersions
+            .sort((a, b) => b.node.version - a.node.version,)[0].node.version
+        } else if (LTSVersions.findIndex(version => version.node.version === versionParamNum) >= 0) {
           defaultSelectedVersion = versionParamNum
         }
       }
@@ -119,6 +117,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
       osUpdater(defaultSelectedOS);
       archUpdater(defaultSelectedArch);
       versionUpdater(defaultSelectedVersion);
+      setActiveVersionSelectorTab(defaultSelectedVersion);
 
       // OK we can loaded elements
       setReady(true)
@@ -157,13 +156,13 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
       <section className="py-8 md:pt-16 px-6 w-full">
         <div className="w-full flex flex-col items-start justify-start sm:items-center sm:justify-center">
           <VersionSelector
-            active={active}
-            setActive={setActive}
+            activeVersionTab={activeVersionSelectorTab}
+            setActiveVersionTab={setActiveVersionSelectorTab}
             versions={LTSVersions}
             updateVersion={udateVersion}
             defaultVersion={data.mostRecentLts.version}
           />
-          {active === 1 ? (
+          {activeVersionSelectorTab === 1 ? (
             <ReleaseSelector
               versions={data.allVersions}
               updateVersion={versionUpdater}

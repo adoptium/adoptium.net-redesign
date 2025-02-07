@@ -88,6 +88,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
 
       // init the default selected Version, if any from the param 'version' or from 'variant'
       let defaultSelectedVersion = data.mostRecentLts.version
+      let defaultActiveVersionSelectorTab = data.mostRecentLts.version
       const versionParam = queryStringParams.version
       if (versionParam) {
         let versionParamStr = versionParam.toString()
@@ -95,10 +96,16 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
 
         if (versionParamStr.toLowerCase() === "latest") {
           // get the latest version of the list
-          defaultSelectedVersion = LTSVersions
-            .sort((a, b) => b.node.version - a.node.version,)[0].node.version
+          defaultSelectedVersion = LTSVersions.sort((a, b) => b.node.version - a.node.version,)[0].node.version;
+          defaultActiveVersionSelectorTab = defaultSelectedVersion;
         } else if (LTSVersions.findIndex(version => version.node.version === versionParamNum) >= 0) {
-          defaultSelectedVersion = versionParamNum
+          // it is a valid LTS version
+          defaultSelectedVersion = versionParamNum;
+          defaultActiveVersionSelectorTab = versionParamNum;
+        } else {
+          // it is another valid version
+          defaultSelectedVersion = versionParamNum;
+          defaultActiveVersionSelectorTab = 1;
         }
       }
 
@@ -117,7 +124,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
       osUpdater(defaultSelectedOS);
       archUpdater(defaultSelectedArch);
       versionUpdater(defaultSelectedVersion);
-      setActiveVersionSelectorTab(defaultSelectedVersion);
+      setActiveVersionSelectorTab(defaultActiveVersionSelectorTab);
 
       // OK we can loaded elements
       setReady(true)

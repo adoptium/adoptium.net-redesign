@@ -178,7 +178,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
           )}
         </div>
       </section>
-      <Heading />
+      <Heading results={releases} />
       <Table results={releases} openModalWithChecksum={openModalWithChecksum} />
     </>
   )

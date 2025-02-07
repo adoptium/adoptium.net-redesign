@@ -1,80 +1,47 @@
 import React from "react"
 import { graphql, Slice } from "gatsby"
-import { Link } from "gatsby-plugin-react-i18next"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
+import PageHeader from "../components/PageHeader"
+import NewsCardList from "../components/News/NewsCardList"
 import AuthorData from "../json/authors.json"
-import ArticlePreview from "../components/ArticlePreview"
 
 const AuthorPage = ({ data, pageContext }) => {
   const author = AuthorData[pageContext.author]
   const posts = data.allMdx.edges
+  const { previousPageNumber, nextPageNumber, currentPageNumber, numAuthorPages } = pageContext
 
-  const { previousPageNumber, nextPageNumber } = pageContext
+  // For page 2, previousPageNumber === 1 should lead to the main author URL
+  // For pages > 2, include the "/page" segment in the URL.
   const previousPageLink =
     previousPageNumber === 1
-      ? `/blog/author/${pageContext.author}`
-      : `/blog/author/${previousPageNumber}`
+      ? `/news/author/${pageContext.author}`
+      : `/news/author/${pageContext.author}/page/${previousPageNumber}`
+
+  const nextPageLink =
+    nextPageNumber ? `/news/author/${pageContext.author}/page/${nextPageNumber}` : null
+
+  // Base URL for numbered pagination links
+  const baseUrl = `/news/author/${pageContext.author}`
 
   return (
     <Layout>
-      <section className="py-5 container">
-        <div className="row py-lg-5">
-          <div className="col-lg-9 col-md-9 mx-auto">
-            <h1>{author.name}</h1>
-            <Slice alias="authorBio" />
-
-            <hr className="pb-5" />
-
-            {posts.map(({ node }) => {
-              const title = node.frontmatter.title
-              return (
-                <ArticlePreview
-                  key={node.fields.slug}
-                  author={author.name}
-                  date={node.frontmatter.date}
-                  postPath={node.fields.postPath}
-                  title={title}
-                  description={node.frontmatter.description}
-                  identifier={pageContext.author}
-                  excerpt={node.excerpt}
-                  tags={node.frontmatter.tags}
-                />
-              )
-            })}
-            <div>
-              <ul
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "space-between",
-                  listStyle: "none",
-                  padding: 0,
-                }}
-              >
-                <li>
-                  {previousPageNumber && (
-                    <Link to={previousPageLink} rel="prev">
-                      ← Previous page
-                    </Link>
-                  )}
-                </li>
-                <li>
-                  {nextPageNumber && (
-                    <Link
-                      to={`/blog/author/${pageContext.author}/page/${nextPageNumber}`}
-                      rel="next"
-                    >
-                      Next page →
-                    </Link>
-                  )}
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        subtitle="Author"
+        title={author.name}
+        description={<Slice alias="authorBio" />}
+        className="mx-auto max-w-[860px] px-2 w-full"
+      />
+      <NewsCardList 
+        posts={posts}
+        previousPageNumber={previousPageNumber}
+        previousPageLink={previousPageLink}
+        nextPage={nextPageLink}
+        currentPage={currentPageNumber}
+        totalPages={numAuthorPages}
+        baseUrl={baseUrl}
+      />
     </Layout>
   )
 }
@@ -116,15 +83,22 @@ export const authorPageQuery = graphql`
     ) {
       edges {
         node {
+          excerpt
           fields {
             slug
             postPath
+            generatedFeaturedImage
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
             description
             tags
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: FIXED)
+              }
+            }
           }
         }
       }

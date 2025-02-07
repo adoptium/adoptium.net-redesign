@@ -33,7 +33,7 @@ describe("fetchReleaseNotesForVersion", () => {
     )
     await waitFor(
       () => {
-        expect(result.current?.release_name).toBe("release_name_mock")
+        expect(result.current?.releaseNoteAPIResponse?.release_name).toBe('release_name_mock')
       },
       { interval: 1 },
     )

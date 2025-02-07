@@ -4,30 +4,28 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger)
-const UiVirtualContent = ({ data }) => {
+const UiVirtualContent = ({ data, ...props }) => {
   const [scaleY, setScaleY] = useState(0)
   const onProgressHandler = (self: any) => {
     setScaleY(self.progress.toFixed(4))
     const progress = self.progress.toFixed(4) * 100
 
-    // FOR FIRST BLOCK ANIMATION
-    if (progress < 33 && progress > 0) {
-      document.querySelector(".ui-virtual-box-1")?.classList.add("active")
-    } else {
-      document.querySelector(".ui-virtual-box-1")?.classList.remove("active")
-    }
-    // FOR FIRST SECOND ANIMATION
-    if (progress < 66 && progress > 32.99) {
-      document.querySelector(".ui-virtual-box-2")?.classList.add("active")
-    } else {
-      document.querySelector(".ui-virtual-box-2")?.classList.remove("active")
-    }
-    // FOR FIRST THIRD ANIMATION
-    if (progress < 99 && progress > 65.99) {
-      document.querySelector(".ui-virtual-box-3")?.classList.add("active")
-    } else {
-      document.querySelector(".ui-virtual-box-3")?.classList.remove("active")
-    }
+    // Dynamic step calculation
+    const step = 100 / data.length
+
+    data.forEach((_, index) => {
+      const lowerBound = step * index
+      const upperBound = step * (index + 1) - 0.01
+
+      const element = document.querySelector(`.ui-virtual-box-${index + 1}`)
+      if (element) {
+        if (progress > lowerBound && progress <= upperBound) {
+          element.classList.add("active")
+        } else {
+          element.classList.remove("active")
+        }
+      }
+    })
   }
   useEffect(() => {
     ScrollTrigger.create({
@@ -38,7 +36,7 @@ const UiVirtualContent = ({ data }) => {
       scrub: true,
       markers: false,
     })
-  }, [])
+  }, [data])
 
   return (
     <div className="max-w-[1048px] ui-virtual-wrapper mt-10 relative mx-auto px-4 sm:px-0">
@@ -60,11 +58,23 @@ const UiVirtualContent = ({ data }) => {
           }`}
         >
           <div className="w-[50%]">
-            <img
-              src={`/images/icons/${item.image}`}
-              alt="Description"
-              className={`max-w-[436px] mb-0`}
-            />
+            {item.subtext !== undefined ? (
+              <div className="flex flex-col justify-center items-center">
+                <img
+                  src={`/images/icons/${item.image}`}
+                  alt="Description"
+                  className={`max-w-[436px] mb-0`}
+                />
+                <h2 className="text-5xl font-medium">{item.subtext.title}</h2>
+                <p className="text-2xl text-[#ff1464]">{item.subtext.amount}</p>
+              </div>
+            ) : (
+              <img
+                src={`/images/icons/${item.image}`}
+                alt="Description"
+                className={`max-w-[436px] mb-0`}
+              />
+            )}
           </div>
           <div className="w-[50%]">
             <div className="max-w-[436px] ml-auto">

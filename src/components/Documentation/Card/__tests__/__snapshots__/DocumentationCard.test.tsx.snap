@@ -47,7 +47,7 @@ exports[`DocumentationCard component > renders correctly 1`] = `
         >
           <a
             class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-            href="/link1"
+            href="/en/link1"
           >
             Link1
           </a>

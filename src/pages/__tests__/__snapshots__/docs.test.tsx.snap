@@ -201,13 +201,13 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/installation"
+                    href="/en/installation"
                   >
                     docs.install.temurin
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/temurin/releases"
+                    href="/en/temurin/releases"
                   >
                     docs.download.temurin
                   </a>
@@ -235,7 +235,7 @@ exports[`Docs page > renders correctly 1`] = `
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/temurin/archive"
+                    href="/en/temurin/archive"
                   >
                     docs.release.archive
                   </a>
@@ -282,25 +282,25 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/support"
+                    href="/en/support"
                   >
                     docs.support.guide
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/temurin/commercial-support"
+                    href="/en/temurin/commercial-support"
                   >
                     docs.commercial.support
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/migration"
+                    href="/en/docs/migration"
                   >
                     docs.migration.guide
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/supported-platforms"
+                    href="/en/supported-platforms"
                   >
                     docs.supported.platforms
                   </a>
@@ -369,19 +369,19 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/aqavit"
+                    href="/en/aqavit"
                   >
                     docs.about.eclipse.aqavit
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/qvs-policy"
+                    href="/en/docs/qvs-policy"
                   >
                     docs.aqavit.quality.verification
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/aqavit-verification"
+                    href="/en/docs/aqavit-verification"
                   >
                     docs.aqavit.verification.guide
                   </a>
@@ -428,19 +428,19 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/marketplace"
+                    href="/en/marketplace"
                   >
                     docs.marketplace.downloads
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/marketplace-policy"
+                    href="/en/docs/marketplace-policy"
                   >
                     docs.marketplace.listing.information
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/marketplace-guide"
+                    href="/en/docs/marketplace-guide"
                   >
                     docs.marketplace.publisher.guide
                   </a>
@@ -487,25 +487,25 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/contributing"
+                    href="/en/contributing"
                   >
                     docs.how.to.contribute
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/first-timer-support"
+                    href="/en/docs/first-timer-support"
                   >
                     docs.first.time.support
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/temurin/nightly"
+                    href="/en/temurin/nightly"
                   >
                     docs.developer.nightly.builds
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/slack"
+                    href="/en/slack"
                   >
                     docs.join.our.slack.channel
                   </a>
@@ -574,13 +574,13 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/secure-software"
+                    href="/en/docs/secure-software"
                   >
                     docs.secure.software.pratices
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/slsa"
+                    href="/en/docs/slsa"
                   >
                     docs.slsa.secure.supply.chain
                   </a>
@@ -605,6 +605,34 @@ exports[`Docs page > renders correctly 1`] = `
                         d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
                       />
                     </svg>
+                  </a>
+                  <a
+                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+                    href="https://outreach.eclipse.foundation/adoptium-temurin-supply-chain-security?utm_campaign=Temurin%20Case%20Study&utm_source=website&utm_medium=adoptium%20docs"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    docs.temurin.security.case.study
+                     
+                    <svg
+                      fill="currentColor"
+                      height="13"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="13"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/en/docs/reproducible-verification-builds"
+                  >
+                    docs.reproducible.verification.builds
                   </a>
                 </div>
               </div>
@@ -649,19 +677,19 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/about"
+                    href="/en/about"
                   >
                     docs.about.eclipse.adoptium
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/members"
+                    href="/en/members"
                   >
                     docs.working.group.members
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/join"
+                    href="/en/join"
                   >
                     docs.join.the.working.group
                   </a>
@@ -881,7 +909,7 @@ exports[`Docs page > renders correctly 1`] = `
                 >
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/faq"
+                    href="/en/docs/faq"
                   >
                     docs.frequently.asked.questions
                   </a>
@@ -908,30 +936,14 @@ exports[`Docs page > renders correctly 1`] = `
                     </svg>
                   </a>
                   <a
-                    class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
-                    href="https://adoptium.net/blog"
-                    rel="noopener noreferrer"
-                    target="_blank"
+                    class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+                    href="/en/news"
                   >
                     docs.adoptium.blog
-                     
-                    <svg
-                      fill="currentColor"
-                      height="13"
-                      stroke="currentColor"
-                      stroke-width="0"
-                      viewBox="0 0 512 512"
-                      width="13"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
-                      />
-                    </svg>
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/support-us"
+                    href="/en/support-us"
                   >
                     docs.support.us
                   </a>
@@ -1022,19 +1034,19 @@ exports[`Docs page > renders correctly 1`] = `
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/logo-styleguide/"
+                    href="/en/docs/logo-styleguide/"
                   >
                     footer.logo.and.artwork
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/temurin/buttons"
+                    href="/en/temurin/buttons"
                   >
                     docs.download.buttons
                   </a>
                   <a
                     class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
-                    href="/docs/marketing-criteria"
+                    href="/en/docs/marketing-criteria"
                   >
                     docs.marketing.criteria
                   </a>

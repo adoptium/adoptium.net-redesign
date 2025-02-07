@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next"
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
 import { SmallLogoIcon } from "../Common/Icon"
 import MobileFooter from "./MobileFooter"
 import IconSocial from "../IconSocial"
 import LeavingSiteDisclaimerModal from '../LeavingSiteDisclaimerModal';
+import { Link } from "../Link"
 
 interface FooterData {
   title: {

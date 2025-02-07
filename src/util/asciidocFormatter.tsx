@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../components/Link"
 import parse, { domToReact } from "html-react-parser"
 
 import AccordionItem from "../components/Asciidoc/AccordionItem"

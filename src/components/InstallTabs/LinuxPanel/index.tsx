@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../../Link"
 import ShellBox from "../../ShellBox"
 import "../InstallTabs.scss"
 

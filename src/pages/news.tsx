@@ -1,17 +1,27 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby-plugin-react-i18next"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import PageHeader from "../components/PageHeader"
 import NewsCardList from "../components/News/NewsCardList"
-import AuthorData from "../json/authors.json"
-import ArticlePreview from "../components/ArticlePreview"
 
-const BlogIndex = ({ data }) => {
+const NewsIndex = ({ data }) => {
   const posts = data.allMdx.edges
-  const nextPageNumber = data.allMdx.totalCount > 10 ? 2 : null
+  const totalCount = data.allMdx.totalCount
+  const postsPerPage = 6
+  const totalPages = Math.ceil(totalCount / postsPerPage)
+  const currentPage = 1
+
+  // For page 1, there is no previous page.
+  const previousPageNumber = null
+  const previousPageLink = null
+
+  // If there are more pages, calculate the next page's link.
+  const nextPageNumber = currentPage < totalPages ? currentPage + 1 : null
+  const nextPage = nextPageNumber ? `/news/page/${nextPageNumber}` : null
+
+  const baseUrl = "/news" // This is used by your pagination component to build numbered links
 
   return (
     <Layout>
@@ -19,14 +29,22 @@ const BlogIndex = ({ data }) => {
         subtitle="News"
         title="News & Updates"
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
-        className={"mx-auto max-w-[860px] px-2 w-full"}
+        className="mx-auto max-w-[860px] px-2 w-full"
       />
-      <NewsCardList posts={posts} previousPageNumber={null} previousPageLink={null} nextPageNumber={nextPageNumber}  />
+      <NewsCardList 
+        posts={posts}
+        previousPageNumber={previousPageNumber}
+        previousPageLink={previousPageLink}
+        nextPage={nextPage}
+        currentPage={currentPage}
+        totalPages={totalPages}
+        baseUrl={baseUrl}
+      />
     </Layout>
   )
 }
 
-export default BlogIndex
+export default NewsIndex
 
 export const Head = () => <Seo title="News & Events" />
 
@@ -45,6 +63,7 @@ export const pageQuery = graphql`
           fields {
             slug
             postPath
+            generatedFeaturedImage
           }
           frontmatter {
             author
@@ -52,6 +71,11 @@ export const pageQuery = graphql`
             title
             description
             tags
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: FIXED)
+              }
+            }
           }
         }
       }

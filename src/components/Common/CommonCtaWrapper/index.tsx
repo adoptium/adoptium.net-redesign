@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import OSSelector from "../OSSelector"
-import { SolarisIcon } from "../Icon"
+import { AixIcon, SolarisIcon } from "../Icon"
 import { FaApple, FaWindows } from "react-icons/fa"
 import { FcLinux } from "react-icons/fc"
 import { SiAlpinelinux } from "react-icons/si"
@@ -56,7 +56,7 @@ const osIcons = {
   mac: FaApple,
   "alpine-linux": SiAlpinelinux, // Assuming alpine-linux uses the same icon as other Linux distros
   linux: FcLinux,
-  aix: SolarisIcon, // Assuming you have an AIX icon
+  aix: AixIcon,
   solaris: SolarisIcon,
 }
 

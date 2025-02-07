@@ -34,7 +34,7 @@ const Seo = ({ title, description, twitterCard }: Props): JSX.Element => {
   }
 
   if (!twitterCard) {
-    twitterCard = "images/social-image.png"
+    twitterCard = "images/social-image.jpg"
   }
 
   const siteTitle = title + " | Adoptium"

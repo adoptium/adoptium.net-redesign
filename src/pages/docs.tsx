@@ -175,6 +175,8 @@ const DocumentationPage = ({ data }) => {
                     name: t("docs.vulnerability.reporting", "Vulnerability Reporting"),
                     link: "https://github.com/adoptium/adoptium/security/policy",
                   },
+                  { name: t('docs.temurin.security.case.study', 'Temurin Security Case Study'), link: 'https://outreach.eclipse.foundation/adoptium-temurin-supply-chain-security?utm_campaign=Temurin%20Case%20Study&utm_source=website&utm_medium=adoptium%20docs' },
+                  { name: t('docs.reproducible.verification.builds', 'Reproducible Verification Builds'), link: '/docs/reproducible-verification-builds' }
                 ]}
               />
               <DocumentationCard
@@ -238,8 +240,8 @@ const DocumentationPage = ({ data }) => {
                     link: "https://api.adoptium.net",
                   },
                   {
-                    name: t("docs.adoptium.blog", "Adoptium Blog"),
-                    link: "https://adoptium.net/blog",
+                    name: t("docs.adoptium.blog", "Adoptium News"),
+                    link: "/news",
                   },
                   {
                     name: t("docs.support.us", "Support Us"),

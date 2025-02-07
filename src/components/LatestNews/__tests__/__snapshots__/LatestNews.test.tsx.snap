@@ -21,11 +21,15 @@ exports[`Latest News component > renders correctly 1`] = `
         >
           Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
         </h3>
-        <button
-          class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block "
+        <a
+          href="/en/news"
         >
-          See all news
-        </button>
+          <button
+            class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block "
+          >
+            See all news
+          </button>
+        </a>
       </div>
       <div
         class="max-w-[780px] w-full lg:flex gap-4 xl:gap-x-8 hidden  "
@@ -79,6 +83,7 @@ exports[`Latest News component > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
@@ -129,6 +134,7 @@ exports[`Latest News component > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
@@ -183,6 +189,7 @@ exports[`Latest News component > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
@@ -233,6 +240,7 @@ exports[`Latest News component > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
@@ -294,6 +302,7 @@ exports[`Latest News component > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>
@@ -344,6 +353,7 @@ exports[`Latest News component > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>
@@ -394,6 +404,7 @@ exports[`Latest News component > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>
@@ -444,6 +455,7 @@ exports[`Latest News component > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>

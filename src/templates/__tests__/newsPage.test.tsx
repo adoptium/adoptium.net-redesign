@@ -7,9 +7,10 @@ import { createMDXData } from "../../__fixtures__/page"
 
 let mockData = createMDXData()
 const pageContext = {
-  currentPageNumber: 2,
+  currentPage: 2,
   previousPageNumber: 1,
   nextPageNumber: 3,
+  totalPages: 5, 
 }
 
 describe("News Template page", () => {

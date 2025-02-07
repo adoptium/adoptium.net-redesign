@@ -1,6 +1,8 @@
 import React from "react"
-import { Link, Trans } from "gatsby-plugin-react-i18next"
+import { Trans } from "gatsby-plugin-react-i18next"
 import { BsCopy, BsDownload } from "react-icons/bs"
+import { MdVerifiedUser } from "react-icons/md"
+import { Link } from "../../Link"
 
 const CommonDownloader = ({ openModalWithChecksum, obj }) => {
   return (
@@ -24,6 +26,24 @@ const CommonDownloader = ({ openModalWithChecksum, obj }) => {
             </Link>
           </span>
           <h5 className="text-base font-normal">{obj.label}</h5>
+          <MdVerifiedUser
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="This build is JCK certified"
+            size={30}
+            style={{ color: "#537FB9" }}
+          />
+          <Link to="/aqavit">
+            <img
+              src="/images/aqavit-icon.png"
+              width={25}
+              alt="AQAvit logo"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="This build is AQAvit Verified"
+              className="img-fluid mb-0"
+            />
+          </Link>
         </div>
         <div className="flex items-center gap-2">
           <span className="cursor-pointer group">

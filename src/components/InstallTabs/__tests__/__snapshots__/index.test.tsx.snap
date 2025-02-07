@@ -394,7 +394,7 @@ exports[`Tests for InstallTabs component > renders correctly for Linux 1`] = `
           </pre>
           <a
             class="install__docs-button"
-            href="/installation/linux"
+            href="/en/installation/linux"
           >
             Read documentation
           </a>
@@ -588,7 +588,7 @@ exports[`Tests for InstallTabs component > renders correctly for Unix 1`] = `
           </pre>
           <a
             class="install__docs-button"
-            href="/installation/linux"
+            href="/en/installation/linux"
           >
             Read documentation
           </a>

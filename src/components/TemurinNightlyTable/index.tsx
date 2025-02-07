@@ -1,7 +1,8 @@
 import * as React from "react"
-import { Link, Trans, useI18next } from "gatsby-plugin-react-i18next"
+import { Trans, useI18next } from "gatsby-plugin-react-i18next"
 import { capitalize } from "../../util/capitalize"
 import { localeDate } from "../../util/localeDate"
+import { Link } from "../Link"
 
 const getFileName = (link: URL) => {
   return link.toString().split('/').slice(-1);

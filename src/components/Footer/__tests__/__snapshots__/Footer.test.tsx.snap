@@ -188,7 +188,7 @@ exports[`Footer component > renders correctly 1`] = `
               <li>
                 <a
                   class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
-                  href="/docs"
+                  href="/en/docs"
                 >
                   Text
                 </a>
@@ -196,7 +196,7 @@ exports[`Footer component > renders correctly 1`] = `
               <li>
                 <a
                   class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
-                  href="/contributing"
+                  href="/en/contributing"
                 >
                   Text
                 </a>
@@ -551,7 +551,7 @@ exports[`Footer component > renders correctly 1`] = `
             <li>
               <a
                 class="leading-6 transition hover:opacity-75 dark:text-gray-200"
-                href="/slack"
+                href="/en/slack"
                 rel="noreferrer"
                 target="_blank"
               >

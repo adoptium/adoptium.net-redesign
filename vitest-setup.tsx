@@ -22,6 +22,7 @@ const mdxMock = number => {
         title: `Mock Title ${number}`,
         description: `Mock Description ${number}`,
         date: "2021-01-01",
+        tags: ["mock-tag-1", "release-notes"],
       },
     },
   }

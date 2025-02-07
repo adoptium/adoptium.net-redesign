@@ -76,7 +76,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                 />
               </svg>
               <a
-                href="/aqavit"
+                href="/en/aqavit"
               >
                 <img
                   alt="AQAvit logo"
@@ -119,7 +119,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
               <p>
                 <a
                   class="link-light"
-                  href="/temurin/release-notes?version=release_notes_name_mock"
+                  href="/en/temurin/release-notes?version=release_notes_name_mock"
                 >
                   <svg
                     fill="currentColor"
@@ -200,8 +200,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                   >
                     <a
                       class="btn btn-primary"
-                      href="/download"
-                      state="[object Object]"
+                      href="/en/download"
                       style="width: 9em;"
                     >
                       type_mock
@@ -267,7 +266,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                 />
               </svg>
               <a
-                href="/aqavit"
+                href="/en/aqavit"
               >
                 <img
                   alt="AQAvit logo"
@@ -310,7 +309,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
               <p>
                 <a
                   class="link-light"
-                  href="/temurin/release-notes?version=release_notes_name_mock"
+                  href="/en/temurin/release-notes?version=release_notes_name_mock"
                 >
                   <svg
                     fill="currentColor"
@@ -378,8 +377,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                   >
                     <a
                       class="btn btn-primary"
-                      href="/download"
-                      state="[object Object]"
+                      href="/en/download"
                       style="width: 9em;"
                     >
                       type_mock
@@ -403,8 +401,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                   >
                     <a
                       class="btn btn-primary"
-                      href="/download"
-                      state="[object Object]"
+                      href="/en/download"
                       style="width: 9em;"
                     >
                       type_mock

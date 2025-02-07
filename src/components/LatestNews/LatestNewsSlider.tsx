@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../Link"
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react"
 import SwiperCore from "swiper"
 import { Navigation } from "swiper/modules"

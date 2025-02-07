@@ -43,7 +43,7 @@ exports[`Temurin Nightly page > renders correctly 1`] = `
           >
             <a
               class="btn btn-primary m-3"
-              href="/temurin/releases"
+              href="/en/temurin/releases"
             >
               Text
                
@@ -63,7 +63,7 @@ exports[`Temurin Nightly page > renders correctly 1`] = `
             </a>
             <a
               class="btn btn-secondary m-3"
-              href="/temurin/archive"
+              href="/en/temurin/archive"
             >
               Text
                

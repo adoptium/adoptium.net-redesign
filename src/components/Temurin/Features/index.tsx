@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../../Link"
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react"
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi"
 import SwiperCore from "swiper"

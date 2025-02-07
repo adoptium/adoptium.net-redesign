@@ -83,7 +83,7 @@ const NavBar = () => {
   }
 
   return (
-    <header className="absolute max-w-[1288px] w-full mx-auto px-3 inset-x-0 top-0 z-50">
+    <header className="sticky bg-[#14003c] max-w-[1288px] w-full mx-auto px-3 inset-x-0 top-0 z-50">
       {showAnnouncement && (
         <Announcements handleClose={() => setShowAnnouncement(false)} />
       )}

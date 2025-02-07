@@ -85,7 +85,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
               <p
                 class="texxt-[12px] leading-[133.333%] text-lightgrey mb-0"
               >
-                213
+                214
                  weeks ago
               </p>
               <h3
@@ -112,7 +112,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
               <p
                 class="texxt-[12px] leading-[133.333%] text-lightgrey mb-0"
               >
-                213
+                214
                  weeks ago
               </p>
               <h3
@@ -139,7 +139,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
               <p
                 class="texxt-[12px] leading-[133.333%] text-lightgrey mb-0"
               >
-                213
+                214
                  weeks ago
               </p>
               <h3

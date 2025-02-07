@@ -4,7 +4,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
 <main>
   <div>
     <div
-      class=" sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative"
+      class="-mt-24 sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative"
     >
       <div
         class="relative isolate"

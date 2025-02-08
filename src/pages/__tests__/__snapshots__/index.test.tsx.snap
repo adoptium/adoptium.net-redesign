@@ -1791,7 +1791,7 @@ exports[`Index page > renders correctly 1`] = `
           aria-label="GitHub Testimonial"
         >
           <svg
-            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] fill-white "
+            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] fill-white"
             fill="none"
             height="48"
             viewBox="0 0 140 48"
@@ -1818,7 +1818,7 @@ exports[`Index page > renders correctly 1`] = `
           aria-label="Aana Testimonial"
         >
           <svg
-            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] opacity-[0.25] "
+            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] opacity-[0.25]"
             fill="none"
             height="48"
             viewBox="0 0 140 48"
@@ -1867,7 +1867,7 @@ exports[`Index page > renders correctly 1`] = `
           aria-label="Google Testimonial"
         >
           <svg
-            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] opacity-[0.25] "
+            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] opacity-[0.25]"
             fill="none"
             height="48"
             viewBox="0 0 140 48"
@@ -1908,7 +1908,7 @@ exports[`Index page > renders correctly 1`] = `
           aria-label="Slack Testimonial"
         >
           <svg
-            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] opacity-[0.25] "
+            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] opacity-[0.25]"
             fill="none"
             height="48"
             viewBox="0 0 140 48"

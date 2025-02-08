@@ -1,16 +1,28 @@
 import React from "react"
 
-export const GithubSlider = ({ current }) => (
+type SliderIconProps = {
+  current: number
+  index: number
+  children: React.ReactNode
+}
+
+const SliderIcon: React.FC<SliderIconProps> = ({ current, index, children }) => (
   <svg
     className={`hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] ${
-      current == 0 ? "fill-white" : "opacity-[0.25]"
-    } `}
+      current === index ? "fill-white" : "opacity-[0.25]"
+    }`}
     width="140"
     height="48"
     viewBox="0 0 140 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
+    {children}
+  </svg>
+)
+
+export const GithubSlider = ({ current }: { current: number }) => (
+  <SliderIcon current={current} index={0}>
     <g opacity="100">
       <path
         fillRule="evenodd"
@@ -23,19 +35,11 @@ export const GithubSlider = ({ current }) => (
         fill="white"
       />
     </g>
-  </svg>
+  </SliderIcon>
 )
-export const AsanaSlider = ({ current }) => (
-  <svg
-    className={`hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] ${
-      current == 1 ? "fill-white" : "opacity-[0.25]"
-    } `}
-    width="140"
-    height="48"
-    viewBox="0 0 140 48"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+
+export const AsanaSlider = ({ current }: { current: number }) => (
+  <SliderIcon current={current} index={1}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -72,19 +76,11 @@ export const AsanaSlider = ({ current }) => (
       d="M27.0895 26.1881C23.8525 26.1881 21.2282 28.8123 21.2282 32.0497C21.2282 35.2868 23.8525 37.911 27.0895 37.911C30.3267 37.911 32.9509 35.2868 32.9509 32.0497C32.9509 28.8123 30.3267 26.1881 27.0895 26.1881ZM11.8613 26.1886C8.62424 26.1886 6 28.8123 6 32.0497C6 35.2868 8.62424 37.911 11.8613 37.911C15.0986 37.911 17.723 35.2868 17.723 32.0497C17.723 28.8123 15.0986 26.1886 11.8613 26.1886ZM25.3367 18.8612C25.3367 22.0986 22.7126 24.7231 19.4755 24.7231C16.2382 24.7231 13.6141 22.0986 13.6141 18.8612C13.6141 15.6245 16.2382 13 19.4755 13C22.7126 13 25.3367 15.6245 25.3367 18.8612Z"
       fill="white"
     />
-  </svg>
+  </SliderIcon>
 )
-export const GoogleSlider = ({ current }) => (
-  <svg
-    className={`hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] ${
-      current == 2 ? "fill-white" : "opacity-[0.25]"
-    } `}
-    width="140"
-    height="48"
-    viewBox="0 0 140 48"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+
+export const GoogleSlider = ({ current }: { current: number }) => (
+  <SliderIcon current={current} index={2}>
     <g opacity="100">
       <path
         d="M61.2376 25.6501C61.2376 30.9734 57.0732 34.896 51.9626 34.896C46.852 34.896 42.6876 30.9734 42.6876 25.6501C42.6876 20.2894 46.852 16.4043 51.9626 16.4043C57.0732 16.4043 61.2376 20.2894 61.2376 25.6501ZM57.1775 25.6501C57.1775 22.3236 54.7639 20.0476 51.9626 20.0476C49.1613 20.0476 46.7477 22.3236 46.7477 25.6501C46.7477 28.9433 49.1613 31.2527 51.9626 31.2527C54.7639 31.2527 57.1775 28.9391 57.1775 25.6501Z"
@@ -111,19 +107,11 @@ export const GoogleSlider = ({ current }) => (
         fill="white"
       />
     </g>
-  </svg>
+  </SliderIcon>
 )
-export const SlackSlider = ({ current }) => (
-  <svg
-    className={`hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] ${
-      current == 3 ? "fill-white" : "opacity-[0.25]"
-    } `}
-    width="140"
-    height="48"
-    viewBox="0 0 140 48"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+
+export const SlackSlider = ({ current }: { current: number }) => (
+  <SliderIcon current={current} index={3}>
     <g opacity="100">
       <path
         d="M46.9251 32.4263L48.3932 28.9949C50.0006 30.1853 52.0973 30.8154 54.1945 30.8154C55.7323 30.8154 56.7107 30.2204 56.7107 29.3101C56.6756 26.7889 47.4494 28.7498 47.3792 22.4112C47.3441 19.1897 50.2102 16.7036 54.2646 16.7036C56.6756 16.7036 59.0875 17.2991 60.7997 18.6649L59.4279 22.1696C57.8525 21.1566 55.9067 20.4503 54.0546 20.4503C52.7965 20.4503 51.9575 21.0453 51.9575 21.8162C51.9925 24.3023 61.2895 22.9364 61.3942 28.9949C61.3942 32.2865 58.5978 34.5977 54.6135 34.5977C51.6783 34.5977 48.9871 33.8975 46.9246 32.4263H46.9251ZM105.383 27.7523C105.013 28.4108 104.473 28.9588 103.821 29.3402C103.169 29.7216 102.427 29.9226 101.671 29.9227C99.3167 29.9227 97.4079 28.0099 97.4079 25.6506C97.4079 23.2913 99.3167 21.3786 101.671 21.3786C102.427 21.3787 103.169 21.5797 103.821 21.9611C104.473 22.3425 105.013 22.8905 105.383 23.549L109.465 21.2834C107.936 18.5511 105.02 16.7036 101.671 16.7036C96.7398 16.7036 92.742 20.709 92.742 25.6506C92.742 30.5918 96.7398 34.5977 101.671 34.5977C105.02 34.5977 107.936 32.7501 109.465 30.0179L105.383 27.7523ZM64.0427 34.2473H69.1453V9.25574H64.0432L64.0427 34.2473ZM112.042 9.25574V34.2473H117.144V26.7599L123.19 34.2473H129.713L122.024 25.3524L129.153 17.0524H122.911L117.144 23.953V9.25574H112.042ZM84.8655 17.0535V19.085C84.027 17.684 81.9649 16.7036 79.7981 16.7036C75.3245 16.7036 71.7948 20.6608 71.7948 25.6331C71.7948 30.6053 75.3245 34.5977 79.7981 34.5977C81.9649 34.5977 84.027 33.6173 84.8655 32.2163V34.2473H89.9681V17.0535H84.8655ZM84.8655 27.7869C84.1317 29.0124 82.5939 29.9222 80.8817 29.9222C78.5264 29.9222 76.6177 28.0099 76.6177 25.6506C76.6177 23.2913 78.5264 21.3786 80.8817 21.3786C82.5939 21.3786 84.1317 22.3239 84.8655 23.584V27.7869Z"
@@ -146,5 +134,5 @@ export const SlackSlider = ({ current }) => (
         fill="white"
       />
     </g>
-  </svg>
+  </SliderIcon>
 )

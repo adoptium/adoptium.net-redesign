@@ -25,7 +25,7 @@ interface NavItem {
   children?: NavItem[]
 }
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ")
 }
 
@@ -74,6 +74,38 @@ const navigation: NavItem[] = [
   },
 ]
 
+/**
+ * A reusable mobile link component that renders a Link (if the href starts with "/")
+ * or a regular <a> element. Both get the same classes.
+ */
+const MobileLink: React.FC<{
+  href?: string
+  name: string
+  onClick?: () => void
+}> = ({ href, name, onClick }) => {
+  const commonClasses =
+    "-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
+  if (href && href.startsWith("/")) {
+    return (
+      <Link to={href} onClick={onClick} className={commonClasses}>
+        {name}
+      </Link>
+    )
+  }
+  return (
+    <a href={href} onClick={onClick} className={commonClasses}>
+      {name}
+    </a>
+  )
+}
+
+/**
+ * A tiny divider used between mobile nav items.
+ */
+const MobileDivider: React.FC = () => (
+  <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
+)
+
 const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showLastSlide, setShowLastSlide] = useState(false)
@@ -86,7 +118,7 @@ const NavBar = () => {
     }
   }, [mobileMenuOpen])
 
-  const openLastSlideHandler = (item) => {
+  const openLastSlideHandler = (item: NavItem) => {
     setShowLastSlide(true)
     setActiveLastSlide(item)
   }
@@ -107,7 +139,9 @@ const NavBar = () => {
   return (
     <header
       className={`sticky inset-x-0 top-0 z-50 ${
-        scrolled ? "bg-[#200E46] border-b-2 border-[#3E3355]/85 backdrop-blur-xl" : ""
+        scrolled
+          ? "bg-[#200E46] border-b-2 border-[#3E3355]/85 backdrop-blur-xl"
+          : ""
       }`}
     >
       {showAnnouncement && (
@@ -115,7 +149,10 @@ const NavBar = () => {
       )}
       {/* Container div to center the nav content */}
       <div className="max-w-[1288px] w-full mx-auto px-3">
-        <nav className="flex items-center gap-5 justify-between py-6" aria-label="Global">
+        <nav
+          className="flex items-center gap-5 justify-between py-6"
+          aria-label="Global"
+        >
           <Link to="/" placeholder="homepage">
             <Logo alt="Adoptium Logo" className="h-10" />
           </Link>
@@ -131,7 +168,10 @@ const NavBar = () => {
                     <div>
                       <MenuButton className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50">
                         {item.name}
-                        <FaChevronDown className="-mr-1 mt-1" aria-hidden="true" />
+                        <FaChevronDown
+                          className="-mr-1 mt-1"
+                          aria-hidden="true"
+                        />
                       </MenuButton>
                     </div>
                     <Transition
@@ -150,36 +190,20 @@ const NavBar = () => {
                         <div className="py-6 px-4">
                           {item.children.map((child) => (
                             <MenuItem key={`mobile-${child.name}`}>
-                              {({ focus }) =>
-                                child.href && child.href.startsWith("/") ? (
-                                  <Link
-                                    to={child.href}
-                                    className={classNames(
-                                      focus ? "text-[#A80D55]" : "text-white-700",
-                                      "block py-3 text-sm border-b border-[#3E3355]"
-                                    )}
-                                  >
-                                    {child.name}
-                                  </Link>
-                                ) : (
-                                  <a
-                                    href={child.href}
-                                    className={classNames(
-                                      focus ? "text-[#A80D55]" : "text-white-700",
-                                      "block py-3 text-sm border-b border-[#3E3355]"
-                                    )}
-                                  >
-                                    {child.name}
-                                  </a>
-                                )
-                              }
+                              {({ focus }) => (
+                                <MobileLink
+                                  href={child.href}
+                                  name={child.name}
+                                  onClick={() => {}}
+                                />
+                              )}
                             </MenuItem>
                           ))}
                         </div>
                       </MenuItems>
                     </Transition>
                   </Menu>
-                ) : item.href && item.href.startsWith("/") ? (
+                ) : item.href ? (
                   <Link
                     key={`desktop-${item.name}`}
                     to={item.href}
@@ -259,6 +283,7 @@ const NavBar = () => {
             </button>
           </div>
           <div className="mt-6 grow relative w-full h-full overflow-hidden flow-root">
+            {/* Mobile menu – main navigation */}
             <div
               className={`-my-6 absolute duration-200 h-full left-0 w-full divide-y divide-white-500/10 ${
                 showLastSlide ? "left-[-100%]" : ""
@@ -293,32 +318,20 @@ const NavBar = () => {
                       </div>
                     ) : (
                       <div className="flex justify-between">
-                        {item.href && item.href.startsWith("/") ? (
-                          <Link
-                            to={item.href}
-                            className="-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
-                          >
-                            {item.name}
-                          </Link>
-                        ) : (
-                          <a
-                            onClick={() => setMobileMenuOpen(false)}
-                            href={item.href}
-                            className="-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
-                          >
-                            {item.name}
-                          </a>
-                        )}
+                        <MobileLink
+                          href={item.href}
+                          name={item.name}
+                          onClick={() => setMobileMenuOpen(false)}
+                        />
                       </div>
                     )}
-                    {navigation.length !== index + 1 && (
-                      <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
-                    )}
+                    {navigation.length !== index + 1 && <MobileDivider />}
                   </div>
                 ))}
               </div>
             </div>
 
+            {/* Mobile menu – last slide (child links) */}
             <div
               className={`absolute duration-200 w-full h-full ${
                 showLastSlide ? "left-0" : "left-full"
@@ -369,26 +382,15 @@ const NavBar = () => {
                   activeLastSlide.children?.map((item, index) => (
                     <div key={index}>
                       <div className="flex w-full justify-between">
-                        {item.href && item.href.startsWith("/") ? (
-                          <Link
-                            to={item.href}
-                            className="-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
-                          >
-                            {item.name}
-                          </Link>
-                        ) : (
-                          <a
-                            onClick={() => setMobileMenuOpen(false)}
-                            href={item.href}
-                            className="-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
-                          >
-                            {item.name}
-                          </a>
-                        )}
+                        <MobileLink
+                          href={item.href}
+                          name={item.name}
+                          onClick={() => setMobileMenuOpen(false)}
+                        />
                       </div>
                       {activeLastSlide.children &&
                         index !== activeLastSlide.children.length - 1 && (
-                          <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
+                          <MobileDivider />
                         )}
                     </div>
                   ))}

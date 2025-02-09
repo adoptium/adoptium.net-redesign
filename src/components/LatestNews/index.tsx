@@ -27,6 +27,27 @@ const LatestNews = () => {
   const set1 = newsmap.slice(0, 2)
   const set2 = newsmap.slice(2, 4)
 
+  const NewsCard: React.FC<{ card: any }> = ({ card }) => (
+    <div className="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10">
+      <h2 className="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3">
+        <RedIcon />
+        News
+      </h2>
+      <p className="text-white text-lg xl:text-xl font-normal leading-6 xl:leading-7 my-2">
+        {card.node.frontmatter.title}
+      </p>
+      <span className="text-sm text-grey font-normal leading-5 block">
+        {card.node.frontmatter.date}
+      </span>
+      <Link
+        to={card.node.fields.postPath}
+        className="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+      >
+        Read More
+      </Link>
+    </div>
+  )
+
   return (
     <>
       <div className="bg-purple py-16 lg:pt-32 pb-16 xl:px-0 lg:px-8 px-0">
@@ -41,62 +62,22 @@ const LatestNews = () => {
               Java SE TCK-tested for general use in the Java ecosystem.
             </h3>
             <Link to="/news">
-              <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block ">
+              <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block">
                 See all news
               </button>
             </Link>
           </div>
-          <div className="max-w-[780px] w-full lg:flex gap-4 xl:gap-x-8 hidden  ">
+          <div className="max-w-[780px] w-full lg:flex gap-4 xl:gap-x-8 hidden">
             {/* First set of news items */}
             <div className="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8">
-              {set1.map((card, more) => (
-                <div
-                  key={more}
-                  className="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
-                >
-                  <h2 className="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3">
-                    <RedIcon />
-                    News
-                  </h2>
-                  <p className="text-white text-lg xl:text-xl font-normal leading-6 xl:leading-7 my-2">
-                    {card.node.frontmatter.title}
-                  </p>
-                  <span className="text-sm text-grey font-normal leading-5 block">
-                    {card.node.frontmatter.date}
-                  </span>
-                  <Link
-                    to={card.node.fields.postPath}
-                    className="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
-                  >
-                    Read More
-                  </Link>
-                </div>
+              {set1.map((card, index) => (
+                <NewsCard key={index} card={card} />
               ))}
             </div>
             {/* Second set of news items */}
             <div className="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8 mt-16">
-              {set2.map((card, more) => (
-                <div
-                  key={more}
-                  className="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
-                >
-                  <h2 className="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3">
-                    <RedIcon />
-                    News
-                  </h2>
-                  <p className="text-white text-lg xl:text-xl font-normal leading-6 xl:leading-7 my-2">
-                    {card.node.frontmatter.title}
-                  </p>
-                  <span className="text-sm text-grey font-normal leading-5 block">
-                    {card.node.frontmatter.date}
-                  </span>
-                  <Link
-                    to={card.node.fields.postPath}
-                    className="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
-                  >
-                    Read More
-                  </Link>
-                </div>
+              {set2.map((card, index) => (
+                <NewsCard key={index} card={card} />
               ))}
             </div>
           </div>

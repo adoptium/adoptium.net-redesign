@@ -12,7 +12,7 @@ exports[`Footer component > renders correctly 1`] = `
         class="hidden md:block"
       >
         <div
-          class="grid grid-cols-1 gap-8 border-b border-gray-800 mb-3 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16"
+          class="grid grid-cols-1 gap-8 border-b border-gray-800 mb-3 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16 pb-6"
         >
           <div>
             <p
@@ -313,7 +313,7 @@ exports[`Footer component > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="sm:flex sm:items-center sm:justify-between"
+          class="sm:flex sm:items-center sm:justify-between pt-4"
         >
           <div
             class="text-teal-600 flex dark:text-teal-300"

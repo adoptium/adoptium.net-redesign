@@ -84,6 +84,7 @@ const Testimonials = () => {
   return (
     <section className="bg-[#0E002A] overflow-x-hidden border-t border-[#3E3355]">
       <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+        <div className="flex justify-center items-center">
         <figure className="max-w-screen-md mx-auto" key={testimonialKey}>
           <svg
             className="h-12 mx-auto mb-3 text-pink text-pink-400"
@@ -111,7 +112,7 @@ const Testimonials = () => {
               alt={testimonial.name}
             />
             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-              <div className="pr-3 text-pink font-medium text-pink-900">
+              <div className="px-3 text-pink font-medium text-pink-900">
                 {testimonial.name}
               </div>
               <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
@@ -120,8 +121,9 @@ const Testimonials = () => {
             </div>
           </figcaption>
         </figure>
+        </div>
         {/* Navigation Arrows */}
-        <div className="flex justify-center items-center max-w-screen-md mx-auto">
+        <div className="flex justify-center items-center max-w-screen-md mx-auto pt-8">
           <button
             className="arrow-button p-2"
             onClick={prevTestimonial}

@@ -23,7 +23,7 @@ const Author = ({ username, size }: Props): null | JSX.Element => {
       rel="noopener noreferrer"
     >
       <img
-        className="rounded-full border-solid border-4 border-purple"
+        className="rounded-full border-solid border-4 border-purple mb-6"
         style={{ maxWidth: `${size}px` }}
         src={githubImgLink}
         alt={username}

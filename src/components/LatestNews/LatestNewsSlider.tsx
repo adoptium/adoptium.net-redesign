@@ -40,7 +40,7 @@ const LatestNewsSlider = ({ newsmap }) => {
       >
         {newsmap.map((card, index) => (
           <SwiperSlide
-            className={`!w-[256px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-6 m-auto`}
+            className={`!w-[256px] bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-6 m-auto`}
             key={index}
           >
             <h2 className="text-primary text-base leading-6 font-bold m-0 flex items-center gap-x-3">

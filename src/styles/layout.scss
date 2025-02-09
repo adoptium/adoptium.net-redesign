@@ -1,4 +1,4 @@
-@use "../../styles/variables.scss" as *;
+@use "variables.scss" as *;
 
 :root {
   --border-radius: 4px;
@@ -98,20 +98,6 @@ hr {
 
 *::after {
   box-sizing: inherit;
-}
-
-hgroup,
-img,
-figure,
-fieldset,
-ul,
-ol,
-dl,
-dd,
-p {
-  margin: 0;
-  padding: 0;
-  margin-bottom: var(--space-4);
 }
 
 pre {

@@ -30,7 +30,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
               class="text-center w-full"
             >
               <h1
-                class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
+                class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px] mb-8"
               >
                 The Power of Eclipse Temurin™
               </h1>
@@ -1263,7 +1263,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
       class="flex xl:flex-nowrap flex-wrap justify-center max-w-[1264px] w-full mx-auto gap-x-8 gap-y-4 py-16"
     >
       <div
-        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+        class="p-8 border-[2px] border-2 border-white/50 rounded-3xl bg-tones-white backdrop-blur-12"
       >
         <h2
           class="text-primary text-base leading-6 font-normal flex items-center gap-x-3"
@@ -1333,7 +1333,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         </a>
       </div>
       <div
-        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+        class="p-8 border-[2px] border-2 border-white/50 rounded-3xl bg-tones-white backdrop-blur-12"
       >
         <p
           class="text-white text-2xl font-normal leading-8 mt-2"
@@ -1368,7 +1368,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         </a>
       </div>
       <div
-        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+        class="p-8 border-[2px] border-2 border-white/50 rounded-3xl bg-tones-white backdrop-blur-12"
       >
         <p
           class="text-white text-2xl font-normal leading-8 mt-2"
@@ -1403,7 +1403,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         </a>
       </div>
       <div
-        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+        class="p-8 border-[2px] border-2 border-white/50 rounded-3xl bg-tones-white backdrop-blur-12"
       >
         <p
           class="text-white text-2xl font-normal leading-8 mt-2"
@@ -2004,7 +2004,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         src="/images/icons/message.svg"
       />
       <p
-        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8"
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
       >
         Connect with the community
       </p>

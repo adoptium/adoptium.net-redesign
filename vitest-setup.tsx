@@ -3,7 +3,6 @@ import { expect, vi } from "vitest"
 
 import "@testing-library/jest-dom"
 
-import "vitest-canvas-mock"
 import "vitest-axe/extend-expect"
 import * as axeMatchers from "vitest-axe/matchers"
 
@@ -120,6 +119,7 @@ vi.mock("gatsby-plugin-image", async () => {
     return React.createElement("img", {
       className: imgClassName,
       stlye: imgStyle,
+      alt: "Mock Image",
       ...props,
     })
   }

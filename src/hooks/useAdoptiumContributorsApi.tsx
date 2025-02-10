@@ -152,6 +152,7 @@ async function fetchRandomContributor() {
     if(!maxContributors || needToRefetch) {
       // get fresh data
       const [randomPageUpdate, lastPageUpdate] = await getMaxContributors(repository)
+      if(!randomPageUpdate || !lastPageUpdate) return null
 
       if (window.localStorage) {
         window.localStorage.setItem(wlsFetchDate, String(Date.now()))
@@ -168,6 +169,7 @@ async function fetchRandomContributor() {
 
     // retry if the contributor is in the excluded list (or an error occurred)
     let maxAttempts = 2
+
     while ((!contributor || excludedContributors.includes(contributor.login)) && maxAttempts-- > 0) {
       contributor = await getContributor(repository, randomPage)
     }

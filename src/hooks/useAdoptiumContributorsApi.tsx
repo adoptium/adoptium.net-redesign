@@ -61,7 +61,9 @@ function linkParser(linkHeader: string): {
  * Retrieves max amount of contributors for Adoptium repos.
  * Returns array with random contributor index and max contributors found.
  */
-async function getMaxContributors(repositoryURI: string): Promise<[number, number]> {
+async function getMaxContributors(repository: string): Promise<[number, number]> {
+  const repositoryURI = `https://api.github.com/repos/adoptium/${repository}/contributors?per_page=1`
+
   // this call is used to know how many contributors there are in this repo
   // check the Link header to compute first and last
   const linksHeaderValue = await axios
@@ -75,9 +77,7 @@ async function getMaxContributors(repositoryURI: string): Promise<[number, numbe
 
   if (linksHeaderValue) {
     const links = linkParser(linksHeaderValue)
-
     const randomPage = Math.floor(Math.random() * Math.floor(links.last.page)) + 1
-
     return [randomPage, links.last.page]
   }
 
@@ -89,9 +89,11 @@ async function getMaxContributors(repositoryURI: string): Promise<[number, numbe
  * only return 'type: User' to filter out Bot
  * @param randomPage
  */
-async function getContributor(repository: string, repositoryURI: string, randomPage: number): Promise<Contributor | null> {
+async function getContributor(repository: string, randomPage: number): Promise<Contributor | null> {
+  const repositoryURI = `https://api.github.com/repos/adoptium/${repository}/contributors?per_page=1&page=${randomPage}`
+
   const contributor = await axios
-    .get(`${repositoryURI}&page=${randomPage}`)
+    .get(repositoryURI)
     .then(function (response) {
       return response.data[0] as ContributorApiResponse
     })
@@ -118,9 +120,8 @@ async function getContributor(repository: string, repositoryURI: string, randomP
  * Trying to store cached data in localStorage in order to do less consequent requests
  */
 async function fetchRandomContributor() {
-  // choose a random repo from the list and build the URI
-  const repository = repositories[Math.floor(Math.random() * repositories.length)];
-  const repositoryURI = `https://api.github.com/repos/adoptium/${repository}/contributors?per_page=1`;
+  // choose a random repo from the list
+  const repository = repositories[Math.floor(Math.random() * repositories.length)]
 
   let maxContributors: number | null = null
   let fetchDate: number | null = null
@@ -144,22 +145,31 @@ async function fetchRandomContributor() {
     needToRefetch = true
   }
 
-  // If localStorage and data is less than 1 month old, fetch 1 time
   try {
+    let randomPage = 0
 
-    if (maxContributors && !needToRefetch) {
-      return await getContributor(repository, repositoryURI, Math.floor(Math.random() * Math.floor(maxContributors)) + 1)
+    // If no localStorage or data is more than 1 month old
+    if(!maxContributors || needToRefetch) {
+      // get fresh data
+      const [randomPageUpdate, lastPageUpdate] = await getMaxContributors(repository)
+
+      if (window.localStorage) {
+        window.localStorage.setItem(wlsFetchDate, String(Date.now()))
+        window.localStorage.setItem(wlsMaxContributors, String(lastPageUpdate))
+      }
+
+      randomPage = randomPageUpdate
+    } else {
+      randomPage = Math.floor(Math.random() * Math.floor(maxContributors)) + 1
     }
-    const [randomPage, lastPage] = await getMaxContributors(repositoryURI)
 
-    let contributor = await getContributor(repository, repositoryURI, randomPage)
-    while (excludedContributors.includes(contributor.login)) {
-      contributor = await getContributor(repository, repositoryURI, randomPage)
-    }
+    // get a random contributor from the repo
+    let contributor = await getContributor(repository, randomPage)
 
-    if (window.localStorage) {
-      window.localStorage.setItem(wlsFetchDate, String(Date.now()))
-      window.localStorage.setItem(wlsMaxContributors, String(lastPage))
+    // retry if the contributor is in the excluded list (or an error occurred)
+    let maxAttempts = 2
+    while ((!contributor || excludedContributors.includes(contributor.login)) && maxAttempts-- > 0) {
+      contributor = await getContributor(repository, randomPage)
     }
 
     return contributor

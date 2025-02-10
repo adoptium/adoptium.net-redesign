@@ -18,24 +18,11 @@ export default defineConfig({
     globals: true,
     setupFiles: "./vitest-setup.tsx",
     environment: "jsdom",
-    deps: {
-      // >= 0.34
-      optimizer: {
-        web: {
-          include: ["vitest-canvas-mock"],
-        },
-      },
-    },
     coverage: {
       all: true,
       include: ["src/**/*.{ts,tsx}"],
       exclude: ["src/types/**", "src/**/__tests__/**", "src/**/__mocks__/**"],
       reporter: ["text", "json", "html"],
-    },
-    environmentOptions: {
-      jsdom: {
-        resources: "usable",
-      },
     },
   },
   css: {

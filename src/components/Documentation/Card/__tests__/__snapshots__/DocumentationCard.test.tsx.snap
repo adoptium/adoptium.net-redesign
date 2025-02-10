@@ -12,7 +12,7 @@ exports[`DocumentationCard component > renders correctly 1`] = `
     class="w-full lg:w-1/3 p-3"
   >
     <div
-      class="bg-white bg-opacity-5 rounded-3xl border-2 border-white border-opacity-50 shadow-sm overflow-hidden"
+      class="bg-white/5 rounded-3xl border-2 border-white/50 shadow-xs overflow-hidden"
     >
       <div
         class="p-4"
@@ -46,13 +46,13 @@ exports[`DocumentationCard component > renders correctly 1`] = `
           class="divide-y divide-gray-200"
         >
           <a
-            class="block px-4 py-2 hover:bg-white hover:bg-opacity-10"
+            class="block px-4 py-2 hover:bg-white/10"
             href="/en/link1"
           >
             Link1
           </a>
           <a
-            class="px-4 py-2 hover:bg-white hover:bg-opacity-10 flex justify-between items-center"
+            class="px-4 py-2 hover:bg-white/10 flex justify-between items-center"
             href="https://external-link"
             rel="noopener noreferrer"
             target="_blank"

@@ -14,7 +14,7 @@ const EditLink = ({ relativePath }: Props) => {
   const href = `https://github.com/adoptium/adoptium.net/edit/main/content/asciidoc-pages/${relativePath}`
 
   return (
-    <div className="w-full px-6 py-8 rounded-2xl border-2 border-white border-opacity-50 flex-col justify-center items-start gap-2 inline-flex">
+    <div className="w-full px-6 py-8 rounded-2xl border-2 border-white/50 flex-col justify-center items-start gap-2 inline-flex">
       <div className="self-stretch justify-start items-center gap-4 inline-flex">
         <div className="w-20 h-20 relative">
           <img

@@ -14,7 +14,7 @@ const FAQ: React.FC<FAQProps> = ({ className }) => {
     <div
       className={`mx-auto max-w-[1264px] py-8 lg:py-12 px-4 xl:px-0 flex flex-col gap-[64px] lg:gap-3 items-center lg:items-start lg:flex-row justify-between ${className} `}
     >
-      <div className=" md:max-w-[420px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between">
+      <div className=" md:max-w-[420px] bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl  w-full  md:h-[552px] p-[24px] flex flex-col justify-between">
         <div>
           <h3 className="text-[30px]  sm:text-[40px] font-semibold leading-9 sm:leading-[48px]">
             Frequently asked questions
@@ -25,7 +25,7 @@ const FAQ: React.FC<FAQProps> = ({ className }) => {
           </p>
         </div>
         <div>
-          <p className="text-[20px] font-semibold">
+          <p className="text-[20px] font-semibold pb-4">
             Have a question that hasn’t been answered? Get in touch
           </p>
           <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block ">

@@ -51,7 +51,7 @@ const VendorSelector: React.FC<VendorSelectorProps> = ({
                 key={`vendor-${identifier}`}
                 onClick={e => handleChange(e, identifier)}
                 className={`flex justify-center items-center
-                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-2xl ${selectedVendorIdentifiers.includes(identifier) ? "border-primary border-2" : "border-white border-2"}`}
+                outline-hidden cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-2xl ${selectedVendorIdentifiers.includes(identifier) ? "border-primary border-2" : "border-white border-2"}`}
               >
                 <span className="w-20 h-20">
                   <img

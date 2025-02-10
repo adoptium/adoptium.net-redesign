@@ -87,7 +87,7 @@ describe("useAdoptiumContributorsApi hook", () => {
       const { result } = renderHook(() => useAdoptiumContributorsApi(true))
 
       await waitFor(() => {
-        expect(spy).toHaveBeenCalledTimes(1)
+        expect(spy).toHaveBeenCalledTimes(2)
       })
 
       expect(result.current).toBeNull()

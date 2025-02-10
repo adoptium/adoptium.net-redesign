@@ -114,14 +114,14 @@ const Features = () => {
           >
             {features.map((feature, index) => (
               <SwiperSlide
-                className="!w-[256px] p-8 lg:p-16 lg:w-[256px] bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl"
+                className="!w-[256px] p-8 lg:p-16 lg:w-[256px] bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl"
                 key={index}
               >
                 <span>
                   <img src="/images/icons/lock.svg" alt="lock" />
                 </span>
                 <div className=" space-y-6 mt-[106px]">
-                  <h2 className="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3">
+                  <h2 className="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4">
                     {feature.heading}
                   </h2>
                   <p className="text-grey text-l font-normal leading-7 mt-6">

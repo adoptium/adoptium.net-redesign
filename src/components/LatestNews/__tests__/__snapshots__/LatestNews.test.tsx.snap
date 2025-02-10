@@ -25,20 +25,20 @@ exports[`Latest News component > renders correctly 1`] = `
           href="/en/news"
         >
           <button
-            class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block "
+            class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block"
           >
             See all news
           </button>
         </a>
       </div>
       <div
-        class="max-w-[780px] w-full lg:flex gap-4 xl:gap-x-8 hidden  "
+        class="max-w-[780px] w-full lg:flex gap-4 xl:gap-x-8 hidden"
       >
         <div
           class="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8"
         >
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -89,7 +89,7 @@ exports[`Latest News component > renders correctly 1`] = `
             </a>
           </div>
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -144,7 +144,7 @@ exports[`Latest News component > renders correctly 1`] = `
           class="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8 mt-16"
         >
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -195,7 +195,7 @@ exports[`Latest News component > renders correctly 1`] = `
             </a>
           </div>
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"

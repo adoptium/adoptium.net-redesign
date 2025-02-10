@@ -97,7 +97,7 @@
     "jest-canvas-mock": "^2.5.2",
     "jsdom": "^26.0.0",
     "postcss": "^8.5.1",
-    "prettier": "3.4.2",
+    "prettier": "3.5.0",
     "tailwindcss": "^4.0.4",
     "vitest": "^2.0.2",
     "vitest-axe": "^1.0.0-pre.5",

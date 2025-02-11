@@ -110,6 +110,7 @@ const MobileDivider: React.FC = () => (
 
 function isActivePath(path) {
   if (!path) return false
+  if (typeof window === "undefined") return false
   return window.location.pathname.includes(path) ? true : false
 }
 

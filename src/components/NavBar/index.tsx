@@ -83,8 +83,10 @@ const MobileLink: React.FC<{
   name: string
   onClick?: () => void
 }> = ({ href, name, onClick }) => {
-  const commonClasses =
-    "-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50"
+  const commonClasses = classNames(
+    "-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50",
+    isActivePath(href) ? "text-rose-600" : "",
+  )
   if (href && href.startsWith("/")) {
     return (
       <Link to={href} onClick={onClick} className={commonClasses}>
@@ -105,6 +107,11 @@ const MobileLink: React.FC<{
 const MobileDivider: React.FC = () => (
   <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
 )
+
+function isActivePath(path) {
+  if (!path) return false
+  return window.location.pathname.includes(path) ? true : false
+}
 
 const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -158,7 +165,7 @@ const NavBar = () => {
           </Link>
           <div className="flex items-center gap-4">
             <div className="hidden lg:flex lg:gap-6 xl:gap-x-12">
-              {navigation.map((item) =>
+              {navigation.map(item =>
                 item.children ? (
                   <Menu
                     as="div"
@@ -188,7 +195,7 @@ const NavBar = () => {
                         style={{ minWidth: "max-content" }}
                       >
                         <div className="py-6 px-4">
-                          {item.children.map((child) => (
+                          {item.children.map(child => (
                             <MenuItem key={`mobile-${child.name}`}>
                               {({ focus }) => (
                                 <MobileLink
@@ -207,7 +214,10 @@ const NavBar = () => {
                   <Link
                     key={`desktop-${item.name}`}
                     to={item.href}
-                    className="text-sm font-semibold leading-6 text-white-900"
+                    className={classNames(
+                      "text-sm font-semibold leading-6 text-white-900",
+                      isActivePath(item.href) ? "text-rose-600" : "",
+                    )}
                   >
                     {item.name}
                   </Link>
@@ -215,11 +225,14 @@ const NavBar = () => {
                   <a
                     key={`desktop-${item.name}`}
                     href={item.href}
-                    className="text-sm font-semibold leading-6 text-white-900"
+                    className={classNames(
+                      "text-sm font-semibold leading-6 text-white-900",
+                      isActivePath(item.href) ? "text-rose-600" : "",
+                    )}
                   >
                     {item.name}
                   </a>
-                )
+                ),
               )}
             </div>
             <div className="flex space-x-3 h-12">

@@ -8,9 +8,29 @@ import MockAdapter from "axios-mock-adapter"
 const mock = new MockAdapter(axios)
 const mockResponse = [createMockAdoptiumContributorsApi()]
 
+const localStorageMock = (() => {
+  let store: { [key: string]: string } = {};
+
+  return {
+    getItem: (key: string) => store[key] || null,
+    setItem: (key: string, value: string) => {
+      store[key] = value.toString();
+    },
+    clear: () => store = {},
+  };
+})();
+
+Object.defineProperty(window, 'localStorage', {
+  value: localStorageMock,
+});
+
 beforeEach(() => {
   localStorage.clear()
   mock.reset()
+})
+
+afterEach(() => {
+  vi.restoreAllMocks()
 })
 
 describe("useAdoptiumContributorsApi hook", () => {
@@ -67,7 +87,7 @@ describe("useAdoptiumContributorsApi hook", () => {
       const { result } = renderHook(() => useAdoptiumContributorsApi(true))
 
       await waitFor(() => {
-        expect(spy).toHaveBeenCalledTimes(2)
+        expect(spy).toHaveBeenCalledTimes(1)
       })
 
       expect(result.current).toBeNull()
@@ -83,7 +103,7 @@ describe("useAdoptiumContributorsApi hook", () => {
       const { result } = renderHook(() => useAdoptiumContributorsApi(true))
 
       await waitFor(() => {
-        expect(spy).toHaveBeenCalledTimes(4)
+        expect(spy).toHaveBeenCalledTimes(4 /* 1 for the repository + 3 for the contributor (1 + 2 retry) */)
       })
 
       expect(result.current).toBeNull()

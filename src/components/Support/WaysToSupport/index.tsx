@@ -15,8 +15,8 @@ const WaysToSupport = () => {
       title: "Become a sponsor",
       description:
         "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime",
-      button: "Become a sponsor",
-      href: "/sponsors",
+      button: "Become a sustainer",
+      href: "/sustainers",
     },
     {
       title: "Become a member",

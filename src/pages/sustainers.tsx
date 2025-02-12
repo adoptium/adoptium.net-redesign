@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useMemo } from "react"
 import { graphql } from "gatsby"
 import { Link } from "../components/Link"
 import Layout from "../components/Layout"
@@ -9,6 +9,10 @@ import UiMobileScroll from "../components/UiVirtualScroll/mobile"
 import UiVirtualContent from "../components/UiVirtualScroll/UiVirtualContent"
 import SavingsCalculator from "../components/SavingsCalculator"
 import Logos, { LogoType } from "../components/Logos"
+
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ")
+}
 
 const Sponsors = () => {
   const data = [
@@ -109,8 +113,13 @@ const Sponsors = () => {
     },
   ]
 
-  const BecomeSustainer = () => (
-    <div className="flex flex-col md:flex-row gap-4 justify-center absolute items-center mt-[30px] md:-mt-[98px] w-full">
+  const BecomeSustainer = props => (
+    <div
+      className={classNames(
+        "flex flex-col md:flex-row gap-4 justify-center absolute items-center mt-[30px] md:-mt-[98px] w-full",
+        props.classes,
+      )}
+    >
       <a href="https://github.com/sponsors/adoptium" target="_blank">
         <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
           Become an Individual Sustainer
@@ -173,9 +182,9 @@ const Sponsors = () => {
               The Eclipse Temurin Sustainer Program invites enterprises to
               invest in the long-term sustainment of Eclipse Temurin and other
               Adoptium projects. By becoming a Sustainer, your company ensures
-              that Temurin remains the industry’s leading community-driven
-              open source JDK for mission-critical Java workloads. This
-              program supports the vendor-neutral development of runtimes and
+              that Temurin remains the industry’s leading community-driven open
+              source JDK for mission-critical Java workloads. This program
+              supports the vendor-neutral development of runtimes and
               development kits, infrastructure and tools, quality assurance,
               enhanced security practices, community engagement, and more.
             </p>
@@ -211,11 +220,19 @@ const Sponsors = () => {
                 <h3 className="text-[26px]">Enhanced Security</h3>
               </div>
               <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                <img src="/images/initiatives/release.svg" className="mb-0" alt="release" />
+                <img
+                  src="/images/initiatives/release.svg"
+                  className="mb-0"
+                  alt="release"
+                />
                 <h3 className="text-[26px]">Faster Release Cycles</h3>
               </div>
               <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                <img src="/images/initiatives/deploy.svg" className="mb-0" alt="deploy" />
+                <img
+                  src="/images/initiatives/deploy.svg"
+                  className="mb-0"
+                  alt="deploy"
+                />
                 <h3 className="text-[26px]">Ready-to-deploy Builds</h3>
               </div>
               <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
@@ -227,7 +244,11 @@ const Sponsors = () => {
                 <h3 className="text-[26px]">Sustained Innovation</h3>
               </div>
               <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                <img src="/images/initiatives/testing.svg" className="mb-0" alt="testing" />
+                <img
+                  src="/images/initiatives/testing.svg"
+                  className="mb-0"
+                  alt="testing"
+                />
                 <h3 className="text-[26px]">Quality Testing</h3>
               </div>
               <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
@@ -240,11 +261,11 @@ const Sponsors = () => {
               </div>
             </div>
             <p className="text-[16px] text-[#c4bfce] p-4 max-w-[1000px] text-center mx-auto">
-              Join the Eclipse Temurin Sustainer Program and play a crucial
-              role in maintaining the vitality and reliability of the world's
+              Join the Eclipse Temurin Sustainer Program and play a crucial role
+              in maintaining the vitality and reliability of the world's
               fastest-growing open source Java SE runtime. Your support
-              accelerates our initiatives, driving greater impact and
-              innovation within the Java ecosystem
+              accelerates our initiatives, driving greater impact and innovation
+              within the Java ecosystem
             </p>
           </div>
         </div>
@@ -255,9 +276,8 @@ const Sponsors = () => {
                 Calculate your savings and Invest in Temurin’s Future
               </h2>
               <p className="text-[#ff1464] max-w-[740px] text-[20px] text-center font-bold mt-10 mb-6">
-                The average company* using Eclipse Temurin saves more than
-                $1.6M annually. Isn’t it time you invest in sustaining your
-                savings?
+                The average company* using Eclipse Temurin saves more than $1.6M
+                annually. Isn’t it time you invest in sustaining your savings?
               </p>
               <p className="text-xs text-[#c4bfce] my-5">
                 *Self-reported number of employees, n = 211
@@ -266,15 +286,15 @@ const Sponsors = () => {
               <p className="text-[#c4bfce] max-w-[900px] text-center">
                 With the recent increase in licensing costs for paid Java SE
                 options, we’ve seen Temurin downloads surge—from over 75M in
-                2023 to over 250M by the end of 2023, and doubling again to
-                more than 500M by the end of 2024. This growth strongly
-                indicates a significant transition away from paid Java options
-                toward open-source solutions like Temurin. If your
-                organization has made this migration, you’ve likely
-                experienced significant cost savings. Invest a portion of your
-                savings in Adoptium to ensure Temurin’s long-term viability,
-                enhance security, and accelerate faster releases for the Java
-                community
+                2023 to over 250M by the end of 2023, and doubling again to more
+                than 500M by the end of 2024. This growth strongly indicates a
+                significant transition away from paid Java options toward
+                open-source solutions like Temurin. If your organization has
+                made this migration, you’ve likely experienced significant cost
+                savings. Dedicate a portion of your savings to Temurin to invest
+                in your corporate software supply chain by ensuring Temurin’s
+                long-term viability, enhance security, and accelerate faster
+                releases for the Java community.
               </p>
             </div>
           </div>
@@ -289,8 +309,8 @@ const Sponsors = () => {
               <UiVirtualContent data={data} />
             </div>
           </div>
-          <BecomeSustainer />
-          <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-8 mt-16">
+          <BecomeSustainer classes="md:mt-6 md:mx-auto" />
+          <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-8 mt-40">
             Temurin’s Sustainers
           </h2>
           <div className="p-4">

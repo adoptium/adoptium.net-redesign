@@ -148,12 +148,12 @@ exports[`Support Us page > renders correctly 1`] = `
             </p>
           </div>
           <a
-            href="/en/sponsors"
+            href="/en/sustainers"
           >
             <button
               class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
             >
-              Become a sponsor
+              Become a sustainer
             </button>
           </a>
         </div>

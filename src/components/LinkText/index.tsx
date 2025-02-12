@@ -1,4 +1,4 @@
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../Link"
 import React from "react"
 
 type LinkTextProps = {

@@ -1,7 +1,12 @@
 import * as React from "react"
-import { Link, Trans, useI18next } from "gatsby-plugin-react-i18next"
+import { Trans, useI18next } from "gatsby-plugin-react-i18next"
 import { capitalize } from "../../util/capitalize"
 import { localeDate } from "../../util/localeDate"
+import { Link } from "../Link"
+
+const getFileName = (link: URL) => {
+  return link.toString().split('/').slice(-1);
+}
 
 const TemurinNightlyTable = ({ results }) => {
   const { language } = useI18next()
@@ -16,6 +21,7 @@ const TemurinNightlyTable = ({ results }) => {
           <tr>
             <td className="fw-bold">Platform</td>
             <td className="fw-bold">Type</td>
+            <td className="fw-bold">Build/Tag</td>
             <td className="fw-bold">Date</td>
             <td className="fw-bold">Binary</td>
             <td className="fw-bold">Installer</td>
@@ -42,9 +48,11 @@ const TemurinNightlyTable = ({ results }) => {
                               : asset.architecture}
                           </td>
                           <td>{asset.type}</td>
+                          <td>{release.release_name}</td>
                           <td>{localeDate(release.timestamp, language)}</td>
                           <td>
                             <Link
+                              title={getFileName(asset.link)}
                               to="/download"
                               state={{
                                 link: asset.link,
@@ -59,6 +67,7 @@ const TemurinNightlyTable = ({ results }) => {
                           {asset.installer_link ? (
                             <td>
                               <Link
+                                title={getFileName(asset.installer_link)}
                                 to="/download"
                                 state={{
                                   link: asset.installer_link,

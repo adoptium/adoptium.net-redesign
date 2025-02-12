@@ -12,7 +12,7 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
         aria-controls="headlessui-menu-items-:r6:"
         aria-expanded="true"
         aria-haspopup="menu"
-        class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-sm border-2 border-gray-700"
+        class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-xs border-2 border-gray-700"
         data-active=""
         data-headlessui-state="open active hover"
         data-hover=""
@@ -43,7 +43,7 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
     </div>
     <div
       aria-labelledby="headlessui-menu-button-:r5:"
-      class="absolute right-0 z-10 mt-2 w-26 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition ease-out duration-100 transform opacity-0 scale-95"
+      class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden transition ease-out duration-100 transform opacity-0 scale-95"
       data-closed=""
       data-enter=""
       data-headlessui-state="open"
@@ -71,7 +71,9 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
             class="flex items-center space-x-2"
           >
             Flag
-            <span>
+            <span
+              class="ml-2"
+            >
               English
             </span>
           </div>
@@ -89,7 +91,9 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
             class="flex items-center space-x-2"
           >
             Flag
-            <span>
+            <span
+              class="ml-2"
+            >
               English
             </span>
           </div>
@@ -107,7 +111,9 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
             class="flex items-center space-x-2"
           >
             Flag
-            <span>
+            <span
+              class="ml-2"
+            >
               Español
             </span>
           </div>
@@ -125,7 +131,9 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
             class="flex items-center space-x-2"
           >
             Flag
-            <span>
+            <span
+              class="ml-2"
+            >
               Deutsch
             </span>
           </div>
@@ -143,7 +151,9 @@ exports[`Language Selector component > renders correctly - expanded 1`] = `
             class="flex items-center space-x-2"
           >
             Flag
-            <span>
+            <span
+              class="ml-2"
+            >
               中文
             </span>
           </div>
@@ -164,7 +174,7 @@ exports[`Language Selector component > renders correctly 1`] = `
       <button
         aria-expanded="false"
         aria-haspopup="menu"
-        class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-sm border-2 border-gray-700"
+        class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-xs border-2 border-gray-700"
         data-headlessui-state=""
         id="headlessui-menu-button-:r2:"
         type="button"

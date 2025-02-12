@@ -22,30 +22,27 @@ const ReleasesPage = () => {
   }
 
   return (
-    <div>
-      <Layout>
-        <NavBar />
-        <PageHeader
-          title={"Download Temurin&reg JDK"}
-          subtitle={"Latest Releases"}
-          description={
-            "Pick a version, package type, JDK/JRE, and download the binaries."
-          }
-        />
-        <Tabs
-          updaterAction={loadLatestAssets}
-          Table={CommonCtaWrapper}
-          openModalWithChecksum={openModalWithChecksum}
-        />
-        <DownloadMethods />
-        <FAQ className={"!py-16 md:!py-24"} />
-        <ChecksumModal
-          open={modalOpen}
-          setOpen={setModalOpen}
-          checksum={currentChecksum}
-        />
-      </Layout>
-    </div>
+    <Layout>
+      <PageHeader
+        title={"Download Temurin&reg JDK"}
+        subtitle={"Latest Releases"}
+        description={
+          "Pick a version, package type, JDK/JRE, and download the binaries."
+        }
+      />
+      <Tabs
+        updaterAction={loadLatestAssets}
+        Table={CommonCtaWrapper}
+        openModalWithChecksum={openModalWithChecksum}
+      />
+      <DownloadMethods />
+      <FAQ className={"!py-16 md:!py-24"} />
+      <ChecksumModal
+        open={modalOpen}
+        setOpen={setModalOpen}
+        checksum={currentChecksum}
+      />
+    </Layout>
   )
 }
 

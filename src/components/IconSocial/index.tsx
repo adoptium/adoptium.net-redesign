@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../Link"
 import { FaGithub, FaLinkedin, FaSlack, FaYoutube } from "react-icons/fa"
-import { FaXTwitter } from "react-icons/fa6"
+import { FaXTwitter, FaBluesky, FaMastodon } from "react-icons/fa6"
 
 const SocialIcons = () => {
   return (
@@ -64,6 +64,30 @@ const SocialIcons = () => {
           <span className="sr-only">Slack</span>
           <FaSlack className="h-6 w-6" />
         </Link>
+      </li>
+
+      <li>
+        <a
+          href="https://bsky.app/profile/adoptium.net"
+          rel="noreferrer"
+          target="_blank"
+          className="leading-6 transition hover:opacity-75 dark:text-gray-200"
+        >
+          <span className="sr-only">Bluesky</span>
+          <FaBluesky className="h-6 w-6" />
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://mastodon.social/@eclipseadoptium@fosstodon.org"
+          rel="noreferrer"
+          target="_blank"
+          className="leading-6 transition hover:opacity-75 dark:text-gray-200"
+        >
+          <span className="sr-only">Mastodon</span>
+          <FaMastodon className="h-6 w-6" />
+        </a>
       </li>
     </>
   )

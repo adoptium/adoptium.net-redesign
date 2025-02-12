@@ -4,21 +4,20 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
+import PageHeader from "../components/PageHeader"
 
 const JoinPage = () => (
   <Layout>
-    <section className="py-5 text-center container">
-      <div className="row py-lg-5">
-        <div className="col-lg-8 col-md-8 mx-auto">
-          <h1 className="fw-light">
-            Join the Eclipse Adoptium&reg; Working Group
-          </h1>
-        </div>
-        <HubspotForm
-          portalId="5413615"
-          formId="78aa6887-715f-420c-97be-b97860899cec"
-        />
-      </div>
+    <PageHeader
+      subtitle="Join the Eclipse Adoptium&reg; Working Group"
+      title="Joining the Working Group"
+      description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
+    />
+    <section className="mx-auto max-w-4xl w-full p-6 lg:px-0 items-center justify-center">
+      <HubspotForm
+        portalId="5413615"
+        formId="78aa6887-715f-420c-97be-b97860899cec"
+      />
     </section>
   </Layout>
 )

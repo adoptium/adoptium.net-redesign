@@ -1,70 +1,40 @@
 import React from "react"
-import { render, fireEvent } from "@testing-library/react"
-import { useOnScreen } from "../../hooks/useOnScreen"
-import { describe, expect, it, vi } from "vitest"
-import { fetchNewsItems } from "../../hooks/fetchNews"
-import { createRandomNewsAndEventsData } from "../../__fixtures__/hooks"
+import { render } from "@testing-library/react"
+import NewsIndex, { Head } from "../news"
+import { describe, expect, it } from "vitest"
 import { axe } from "vitest-axe"
-import News, { Head } from "../news"
+import { createMDXData } from "../../__fixtures__/page"
 
-vi.mock("../../hooks/useOnScreen")
-vi.mock("../../hooks/fetchNews")
+let mockData = createMDXData()
 
 describe("News page", () => {
   it("renders correctly", () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    useOnScreen.mockReturnValue(true)
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    fetchNewsItems.mockReturnValue(createRandomNewsAndEventsData())
-
-    const { container } = render(<News />)
+    const { container } = render(<NewsIndex data={mockData} />)
     // eslint-disable-next-line
     const pageContent = container.querySelector("main")
 
     expect(pageContent).toMatchSnapshot()
   })
 
-  it("renders spinner when news not loaded", () => {
-    const news = []
-    const events = []
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    fetchNewsItems.mockReturnValue({ news, events })
-
-    const { container } = render(<News />)
+  // test when nextPageNumber is set
+  it("renders correctly with nextPageNumber", () => {
+    mockData.allMdx.totalCount = 11
+    const { container } = render(<NewsIndex data={mockData} />)
     // eslint-disable-next-line
     const pageContent = container.querySelector("main")
 
-    expect(pageContent).toMatchSnapshot()
-  })
-
-  it("next page triggers event", () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    useOnScreen.mockReturnValue(true)
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    fetchNewsItems.mockReturnValue(createRandomNewsAndEventsData())
-
-    const { getByLabelText } = render(<News />)
-    let next = getByLabelText("Go to last page")
-    fireEvent.click(next)
+    expect(pageContent).toHaveTextContent("Next")
   })
 
   it("head renders correctly", () => {
     const { container } = render(<Head />)
     // eslint-disable-next-line
     const title = container.querySelector("title")
-    expect(title).toHaveTextContent("News & Events | Adoptium")
+    expect(title?.textContent).toEqual("News & Events | Adoptium")
   })
 
   it("has no accessibility violations", async () => {
-    const { container } = render(<News />)
+    const { container } = render(<NewsIndex data={mockData} />)
     const results = await axe(container)
     expect(results).toHaveNoViolations()
   })

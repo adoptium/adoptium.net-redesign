@@ -9,6 +9,9 @@ let mockData = createMDXData()
 const pageContext = {
   author: "pmc",
   currentPageNumber: 1,
+  previousPageNumber: null,
+  nextPageNumber: 2,
+  numAuthorPages: 5,
 }
 
 describe("AuthorPage pages", () => {

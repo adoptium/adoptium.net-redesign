@@ -23,7 +23,7 @@ const LeavingSiteDisclaimerModal = ({ open, setOpen, message, location }) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+          <div className="fixed inset-0 bg-gray-500/75 transition-opacity" />
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
@@ -40,7 +40,7 @@ const LeavingSiteDisclaimerModal = ({ open, setOpen, message, location }) => {
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
                 <div className="bg-[#200E46] px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                   <div className="sm:flex sm:items-start">
-                    <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10">
+                    <div className="mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10">
                       <FaClipboard
                         className="h-6 w-6 text-blue-600"
                         aria-hidden="true"
@@ -65,7 +65,7 @@ const LeavingSiteDisclaimerModal = ({ open, setOpen, message, location }) => {
                   <button
                     type="button"
                     data-testid="continue"
-                    className={`mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 text-base font-medium text-white sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm bg-pink hover:bg-pink-700`}
+                    className={`mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-xs px-4 py-2 text-base font-medium text-white sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm bg-pink hover:bg-pink-700`}
                     onClick={(event) => {
                       event.preventDefault();
                       window.location.assign(location);
@@ -76,7 +76,7 @@ const LeavingSiteDisclaimerModal = ({ open, setOpen, message, location }) => {
                   <button
                     type="button"
                     data-testid="cancel"
-                    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 sm:mt-0 sm:w-auto sm:text-sm"
+                    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-xs px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 sm:mt-0 sm:w-auto sm:text-sm"
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}
                   >

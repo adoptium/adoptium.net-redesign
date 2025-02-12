@@ -47,6 +47,8 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-sass",
       options: {
         sassOptions: {
+          api: "modern",
+          silenceDeprecations: ['legacy-js-api'],
           precision: 6,
         },
         cssLoaderOptions: {

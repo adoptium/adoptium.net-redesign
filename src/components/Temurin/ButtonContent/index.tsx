@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../../Link"
 import { BsDownload } from "react-icons/bs"
 import { RxCrossCircled } from "react-icons/rx"
 import { FaApple, FaWindows } from "react-icons/fa"
@@ -20,22 +20,29 @@ const ButtonContent = ({ results }) => {
   const navigationItem = [
     {
       title: "Release notes",
+      link: results ? `/temurin/release-notes?version=${results['source'].release_name}` : "/temurin/release-notes"
     },
     {
       title: "Installation guide",
+      link: "/installation"
     },
     {
-      title: "Supported Configurations",
+      title: "Supported Platforms",
+      link: "/supported-platforms"
     },
     {
       title: "Terms of use",
+      link: "#"
     },
   ]
+
   const CardData: CardData[] = []
+  let foundmacos = false
   // loop through results and find macOS and Windows installers
   results &&
     results.map(result => {
       if (result.os === "mac" && result.architecture === "aarch64") {
+        foundmacos = true
         CardData.push({
           icon: <FaApple size={30} />,
           title: "macOS",
@@ -45,6 +52,19 @@ const ButtonContent = ({ results }) => {
           java_version: result.release_name,
           pkg_type: result.binaries[0].type,
           description: `Temurin ${result.release_name}, macOS aarch64 (M1) (${result.binaries[0].installer_extension.toUpperCase()})`,
+          link: result.binaries[0].installer_link,
+        })
+      } else if (result.os === "mac" && result.architecture === "x64" && !foundmacos) {
+        // Fall back to x64 if aarch64 is not found
+        CardData.push({
+          icon: <FaApple size={30} />,
+          title: "macOS",
+          os: result.os,
+          arch: result.architecture,
+          checksum: result.binaries[0].installer_checksum,
+          java_version: result.release_name,
+          pkg_type: result.binaries[0].type,
+          description: `Temurin ${result.release_name}, macOS 64 bit (${result.binaries[0].installer_extension.toUpperCase()})`,
           link: result.binaries[0].installer_link,
         })
       }
@@ -68,15 +88,17 @@ const ButtonContent = ({ results }) => {
       <div className=" w-full max-w-[1264px] mx-auto">
         <ul className="flex md:flex-row flex-col gap-4 lg:gap-8 items-start  w-full  justify-start sm:justify-center sm:items-center  my-8 lg:my-16">
           {navigationItem.map((item, index) => (
-            <li
-              key={index}
-              className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer"
-            >
-              <span className=" group  ">
-                <RxCrossCircled />
-              </span>{" "}
-              {item.title}
-            </li>
+            <Link to={item.link}>
+              <li
+                key={index}
+                className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer"
+              >
+                <span className=" group">
+                  <RxCrossCircled />
+                </span>{" "}
+                {item.title}
+              </li>
+            </Link>
           ))}
         </ul>
 

@@ -32,7 +32,7 @@ const ContactUs: React.FC<ContactUsProps> = ({
             src="/images/icons/message.svg"
             aria-label="message icon"
           />
-          <p className="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8">
+          <p className="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6">
             {title}
           </p>
           <span className=" text-lightgrey tab-button-text">

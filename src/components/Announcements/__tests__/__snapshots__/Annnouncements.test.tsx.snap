@@ -1,0 +1,196 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Announcements component > Announcements renders correctly 1`] = `
+<div>
+  <div
+    class="z-[100] fixed top-0 right-0 w-full max-w-[480px] bg-[#0e002a] p-6 pt-8 h-screen rounded-s-3xl"
+  >
+    <div
+      class="flex items-center justify-between"
+    >
+      <h1
+        class="text-2xl font-semibold"
+      >
+        Announcements
+      </h1>
+      <button
+        class="-m-2.5 rounded-md p-2.5 text-white-700"
+        type="button"
+      >
+        <span
+          class="sr-only"
+        >
+          Close menu
+        </span>
+        <div
+          class="border-2 border-[#3e3355] p-3 rounded-full"
+        >
+          <svg
+            class="text-xl"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+            />
+          </svg>
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex items-center gap-12 relative"
+    >
+      <span
+        class="h-[1px] w-full bg-[#3E3355] inline-block absolute bottom-[0.7px] z-[-1]"
+      />
+      <div
+        class="flex space-x-10 whitespace-nowrap   py-3"
+      >
+        <button>
+          <span
+            class="py-3 w-full tab-button-text
+                outline-hidden cursor-pointer transition-all duration-200 ease-in-out border-primary border-b-2 text-white"
+          >
+            Updates
+          </span>
+        </button>
+        <button>
+          <span
+            class="py-3 w-full tab-button-text
+                outline-hidden cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
+          >
+            Releases
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="mt-6 grow overflow-hidden h-full pb-28"
+    >
+      <div
+        class="overflow-auto h-[88%] scroll-sidebar"
+      >
+        <article>
+          <div>
+            <a
+              href="/en/test-announcement-1"
+            >
+              <div
+                class="text-[#c4bfce"
+              >
+                <p
+                  class="text-[12px] leading-[133.333%] text-lightgrey mb-0"
+                >
+                  1 day ago
+                </p>
+                <h3
+                  class="text-[20px] leading-[140%] text-white mb-4"
+                >
+                  Test Announcement 1
+                </h3>
+                <p
+                  class="tab-button-text text-sm text-lightgrey pt-2"
+                >
+                  Description for announcement 1
+                </p>
+              </div>
+            </a>
+            <span
+              class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
+            />
+          </div>
+          <div>
+            <a
+              href="/en/test-announcement-2"
+            >
+              <div
+                class="text-[#c4bfce"
+              >
+                <p
+                  class="text-[12px] leading-[133.333%] text-lightgrey mb-0"
+                >
+                  3 weeks ago
+                </p>
+                <h3
+                  class="text-[20px] leading-[140%] text-white mb-4"
+                >
+                  Test Announcement 2
+                </h3>
+                <p
+                  class="tab-button-text text-sm text-lightgrey pt-2"
+                >
+                  Description for announcement 2
+                </p>
+              </div>
+            </a>
+            <span
+              class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
+            />
+          </div>
+          <div>
+            <a
+              href="/en/test-announcement-3"
+            >
+              <div
+                class="text-[#c4bfce"
+              >
+                <p
+                  class="text-[12px] leading-[133.333%] text-lightgrey mb-0"
+                >
+                  1 week ago
+                </p>
+                <h3
+                  class="text-[20px] leading-[140%] text-white mb-4"
+                >
+                  Test Announcement 3
+                </h3>
+                <p
+                  class="tab-button-text text-sm text-lightgrey pt-2"
+                >
+                  Description for announcement 3
+                </p>
+              </div>
+            </a>
+            <span
+              class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
+            />
+          </div>
+          <div>
+            <a
+              href="/en/test-announcement-4"
+            >
+              <div
+                class="text-[#c4bfce"
+              >
+                <p
+                  class="text-[12px] leading-[133.333%] text-lightgrey mb-0"
+                >
+                  8 weeks ago
+                </p>
+                <h3
+                  class="text-[20px] leading-[140%] text-white mb-4"
+                >
+                  Test Announcement 4
+                </h3>
+                <p
+                  class="tab-button-text text-sm text-lightgrey pt-2"
+                >
+                  Description for announcement 4
+                </p>
+              </div>
+            </a>
+            <span
+              class="h-[1px] w-full bg-[#3E3355] inline-block my-4"
+            />
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+`;

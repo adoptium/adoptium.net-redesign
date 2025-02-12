@@ -47,7 +47,8 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
   const [arch, updateArch] = useState("any")
   const [version, udateVersion] = useState("any")
 
-  const [active, setActive] = useState(data.mostRecentLts.version)
+  const [activeVersionSelectorTab, setActiveVersionSelectorTab] = useState(data.mostRecentLts.version)
+
   const [releases, setReleases] = useState(null)
 
   /**
@@ -87,6 +88,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
 
       // init the default selected Version, if any from the param 'version' or from 'variant'
       let defaultSelectedVersion = data.mostRecentLts.version
+      let defaultActiveVersionSelectorTab = data.mostRecentLts.version
       const versionParam = queryStringParams.version
       if (versionParam) {
         let versionParamStr = versionParam.toString()
@@ -94,13 +96,16 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
 
         if (versionParamStr.toLowerCase() === "latest") {
           // get the latest version of the list
-          defaultSelectedVersion = LTSVersions.sort(
-            (a, b) => b.node.version - a.node.version,
-          )[0].node.version
-        } else if (
-          LTSVersions.findIndex(version => version.node.version === versionParamNum) >= 0
-        ) {
-          defaultSelectedVersion = versionParamNum
+          defaultSelectedVersion = LTSVersions.sort((a, b) => b.node.version - a.node.version,)[0].node.version;
+          defaultActiveVersionSelectorTab = defaultSelectedVersion;
+        } else if (LTSVersions.findIndex(version => version.node.version === versionParamNum) >= 0) {
+          // it is a valid LTS version
+          defaultSelectedVersion = versionParamNum;
+          defaultActiveVersionSelectorTab = versionParamNum;
+        } else {
+          // it is another valid version
+          defaultSelectedVersion = versionParamNum;
+          defaultActiveVersionSelectorTab = 1;
         }
       }
 
@@ -119,6 +124,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
       osUpdater(defaultSelectedOS);
       archUpdater(defaultSelectedArch);
       versionUpdater(defaultSelectedVersion);
+      setActiveVersionSelectorTab(defaultActiveVersionSelectorTab);
 
       // OK we can loaded elements
       setReady(true)
@@ -157,13 +163,13 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
       <section className="py-8 md:pt-16 px-6 w-full">
         <div className="w-full flex flex-col items-start justify-start sm:items-center sm:justify-center">
           <VersionSelector
-            active={active}
-            setActive={setActive}
+            activeVersionTab={activeVersionSelectorTab}
+            setActiveVersionTab={setActiveVersionSelectorTab}
             versions={LTSVersions}
             updateVersion={udateVersion}
             defaultVersion={data.mostRecentLts.version}
           />
-          {active === 1 ? (
+          {activeVersionSelectorTab === 1 ? (
             <ReleaseSelector
               versions={data.allVersions}
               updateVersion={versionUpdater}
@@ -178,7 +184,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
           )}
         </div>
       </section>
-      <Heading />
+      <Heading results={releases} />
       <Table results={releases} openModalWithChecksum={openModalWithChecksum} />
     </>
   )

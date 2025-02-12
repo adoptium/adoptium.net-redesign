@@ -50,7 +50,7 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
               2021-01-01
                – posted by   
               <a
-                href="/blog/author/pmc"
+                href="/news/author/pmc"
               >
                 Adoptium PMC
               </a>
@@ -250,7 +250,7 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
               <p>
                 Posted by 
                 <a
-                  href="/blog/author/pmc"
+                  href="/news/author/pmc"
                 >
                   Adoptium PMC
                 </a>
@@ -359,7 +359,7 @@ exports[`BlogPost Template page > renders correctly 1`] = `
               2021-01-01
                – posted by   
               <a
-                href="/blog/author/pmc"
+                href="/news/author/pmc"
               >
                 Adoptium PMC
               </a>
@@ -559,7 +559,7 @@ exports[`BlogPost Template page > renders correctly 1`] = `
               <p>
                 Posted by 
                 <a
-                  href="/blog/author/pmc"
+                  href="/news/author/pmc"
                 >
                   Adoptium PMC
                 </a>

@@ -79,6 +79,23 @@ export const SolarisIcon = () => {
   )
 }
 
+export const AixIcon = () => {
+  return (
+    <>
+      <svg width="32" height="32" version="1.1" viewBox="0 0 1341.9 1341.9" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <path transform="matrix(133.33 0 0 -133.33 1266.2 670.93)" d="m0 0c0-2.466-1.998-4.465-4.465-4.465-2.465 0-4.466 1.999-4.466 4.465 0 2.467 2.001 4.465 4.466 4.465 2.467 0 4.465-1.998 4.465-4.465" fill="#80cc28" />
+          <path transform="matrix(133.33 0 0 -133.33 1328.1 670.93)" d="m0 0h-0.103c0-1.333-0.54-2.539-1.413-3.413-0.874-0.873-2.08-1.413-3.412-1.413-1.335 0-2.539 0.54-3.414 1.413-0.874 0.874-1.414 2.08-1.414 3.413s0.54 2.539 1.414 3.413c0.875 0.873 2.079 1.413 3.414 1.413 1.332 0 2.538-0.54 3.412-1.413 0.873-0.874 1.413-2.08 1.413-3.413h0.206c0 2.779-2.253 5.032-5.031 5.032-2.78 0-5.033-2.253-5.033-5.032s2.253-5.032 5.033-5.032c2.778 0 5.031 2.253 5.031 5.032h-0.103" fill="#4d7ec9" />
+          <path transform="matrix(133.33 0 0 -133.33 389.19 556.69)" d="m0 0-5e-3 -0.016-0.347-0.904h0.7zm0.776-2.024-0.267 0.681h-1.035l-0.265-0.678-0.526-3e-3 1.11 2.677h0.465l1.066-2.677z" fill="#fff" />
+          <path transform="matrix(133.33 0 0 -133.33 -63646 63635)" d="m481.83 473.74h0.49v-2.679h-0.49z" fill="#fff" />
+          <path transform="matrix(133.33 0 0 -133.33 974.08 826.65)" d="m0 0-0.721 1.014-0.76-1.014h-0.603l1.061 1.383-0.987 1.296h0.608l0.696-0.936 0.693 0.936h0.592l-0.983-1.3 1.015-1.379z" fill="#fff" />
+          <path transform="matrix(133.33 0 0 -133.33 1120.2 787.65)" d="m0 0c0.037 0 0.07 2e-3 0.07 0.047 0 0.035-0.031 0.042-0.062 0.042h-0.059v-0.089zm-0.051-0.162h-0.045v0.288h0.11c0.068 0 0.102-0.025 0.102-0.082 0-0.052-0.033-0.074-0.074-0.079l0.082-0.127h-0.049l-0.077 0.125h-0.049zm0.052-0.064c0.114 0 0.202 0.088 0.202 0.209 0 0.118-0.088 0.207-0.202 0.207s-0.204-0.089-0.204-0.207c0-0.121 0.09-0.209 0.204-0.209m-0.253 0.209c0 0.143 0.116 0.249 0.253 0.249s0.253-0.106 0.253-0.249c0-0.145-0.116-0.251-0.253-0.251s-0.253 0.106-0.253 0.251" fill="#fff" />
+        </g>
+      </svg>
+    </>
+  )
+}
+
 export const AdobeIcon = () => {
   return (
     <>
@@ -611,7 +628,7 @@ export const NeedSupportIcon = () => {
           ry="17.1427"
           transform="rotate(90 17.1424 83.5729)"
           fill="#E197DF"
-          fill-opacity="0.6"
+          fillOpacity="0.6"
         />
         <path
           d="M17.1424 100.408C7.84468 100.408 0.307376 92.8706 0.307376 83.5729C0.307377 74.2752 7.84468 66.7379 17.1424 66.7379C26.4402 66.7379 33.9775 74.2752 33.9775 83.5729C33.9775 92.8706 26.4402 100.408 17.1424 100.408Z"
@@ -627,7 +644,7 @@ export const NeedSupportIcon = () => {
           ry="17.1427"
           transform="rotate(90 60.0018 32.1427)"
           fill="#E197DF"
-          fill-opacity="0.6"
+          fillOpacity="0.6"
         />
         <path
           d="M60.0018 48.9778C50.7041 48.9778 43.1668 41.4405 43.1668 32.1427C43.1668 22.845 50.7041 15.3077 60.0018 15.3077C69.2995 15.3077 76.8368 22.845 76.8368 32.1427C76.8368 41.4405 69.2995 48.9778 60.0018 48.9778Z"
@@ -643,7 +660,7 @@ export const NeedSupportIcon = () => {
           ry="17.1427"
           transform="rotate(90 102.857 83.5729)"
           fill="#E197DF"
-          fill-opacity="0.6"
+          fillOpacity="0.6"
         />
         <path
           d="M102.857 100.408C93.5595 100.408 86.0222 92.8706 86.0222 83.5729C86.0222 74.2752 93.5595 66.7379 102.857 66.7379C112.155 66.7379 119.692 74.2752 119.692 83.5729C119.692 92.8706 112.155 100.408 102.857 100.408Z"
@@ -659,9 +676,9 @@ export const NeedSupportIcon = () => {
           width="58.9004"
           height="58.9009"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="6.15382" />
           <feComposite
             in2="SourceAlpha"
@@ -682,9 +699,9 @@ export const NeedSupportIcon = () => {
           width="58.9004"
           height="58.9009"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="6.15382" />
           <feComposite
             in2="SourceAlpha"
@@ -705,9 +722,9 @@ export const NeedSupportIcon = () => {
           width="58.9004"
           height="58.9009"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="6.15382" />
           <feComposite
             in2="SourceAlpha"
@@ -941,64 +958,7 @@ export const MobileFooterIcon = () => (
     </defs>
   </svg>
 )
-export const MobileFooterFacebook = () => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g clipPath="url(#clip0_501_4312)">
-      <path
-        d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
-        fill="white"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_501_4312">
-        <rect width="24" height="24" fill="white" />
-      </clipPath>
-    </defs>
-  </svg>
-)
-export const MobileFooterSocial = () => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M18.3263 1.90381H21.6998L14.3297 10.3273L23 21.7898H16.2112L10.894 14.8378L4.80995 21.7898H1.43443L9.31743 12.7799L1 1.90381H7.96111L12.7674 8.25814L18.3263 1.90381ZM17.1423 19.7706H19.0116L6.94539 3.81694H4.93946L17.1423 19.7706Z"
-      fill="white"
-    />
-  </svg>
-)
-export const MobileFooterCat = () => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g clipPath="url(#clip0_501_4316)">
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M12.0099 0C5.36875 0 0 5.40833 0 12.0992C0 17.4475 3.43994 21.9748 8.21205 23.5771C8.80869 23.6976 9.02724 23.3168 9.02724 22.9965C9.02724 22.716 9.00757 21.7545 9.00757 20.7527C5.6667 21.474 4.97099 19.3104 4.97099 19.3104C4.43409 17.9082 3.63858 17.5478 3.63858 17.5478C2.54511 16.8066 3.71823 16.8066 3.71823 16.8066C4.93117 16.8868 5.56763 18.0486 5.56763 18.0486C6.64118 19.8913 8.37111 19.3707 9.06706 19.0501C9.16638 18.2688 9.48473 17.728 9.82275 17.4276C7.15817 17.1471 4.35469 16.1055 4.35469 11.458C4.35469 10.1359 4.8316 9.05428 5.58729 8.21304C5.46807 7.91263 5.0504 6.67043 5.70677 5.00787C5.70677 5.00787 6.72083 4.6873 9.00732 6.24981C9.98625 5.98497 10.9958 5.85024 12.0099 5.84911C13.024 5.84911 14.0577 5.98948 15.0123 6.24981C17.299 4.6873 18.3131 5.00787 18.3131 5.00787C18.9695 6.67043 18.5515 7.91263 18.4323 8.21304C19.2079 9.05428 19.6652 10.1359 19.6652 11.458C19.6652 16.1055 16.8617 17.1269 14.1772 17.4276C14.6148 17.8081 14.9924 18.5292 14.9924 19.6711C14.9924 21.2936 14.9727 22.5957 14.9727 22.9962C14.9727 23.3168 15.1915 23.6976 15.7879 23.5774C20.56 21.9745 23.9999 17.4475 23.9999 12.0992C24.0196 5.40833 18.6312 0 12.0099 0Z"
-        fill="white"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_501_4316">
-        <rect width="24" height="24" fill="white" />
-      </clipPath>
-    </defs>
-  </svg>
-)
+
 export const MobileFooterYoutube = () => (
   <svg
     width="24"
@@ -1854,6 +1814,234 @@ export const LinuxIcon = () => (
         <stop stopColor="#EBC40C" />
         <stop offset="1" stopColor="#EBC40C" stopOpacity="0" />
       </linearGradient>
+    </defs>
+  </svg>
+)
+
+export const Error404Icon = () => (
+  <svg
+    width="100%"
+    height="332"
+    viewBox="0 0 479 332"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_ddi_6409_38909)">
+      <path
+        d="M171.896 299.42L130.972 275.838L52.5968 321L31.2668 308.709L2 198.092L26.5543 183.943L132.956 245.254L160.487 229.391L186.033 244.111L158.503 259.975L199.427 283.556L171.896 299.42ZM58.5494 299.277L47.8844 294.275L105.426 261.118L27.0504 215.957H33.995L58.5494 299.277Z"
+        fill="url(#paint0_radial_6409_38909)"
+      />
+      <path
+        d="M301.506 227.308C291.089 233.311 280.507 237.313 269.759 239.313C259.011 241.124 248.263 241.505 237.516 240.457C226.933 239.313 216.599 237.17 206.513 234.025C196.427 230.881 186.836 227.165 177.742 222.878C168.813 218.495 160.546 214.112 152.94 209.73C145.664 205.537 138.306 200.917 130.866 195.867C123.59 190.722 117.224 185.339 111.768 179.717C106.311 173.905 102.674 167.998 100.855 161.996C98.8706 155.898 99.6147 149.753 103.087 143.559C106.394 137.271 113.173 131.173 123.425 125.266C133.677 119.359 144.094 115.453 154.676 113.547C165.424 111.546 176.006 111.07 186.423 112.118C197.005 113.071 207.257 115.071 217.178 118.12C227.099 121.169 236.606 124.837 245.701 129.125C254.795 133.412 263.145 137.748 270.751 142.13C278.688 146.704 286.459 151.658 294.065 156.994C301.506 162.234 307.872 167.808 313.163 173.715C318.454 179.431 322.009 185.291 323.828 191.293C325.647 197.296 324.903 203.346 321.596 209.444C318.289 215.542 311.592 221.496 301.506 227.308ZM274.967 212.016C283.069 207.348 286.542 202.203 285.384 196.581C284.227 190.769 279.762 184.672 271.991 178.288C264.385 171.809 254.96 165.33 243.716 158.852C231.646 151.896 219.989 146.227 208.745 141.844C197.667 137.366 187.167 134.842 177.246 134.27C167.16 133.603 157.983 135.651 149.715 140.415C143.432 144.036 139.96 147.942 139.298 152.134C138.637 156.327 140.208 160.757 144.011 165.426C147.649 169.999 152.774 174.763 159.388 179.717C166.002 184.481 173.526 189.293 181.959 194.152C190.061 198.82 198.245 203.06 206.513 206.871C214.946 210.587 223.13 213.493 231.067 215.589C239.004 217.685 246.693 218.59 254.133 218.305C261.574 217.828 268.519 215.732 274.967 212.016Z"
+        fill="url(#paint1_radial_6409_38909)"
+      />
+      <path
+        d="M449.469 139.476L408.545 115.895L330.17 161.057L308.84 148.766L279.573 38.1487L304.128 24L410.53 85.3111L438.06 69.4474L463.607 84.1677L436.076 100.031L477 123.613L449.469 139.476ZM336.123 139.333L325.458 134.331L382.999 101.175L304.624 56.0132H311.568L336.123 139.333Z"
+        fill="url(#paint2_radial_6409_38909)"
+      />
+    </g>
+    <g filter="url(#filter1_bddi_6409_38909)">
+      <path
+        d="M171.896 275.42L130.972 251.838L52.5968 297L31.2668 284.709L2 174.092L26.5543 159.943L132.956 221.254L160.487 205.391L186.033 220.111L158.503 235.975L199.427 259.556L171.896 275.42ZM58.5494 275.277L47.8844 270.275L105.426 237.118L27.0504 191.957H33.995L58.5494 275.277Z"
+        fill="#E4E8F3"
+        fillOpacity="0.25"
+        shapeRendering="crispEdges"
+      />
+      <path
+        d="M301.506 203.308C291.089 209.311 280.507 213.313 269.759 215.313C259.011 217.124 248.263 217.505 237.516 216.457C226.933 215.313 216.599 213.17 206.513 210.025C196.427 206.881 186.836 203.165 177.742 198.878C168.813 194.495 160.546 190.112 152.94 185.73C145.664 181.537 138.306 176.917 130.866 171.867C123.59 166.722 117.224 161.339 111.768 155.717C106.311 149.905 102.674 143.998 100.855 137.996C98.8706 131.898 99.6147 125.753 103.087 119.559C106.394 113.271 113.173 107.173 123.425 101.266C133.677 95.359 144.094 91.4526 154.676 89.5471C165.424 87.5462 176.006 87.0698 186.423 88.1179C197.005 89.0707 207.257 91.0715 217.178 94.1204C227.099 97.1693 236.606 100.837 245.701 105.125C254.795 109.412 263.145 113.748 270.751 118.13C278.688 122.704 286.459 127.658 294.065 132.994C301.506 138.234 307.872 143.808 313.163 149.715C318.454 155.431 322.009 161.291 323.828 167.293C325.647 173.296 324.903 179.346 321.596 185.444C318.289 191.542 311.592 197.496 301.506 203.308ZM274.967 188.016C283.069 183.348 286.542 178.203 285.384 172.581C284.227 166.769 279.762 160.672 271.991 154.288C264.385 147.809 254.96 141.33 243.716 134.852C231.646 127.896 219.989 122.227 208.745 117.844C197.667 113.366 187.167 110.842 177.246 110.27C167.16 109.603 157.983 111.651 149.715 116.415C143.432 120.036 139.96 123.942 139.298 128.134C138.637 132.327 140.208 136.757 144.011 141.426C147.649 145.999 152.774 150.763 159.388 155.717C166.002 160.481 173.526 165.293 181.959 170.152C190.061 174.82 198.245 179.06 206.513 182.871C214.946 186.587 223.13 189.493 231.067 191.589C239.004 193.685 246.693 194.59 254.133 194.305C261.574 193.828 268.519 191.732 274.967 188.016Z"
+        fill="#E4E8F3"
+        fillOpacity="0.25"
+        shapeRendering="crispEdges"
+      />
+      <path
+        d="M449.469 115.476L408.545 91.8951L330.17 137.057L308.84 124.766L279.573 14.1487L304.128 0L410.53 61.3111L438.06 45.4474L463.607 60.1677L436.076 76.0314L477 99.6126L449.469 115.476ZM336.123 115.333L325.458 110.331L382.999 77.1748L304.624 32.0132H311.568L336.123 115.333Z"
+        fill="#E4E8F3"
+        fillOpacity="0.25"
+        shapeRendering="crispEdges"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_ddi_6409_38909"
+        x="0.461538"
+        y="24"
+        width="478.077"
+        height="307.769"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="9.23077" />
+        <feGaussianBlur stdDeviation="0.769231" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 1 0 0 0 0 0.0823529 0 0 0 0 0.396078 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_6409_38909"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="3.07692" />
+        <feGaussianBlur stdDeviation="0.769231" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="effect1_dropShadow_6409_38909"
+          result="effect2_dropShadow_6409_38909"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect2_dropShadow_6409_38909"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="0.587216" />
+        <feGaussianBlur stdDeviation="0.587216" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+        />
+        <feBlend
+          mode="darken"
+          in2="shape"
+          result="effect3_innerShadow_6409_38909"
+        />
+      </filter>
+      <filter
+        id="filter1_bddi_6409_38909"
+        x="-21.4886"
+        y="-23.4886"
+        width="521.977"
+        height="343.977"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feGaussianBlur in="BackgroundImageFix" stdDeviation="11.7443" />
+        <feComposite
+          in2="SourceAlpha"
+          operator="in"
+          result="effect1_backgroundBlur_6409_38909"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="9.23077" />
+        <feGaussianBlur stdDeviation="0.769231" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.991667 0 0 0 0 0.975139 0 0 0 0 0.980789 0 0 0 0.24 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="effect1_backgroundBlur_6409_38909"
+          result="effect2_dropShadow_6409_38909"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="3.07692" />
+        <feGaussianBlur stdDeviation="0.769231" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="effect2_dropShadow_6409_38909"
+          result="effect3_dropShadow_6409_38909"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect3_dropShadow_6409_38909"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="0.587216" />
+        <feGaussianBlur stdDeviation="0.587216" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.342674 0 0 0 0 0.352133 0 0 0 0 0.579167 0 0 0 0.1 0"
+        />
+        <feBlend
+          mode="darken"
+          in2="shape"
+          result="effect4_innerShadow_6409_38909"
+        />
+      </filter>
+      <radialGradient
+        id="paint0_radial_6409_38909"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(75.3118 172.5) scale(306.485 366.977)"
+      >
+        <stop stopColor="#D478F4" />
+        <stop offset="1" stopColor="#FF1464" />
+      </radialGradient>
+      <radialGradient
+        id="paint1_radial_6409_38909"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(75.3118 172.5) scale(306.485 366.977)"
+      >
+        <stop stopColor="#D478F4" />
+        <stop offset="1" stopColor="#FF1464" />
+      </radialGradient>
+      <radialGradient
+        id="paint2_radial_6409_38909"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(75.3118 172.5) scale(306.485 366.977)"
+      >
+        <stop stopColor="#D478F4" />
+        <stop offset="1" stopColor="#FF1464" />
+      </radialGradient>
     </defs>
   </svg>
 )

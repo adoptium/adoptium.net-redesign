@@ -3,7 +3,6 @@ import { expect, vi } from "vitest"
 
 import "@testing-library/jest-dom"
 
-import "vitest-canvas-mock"
 import "vitest-axe/extend-expect"
 import * as axeMatchers from "vitest-axe/matchers"
 
@@ -22,6 +21,7 @@ const mdxMock = number => {
         title: `Mock Title ${number}`,
         description: `Mock Description ${number}`,
         date: "2021-01-01",
+        tags: ["mock-tag-1", "release-notes"],
       },
     },
   }
@@ -42,7 +42,7 @@ vi.mock("gatsby", async () => {
       version: 1,
     },
     mostRecentFeatureVersion: {
-      version: 2,
+      version: 24,
     },
     downloadCount: {
       total: 1000000,
@@ -119,6 +119,7 @@ vi.mock("gatsby-plugin-image", async () => {
     return React.createElement("img", {
       className: imgClassName,
       stlye: imgStyle,
+      alt: "Mock Image",
       ...props,
     })
   }
@@ -211,10 +212,19 @@ vi.stubGlobal("IntersectionObserver", IntersectionObserverMock)
  */
 global.matchMedia =
   global.matchMedia ||
-  function () {
+  function (query) {
     return {
       matches: false,
+      media: query,
+      onchange: null,
+      // Legacy API
       addListener: function () {},
       removeListener: function () {},
-    }
+      // Modern API used by MUI v6
+      addEventListener: function () {},
+      removeEventListener: function () {},
+      dispatchEvent: function () {
+        return false;
+      },
+    };
   }

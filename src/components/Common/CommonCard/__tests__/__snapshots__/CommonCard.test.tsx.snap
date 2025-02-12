@@ -19,11 +19,15 @@ exports[`CommonButton component > should render correctly 1`] = `
         test
       </p>
     </div>
-    <button
-      class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+    <a
+      href="/enundefined"
     >
-      test
-    </button>
+      <button
+        class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+      >
+        test
+      </button>
+    </a>
   </div>
 </div>
 `;

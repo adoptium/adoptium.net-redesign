@@ -8,6 +8,10 @@ import { createMDXData } from "../../__fixtures__/page"
 let mockData = createMDXData()
 const pageContext = {
   tag: "test",
+  previousPageNumber: null,
+  nextPageNumber: 2,
+  currentPageNumber: 1,
+  numTagPages: 5,
 }
 
 describe("TagPage pages", () => {
@@ -18,6 +22,47 @@ describe("TagPage pages", () => {
     // eslint-disable-next-line
     const pageContent = container.querySelector("main")
 
+    expect(pageContent).toMatchSnapshot()
+  })
+
+  it("renders correctly - with next pagination", () => {
+    const { container } = render(
+      <TagPage
+        data={mockData}
+        pageContext={{ ...pageContext, nextPageNumber: 2 }}
+      />,
+    )
+    // eslint-disable-next-line
+    const pageContent = container.querySelector("main")
+
+    expect(pageContent).toMatchSnapshot()
+  })
+
+  it("renders correctly - with previous pagination", () => {
+    const { container } = render(
+      <TagPage
+        data={mockData}
+        pageContext={{ ...pageContext, previousPageNumber: 1 }}
+      />,
+    )
+    // eslint-disable-next-line
+    const pageContent = container.querySelector("main")
+    expect(pageContent).toMatchSnapshot()
+  })
+
+  it("renders correctly - with next and previous pagination", () => {
+    const { container } = render(
+      <TagPage
+        data={mockData}
+        pageContext={{
+          ...pageContext,
+          nextPageNumber: 2,
+          previousPageNumber: 1,
+        }}
+      />,
+    )
+    // eslint-disable-next-line
+    const pageContent = container.querySelector("main")
     expect(pageContent).toMatchSnapshot()
   })
 

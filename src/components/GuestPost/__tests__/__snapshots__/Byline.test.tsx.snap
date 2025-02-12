@@ -9,7 +9,7 @@ exports[`Byline component > should render correctly 1`] = `
     2021-01-01
      – posted by   
     <a
-      href="/blog/author/pmc"
+      href="/news/author/pmc"
     >
       Adoptium PMC
     </a>

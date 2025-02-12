@@ -2,9 +2,9 @@ import React from "react"
 import { RedIcon } from "../Common/Icon"
 
 interface Props {
-  title: string
-  subtitle: string
-  description?: string
+  title: string | React.ReactNode
+  subtitle: string | React.ReactNode
+  description?: string | React.ReactNode
   className?: string
 }
 
@@ -35,10 +35,17 @@ const PageHeader = ({
                 {subtitle}
               </div>
             </div>
-            <div
-              className={`self-stretch text-center text-white   text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold`}
-              dangerouslySetInnerHTML={{ __html: title }}
-            />
+            {/* if title is a string else React.ReactNode */}
+            {typeof title === 'string' ? (
+              <div
+                className={`self-stretch text-center text-white   text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold`}
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
+            ) : (
+              <h1 className="self-stretch text-center text-white text-2xl md:text-5xl pb-4 font-semibold">
+                {title}
+              </h1>
+            )}
           </div>
           <div
             className={`self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] ${className}`}

@@ -76,7 +76,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                 />
               </svg>
               <a
-                href="/aqavit"
+                href="/en/aqavit"
               >
                 <img
                   alt="AQAvit logo"
@@ -119,7 +119,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
               <p>
                 <a
                   class="link-light"
-                  href="/temurin/release-notes?version=release_notes_name_mock"
+                  href="/en/temurin/release-notes?version=release_notes_name_mock"
                 >
                   <svg
                     fill="currentColor"
@@ -200,8 +200,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                   >
                     <a
                       class="btn btn-primary"
-                      href="/download"
-                      state="[object Object]"
+                      href="/en/download"
                       style="width: 9em;"
                     >
                       type_mock
@@ -267,7 +266,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                 />
               </svg>
               <a
-                href="/aqavit"
+                href="/en/aqavit"
               >
                 <img
                   alt="AQAvit logo"
@@ -310,7 +309,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
               <p>
                 <a
                   class="link-light"
-                  href="/temurin/release-notes?version=release_notes_name_mock"
+                  href="/en/temurin/release-notes?version=release_notes_name_mock"
                 >
                   <svg
                     fill="currentColor"
@@ -378,8 +377,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                   >
                     <a
                       class="btn btn-primary"
-                      href="/download"
-                      state="[object Object]"
+                      href="/en/download"
                       style="width: 9em;"
                     >
                       type_mock
@@ -403,8 +401,7 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                   >
                     <a
                       class="btn btn-primary"
-                      href="/download"
-                      state="[object Object]"
+                      href="/en/download"
                       style="width: 9em;"
                     >
                       type_mock
@@ -431,22 +428,22 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
     </table>
     <nav
       aria-label="pagination navigation"
-      class="MuiPagination-root MuiPagination-text pt-3 d-flex justify-content-center css-1oj2twp-MuiPagination-root"
+      class="MuiPagination-root MuiPagination-text pt-3 d-flex justify-content-center css-1xra8g6-MuiPagination-root"
     >
       <ul
-        class="MuiPagination-ul css-wjh20t-MuiPagination-ul"
+        class="MuiPagination-ul css-1c5o7vy-MuiPagination-ul"
       >
         <li>
           <button
             aria-label="Go to first page"
-            class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-disabled MuiPaginationItem-firstLast css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-disabled MuiPaginationItem-firstLast css-1l5xwdx-MuiButtonBase-root-MuiPaginationItem-root"
             disabled=""
             tabindex="-1"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-8uzxat-MuiSvgIcon-root-MuiPaginationItem-icon"
               data-testid="FirstPageIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -460,14 +457,14 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
         <li>
           <button
             aria-label="Go to previous page"
-            class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-disabled MuiPaginationItem-previousNext css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-disabled MuiPaginationItem-previousNext css-1l5xwdx-MuiButtonBase-root-MuiPaginationItem-root"
             disabled=""
             tabindex="-1"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-8uzxat-MuiSvgIcon-root-MuiPaginationItem-icon"
               data-testid="NavigateBeforeIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -480,41 +477,35 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
         </li>
         <li>
           <button
-            aria-current="true"
+            aria-current="page"
             aria-label="page 1"
-            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-selected MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-selected MuiPaginationItem-page css-1l5xwdx-MuiButtonBase-root-MuiPaginationItem-root"
             tabindex="0"
             type="button"
           >
             1
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </li>
         <li>
           <button
             aria-label="Go to page 2"
-            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-1l5xwdx-MuiButtonBase-root-MuiPaginationItem-root"
             tabindex="0"
             type="button"
           >
             2
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </li>
         <li>
           <button
             aria-label="Go to next page"
-            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-previousNext css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-previousNext css-1l5xwdx-MuiButtonBase-root-MuiPaginationItem-root"
             tabindex="0"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-8uzxat-MuiSvgIcon-root-MuiPaginationItem-icon"
               data-testid="NavigateNextIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -523,21 +514,18 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                 d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </li>
         <li>
           <button
             aria-label="Go to last page"
-            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-firstLast css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-firstLast css-1l5xwdx-MuiButtonBase-root-MuiPaginationItem-root"
             tabindex="0"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-8uzxat-MuiSvgIcon-root-MuiPaginationItem-icon"
               data-testid="LastPageIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -546,9 +534,6 @@ exports[`TemurinArchiveTable component > renders correctly 1`] = `
                 d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </li>
       </ul>

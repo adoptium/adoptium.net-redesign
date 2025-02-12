@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby-plugin-react-i18next"
+import { Link } from "../../Link"
 
 import { capitalize } from "../../../util/capitalize"
 import { getImageForDistribution } from "../../../hooks"
@@ -54,7 +54,16 @@ const AllReleaseCard = ({ results }) => {
           <div className="flex items-end justify-between mt-4 md:mt-0 gap-5">
             <Link
               placeholder="Download"
-              to={release.binary.package.link}
+              to="/download"
+              state={{
+                link: release.binary.package.link,
+                checksum: release.binary.package.checksum,
+                os: release.binary.os,
+                arch: release.binary.architecture,
+                pkg_type: release.binary.package.type,
+                java_version: release.release_name,
+                vendor: release.vendor,
+              }}
               className="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 px-8 py-4 text-white font-bold leading-6 text-base "
             >
               Download ({fetchExtension(release.binary.package.name)})

@@ -4,7 +4,7 @@ exports[`HeroSection component > should render correctly 1`] = `
 <div>
   <div>
     <div
-      class=" sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative"
+      class="-mt-24 sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative"
     >
       <div
         class="relative isolate"

@@ -1,8 +1,9 @@
 import React, { MutableRefObject, useRef } from "react"
-import { Link, Trans } from "gatsby-plugin-react-i18next"
+import { Trans } from "gatsby-plugin-react-i18next"
 import { detectOS, UserOS } from "../../../util/detectOS"
 import { fetchLatestForOS, useOnScreen } from "../../../hooks"
 import { FaApple, FaWindows, FaLinux } from "react-icons/fa"
+import { Link } from "../../Link"
 
 let userOSName: string
 let userOSAPIName: string
@@ -62,27 +63,26 @@ const LatestTemurin = (props): JSX.Element => {
 
   return (
     <div ref={ref} className="text-center w-full">
-      <h1 className="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]">
+      <h1 className="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px] mb-8">
         The Power of Eclipse Temurin™
       </h1>
       <p className="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold">
         {binary ? (
           <Trans
             i18nKey="Download Temurin for"
-            defaults="Download Temurin {{ defaultVersion }} for {{ userOSName }} {{ arch }}"
-            components={{
-              defaultVersion: defaultVersion,
-              userOSName: userOSName,
-              arch: arch
+            defaults="Download Temurin {{defaultVersion}} for {{userOSName}} {{arch}}"
+            values={{
+              defaultVersion,
+              userOSName,
+              arch,
             }}
-          />) : (
-          <Trans 
-            i18nKey="home.download.temurin.short" 
+          />
+        ) : (
+          <Trans
+            i18nKey="home.download.temurin.short"
             defaults="Download Temurin {{ defaultVersion }}"
-            components={{
-              defaultVersion: defaultVersion
-            }}
-             />
+            values={{ defaultVersion }}
+          />
         )}
       </p>
       <div className="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6">

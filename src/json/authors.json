@@ -1,7 +1,7 @@
 {
   "georgeadams": {
     "name": "George Adams",
-    "summary": "Java Program Manager @microsoft, Chair of Adoptium WG Steering Committee, Core Collaborator @nodejs",
+    "summary": "Chair of Adoptium WG Steering Committee, Java Champion, Microsoft",
     "twitter": "gdams_",
     "github": "gdams",
     "linkedin": "gdams"
@@ -96,5 +96,18 @@
     "summary": "Software Engineer at Red Hat",
     "twitter": null,
     "github": "sophia-guo"
+  },
+  "luhenry": {
+    "name": "Ludovic Henry",
+    "summary": "Software Engineer at Rivos",
+    "twitter": null,
+    "github": "luhenry",
+    "linkedin": "ludovic-dev"
+  },
+  "hkhel": {
+    "name": "Haroon Khel",
+    "summary": "Software Engineer at Red Hat",
+    "twitter": null,
+    "github": "haroon-khel"
   }
 }

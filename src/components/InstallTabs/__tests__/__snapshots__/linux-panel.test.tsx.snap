@@ -97,7 +97,7 @@ exports[`Tests for LinuxPanel component > renders correctly 1`] = `
     </pre>
     <a
       class="install__docs-button"
-      href="/installation/linux"
+      href="/en/installation/linux"
     >
       Read documentation
     </a>

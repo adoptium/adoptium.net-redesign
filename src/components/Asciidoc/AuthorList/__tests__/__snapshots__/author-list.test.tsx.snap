@@ -11,7 +11,7 @@ exports[`AuthorsList component > renders correctly 1`] = `
       Text
     </div>
     <div
-      class="justify-start items-center space-x-[-12px] inline-flex"
+      class="flex flex-wrap justify-start items-center space-x-[-12px]"
     >
       <a
         aria-label="test-author"
@@ -21,7 +21,7 @@ exports[`AuthorsList component > renders correctly 1`] = `
       >
         <img
           alt="test-author"
-          class="rounded-full border-solid border-4 border-purple"
+          class="rounded-full border-solid border-4 border-purple mb-6"
           src="https://github.com/test-author.png?size=48"
           style="max-width: 48px;"
         />
@@ -34,7 +34,7 @@ exports[`AuthorsList component > renders correctly 1`] = `
       >
         <img
           alt="another-test-author"
-          class="rounded-full border-solid border-4 border-purple"
+          class="rounded-full border-solid border-4 border-purple mb-6"
           src="https://github.com/another-test-author.png?size=48"
           style="max-width: 48px;"
         />

@@ -6,7 +6,7 @@ exports[`LatestTemurin component > should render correctly - Linux 1`] = `
     class="text-center w-full"
   >
     <h1
-      class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
+      class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px] mb-8"
     >
       The Power of Eclipse Temurin™
     </h1>
@@ -20,16 +20,15 @@ exports[`LatestTemurin component > should render correctly - Linux 1`] = `
     >
       <a
         class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
-        href="/temurin/releases"
+        href="/en/temurin/releases"
         placeholder="Other Downloads"
       >
         Other Downloads
       </a>
       <a
         class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
-        href="/download"
+        href="/en/download"
         placeholder="Download Temurin"
-        state="[object Object]"
       >
         <svg
           fill="currentColor"
@@ -57,7 +56,7 @@ exports[`LatestTemurin component > should render correctly - MAC 1`] = `
     class="text-center w-full"
   >
     <h1
-      class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
+      class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px] mb-8"
     >
       The Power of Eclipse Temurin™
     </h1>
@@ -71,16 +70,15 @@ exports[`LatestTemurin component > should render correctly - MAC 1`] = `
     >
       <a
         class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
-        href="/temurin/releases"
+        href="/en/temurin/releases"
         placeholder="Other Downloads"
       >
         Other Downloads
       </a>
       <a
         class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
-        href="/download"
+        href="/en/download"
         placeholder="Download Temurin"
-        state="[object Object]"
       >
         <svg
           fill="currentColor"
@@ -108,7 +106,7 @@ exports[`LatestTemurin component > should render correctly - Windows 1`] = `
     class="text-center w-full"
   >
     <h1
-      class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
+      class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px] mb-8"
     >
       The Power of Eclipse Temurin™
     </h1>
@@ -122,16 +120,15 @@ exports[`LatestTemurin component > should render correctly - Windows 1`] = `
     >
       <a
         class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
-        href="/temurin/releases"
+        href="/en/temurin/releases"
         placeholder="Other Downloads"
       >
         Other Downloads
       </a>
       <a
         class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
-        href="/download"
+        href="/en/download"
         placeholder="Download Temurin"
-        state="[object Object]"
       >
         <svg
           fill="currentColor"
@@ -159,7 +156,7 @@ exports[`LatestTemurin component > should render correctly 1`] = `
     class="text-center w-full"
   >
     <h1
-      class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
+      class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px] mb-8"
     >
       The Power of Eclipse Temurin™
     </h1>
@@ -173,16 +170,15 @@ exports[`LatestTemurin component > should render correctly 1`] = `
     >
       <a
         class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
-        href="/temurin/releases"
+        href="/en/temurin/releases"
         placeholder="Other Downloads"
       >
         Other Downloads
       </a>
       <a
         class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
-        href="/download"
+        href="/en/download"
         placeholder="Download Temurin"
-        state="[object Object]"
       >
         <svg
           fill="currentColor"

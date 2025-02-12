@@ -1,4 +1,4 @@
-@import "../../../styles/variables.scss";
+@use "../../../styles/variables.scss" as *;
 
 .temurin-features {
   position: relative;
@@ -9,7 +9,7 @@
   content: "";
   position: absolute;
   bottom: -450px;
-  right: 0px;
+  right: 0;
   background-size: 100% 100%;
   background-position: center;
   width: 100%;

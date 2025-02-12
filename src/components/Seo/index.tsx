@@ -34,7 +34,7 @@ const Seo = ({ title, description, twitterCard }: Props): JSX.Element => {
   }
 
   if (!twitterCard) {
-    twitterCard = "images/social-image.png"
+    twitterCard = "images/social-image.jpg"
   }
 
   const siteTitle = title + " | Adoptium"
@@ -67,10 +67,6 @@ const Seo = ({ title, description, twitterCard }: Props): JSX.Element => {
       <script src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js" />
     </>
   )
-}
-
-Seo.defaultProps = {
-  title: "Adoptium",
 }
 
 Seo.propTypes = {

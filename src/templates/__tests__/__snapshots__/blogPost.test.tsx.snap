@@ -25,7 +25,7 @@ exports[`BlogPost Template page > formatDiv renders correctly 1`] = `
 exports[`BlogPost Template page > renders correctly - featured image 1`] = `
 <main>
   <div
-    class="pt-32 pb-12"
+    class="pt-48 pb-12"
   >
     <div
       class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
@@ -71,296 +71,239 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
               News article
             </div>
           </div>
-          <div
-            class="self-stretch text-center text-white text-4xl lg:text-5xl font-semibold"
+          <h1
+            class="self-stretch text-center text-white text-2xl md:text-5xl pb-4 font-semibold"
           >
             MDX Page title
-          </div>
+          </h1>
         </div>
         <div
-          class="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7"
+          class="self-stretch text-center text-grey text-grey-300 text-lg md:text-xl font-normal leading-7"
         >
           MDX Page excerpt
+        </div>
+        <div
+          class="flex justify-center items-center gap-5"
+        >
+          <img
+            alt="Adoptium PMC"
+            image="[object Object]"
+            stlye="[object Object]"
+            style="margin-left: 0.5rem; margin-bottom: 0px; min-width: 30px; border-radius: 100%;"
+          />
+          <span
+            class="text-[16px] font-bold leading-[150%] text-white"
+          >
+            <a
+              href="/news/author/pmc"
+            >
+              <span
+                class="text-primary pr-2"
+              >
+                Adoptium PMC
+                ,
+              </span>
+               
+              2021-01-01
+            </a>
+          </span>
         </div>
       </div>
     </div>
   </div>
   <section
-    class="mx-auto w-full p-6 lg:px-0 flex flex-col items-center justify-center"
+    class="mx-auto p-0 md:p-6 lg:px-0 flex flex-col md:items-center justify-center w-full"
   >
     <div
-      class="max-w-4xl"
+      class="m-4 max-w-4/5 md:max-w-4xl"
     >
       <article>
         <header
-          class="pb-5"
+          class="py-5"
         >
           <div
-            class="byline"
-            style="display: flex; align-items: center; margin-top: 1rem; margin-bottom: 1rem; text-decoration: none;"
+            id="share-buttons"
           >
-            2021-01-01
-             – posted by   
-            <a
-              href="/blog/author/pmc"
+            <button
+              aria-label="Share on X (Twitter)"
+              class="react-share__ShareButton mr-2"
+              networkname="twitter"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              Adoptium PMC
-            </a>
-             
-            <img
-              alt="Adoptium PMC"
-              image="[object Object]"
-              stlye="[object Object]"
-              style="margin-left: 0.5rem; margin-bottom: 0px; min-width: 30px; border-radius: 100%;"
-            />
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Linkedin"
+              class="react-share__ShareButton mr-2"
+              networkname="linkedin"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Facebook"
+              class="react-share__ShareButton mr-2"
+              networkname="facebook"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Reddit"
+              class="react-share__ShareButton mr-2"
+              networkname="reddit"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Bluesky"
+              class="react-share__ShareButton mr-2"
+              networkname="bluesky"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 576 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share via Email"
+              class="react-share__ShareButton mr-2"
+              networkname="email"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                />
+              </svg>
+            </button>
           </div>
-          <button
-            aria-label="x"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
-            >
-              <rect
-                fill="#000000"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M 41.116 18.375 h 4.962 l -10.8405 12.39 l 12.753 16.86 H 38.005 l -7.821 -10.2255 L 21.235 47.625 H 16.27 l 11.595 -13.2525 L 15.631 18.375 H 25.87 l 7.0695 9.3465 z m -1.7415 26.28 h 2.7495 L 24.376 21.189 H 21.4255 z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="linkedin"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
-            >
-              <rect
-                fill="#0077B5"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="facebook"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
-            >
-              <rect
-                fill="#0965FE"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="reddit"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
-            >
-              <rect
-                fill="#FF5700"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M 53.34375 32 C 53.277344 30.160156 52.136719 28.53125 50.429688 27.839844 C 48.722656 27.148438 46.769531 27.523438 45.441406 28.800781 C 41.800781 26.324219 37.519531 24.957031 33.121094 24.863281 L 35.199219 14.878906 L 42.046875 16.320312 C 42.214844 17.882812 43.496094 19.09375 45.066406 19.171875 C 46.636719 19.253906 48.03125 18.183594 48.359375 16.644531 C 48.6875 15.105469 47.847656 13.558594 46.382812 12.992188 C 44.914062 12.425781 43.253906 13.007812 42.464844 14.367188 L 34.625 12.800781 C 34.363281 12.742188 34.09375 12.792969 33.871094 12.9375 C 33.648438 13.082031 33.492188 13.308594 33.441406 13.566406 L 31.070312 24.671875 C 26.617188 24.738281 22.277344 26.105469 18.59375 28.609375 C 17.242188 27.339844 15.273438 26.988281 13.570312 27.707031 C 11.863281 28.429688 10.746094 30.089844 10.71875 31.941406 C 10.691406 33.789062 11.757812 35.484375 13.441406 36.257812 C 13.402344 36.726562 13.402344 37.195312 13.441406 37.664062 C 13.441406 44.832031 21.792969 50.65625 32.097656 50.65625 C 42.398438 50.65625 50.753906 44.832031 50.753906 37.664062 C 50.789062 37.195312 50.789062 36.726562 50.753906 36.257812 C 52.363281 35.453125 53.371094 33.800781 53.34375 32 Z M 21.34375 35.199219 C 21.34375 33.433594 22.777344 32 24.542969 32 C 26.3125 32 27.742188 33.433594 27.742188 35.199219 C 27.742188 36.96875 26.3125 38.398438 24.542969 38.398438 C 22.777344 38.398438 21.34375 36.96875 21.34375 35.199219 Z M 39.9375 44 C 37.664062 45.710938 34.871094 46.582031 32.03125 46.464844 C 29.191406 46.582031 26.398438 45.710938 24.128906 44 C 23.847656 43.65625 23.871094 43.15625 24.183594 42.839844 C 24.5 42.527344 25 42.503906 25.34375 42.785156 C 27.269531 44.195312 29.617188 44.90625 32 44.800781 C 34.386719 44.929688 36.746094 44.242188 38.6875 42.847656 C 39.042969 42.503906 39.605469 42.511719 39.953125 42.863281 C 40.296875 43.21875 40.289062 43.785156 39.9375 44.128906 Z M 39.359375 38.527344 C 37.59375 38.527344 36.160156 37.09375 36.160156 35.328125 C 36.160156 33.5625 37.59375 32.128906 39.359375 32.128906 C 41.128906 32.128906 42.558594 33.5625 42.558594 35.328125 C 42.59375 36.203125 42.269531 37.054688 41.65625 37.6875 C 41.046875 38.316406 40.203125 38.664062 39.328125 38.65625 Z M 39.359375 38.527344"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="email"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
-            >
-              <rect
-                fill="#7f7f7f"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M17,22v20h30V22H17z M41.1,25L32,32.1L22.9,25H41.1z M20,39V26.6l12,9.3l12-9.3V39H20z"
-                fill="white"
-              />
-            </svg>
-          </button>
         </header>
         <article
           class="prose prose-invert lg:prose-lg max-w-none"
         >
           sample blog
         </article>
-        <a
-          class="badge bg-secondary text-dark m-2"
-          href="/blog/tags/tag1"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            style="margin-right: .75em;"
-            viewBox="0 0 512 512"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"
-            />
-          </svg>
-          tag1
-        </a>
-        <a
-          class="badge bg-secondary text-dark m-2"
-          href="/blog/tags/tag2"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            style="margin-right: .75em;"
-            viewBox="0 0 512 512"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"
-            />
-          </svg>
-          tag2
-        </a>
-        <p
-          style="align-items: center; display: flex; flex-wrap: wrap; justify-content: flex-start; background-color: rgb(227, 227, 227); border-radius: 4px; padding: 0.5em; margin-top: 1em;"
-        >
-          <em>
-            Do you have questions or want to discuss this post? Hit us up on the
-             
-            <a
-              href="https://adoptium.slack.com/"
-            >
-              Adoptium Slack workspace
-            </a>
-            !
-          </em>
-        </p>
-        <hr
-          class="my-3"
-        />
-        <footer
-          class="pb-5"
+        <div
+          class="hidden md:flex justify-between items-center gap-10 py-10"
         >
           <div
-            style="display: flex;"
+            class="bg-[#3E3355] w-full h-[1px] "
+          />
+          <div
+            class="flex flex-col items-center"
           >
-            <img
-              alt="Adoptium PMC"
-              image="[object Object]"
-              stlye="[object Object]"
-              style="margin-right: 0.5rem; margin-bottom: 0px; min-width: 50px; border-radius: 100%;"
-            />
-            <p>
-              Posted by 
-              <a
-                href="/blog/author/pmc"
-              >
-                Adoptium PMC
-              </a>
-              – 
-              Collective of Adoptium Project Management Committee members
-               
-              <a
-                aria-label="GitHub Profile"
-                class="no-underline"
-                href="https://github.com/adoptium"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 496 512"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                  />
-                </svg>
-              </a>
-               
-              <a
-                aria-label="Twitter Profile"
-                class="no-underline"
-                href="https://x.com/adoptium"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 512 512"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-                  />
-                </svg>
-              </a>
-               
+            <p
+              class="tab-button-text"
+            >
+              Share this post
             </p>
+            <div
+              class="flex items-center gap-4"
+            >
+              <a
+                href="#share-buttons"
+              >
+                <button
+                  class="bg-primary px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="25"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="25"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      id="Share_2"
+                    >
+                      <path
+                        d="M18.44,15.94a2.5,2.5,0,0,0-1.96.95L7.97,12.64a2.356,2.356,0,0,0,0-1.29l8.5-4.25a2.5,2.5,0,1,0-.53-1.54,2.269,2.269,0,0,0,.09.65l-8.5,4.25a2.5,2.5,0,1,0,0,3.08l8.5,4.25a2.269,2.269,0,0,0-.09.65,2.5,2.5,0,1,0,2.5-2.5Zm0-11.88a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,18.44,4.06ZM5.56,13.5A1.5,1.5,0,1,1,7.06,12,1.5,1.5,0,0,1,5.56,13.5Zm12.88,6.44a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,18.44,19.94Z"
+                      />
+                    </g>
+                  </svg>
+                  Share
+                </button>
+              </a>
+            </div>
           </div>
-        </footer>
+          <div
+            class="bg-[#3E3355] w-full h-[1px] inline-block"
+          />
+        </div>
       </article>
       <div>
         <ul
-          class="flex flex-wrap justify-between list-none p-0"
+          class="flex flex-wrap justify-between list-none pt-5 md:p-0"
         >
           <li>
             <a
@@ -384,13 +327,16 @@ exports[`BlogPost Template page > renders correctly - featured image 1`] = `
       </div>
     </div>
   </section>
+  <div>
+    related-articles
+  </div>
 </main>
 `;
 
 exports[`BlogPost Template page > renders correctly 1`] = `
 <main>
   <div
-    class="pt-32 pb-12"
+    class="pt-48 pb-12"
   >
     <div
       class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
@@ -436,296 +382,239 @@ exports[`BlogPost Template page > renders correctly 1`] = `
               News article
             </div>
           </div>
-          <div
-            class="self-stretch text-center text-white text-4xl lg:text-5xl font-semibold"
+          <h1
+            class="self-stretch text-center text-white text-2xl md:text-5xl pb-4 font-semibold"
           >
             MDX Page title
-          </div>
+          </h1>
         </div>
         <div
-          class="self-stretch text-center text-grey text-grey-300 text-l font-normal leading-7"
+          class="self-stretch text-center text-grey text-grey-300 text-lg md:text-xl font-normal leading-7"
         >
           MDX Page excerpt
+        </div>
+        <div
+          class="flex justify-center items-center gap-5"
+        >
+          <img
+            alt="Adoptium PMC"
+            image="[object Object]"
+            stlye="[object Object]"
+            style="margin-left: 0.5rem; margin-bottom: 0px; min-width: 30px; border-radius: 100%;"
+          />
+          <span
+            class="text-[16px] font-bold leading-[150%] text-white"
+          >
+            <a
+              href="/news/author/pmc"
+            >
+              <span
+                class="text-primary pr-2"
+              >
+                Adoptium PMC
+                ,
+              </span>
+               
+              2021-01-01
+            </a>
+          </span>
         </div>
       </div>
     </div>
   </div>
   <section
-    class="mx-auto w-full p-6 lg:px-0 flex flex-col items-center justify-center"
+    class="mx-auto p-0 md:p-6 lg:px-0 flex flex-col md:items-center justify-center w-full"
   >
     <div
-      class="max-w-4xl"
+      class="m-4 max-w-4/5 md:max-w-4xl"
     >
       <article>
         <header
-          class="pb-5"
+          class="py-5"
         >
           <div
-            class="byline"
-            style="display: flex; align-items: center; margin-top: 1rem; margin-bottom: 1rem; text-decoration: none;"
+            id="share-buttons"
           >
-            2021-01-01
-             – posted by   
-            <a
-              href="/blog/author/pmc"
+            <button
+              aria-label="Share on X (Twitter)"
+              class="react-share__ShareButton mr-2"
+              networkname="twitter"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
-              Adoptium PMC
-            </a>
-             
-            <img
-              alt="Adoptium PMC"
-              image="[object Object]"
-              stlye="[object Object]"
-              style="margin-left: 0.5rem; margin-bottom: 0px; min-width: 30px; border-radius: 100%;"
-            />
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Linkedin"
+              class="react-share__ShareButton mr-2"
+              networkname="linkedin"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Facebook"
+              class="react-share__ShareButton mr-2"
+              networkname="facebook"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Reddit"
+              class="react-share__ShareButton mr-2"
+              networkname="reddit"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Bluesky"
+              class="react-share__ShareButton mr-2"
+              networkname="bluesky"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 576 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share via Email"
+              class="react-share__ShareButton mr-2"
+              networkname="email"
+              style="background-color: transparent; padding: 0px; cursor: pointer;"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                />
+              </svg>
+            </button>
           </div>
-          <button
-            aria-label="x"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
-            >
-              <rect
-                fill="#000000"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M 41.116 18.375 h 4.962 l -10.8405 12.39 l 12.753 16.86 H 38.005 l -7.821 -10.2255 L 21.235 47.625 H 16.27 l 11.595 -13.2525 L 15.631 18.375 H 25.87 l 7.0695 9.3465 z m -1.7415 26.28 h 2.7495 L 24.376 21.189 H 21.4255 z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="linkedin"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
-            >
-              <rect
-                fill="#0077B5"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="facebook"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
-            >
-              <rect
-                fill="#0965FE"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="reddit"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
-            >
-              <rect
-                fill="#FF5700"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M 53.34375 32 C 53.277344 30.160156 52.136719 28.53125 50.429688 27.839844 C 48.722656 27.148438 46.769531 27.523438 45.441406 28.800781 C 41.800781 26.324219 37.519531 24.957031 33.121094 24.863281 L 35.199219 14.878906 L 42.046875 16.320312 C 42.214844 17.882812 43.496094 19.09375 45.066406 19.171875 C 46.636719 19.253906 48.03125 18.183594 48.359375 16.644531 C 48.6875 15.105469 47.847656 13.558594 46.382812 12.992188 C 44.914062 12.425781 43.253906 13.007812 42.464844 14.367188 L 34.625 12.800781 C 34.363281 12.742188 34.09375 12.792969 33.871094 12.9375 C 33.648438 13.082031 33.492188 13.308594 33.441406 13.566406 L 31.070312 24.671875 C 26.617188 24.738281 22.277344 26.105469 18.59375 28.609375 C 17.242188 27.339844 15.273438 26.988281 13.570312 27.707031 C 11.863281 28.429688 10.746094 30.089844 10.71875 31.941406 C 10.691406 33.789062 11.757812 35.484375 13.441406 36.257812 C 13.402344 36.726562 13.402344 37.195312 13.441406 37.664062 C 13.441406 44.832031 21.792969 50.65625 32.097656 50.65625 C 42.398438 50.65625 50.753906 44.832031 50.753906 37.664062 C 50.789062 37.195312 50.789062 36.726562 50.753906 36.257812 C 52.363281 35.453125 53.371094 33.800781 53.34375 32 Z M 21.34375 35.199219 C 21.34375 33.433594 22.777344 32 24.542969 32 C 26.3125 32 27.742188 33.433594 27.742188 35.199219 C 27.742188 36.96875 26.3125 38.398438 24.542969 38.398438 C 22.777344 38.398438 21.34375 36.96875 21.34375 35.199219 Z M 39.9375 44 C 37.664062 45.710938 34.871094 46.582031 32.03125 46.464844 C 29.191406 46.582031 26.398438 45.710938 24.128906 44 C 23.847656 43.65625 23.871094 43.15625 24.183594 42.839844 C 24.5 42.527344 25 42.503906 25.34375 42.785156 C 27.269531 44.195312 29.617188 44.90625 32 44.800781 C 34.386719 44.929688 36.746094 44.242188 38.6875 42.847656 C 39.042969 42.503906 39.605469 42.511719 39.953125 42.863281 C 40.296875 43.21875 40.289062 43.785156 39.9375 44.128906 Z M 39.359375 38.527344 C 37.59375 38.527344 36.160156 37.09375 36.160156 35.328125 C 36.160156 33.5625 37.59375 32.128906 39.359375 32.128906 C 41.128906 32.128906 42.558594 33.5625 42.558594 35.328125 C 42.59375 36.203125 42.269531 37.054688 41.65625 37.6875 C 41.046875 38.316406 40.203125 38.664062 39.328125 38.65625 Z M 39.359375 38.527344"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="email"
-            class="react-share__ShareButton"
-            style="background-color: transparent; padding: 0px 0.3em 0px 0px; cursor: pointer; margin-bottom: 0.2em;"
-          >
-            <svg
-              height="30"
-              viewBox="0 0 64 64"
-              width="30"
-            >
-              <rect
-                fill="#7f7f7f"
-                height="64"
-                rx="0"
-                ry="0"
-                width="64"
-              />
-              <path
-                d="M17,22v20h30V22H17z M41.1,25L32,32.1L22.9,25H41.1z M20,39V26.6l12,9.3l12-9.3V39H20z"
-                fill="white"
-              />
-            </svg>
-          </button>
         </header>
         <article
           class="prose prose-invert lg:prose-lg max-w-none"
         >
           sample blog
         </article>
-        <a
-          class="badge bg-secondary text-dark m-2"
-          href="/blog/tags/tag1"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            style="margin-right: .75em;"
-            viewBox="0 0 512 512"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"
-            />
-          </svg>
-          tag1
-        </a>
-        <a
-          class="badge bg-secondary text-dark m-2"
-          href="/blog/tags/tag2"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            style="margin-right: .75em;"
-            viewBox="0 0 512 512"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"
-            />
-          </svg>
-          tag2
-        </a>
-        <p
-          style="align-items: center; display: flex; flex-wrap: wrap; justify-content: flex-start; background-color: rgb(227, 227, 227); border-radius: 4px; padding: 0.5em; margin-top: 1em;"
-        >
-          <em>
-            Do you have questions or want to discuss this post? Hit us up on the
-             
-            <a
-              href="https://adoptium.slack.com/"
-            >
-              Adoptium Slack workspace
-            </a>
-            !
-          </em>
-        </p>
-        <hr
-          class="my-3"
-        />
-        <footer
-          class="pb-5"
+        <div
+          class="hidden md:flex justify-between items-center gap-10 py-10"
         >
           <div
-            style="display: flex;"
+            class="bg-[#3E3355] w-full h-[1px] "
+          />
+          <div
+            class="flex flex-col items-center"
           >
-            <img
-              alt="Adoptium PMC"
-              image="[object Object]"
-              stlye="[object Object]"
-              style="margin-right: 0.5rem; margin-bottom: 0px; min-width: 50px; border-radius: 100%;"
-            />
-            <p>
-              Posted by 
-              <a
-                href="/blog/author/pmc"
-              >
-                Adoptium PMC
-              </a>
-              – 
-              Collective of Adoptium Project Management Committee members
-               
-              <a
-                aria-label="GitHub Profile"
-                class="no-underline"
-                href="https://github.com/adoptium"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 496 512"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                  />
-                </svg>
-              </a>
-               
-              <a
-                aria-label="Twitter Profile"
-                class="no-underline"
-                href="https://x.com/adoptium"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 512 512"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-                  />
-                </svg>
-              </a>
-               
+            <p
+              class="tab-button-text"
+            >
+              Share this post
             </p>
+            <div
+              class="flex items-center gap-4"
+            >
+              <a
+                href="#share-buttons"
+              >
+                <button
+                  class="bg-primary px-6 py-3 rounded-[80px] tab-button-text flex items-center gap-3"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="25"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="25"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      id="Share_2"
+                    >
+                      <path
+                        d="M18.44,15.94a2.5,2.5,0,0,0-1.96.95L7.97,12.64a2.356,2.356,0,0,0,0-1.29l8.5-4.25a2.5,2.5,0,1,0-.53-1.54,2.269,2.269,0,0,0,.09.65l-8.5,4.25a2.5,2.5,0,1,0,0,3.08l8.5,4.25a2.269,2.269,0,0,0-.09.65,2.5,2.5,0,1,0,2.5-2.5Zm0-11.88a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,18.44,4.06ZM5.56,13.5A1.5,1.5,0,1,1,7.06,12,1.5,1.5,0,0,1,5.56,13.5Zm12.88,6.44a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,18.44,19.94Z"
+                      />
+                    </g>
+                  </svg>
+                  Share
+                </button>
+              </a>
+            </div>
           </div>
-        </footer>
+          <div
+            class="bg-[#3E3355] w-full h-[1px] inline-block"
+          />
+        </div>
       </article>
       <div>
         <ul
-          class="flex flex-wrap justify-between list-none p-0"
+          class="flex flex-wrap justify-between list-none pt-5 md:p-0"
         >
           <li>
             <a
@@ -749,5 +638,8 @@ exports[`BlogPost Template page > renders correctly 1`] = `
       </div>
     </div>
   </section>
+  <div>
+    related-articles
+  </div>
 </main>
 `;

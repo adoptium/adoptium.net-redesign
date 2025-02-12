@@ -40,7 +40,7 @@ const OSSelector: React.FC<OSSelectorProps> = ({
               <button key={index} onClick={() => onActiveChange(button.label)}>
                 <span
                   className={`py-3 w-full text-base font-normal leading-6 
-                     outline-none cursor-pointer transition-all duration-200 ease-in-out ${activeIndex === button.label ? "border-primary  border-b-[2px] text-white" : "text-[#8a809e] border-transparent  border-b"}`}
+                     outline-hidden cursor-pointer transition-all duration-200 ease-in-out ${activeIndex === button.label ? "border-primary  border-b-[2px] text-white" : "text-[#8a809e] border-transparent  border-b"}`}
                 >
                   {button.label}
                 </span>

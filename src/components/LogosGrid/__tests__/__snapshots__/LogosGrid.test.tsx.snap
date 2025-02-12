@@ -28,11 +28,11 @@ exports[`LogosGrid component > Members grid renders correctly 1`] = `
                 href="https://member1.com"
               >
                 <div
-                  class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white/50 backdrop-blur-xl px-4 py-5"
                 >
                   <img
                     alt="Member 1"
-                    class="w-5/6 max-h-5/6 m-0"
+                    class="max-h-20 m-0"
                     src="/images/member1.png"
                   />
                 </div>
@@ -41,11 +41,11 @@ exports[`LogosGrid component > Members grid renders correctly 1`] = `
                 href="https://member2.com"
               >
                 <div
-                  class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white border-opacity-50 backdrop-blur-xl px-4 py-5"
+                  class="relative w-[200px] md:w-[296px] h-[86px] md:h-[112px] flex justify-center items-center bg-white rounded-3xl border border-white/50 backdrop-blur-xl px-4 py-5"
                 >
                   <img
                     alt="Member 2"
-                    class="w-5/6 max-h-5/6 m-0"
+                    class="max-h-20 m-0"
                     src="/images/member2.png"
                   />
                 </div>

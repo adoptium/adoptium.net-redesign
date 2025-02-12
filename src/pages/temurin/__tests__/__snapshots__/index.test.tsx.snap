@@ -4,7 +4,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
 <main>
   <div>
     <div
-      class=" sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative"
+      class="-mt-24 sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative"
     >
       <div
         class="relative isolate"
@@ -30,7 +30,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
               class="text-center w-full"
             >
               <h1
-                class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
+                class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px] mb-8"
               >
                 The Power of Eclipse Temurin™
               </h1>
@@ -44,16 +44,15 @@ exports[`Temurin Index page > renders correctly 1`] = `
               >
                 <a
                   class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
-                  href="/temurin/releases"
+                  href="/en/temurin/releases"
                   placeholder="Other Downloads"
                 >
                   Other Downloads
                 </a>
                 <a
                   class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
-                  href="/download"
+                  href="/en/download"
                   placeholder="Download Temurin"
-                  state="[object Object]"
                 >
                   <svg
                     fill="currentColor"
@@ -927,7 +926,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         Eclipse Temurin offers high-performance, cross-platform, open-source Java™ runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
       </h3>
       <a
-        href="/business-benefits"
+        href="/en/business-benefits"
       >
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
@@ -1225,7 +1224,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
       </p>
       <a
-        href="/contact-us"
+        href="/en/contact-us"
       >
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
@@ -1235,7 +1234,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
          
       </a>
       <a
-        href="/contact-us"
+        href="/en/contact-us"
       >
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"
@@ -1264,7 +1263,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
       class="flex xl:flex-nowrap flex-wrap justify-center max-w-[1264px] w-full mx-auto gap-x-8 gap-y-4 py-16"
     >
       <div
-        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+        class="p-8 border-[2px] border-2 border-white/50 rounded-3xl bg-tones-white backdrop-blur-12"
       >
         <h2
           class="text-primary text-base leading-6 font-normal flex items-center gap-x-3"
@@ -1313,7 +1312,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         </span>
         <a
           class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
-          href="/"
+          href="/en/"
         >
           <span>
             <svg
@@ -1334,7 +1333,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         </a>
       </div>
       <div
-        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+        class="p-8 border-[2px] border-2 border-white/50 rounded-3xl bg-tones-white backdrop-blur-12"
       >
         <p
           class="text-white text-2xl font-normal leading-8 mt-2"
@@ -1348,7 +1347,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         </span>
         <a
           class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
-          href="/"
+          href="/en/"
         >
           <span>
             <svg
@@ -1369,7 +1368,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         </a>
       </div>
       <div
-        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+        class="p-8 border-[2px] border-2 border-white/50 rounded-3xl bg-tones-white backdrop-blur-12"
       >
         <p
           class="text-white text-2xl font-normal leading-8 mt-2"
@@ -1383,7 +1382,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         </span>
         <a
           class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
-          href="/"
+          href="/en/"
         >
           <span>
             <svg
@@ -1404,7 +1403,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         </a>
       </div>
       <div
-        class="p-8 border-[2px] border-2 border-white border-opacity-50 rounded-3xl bg-tones-white backdrop-blur-12"
+        class="p-8 border-[2px] border-2 border-white/50 rounded-3xl bg-tones-white backdrop-blur-12"
       >
         <p
           class="text-white text-2xl font-normal leading-8 mt-2"
@@ -1418,7 +1417,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         </span>
         <a
           class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[169px] h-[56px] text-white font-bold leading-6 text-base mt-8"
-          href="/"
+          href="/en/"
         >
           <span>
             <svg
@@ -1448,7 +1447,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         Eclipse Temurin offers high-performance
       </p>
       <a
-        href="/temurin/releases"
+        href="/en/temurin/releases"
       >
         <button
           class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px] "
@@ -2005,7 +2004,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         src="/images/icons/message.svg"
       />
       <p
-        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8"
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
       >
         Connect with the community
       </p>

@@ -310,7 +310,7 @@ exports[`Marketplace page > renders correctly 1`] = `
         >
           <button
             class="flex justify-center items-center
-                outline-none cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-2xl border-primary border-2"
+                outline-hidden cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-2xl border-primary border-2"
           >
             <span
               class="w-20 h-20"

@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next"
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
 import { SmallLogoIcon } from "../Common/Icon"
 import MobileFooter from "./MobileFooter"
 import IconSocial from "../IconSocial"
 import LeavingSiteDisclaimerModal from '../LeavingSiteDisclaimerModal';
+import { Link } from "../Link"
 
 interface FooterData {
   title: {
@@ -193,7 +194,7 @@ const Footer = (props): JSX.Element => {
       <LeavingSiteDisclaimerModal open={openLeavingSiteDisclaimer} setOpen={setOpenLeavingSiteDisclaimer}  message={leavingSiteDisclaimerMessage} location={leavingSiteDisclaimerLocation} />
       <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-8 md:py-16 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="hidden md:block">
-          <div className="grid grid-cols-1 gap-8 border-b border-gray-800 mb-3 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16">
+          <div className="grid grid-cols-1 gap-8 border-b border-gray-800 mb-3 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16 pb-6">
             {footerData.map((section, index) => (
               <div key={index}>
                 <p className="font-medium text-pink">
@@ -253,7 +254,7 @@ const Footer = (props): JSX.Element => {
               </div>
             ))}
           </div>
-          <div className="sm:flex sm:items-center sm:justify-between">
+          <div className="sm:flex sm:items-center sm:justify-between pt-4">
             <div className="text-teal-600 flex dark:text-teal-300">
               <SmallLogoIcon />
               <p className="text-sm ml-3 flex items-center gap-4 text-white font-normal leading-5">

@@ -10,6 +10,7 @@ import { createFilePath } from "gatsby-source-filesystem"
 import locales from "./locales/i18n"
 import authors from "./src/json/authors.json"
 import type { GatsbyNode, Node } from "gatsby"
+import { generateFeaturedImage } from './src/util/generateFeaturedImage';
 
 import {
   localizedSlug,
@@ -35,6 +36,9 @@ interface AdoptiumData {
 interface MdxNode extends Node {
   frontmatter: {
     date: string
+    featuredImage: string
+    title: string
+    description: string
   }
   fields: {
     slug: string
@@ -313,6 +317,27 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
     const date = new Date(mdxNode.frontmatter.date)
     const year = date.getFullYear()
     const zeroPaddedMonth = `${date.getMonth() + 1}`.padStart(2, "0")
+    const title: string = mdxNode.frontmatter.title;
+    const description: string = mdxNode.frontmatter.description;
+    const featuredImage: string | undefined = mdxNode.frontmatter.featuredImage;
+
+    // If no featured image is provided and both title and subtitle exist:
+    if (!featuredImage && title && description) {
+      const outputFileName = "banner.png";
+      const outputDir = path.join(`static/images/blog/${slug}`);
+      const outputPath = path.join(outputDir, outputFileName);
+
+      try {
+        await generateFeaturedImage(title, description, outputPath);
+        createNodeField({
+          node,
+          name: 'generatedFeaturedImage',
+          value: `/images/blog/${slug}/${outputFileName}`,
+        });
+      } catch (error) {
+        console.error(`Error generating featured image for ${title}: ${error}`);
+      }
+    }
 
     createNodeField({
       name: "slug",
@@ -322,7 +347,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
     createNodeField({
       name: "postPath",
       node,
-      value: `/blog/${year}/${zeroPaddedMonth}${slug}`,
+      value: `/news/${year}/${zeroPaddedMonth}${slug}`,
     })
   }
 }
@@ -332,7 +357,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   actions,
 }) => {
   const { createPage, createSlice } = actions
-  const postsPerPage = 10
+  const postsPerPage = 6
 
   // Create Slice components https://www.gatsbyjs.com/docs/how-to/performance/using-slices/
   createSlice({
@@ -461,7 +486,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
       },
     )
 
-    // Query all blog posts by author to determine the number of pages needed
+    // Query all news posts by author to determine the number of pages needed
     const authorPosts = await graphql<{
       allMdx: {
         totalCount: number
@@ -497,8 +522,8 @@ export const createPages: GatsbyNode["createPages"] = async ({
       createPage({
         path:
           index === 0
-            ? `/blog/author/${author}`
-            : `/blog/author/${author}/page/${index + 1}`,
+            ? `/news/author/${author}`
+            : `/news/author/${author}/page/${index + 1}`,
         component: authorPage,
         context: {
           author,
@@ -516,11 +541,11 @@ export const createPages: GatsbyNode["createPages"] = async ({
     })
   }
 
-  // Create blog posts pages.
+  // Create news posts pages.
   const tagTemplate = path.resolve("./src/templates/tagPage.tsx")
-  const blogPost = path.resolve("./src/templates/blogPost.tsx")
+  const newsPost = path.resolve("./src/templates/newsPost.tsx")
 
-  const blogPostResults = await graphql<{
+  const newsPostResults = await graphql<{
     allMdx: {
       edges: Array<{
         node: {
@@ -541,6 +566,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     tagsGroup: {
       group: Array<{
         fieldValue: string
+        totalCount: number
       }>
     }
   }>(`
@@ -565,20 +591,21 @@ export const createPages: GatsbyNode["createPages"] = async ({
       tagsGroup: allMdx(limit: 2000) {
         group(field: { frontmatter: { tags: SELECT } }) {
           fieldValue
+          totalCount
         }
       }
     }
   `)
 
-  if (blogPostResults.errors) {
-    throw blogPostResults.errors
+  if (newsPostResults.errors) {
+    throw newsPostResults.errors
   }
 
-  if (!blogPostResults.data) {
-    throw new Error("Error retrieving blog posts")
+  if (!newsPostResults.data) {
+    throw new Error("Error retrieving news posts")
   }
 
-  const posts = blogPostResults.data.allMdx.edges
+  const posts = newsPostResults.data.allMdx.edges
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
@@ -586,7 +613,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
     createPage({
       path: `${post.node.fields.postPath}`,
-      component: `${blogPost}?__contentFilePath=${post.node.internal.contentFilePath}`,
+      component: `${newsPost}?__contentFilePath=${post.node.internal.contentFilePath}`,
       context: {
         slug: post.node.fields.slug,
         postPath: `${post.node.fields.postPath}`,
@@ -597,38 +624,58 @@ export const createPages: GatsbyNode["createPages"] = async ({
   })
 
   // Extract tag data from query
-  const tags = blogPostResults.data.tagsGroup.group
+  const tags = newsPostResults.data.tagsGroup.group
 
   // Make tag pages
   tags.forEach(tag => {
-    createPage({
-      path: `/blog/tags/${tag.fieldValue}/`,
-      component: tagTemplate,
-      context: {
-        tag: tag.fieldValue,
-      },
+    // Calculate how many pages we need for this tag.
+    const numTagPages = Math.ceil(tag.totalCount / postsPerPage)
+  
+    Array.from({ length: numTagPages }).forEach((_, index) => {
+      const currentPageNumber = index + 1
+      const previousPageNumber =
+        currentPageNumber === 1 ? null : currentPageNumber - 1
+      const nextPageNumber =
+        currentPageNumber === numTagPages ? null : currentPageNumber + 1
+  
+      createPage({
+        // Use a friendly URL for the first page; then add /page/2, etc.
+        path:
+          index === 0
+            ? `/news/tags/${tag.fieldValue}/`
+            : `/news/tags/${tag.fieldValue}/page/${index + 1}`,
+        component: tagTemplate,
+        context: {
+          tag: tag.fieldValue,
+          limit: postsPerPage,
+          skip: index * postsPerPage,
+          numTagPages,
+          currentPageNumber,
+          previousPageNumber,
+          nextPageNumber,
+        },
+      })
     })
   })
 
   const numPages = Math.ceil(posts.length / postsPerPage)
   Array.from({ length: numPages }).forEach((_, index) => {
-    const currentPageNumber = index + 1
-    const previousPageNumber =
-      currentPageNumber === 1 ? null : currentPageNumber - 1
-    const nextPageNumber =
-      currentPageNumber === numPages ? null : currentPageNumber + 1
-
+    const currentPage = index + 1;
+    const previousPageNumber = currentPage === 1 ? null : currentPage - 1;
+    const nextPageNumber = currentPage === numPages ? null : currentPage + 1;
+    
     createPage({
-      path: `/blog/page/${index + 1}`,
-      component: path.resolve("./src/templates/blogPage.tsx"),
+      path: currentPage === 1 ? `/news` : `/news/page/${currentPage}`,
+      component: path.resolve("./src/templates/newsPage.tsx"),
       context: {
         limit: postsPerPage,
         skip: index * postsPerPage,
-        numPages,
-        currentPageNumber,
+        currentPage,
+        totalPages: numPages,
         previousPageNumber,
         nextPageNumber,
+        baseUrl: "/news",
       },
-    })
-  })
+    });
+  });
 }

@@ -1,7 +1,6 @@
 import React from "react"
-import { render } from "@testing-library/react"
-import { act, screen, fireEvent } from "@testing-library/react"
-import { describe, expect, it, vi } from "vitest"
+import { act, render, screen, fireEvent } from "@testing-library/react"
+import { afterEach, describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
 import Nightly, { Head } from "../nightly"
 import AxiosInstance from "axios"
@@ -40,10 +39,15 @@ describe("Temurin Nightly page", () => {
   })
 
   it("has no accessibility violations", async () => {
-    mock.onGet().reply(200, [], { pagecount: 0 })
+    mock.onGet().reply(200, [], { pagecount: 0 });
 
-    const { container } = render(<Nightly />)
-    const results = await axe(container)
-    expect(results).toHaveNoViolations()
-  })
+    let container;
+    await act(async () => {
+      const renderResult = render(<Nightly />);
+      container = renderResult.container;
+    });
+
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
 })

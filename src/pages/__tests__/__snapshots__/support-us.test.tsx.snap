@@ -2,281 +2,6 @@
 
 exports[`Support Us page > renders correctly 1`] = `
 <main>
-  <header
-    class="absolute max-w-[1288px] w-full mx-auto px-3 inset-x-0 top-0 z-50"
-  >
-    <nav
-      aria-label="Global"
-      class="flex items-center gap-5 justify-between py-6"
-    >
-      <a
-        href="/"
-        placeholder="homepage"
-      >
-        <img
-          alt="Adoptium Logo"
-          class="h-10"
-        />
-      </a>
-      <div
-        class="flex lg:hidden"
-      >
-        <button
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white-700"
-          type="button"
-        >
-          <span
-            class="sr-only"
-          >
-            Open main menu
-          </span>
-          <svg
-            fill="none"
-            height="48"
-            viewBox="0 0 48 48"
-            width="48"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              height="46"
-              rx="23"
-              stroke="#3E3355"
-              stroke-width="2"
-              width="46"
-              x="1"
-              y="1"
-            />
-            <path
-              d="M15 24H33"
-              stroke="white"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-            />
-            <path
-              d="M15 18H33"
-              stroke="white"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-            />
-            <path
-              d="M15 30H33"
-              stroke="white"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-            />
-          </svg>
-        </button>
-      </div>
-      <div
-        class="hidden lg:flex lg:gap-6 xl:gap-x-12"
-      >
-        <div
-          class="relative inline-block text-left"
-          data-headlessui-state=""
-        >
-          <div>
-            <button
-              aria-expanded="false"
-              aria-haspopup="menu"
-              class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
-              data-headlessui-state=""
-              id="headlessui-menu-button-:r2:"
-              type="button"
-            >
-              About Us
-              <svg
-                aria-hidden="true"
-                class="-mr-1 mt-1"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 448 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <a
-          class="text-sm font-semibold leading-6 text-white-900"
-          href="/temurin/releases"
-        >
-          Latest Releases
-        </a>
-        <a
-          class="text-sm font-semibold leading-6 text-white-900"
-          href="/marketplace"
-        >
-          Marketplace
-        </a>
-        <div
-          class="relative inline-block text-left"
-          data-headlessui-state=""
-        >
-          <div>
-            <button
-              aria-expanded="false"
-              aria-haspopup="menu"
-              class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
-              data-headlessui-state=""
-              id="headlessui-menu-button-:r5:"
-              type="button"
-            >
-              Projects
-              <svg
-                aria-hidden="true"
-                class="-mr-1 mt-1"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 448 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="relative inline-block text-left"
-          data-headlessui-state=""
-        >
-          <div>
-            <button
-              aria-expanded="false"
-              aria-haspopup="menu"
-              class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
-              data-headlessui-state=""
-              id="headlessui-menu-button-:r8:"
-              type="button"
-            >
-              Resources
-              <svg
-                aria-hidden="true"
-                class="-mr-1 mt-1"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 448 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="relative inline-block text-left"
-          data-headlessui-state=""
-        >
-          <div>
-            <button
-              aria-expanded="false"
-              aria-haspopup="menu"
-              class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
-              data-headlessui-state=""
-              id="headlessui-menu-button-:rb:"
-              type="button"
-            >
-              Community
-              <svg
-                aria-hidden="true"
-                class="-mr-1 mt-1"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 448 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        class="hidden sm:block space-x-3 h-12"
-      >
-        <div
-          class="relative inline-block text-left"
-          data-headlessui-state=""
-        >
-          <div>
-            <button
-              aria-expanded="false"
-              aria-haspopup="menu"
-              class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-sm border-2 border-gray-700"
-              data-headlessui-state=""
-              id="headlessui-menu-button-:re:"
-              type="button"
-            >
-              Flag
-              <span>
-                English
-              </span>
-              <svg
-                aria-hidden="true"
-                class="-mr-1 h-5 w-5 text-white"
-                fill="currentColor"
-                height="15"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 448 512"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex"
-        >
-          <a
-            aria-label="checksum"
-            href="#"
-          >
-            <svg
-              fill="currentColor"
-              height="20"
-              stroke="currentColor"
-              stroke-width="0"
-              viewBox="0 0 448 512"
-              width="20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M439.39 362.29c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71zM67.53 368c21.22-27.97 44.42-74.33 44.53-159.42 0-.2-.06-.38-.06-.58 0-61.86 50.14-112 112-112s112 50.14 112 112c0 .2-.06.38-.06.58.11 85.1 23.31 131.46 44.53 159.42H67.53zM224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64z"
-              />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </nav>
-  </header>
   <div
     class="relative pt-40 pb-16 md:pb-36 md:pt-60 overflow-hidden"
   >
@@ -391,11 +116,15 @@ exports[`Support Us page > renders correctly 1`] = `
               Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
             </p>
           </div>
-          <button
-            class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+          <a
+            href="/en#"
           >
-            Learn More
-          </button>
+            <button
+              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+            >
+              Learn More
+            </button>
+          </a>
         </div>
       </div>
       <div
@@ -418,11 +147,15 @@ exports[`Support Us page > renders correctly 1`] = `
               Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
             </p>
           </div>
-          <button
-            class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+          <a
+            href="/en/sustainers"
           >
-            Become a sponsor
-          </button>
+            <button
+              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+            >
+              Become a sustainer
+            </button>
+          </a>
         </div>
       </div>
       <div
@@ -445,11 +178,15 @@ exports[`Support Us page > renders correctly 1`] = `
               Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
             </p>
           </div>
-          <button
-            class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+          <a
+            href="/en/join"
           >
-            Learn More
-          </button>
+            <button
+              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+            >
+              Learn More
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -505,11 +242,15 @@ exports[`Support Us page > renders correctly 1`] = `
                 Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
               </p>
             </div>
-            <button
-              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+            <a
+              href="/enundefined"
             >
-              Learn More
-            </button>
+              <button
+                class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+              >
+                Learn More
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -537,7 +278,7 @@ exports[`Support Us page > renders correctly 1`] = `
         src="/images/icons/message.svg"
       />
       <p
-        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8"
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
       >
         Connect with the community
       </p>

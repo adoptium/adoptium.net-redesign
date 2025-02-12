@@ -12,7 +12,7 @@ exports[`Author component > renders correctly 1`] = `
   >
     <img
       alt="test-author"
-      class="rounded-full border-solid border-4 border-purple"
+      class="rounded-full border-solid border-4 border-purple mb-6"
       src="https://github.com/test-author.png?size=60"
       style="max-width: 60px;"
     />

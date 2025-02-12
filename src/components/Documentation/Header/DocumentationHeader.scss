@@ -1,0 +1,20 @@
+.search-form {
+  position: relative;
+  width: 100%;
+}
+
+.main-search-box {
+  max-width: 600px;
+}
+
+.MuiAutocomplete-root {
+  background-color: white;
+}
+
+.MuiInputLabel-shrink {
+  display: none !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}

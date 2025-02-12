@@ -1,11 +1,12 @@
 import * as React from "react"
-import { Link, Trans, useI18next } from "gatsby-plugin-react-i18next"
+import { Trans, useI18next } from "gatsby-plugin-react-i18next"
 import { FaDownload } from "react-icons/fa"
 import { MdNotes } from "react-icons/md"
 import { Pagination } from "@mui/material"
 import { MdVerifiedUser } from "react-icons/md"
 import { capitalize } from "../../util/capitalize"
 import { localeDate } from "../../util/localeDate"
+import { Link } from "../Link"
 
 const TemurinArchiveTable = ({ results, updatePage }) => {
   const { language } = useI18next()

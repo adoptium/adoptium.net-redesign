@@ -21,20 +21,24 @@ exports[`Latest News component > renders correctly 1`] = `
         >
           Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
         </h3>
-        <button
-          class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block "
+        <a
+          href="/en/news"
         >
-          See all news
-        </button>
+          <button
+            class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block"
+          >
+            See all news
+          </button>
+        </a>
       </div>
       <div
-        class="max-w-[780px] w-full lg:flex gap-4 xl:gap-x-8 hidden  "
+        class="max-w-[780px] w-full lg:flex gap-4 xl:gap-x-8 hidden"
       >
         <div
           class="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8"
         >
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -79,12 +83,13 @@ exports[`Latest News component > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
           </div>
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -129,6 +134,7 @@ exports[`Latest News component > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
@@ -138,7 +144,7 @@ exports[`Latest News component > renders correctly 1`] = `
           class="max-w-[374px] w-full lg:flex hidden flex-col space-y-4 xl:space-y-8 mt-16"
         >
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -183,12 +189,13 @@ exports[`Latest News component > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
           </div>
           <div
-            class="bg-white bg-opacity-5 rounded-3xl border border-white border-opacity-50 backdrop-blur-xl p-8 xl:p-10"
+            class="bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl p-8 xl:p-10"
           >
             <h2
               class="text-primary text-lg leading-6 font-bold m-0 flex items-center gap-x-3"
@@ -233,6 +240,7 @@ exports[`Latest News component > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+              href="/enundefined"
             >
               Read More
             </a>
@@ -294,6 +302,7 @@ exports[`Latest News component > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>
@@ -344,6 +353,7 @@ exports[`Latest News component > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>
@@ -394,6 +404,7 @@ exports[`Latest News component > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>
@@ -444,6 +455,7 @@ exports[`Latest News component > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
+                href="/enundefined"
               >
                 Read More
               </a>

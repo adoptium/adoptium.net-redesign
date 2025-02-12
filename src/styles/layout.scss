@@ -1,0 +1,179 @@
+@use "variables.scss" as *;
+
+:root {
+  --border-radius: 4px;
+  --color-text: white;
+  --color-primary: #7026b9;
+  --color-code-bg: grey;
+  --color-code: white;
+  --font-sans: -apple-system, blinkmacsystemfont, "Segoe UI", helvetica, arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: sfmono-regular, menlo, monaco, consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --font-lg: 18px;
+  --font-md: 16px;
+  --font-sm: 14px;
+  --font-sx: 12px;
+  --line-height-loose: 1.75;
+  --line-height-normal: 1.5;
+  --line-height-dense: 1.1;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 64px;
+  --size-content: 54rem;
+  --size-gutter: var(--space-5);
+  --size-gap: var(--space-6);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font: sans-serif;
+  font-size: var(--font-md);
+  line-height: var(--line-height-normal);
+  overflow-y: scroll;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-text);
+  font-family: sans-serif;
+  font-family: var(--font-sans);
+  font-weight: normal;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted hsla(0deg, 0%, 0%, 50%);
+  cursor: help;
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+dfn {
+  font-style: italic;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-mono);
+  font-size: 1em;
+  line-height: inherit;
+}
+
+hr {
+  box-sizing: content-box;
+  overflow: visible;
+  margin: 0 0 calc(var(--space-4) - 1px) 0;
+  padding: 0;
+  background: hsla(0deg, 0%, 0%, 20%);
+  border: none;
+  height: 1px;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+*::before {
+  box-sizing: inherit;
+}
+
+*::after {
+  box-sizing: inherit;
+}
+
+pre {
+  margin: 0 0 var(--space-4) 0;
+  font-size: 0.875rem;
+  line-height: var(--line-height-normal);
+  background: hsla(0deg, 0%, 0%, 4%);
+  border-radius: var(--border-radius);
+  overflow: auto;
+  word-wrap: normal;
+  padding: var(--space-4);
+}
+
+b,
+strong,
+dt,
+th {
+  font-weight: bold;
+}
+
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+
+p *:last-child {
+  margin-bottom: 0;
+}
+
+code {
+  font-size: 0.875rem;
+}
+
+kbd {
+  font-size: 0.875rem;
+}
+
+samp {
+  font-size: 0.875rem;
+}
+
+abbr {
+  border-bottom: 1px dotted hsla(0deg, 0%, 0%, 50%);
+  cursor: help;
+}
+
+acronym {
+  border-bottom: 1px dotted hsla(0deg, 0%, 0%, 50%);
+  cursor: help;
+}
+
+tt,
+code {
+  background-color: var(--color-code-bg);
+  border-radius: var(--border-radius);
+  color: var(--color-code);
+  font-family: var(--font-mono);
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
+  word-break: normal;
+}
+
+pre code {
+  background: none;
+}
+
+code::before,
+code::after,
+tt::before,
+tt::after {
+  content: "\00a0";
+  letter-spacing: -0.2em;
+}
+
+pre code::before,
+pre code::after,
+pre tt::before,
+pre tt::after {
+  content: none;
+}

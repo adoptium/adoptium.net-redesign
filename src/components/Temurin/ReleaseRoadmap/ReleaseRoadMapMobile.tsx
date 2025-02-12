@@ -8,7 +8,6 @@ const ReleaseRoadMapMobile = () => {
     const updatedFaqs = [...openFaqs]
     updatedFaqs[index] = !updatedFaqs[index]
     setOpenFaqs(updatedFaqs)
-    console.log(updatedFaqs)
   }
 
   const faqs = [

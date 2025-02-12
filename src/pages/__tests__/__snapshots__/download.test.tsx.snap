@@ -82,7 +82,7 @@ exports[`Download page > renders correctly - vendor 1`] = `
             Azul
           </strong>
           , a member of the Eclipse Adoptium Working Group. If the download doesn't start in a few seconds, please
-          
+           
           <span
             class="text-primary underline !underline-offset-[1px]"
           >

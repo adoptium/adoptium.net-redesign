@@ -80,7 +80,7 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
                         </p>
                         <input
                           readOnly
-                          className="mt-2 w-full text-gray-900 rounded-md border-gray-300 shadow-xs"
+                          className="mt-2 w-full text-white rounded-md border-gray-300 shadow-xs"
                           value={checksum}
                         />
                       </div>

@@ -60,7 +60,7 @@ export const createRandomMarketplaceRelease = (
     package: {
       name: "name_mock.tar.gz",
       link: new URL("https://link_mock"),
-      sha265sum: `sha265sum_mock${id}`,
+      sha256sum: `sha256sum_mock${id}`,
       sha256sum_link: new URL("https://sha256sum_link_mock"),
       signature_link: new URL("https://signature_link_mock"),
     },
@@ -69,7 +69,7 @@ export const createRandomMarketplaceRelease = (
           {
             name: "installer_name_mock.msi",
             link: new URL("https://installer_link_mock"),
-            sha265sum: "installer_sha265sum_mock",
+            sha256sum: "installer_sha256sum_mock",
             sha256sum_link: new URL("https://installer_sha256sum_link_mock"),
             signature_link: new URL("https://installer_signature_link_mock"),
           },
@@ -114,7 +114,7 @@ export const mockLatestTemurin = (installer): LatestTemurin => ({
       package: {
         name: "name_mock.tar.gz",
         link: new URL("https://link_mock"),
-        checksum: "sha265sum_mock",
+        checksum: "sha256sum_mock",
         checksum_link: new URL("https://sha256sum_link_mock"),
         metadata_link: new URL("https://metadata_link_mock"),
         signature_link: new URL("https://signature_link_mock"),
@@ -125,7 +125,7 @@ export const mockLatestTemurin = (installer): LatestTemurin => ({
         ? {
             name: "installer_name_mock.msi",
             link: new URL("https://installer_link_mock"),
-            checksum: "installer_sha265sum_mock",
+            checksum: "installer_sha256sum_mock",
             checksum_link: new URL("https://installer_sha256sum_link_mock"),
             metadata_link: new URL("https://installer_metadata_link_mock"),
             signature_link: new URL("https://installer_signature_link_mock"),

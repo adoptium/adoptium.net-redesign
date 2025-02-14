@@ -70,7 +70,7 @@
     "remark-gfm": "^1.0.0",
     "sass": "1.84.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.2"
+    "swiper": "^11.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.6",

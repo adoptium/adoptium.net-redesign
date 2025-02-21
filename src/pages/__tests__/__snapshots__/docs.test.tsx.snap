@@ -115,7 +115,6 @@ exports[`Docs page > renders correctly 1`] = `
               <button
                 aria-label="Open"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-2y136s-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
-                id=":r2:"
                 tabindex="-1"
                 title="Open"
                 type="button"

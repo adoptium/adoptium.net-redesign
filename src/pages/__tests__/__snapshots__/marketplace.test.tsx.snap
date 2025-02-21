@@ -326,7 +326,7 @@ exports[`Marketplace page > renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="hidden md:flex items-center gap-20 border-t border-[#3E3355] pt-5 mb-5 mt-12"
+      class="hidden md:flex items-center gap-20 border-t border-[#3E3355] pt-5 mb-5 mt-12 pl-10"
     >
       <p
         class="text-grey text-[16px] leading-[24px] mb-0"
@@ -334,7 +334,7 @@ exports[`Marketplace page > renders correctly 1`] = `
         Text
       </p>
       <p
-        class="text-grey text-[16px] leading-[24px] mb-0"
+        class="text-grey text-[16px] leading-[24px] mb-0 w-[140px]"
       >
         Text
       </p>

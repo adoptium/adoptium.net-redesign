@@ -240,7 +240,6 @@ exports[`Temurin Nightly page > renders correctly 1`] = `
             <button
               aria-label="Choose date, selected date is Jan 1, 2022"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1ysp02-MuiButtonBase-root-MuiIconButton-root"
-              id=":r2:"
               tabindex="0"
               type="button"
             >

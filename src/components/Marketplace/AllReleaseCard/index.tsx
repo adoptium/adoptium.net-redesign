@@ -30,10 +30,10 @@ const AllReleaseCard = ({ results }) => {
               </h3>
             </div>
             <div className="lg:flex items-center gap-20">
-              <p className="text-base font-bold leading-[150%] mb-0  hidden lg:block">
+              <p className="text-base font-bold leading-[150%] mb-0 hidden lg:block w-[140px]">
                 {capitalize(release.binary.distribution)}
               </p>
-              <span className="fill-primary hidden md:block">
+              <span className="fill-primary hidden md:block" style={{ backgroundColor: "#fff", padding: "10px", borderRadius: "6%" }}>
                 <img
                   className="w-[100px] mb-0"
                   alt={`${release.binary.distribution} logo`}

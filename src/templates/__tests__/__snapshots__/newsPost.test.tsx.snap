@@ -127,7 +127,6 @@ exports[`NewsPost Template page > renders correctly - featured image 1`] = `
             <button
               aria-label="Share on X (Twitter)"
               class="react-share__ShareButton mr-2"
-              networkname="twitter"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg
@@ -147,7 +146,6 @@ exports[`NewsPost Template page > renders correctly - featured image 1`] = `
             <button
               aria-label="Share on Linkedin"
               class="react-share__ShareButton mr-2"
-              networkname="linkedin"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg
@@ -167,7 +165,6 @@ exports[`NewsPost Template page > renders correctly - featured image 1`] = `
             <button
               aria-label="Share on Facebook"
               class="react-share__ShareButton mr-2"
-              networkname="facebook"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg
@@ -187,7 +184,6 @@ exports[`NewsPost Template page > renders correctly - featured image 1`] = `
             <button
               aria-label="Share on Reddit"
               class="react-share__ShareButton mr-2"
-              networkname="reddit"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg
@@ -207,7 +203,6 @@ exports[`NewsPost Template page > renders correctly - featured image 1`] = `
             <button
               aria-label="Share on Bluesky"
               class="react-share__ShareButton mr-2"
-              networkname="bluesky"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg
@@ -227,7 +222,6 @@ exports[`NewsPost Template page > renders correctly - featured image 1`] = `
             <button
               aria-label="Share via Email"
               class="react-share__ShareButton mr-2"
-              networkname="email"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg
@@ -482,7 +476,6 @@ exports[`NewsPost Template page > renders correctly 1`] = `
             <button
               aria-label="Share on X (Twitter)"
               class="react-share__ShareButton mr-2"
-              networkname="twitter"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg
@@ -502,7 +495,6 @@ exports[`NewsPost Template page > renders correctly 1`] = `
             <button
               aria-label="Share on Linkedin"
               class="react-share__ShareButton mr-2"
-              networkname="linkedin"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg
@@ -522,7 +514,6 @@ exports[`NewsPost Template page > renders correctly 1`] = `
             <button
               aria-label="Share on Facebook"
               class="react-share__ShareButton mr-2"
-              networkname="facebook"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg
@@ -542,7 +533,6 @@ exports[`NewsPost Template page > renders correctly 1`] = `
             <button
               aria-label="Share on Reddit"
               class="react-share__ShareButton mr-2"
-              networkname="reddit"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg
@@ -562,7 +552,6 @@ exports[`NewsPost Template page > renders correctly 1`] = `
             <button
               aria-label="Share on Bluesky"
               class="react-share__ShareButton mr-2"
-              networkname="bluesky"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg
@@ -582,7 +571,6 @@ exports[`NewsPost Template page > renders correctly 1`] = `
             <button
               aria-label="Share via Email"
               class="react-share__ShareButton mr-2"
-              networkname="email"
               style="background-color: transparent; padding: 0px; cursor: pointer;"
             >
               <svg

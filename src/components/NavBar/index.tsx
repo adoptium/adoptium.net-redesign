@@ -18,6 +18,7 @@ import LanguageSelector from "../LanguageSelector"
 // @ts-ignore
 import Logo from "../../images/adoptium-logo-dark.svg"
 import Announcements from "../Announcements"
+import Banner from "../Banner"
 
 interface NavItem {
   name: string
@@ -152,8 +153,11 @@ const NavBar = () => {
           : ""
       }`}
     >
+      {/* Show a banner bar on the Top */}
+      <Banner />
       {showAnnouncement && (
         <Announcements handleClose={() => setShowAnnouncement(false)} />
+        
       )}
       {/* Container div to center the nav content */}
       <div className="max-w-[1288px] w-full mx-auto px-3">

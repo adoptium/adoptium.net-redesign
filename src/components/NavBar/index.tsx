@@ -152,10 +152,8 @@ const NavBar = () => {
           : ""
       }`}
     >
-      {/* Show a banner bar on the Top */}
       {showAnnouncement && (
         <Announcements handleClose={() => setShowAnnouncement(false)} />
-        
       )}
       {/* Container div to center the nav content */}
       <div className="max-w-[1288px] w-full mx-auto px-3">

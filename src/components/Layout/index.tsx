@@ -16,6 +16,7 @@ import "slick-carousel/slick/slick-theme.css"
 const Layout = ({ children, page = "" }) => {
   return (
     <>
+      <Slice alias="banner" />
       <Slice alias="navbar" />
       <main>{children}</main>
       {page !== "home" && <Contributor />}

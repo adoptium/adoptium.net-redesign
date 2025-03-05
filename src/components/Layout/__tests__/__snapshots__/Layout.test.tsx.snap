@@ -3,6 +3,9 @@
 exports[`Layout component > renders correctly with data 1`] = `
 <div>
   <div
+    class="slice--banner"
+  />
+  <div
     class="slice--navbar"
   />
   <main>

@@ -25,7 +25,6 @@ const Banner = () => {
             <strong className='p-1'>13th October 2023:</strong>
             We are creating the October 2023 PSU binaries for Eclipse Temurin 8u392, 11.0.21 and 17.0.9 and 21.0.1<br/>
             You can track progress <a className='alert-link p-1 text-white' href="https://github.com/adoptium/temurin/issues/6">by platform</a>.
-            <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </h2>
         </div>
       </div>

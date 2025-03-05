@@ -3,6 +3,9 @@
 exports[`Adopters Page > renders correctly 1`] = `
 <div>
   <div
+    class="slice--banner"
+  />
+  <div
     class="slice--navbar"
   />
   <main>

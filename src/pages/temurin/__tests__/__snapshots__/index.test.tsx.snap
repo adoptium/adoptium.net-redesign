@@ -923,7 +923,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
       <h3
         class="text-center text-base leading-6 font-normal text-grey mt-6"
       >
-        Eclipse Temurin offers high-performance, cross-platform, open-source Java™ runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+        Text
       </h3>
       <a
         href="/en/business-benefits"
@@ -931,7 +931,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
         >
-          Business Benefits
+          Text
         </button>
       </a>
     </div>
@@ -953,12 +953,12 @@ exports[`Temurin Index page > renders correctly 1`] = `
         <h1
           class="text-xl my-5 font-bold"
         >
-          OpenJDK-Based
+          Performance & Reliability
         </h1>
         <p
           class="text-base text-grey"
         >
-          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+          Run your enterprise applications with confidence using Eclipse Temurin, a secure, high-performance Java runtime rigorously tested for stability and optimized for seamless operation across diverse environments.
         </p>
       </div>
     </div>
@@ -980,12 +980,12 @@ exports[`Temurin Index page > renders correctly 1`] = `
         <h1
           class="text-xl my-5 font-bold"
         >
-          OpenJDK-Based
+          Cost-Effective Innovation
         </h1>
         <p
           class="text-base text-grey"
         >
-          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+          Adopt high-quality open source Java with no licensing fees. Reduce costs while benefiting from a robust ecosystem that ensures long-term sustainability and enterprise-ready runtime performance.
         </p>
       </div>
     </div>
@@ -1007,12 +1007,12 @@ exports[`Temurin Index page > renders correctly 1`] = `
         <h1
           class="text-xl my-5 font-bold"
         >
-          OpenJDK-Based
+          Empowering Developers
         </h1>
         <p
           class="text-base text-grey"
         >
-          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+          Boost developer productivity with Eclipse Temurin’s consistent, cross-platform builds. Focus on innovation while relying on a dependable, high-quality runtime trusted by millions worldwide.
         </p>
       </div>
     </div>
@@ -1055,12 +1055,12 @@ exports[`Temurin Index page > renders correctly 1`] = `
               <h1
                 class="text-xl md-pt-6 my-5 font-bold"
               >
-                OpenJDK-Based
+                Performance & Reliability
               </h1>
               <p
                 class="text-base text-grey"
               >
-                Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+                Run your enterprise applications with confidence using Eclipse Temurin, a secure, high-performance Java runtime rigorously tested for stability and optimized for seamless operation across diverse environments.
               </p>
             </div>
           </div>
@@ -1086,12 +1086,12 @@ exports[`Temurin Index page > renders correctly 1`] = `
               <h1
                 class="text-xl md-pt-6 my-5 font-bold"
               >
-                OpenJDK-Based
+                Cost-Effective Innovation
               </h1>
               <p
                 class="text-base text-grey"
               >
-                Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+                Adopt high-quality open source Java with no licensing fees. Reduce costs while benefiting from a robust ecosystem that ensures long-term sustainability and enterprise-ready runtime performance.
               </p>
             </div>
           </div>
@@ -1117,12 +1117,12 @@ exports[`Temurin Index page > renders correctly 1`] = `
               <h1
                 class="text-xl md-pt-6 my-5 font-bold"
               >
-                OpenJDK-Based
+                Empowering Developers
               </h1>
               <p
                 class="text-base text-grey"
               >
-                Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+                Boost developer productivity with Eclipse Temurin’s consistent, cross-platform builds. Focus on innovation while relying on a dependable, high-quality runtime trusted by millions worldwide.
               </p>
             </div>
           </div>

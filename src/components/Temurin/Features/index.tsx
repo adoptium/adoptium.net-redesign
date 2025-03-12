@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import { Link } from "../../Link"
+import { Trans } from "gatsby-plugin-react-i18next"
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react"
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi"
 import SwiperCore from "swiper"
@@ -12,29 +13,35 @@ SwiperCore.use([Navigation])
 const Features = () => {
   const features = [
     {
-      id: 1,
-      heading: "OpenJDK-Based",
+      heading: "Secure Supply Chain",
       content:
-        "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are.",
+        "Built with robust security standards, ensuring a trusted, transparent, and vulnerability-free supply chain."
     },
     {
-      id: 2,
-      heading: "OpenJDK-Based",
+      heading: "AQAvit Verification",
       content:
-        "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are.",
+        "Thoroughly tested using AQAvit to guarantee performance, reliability, and security in every build."
     },
     {
-      id: 3,
-      heading: "OpenJDK-Based",
+      heading: "Performance Optimization",
       content:
-        "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are.",
+        "Engineered for optimal performance, delivering speed, efficiency, and stability across diverse environments."
     },
     {
-      id: 4,
-      heading: "OpenJDK-Based",
+      heading: "Cross-Platform Consistency",
       content:
-        "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are.",
+        "Consistent behavior and builds across all major operating systems and hardware architectures."
     },
+    {
+      heading: "Community-Driven Development",
+      content:
+        "Eclipse Adoptium projects are shaped by a vibrant, global community that is continuously improving and innovating."
+    },
+    {
+      heading: "Enterprise-Ready Support",
+      content:
+        "Backed by enterprise-grade commercial supporters, ensuring seamless integration, scalability, and long-term sustainability."
+    }
   ]
 
   const swiperRef = useRef<SwiperRef>(null)
@@ -64,12 +71,12 @@ const Features = () => {
           <div className="max-w-[600px] w-full flex flex-col justify-between mb-16 lg:mb-0">
             <div>
               <h2 className="text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900">
-                OpenJDK-Based
+                <Trans>Prebuilt OpenJDK Binaries for Free!</Trans>
               </h2>
               <h3 className="text-xl font-normal leading-7 text-grey mt-6 mb-8">
-                Eclipse Temurin offers high-performance, cross-platform,
-                open-source Java runtime binaries that are enterprise-ready and
-                Java SE TCK-tested for general use in the Java ecosystem.
+                <Trans i18nKey='Intro'>
+                  Java&trade; is the world's leading programming language and platform. The Adoptium Working Group promotes and supports high-quality, TCK certified runtimes and associated technology for use across the Java ecosystem. Eclipse Temurin is the name of the OpenJDK distribution from Adoptium.
+                </Trans>
               </h3>
               <Link to="/temurin/releases">
                 <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[212px] h-[48px] ">

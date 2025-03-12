@@ -16,7 +16,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
       <h3
         class="text-center text-base leading-6 font-normal text-grey mt-6"
       >
-        Eclipse Temurin offers high-performance, cross-platform, open-source Java™ runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+        Text
       </h3>
       <a
         href="/en/business-benefits"
@@ -24,7 +24,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
         >
-          Business Benefits
+          Text
         </button>
       </a>
     </div>

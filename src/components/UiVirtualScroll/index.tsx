@@ -6,21 +6,21 @@ import "./UiVirtualScroll.scss"
 
 const data = [
   {
-    title: "OpenJDK-Based",
+    title: "Performance & Reliability",
     description:
-      "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.",
+      "Run your enterprise applications with confidence using Eclipse Temurin, a secure, high-performance Java runtime rigorously tested for stability and optimized for seamless operation across diverse environments.",
     image: "feature-layers.svg",
   },
   {
-    title: "OpenJDK-Based",
+    title: "Cost-Effective Innovation",
     description:
-      "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.",
+      "Adopt high-quality open source Java with no licensing fees. Reduce costs while benefiting from a robust ecosystem that ensures long-term sustainability and enterprise-ready runtime performance.",
     image: "feature-layers.svg",
   },
   {
-    title: "OpenJDK-Based",
+    title: "Empowering Developers",
     description:
-      "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.",
+      "Boost developer productivity with Eclipse Temurin’s consistent, cross-platform builds. Focus on innovation while relying on a dependable, high-quality runtime trusted by millions worldwide.",
     image: "feature-layers.svg",
   },
 ]

@@ -1,42 +1,26 @@
 import React, { useState, useEffect } from "react"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6"
-import { AsanaSlider, GithubSlider, GoogleSlider, SlackSlider } from "./Icons"
+import { AlibabaCloudSlider, MicrosoftSlider } from "./Icons"
 
 import "./Testimonials.scss"
 
 const testimonialData = [
   {
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    name: "Joe Bloggs",
-    role: "CEO at GitHub",
+      "Microsoft is proud to be a Strategic Member of the Eclipse Adoptium Working Group, collaborating closely with industry partners to contribute to and benefit from a vibrant open-source ecosystem. Together, we are dedicated to delivering high-quality, secure, and performant Java runtimes that empower our customers and the developer community.",
+    name: "Martijn Verburg",
+    role: "Principal Group Manager - Java & Go @ Microsoft",
     image:
-      "https://th.bing.com/th/id/OIP.sYE4E2Y8K4hHU21bS0zx2QHaH4?rs=1&pid=ImgDetMain",
+      "/images/authors/martijnverburg.jpg",
   },
   {
     quote:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    name: "Jane Doe",
-    role: "CTO at Asana",
+      "As a member of the Adoptium Working Group, Alibaba Cloud is committed to fostering a vendor-neutral environment that drives the growth of Java Runtime on our global cloud platform. We contribute Alibaba Dragonwell to the Adoptium marketplace, a trusted source for production-ready OpenJDK builds, and actively participate in the EMT4J sub-project within Adoptium to help developers seamlessly upgrade their applications.",
+    name: "Sanhong Li",
+    role: "Director of Compiler & Runtime, Alibaba Cloud Intelligence",
     image:
-      "https://th.bing.com/th/id/OIP.EhdrnPDN08Vtj8MgbvlOxQHaHa?rs=1&pid=ImgDetMain?",
-  },
-  {
-    quote:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    name: "Jane Doe",
-    role: "Cleaner at Google",
-    image:
-      "https://th.bing.com/th/id/OIP.EhdrnPDN08Vtj8MgbvlOxQHaHa?rs=1&pid=ImgDetMain?",
-  },
-  {
-    quote:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    name: "Jane Doe",
-    role: "Slacker at Slack",
-    image:
-      "https://th.bing.com/th/id/OIP.EhdrnPDN08Vtj8MgbvlOxQHaHa?rs=1&pid=ImgDetMain?",
-  },
+      "/images/quotes/sanhongli.jpg",
+  }
 ]
 
 const Testimonials = () => {
@@ -101,13 +85,13 @@ const Testimonials = () => {
             className={testimonialClassName}
             style={{ minHeight: "204px" }}
           >
-            <span className="md:text-[32px] text-[26px] leading-[34px] md:leading-10 font-semibold  text-white">
+            <span className="md:text-[26px] text-[20px] leading-[34px] md:leading-10 font-semibold  text-white">
               {testimonial.quote}
             </span>
           </blockquote>
           <figcaption className="flex items-center justify-center md:mt-6 mt-0 space-x-3">
             <img
-              className="w-6 h-6 mb-0 rounded-full"
+              className="w-6 h-6 mb-0 rounded-full hidden sm:block"
               src={testimonial.image}
               alt={testimonial.name}
             />
@@ -143,27 +127,15 @@ const Testimonials = () => {
         <div className="max-w-[896px] mx-auto flex flex-wrap justify-center items-center mt-10 gap-6 md:space-x-16">
           <button
             onClick={() => logoSliderChangeHandler(0)}
-            aria-label="GitHub Testimonial"
+            aria-label="Microsoft Testimonial"
           >
-            <GithubSlider current={currentTestimonial} />
+            <MicrosoftSlider current={currentTestimonial} />
           </button>
           <button
             onClick={() => logoSliderChangeHandler(1)}
             aria-label="Aana Testimonial"
           >
-            <AsanaSlider current={currentTestimonial} />
-          </button>
-          <button
-            onClick={() => logoSliderChangeHandler(2)}
-            aria-label="Google Testimonial"
-          >
-            <GoogleSlider current={currentTestimonial} />
-          </button>
-          <button
-            onClick={() => logoSliderChangeHandler(3)}
-            aria-label="Slack Testimonial"
-          >
-            <SlackSlider current={currentTestimonial} />
+            <AlibabaCloudSlider current={currentTestimonial} />
           </button>
         </div>
       </div>

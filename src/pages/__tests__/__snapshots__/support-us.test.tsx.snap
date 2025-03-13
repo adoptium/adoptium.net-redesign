@@ -122,7 +122,7 @@ exports[`Support Us page > renders correctly 1`] = `
             <button
               class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
             >
-              Learn More
+              How to contribute
             </button>
           </a>
         </div>
@@ -139,7 +139,7 @@ exports[`Support Us page > renders correctly 1`] = `
             <h3
               class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
             >
-              Become a sponsor
+              Become a sustainer
             </h3>
             <p
               class="mt-6 text-xl text-grey font-normal"
@@ -184,7 +184,7 @@ exports[`Support Us page > renders correctly 1`] = `
             <button
               class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
             >
-              Learn More
+              Become a member
             </button>
           </a>
         </div>

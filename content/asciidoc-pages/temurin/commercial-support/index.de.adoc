@@ -28,9 +28,9 @@ Visit https://www.ibm.com/products/support-for-runtimes[IBM Runtimes for Busines
 ^.^|
 image:https://adoptium.net/images/openelements.svg[Open Elements,150]
 |
-Als Mitglied der Adoptium™ Arbeitsgruppe bietet https://open-elements.de[OpenElements] mit Eclipse Temurin Support & Care eine Vielzahl von Vorteilen, welche die Leistungsfähigkeit und Sicherheit Ihrer Java-Anwendungen erhöhen sowie Ihren Entwicklungsprozess optimieren. Durch die direkte Mitarbeit und außergewöhnliche Vernetzung von Open Elements im Java und Open Source Ökosystem können wir Ihnen zusätzlich wichtige Informationen und Einblicke in die aktuelle und zukünftige Entwicklung von Eclipse Temurin, der Eclipse Adoptium Arbeitsgruppe sowie dem OpenJDK ermöglichen. Darüber hinaus bietet Temurin Support & Care Unterstützung und Dokumentation sowohl in englischer als auch deutscher Sprache an.
+Als Mitglied der Adoptium™ Arbeitsgruppe bietet https://open-elements.com/de[OpenElements] mit Eclipse Temurin Support & Care eine Vielzahl von Vorteilen, welche die Leistungsfähigkeit und Sicherheit Ihrer Java-Anwendungen erhöhen sowie Ihren Entwicklungsprozess optimieren. Durch die direkte Mitarbeit und außergewöhnliche Vernetzung von Open Elements im Java und Open Source Ökosystem können wir Ihnen zusätzlich wichtige Informationen und Einblicke in die aktuelle und zukünftige Entwicklung von Eclipse Temurin, der Eclipse Adoptium Arbeitsgruppe sowie dem OpenJDK ermöglichen. Darüber hinaus bietet Temurin Support & Care Unterstützung und Dokumentation sowohl in englischer als auch deutscher Sprache an.
 
-Besuchen Sie unsere Seite zum https://open-elements.de/temurin-support/[Temurin Support & Care Programm von OpenElements] für weitere Informationen.
+Besuchen Sie unsere Seite zum https://open-elements.com/de/[Temurin Support & Care Programm von OpenElements] für weitere Informationen.
 
 ^.^|
 image:https://adoptium.net/images/redhat.svg[Red Hat,150]

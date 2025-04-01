@@ -18,6 +18,18 @@ const Members = () => {
         subtitle="Our Members"
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
       />
+      <div className="flex gap-4 md:gap-8 items-center justify-center absolute w-full top-[571px]">
+        <Link to="/join">
+          <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out mt-8">
+            Become a Member
+          </button>
+        </Link>
+        <Link to="#">
+          <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out mt-8">
+            Our Members
+          </button>
+        </Link>
+      </div>
       <div className="overflow-auto px-3 py-5 w-full md:w-auto">
         <h3 className="flex space-x-10 whitespace-nowrap  justify-center py-2">
           <a href="#strategic">
@@ -77,8 +89,10 @@ const Members = () => {
           </button>
         </Link>
       </div>
-      <PowerOfTemurin />
-      <ContactUs title="Speak to our team today" buttontitle="Contact Us" />
+      <ContactUs
+        title="Speak to our team today"
+        buttontitle="Become a member"
+      />
     </Layout>
   )
 }

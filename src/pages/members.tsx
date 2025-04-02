@@ -6,11 +6,25 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
 import PageHeader from "../components/PageHeader"
-import PowerOfTemurin from "../components/Temurin/PowerOfTemurin"
 import ContactUs from "../components/ContactUs"
 import Logos, { LogoType } from "../components/Logos"
 
 const Members = () => {
+  const scrollToSection = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    sectionId: string,
+  ) => {
+    event.preventDefault()
+    const section = document.getElementById(sectionId)
+    if (section) {
+      const navbarHeight = 98
+      window.scrollTo({
+        top: section.offsetTop - navbarHeight,
+        behavior: "instant",
+      })
+    }
+  }
+
   return (
     <Layout>
       <PageHeader
@@ -24,15 +38,16 @@ const Members = () => {
             Become a Member
           </button>
         </Link>
-        <Link to="#">
-          <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out mt-8">
-            Our Members
-          </button>
-        </Link>
+        <button
+          onClick={e => scrollToSection(e, "strategic-sec")}
+          className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out mt-8"
+        >
+          Our Members
+        </button>
       </div>
       <div className="overflow-auto px-3 py-5 w-full md:w-auto">
         <h3 className="flex space-x-10 whitespace-nowrap  justify-center py-2">
-          <a href="#strategic">
+          <a href="#strategic-sec">
             <span
               className="text-[16px] py-2 border-primary w-full text-base font-normal leading-6
                 outline-none hover:text-white hover:border-b
@@ -42,7 +57,7 @@ const Members = () => {
               Strategic Members
             </span>
           </a>
-          <a href="#enterprise">
+          <a href="#enterprise-sec">
             <span
               className="text-[16px] py-3 border-primary w-full text-base font-normal leading-6
                 outline-none hover:text-white hover:border-b
@@ -52,7 +67,7 @@ const Members = () => {
               Enterprise Members
             </span>
           </a>
-          <a href="#participant">
+          <a href="#participant-sec">
             <span
               className="text-[16px] py-2 border-primary w-full text-base font-normal leading-6
                 outline-none hover:text-white hover:border-b
@@ -65,16 +80,19 @@ const Members = () => {
         </h3>
       </div>
       <Logos
+        sectionId="strategic-sec"
         members={LogoType.STRATEGIC}
         title="Strategic Members"
         description="Companies that use Eclipse Temurin in production."
       />
       <Logos
+        sectionId="enterprise-sec"
         members={LogoType.ENTERPRISE}
         title="Enterprise Members"
         description="Companies that use Eclipse Temurin in production."
       />
       <Logos
+        sectionId="participant-sec"
         members={LogoType.PARTICIPANT}
         title="Participant Members"
         description="Companies that use Eclipse Temurin in production."

@@ -4,6 +4,10 @@ import { describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
 import Members, { Head } from "../members"
 
+vi.mock("../../util/scrollToView", () => ({
+  scrollToSection: vi.fn(),
+}))
+
 vi.mock("../../components/Logos", () => {
   return {
     __esModule: true,

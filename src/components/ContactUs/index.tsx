@@ -42,7 +42,7 @@ const ContactUs: React.FC<ContactUsProps> = ({
           </span>
           <Link to="/join">
             <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out  hidden md:block mt-8">
-              Become a Member
+              {buttontitle}
             </button>
           </Link>
         </div>

@@ -19,6 +19,7 @@ interface LogosGridProps {
   members: LogoType
   title: string
   description: string
+  sectionId?: string
 }
 
 export interface MembersProps {
@@ -28,7 +29,7 @@ export interface MembersProps {
   tier: string
 }
 
-const Logos = ({ members, title, description }: LogosGridProps) => {
+const Logos = ({ members, title, description, sectionId }: LogosGridProps) => {
   // filter MemberList to show only type of members
   let filteredMembers: MembersProps[] = []
 
@@ -46,7 +47,10 @@ const Logos = ({ members, title, description }: LogosGridProps) => {
   filteredMembers = shuffle(filteredMembers)
 
   return (
-    <section className="max-w-[1264px] md:px-0 px-6 w-full mx-auto flex flex-col items-center justify-center py-10">
+    <section
+      id={sectionId}
+      className="max-w-[1264px] md:px-0 px-6 w-full mx-auto flex flex-col items-center justify-center py-10"
+    >
       <div className="max-w-[700px] mx-auto">
         <h3 className="text-[36px] sm:text-[42px] leading-[56px] text-center">
           {title}

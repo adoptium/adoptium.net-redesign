@@ -6,9 +6,9 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
 import PageHeader from "../components/PageHeader"
-import PowerOfTemurin from "../components/Temurin/PowerOfTemurin"
 import ContactUs from "../components/ContactUs"
 import Logos, { LogoType } from "../components/Logos"
+import { scrollToSection } from "../util/scrollToView"
 
 const Members = () => {
   return (
@@ -18,9 +18,22 @@ const Members = () => {
         subtitle="Our Members"
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
       />
+      <div className="flex gap-4 md:gap-8 items-center justify-center absolute w-full top-[571px]">
+        <Link to="/join">
+          <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out mt-8">
+            Become a Member
+          </button>
+        </Link>
+        <button
+          onClick={e => scrollToSection(e, "strategic-sec")}
+          className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out mt-8"
+        >
+          Our Members
+        </button>
+      </div>
       <div className="overflow-auto px-3 py-5 w-full md:w-auto">
         <h3 className="flex space-x-10 whitespace-nowrap  justify-center py-2">
-          <a href="#strategic">
+          <a href="#strategic-sec">
             <span
               className="text-[16px] py-2 border-primary w-full text-base font-normal leading-6
                 outline-none hover:text-white hover:border-b
@@ -30,7 +43,7 @@ const Members = () => {
               Strategic Members
             </span>
           </a>
-          <a href="#enterprise">
+          <a href="#enterprise-sec">
             <span
               className="text-[16px] py-3 border-primary w-full text-base font-normal leading-6
                 outline-none hover:text-white hover:border-b
@@ -40,7 +53,7 @@ const Members = () => {
               Enterprise Members
             </span>
           </a>
-          <a href="#participant">
+          <a href="#participant-sec">
             <span
               className="text-[16px] py-2 border-primary w-full text-base font-normal leading-6
                 outline-none hover:text-white hover:border-b
@@ -53,16 +66,19 @@ const Members = () => {
         </h3>
       </div>
       <Logos
+        sectionId="strategic-sec"
         members={LogoType.STRATEGIC}
         title="Strategic Members"
         description="Companies that use Eclipse Temurin in production."
       />
       <Logos
+        sectionId="enterprise-sec"
         members={LogoType.ENTERPRISE}
         title="Enterprise Members"
         description="Companies that use Eclipse Temurin in production."
       />
       <Logos
+        sectionId="participant-sec"
         members={LogoType.PARTICIPANT}
         title="Participant Members"
         description="Companies that use Eclipse Temurin in production."
@@ -77,8 +93,10 @@ const Members = () => {
           </button>
         </Link>
       </div>
-      <PowerOfTemurin />
-      <ContactUs title="Speak to our team today" buttontitle="Contact Us" />
+      <ContactUs
+        title="Speak to our team today"
+        buttontitle="Become a member"
+      />
     </Layout>
   )
 }

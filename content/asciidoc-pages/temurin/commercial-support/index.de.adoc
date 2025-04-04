@@ -26,7 +26,7 @@ With more than two decades experience implementing, delivering, and supporting J
 Visit https://www.ibm.com/products/support-for-runtimes[IBM Runtimes for Business] today for more information.
 
 ^.^|
-image:https://adoptium.net/images/openelements.svg[Open Elements,150]
+image:https://adoptium.net/images/openelements-light.svg[Open Elements,150]
 |
 Als Mitglied der Adoptium™ Arbeitsgruppe bietet https://open-elements.com/de[OpenElements] mit Eclipse Temurin Support & Care eine Vielzahl von Vorteilen, welche die Leistungsfähigkeit und Sicherheit Ihrer Java-Anwendungen erhöhen sowie Ihren Entwicklungsprozess optimieren. Durch die direkte Mitarbeit und außergewöhnliche Vernetzung von Open Elements im Java und Open Source Ökosystem können wir Ihnen zusätzlich wichtige Informationen und Einblicke in die aktuelle und zukünftige Entwicklung von Eclipse Temurin, der Eclipse Adoptium Arbeitsgruppe sowie dem OpenJDK ermöglichen. Darüber hinaus bietet Temurin Support & Care Unterstützung und Dokumentation sowohl in englischer als auch deutscher Sprache an.
 

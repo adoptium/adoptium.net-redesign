@@ -41,9 +41,7 @@ const LatestReleases = () => {
           Latest Releases
         </h2>
         <p className="text-center mt-6 text-grey text-base font-normal leading-6">
-          Eclipse Temurin offers high-performance, cross-platform, open-source
-          Java runtime <br /> binaries that are enterprise-ready and Java SE
-          TCK-tested for general use in the Java ecosystem.
+          Download your needed build
         </p>
         <div className="flex xl:flex-nowrap flex-wrap justify-center max-w-[1264px] w-full mx-auto gap-x-8 gap-y-4 py-16">
           {LatestReleasesCard.map((card, index) => (
@@ -79,7 +77,7 @@ const LatestReleases = () => {
         </div>
         <div className="flex flex-wrap justify-center  items-center gap-x-10 sm:gap-y-0 gap-y-6">
           <p className="text-xl text-white font-normal leadig-7 !mb-0 text-center">
-            Eclipse Temurin offers high-performance
+            Get other platforms and versions
           </p>
           <Link to="/temurin/releases">
             <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px] ">

@@ -7,21 +7,19 @@ const WaysToSupport = () => {
     {
       title: "How to contribute",
       description:
-        "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime",
+        "Contribute to our projects with technical and non-technical development",
       button: "How to contribute",
       href: "/contributing/",
     },
     {
       title: "Become a sustainer",
-      description:
-        "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime",
+      description: "Join us in strengthening the future of Eclipse Temurin",
       button: "Become a sustainer",
       href: "/sustainers",
     },
     {
       title: "Become a member",
-      description:
-        "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime",
+      description: "Join us shaping the future of Eclipse Adoptium",
       button: "Become a member",
       href: "/join",
     },

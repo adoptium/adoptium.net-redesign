@@ -1255,9 +1255,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
     <p
       class="text-center mt-6 text-grey text-base font-normal leading-6"
     >
-      Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime 
-      <br />
-       binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+      Download your needed build
     </p>
     <div
       class="flex xl:flex-nowrap flex-wrap justify-center max-w-[1264px] w-full mx-auto gap-x-8 gap-y-4 py-16"
@@ -1444,7 +1442,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
       <p
         class="text-xl text-white font-normal leadig-7 !mb-0 text-center"
       >
-        Eclipse Temurin offers high-performance
+        Get other platforms and versions
       </p>
       <a
         href="/en/temurin/releases"

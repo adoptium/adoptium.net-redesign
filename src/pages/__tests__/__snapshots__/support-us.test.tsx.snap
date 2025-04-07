@@ -113,7 +113,7 @@ exports[`Support Us page > renders correctly 1`] = `
             <p
               class="mt-6 text-xl text-grey font-normal"
             >
-              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
+              Contribute to our projects with technical and non-technical development
             </p>
           </div>
           <a
@@ -144,7 +144,7 @@ exports[`Support Us page > renders correctly 1`] = `
             <p
               class="mt-6 text-xl text-grey font-normal"
             >
-              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
+              Join us in strengthening the future of Eclipse Temurin
             </p>
           </div>
           <a
@@ -175,7 +175,7 @@ exports[`Support Us page > renders correctly 1`] = `
             <p
               class="mt-6 text-xl text-grey font-normal"
             >
-              Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime
+              Join us shaping the future of Eclipse Adoptium
             </p>
           </div>
           <a

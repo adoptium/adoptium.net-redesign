@@ -71,226 +71,248 @@ exports[`What We Do page > renders correctly 1`] = `
         <div
           class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
         >
-          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+          <div
+            class="text-center lg:text-justify flex flex-col ml-10 gap-3"
+          >
+            <p>
+              Adoptium champions open-source Java solutions, empowering businesses with cutting-edge technology and collaborative innovation.
+            </p>
+            <p>
+              Founded on the principles of community-driven development, Adoptium has become a cornerstone of the Java ecosystem, driving forward-thinking solutions and fostering a culture of shared knowledge.
+            </p>
+            <p>
+              We achieve this through a set of Projects under the Adoptium PMC and a close working partnership with external projects, most notably OpenJDK for providing the Java SE runtime implementation.
+            </p>
+            <p>
+              The AdoptOpenJDK project was established in 2017 following years of discussions about the general lack of an open and reproducible build and test system for OpenJDK source across multiple platforms. Since then it has grown to become a leading provider of high-quality OpenJDK-based binaries used by enterprises in embedded systems, desktops, traditional servers, modern cloud platforms, and large mainframes. The Eclipse Adoptium project is the continuation of the original AdoptOpenJDK mission.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    class="bg-purple py-16"
+    class="bg-blue py-24 sm:py-28"
   >
     <div
-      class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-16"
+      class="mx-auto max-w-3xl md:max-w-7xl w-full px-6 xl:px-0"
     >
-      <h2
-        class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
-      >
-        The Power of Eclipse Temurin™
-      </h2>
-      <h3
-        class="text-center text-base leading-6 font-normal text-grey mt-6"
-      >
-        Text
-      </h3>
-      <a
-        href="/en/business-benefits"
-      >
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
-        >
-          Text
-        </button>
-      </a>
-    </div>
-    <div
-      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-    >
-      <img
-        alt="Description"
-        class="w-full mb-0 max-w-[366px] object-cover"
-        src="/images/icons/feature-layers.svg"
-      />
-      <img
-        alt="scrol divider"
-        class="mb-0"
-      />
       <div
-        class="flex flex-col flex-1 px-4"
+        class="mx-auto max-w-4xl sm:text-center"
       >
-        <h1
-          class="text-xl my-5 font-bold"
+        <h2
+          class="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] mb-4"
         >
-          Performance & Reliability
-        </h1>
+          Discover all our projects
+        </h2>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center"
+      >
         <p
-          class="text-base text-grey"
+          class="mt-6 max-w-2xl mb-0 text-base leading-6 text-grey text-center md:text-justify md:[text-align-last:center]"
         >
-          Run your enterprise applications with confidence using Eclipse Temurin, a secure, high-performance Java runtime rigorously tested for stability and optimized for seamless operation across diverse environments.
+          Eclipse Adoptium provides runtime binaries that are high performance, enterprise-caliber, cross-platform, open-source licensed, Java SE TCK-tested and compliant for general use across the Java ecosystem. Eclipse Adoptium also provides artifacts including open-source infrastructure as code, a comprehensive continuous integration build and test farm, and extensive quality assurance tests. These artifacts may be used by Eclipse Adoptium projects and other runtime technology builders to ensure the provision of secure, Java SE TCK-tested and compliant, production-ready runtimes.
         </p>
       </div>
-    </div>
-    <div
-      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-    >
-      <img
-        alt="Description"
-        class="w-full mb-0 max-w-[366px] object-cover"
-        src="/images/icons/feature-layers.svg"
-      />
-      <img
-        alt="scrol divider"
-        class="mb-0"
-      />
       <div
-        class="flex flex-col flex-1 px-4"
-      >
-        <h1
-          class="text-xl my-5 font-bold"
-        >
-          Cost-Effective Innovation
-        </h1>
-        <p
-          class="text-base text-grey"
-        >
-          Adopt high-quality open source Java with no licensing fees. Reduce costs while benefiting from a robust ecosystem that ensures long-term sustainability and enterprise-ready runtime performance.
-        </p>
-      </div>
-    </div>
-    <div
-      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-    >
-      <img
-        alt="Description"
-        class="w-full mb-0 max-w-[366px] object-cover"
-        src="/images/icons/feature-layers.svg"
-      />
-      <img
-        alt="scrol divider"
-        class="mb-0"
-      />
-      <div
-        class="flex flex-col flex-1 px-4"
-      >
-        <h1
-          class="text-xl my-5 font-bold"
-        >
-          Empowering Developers
-        </h1>
-        <p
-          class="text-base text-grey"
-        >
-          Boost developer productivity with Eclipse Temurin’s consistent, cross-platform builds. Focus on innovation while relying on a dependable, high-quality runtime trusted by millions worldwide.
-        </p>
-      </div>
-    </div>
-    <div
-      class="lg:block hidden open-animation-wrapper"
-    >
-      <div
-        class="max-w-[1048px] ui-virtual-wrapper mt-10 relative mx-auto px-4 sm:px-0"
+        class="mt-16 mb-8 flex md:h-[30em] justify-around lg:justify-between flex-wrap lg:flex-nowrap gap-6 xl:gap-8"
       >
         <div
-          class="progress absolute top-0 bottom-4 left-0 right-0"
+          class="max-w-xl w-full h-full"
         >
           <div
-            class="progress-fill w-full h-full"
-            style="transform: scaleY(1.0000);"
-          />
-        </div>
-        <div
-          class="absolute left-[50%] translate-x-[-6px] w-[16px] rounded-full bg-[#FF1464] h-[16px] top-0 bottom-4 right-0"
-          style="top: 100%;"
-        />
-        <div
-          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-1"
-        >
-          <div
-            class="w-[50%]"
+            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
           >
             <img
-              alt="Description"
-              class="max-w-[436px] mb-0"
-              src="/images/icons/feature-layers.svg"
+              alt="Eclipse Temurin™ logo"
+              class="w-[140px]"
+              src="/images/projects/temurin-project.svg"
             />
-          </div>
-          <div
-            class="w-[50%]"
-          >
             <div
-              class="max-w-[436px] ml-auto"
+              class="flex-col justify-center items-start gap-2"
             >
-              <h1
-                class="text-xl md-pt-6 my-5 font-bold"
+              <div
+                class="justify-start items-center gap-3 inline-flex pt-4"
               >
-                Performance & Reliability
-              </h1>
-              <p
-                class="text-base text-grey"
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+                <p
+                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
+                >
+                  Runtimes and Development Kits
+                </p>
+              </div>
+              <h2
+                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
               >
-                Run your enterprise applications with confidence using Eclipse Temurin, a secure, high-performance Java runtime rigorously tested for stability and optimized for seamless operation across diverse environments.
-              </p>
+                Eclipse Temurin™
+              </h2>
+              <a
+                href="/en/temurin"
+              >
+                <button
+                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
+                >
+                  Learn More
+                </button>
+              </a>
             </div>
           </div>
         </div>
         <div
-          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-2"
+          class="max-w-xl w-full h-full"
         >
           <div
-            class="w-[50%]"
+            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
           >
             <img
-              alt="Description"
-              class="max-w-[436px] mb-0"
-              src="/images/icons/feature-layers.svg"
+              alt="Eclipse AQAvit logo"
+              class="w-[140px]"
+              src="/images/projects/aqavit-project.svg"
             />
-          </div>
-          <div
-            class="w-[50%]"
-          >
             <div
-              class="max-w-[436px] ml-auto"
+              class="flex-col justify-center items-start gap-2"
             >
-              <h1
-                class="text-xl md-pt-6 my-5 font-bold"
+              <div
+                class="justify-start items-center gap-3 inline-flex pt-4"
               >
-                Cost-Effective Innovation
-              </h1>
-              <p
-                class="text-base text-grey"
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+                <p
+                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
+                >
+                  TCK Test Suite
+                </p>
+              </div>
+              <h2
+                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
               >
-                Adopt high-quality open source Java with no licensing fees. Reduce costs while benefiting from a robust ecosystem that ensures long-term sustainability and enterprise-ready runtime performance.
-              </p>
+                Eclipse AQAvit
+              </h2>
+              <a
+                href="/en/aqavit"
+              >
+                <button
+                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
+                >
+                  Learn More
+                </button>
+              </a>
             </div>
           </div>
         </div>
         <div
-          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-3"
+          class="max-w-xl w-full h-full"
         >
           <div
-            class="w-[50%]"
+            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
           >
             <img
-              alt="Description"
-              class="max-w-[436px] mb-0"
-              src="/images/icons/feature-layers.svg"
+              alt="Eclipse Mission Control logo"
+              class="w-[140px]"
+              src="/images/projects/mc-project.svg"
             />
-          </div>
-          <div
-            class="w-[50%]"
-          >
             <div
-              class="max-w-[436px] ml-auto"
+              class="flex-col justify-center items-start gap-2"
             >
-              <h1
-                class="text-xl md-pt-6 my-5 font-bold"
+              <div
+                class="justify-start items-center gap-3 inline-flex pt-4"
               >
-                Empowering Developers
-              </h1>
-              <p
-                class="text-base text-grey"
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    fill="#FF1464"
+                    height="8"
+                    rx="2"
+                    width="8"
+                    x="3"
+                    y="3"
+                  />
+                  <rect
+                    height="11"
+                    rx="3.5"
+                    stroke="#FF1464"
+                    stroke-opacity="0.25"
+                    stroke-width="3"
+                    width="11"
+                    x="1.5"
+                    y="1.5"
+                  />
+                </svg>
+                <p
+                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
+                >
+                  JDK Mission Control
+                </p>
+              </div>
+              <h2
+                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
               >
-                Boost developer productivity with Eclipse Temurin’s consistent, cross-platform builds. Focus on innovation while relying on a dependable, high-quality runtime trusted by millions worldwide.
-              </p>
+                Eclipse Mission Control
+              </h2>
+              <a
+                href="/en/jmc"
+              >
+                <button
+                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
+                >
+                  Learn More
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -308,9 +330,7 @@ exports[`What We Do page > renders correctly 1`] = `
     <p
       class="text-center mt-6 text-grey text-base font-normal leading-6"
     >
-      Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime 
-      <br />
-       binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+      Download your needed build
     </p>
     <div
       class="flex xl:flex-nowrap flex-wrap justify-center max-w-[1264px] w-full mx-auto gap-x-8 gap-y-4 py-16"
@@ -497,7 +517,7 @@ exports[`What We Do page > renders correctly 1`] = `
       <p
         class="text-xl text-white font-normal leadig-7 !mb-0 text-center"
       >
-        Eclipse Temurin offers high-performance
+        Get other platforms and versions
       </p>
       <a
         href="/en/temurin/releases"
@@ -510,234 +530,121 @@ exports[`What We Do page > renders correctly 1`] = `
       </a>
     </div>
   </section>
-  <div
-    class="bg-blue py-24 sm:py-28"
+  <section
+    class="py-16 md:py-32 mx-auto bg-[#14003C] max-w-[1264px] w-full lg:px-2   xl:px-0 px-8"
   >
     <div
-      class="mx-auto max-w-3xl md:max-w-7xl w-full px-6 xl:px-0"
+      class="text-center"
+    >
+      <h2
+        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+      >
+        Ways to support us
+      </h2>
+      <p
+        class="text-grey mt-6 font-normal text-base"
+      >
+        If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group
+      </p>
+    </div>
+    <div
+      class="mt-16  gap-4 md:gap-8  flex flex-wrap justify-center items-center "
     >
       <div
-        class="mx-auto max-w-4xl sm:text-center"
+        class=""
       >
-        <h2
-          class="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] mb-4"
+        <div
+          class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
         >
-          A short title about products
-        </h2>
+          <div
+            class="grow"
+          >
+            <h3
+              class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
+            >
+              How to contribute
+            </h3>
+            <p
+              class="mt-6 text-xl text-grey font-normal"
+            >
+              Contribute to our projects with technical and non-technical development
+            </p>
+          </div>
+          <a
+            href="/en/contributing/"
+          >
+            <button
+              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+            >
+              How to contribute
+            </button>
+          </a>
+        </div>
       </div>
       <div
-        class="flex justify-center items-center"
+        class=""
       >
-        <p
-          class="mt-6 max-w-2xl mb-0 text-base leading-6 text-grey text-center"
+        <div
+          class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
         >
-          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
-        </p>
+          <div
+            class="grow"
+          >
+            <h3
+              class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
+            >
+              Become a sustainer
+            </h3>
+            <p
+              class="mt-6 text-xl text-grey font-normal"
+            >
+              Join us in strengthening the future of Eclipse Temurin
+            </p>
+          </div>
+          <a
+            href="/en/sustainers"
+          >
+            <button
+              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
+            >
+              Become a sustainer
+            </button>
+          </a>
+        </div>
       </div>
       <div
-        class="mt-16 mb-8 flex md:h-[30em] justify-around lg:justify-between flex-wrap lg:flex-nowrap gap-6 xl:gap-8"
+        class=""
       >
         <div
-          class="max-w-xl w-full h-full"
+          class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
         >
           <div
-            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
+            class="grow"
           >
-            <img
-              alt="Eclipse Temurin™ logo"
-              class="w-[140px]"
-              src="/images/projects/temurin-project.svg"
-            />
-            <div
-              class="flex-col justify-center items-start gap-2"
+            <h3
+              class="text-white text-[30px] font-semibold  whitespace-nowrap  md:whitespace-normal leading-[120%] md:text-[40px]"
             >
-              <div
-                class="justify-start items-center gap-3 inline-flex pt-4"
-              >
-                <svg
-                  fill="none"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  width="14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    fill="#FF1464"
-                    height="8"
-                    rx="2"
-                    width="8"
-                    x="3"
-                    y="3"
-                  />
-                  <rect
-                    height="11"
-                    rx="3.5"
-                    stroke="#FF1464"
-                    stroke-opacity="0.25"
-                    stroke-width="3"
-                    width="11"
-                    x="1.5"
-                    y="1.5"
-                  />
-                </svg>
-                <p
-                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
-                >
-                  Overline
-                </p>
-              </div>
-              <h2
-                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
-              >
-                Eclipse Temurin™
-              </h2>
-              <a
-                href="/en/temurin"
-              >
-                <button
-                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
-                >
-                  Learn More
-                </button>
-              </a>
-            </div>
+              Become a member
+            </h3>
+            <p
+              class="mt-6 text-xl text-grey font-normal"
+            >
+              Join us shaping the future of Eclipse Adoptium
+            </p>
           </div>
-        </div>
-        <div
-          class="max-w-xl w-full h-full"
-        >
-          <div
-            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
+          <a
+            href="/en/join"
           >
-            <img
-              alt="Eclipse AQAvit logo"
-              class="w-[140px]"
-              src="/images/projects/aqavit-project.svg"
-            />
-            <div
-              class="flex-col justify-center items-start gap-2"
+            <button
+              class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "
             >
-              <div
-                class="justify-start items-center gap-3 inline-flex pt-4"
-              >
-                <svg
-                  fill="none"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  width="14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    fill="#FF1464"
-                    height="8"
-                    rx="2"
-                    width="8"
-                    x="3"
-                    y="3"
-                  />
-                  <rect
-                    height="11"
-                    rx="3.5"
-                    stroke="#FF1464"
-                    stroke-opacity="0.25"
-                    stroke-width="3"
-                    width="11"
-                    x="1.5"
-                    y="1.5"
-                  />
-                </svg>
-                <p
-                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
-                >
-                  Overline
-                </p>
-              </div>
-              <h2
-                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
-              >
-                Eclipse AQAvit
-              </h2>
-              <a
-                href="/en/aqavit"
-              >
-                <button
-                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
-                >
-                  Learn More
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="max-w-xl w-full h-full"
-        >
-          <div
-            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
-          >
-            <img
-              alt="Eclipse Mission Control logo"
-              class="w-[140px]"
-              src="/images/projects/mc-project.svg"
-            />
-            <div
-              class="flex-col justify-center items-start gap-2"
-            >
-              <div
-                class="justify-start items-center gap-3 inline-flex pt-4"
-              >
-                <svg
-                  fill="none"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  width="14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    fill="#FF1464"
-                    height="8"
-                    rx="2"
-                    width="8"
-                    x="3"
-                    y="3"
-                  />
-                  <rect
-                    height="11"
-                    rx="3.5"
-                    stroke="#FF1464"
-                    stroke-opacity="0.25"
-                    stroke-width="3"
-                    width="11"
-                    x="1.5"
-                    y="1.5"
-                  />
-                </svg>
-                <p
-                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
-                >
-                  Overline
-                </p>
-              </div>
-              <h2
-                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
-              >
-                Eclipse Mission Control
-              </h2>
-              <a
-                href="/en/jmc"
-              >
-                <button
-                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-whit text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
-                >
-                  Learn More
-                </button>
-              </a>
-            </div>
-          </div>
+              Become a member
+            </button>
+          </a>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <section
     class="relative  xl:px-0 px-6 md:py-32 py-16 undefined"
   >
@@ -767,7 +674,7 @@ exports[`What We Do page > renders correctly 1`] = `
       <span
         class=" text-lightgrey tab-button-text"
       >
-        Ready to get involved? Fill out our membership form and take the first step in shaping the future of Adoptium.
+        Join our Slack channel to discuss work and reach out to project maintainers.
       </span>
       <a
         href="/en/join"
@@ -1076,7 +983,7 @@ exports[`What We Do page > renders correctly 1`] = `
         <h3
           class="text-xl font-normal leading-7 text-grey mt-6 mb-8"
         >
-          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+          Follow the latest updates from the Eclipse Adoptium Project
         </h3>
         <a
           href="/en/news"

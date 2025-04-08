@@ -61,7 +61,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
         </p>
         <div
           aria-label="Release Notes"
-          class="MuiDataGrid-root MuiDataGrid-autoHeight MuiDataGrid-root--densityStandard MuiDataGrid-withBorderColor css-ot4nr4-MuiDataGrid-root"
+          class="MuiDataGrid-root MuiDataGrid-autoHeight MuiDataGrid-root--densityStandard MuiDataGrid-withBorderColor css-14rknrq-MuiDataGrid-root"
           style="--DataGrid-hasScrollX: 1; --DataGrid-hasScrollY: 0; --DataGrid-scrollbarSize: 0px; --DataGrid-rowWidth: 1300px; --DataGrid-columnsTotalWidth: 1300px; --DataGrid-leftPinnedWidth: 0px; --DataGrid-rightPinnedWidth: 0px; --DataGrid-headerHeight: 56px; --DataGrid-headersTotalHeight: 56px; --DataGrid-topContainerHeight: 56px; --DataGrid-bottomContainerHeight: 0px; --height: 52px;"
         >
           <div
@@ -121,7 +121,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
               style="overflow-x: hidden; overflow-y: hidden;"
             >
               <div
-                class="MuiDataGrid-topContainer MuiDataGrid-container--top css-b1wygl"
+                class="MuiDataGrid-topContainer MuiDataGrid-container--top css-9dbfce"
                 role="presentation"
               >
                 <div
@@ -196,7 +196,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                           <button
                             aria-expanded="false"
                             aria-haspopup="menu"
-                            aria-label="Priority column menu"
+                            aria-label="Menu"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                             data-mui-internal-clone-element="true"
                             id=":r1d:"
@@ -272,7 +272,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                           <button
                             aria-expanded="false"
                             aria-haspopup="menu"
-                            aria-label="Type column menu"
+                            aria-label="Menu"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                             data-mui-internal-clone-element="true"
                             id=":r1j:"
@@ -348,7 +348,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                           <button
                             aria-expanded="false"
                             aria-haspopup="menu"
-                            aria-label="Component column menu"
+                            aria-label="Menu"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                             data-mui-internal-clone-element="true"
                             id=":r1o:"
@@ -424,7 +424,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                           <button
                             aria-expanded="false"
                             aria-haspopup="menu"
-                            aria-label="Issue column menu"
+                            aria-label="Menu"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                             data-mui-internal-clone-element="true"
                             id=":r1t:"
@@ -500,7 +500,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                           <button
                             aria-expanded="false"
                             aria-haspopup="menu"
-                            aria-label="Title column menu"
+                            aria-label="Menu"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                             data-mui-internal-clone-element="true"
                             id=":r22:"
@@ -761,13 +761,13 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                 </div>
               </div>
               <div
-                class="MuiDataGrid-bottomContainer MuiDataGrid-container--bottom css-gzxaox"
+                class="MuiDataGrid-bottomContainer MuiDataGrid-container--bottom css-kkb6k7"
                 role="presentation"
               />
             </div>
             <div
               aria-hidden="true"
-              class="MuiDataGrid-scrollbar MuiDataGrid-scrollbar--horizontal css-2n9dey"
+              class="MuiDataGrid-scrollbar MuiDataGrid-scrollbar--horizontal css-16z8vpz"
               tabindex="-1"
             >
               <div
@@ -914,7 +914,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
         </p>
         <div
           aria-label="Release Notes"
-          class="MuiDataGrid-root MuiDataGrid-autoHeight MuiDataGrid-root--densityStandard MuiDataGrid-withBorderColor css-ot4nr4-MuiDataGrid-root"
+          class="MuiDataGrid-root MuiDataGrid-autoHeight MuiDataGrid-root--densityStandard MuiDataGrid-withBorderColor css-14rknrq-MuiDataGrid-root"
           style="--DataGrid-hasScrollX: 1; --DataGrid-hasScrollY: 0; --DataGrid-scrollbarSize: 0px; --DataGrid-rowWidth: 1300px; --DataGrid-columnsTotalWidth: 1300px; --DataGrid-leftPinnedWidth: 0px; --DataGrid-rightPinnedWidth: 0px; --DataGrid-headerHeight: 56px; --DataGrid-headersTotalHeight: 56px; --DataGrid-topContainerHeight: 56px; --DataGrid-bottomContainerHeight: 0px; --height: 52px;"
         >
           <div
@@ -974,7 +974,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
               style="overflow-x: hidden; overflow-y: hidden;"
             >
               <div
-                class="MuiDataGrid-topContainer MuiDataGrid-container--top css-b1wygl"
+                class="MuiDataGrid-topContainer MuiDataGrid-container--top css-9dbfce"
                 role="presentation"
               >
                 <div
@@ -1049,7 +1049,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                           <button
                             aria-expanded="false"
                             aria-haspopup="menu"
-                            aria-label="Priority column menu"
+                            aria-label="Menu"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                             data-mui-internal-clone-element="true"
                             id=":ra:"
@@ -1125,7 +1125,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                           <button
                             aria-expanded="false"
                             aria-haspopup="menu"
-                            aria-label="Type column menu"
+                            aria-label="Menu"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                             data-mui-internal-clone-element="true"
                             id=":rg:"
@@ -1201,7 +1201,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                           <button
                             aria-expanded="false"
                             aria-haspopup="menu"
-                            aria-label="Component column menu"
+                            aria-label="Menu"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                             data-mui-internal-clone-element="true"
                             id=":rl:"
@@ -1277,7 +1277,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                           <button
                             aria-expanded="false"
                             aria-haspopup="menu"
-                            aria-label="Issue column menu"
+                            aria-label="Menu"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                             data-mui-internal-clone-element="true"
                             id=":rq:"
@@ -1353,7 +1353,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                           <button
                             aria-expanded="false"
                             aria-haspopup="menu"
-                            aria-label="Title column menu"
+                            aria-label="Menu"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                             data-mui-internal-clone-element="true"
                             id=":rv:"
@@ -1614,13 +1614,13 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                 </div>
               </div>
               <div
-                class="MuiDataGrid-bottomContainer MuiDataGrid-container--bottom css-gzxaox"
+                class="MuiDataGrid-bottomContainer MuiDataGrid-container--bottom css-kkb6k7"
                 role="presentation"
               />
             </div>
             <div
               aria-hidden="true"
-              class="MuiDataGrid-scrollbar MuiDataGrid-scrollbar--horizontal css-2n9dey"
+              class="MuiDataGrid-scrollbar MuiDataGrid-scrollbar--horizontal css-16z8vpz"
               tabindex="-1"
             >
               <div

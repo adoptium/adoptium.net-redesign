@@ -126,7 +126,7 @@ const AsciidocTemplate = ({ data, pageContext }) => {
         description="Join our Slack channel to discuss work and reach out to project maintainers."
         linkTo="/slack" 
       />
-      <FAQ />
+      {/* <FAQ /> */}
     </Layout>
   )
 }

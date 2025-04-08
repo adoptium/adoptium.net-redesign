@@ -58,7 +58,7 @@ const navigation: NavItem[] = [
       { name: "Release Notes", href: "/temurin/release-notes" },
       { name: "Installation Guide", href: "/installation" },
       { name: "Documentation", href: "/docs" },
-      { name: "Resource Directory", href: "" },
+      // { name: "Resource Directory", href: "" },
       { name: "FAQs", href: "/docs/faq" },
       { name: "Brand & Promotion", href: "/docs/logo-styleguide" },
     ],
@@ -66,10 +66,10 @@ const navigation: NavItem[] = [
   {
     name: "Community",
     children: [
-      { name: "Our Community", href: "" },
+      // { name: "Our Community", href: "" },
       { name: "Support", href: "/support" },
       { name: "News & Updates", href: "/news" },
-      { name: "Events", href: "" },
+      { name: "Events", href: "/events" },
     ],
   },
 ]

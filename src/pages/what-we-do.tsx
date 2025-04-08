@@ -50,7 +50,7 @@ const WhatWeDo = () => {
         }
       />
       <WGProjects />
-      <LatestReleases />
+      {/* <LatestReleases /> */}
       <WaysToSupport />
       <ContactUs
         title="Connect with the community"

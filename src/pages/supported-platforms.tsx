@@ -19,7 +19,7 @@ const SupportedPlatforms = () => {
           className={"mx-auto max-w-[860px] px-2 w-full"}
         />
         <PlatformMatrix />
-        <ReleaseRoadmap />
+        {/* <ReleaseRoadmap /> */}
         <ContactUs
           title="Connect with the community"
           buttontitle="Learn More"

@@ -36,7 +36,7 @@ const ReleasesPage = () => {
         openModalWithChecksum={openModalWithChecksum}
       />
       <DownloadMethods />
-      <FAQ className={"!py-16 md:!py-24"} />
+      {/* <FAQ className={"!py-16 md:!py-24"} /> */}
       <ChecksumModal
         open={modalOpen}
         setOpen={setModalOpen}

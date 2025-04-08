@@ -26,8 +26,8 @@ const Index = ({ data }) => {
         linkText="Contact Us"
         link="/contact-us"
       />
-      <LatestReleases />
-      <ReleaseRoadmap />
+      {/* <LatestReleases /> */}
+      {/* <ReleaseRoadmap /> */}
       <ContactUs
         title="Connect with the community"
         buttontitle="Learn More"

@@ -1,14 +1,9 @@
 import React from "react"
 import Slider from "react-slick"
 
-import {
-  AdobeIcon,
-  AsansIcon,
-  GithubIcon,
-  GoogleIcon,
-  SlackIcon,
-  TogglIcon,
-} from "../Common/Icon"
+import Adopters from "../../json/adopters.json"
+
+const featuredAdopters = Adopters.filter(adopter => adopter.featured)
 
 const LogoCarousel = () => {
   const settings = {
@@ -51,27 +46,19 @@ const LogoCarousel = () => {
   return (
     <div className=" max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8  ">
       <h2 className="text-center text-xl font-normal leading-7 text-grey">
-        Temurin has been adopted by over 30 companies
+        Temurin is trusted by millions of developers
       </h2>
       <Slider {...settings} className="mt-6">
-        <span className="px-4">
-          <AdobeIcon />
-        </span>
-        <span className="px-4">
-          <GithubIcon />
-        </span>
-        <span className="px-4">
-          <AsansIcon />
-        </span>
-        <span className="px-4">
-          <GoogleIcon />
-        </span>
-        <span className="px-4">
-          <SlackIcon />
-        </span>
-        <span className="px-4">
-          <TogglIcon />
-        </span>
+        {featuredAdopters.map((adopter, index) => (
+          <span key={index} className="px-4">
+            <img
+              src={`/images/${adopter.logo_white}`}
+              alt={adopter.name}
+              className="h-12 lg:h-16 w-auto object-contain mx-auto"
+              style={{ padding: adopter.logoPadding || 0 }}
+            />
+          </span>
+        ))}
       </Slider>
     </div>
   )

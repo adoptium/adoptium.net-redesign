@@ -53,6 +53,17 @@ if temurin_project is not None:
                 os.makedirs("static/images/adopters/")
             open("static/images/adopters/" + adopter["logo"], "wb").write(logo.content)
 
+            # optionally download logo_white if it exists
+            if "logo_white" in adopter and adopter["logo_white"] != "":
+                logo_white = requests.get(
+                    "https://api.eclipse.org/adopters/assets/images/adopters/"
+                    + adopter["logo_white"]
+                )
+                open("static/images/adopters/" + adopter["logo_white"], "wb").write(
+                    logo_white.content
+                )
+                new_adopter["logo_white"] = "adopters/" + adopter["logo_white"]
+
     # Write the updated list of adopters to src/json/adopters.json
     with open("src/json/adopters.json", "w") as f:
         # Sort the list of adopters alphabetically

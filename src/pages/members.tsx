@@ -96,6 +96,13 @@ const Members = () => {
       <ContactUs
         title="Speak to our team today"
         buttontitle="Become a member"
+        linkTo="/slack" 
+      />
+      <ContactUs
+        title="Connect with the community"
+        buttontitle="Learn More"
+        description="Join our Slack channel to discuss work and reach out to project maintainers."
+        linkTo="/slack" 
       />
     </Layout>
   )

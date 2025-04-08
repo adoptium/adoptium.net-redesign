@@ -10,6 +10,9 @@
       "logo": {
         "type": "string"
       },
+      "logo_white": {
+        "type": "string"
+      },
       "logoPadding": {
         "type": "string"
       },
@@ -27,6 +30,9 @@
           "sponsor",
           "infra"
         ]
+      },
+      "featured": {
+        "type": "boolean"
       }
     },
     "required": ["name", "logo", "url", "tier"],

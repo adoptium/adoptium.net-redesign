@@ -29,11 +29,7 @@ const ButtonContent = ({ results }) => {
     {
       title: "Supported Platforms",
       link: "/supported-platforms"
-    },
-    {
-      title: "Terms of use",
-      link: "#"
-    },
+    }
   ]
 
   const CardData: CardData[] = []

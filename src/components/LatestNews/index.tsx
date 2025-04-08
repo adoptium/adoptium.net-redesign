@@ -57,9 +57,7 @@ const LatestNews = () => {
               Latest news and updates
             </h2>
             <h3 className="text-xl font-normal leading-7 text-grey mt-6 mb-8">
-              Eclipse Temurin offers high-performance, cross-platform,
-              open-source Java runtime binaries that are enterprise-ready and
-              Java SE TCK-tested for general use in the Java ecosystem.
+              Follow the latest updates from the Eclipse Adoptium Project
             </h3>
             <Link to="/news">
               <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block">

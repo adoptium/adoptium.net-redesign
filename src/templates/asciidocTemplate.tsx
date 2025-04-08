@@ -121,7 +121,7 @@ const AsciidocTemplate = ({ data, pageContext }) => {
         </div>
       </section>
       <ContactUs title="Connect with the community" buttontitle="Learn More" />
-      <FAQ />
+      {/* <FAQ /> */}
     </Layout>
   )
 }

@@ -27,7 +27,7 @@ const Index = ({ data }) => {
       <WGProjects />
       <Testimonials />
       <LatestNews />
-      <FAQ />
+      {/* <FAQ /> */}
       <Contributors />
     </Layout>
   )

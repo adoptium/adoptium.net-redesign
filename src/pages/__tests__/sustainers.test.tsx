@@ -12,7 +12,7 @@ vi.mock("../../components/Logos", () => {
   }
 })
 
-describe("Sponsors page", () => {
+describe("Sustainers page", () => {
   it("renders correctly", () => {
     const { container } = render(<Sustainers />)
     expect(container).toMatchSnapshot()
@@ -28,6 +28,7 @@ describe("Sponsors page", () => {
   it("has no accessibility violations", async () => {
     const { container } = render(<Sustainers />)
     const results = await axe(container)
+    // @ts-ignore
     expect(results).toHaveNoViolations()
   })
 })

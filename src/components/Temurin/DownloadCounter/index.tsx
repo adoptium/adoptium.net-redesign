@@ -68,9 +68,9 @@ const DownloadCounter = () => {
           <p className="text-[16px] font-normal leading-6 text-white mb-0">
             Total Downloads/Docker pulls ever
           </p>
-          <button className="bg-transparent border-2 border-pink-500/0 text-white font-bold w-[148px] h-[48px] rounded-2xl gradient-border">
+          {/* <button className="bg-transparent border-2 border-pink-500/0 text-white font-bold w-[148px] h-[48px] rounded-2xl gradient-border">
             Learn More
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

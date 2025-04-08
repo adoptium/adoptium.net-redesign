@@ -15,32 +15,38 @@ const Features = () => {
     {
       heading: "Secure Supply Chain",
       content:
-        "Built with robust security standards, ensuring a trusted, transparent, and vulnerability-free supply chain."
+        "Built with robust security standards, ensuring a trusted, transparent, and vulnerability-free supply chain.",
+      img: "/images/icons/lock.svg" 
     },
     {
       heading: "AQAvit Verification",
       content:
-        "Thoroughly tested using AQAvit to guarantee performance, reliability, and security in every build."
+        "Thoroughly tested using AQAvit to guarantee performance, reliability, and security in every build.",
+      img: "/images/initiatives/testing.svg"
     },
     {
       heading: "Performance Optimization",
       content:
-        "Engineered for optimal performance, delivering speed, efficiency, and stability across diverse environments."
+        "Engineered for optimal performance, delivering speed, efficiency, and stability across diverse environments.",
+      img: "/images/initiatives/deploy.svg"
     },
     {
       heading: "Cross-Platform Consistency",
       content:
-        "Consistent behavior and builds across all major operating systems and hardware architectures."
+        "Consistent behavior and builds across all major operating systems and hardware architectures.",
+      img: "/images/initiatives/release.svg"
     },
     {
       heading: "Community-Driven Development",
       content:
-        "Eclipse Adoptium projects are shaped by a vibrant, global community that is continuously improving and innovating."
+        "Eclipse Adoptium projects are shaped by a vibrant, global community that is continuously improving and innovating.",
+      img: "/images/initiatives/community.svg"
     },
     {
       heading: "Enterprise-Ready Support",
       content:
-        "Backed by enterprise-grade commercial supporters, ensuring seamless integration, scalability, and long-term sustainability."
+        "Backed by enterprise-grade commercial supporters, ensuring seamless integration, scalability, and long-term sustainability.",
+      img: "/images/initiatives/security.svg"
     }
   ]
 
@@ -125,7 +131,7 @@ const Features = () => {
                 key={index}
               >
                 <span>
-                  <img src="/images/icons/lock.svg" alt="lock" />
+                  <img src={feature.img} alt={feature.heading} />
                 </span>
                 <div className=" space-y-6 mt-[106px]">
                   <h2 className="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4">

@@ -392,11 +392,15 @@ exports[`Marketplace page > renders correctly 1`] = `
             The AQAvit open source test suite (Adoptium Quality Assurance) can be found here. There is also a blog post and brief presentation that explains what testing is run and how it fits into the overall delivery pipeline.
           </p>
         </div>
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[146px] h-[48px] rounded-[80px] gradient-border mt-6"
+        <a
+          href="/en/aqavit"
         >
-          Learn More
-        </button>
+          <button
+            class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[146px] h-[48px] rounded-[80px] gradient-border mt-6"
+          >
+            Learn More
+          </button>
+        </a>
       </div>
     </div>
   </div>

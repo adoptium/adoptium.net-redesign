@@ -229,88 +229,256 @@ exports[`Sustainers page > renders correctly 1`] = `
             class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 w-full item-center mt-10 p-4 mx-auto max-w-[1180px]"
           >
             <div
-              class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
+              class="relative max-w-[382px] w-full"
+              id="card-container-0"
             >
-              <img
-                alt="security"
-                class="mb-0"
-                src="/images/initiatives/security.svg"
+              <input
+                class="peer hidden"
+                id="toggle-0"
+                type="checkbox"
               />
-              <h3
-                class="text-[26px]"
+              <div
+                class="relative group h-[212px] w-full border-[0.5px] hover:border-1 border-[#c4bfce] rounded-[27px] cursor-pointer overflow-visible lg:peer-checked:border-1 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none"
+                role="button"
               >
-                Enhanced Security
-              </h3>
+                <label
+                  for="toggle-0"
+                >
+                  <div
+                    class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer"
+                  >
+                    <img
+                      alt="security"
+                      class="mb-0"
+                      src="/images/initiatives/security.svg"
+                    />
+                    <h3
+                      class="text-[26px] text-center px-4"
+                    >
+                      Enhanced Security
+                    </h3>
+                  </div>
+                </label>
+              </div>
+              <div
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+              >
+                <p
+                  class="text-white text-sm text-center leading-relaxed"
+                >
+                  Contribute to rigorous security practices, including regular audits and vulnerability management. Your support ensures the continuation of our Secure Development efforts, encompassing SBOM, reproducible builds, SLSA, OpenChain Conformance, security audits, and vulnerability reports.
+                </p>
+              </div>
             </div>
             <div
-              class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
+              class="relative max-w-[382px] w-full"
+              id="card-container-1"
             >
-              <img
-                alt="release"
-                class="mb-0"
-                src="/images/initiatives/release.svg"
+              <input
+                class="peer hidden"
+                id="toggle-1"
+                type="checkbox"
               />
-              <h3
-                class="text-[26px]"
+              <div
+                class="relative group h-[212px] w-full border-[0.5px] hover:border-1 border-[#c4bfce] rounded-[27px] cursor-pointer overflow-visible lg:peer-checked:border-1 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none"
+                role="button"
               >
-                Faster Release Cycles
-              </h3>
+                <label
+                  for="toggle-1"
+                >
+                  <div
+                    class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer"
+                  >
+                    <img
+                      alt="security"
+                      class="mb-0"
+                      src="/images/initiatives/release.svg"
+                    />
+                    <h3
+                      class="text-[26px] text-center px-4"
+                    >
+                      Faster Release Cycles
+                    </h3>
+                  </div>
+                </label>
+              </div>
+              <div
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+              >
+                <p
+                  class="text-white text-sm text-center leading-relaxed"
+                >
+                  Ensure your Java environments stay up-to-date with the latest advancements by sponsoring additional infrastructure services. This support will enable us to publish feature and CPU releases within our ambitious delivery targets, keeping your systems at the forefront of innovation.
+                </p>
+              </div>
             </div>
             <div
-              class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
+              class="relative max-w-[382px] w-full"
+              id="card-container-2"
             >
-              <img
-                alt="deploy"
-                class="mb-0"
-                src="/images/initiatives/deploy.svg"
+              <input
+                class="peer hidden"
+                id="toggle-2"
+                type="checkbox"
               />
-              <h3
-                class="text-[26px]"
+              <div
+                class="relative group h-[212px] w-full border-[0.5px] hover:border-1 border-[#c4bfce] rounded-[27px] cursor-pointer overflow-visible lg:peer-checked:border-1 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none"
+                role="button"
               >
-                Ready-to-deploy Builds
-              </h3>
+                <label
+                  for="toggle-2"
+                >
+                  <div
+                    class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer"
+                  >
+                    <img
+                      alt="security"
+                      class="mb-0"
+                      src="/images/initiatives/deploy.svg"
+                    />
+                    <h3
+                      class="text-[26px] text-center px-4"
+                    >
+                      Ready-to-deploy Builds
+                    </h3>
+                  </div>
+                </label>
+              </div>
+              <div
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+              >
+                <p
+                  class="text-white text-sm text-center leading-relaxed"
+                >
+                  Ensure access to Java versions tailored to your specific architecture and operating system needs. Get the precise build for your software services and save money by avoiding the costs of creating your own builds. Your funding allows us to deliver across a broad range of platforms and architectures
+                </p>
+              </div>
             </div>
             <div
-              class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
+              class="relative max-w-[382px] w-full"
+              id="card-container-3"
             >
-              <img
-                alt="innovation"
-                class="mb-0"
-                src="/images/initiatives/innovation.svg"
+              <input
+                class="peer hidden"
+                id="toggle-3"
+                type="checkbox"
               />
-              <h3
-                class="text-[26px]"
+              <div
+                class="relative group h-[212px] w-full border-[0.5px] hover:border-1 border-[#c4bfce] rounded-[27px] cursor-pointer overflow-visible lg:peer-checked:border-1 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none"
+                role="button"
               >
-                Sustained Innovation
-              </h3>
+                <label
+                  for="toggle-3"
+                >
+                  <div
+                    class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer"
+                  >
+                    <img
+                      alt="security"
+                      class="mb-0"
+                      src="/images/initiatives/innovation.svg"
+                    />
+                    <h3
+                      class="text-[26px] text-center px-4"
+                    >
+                      Sustained Innovation
+                    </h3>
+                  </div>
+                </label>
+              </div>
+              <div
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+              >
+                <p
+                  class="text-white text-sm text-center leading-relaxed"
+                >
+                  Support the continuous improvement of Temurin and other Adoptium projects. We are leaders in Secure Development, Quality Assurance, Migration Tools, and many other areas where we have been developing bleeding-edge, innovative solutions. Your funding allows us to continue to develop improvements that benefit the entire Java ecosystem.
+                </p>
+              </div>
             </div>
             <div
-              class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
+              class="relative max-w-[382px] w-full"
+              id="card-container-4"
             >
-              <img
-                alt="testing"
-                class="mb-0"
-                src="/images/initiatives/testing.svg"
+              <input
+                class="peer hidden"
+                id="toggle-4"
+                type="checkbox"
               />
-              <h3
-                class="text-[26px]"
+              <div
+                class="relative group h-[212px] w-full border-[0.5px] hover:border-1 border-[#c4bfce] rounded-[27px] cursor-pointer overflow-visible lg:peer-checked:border-1 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none"
+                role="button"
               >
-                Quality Testing
-              </h3>
+                <label
+                  for="toggle-4"
+                >
+                  <div
+                    class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer"
+                  >
+                    <img
+                      alt="security"
+                      class="mb-0"
+                      src="/images/initiatives/testing.svg"
+                    />
+                    <h3
+                      class="text-[26px] text-center px-4"
+                    >
+                      Quality Testing
+                    </h3>
+                  </div>
+                </label>
+              </div>
+              <div
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+              >
+                <p
+                  class="text-white text-sm text-center leading-relaxed"
+                >
+                  Help us maintain and optimize our testing infrastructure across all necessary platforms and versions, ensuring robust and reliable releases. Your funding allows us to assess and include tests that your organization cares about and proactively discover and mitigate defects before they land in your domain.
+                </p>
+              </div>
             </div>
             <div
-              class="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6"
+              class="relative max-w-[382px] w-full"
+              id="card-container-5"
             >
-              <img
-                alt="community"
-                class="mb-0"
-                src="/images/initiatives/community.svg"
+              <input
+                class="peer hidden"
+                id="toggle-5"
+                type="checkbox"
               />
-              <h3
-                class="text-[26px]"
+              <div
+                class="relative group h-[212px] w-full border-[0.5px] hover:border-1 border-[#c4bfce] rounded-[27px] cursor-pointer overflow-visible lg:peer-checked:border-1 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none"
+                role="button"
               >
-                Community Development
-              </h3>
+                <label
+                  for="toggle-5"
+                >
+                  <div
+                    class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer"
+                  >
+                    <img
+                      alt="security"
+                      class="mb-0"
+                      src="/images/initiatives/community.svg"
+                    />
+                    <h3
+                      class="text-[26px] text-center px-4"
+                    >
+                      Community Development and Engagement
+                    </h3>
+                  </div>
+                </label>
+              </div>
+              <div
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+              >
+                <p
+                  class="text-white text-sm text-center leading-relaxed"
+                >
+                  Support the growth of a diverse and vibrant Java community. Your sponsorship helps maintain and enhance Adoptium projects, ensuring a stable, scalable, and interoperable Java ecosystem. Additionally, you will have the opportunity to support events and marketing initiatives and actively participating in community activities, spreading awareness and fostering collaboration.
+                </p>
+              </div>
             </div>
           </div>
           <p
@@ -346,7 +514,7 @@ exports[`Sustainers page > renders correctly 1`] = `
             </p>
             <div
               class="involveme_embed w-full md:w-1/2 mb-5 md:mb-10"
-              data-project="temurin-v1-1"
+              data-project="temurin-calculator"
             />
             <p
               class="text-[#c4bfce] max-w-[900px] text-center"

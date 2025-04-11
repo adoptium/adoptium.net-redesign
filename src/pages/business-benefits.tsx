@@ -41,13 +41,7 @@ const BusinessBenefits = () => {
       <ContactUs
         title="Contact us about how Temurin can help your business"
         buttontitle="Contact Us"
-        linkTo="/slack" 
-      />
-      <ContactUs
-        title="Connect with the community"
-        buttontitle="Learn More"
-        description="Join our Slack channel to discuss work and reach out to project maintainers."
-        linkTo="/slack" 
+        linkTo="/join" 
       />
     </Layout>
   )

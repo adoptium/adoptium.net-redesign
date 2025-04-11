@@ -120,7 +120,12 @@ const AsciidocTemplate = ({ data, pageContext }) => {
           <div className="col-lg-3 hide-on-mobile"></div>
         </div>
       </section>
-      <ContactUs title="Connect with the community" buttontitle="Learn More" />
+      <ContactUs
+        title="Connect with the community"
+        buttontitle="Learn More"
+        description="Join our Slack channel to discuss work and reach out to project maintainers."
+        linkTo="/slack" 
+      />
       {/* <FAQ /> */}
     </Layout>
   )

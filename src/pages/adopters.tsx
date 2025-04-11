@@ -24,7 +24,7 @@ const Adopters = () => {
         description=""
       />
       <BecomeAdopter />
-      <ContactUs title="Speak to our team today" buttontitle="Contact Us" />
+      <ContactUs title="Speak to our team today" buttontitle="Contact Us" linkTo="/join" />
     </Layout>
   )
 }

@@ -22,9 +22,8 @@ const Index = ({ data }) => {
       <InstallationGuideCard />
       <ImageText
         title="Want to discuss how Temurin can impact your company?"
-        description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
         linkText="Contact Us"
-        link="/contact-us"
+        link="/slack"
       />
       {/* <LatestReleases /> */}
       {/* <ReleaseRoadmap /> */}

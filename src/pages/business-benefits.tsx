@@ -41,6 +41,7 @@ const BusinessBenefits = () => {
       <ContactUs
         title="Contact us about how Temurin can help your business"
         buttontitle="Contact Us"
+        linkTo="/join" 
       />
     </Layout>
   )

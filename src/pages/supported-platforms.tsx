@@ -21,9 +21,11 @@ const SupportedPlatforms = () => {
         <PlatformMatrix />
         {/* <ReleaseRoadmap /> */}
         <ContactUs
-          title={"Connect with the community"}
-          className={"md:py-28 py-12"}
+          title="Connect with the community"
           buttontitle="Learn More"
+          description="Join our Slack channel to discuss work and reach out to project maintainers."
+          linkTo="/slack" 
+          className={"md:py-28 py-12"}
         />
         <div className="py-10">
           <DocumentationGrid />

@@ -96,6 +96,7 @@ const Members = () => {
       <ContactUs
         title="Speak to our team today"
         buttontitle="Become a member"
+        linkTo="/join" 
       />
     </Layout>
   )

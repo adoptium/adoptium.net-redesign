@@ -982,11 +982,9 @@ exports[`Temurin Index page > renders correctly 1`] = `
       </h2>
       <p
         class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
-      >
-        Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
-      </p>
+      />
       <a
-        href="/en/contact-us"
+        href="/en/slack"
       >
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
@@ -996,7 +994,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
          
       </a>
       <a
-        href="/en/contact-us"
+        href="/en/slack"
       >
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"

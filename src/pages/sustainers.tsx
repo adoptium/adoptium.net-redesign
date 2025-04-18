@@ -298,8 +298,8 @@ const Sponsors = () => {
                       </div>
                     </label>
                   </div>
-                  <div className="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4">
-                    <p className="text-white text-sm text-center leading-relaxed">
+                  <div className="hidden lg:peer-checked:block absolute backdrop-blur-3xl h-[236px] top-full left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4">
+                    <p className="text-white text-sm px-5 text-center leading-relaxed">
                       {description}
                     </p>
                   </div>

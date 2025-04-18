@@ -30,7 +30,7 @@ const InstallationGuideCard = () => {
           "Contributions from users like you help fund critical operations of the Adoptium working group. All money contributed through the Eclipse Foundation ensures the survivability, continuity, and responsiveness of Adoptium projects."
         }
       />
-      <Link to={"/support-us/"}>
+      <Link to={"/sustainers/"}>
         <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border">
           <Trans
             i18Key="temurin.installation.guide.card.button"

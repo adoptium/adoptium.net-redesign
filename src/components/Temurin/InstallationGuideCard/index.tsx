@@ -1,5 +1,8 @@
 import React from "react"
 import CommonHeading from "../../Common/CommonHeading"
+import ContactUs from "../../ContactUs"
+import { Link } from "../../Link"
+import { Trans } from "gatsby-plugin-react-i18next"
 
 const InstallationGuideCard = () => {
   const carddata = [
@@ -19,14 +22,22 @@ const InstallationGuideCard = () => {
     },
   ]
   return (
-    <section className="pb-16 pt-0 md:py-32 mx-auto max-w-[832px] w-full lg:px-2   xl:px-0 px-6">
+    <section className="pb-16 pt-0 md:py-32 mx-auto max-w-[832px] w-full lg:px-2 flex flex-col items-center justify-center  xl:px-0 px-6">
       <CommonHeading
         className="text-center"
-        title={"Lorem ipsum dolor sit amet"}
+        title={"Become a Sponsor"}
         description={
-          "If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group."
+          "Contributions from users like you help fund critical operations of the Adoptium working group. All money contributed through the Eclipse Foundation ensures the survivability, continuity, and responsiveness of Adoptium projects."
         }
       />
+      <Link to={"/support-us/"}>
+        <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border">
+          <Trans
+            i18Key="temurin.installation.guide.card.button"
+            defaults="Learn More"
+          />
+        </button>
+      </Link>
       <div className="mt-16  gap-4 md:gap-8  flex flex-wrap justify-center items-center">
         {carddata.map((data, index) => (
           <div

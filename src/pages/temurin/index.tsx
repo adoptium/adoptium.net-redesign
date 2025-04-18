@@ -21,7 +21,8 @@ const Index = ({ data }) => {
       <PowerOfTemurin />
       <InstallationGuideCard />
       <ImageText
-        title="Want to discuss how Temurin can impact your company?"
+        title="Want to discuss how Temurin can positively impact your company?"
+        description="Whether you are looking for opportunities for cost-savings, or a selection of choices for commercial support, or if you want to bolster security around your software supply chain, we would love to discuss how using Temurin brings a variety of benefits to your enterprise."
         linkText="Contact Us"
         link="/slack"
       />

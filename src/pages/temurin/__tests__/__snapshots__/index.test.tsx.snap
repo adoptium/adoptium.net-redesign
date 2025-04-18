@@ -893,7 +893,7 @@ exports[`Temurin Index page > renders correctly 1`] = `
     </div>
   </div>
   <section
-    class="pb-16 pt-0 md:py-32 mx-auto max-w-[832px] w-full lg:px-2   xl:px-0 px-6"
+    class="pb-16 pt-0 md:py-32 mx-auto max-w-[832px] w-full lg:px-2 flex flex-col items-center justify-center  xl:px-0 px-6"
   >
     <div
       class="text-center"
@@ -901,14 +901,23 @@ exports[`Temurin Index page > renders correctly 1`] = `
       <h2
         class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
       >
-        Lorem ipsum dolor sit amet
+        Become a Sponsor
       </h2>
       <p
         class="text-grey mt-6 font-normal text-base"
       >
-        If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group.
+        Contributions from users like you help fund critical operations of the Adoptium working group. All money contributed through the Eclipse Foundation ensures the survivability, continuity, and responsiveness of Adoptium projects.
       </p>
     </div>
+    <a
+      href="/en/sustainers/"
+    >
+      <button
+        class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+      >
+        Text
+      </button>
+    </a>
     <div
       class="mt-16  gap-4 md:gap-8  flex flex-wrap justify-center items-center"
     >
@@ -978,11 +987,13 @@ exports[`Temurin Index page > renders correctly 1`] = `
       <h2
         class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
       >
-        Want to discuss how Temurin can impact your company?
+        Want to discuss how Temurin can positively impact your company?
       </h2>
       <p
         class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
-      />
+      >
+        Whether you are looking for opportunities for cost-savings, or a selection of choices for commercial support, or if you want to bolster security around your software supply chain, we would love to discuss how using Temurin brings a variety of benefits to your enterprise.
+      </p>
       <a
         href="/en/slack"
       >

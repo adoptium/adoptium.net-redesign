@@ -38,13 +38,13 @@ const NotFoundPage = () => (
               <h1>Sorry, we couldn’t find this page</h1>
             </div>
           </div>
-          <div
+          {/* <div
             className="self-stretch text-center text-white text-[20px] font-normal leading-[140%]"
           >
             Bloggosfär vithetsnorm jeren. Frimester ev kompetensutvisning.
             Förarstödjare rejinat eftersom wiki. Sore kronde, virtuell våldtäkt.
             Preras poneligen sprängbälte.
-          </div>
+          </div> */}
           <Link to="/">
             <button className="bg-primary text-white tab-button-text px-6 py-4 rounded-[80px] mt-3">
               {" "}

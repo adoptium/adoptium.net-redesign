@@ -261,10 +261,10 @@ exports[`Sustainers page > renders correctly 1`] = `
                 </label>
               </div>
               <div
-                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl h-[236px] top-full left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
               >
                 <p
-                  class="text-white text-sm text-center leading-relaxed"
+                  class="text-white text-sm px-5 text-center leading-relaxed"
                 >
                   Contribute to rigorous security practices, including regular audits and vulnerability management. Your support ensures the continuation of our Secure Development efforts, encompassing SBOM, reproducible builds, SLSA, OpenChain Conformance, security audits, and vulnerability reports.
                 </p>
@@ -303,10 +303,10 @@ exports[`Sustainers page > renders correctly 1`] = `
                 </label>
               </div>
               <div
-                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl h-[236px] top-full left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
               >
                 <p
-                  class="text-white text-sm text-center leading-relaxed"
+                  class="text-white text-sm px-5 text-center leading-relaxed"
                 >
                   Ensure your Java environments stay up-to-date with the latest advancements by sponsoring additional infrastructure services. This support will enable us to publish feature and CPU releases within our ambitious delivery targets, keeping your systems at the forefront of innovation.
                 </p>
@@ -345,10 +345,10 @@ exports[`Sustainers page > renders correctly 1`] = `
                 </label>
               </div>
               <div
-                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl h-[236px] top-full left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
               >
                 <p
-                  class="text-white text-sm text-center leading-relaxed"
+                  class="text-white text-sm px-5 text-center leading-relaxed"
                 >
                   Ensure access to Java versions tailored to your specific architecture and operating system needs. Get the precise build for your software services and save money by avoiding the costs of creating your own builds. Your funding allows us to deliver across a broad range of platforms and architectures
                 </p>
@@ -387,10 +387,10 @@ exports[`Sustainers page > renders correctly 1`] = `
                 </label>
               </div>
               <div
-                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl h-[236px] top-full left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
               >
                 <p
-                  class="text-white text-sm text-center leading-relaxed"
+                  class="text-white text-sm px-5 text-center leading-relaxed"
                 >
                   Support the continuous improvement of Temurin and other Adoptium projects. We are leaders in Secure Development, Quality Assurance, Migration Tools, and many other areas where we have been developing bleeding-edge, innovative solutions. Your funding allows us to continue to develop improvements that benefit the entire Java ecosystem.
                 </p>
@@ -429,10 +429,10 @@ exports[`Sustainers page > renders correctly 1`] = `
                 </label>
               </div>
               <div
-                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl h-[236px] top-full left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
               >
                 <p
-                  class="text-white text-sm text-center leading-relaxed"
+                  class="text-white text-sm px-5 text-center leading-relaxed"
                 >
                   Help us maintain and optimize our testing infrastructure across all necessary platforms and versions, ensuring robust and reliable releases. Your funding allows us to assess and include tests that your organization cares about and proactively discover and mitigate defects before they land in your domain.
                 </p>
@@ -471,10 +471,10 @@ exports[`Sustainers page > renders correctly 1`] = `
                 </label>
               </div>
               <div
-                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl top-[202px] left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
+                class="hidden lg:peer-checked:block absolute backdrop-blur-3xl h-[236px] top-full left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4"
               >
                 <p
-                  class="text-white text-sm text-center leading-relaxed"
+                  class="text-white text-sm px-5 text-center leading-relaxed"
                 >
                   Support the growth of a diverse and vibrant Java community. Your sponsorship helps maintain and enhance Adoptium projects, ensuring a stable, scalable, and interoperable Java ecosystem. Additionally, you will have the opportunity to support events and marketing initiatives and actively participating in community activities, spreading awareness and fostering collaboration.
                 </p>

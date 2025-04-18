@@ -6,20 +6,22 @@ import "./Testimonials.scss"
 
 const testimonialData = [
   {
-    quote:
-      "Microsoft is proud to be a Strategic Member of the Eclipse Adoptium Working Group, collaborating closely with industry partners to contribute to and benefit from a vibrant open-source ecosystem. Together, we are dedicated to delivering high-quality, secure, and performant Java runtimes that empower our customers and the developer community.",
+    quote: "Microsoft is proud to be a Strategic Member of the Eclipse Adoptium Working Group, collaborating closely with industry partners to contribute to and benefit from a vibrant open-source ecosystem. Together, we are dedicated to delivering high-quality, secure, and performant Java runtimes that empower our customers and the developer community.",
     name: "Martijn Verburg",
     role: "Principal Group Manager - Java & Go @ Microsoft",
-    image:
-      "/images/authors/martijnverburg.jpg",
+    image: "/images/authors/martijnverburg.jpg",
   },
   {
-    quote:
-      "As a member of the Adoptium Working Group, Alibaba Cloud is committed to fostering a vendor-neutral environment that drives the growth of Java Runtime on our global cloud platform. We contribute Alibaba Dragonwell to the Adoptium marketplace, a trusted source for production-ready OpenJDK builds, and actively participate in the EMT4J sub-project within Adoptium to help developers seamlessly upgrade their applications.",
+    quote: "As a member of the Adoptium Working Group, Alibaba Cloud is committed to fostering a vendor-neutral environment that drives the growth of Java Runtime on our global cloud platform. We contribute Alibaba Dragonwell to the Adoptium marketplace, a trusted source for production-ready OpenJDK builds, and actively participate in the EMT4J sub-project within Adoptium to help developers seamlessly upgrade their applications.",
     name: "Sanhong Li",
     role: "Director of Compiler & Runtime, Alibaba Cloud Intelligence",
-    image:
-      "/images/quotes/sanhongli.jpg",
+    image: "/images/quotes/sanhongli.jpg",
+  },
+  {
+    quote: "Azul has been a member of the Eclipse Adoptium Working Group since its formation. As a provider of free and supported OpenJDK builds—including Azul Platform Core (Zulu) and Azul Platform Prime (Zing)—Azul is a passionate contributor and steward for open-source Java. The company is committed to enhancing users’ ability to access and utilize high-quality Java runtimes effectively, while also providing real-time, actionable Java intelligence such as JVM inventory, vulnerability detection, and identification of dead and unused code.",
+    name: "Simon Ritter",
+    role: "Deputy CTO at Azul Systems",
+    image: "/images/quotes/simonritter.jpeg",
   }
 ]
 

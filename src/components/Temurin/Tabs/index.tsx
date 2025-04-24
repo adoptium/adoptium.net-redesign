@@ -58,14 +58,18 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
     // do nothing while OS and arches are not loaded
     if(oses.length === 0 || arches.length === 0) return;
 
+    let paramMatches = 0;
+
     (async () => {
       // init the default selected Operation System, if any from the param 'os'
       let defaultSelectedOS = "any"
       const osParam = queryStringParams.os
       if (osParam) {
         let osParamStr = osParam.toString().toLowerCase()
-        if (oses.findIndex(os => os.value === osParamStr) >= 0)
+        if (oses.findIndex(os => os.value === osParamStr) >= 0) {
           defaultSelectedOS = osParamStr
+          paramMatches++
+        }
       }
 
       // init the default selected Architecture, if any from the param 'arch'
@@ -73,8 +77,10 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
       const archParam = queryStringParams.arch
       if (archParam) {
         let archParamStr = archParam.toString().toLowerCase()
-        if (arches.findIndex(a => a.value === archParamStr) >= 0)
+        if (arches.findIndex(a => a.value === archParamStr) >= 0) {
           defaultSelectedArch = archParamStr
+          paramMatches++
+        }
       }
 
       // init the default selected Package Type, if any from the param 'package'
@@ -82,8 +88,9 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
       const packageParam = queryStringParams.package
       if (packageParam) {
         let packageParamStr = packageParam.toString().toLowerCase()
-        if (packageTypes.findIndex(p => p.value === packageParamStr) >= 0)
+        if (packageTypes.findIndex(p => p.value === packageParamStr) >= 0) {
           defaultSelectedPackageType = packageParamStr
+        }
       }
 
       // init the default selected Version, if any from the param 'version' or from 'variant'
@@ -105,8 +112,8 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
         } else {
           // it is another valid version
           defaultSelectedVersion = versionParamNum;
-          defaultActiveVersionSelectorTab = 1;
         }
+        paramMatches++
       }
 
       // init the default selected Version, if any from the param 'variant'
@@ -124,7 +131,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
       osUpdater(defaultSelectedOS);
       archUpdater(defaultSelectedArch);
       versionUpdater(defaultSelectedVersion);
-      setActiveVersionSelectorTab(defaultActiveVersionSelectorTab);
+      setActiveVersionSelectorTab(paramMatches === 3 ? 1 : defaultActiveVersionSelectorTab);
 
       // OK we can loaded elements
       setReady(true)

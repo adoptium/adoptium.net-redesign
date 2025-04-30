@@ -1,9 +1,8 @@
-import React, { useMemo } from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import { Link } from "../components/Link"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import Navbar from "../components/NavBar"
 import PageHeader from "../components/PageHeader"
 import UiMobileScroll from "../components/UiVirtualScroll/mobile"
 import UiVirtualContent from "../components/UiVirtualScroll/UiVirtualContent"
@@ -156,6 +155,66 @@ const Sponsors = () => {
     },
   ]
 
+  const keyInitiatives = [
+    {
+      header: "Enhanced Security",
+      image: "security.svg",
+      description:
+        "Contribute to rigorous security practices, including regular audits and vulnerability management. Your support ensures the continuation of our Secure Development efforts, encompassing SBOM, reproducible builds, SLSA, OpenChain Conformance, security audits, and vulnerability reports.",
+    },
+    {
+      header: "Faster Release Cycles",
+      image: "release.svg",
+      description:
+        "Ensure your Java environments stay up-to-date with the latest advancements by sponsoring additional infrastructure services. This support will enable us to publish feature and CPU releases within our ambitious delivery targets, keeping your systems at the forefront of innovation.",
+    },
+    {
+      header: "Ready-to-deploy Builds",
+      image: "deploy.svg",
+      description:
+        "Ensure access to Java versions tailored to your specific architecture and operating system needs. Get the precise build for your software services and save money by avoiding the costs of creating your own builds. Your funding allows us to deliver across a broad range of platforms and architectures",
+    },
+    {
+      header: "Sustained Innovation",
+      image: "innovation.svg",
+      description:
+        "Support the continuous improvement of Temurin and other Adoptium projects. We are leaders in Secure Development, Quality Assurance, Migration Tools, and many other areas where we have been developing bleeding-edge, innovative solutions. Your funding allows us to continue to develop improvements that benefit the entire Java ecosystem.",
+    },
+    {
+      header: "Quality Testing",
+      image: "testing.svg",
+      description:
+        "Help us maintain and optimize our testing infrastructure across all necessary platforms and versions, ensuring robust and reliable releases. Your funding allows us to assess and include tests that your organization cares about and proactively discover and mitigate defects before they land in your domain.",
+    },
+    {
+      header: "Community Development and Engagement",
+      image: "community.svg",
+      description:
+        "Support the growth of a diverse and vibrant Java community. Your sponsorship helps maintain and enhance Adoptium projects, ensuring a stable, scalable, and interoperable Java ecosystem. Additionally, you will have the opportunity to support events and marketing initiatives and actively participating in community activities, spreading awareness and fostering collaboration.",
+    },
+  ]
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      keyInitiatives.forEach((_, i) => {
+        const container = document.getElementById(`card-container-${i}`)
+        const checkbox = document.getElementById(
+          `toggle-${i}`,
+        ) as HTMLInputElement
+
+        if (container && !container.contains(event.target as Node)) {
+          if (checkbox && checkbox.checked) checkbox.checked = false
+        }
+      })
+    }
+
+    document.addEventListener("click", handleClickOutside)
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside)
+    }
+  }, [keyInitiatives])
+
   return (
     <Layout>
       <div className="relative w-full">
@@ -211,54 +270,41 @@ const Sponsors = () => {
               How Your Support Fuels Key Initiatives
             </h2>
             <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 w-full item-center mt-10 p-4 mx-auto max-w-[1180px]">
-              <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                <img
-                  src="/images/initiatives/security.svg"
-                  className="mb-0"
-                  alt="security"
-                />
-                <h3 className="text-[26px]">Enhanced Security</h3>
-              </div>
-              <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                <img
-                  src="/images/initiatives/release.svg"
-                  className="mb-0"
-                  alt="release"
-                />
-                <h3 className="text-[26px]">Faster Release Cycles</h3>
-              </div>
-              <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                <img
-                  src="/images/initiatives/deploy.svg"
-                  className="mb-0"
-                  alt="deploy"
-                />
-                <h3 className="text-[26px]">Ready-to-deploy Builds</h3>
-              </div>
-              <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                <img
-                  src="/images/initiatives/innovation.svg"
-                  className="mb-0"
-                  alt="innovation"
-                />
-                <h3 className="text-[26px]">Sustained Innovation</h3>
-              </div>
-              <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                <img
-                  src="/images/initiatives/testing.svg"
-                  className="mb-0"
-                  alt="testing"
-                />
-                <h3 className="text-[26px]">Quality Testing</h3>
-              </div>
-              <div className="max-w-[382px] w-full h-[212px] flex flex-col justify-center items-center border-[0.5px] border-[#c4bfce] rounded-[27px] gap-6">
-                <img
-                  src="/images/initiatives/community.svg"
-                  className="mb-0"
-                  alt="community"
-                />
-                <h3 className="text-[26px]">Community Development</h3>
-              </div>
+              {keyInitiatives.map(({ image, header, description }, i) => (
+                <div
+                  className="relative max-w-[382px] w-full"
+                  id={`card-container-${i}`}
+                  key={i}
+                >
+                  <input
+                    type="checkbox"
+                    id={`toggle-${i}`}
+                    className="peer hidden"
+                  />
+                  <div
+                    role="button"
+                    className="relative group h-[212px] w-full border-[0.5px] hover:border-1 border-[#c4bfce] rounded-[27px] cursor-pointer overflow-visible lg:peer-checked:border-1 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none"
+                  >
+                    <label htmlFor={`toggle-${i}`}>
+                      <div className="flex flex-col justify-center items-center gap-6 h-full cursor-pointer">
+                        <img
+                          src={`/images/initiatives/${image}`}
+                          className="mb-0"
+                          alt="security"
+                        />
+                        <h3 className="text-[26px] text-center px-4">
+                          {header}
+                        </h3>
+                      </div>
+                    </label>
+                  </div>
+                  <div className="hidden lg:peer-checked:block absolute backdrop-blur-3xl h-[236px] top-full left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4">
+                    <p className="text-white text-sm px-5 text-center leading-relaxed">
+                      {description}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
             <p className="text-[16px] text-[#c4bfce] p-4 max-w-[1000px] text-center mx-auto">
               Join the Eclipse Temurin Sustainer Program and play a crucial role

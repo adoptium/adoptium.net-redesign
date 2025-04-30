@@ -20,7 +20,7 @@ const ButtonContent = ({ results }) => {
   const navigationItem = [
     {
       title: "Release notes",
-      link: results ? `/temurin/release-notes?version=${results['source'].release_name}` : "/temurin/release-notes"
+      link: results && results['source'] ? `/temurin/release-notes?version=${results['source'].release_name}` : "/temurin/release-notes"
     },
     {
       title: "Installation guide",

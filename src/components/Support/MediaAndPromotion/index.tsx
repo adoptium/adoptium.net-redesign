@@ -9,6 +9,7 @@ const MediaAndPromotion = () => {
       description:
         "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime",
       button: "Learn More",
+      href: "/contributing/",
     },
   ]
   return (
@@ -18,12 +19,7 @@ const MediaAndPromotion = () => {
           <CommonHeading
             title={"Help promote Temurin"}
             description={
-              "Svennekoloni paheten fronta didoling. Grönt körfält mitt, och astrongar fastän animoji. Doxa exosm morotsmobb diska. Såsuss bröllopsklänning i preppare. Fulparkerare nirad mms biorat.\n"
-            }
-          />
-          <CommonHeading
-            description={
-              "Eurosinde processturism vasiminade. Äga frågan bekymringssamtal, alltså prens. Drevkultur tredönde bilmålvakt i ypren. Exoska semiras digt, eller makror. Cosplay faras attefallshus ber."
+              "If you are one of the millions who download and use Temurin and would like to promote our project and our work, there are several ways you can help. List you company on our Adopters page*, which helps other companies see how Temurin can be used for many workloads in a diverse set of industries. Write a blog post, article or conference talk about the story of your migration to or use of Temurin is helping your company. Participate in a case study if you have a compelling use case that showcases one or more of the benefits of Temurin, such as a more secure supply chain or use of our early-access build to prepare your company to move to best-in-class newer versions of Java(TM). Follow us in social media** and share the stories you find interesting. We thank you for any of the creative ways you help promote Temurin."
             }
           />
         </div>

@@ -1,13 +1,15 @@
 import React from "react"
 import CommonHeading from "../../Common/CommonHeading"
 import CommonCard from "../../Common/CommonCard"
+import { RedIcon } from "../../Common/Icon"
+import { Link } from "../../Link"
 
 const MediaAndPromotion = () => {
   const media = [
     {
       title: "Media & Promotion",
       description:
-        "Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime",
+        "Follow and promote the latest updates from the Eclipse Adoptium Project",
       button: "Learn More",
       href: "/news/",
     },
@@ -19,9 +21,16 @@ const MediaAndPromotion = () => {
           <CommonHeading
             title={"Help promote Temurin"}
             description={
-              "If you are one of the millions who download and use Temurin and would like to promote our project and our work, there are several ways you can help. List you company on our Adopters page*, which helps other companies see how Temurin can be used for many workloads in a diverse set of industries. Write a blog post, article or conference talk about the story of your migration to or use of Temurin is helping your company. Participate in a case study if you have a compelling use case that showcases one or more of the benefits of Temurin, such as a more secure supply chain or use of our early-access build to prepare your company to move to best-in-class newer versions of Java(TM). Follow us in social media** and share the stories you find interesting. We thank you for any of the creative ways you help promote Temurin."
+              "If you are one of the millions who download and use Temurin and would like to promote our project and our work, there are several ways you can help."
             }
           />
+          <div>
+            <div className="text-grey justify-start inline-flex pt-4"><div className="pt-1"><RedIcon /></div><div className="pl-4">List your company on our <Link to="/adopters" className="text-pink">Adopters page</Link>, which helps other companies see how Temurin can be used for many workloads in a diverse set of industries.</div></div>
+            <div className="text-grey justify-start inline-flex pt-4"><div className="pt-1"><RedIcon /></div><div className="pl-4">Write a blog post, article or <Link to="https://www.meetup.com/adoptium-summit-series/" className="text-pink">conference talk</Link> about the story of your migration to or use of Temurin is helping your company.</div></div>
+            <div className="text-grey justify-start inline-flex pt-4"><div className="pt-1"><RedIcon /></div><div className="pl-4">Participate in a <Link to="https://forms.gle/WyZeYW7SNXpVYpKHA" className="text-pink">case study</Link>, if you have a compelling use case that showcases one or more of the benefits of Temurin, such as a more secure supply chain or use of our early-access build to prepare your company to move to best-in-class newer versions of Java(TM).</div></div>
+            <div className="text-grey justify-start inline-flex pt-4"><div className="pt-1"><RedIcon /></div><div className="pl-4">Follow us in social media, and share the stories you find interesting.</div></div>
+            <div className="text-grey justify-start inline-flex pt-4"><div >We thank you for any of the creative ways you help promote Temurin.</div></div>
+        </div>          
         </div>
         <div>
           {media.map((item, index) => (

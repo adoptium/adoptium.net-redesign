@@ -235,7 +235,7 @@ exports[`Support Us page > renders correctly 1`] = `
               </p>
             </div>
             <a
-              href="/en/contributing/"
+              href="/en/news/"
             >
               <button
                 class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border "

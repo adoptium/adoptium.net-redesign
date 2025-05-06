@@ -94,10 +94,9 @@ const Members = () => {
         </Link>
       </div>
       <ContactUs
-        title="Speak to our team today"
-        buttontitle="Become a member"
-        linkTo="/join" 
-      />
+        title="Speak to our team today" 
+        buttontitle="Contact Us" 
+        linkTo="/join" />
     </Layout>
   )
 }

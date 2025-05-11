@@ -238,6 +238,23 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
         </span>
       </a>
     </div>
+    <div
+      class="flex items-center gap-5"
+    >
+      <a
+        class="flex items-center gap-3"
+        href="/enhttps://newsroom.eclipse.org/eclipse/community-news"
+      >
+        View all
+      </a>
+      |
+      <a
+        class="flex items-center gap-3"
+        href="/enhttps://newsroom.eclipse.org/node/add/news"
+      >
+        Submit news
+      </a>
+    </div>
   </div>
 </main>
 `;
@@ -450,6 +467,23 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
             />
           </svg>
         </span>
+      </a>
+    </div>
+    <div
+      class="flex items-center gap-5"
+    >
+      <a
+        class="flex items-center gap-3"
+        href="/enhttps://newsroom.eclipse.org/eclipse/community-news"
+      >
+        View all
+      </a>
+      |
+      <a
+        class="flex items-center gap-3"
+        href="/enhttps://newsroom.eclipse.org/node/add/news"
+      >
+        Submit news
       </a>
     </div>
   </div>
@@ -694,6 +728,23 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
         </span>
       </a>
     </div>
+    <div
+      class="flex items-center gap-5"
+    >
+      <a
+        class="flex items-center gap-3"
+        href="/enhttps://newsroom.eclipse.org/eclipse/community-news"
+      >
+        View all
+      </a>
+      |
+      <a
+        class="flex items-center gap-3"
+        href="/enhttps://newsroom.eclipse.org/node/add/news"
+      >
+        Submit news
+      </a>
+    </div>
   </div>
 </main>
 `;
@@ -906,6 +957,23 @@ exports[`TagPage pages > renders correctly 1`] = `
             />
           </svg>
         </span>
+      </a>
+    </div>
+    <div
+      class="flex items-center gap-5"
+    >
+      <a
+        class="flex items-center gap-3"
+        href="/enhttps://newsroom.eclipse.org/eclipse/community-news"
+      >
+        View all
+      </a>
+      |
+      <a
+        class="flex items-center gap-3"
+        href="/enhttps://newsroom.eclipse.org/node/add/news"
+      >
+        Submit news
       </a>
     </div>
   </div>

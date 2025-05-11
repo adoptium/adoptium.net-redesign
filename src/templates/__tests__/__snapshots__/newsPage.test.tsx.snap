@@ -71,7 +71,7 @@ exports[`News Template page > renders correctly 1`] = `
         <div
           class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full"
         >
-          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+          Follow the latest updates from the Eclipse Adoptium Project
         </div>
       </div>
     </div>
@@ -236,6 +236,23 @@ exports[`News Template page > renders correctly 1`] = `
             />
           </svg>
         </span>
+      </a>
+    </div>
+    <div
+      class="flex items-center gap-5"
+    >
+      <a
+        class="flex items-center gap-3"
+        href="/enhttps://newsroom.eclipse.org/eclipse/community-news"
+      >
+        View all
+      </a>
+      |
+      <a
+        class="flex items-center gap-3"
+        href="/enhttps://newsroom.eclipse.org/node/add/news"
+      >
+        Submit news
       </a>
     </div>
   </div>

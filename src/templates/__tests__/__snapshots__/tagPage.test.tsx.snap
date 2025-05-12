@@ -243,14 +243,18 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
     >
       <a
         class="flex items-center gap-3"
-        href="/enhttps://newsroom.eclipse.org/eclipse/community-news"
+        href="https://newsroom.eclipse.org/eclipse/community-news"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         View all
       </a>
       |
       <a
         class="flex items-center gap-3"
-        href="/enhttps://newsroom.eclipse.org/node/add/news"
+        href="https://newsroom.eclipse.org/node/add/news"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Submit news
       </a>
@@ -474,14 +478,18 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
     >
       <a
         class="flex items-center gap-3"
-        href="/enhttps://newsroom.eclipse.org/eclipse/community-news"
+        href="https://newsroom.eclipse.org/eclipse/community-news"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         View all
       </a>
       |
       <a
         class="flex items-center gap-3"
-        href="/enhttps://newsroom.eclipse.org/node/add/news"
+        href="https://newsroom.eclipse.org/node/add/news"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Submit news
       </a>
@@ -733,14 +741,18 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
     >
       <a
         class="flex items-center gap-3"
-        href="/enhttps://newsroom.eclipse.org/eclipse/community-news"
+        href="https://newsroom.eclipse.org/eclipse/community-news"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         View all
       </a>
       |
       <a
         class="flex items-center gap-3"
-        href="/enhttps://newsroom.eclipse.org/node/add/news"
+        href="https://newsroom.eclipse.org/node/add/news"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Submit news
       </a>
@@ -964,14 +976,18 @@ exports[`TagPage pages > renders correctly 1`] = `
     >
       <a
         class="flex items-center gap-3"
-        href="/enhttps://newsroom.eclipse.org/eclipse/community-news"
+        href="https://newsroom.eclipse.org/eclipse/community-news"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         View all
       </a>
       |
       <a
         class="flex items-center gap-3"
-        href="/enhttps://newsroom.eclipse.org/node/add/news"
+        href="https://newsroom.eclipse.org/node/add/news"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Submit news
       </a>

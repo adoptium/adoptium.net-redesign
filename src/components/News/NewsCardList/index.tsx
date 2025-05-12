@@ -36,9 +36,17 @@ const NewsCardList = ({
         baseUrl={baseUrl}
       />
       <div className="flex items-center gap-5">
-        <Link to="https://newsroom.eclipse.org/eclipse/community-news" className="flex items-center gap-3">View all</Link>
-        |
-        <Link to="https://newsroom.eclipse.org/node/add/news" className="flex items-center gap-3">Submit news</Link>
+        <a 
+          href="https://newsroom.eclipse.org/eclipse/community-news" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="flex items-center gap-3">View all</a>
+        | 
+        <a 
+          href="https://newsroom.eclipse.org/node/add/news" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="flex items-center gap-3">Submit news</a>
       </div>
     </div>
   );

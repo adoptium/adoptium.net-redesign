@@ -298,7 +298,9 @@ exports[`Support Us page > renders correctly 1`] = `
               Write a blog post, article or 
               <a
                 class="text-pink"
-                href="/enhttps://www.meetup.com/adoptium-summit-series/"
+                href="https://www.meetup.com/adoptium-summit-series/"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 conference talk
               </a>
@@ -344,7 +346,9 @@ exports[`Support Us page > renders correctly 1`] = `
               Participate in a 
               <a
                 class="text-pink"
-                href="/enhttps://forms.gle/WyZeYW7SNXpVYpKHA"
+                href="https://forms.gle/WyZeYW7SNXpVYpKHA"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 case study
               </a>

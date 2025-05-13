@@ -1,6 +1,7 @@
 import React from "react";
 import EventCard from "../../Events/EventCard";
-import Pagination from "../Pagination"; // adjust the import path as needed
+import Pagination from "../Pagination";
+import { Link } from "../../../components/Link";
 
 const NewsCardList = ({
   posts,
@@ -26,7 +27,6 @@ const NewsCardList = ({
           <EventCard key={index} post={post} />
         ))}
       </div>
-
       <Pagination
         previousPageNumber={previousPageNumber}
         previousPageLink={previousPageLink}
@@ -35,6 +35,19 @@ const NewsCardList = ({
         totalPages={totalPages}
         baseUrl={baseUrl}
       />
+      <div className="flex items-center gap-5">
+        <a 
+          href="https://newsroom.eclipse.org/eclipse/community-news" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="flex items-center gap-3">View all</a>
+        | 
+        <a 
+          href="https://newsroom.eclipse.org/node/add/news" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="flex items-center gap-3">Submit news</a>
+      </div>
     </div>
   );
 };

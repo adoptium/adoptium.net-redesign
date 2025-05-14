@@ -12,7 +12,7 @@ exports[`Slack page > renders correctly 1`] = `
         class="col-lg-8 col-md-8 mx-auto"
       >
         <h1
-          class="fw-light"
+          class="fw-light text-4xl pb-3"
         >
           Join our Slack channel!
         </h1>
@@ -27,9 +27,10 @@ exports[`Slack page > renders correctly 1`] = `
         >
           <label>
             Email address
+            <br />
             <input
               autocomplete="email"
-              class="form-control"
+              class="formInput"
               name="emailAddress"
               placeholder="Your email"
               required=""
@@ -38,7 +39,7 @@ exports[`Slack page > renders correctly 1`] = `
           </label>
           <br />
           <button
-            class="btn btn-primary mt-3"
+            class="bg-transparent   border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"
             type="submit"
           >
             Invite Me!

@@ -128,3 +128,26 @@ body {
   width: 90vw;
   z-index: 2;
 }
+
+.formInput {
+  background-color: white;
+  color: black; 
+  text-decoration-color: black;
+  min-width: 400px;
+  min-height: 30px;
+  border-radius: 0.4rem;
+  border: 1px solid #200d46;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px 0px 15px 0px;
+}
+
+.joinForm {
+  background-color: white;
+  border-radius: 0.4rem;
+  border: 1px solid #200d46;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

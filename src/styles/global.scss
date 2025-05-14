@@ -138,8 +138,9 @@ body {
   border-radius: 0.4rem;
   border: 1px solid #200d46;
   padding: 0.5rem;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin: 10px 0px 15px 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 10%);
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .joinForm {
@@ -147,7 +148,7 @@ body {
   border-radius: 0.4rem;
   border: 1px solid #200d46;
   padding: 0.5rem;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 10%);
   margin-top: 10px;
   margin-bottom: 10px;
 }

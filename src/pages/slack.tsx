@@ -6,7 +6,7 @@ import Seo from "../components/Seo"
 
 const JoinPage = () => (
   <Layout>
-    <section className="py-5 text-center container">
+    <section className="py-5 text-center container mx-auto" >
       <div className="row py-lg-5">
         <div className="col-lg-8 col-md-8 mx-auto">
           <h1 className="fw-light text-4xl pb-3">Join our Slack channel!</h1>

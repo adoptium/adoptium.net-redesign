@@ -3,7 +3,7 @@
 exports[`Slack page > renders correctly 1`] = `
 <main>
   <section
-    class="py-5 text-center container"
+    class="py-5 text-center container mx-auto"
   >
     <div
       class="row py-lg-5"

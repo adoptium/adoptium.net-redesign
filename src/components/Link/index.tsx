@@ -1,24 +1,25 @@
-import React from "react";
-import { Link as GatsbyLink, GatsbyLinkProps } from "gatsby";
-import { useI18next } from "gatsby-plugin-react-i18next";
+import React from "react"
+import { Link as GatsbyLink, GatsbyLinkProps } from "gatsby"
+import { useI18next } from "gatsby-plugin-react-i18next"
 
 type I18nLinkProps = GatsbyLinkProps<any> & {
-  language?: string;
-};
+  language?: string
+  placeholder?: string
+}
 
 export const Link: React.FC<I18nLinkProps> = ({ language, to, ...rest }) => {
   const {
     language: currentLanguage,
     defaultLanguage,
     generateDefaultLanguagePage,
-  } = useI18next();
+  } = useI18next()
 
-  const urlLanguage = language || currentLanguage;
+  const urlLanguage = language || currentLanguage
   const getLanguagePath = (lang: string) =>
-    generateDefaultLanguagePage || lang !== defaultLanguage ? `/${lang}` : "";
+    generateDefaultLanguagePage || lang !== defaultLanguage ? `/${lang}` : ""
 
-  const localizedTo = `${getLanguagePath(urlLanguage)}${to}`;
+  const localizedTo = `${getLanguagePath(urlLanguage)}${to}`
 
   // @ts-ignore
-  return <GatsbyLink {...rest} to={localizedTo} />;
-};
+  return <GatsbyLink {...rest} to={localizedTo} />
+}

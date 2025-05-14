@@ -31,29 +31,29 @@ exports[`AQAvit page > renders correctly 1`] = `
             <h1
               class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px]"
             >
-              Eclipse AQAvit
+              Eclipse AQAvit™
             </h1>
             <p
-              class="lg:my-10 mt-6  mb-10 text-2xl leading-8 text-white-600  font-semibold"
+              class="lg:my-10 mt-6  mb-10 md:text-2xl text-base text-white-600 leading-[25px] md:leading-8 font-semibold"
             >
-              Some tagline about AQAvit
+              Eclipse AQAVit (TM): Eclipse AQAvit is the quality and runtime branding evaluation project for Java SE runtimes and associated technology. During a release, it takes a functionally complete Java runtime and ensures that all the additional qualities are present that make it suitable for production use. These quality criteria include good performance, exceptional security, resilience and endurance, and the ability to pass a wide variety of application test suites. In addition to verifying that functionally complete runtimes are release ready, the AQA tests may also serve to verify new functionality during runtime development.
             </p>
             <div
               class="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6"
             >
               <a
                 class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
-                href="/en/temurin/releases"
+                href="/enhttps://projects.eclipse.org/projects/adoptium.aqavit"
                 placeholder="Download AQAvit"
               >
                 Learn More
               </a>
               <a
                 class="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out  border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
-                href="/en#"
+                href="/en/docs/aqavit-verification/"
                 placeholder="Download AQAvit"
               >
-                Download AQAvit
+                Run AQAvit
               </a>
             </div>
           </div>
@@ -61,598 +61,57 @@ exports[`AQAvit page > renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <div
-    class=" max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8  "
-  >
-    <h2
-      class="text-center text-xl font-normal leading-7 text-grey"
-    >
-      Temurin is trusted by millions of developers
-    </h2>
+  <div>
     <div
-      class="slick-slider mt-6 slick-initialized"
-      dir="ltr"
+      class="flex flex-col justify-center items-center text-center md:text-left p-4"
     >
       <div
-        class="slick-list"
+        class="max-w-[700px]"
       >
-        <div
-          class="slick-track"
-          style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+        <h2
+          class="text-3xl font-bold mb-4 mt-20 text-center"
         >
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-6"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Michelin"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-michelin-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-5"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Microsoft"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-microsoft-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-4"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="MongoDB"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-mongodb-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-3"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Red Hat"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-2"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Societe Generale"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-societe-generale-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-1"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="T-Systems"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-t-systems-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active slick-current"
-            data-index="0"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Arm"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-arm-white.svg"
-                  style="padding: 1em;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active"
-            data-index="1"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Atlassian"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-atlassian-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active"
-            data-index="2"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Dynatrace"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-dynatrace-white.png"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active"
-            data-index="3"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Mercedes-Benz Tech Innovation GmbH"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-mercedes-benz-white.png"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active"
-            data-index="4"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Michelin"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-michelin-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active"
-            data-index="5"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Microsoft"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-microsoft-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide"
-            data-index="6"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="MongoDB"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-mongodb-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide"
-            data-index="7"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Red Hat"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide"
-            data-index="8"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Societe Generale"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-societe-generale-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide"
-            data-index="9"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="T-Systems"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-t-systems-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="10"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Arm"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-arm-white.svg"
-                  style="padding: 1em;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="11"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Atlassian"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-atlassian-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="12"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Dynatrace"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-dynatrace-white.png"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="13"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Mercedes-Benz Tech Innovation GmbH"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-mercedes-benz-white.png"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="14"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Michelin"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-michelin-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="15"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Microsoft"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-microsoft-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="16"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="MongoDB"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-mongodb-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="17"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Red Hat"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="18"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Societe Generale"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-societe-generale-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="19"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="T-Systems"
-                  class="h-12 lg:h-16 w-auto object-contain mx-auto"
-                  src="/images/adopters/logo-t-systems-white.svg"
-                  style="padding: 0px;"
-                />
-              </span>
-            </div>
-          </div>
-        </div>
+          The AQAvit Name
+        </h2>
+        <p
+          class="text-base md:text-lg mb-8"
+        >
+          The AQAvit Name The AQAvit project gets its name from Adoptium Quality Assurance 'AQA' and 'vit' for vitality and speed. As the project engages with vendors and enterprise consumers, the test suite is expanded and improved to keep pace with the latest Java releases and to continuously raise the quality bar through collaboration and rigour.
+        </p>
+      </div>
+      <div
+        class="max-w-[700px]"
+      >
+        <h2
+          class="text-3xl font-bold mb-8 text-center"
+        >
+          AQAvit Project Central
+        </h2>
+        <p
+          class="text-base md:text-lgmb-8"
+        >
+          AQAvit Project Central As listed in the Developer Resources section of the Eclipse Foundation AQAvit project page, AQAvit is comprised of many repositories. The central one is the aqa-tests repository which houses the project's test definition files, much of the project's documentation and is the base for running the AQAvit test suite. To participate in the project, people are invited to join the Adoptium Slack workspace and ask questions in the #testing-aqavit channel.
+        </p>
+      </div>
+      <div
+        class="max-w-[700px]"
+      >
+        <h2
+          class="text-3xl font-bold mb-8 text-center"
+        >
+          AQAvit Verification
+        </h2>
+        <p
+          class="text-base md:text-lg mb-4"
+        >
+          AQAvit Verification The AQAvit project was created to "make quality certain to happen." AQAvit certification is achieved through the process of running and passing a prescribed and versioned set of tests in the AQAvit test suite.
+        </p>
+        <a
+          class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
+          href="/en#"
+        >
+          Learn how to run AQAvit
+        </a>
       </div>
     </div>
   </div>

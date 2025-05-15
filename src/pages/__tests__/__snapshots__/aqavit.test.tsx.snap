@@ -43,8 +43,8 @@ exports[`AQAvit page > renders correctly 1`] = `
             >
               <a
                 class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
-                href="/enhttps://projects.eclipse.org/projects/adoptium.aqavit"
-                placeholder="Download AQAvit"
+                href="https://projects.eclipse.org/projects/adoptium.aqavit"
+                target="_blank"
               >
                 Learn More
               </a>

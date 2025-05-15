@@ -42,13 +42,13 @@ const AQAvit = () => {
                   verify new functionality during runtime development.
                 </p>
                 <div className="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6">
-                  <Link
-                    placeholder="Download AQAvit"
-                    to="https://projects.eclipse.org/projects/adoptium.aqavit"
+                  <a
+                    target="_blank"
+                    href="https://projects.eclipse.org/projects/adoptium.aqavit"
                     className="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
                   >
                     Learn More
-                  </Link>
+                  </a>
                   <Link
                     placeholder="Download AQAvit"
                     to="/docs/aqavit-verification/"

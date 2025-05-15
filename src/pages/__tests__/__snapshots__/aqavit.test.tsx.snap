@@ -36,7 +36,7 @@ exports[`AQAvit page > renders correctly 1`] = `
             <p
               class="lg:my-10 mt-6  mb-10 md:text-2xl text-base text-white-600 leading-[25px] md:leading-8 font-semibold"
             >
-              Eclipse AQAVit (TM): Eclipse AQAvit is the quality and runtime branding evaluation project for Java SE runtimes and associated technology. During a release, it takes a functionally complete Java runtime and ensures that all the additional qualities are present that make it suitable for production use. These quality criteria include good performance, exceptional security, resilience and endurance, and the ability to pass a wide variety of application test suites. In addition to verifying that functionally complete runtimes are release ready, the AQA tests may also serve to verify new functionality during runtime development.
+              Eclipse AQAvit (TM): Eclipse AQAvit is the quality and runtime branding evaluation project for Java SE runtimes and associated technology. During a release, it takes a functionally complete Java runtime and ensures that all the additional qualities are present that make it suitable for production use. These quality criteria include good performance, exceptional security, resilience and endurance, and the ability to pass a wide variety of application test suites. In addition to verifying that functionally complete runtimes are release ready, the AQA tests may also serve to verify new functionality during runtime development.
             </p>
             <div
               class="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6"

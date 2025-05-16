@@ -26,7 +26,7 @@ Adoptium’s [AQAvit](https://adoptium.net/aqavit/) quality program not only che
 
 ### Part of the Adoptium Working Group as a Strategic member
 
-Rivos is the latest company to join Alibaba Cloud, Azul Systems, Google, Huawei, Karakun, Microsoft, and Red Hat as [Strategic Members](https://adoptium.net/en-GB/members/) of the Adoptium working group. Strategic members are organizations that view Adoptium’s technology as critical to their future and are investing significant resources to sustain and define the core activities that are the responsibility of the working group.
+Rivos is the latest company to join Alibaba Cloud, Azul Systems, Google, Karakun, Microsoft, and Red Hat as [Strategic Members](https://adoptium.net/en-GB/members/) of the Adoptium working group. Strategic members are organizations that view Adoptium’s technology as critical to their future and are investing significant resources to sustain and define the core activities that are the responsibility of the working group.
 
 Strategic Members can be part of the steering committee and other subcommittees, such as quality assurance, infrastructure, branding and marketing subcommittee, and others as deemed necessary by the working group Steering Committee.
 

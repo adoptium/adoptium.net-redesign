@@ -22,7 +22,7 @@ This first release marks the successful [transition of AdoptOpenJDK to Adoptium]
 
 The project move involved transferring over 40 code repositories, a complex static and virtualized machine infrastructure, a running build tool, and a two thousand members strong community to the Eclipse Foundation over a period of about one year. During that time the team continued to hit their quarterly release schedule, and grow the project through the introduction of a new incubator programme, participating in student mentoring programmes, and delivering innovation through machine learning and cloud optimization operational techniques amongst others.
 
-As part of the transition the Eclipse Foundation helped the community establish a new governance working group to support the work of the technical projects. The current [Adoptium working group members](https://adoptium.net/members.html) are Alibaba Cloud, Azul, Huawei, Karakun, Microsoft, Red Hat, IBM, iJUG, ManageCat, and New Relic.
+As part of the transition the Eclipse Foundation helped the community establish a new governance working group to support the work of the technical projects. The current [Adoptium working group members](https://adoptium.net/members.html) are Alibaba Cloud, Azul, Karakun, Microsoft, Red Hat, IBM, iJUG, ManageCat, and New Relic.
 
 The working group includes major Java vendors who share a vision for an open and collaborative build, test, and distribution solution for OpenJDK. Adoptium has a greater focus on vendor collaboration than ever before and encourages commercial reuse of the technology.
 

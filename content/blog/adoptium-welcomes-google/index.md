@@ -16,7 +16,7 @@ Cameron Balahan, Senior Product Manager at Google Cloud, [shared the news](https
 
 ### Adoptium working group
 
-Google are the latest company to join Alibaba Cloud, Azul Systems, Huawei, Karakun, Microsoft, and Red Hat as [Strategic Members](https://adoptium.net/members/) of the Adoptium working group. Strategic members are organizations that view Adoptium's technology as critical to their future, and are investing significant resources to sustain and define the core activities that are the responsibility of the working group.
+Google are the latest company to join Alibaba Cloud, Azul Systems, Karakun, Microsoft, and Red Hat as [Strategic Members](https://adoptium.net/members/) of the Adoptium working group. Strategic members are organizations that view Adoptium's technology as critical to their future, and are investing significant resources to sustain and define the core activities that are the responsibility of the working group.
 
 The goals of the working group include ensuring that Adoptium Temurin remains a high-quality, secure, and trusted Java distribution for developers and enterprise users alike. Cloud companies and modern organizations dependent upon Java recognise that Adoptium gives them assurances for long term availability of Java that is free to use everywhere, and a direct say in the quality and resiliancy of their Java runtimes used in production.
 

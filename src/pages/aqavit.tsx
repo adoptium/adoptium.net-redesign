@@ -29,7 +29,7 @@ const AQAvit = () => {
                   Eclipse AQAvit™
                 </h1>
                 <p className="lg:my-10 mt-6  mb-10 md:text-2xl text-base text-white-600 leading-[25px] md:leading-8 font-semibold">
-                  Eclipse AQAVit (TM): Eclipse AQAvit is the quality and runtime
+                  Eclipse AQAvit (TM): Eclipse AQAvit is the quality and runtime
                   branding evaluation project for Java SE runtimes and
                   associated technology. During a release, it takes a
                   functionally complete Java runtime and ensures that all the

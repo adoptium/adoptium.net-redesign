@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import vendors from "../../../json/marketplace.json"
 import getVendorIdentifier from "../../../util/vendors"
 import { shuffle } from "../../../util/shuffle"
+import { FaCheck } from "react-icons/fa";
 
 export interface Vendor {
   name: string
@@ -54,6 +55,8 @@ const VendorSelector: React.FC<VendorSelectorProps> = ({
                 outline-hidden cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-2xl ${selectedVendorIdentifiers.includes(identifier) ? "border-primary border-2" : "border-white border-2"}`}
               >
                 <span className="w-20 h-20">
+                  {selectedVendorIdentifiers.includes(identifier) && 
+                  <div style={{position: "absolute", color: "green", display: "flex", flexDirection: 'row-reverse', width: '80px'}}><FaCheck/></div>}
                   <img
                     src={`/images/vendors/${vendor.icon}`}
                     className="mb-0 p-1"

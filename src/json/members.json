@@ -19,12 +19,6 @@
     "tier": "strategic"
   },
   {
-    "name": "Huawei",
-    "logo": "huawei.svg",
-    "url": "https://huawei.com",
-    "tier": "strategic"
-  },
-  {
     "name": "Microsoft",
     "logo": "microsoft.svg",
     "url": "https://opensource.microsoft.com",

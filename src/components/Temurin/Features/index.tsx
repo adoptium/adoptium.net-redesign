@@ -127,19 +127,21 @@ const Features = () => {
           >
             {features.map((feature, index) => (
               <SwiperSlide
-                className="!w-[256px] p-8 lg:p-16 lg:w-[256px] bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl"
+                className="!w-[256px] p-8 lg:p-16 lg:w-[256px] bg-white/5 rounded-3xl border border-white/50 backdrop-blur-xl h-[300px] flex flex-col"
                 key={index}
               >
-                <span>
-                  <img src={feature.img} alt={feature.heading} />
-                </span>
-                <div className=" space-y-6 mt-[106px]">
-                  <h2 className="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4">
-                    {feature.heading}
-                  </h2>
-                  <p className="text-grey text-l font-normal leading-7 mt-6">
-                    {feature.content}
-                  </p>
+                <div className="flex-shrink-0">
+                  <img src={feature.img} alt={feature.heading} className="h-[64px] w-auto" />
+                </div>
+                <div className="flex flex-col justify-between flex-grow mt-10">
+                  <div>
+                    <h2 className="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4">
+                      {feature.heading}
+                    </h2>
+                    <p className="text-grey text-l font-normal leading-7 mt-6">
+                      {feature.content}
+                    </p>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

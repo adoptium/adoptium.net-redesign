@@ -303,22 +303,36 @@ exports[`Marketplace page > renders correctly 1`] = `
       class="w-full"
     >
       <div
-        class="overflow-auto min-w-full w-full"
+        class="relative px-4 py-2"
       >
         <div
-          class="flex xl:justify-center space-x-5 py-2"
+          class="text-right mb-2 text-sm text-gray-600 dark:text-gray-300"
         >
-          <button
-            class="flex justify-center items-center
-                outline-hidden cursor-pointer transition-all duration-200 ease-in-out bg-white rounded-2xl border-primary border-2"
+          7
+           of 
+          1
+           vendors selected
+        </div>
+        <div
+          class="flex overflow-x-auto pb-4 no-scrollbar justify-center"
+        >
+          <div
+            class="flex space-x-4 min-w-min mx-auto"
           >
-            <span
-              class="w-20 h-20"
+            <button
+              class="relative group flex flex-col items-center justify-center p-3 
+                  rounded-xl transition-all duration-300 flex-shrink-0
+                  bg-gradient-to-br from-blue-50 to-purple-50 shadow-md dark:from-blue-900/20 dark:to-purple-900/20
+                  border border-pink-500"
+              title="Adoptium"
             >
               <div
-                style="position: absolute; color: green; display: flex; flex-direction: row-reverse; width: 80px;"
+                class="absolute top-2 right-2 w-6 h-6 rounded-full flex items-center justify-center
+                    transition-all duration-300
+                    bg-pink text-white scale-100"
               >
                 <svg
+                  class="text-xs transition-opacity opacity-100"
                   fill="currentColor"
                   height="1em"
                   stroke="currentColor"
@@ -332,13 +346,31 @@ exports[`Marketplace page > renders correctly 1`] = `
                   />
                 </svg>
               </div>
-              <img
-                alt="Adoptium icon"
-                class="mb-0 p-1"
-                src="/images/vendors/vendor-adoptium.png"
-              />
-            </span>
-          </button>
+              <div
+                class="w-16 h-16 flex items-center justify-center mb-2 relative"
+              >
+                <div
+                  class="
+                    absolute inset-0 rounded-full bg-white
+                    transition-opacity duration-300
+                    shadow-md dark:shadow-gray-700/50
+                  "
+                />
+                <img
+                  alt="Adoptium icon"
+                  class="mb-0 p-1 relative z-10 transition-all duration-300 group-hover:scale-105 
+                      "
+                  src="/images/vendors/vendor-adoptium.png"
+                />
+              </div>
+              <div
+                class="text-center text-sm font-medium truncate w-20 px-1 transition-colors duration-300
+                  text-gray-900 dark:text-gray-100"
+              >
+                Adoptium
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -207,7 +207,7 @@ const DownloadTable = () => {
         <p className="text-grey text-[16px] leading-[24px] mb-0">
           <Trans>Build Version</Trans>
         </p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0 w-[140px]">
+        <p className="text-grey text-[16px] leading-[24px] mb-0">
           <Trans>Distribution</Trans>
         </p>
         <p className="text-grey text-[16px] leading-[24px] mb-0">

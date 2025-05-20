@@ -18,3 +18,9 @@
   z-index: -1;
   background-image: url("/images/linear-bg.png");
 }
+
+.mySwiperbase .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  height: 300px !important; /* Force consistent height */
+}

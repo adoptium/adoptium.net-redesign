@@ -1043,145 +1043,175 @@ exports[`Index page > renders correctly 1`] = `
           <div
             data-testid="SwiperSlide"
           >
-            <span>
+            <div
+              class="flex-shrink-0"
+            >
               <img
                 alt="Secure Supply Chain"
+                class="h-[64px] w-auto"
                 src="/images/icons/lock.svg"
               />
-            </span>
+            </div>
             <div
-              class=" space-y-6 mt-[106px]"
+              class="flex flex-col justify-between flex-grow mt-10"
             >
-              <h2
-                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-              >
-                Secure Supply Chain
-              </h2>
-              <p
-                class="text-grey text-l font-normal leading-7 mt-6"
-              >
-                Built with robust security standards, ensuring a trusted, transparent, and vulnerability-free supply chain.
-              </p>
+              <div>
+                <h2
+                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
+                >
+                  Secure Supply Chain
+                </h2>
+                <p
+                  class="text-grey text-l font-normal leading-7 mt-6"
+                >
+                  Built with robust security standards, ensuring a trusted, transparent, and vulnerability-free supply chain.
+                </p>
+              </div>
             </div>
           </div>
           <div
             data-testid="SwiperSlide"
           >
-            <span>
+            <div
+              class="flex-shrink-0"
+            >
               <img
                 alt="AQAvit Verification"
+                class="h-[64px] w-auto"
                 src="/images/initiatives/testing.svg"
               />
-            </span>
+            </div>
             <div
-              class=" space-y-6 mt-[106px]"
+              class="flex flex-col justify-between flex-grow mt-10"
             >
-              <h2
-                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-              >
-                AQAvit Verification
-              </h2>
-              <p
-                class="text-grey text-l font-normal leading-7 mt-6"
-              >
-                Thoroughly tested using AQAvit to guarantee performance, reliability, and security in every build.
-              </p>
+              <div>
+                <h2
+                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
+                >
+                  AQAvit Verification
+                </h2>
+                <p
+                  class="text-grey text-l font-normal leading-7 mt-6"
+                >
+                  Thoroughly tested using AQAvit to guarantee performance, reliability, and security in every build.
+                </p>
+              </div>
             </div>
           </div>
           <div
             data-testid="SwiperSlide"
           >
-            <span>
+            <div
+              class="flex-shrink-0"
+            >
               <img
                 alt="Performance Optimization"
+                class="h-[64px] w-auto"
                 src="/images/initiatives/deploy.svg"
               />
-            </span>
+            </div>
             <div
-              class=" space-y-6 mt-[106px]"
+              class="flex flex-col justify-between flex-grow mt-10"
             >
-              <h2
-                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-              >
-                Performance Optimization
-              </h2>
-              <p
-                class="text-grey text-l font-normal leading-7 mt-6"
-              >
-                Engineered for optimal performance, delivering speed, efficiency, and stability across diverse environments.
-              </p>
+              <div>
+                <h2
+                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
+                >
+                  Performance Optimization
+                </h2>
+                <p
+                  class="text-grey text-l font-normal leading-7 mt-6"
+                >
+                  Engineered for optimal performance, delivering speed, efficiency, and stability across diverse environments.
+                </p>
+              </div>
             </div>
           </div>
           <div
             data-testid="SwiperSlide"
           >
-            <span>
+            <div
+              class="flex-shrink-0"
+            >
               <img
                 alt="Cross-Platform Consistency"
+                class="h-[64px] w-auto"
                 src="/images/initiatives/release.svg"
               />
-            </span>
+            </div>
             <div
-              class=" space-y-6 mt-[106px]"
+              class="flex flex-col justify-between flex-grow mt-10"
             >
-              <h2
-                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-              >
-                Cross-Platform Consistency
-              </h2>
-              <p
-                class="text-grey text-l font-normal leading-7 mt-6"
-              >
-                Consistent behavior and builds across all major operating systems and hardware architectures.
-              </p>
+              <div>
+                <h2
+                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
+                >
+                  Cross-Platform Consistency
+                </h2>
+                <p
+                  class="text-grey text-l font-normal leading-7 mt-6"
+                >
+                  Consistent behavior and builds across all major operating systems and hardware architectures.
+                </p>
+              </div>
             </div>
           </div>
           <div
             data-testid="SwiperSlide"
           >
-            <span>
+            <div
+              class="flex-shrink-0"
+            >
               <img
                 alt="Community-Driven Development"
+                class="h-[64px] w-auto"
                 src="/images/initiatives/community.svg"
               />
-            </span>
+            </div>
             <div
-              class=" space-y-6 mt-[106px]"
+              class="flex flex-col justify-between flex-grow mt-10"
             >
-              <h2
-                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-              >
-                Community-Driven Development
-              </h2>
-              <p
-                class="text-grey text-l font-normal leading-7 mt-6"
-              >
-                Eclipse Adoptium projects are shaped by a vibrant, global community that is continuously improving and innovating.
-              </p>
+              <div>
+                <h2
+                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
+                >
+                  Community-Driven Development
+                </h2>
+                <p
+                  class="text-grey text-l font-normal leading-7 mt-6"
+                >
+                  Eclipse Adoptium projects are shaped by a vibrant, global community that is continuously improving and innovating.
+                </p>
+              </div>
             </div>
           </div>
           <div
             data-testid="SwiperSlide"
           >
-            <span>
+            <div
+              class="flex-shrink-0"
+            >
               <img
                 alt="Enterprise-Ready Support"
+                class="h-[64px] w-auto"
                 src="/images/initiatives/security.svg"
               />
-            </span>
+            </div>
             <div
-              class=" space-y-6 mt-[106px]"
+              class="flex flex-col justify-between flex-grow mt-10"
             >
-              <h2
-                class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-              >
-                Enterprise-Ready Support
-              </h2>
-              <p
-                class="text-grey text-l font-normal leading-7 mt-6"
-              >
-                Backed by enterprise-grade commercial supporters, ensuring seamless integration, scalability, and long-term sustainability.
-              </p>
+              <div>
+                <h2
+                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
+                >
+                  Enterprise-Ready Support
+                </h2>
+                <p
+                  class="text-grey text-l font-normal leading-7 mt-6"
+                >
+                  Backed by enterprise-grade commercial supporters, ensuring seamless integration, scalability, and long-term sustainability.
+                </p>
+              </div>
             </div>
           </div>
         </div>

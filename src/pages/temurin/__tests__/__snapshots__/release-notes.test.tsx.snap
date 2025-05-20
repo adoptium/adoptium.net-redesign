@@ -77,12 +77,16 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
     </div>
   </div>
   <div
-    class="mx-auto max-w-4xl p-6 lg:px-0 items-center text-center justify-center"
+    class="release-notes-container mx-auto max-w-4xl p-6 lg:px-0 items-center text-center justify-center"
   >
     <div
-      class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full"
+      class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full mb-4"
     >
-      release_name_mock
+      <h2
+        class="release-notes-title"
+      >
+        release_name_mock
+      </h2>
     </div>
     <div
       class="pt-3"
@@ -92,18 +96,22 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
         class="max-w-6xl"
         style="flex-grow: 1;"
       >
-        <p>
+        <p
+          class="release-notes-description"
+        >
           This section organizes the changes in the selected update release by the main component under which each issue is filed.
         </p>
-        <p>
+        <p
+          class="release-notes-description"
+        >
           <strong>
             The total number of fixes marked as P1 is: 1
           </strong>
         </p>
         <div
           aria-label="Release Notes"
-          class="MuiDataGrid-root MuiDataGrid-autoHeight MuiDataGrid-root--densityStandard MuiDataGrid-withBorderColor css-ot4nr4-MuiDataGrid-root"
-          style="--DataGrid-hasScrollX: 1; --DataGrid-hasScrollY: 0; --DataGrid-scrollbarSize: 0px; --DataGrid-rowWidth: 1300px; --DataGrid-columnsTotalWidth: 1300px; --DataGrid-leftPinnedWidth: 0px; --DataGrid-rightPinnedWidth: 0px; --DataGrid-headerHeight: 56px; --DataGrid-headersTotalHeight: 56px; --DataGrid-topContainerHeight: 56px; --DataGrid-bottomContainerHeight: 0px; --height: 52px;"
+          class="MuiDataGrid-root MuiDataGrid-autoHeight MuiDataGrid-root--densityStandard MuiDataGrid-withBorderColor css-1svx9d3-MuiDataGrid-root"
+          style="--DataGrid-hasScrollX: 1; --DataGrid-hasScrollY: 0; --DataGrid-scrollbarSize: 0px; --DataGrid-rowWidth: 1390px; --DataGrid-columnsTotalWidth: 1390px; --DataGrid-leftPinnedWidth: 0px; --DataGrid-rightPinnedWidth: 0px; --DataGrid-headerHeight: 56px; --DataGrid-headersTotalHeight: 56px; --DataGrid-topContainerHeight: 56px; --DataGrid-bottomContainerHeight: 0px; --height: 52px;"
         >
           <div
             class="MuiDataGrid-toolbarContainer css-128fb87-MuiDataGrid-toolbarContainer"
@@ -137,7 +145,9 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                   </svg>
                   <span
                     class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorPrimary css-aikwdp-MuiBadge-badge"
-                  />
+                  >
+                    0
+                  </span>
                 </span>
               </span>
               Filters
@@ -184,7 +194,7 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                       class="MuiDataGrid-columnHeader MuiDataGrid-columnHeader--sortable MuiDataGrid-columnHeader--sorted MuiDataGrid-withBorderColor"
                       data-field="priority"
                       role="columnheader"
-                      style="height: 56px; width: 100px;"
+                      style="height: 56px; width: 120px;"
                       tabindex="0"
                     >
                       <div
@@ -284,7 +294,7 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                       class="MuiDataGrid-columnHeader MuiDataGrid-withBorderColor"
                       data-field="type"
                       role="columnheader"
-                      style="height: 56px; width: 100px;"
+                      style="height: 56px; width: 130px;"
                       tabindex="-1"
                     >
                       <div
@@ -360,7 +370,7 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                       class="MuiDataGrid-columnHeader MuiDataGrid-withBorderColor"
                       data-field="component"
                       role="columnheader"
-                      style="height: 56px; width: 150px;"
+                      style="height: 56px; width: 180px;"
                       tabindex="-1"
                     >
                       <div
@@ -436,7 +446,7 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                       class="MuiDataGrid-columnHeader MuiDataGrid-withBorderColor"
                       data-field="id"
                       role="columnheader"
-                      style="height: 56px; width: 150px;"
+                      style="height: 56px; width: 160px;"
                       tabindex="-1"
                     >
                       <div
@@ -624,7 +634,7 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                       data-colindex="0"
                       data-field="priority"
                       role="gridcell"
-                      style="--width: 100px;"
+                      style="--width: 120px;"
                       tabindex="-1"
                     >
                       <span
@@ -642,7 +652,7 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                       data-colindex="1"
                       data-field="type"
                       role="gridcell"
-                      style="--width: 100px;"
+                      style="--width: 130px;"
                       tabindex="-1"
                     >
                       <span>
@@ -657,7 +667,7 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                       data-colindex="2"
                       data-field="component"
                       role="gridcell"
-                      style="--width: 150px;"
+                      style="--width: 180px;"
                       tabindex="-1"
                       title="component_mock"
                     >
@@ -671,10 +681,11 @@ exports[`Temurin Release Notes page > renders correctly 1`] = `
                       data-colindex="3"
                       data-field="id"
                       role="gridcell"
-                      style="--width: 150px;"
+                      style="--width: 160px;"
                       tabindex="-1"
                     >
                       <a
+                        class="issue-link"
                         href="https://link_mock/"
                         rel="noopener noreferrer"
                         target="_blank"

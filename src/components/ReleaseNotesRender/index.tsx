@@ -61,15 +61,15 @@ export const sortReleaseNotesBy = (releaseNotes: ReleaseNoteAPIResponse) => {
   return releaseNotes
 }
 
-const CustomToolbar: React.FunctionComponent<{
-  setFilterButtonEl: React.Dispatch<
-    React.SetStateAction<HTMLButtonElement | null>
-  >
-}> = ({ setFilterButtonEl }) => (
-  <GridToolbarContainer>
-    <GridToolbarFilterButton ref={setFilterButtonEl} />
-  </GridToolbarContainer>
-)
+const CustomToolbar = () => {
+  const [filterButtonEl, setFilterButtonEl] = React.useState<HTMLButtonElement | null>(null);
+  
+  return (
+    <GridToolbarContainer>
+      <GridToolbarFilterButton ref={setFilterButtonEl} />
+    </GridToolbarContainer>
+  );
+};
 
 const priorityValueOptions = []
 const typeValueOptions = []
@@ -81,7 +81,7 @@ const columns: GridColDef[] = [
     headerName: "Priority",
     type: "singleSelect",
     valueOptions: priorityValueOptions,
-    width: 100,
+    width: 120,
     renderCell: params => {
       const title = fetchTitle(params.value)
       return (
@@ -100,7 +100,7 @@ const columns: GridColDef[] = [
     headerName: "Type",
     type: "singleSelect",
     valueOptions: typeValueOptions,
-    width: 100,
+    width: 130,
     sortable: false,
     renderCell: params => <span>{params.value ? params.value : "Hidden"}</span>,
   },
@@ -109,16 +109,21 @@ const columns: GridColDef[] = [
     headerName: "Component",
     type: "singleSelect",
     valueOptions: componentValueOptions,
-    width: 150,
+    width: 180,
     sortable: false,
   },
   {
     field: "id",
     headerName: "Issue",
-    width: 150,
+    width: 160,
     sortable: false,
     renderCell: params => (
-      <a target="_blank" rel="noopener noreferrer" href={params.row.link}>
+      <a 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        href={params.row.link}
+        className="issue-link"
+      >
         {params.value}
       </a>
     ),
@@ -202,28 +207,28 @@ const ReleaseNotesRender = (): null | JSX.Element => {
   ).length
 
   return (
-    <div ref={ref} className="mx-auto max-w-4xl p-6 lg:px-0 items-center text-center justify-center">
-      <div className="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full">
-        {releaseNotesVersion}
+    <div ref={ref} className="release-notes-container mx-auto max-w-4xl p-6 lg:px-0 items-center text-center justify-center">
+      <div className="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full mb-4">
+        <h2 className="release-notes-title">{releaseNotesVersion}</h2>
       </div>
       <div className="pt-3" style={{ display: "flex", justifyContent: "center", height: "100%" }}>
         {!releaseNoteDataBag ? <div style={{ flexGrow: 1 }}><CircularProgress aria-label='loading spinner' /></div> :
           (<div className="max-w-6xl" style={{ flexGrow: 1 }}>
             {!releaseNotesVersion || releaseNoteDataBag?.isValid === false ? (
-              <>
-                <h2>Oops... We couldn't find those release notes</h2>
-                <span>
+              <div className="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg p-8 text-center">
+                <h2 className="release-notes-title mb-4">Oops... We couldn't find those release notes</h2>
+                <span className="text-white/80 text-lg">
                   Please ensure that you have a specified a version using the
-                  version URL parameter: <code>?version=x.x.x</code>
+                  version URL parameter: <code className="bg-[#14003c] px-2 py-1 rounded text-pink">?version=x.x.x</code>
                 </span>
-              </>
+              </div>
             ) : (
               <>
-                <p>
+                <p className="release-notes-description">
                   This section organizes the changes in the selected update
                   release by the main component under which each issue is filed.
                 </p>
-                <p>
+                <p className="release-notes-description">
                   <strong>{`The total number of fixes marked as P1 is: ${totalP1}`}</strong>
                 </p>
                 <DataGrid
@@ -262,6 +267,17 @@ const ReleaseNotesRender = (): null | JSX.Element => {
                   sx={{
                     [`& .${gridClasses.cell}`]: {
                       py: 1,
+                    },
+                    [`& .${gridClasses.columnHeaders}`]: {
+                      backgroundColor: 'rgba(43, 26, 79, 0.95)',
+                      color: 'white',
+                    },
+                    [`& .${gridClasses.columnHeader}`]: {
+                      backgroundColor: 'rgba(43, 26, 79, 0.95)',
+                      color: 'white',
+                    },
+                    [`& .${gridClasses.columnHeaderTitle}`]: {
+                      color: 'white',
                     },
                   }}
                 />

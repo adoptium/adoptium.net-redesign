@@ -37,22 +37,25 @@ const PlatformMatrix = () => {
           <LiaTimesSolid size={25} className="text-pink" /> Not supported
         </div>
       </div>
-      <div className="bg-[#200D46] p-4 md:p-8 rounded-[24px] mb-4">
-        <div className="grid grid-cols-5 gap-5 pb-6 overflow-auto w-full text-center">
+      <div className="bg-[#200D46] p-6 md:p-8 rounded-[24px] mb-6">
+        <div className="grid grid-cols-6 gap-6 pb-6 overflow-auto w-full text-center">
           <div className="text-[20px] leading-[140%] text-grey font-semibold">
             <Trans>Operating System</Trans>
           </div>
           <div className="text-[20px] leading-[140%] text-grey font-semibold">
-            Temurin Version 8
+            Version 8
           </div>
           <div className="text-[20px] leading-[140%] text-grey font-semibold">
-            Temurin Version 11
+            Version 11
           </div>
           <div className="text-[20px] leading-[140%] text-grey font-semibold">
-            Temurin Version 17
+            Version 17
           </div>
           <div className="text-[20px] leading-[140%] text-grey font-semibold">
-            Temurin Version 21
+            Version 21
+          </div>
+          <div className="text-[20px] leading-[140%] text-grey font-semibold">
+            Version 24
           </div>
         </div>
         {platformSupportData.platforms.map((platform, index) => (
@@ -114,14 +117,14 @@ const PlatformMatrix = () => {
                     <div
                       className={`flex items-center justify-center min-w-[1040px] md:px-3 py-5 rounded-[24px] ${isEven(distroIndex) && `bg-[#2B194F]`}`}
                     >
-                      <h3 className="tab-button-text text-white flex justify-center items-center min-w-[194px] lg:min-w-[300px]">
+                      <h3 className="tab-button-text text-white flex items-center min-w-[164px] lg:min-w-[220px] ml:30">
                         {distro.name}
                       </h3>
                       {Object.entries(distro.versions).map(
                         ([version, { supported, docker }], versionIndex) => (
                           <div
                             key={versionIndex}
-                            className="flex items-center justify-center gap-3 min-w-[194px]"
+                            className="flex items-center justify-center gap-3 min-w-[164px]"
                           >
                             <span>
                               {supported ? (

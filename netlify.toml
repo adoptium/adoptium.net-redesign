@@ -23,8 +23,8 @@ GATSBY_CPU_COUNT = "1"
   force = true
 
 [[redirects]]
-  from = "https://adoptium.net/blog/*"
-  to = "https://adoptium.net/news/:splat"
+  from = "/blog/*"
+  to = "/news/:splat"
   status = 301
   force = true
 

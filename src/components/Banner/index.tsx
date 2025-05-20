@@ -1,25 +1,51 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { RedIcon } from "../Common/Icon"
 
 const Banner = () => {
-  return null
+  // return null
 
   // The following is an example that can be used for future banner alert
   // Comment Out The Above Line ( return null ; ) and uncomment the below
 
-  // return (
-  //   <div className="bg-[#0E002A] py-4 w-full">
-  //     <div className="flex justify-center items-center">
-  //       <div className="flex items-center gap-3">
-  //         <RedIcon />
-  //         <h2 className="text-[16px] font-bold text-white leading-[150%]">
-  //           13th October 2023: We are creating the October 2023 PSU binaries for Eclipse Temurin 8u392, 11.0.21 and 17.0.9 and 21.0.1<br/>
-  //           You can track progress <a className='text-primary' href="https://github.com/adoptium/temurin/issues/6">by platform</a>.
-  //         </h2>
-  //       </div>
-  //     </div>
-  //   </div>
-  // )  
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Animation effect when component mounts
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <div className={`bg-gradient-to-r from-[#0E002A] via-[#240b50] to-[#9a227a] py-5 w-full shadow-lg transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center gap-4 mb-3 md:mb-0">
+            <div className="transform hover:scale-110 transition-transform duration-300">
+              <RedIcon />
+            </div>
+            <div>
+              <h2 className="text-[16px] md:text-[18px] font-extrabold text-white leading-tight">
+                <span className="text-primary">Adoptium Summit 2025</span> - CFP is Open!
+              </h2>
+              <p className="text-[14px] text-gray-200 mt-1 max-w-2xl">
+                Join us Virtually on Wednesday, October 01st 13-15 CEST and showcase your innovative work with Adoptium technologies to your industry peers!
+              </p>
+            </div>
+          </div>
+          <div className="mt-2 md:mt-0">
+            <a 
+              href="https://forms.gle/vM5rigSGfvFTLVVQ7" 
+              className="px-6 py-2 bg-primary hover:bg-primary-dark text-white font-bold rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center group"
+            >
+              Submit Your Proposal
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  )  
 }
 
 export default Banner

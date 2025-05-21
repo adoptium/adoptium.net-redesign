@@ -4,7 +4,11 @@ import { Link as Noni18nLink } from "gatsby"
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import { FaLinkedin, FaYoutube, FaGithub, FaSlack, FaRss } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { MdSwapHoriz } from 'react-icons/md';
 import { Trans } from 'gatsby-plugin-react-i18next';
+
+// CSS for the Try New Site button
+import './try-new-site-button.css';
 
 // @ts-ignore
 import Logo from '../../images/adoptium-logo-dark.svg';
@@ -18,6 +22,20 @@ const ExactNavLink = props => (
 )
 
 const NavBar = (): JSX.Element => {
+  // Function to switch to the new site
+  const goToNewSite = () => {
+    if (typeof window !== 'undefined') {
+      // Set the cookie to view the new site (main branch)
+      const expirationDate = new Date();
+      expirationDate.setDate(expirationDate.getDate() + 30);
+      
+      // Set the cookie for Netlify split testing
+      document.cookie = `nf_ab=main; expires=${expirationDate.toUTCString()}; path=/`;
+      
+      // Reload the page to apply the change
+      window.location.reload();
+    }
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-purple"
@@ -93,6 +111,21 @@ const NavBar = (): JSX.Element => {
           </ul>
         </div>
         <ul className="nav col-md-5 col-9 pb-4 justify-content-end list-unstyled d-flex hide-on-mobile p-3">
+                      {typeof window !== 'undefined' && (
+              <li className="nav-item" style={{ marginRight: '15px' }}>
+                <button 
+                  onClick={goToNewSite} 
+                  className="try-new-site-button"
+                  aria-label="Try new site design"
+                  title="Try new site design"
+                >
+                  <MdSwapHoriz size={16} style={{ marginRight: '4px' }} />
+                  <span>
+                    Try New Design
+                  </span>
+                </button>
+              </li>
+            )}
           { typeof window !== 'undefined' && window.location.href.includes('/blog') &&
             <li className="ms-3"><Noni18nLink style={navbarIcon} aria-label="Adoptium RSS Feed" to="/rss.xml"><FaRss size={25} /></Noni18nLink></li>
           }

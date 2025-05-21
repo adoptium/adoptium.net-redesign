@@ -4,7 +4,6 @@ import { DownloadIcon } from "../../Common/AppIcon"
 const Heading = ({ results }) => {
   return (
     <section className="py-8 md:py-16">
-      <h2 className="main-heading mb-10">Latest Temurin</h2>
       <div className="flex justify-center items-center">
         {results && results['source'] && (
           <a href={results['source'].binary.package.link} target="_blank" rel="noreferrer">

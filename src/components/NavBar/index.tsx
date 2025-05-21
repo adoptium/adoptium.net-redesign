@@ -70,6 +70,7 @@ const navigation: NavItem[] = [
       // { name: "Our Community", href: "" },
       { name: "Support", href: "/support" },
       { name: "News & Updates", href: "/news" },
+      { name: "Slack", href: "/slack" },
       // { name: "Events", href: "/events" },
     ],
   },

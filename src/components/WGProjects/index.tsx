@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "Eclipse AQAvit",
     imagePath: "aqavit-project.svg",
     link: "/aqavit",
-    overline: "TCK Test Suite",
+    overline: "Quality Assurance",
   },
   {
     title: "Eclipse Mission Control",

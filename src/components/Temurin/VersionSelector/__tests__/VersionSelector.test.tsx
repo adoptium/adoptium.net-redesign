@@ -37,6 +37,8 @@ describe("VersionSelector component", () => {
     ],
     updateVersion: vi.fn(),
     defaultVersion: "latest",
+    updateOS: vi.fn(),
+    updateArch: vi.fn(),
   }
 
   beforeEach(() => {
@@ -91,6 +93,12 @@ describe("VersionSelector component", () => {
     expect(setURLParam).toHaveBeenCalledWith("version", "latest")
     expect(mockProps.updateVersion).toHaveBeenCalledWith("latest")
     expect(mockProps.setActiveVersionTab).toHaveBeenCalledWith(1)
+    
+    // Verify OS and arch are reset to "any"
+    expect(setURLParam).toHaveBeenCalledWith("os", "any")
+    expect(mockProps.updateOS).toHaveBeenCalledWith("any")
+    expect(setURLParam).toHaveBeenCalledWith("arch", "any")
+    expect(mockProps.updateArch).toHaveBeenCalledWith("any")
   })
 
   it("calls setActiveTabVersion with specific version when a version button is clicked", () => {
@@ -103,6 +111,12 @@ describe("VersionSelector component", () => {
     expect(setURLParam).toHaveBeenCalledWith("version", 11)
     expect(mockProps.updateVersion).toHaveBeenCalledWith(11)
     expect(mockProps.setActiveVersionTab).toHaveBeenCalledWith(11)
+    
+    // Verify OS and arch are reset to "any"
+    expect(setURLParam).toHaveBeenCalledWith("os", "any")
+    expect(mockProps.updateOS).toHaveBeenCalledWith("any")
+    expect(setURLParam).toHaveBeenCalledWith("arch", "any")
+    expect(mockProps.updateArch).toHaveBeenCalledWith("any")
   })
 
   it("has no accessibility violations", async () => {

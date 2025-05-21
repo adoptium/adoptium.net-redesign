@@ -8,8 +8,22 @@ const VersionSelector = ({
   versions,
   updateVersion,
   defaultVersion,
+  updateOS,
+  updateArch,
 }) => {
   const setActiveTabVersion = useCallback(newActiveVersionTab => {
+    // Reset OS and arch to "any" whenever a version tab is clicked
+    if (updateOS) {
+      setURLParam("os", "any")
+      updateOS("any")
+    }
+    
+    if (updateArch) {
+      setURLParam("arch", "any")
+      updateArch("any")
+    }
+    
+    // Handle version update
     if (newActiveVersionTab === 1) {
       setURLParam("version", defaultVersion)
       updateVersion(defaultVersion)
@@ -17,8 +31,9 @@ const VersionSelector = ({
       setURLParam("version", newActiveVersionTab)
       updateVersion(newActiveVersionTab)
     }
+    
     setActiveVersionTab(newActiveVersionTab)
-  }, [])
+  }, [updateOS, updateArch])
 
   return (
     <div className="w-full max-w-[1264px] mx-auto ">

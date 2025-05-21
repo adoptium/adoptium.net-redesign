@@ -140,13 +140,9 @@ const ReleaseSelector: React.FC<ReleaseSelectorProps> = ({
     if (filteredArchList.length === 0) return [];
     return [{ name: "Any", value: "any" }, ...filteredArchList];
   }, [filteredArchList]);
+
   
-  // Add "Any" option to version list
-  const versionsWithAny = useMemo(() => {
-    return [{ name: "Any", value: "any" }, ...versionsList];
-  }, [versionsList]);
-  
-  const data = [osListWithAny, archListWithAny, versionsWithAny]
+  const data = [osListWithAny, archListWithAny, versionsList]
   if (marketplace) {
     const packageTypesWithAny = useMemo(() => {
       return [{ name: "Any", value: "any" }, ...packageTypes];

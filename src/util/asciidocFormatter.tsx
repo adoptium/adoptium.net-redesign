@@ -73,12 +73,28 @@ const AsciiDocFormatter = ({ content, t }) => {
           child.attribs.class.includes("sectlevel1"),
       )
       return (
-        <details className="p-3 my-3 bg-grey">
-          <summary className="lead">
-            {t("asciidoc.table.of.contents", "Table of Contents")}
-          </summary>
-          {tocList ? <ul>{domToReact(tocList.children)}</ul> : null}
-        </details>
+        <div className="my-6 rounded-lg shadow-md overflow-hidden border border-gray-300 dark:border-gray-700">
+          <details className="group">
+            <summary className="flex items-center justify-between p-4 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 cursor-pointer hover:from-gray-200 hover:to-gray-300 dark:hover:from-gray-700 dark:hover:to-gray-600 transition-all duration-300">
+              <div className="flex items-center">
+                <i className="fa fa-list-ul mr-3 text-pink dark:text-purple-400" aria-hidden="true" />
+                <span className="font-semibold text-lg text-gray-800 dark:text-gray-200">
+                  {t("asciidoc.table.of.contents", "Table of Contents")}
+                </span>
+              </div>
+              <i className="fa fa-chevron-down text-pink dark:text-purple-400 group-open:rotate-180 transition-transform duration-300" aria-hidden="true" />
+            </summary>
+            <div className="p-4 bg-white dark:bg-gray-800">
+              {tocList ? (
+                <div className="toc-container pl-2">
+                  <ul className="space-y-1 text-gray-800 dark:text-gray-200">
+                    {domToReact(tocList.children)}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+          </details>
+        </div>
       )
     }
 

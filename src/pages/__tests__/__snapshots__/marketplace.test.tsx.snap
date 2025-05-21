@@ -274,7 +274,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                     <span
                       class="flex items-center justify-between text-nowrap"
                     >
-                      JDK
+                      Any
                     </span>
                     <span>
                       <svg

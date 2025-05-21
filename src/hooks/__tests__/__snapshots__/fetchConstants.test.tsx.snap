@@ -3,7 +3,7 @@
 exports[`fetchArches > URL is set correctly 1`] = `
 [
   {
-    "name": "Mock_aarch64",
+    "name": "mock_aarch64",
     "value": "mock_aarch64",
   },
 ]

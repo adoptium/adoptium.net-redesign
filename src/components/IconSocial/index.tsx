@@ -80,7 +80,7 @@ const SocialIcons = () => {
 
       <li>
         <a
-          href="https://mastodon.social/@eclipseadoptium@fosstodon.org"
+          href="https://fosstodon.org/@eclipseadoptium"
           rel="noreferrer"
           target="_blank"
           className="leading-6 transition hover:opacity-75 dark:text-gray-200"

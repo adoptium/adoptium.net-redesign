@@ -121,7 +121,7 @@ exports[`Download page > renders correctly - vendor 1`] = `
       <p
         class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
       >
-        Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
+        You have successfully downloaded Temurin. For more details on usage and configuration, please take a look at our Installation Guide.
       </p>
       <a
         href="/en/installation"
@@ -577,7 +577,7 @@ exports[`Download page > renders correctly 1`] = `
       <p
         class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
       >
-        Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
+        You have successfully downloaded Temurin. For more details on usage and configuration, please take a look at our Installation Guide.
       </p>
       <a
         href="/en/installation"

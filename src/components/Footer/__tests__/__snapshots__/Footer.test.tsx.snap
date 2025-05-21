@@ -607,7 +607,7 @@ exports[`Footer component > renders correctly 1`] = `
             <li>
               <a
                 class="leading-6 transition hover:opacity-75 dark:text-gray-200"
-                href="https://mastodon.social/@eclipseadoptium@fosstodon.org"
+                href="https://fosstodon.org/@eclipseadoptium"
                 rel="noreferrer"
                 target="_blank"
               >

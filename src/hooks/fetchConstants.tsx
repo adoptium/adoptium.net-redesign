@@ -47,7 +47,7 @@ export function fetchArches(isVisible: boolean): Architecture[] {
                 .then(function (response) {
                     const newArches = response.data
                         .map(s => {
-                            const a: Architecture = { name: capitalize(s), value: s.toLowerCase() }
+                            const a: Architecture = { name: s, value: s.toLowerCase() }
                             if(a.name === 'x32') a.name = 'x86'
                             return a;
                         })

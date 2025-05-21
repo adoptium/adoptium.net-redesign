@@ -206,7 +206,7 @@ const AQAvit = () => {
             {/* AQAvit Verification Section */}
             <div className="grid md:grid-cols-2 gap-12 items-center mt-24">
               <div>
-                <span className="bg-pink-900/50 text-pink-200 text-xs font-semibold px-3 py-1 rounded-full border border-pink-500/50 shadow-sm">CERTIFICATION</span>
+                <span className="bg-pink-900/50 text-pink-200 text-xs font-semibold px-3 py-1 rounded-full border border-pink-500/50 shadow-sm">VERIFICATION</span>
                 <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 text-white">AQAvit Verification</h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
                   The AQAvit project was created to "make quality certain to happen." AQAvit certification 

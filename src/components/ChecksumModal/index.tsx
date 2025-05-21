@@ -1,11 +1,12 @@
 import React, { Fragment, useRef, useState, useEffect } from "react"
-import { Dialog, Transition } from "@headlessui/react"
-import { FaClipboard, FaCheck, FaInfoCircle } from "react-icons/fa"
+import { Dialog, DialogTitle, DialogPanel, Transition, TransitionChild } from "@headlessui/react"
+import { FaClipboard, FaCheck, FaInfoCircle, FaWindows, FaApple, FaLinux } from "react-icons/fa"
 
 const ChecksumModal = ({ open, setOpen, checksum }) => {
   const cancelButtonRef = useRef(null)
   const [copied, setCopied] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
+  const [activeOS, setActiveOS] = useState("windows") // Default to Windows, could be set based on detected OS
 
   useEffect(() => {
     let timer
@@ -27,14 +28,14 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
   }
 
   return (
-    <Transition.Root show={open} as={Fragment}>
+    <Transition show={open} as={Fragment}>
       <Dialog
         as="div"
         className="relative z-10"
         initialFocus={cancelButtonRef}
         onClose={() => setOpen(false)}
       >
-        <Transition.Child
+        <TransitionChild
           as={Fragment}
           enter="ease-out duration-300"
           enterFrom="opacity-0"
@@ -44,11 +45,11 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
           leaveTo="opacity-0"
         >
           <div className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm transition-opacity" />
-        </Transition.Child>
+        </TransitionChild>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
           <div className="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter="ease-out duration-300"
               enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
@@ -57,7 +58,7 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative transform overflow-hidden rounded-xl bg-gradient-to-br from-[#200E46] to-[#2B1A4F] text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-xl">
+              <DialogPanel className="relative transform overflow-hidden rounded-xl bg-gradient-to-br from-[#200E46] to-[#2B1A4F] text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-3xl">
                 <div className="px-6 pb-6 pt-5 sm:p-8">
                   <div className="flex items-start">
                     <div className="mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-100/20 sm:mx-0 sm:h-10 sm:w-10">
@@ -67,12 +68,12 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
                       />
                     </div>
                     <div className="mt-0 ml-4 text-left">
-                      <Dialog.Title
+                      <DialogTitle
                         as="h3"
                         className="text-xl leading-6 font-semibold text-white"
                       >
                         Checksum (SHA256)
-                      </Dialog.Title>
+                      </DialogTitle>
 
                       <div className="mt-6 space-y-4">
                         <div className="flex items-start space-x-2">
@@ -91,13 +92,14 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
                                 ref={inputRef}
                                 readOnly
                                 onClick={handleCopy}
-                                className="w-full px-4 py-3 text-gray-200 bg-[#1A0B38] font-mono text-sm focus:outline-none"
+                                className="w-full px-4 py-3 text-gray-200 bg-[#1A0B38] font-mono text-sm focus:outline-none overflow-x-auto"
                                 value={checksum}
+                                style={{ wordBreak: "break-all" }}
                               />
                               <button
                                 type="button"
                                 onClick={handleCopy}
-                                className={`px-4 flex items-center justify-center transition-colors ${
+                                className={`px-4 flex items-center justify-center transition-colors flex-shrink-0 ${
                                   copied
                                     ? "text-green-400"
                                     : "text-gray-200 hover:text-white"
@@ -114,28 +116,81 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
                         </div>
 
                         <div className="bg-[#1A0B38] rounded-lg p-4 mt-4">
-                          <p className="text-sm text-gray-300 mb-2 font-medium">
+                          <p className="text-sm text-gray-300 mb-3 font-medium">
                             Verify using:
                           </p>
-                          <div className="grid grid-cols-1 gap-2 text-xs text-gray-300">
-                            <div className="flex items-center justify-between">
-                              <span>Windows:</span>
-                              <code className="bg-[#2B1A4F] px-2 py-1 rounded text-gray-200">
-                                certUtil -hashfile file SHA256
-                              </code>
-                            </div>
-                            <div className="flex items-center justify-between">
-                              <span>Linux:</span>
-                              <code className="bg-[#2B1A4F] px-2 py-1 rounded text-gray-200">
-                                sha256sum file
-                              </code>
-                            </div>
-                            <div className="flex items-center justify-between">
-                              <span>macOS:</span>
-                              <code className="bg-[#2B1A4F] px-2 py-1 rounded text-gray-200">
-                                shasum -a 256 file
-                              </code>
-                            </div>
+                          
+                          {/* OS Tabs */}
+                          <div className="flex border-b border-gray-700 mb-3">
+                            <button
+                              onClick={() => setActiveOS("windows")}
+                              className={`flex items-center space-x-1.5 px-4 py-2 text-sm rounded-t-lg transition ${
+                                activeOS === "windows"
+                                  ? "bg-[#2B1A4F] text-white border-b-2 border-pink-500"
+                                  : "text-gray-400 hover:text-gray-200 hover:bg-[#2B1A4F]/40"
+                              }`}
+                            >
+                              <FaWindows className="h-4 w-4" />
+                              <span>Windows</span>
+                            </button>
+                            <button
+                              onClick={() => setActiveOS("linux")}
+                              className={`flex items-center space-x-1.5 px-4 py-2 text-sm rounded-t-lg transition ${
+                                activeOS === "linux"
+                                  ? "bg-[#2B1A4F] text-white border-b-2 border-pink-500"
+                                  : "text-gray-400 hover:text-gray-200 hover:bg-[#2B1A4F]/40"
+                              }`}
+                            >
+                              <FaLinux className="h-4 w-4" />
+                              <span>Linux</span>
+                            </button>
+                            <button
+                              onClick={() => setActiveOS("macos")}
+                              className={`flex items-center space-x-1.5 px-4 py-2 text-sm rounded-t-lg transition ${
+                                activeOS === "macos"
+                                  ? "bg-[#2B1A4F] text-white border-b-2 border-pink-500"
+                                  : "text-gray-400 hover:text-gray-200 hover:bg-[#2B1A4F]/40"
+                              }`}
+                            >
+                              <FaApple className="h-4 w-4" />
+                              <span>macOS</span>
+                            </button>
+                          </div>
+                          
+                          {/* Command display based on selected OS */}
+                          <div className="bg-[#2B1A4F] p-3 rounded">
+                            {activeOS === "windows" && (
+                              <div className="flex flex-col">
+                                <code className="text-sm text-gray-200 font-mono">
+                                  certUtil -hashfile file SHA256
+                                </code>
+                                <p className="text-xs text-gray-400 mt-2">
+                                  Replace "file" with the actual filename you downloaded
+                                </p>
+                              </div>
+                            )}
+                            
+                            {activeOS === "linux" && (
+                              <div className="flex flex-col">
+                                <code className="text-sm text-gray-200 font-mono">
+                                  sha256sum file
+                                </code>
+                                <p className="text-xs text-gray-400 mt-2">
+                                  Replace "file" with the actual filename you downloaded
+                                </p>
+                              </div>
+                            )}
+                            
+                            {activeOS === "macos" && (
+                              <div className="flex flex-col">
+                                <code className="text-sm text-gray-200 font-mono">
+                                  shasum -a 256 file
+                                </code>
+                                <p className="text-xs text-gray-400 mt-2">
+                                  Replace "file" with the actual filename you downloaded
+                                </p>
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -163,12 +218,12 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
                     {copied ? "Copied" : "Copy"}
                   </button>
                 </div>
-              </Dialog.Panel>
-            </Transition.Child>
+              </DialogPanel>
+            </TransitionChild>
           </div>
         </div>
       </Dialog>
-    </Transition.Root>
+    </Transition>
   )
 }
 

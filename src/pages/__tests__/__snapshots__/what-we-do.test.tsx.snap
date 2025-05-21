@@ -230,7 +230,7 @@ exports[`What We Do page > renders correctly 1`] = `
                 <p
                   class="text-rose-600 mb-0 text-base leading-6 font-bold"
                 >
-                  TCK Test Suite
+                  Quality Assurance
                 </p>
               </div>
               <h2

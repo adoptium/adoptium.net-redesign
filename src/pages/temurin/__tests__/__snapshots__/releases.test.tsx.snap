@@ -86,26 +86,26 @@ exports[`Releases page > renders correctly 1`] = `
         class="w-full max-w-[1264px] mx-auto "
       >
         <div
-          class="overflow-auto relative min-w-full w-full "
+          class="relative min-w-full w-full overflow-auto md:overflow-visible"
         >
           <span
             class="h-[1px] w-full bg-[#3E3355] inline-block absolute bottom-0 z-[-1]"
           />
           <div
-            class="flex space-x-10 whitespace-nowrap   lg:justify-center py-3"
+            class="flex space-x-10 whitespace-nowrap lg:justify-center py-3"
           >
             <button>
               <span
-                class=" py-3  w-full text-base font-normal leading-6 
-                outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary  border-b-[2px] text-white"
+                class="py-3 w-full text-base font-normal leading-6 
+            outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary border-b-[2px] text-white"
               >
                 All Versions
               </span>
             </button>
             <button>
               <span
-                class=" py-3  w-full text-base font-normal leading-6
-                    outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary  border-b-[2px] text-white"
+                class="py-3 w-full text-base font-normal leading-6
+            outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary border-b-[2px] text-white"
               >
                 JDK 
                 1 - LTS
@@ -152,7 +152,7 @@ exports[`Releases page > renders correctly 1`] = `
               </span>
             </button>
             <div
-              class="w-full lg:overflow-visible overflow-auto hidden sm:block"
+              class="w-full lg:overflow-visible overflow-hidden hidden sm:block"
             >
               <div
                 class="flex items-center gap-5 justify-between flex-nowrap min-w-[1039px]"
@@ -180,7 +180,7 @@ exports[`Releases page > renders correctly 1`] = `
                       <span
                         class="flex items-center justify-between text-nowrap"
                       >
-                        mock_macos
+                        Any
                       </span>
                       <span>
                         <svg
@@ -223,7 +223,7 @@ exports[`Releases page > renders correctly 1`] = `
                       <span
                         class="flex items-center justify-between text-nowrap"
                       >
-                        mock_aarch64
+                        Any
                       </span>
                       <span>
                         <svg

@@ -93,7 +93,7 @@ const DownloadPage = ({ location }) => {
       />
       <ImageText
         title="What to do now?"
-        description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
+        description="You have successfully downloaded Temurin. For more details on usage and configuration, please take a look at our Installation Guide."
         linkText="Installation Guide"
         link="/installation"
       />

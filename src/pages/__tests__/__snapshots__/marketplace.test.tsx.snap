@@ -117,7 +117,7 @@ exports[`Marketplace page > renders correctly 1`] = `
             </span>
           </button>
           <div
-            class="w-full lg:overflow-visible overflow-auto hidden sm:block"
+            class="w-full lg:overflow-visible overflow-hidden hidden sm:block"
           >
             <div
               class="flex items-center gap-5 justify-between flex-nowrap min-w-[1039px]"
@@ -274,7 +274,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                     <span
                       class="flex items-center justify-between text-nowrap"
                     >
-                      JDK
+                      Any
                     </span>
                     <span>
                       <svg
@@ -358,7 +358,7 @@ exports[`Marketplace page > renders correctly 1`] = `
                 />
                 <img
                   alt="Adoptium icon"
-                  class="mb-0 p-1 relative z-10 transition-all duration-300 group-hover:scale-105 
+                  class="mb-0 p-1 relative transition-all duration-300 group-hover:scale-105 
                       "
                   src="/images/vendors/vendor-adoptium.png"
                 />

@@ -14,42 +14,43 @@ const EditLink = ({ relativePath }: Props) => {
   const href = `https://github.com/adoptium/adoptium.net/edit/main/content/asciidoc-pages/${relativePath}`
 
   return (
-    <div className="w-full px-6 py-8 rounded-2xl border-2 border-white/50 flex-col justify-center items-start gap-2 inline-flex">
-      <div className="self-stretch justify-start items-center gap-4 inline-flex">
-        <div className="w-20 h-20 relative">
+    <div className="w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 px-8 py-6 rounded-2xl border border-white/10 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="flex items-center gap-5">
+        <div className="relative w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
+          <div className="absolute inset-0 bg-gradient-to-tr from-pink-500 to-purple-600 rounded-full opacity-30 blur-md"></div>
           <img
-            className="w-20 h-20 absolute border border-white backdrop-blur-md"
+            className="relative w-full h-full p-3 bg-[#200D46]/60 border border-white/20 rounded-full shadow-md"
             src="/images/icons/edit.svg"
             aria-label="edit icon"
           />
         </div>
-        <div className="grow shrink basis-0 flex-col justify-center items-start gap-6 inline-flex">
-          <div className="self-stretch flex-col justify-center items-start gap-2 flex">
-            <div className="self-stretch text-white text-xl md:text-2xl font-semibold md:leading-loose">
-              <Trans
-                i18nKey="asciidoc.edit.link.title"
-                defaults="Help us make these docs great!"
-              />
-            </div>
-            <div className="self-stretch">
-              <span className="text-white text-base font-normal leading-normal">
-                <Trans
-                  i18nKey="asciidoc.edit.link.content"
-                  defaults="All Adoptium docs are open source. See something that's wrong or unclear?"
-                />
-              </span>
-            </div>
-          </div>
-          <a href={href} target="_blank" rel="noopener noreferrer">
-            <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[154px] h-[48px] block ">
-              <Trans
-                i18nKey="asciidoc.edit.link.button"
-                defaults="Edit this page"
-              />
-            </button>
-          </a>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-white text-xl md:text-2xl font-bold leading-tight">
+            <Trans
+              i18nKey="asciidoc.edit.link.title"
+              defaults="Help us make these docs great!"
+            />
+          </h3>
+          <p className="text-white/90 text-sm md:text-base font-normal leading-relaxed max-w-lg">
+            <Trans
+              i18nKey="asciidoc.edit.link.content"
+              defaults="All Adoptium docs are open source. See something that's wrong or unclear?"
+            />
+          </p>
         </div>
       </div>
+      <a href={href} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+        <button className="group relative px-6 py-3 overflow-hidden rounded-xl bg-gradient-to-r from-[#FF3366] to-[#9933FF] text-white text-base leading-6 font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105">
+          <span className="relative z-10 flex items-center gap-2">
+            <IoMdGitPullRequest className="h-5 w-5" />
+            <Trans
+              i18nKey="asciidoc.edit.link.button"
+              defaults="Edit this page"
+            />
+          </span>
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </button>
+      </a>
     </div>
   )
 }

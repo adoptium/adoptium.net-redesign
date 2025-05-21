@@ -19,12 +19,12 @@ const BusinessBenefits = () => {
         subtitle="Business Benefits"
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
       />
-      <ImageText
+      {/* <ImageText
         title="More than 10 years' experience, and a focus firmly on your future"
         description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
         linkText="Learn More"
         link="#"
-      />
+      /> */}
       <UsingTemurin />
       <Logos
         members={LogoType.ADOPTERS}
@@ -34,7 +34,7 @@ const BusinessBenefits = () => {
       <Testimonials />
       <ImageText
         title="Need support with Temurin?"
-        description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
+        description="Eclipse Temurin is supported by a vibrant community of developers and users. If you need help, please reach out to us."
         linkText="Get Support"
         link="/support"
       />

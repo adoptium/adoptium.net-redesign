@@ -175,6 +175,8 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
             versions={LTSVersions}
             updateVersion={udateVersion}
             defaultVersion={data.mostRecentLts.version}
+            updateOS={osUpdater}
+            updateArch={archUpdater}
           />
           {activeVersionSelectorTab === 1 ? (
             <ReleaseSelector

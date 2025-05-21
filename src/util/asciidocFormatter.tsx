@@ -84,10 +84,10 @@ const AsciiDocFormatter = ({ content, t }) => {
               </div>
               <i className="fa fa-chevron-down text-pink dark:text-purple-400 group-open:rotate-180 transition-transform duration-300" aria-hidden="true" />
             </summary>
-            <div className="p-4 bg-white dark:bg-gray-800">
+            <div className="p-4 bg-gray-50 dark:bg-gray-800">
               {tocList ? (
-                <div className="toc-container pl-2">
-                  <ul className="space-y-1 text-gray-800 dark:text-gray-200">
+                <div className="toc-container pl-2 not-prose [&_a]:text-gray-700 [&_a:hover]:text-gray-900 dark:[&_a]:text-gray-200 dark:[&_a:hover]:text-white">
+                  <ul className="space-y-1">
                     {domToReact(tocList.children)}
                   </ul>
                 </div>

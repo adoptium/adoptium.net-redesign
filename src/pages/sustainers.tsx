@@ -115,17 +115,17 @@ const Sponsors = () => {
   const BecomeSustainer = props => (
     <div
       className={classNames(
-        "flex flex-col md:flex-row gap-4 justify-center absolute items-center mt-[30px] md:-mt-[98px] w-full",
+        "flex flex-col md:flex-row gap-6 justify-center absolute items-center mt-[30px] md:-mt-[98px] w-full z-10",
         props.classes,
       )}
     >
-      <a href="https://github.com/sponsors/adoptium" target="_blank">
-        <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
+      <a href="https://github.com/sponsors/adoptium" target="_blank" className="transform transition-transform duration-300 hover:scale-105">
+        <button className="rounded-xl bg-gradient-to-r from-[#ff1464] to-[#FF7994] text-white text-base font-medium w-[290px] h-[50px] shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 transition-all duration-300 ease-in-out">
           Become an Individual Sustainer
         </button>
       </a>
-      <Link to="/become-a-sustainer">
-        <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[290px] h-[48px]  transition-all duration-500 ease-in-out ">
+      <Link to="/become-a-sustainer" className="transform transition-transform duration-300 hover:scale-105">
+        <button className="rounded-xl bg-transparent border-2 border-[#ff1464] text-white text-base font-medium w-[290px] h-[50px] hover:bg-[#ff1464]/10 transition-all duration-300 ease-in-out">
           Become a Corporate Sustainer
         </button>
       </Link>
@@ -217,48 +217,59 @@ const Sponsors = () => {
 
   return (
     <Layout>
-      <div className="relative w-full">
+      <div className="relative w-full overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#0d0129]/80 via-[#410170]/60 to-[#0d0129]/80"></div>
+          <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-[#ff1464]/10 filter blur-[100px]"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#410170]/20 filter blur-[120px]"></div>
+        </div>
         <PageHeader
           title="Join us in strengthening the future of Eclipse Temurin"
           subtitle="Become a Corporate Sustainer"
-          className={"max-w-[1016px] mx-auto"}
+          className={"max-w-[1016px] mx-auto relative z-10"}
         />
         <BecomeSustainer />
       </div>
 
-      <div className="w-full flex flex-col justify-center items-center pt-[240px] md:pt-[100px]">
+      <div className="w-full flex flex-col justify-center items-center pt-[240px] md:pt-[120px]">
         <div className="w-full flex flex-col justify-center items-center relative">
           <div className="w-full ">
             <div className="absolute z-[-1] w-full h-[20px] bottom-0 right-0 bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"></div>
             <div className="absolute z-[-1] w-full h-[20px] bottom-0 right-0 bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"></div>
             <div className="absolute z-[-1] w-full h-[20px] bottom-0 right-0 bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"></div>
           </div>
-          <div className="w-full max-w-[1180px] p-4">
-            <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 ">
+          <div className="w-full max-w-[1180px] px-6 py-8 relative">
+            <div className="absolute -left-full -right-full -bottom-20 -z-10">
+              <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff1464]/20 to-transparent"></div>
+            </div>
+            <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-6">
               Eclipse Temurin Sustainer Program
             </h2>
-            <p className="text-center text-[#c4bfce] p-4 max-w-[1000px">
+            <p className="text-center text-[#c4bfce] px-4 py-6 max-w-[900px] mx-auto text-lg leading-relaxed">
               The Eclipse Temurin Sustainer Program invites enterprises to
               invest in the long-term sustainment of Eclipse Temurin and other
               Adoptium projects. By becoming a Sustainer, your company ensures
-              that Temurin remains the industry’s leading community-driven open
+              that Temurin remains the industry's leading community-driven open
               source JDK for mission-critical Java workloads. This program
               supports the vendor-neutral development of runtimes and
               development kits, infrastructure and tools, quality assurance,
               enhanced security practices, community engagement, and more.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center md:justify-between w-full max-w-[1180px]">
-            {sustainerProgram.map(({ image, description }) => (
-              <div className="max-w-[185px] p-4 w-full flex flex-col justify-start items-center">
-                <div className="flex flex-col justify-center items-center gap-[6px] bg-white rounded-[19px] w-[121px] h-[121px] mb-4">
+          <div className="flex flex-wrap justify-center gap-10 w-full max-w-[1180px] px-4 mb-16">
+            {sustainerProgram.map(({ image, description }, index) => (
+              <div 
+                key={index}
+                className="max-w-[250px] w-full flex flex-col justify-start items-center bg-gradient-to-b from-[#1e1133]/40 to-[#0d0129]/40 backdrop-blur-sm rounded-xl border border-[#39314a]/50 p-6 transform transition-all duration-300 hover:translate-y-[-8px] hover:border-[#ff1464]/30 hover:shadow-lg hover:shadow-[#ff1464]/10"
+              >
+                <div className="flex flex-col justify-center items-center gap-[6px] bg-white rounded-2xl w-[140px] h-[140px] mb-6 shadow-lg">
                   <img
                     src={`/images/${image}`}
-                    alt="temurin logo"
-                    className="w-[100px] mb-0"
+                    alt="project logo"
+                    className="w-[110px] mb-0"
                   />
                 </div>
-                <p className="text-center text-[#c4bfce] text-[16px]">
+                <p className="text-center text-[#c4bfce] text-base leading-relaxed">
                   {description}
                 </p>
               </div>
@@ -269,7 +280,7 @@ const Sponsors = () => {
             <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900">
               How Your Support Fuels Key Initiatives
             </h2>
-            <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 w-full item-center mt-10 p-4 mx-auto max-w-[1180px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full item-center mt-10 p-4 mx-auto max-w-[1180px]">
               {keyInitiatives.map(({ image, header, description }, i) => (
                 <div
                   className="relative max-w-[382px] w-full"
@@ -283,62 +294,69 @@ const Sponsors = () => {
                   />
                   <div
                     role="button"
-                    className="relative group h-[212px] w-full border-[0.5px] hover:border-1 border-[#c4bfce] rounded-[27px] cursor-pointer overflow-visible lg:peer-checked:border-1 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none"
+                    className="relative group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
                   >
                     <label htmlFor={`toggle-${i}`}>
-                      <div className="flex flex-col justify-center items-center gap-6 h-full cursor-pointer">
-                        <img
-                          src={`/images/initiatives/${image}`}
-                          className="mb-0"
-                          alt="security"
-                        />
-                        <h3 className="text-[26px] text-center px-4">
+                      <div className="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6">
+                        <div className="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full">
+                          <img
+                            src={`/images/initiatives/${image}`}
+                            className="mb-0 w-16 h-16"
+                            alt=""
+                            aria-hidden="true"
+                          />
+                        </div>
+                        <h3 className="text-2xl font-medium text-center px-4 text-white">
                           {header}
                         </h3>
                       </div>
                     </label>
                   </div>
-                  <div className="hidden lg:peer-checked:block absolute backdrop-blur-3xl h-[236px] top-full left-0 w-full mt-[-1px] border-1 border-t-0 border-[#c4bfce] rounded-b-[27px] z-10 p-4">
-                    <p className="text-white text-sm px-5 text-center leading-relaxed">
+                  <div className="hidden lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10">
+                    <p className="text-white text-sm px-4 text-center leading-relaxed">
                       {description}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
-            <p className="text-[16px] text-[#c4bfce] p-4 max-w-[1000px] text-center mx-auto">
+            <p className="text-[16px] text-[#c4bfce] p-6 max-w-[900px] text-center mx-auto mt-6 leading-relaxed">
               Join the Eclipse Temurin Sustainer Program and play a crucial role
               in maintaining the vitality and reliability of the world's
               fastest-growing open source Java SE runtime. Your support
               accelerates our initiatives, driving greater impact and innovation
-              within the Java ecosystem
+              within the Java ecosystem.
             </p>
           </div>
         </div>
-        <div className="bg-[#0d0129] w-full py-[95px]">
-          <div className="max-w-[1180px] mx-auto w-full">
-            <div className=" w-full flex flex-col justify-center items-center p-8">
+        <div className="bg-[#0d0129] w-full py-[95px] relative overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute top-1/3 right-1/3 w-[600px] h-[600px] rounded-full bg-[#410170]/10 filter blur-[150px]"></div>
+            <div className="absolute bottom-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-[#ff1464]/5 filter blur-[120px]"></div>
+          </div>
+          <div className="max-w-[1180px] mx-auto w-full relative z-10">
+            <div className="w-full flex flex-col justify-center items-center p-8 bg-gradient-to-b from-[#1e1133]/30 to-[#0d0129]/30 backdrop-blur-sm rounded-2xl border border-[#39314a]/30">
               <h2 className="text-left max-w-[855px] md:text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900">
-                Calculate your savings and Invest in Temurin’s Future
+                Calculate your savings and Invest in Temurin's Future
               </h2>
               <p className="text-[#ff1464] max-w-[740px] text-[20px] text-center font-bold mt-10 mb-6">
                 The average company* using Eclipse Temurin saves more than $1.6M
-                annually. Isn’t it time you invest in sustaining your savings?
+                annually. Isn't it time you invest in sustaining your savings?
               </p>
               <p className="text-xs text-[#c4bfce] my-5">
                 *Self-reported number of employees, n = 211
               </p>
               <SavingsCalculator />
-              <p className="text-[#c4bfce] max-w-[900px] text-center">
+              <p className="text-[#c4bfce] max-w-[900px] text-center mt-8 leading-relaxed">
                 With the recent increase in licensing costs for paid Java SE
-                options, we’ve seen Temurin downloads surge—from over 75M in
+                options, we've seen Temurin downloads surge—from over 75M in
                 2023 to over 250M by the end of 2023, and doubling again to more
                 than 500M by the end of 2024. This growth strongly indicates a
                 significant transition away from paid Java options toward
                 open-source solutions like Temurin. If your organization has
-                made this migration, you’ve likely experienced significant cost
+                made this migration, you've likely experienced significant cost
                 savings. Dedicate a portion of your savings to Temurin to invest
-                in your corporate software supply chain by ensuring Temurin’s
+                in your corporate software supply chain by ensuring Temurin's
                 long-term viability, enhance security, and accelerate faster
                 releases for the Java community.
               </p>
@@ -346,20 +364,29 @@ const Sponsors = () => {
           </div>
         </div>
         <div className="w-full max-w-[1180px] p-4">
-          <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 my-8">
-            Sustainer Levels
-          </h2>
-          <div className="p-4">
-            <UiMobileScroll data={data} />
-            <div className="lg:block hidden open-animation-wrapper">
-              <UiVirtualContent data={data} />
+          <div className="mb-16 mt-8 relative">
+            <div className="absolute -left-full -right-full -top-8 -z-10">
+              <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff1464]/20 to-transparent"></div>
             </div>
+            <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-10 mt-8">
+              Sustainer Levels
+            </h2>
+            <div className="p-4">
+              <UiMobileScroll data={data} />
+              <div className="lg:block hidden open-animation-wrapper">
+                <UiVirtualContent data={data} />
+              </div>
+            </div>
+            <BecomeSustainer classes="md:mt-10 md:mx-auto" />
           </div>
-          <BecomeSustainer classes="md:mt-6 md:mx-auto" />
-          <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-8 mt-40">
-            Temurin’s Sustainers
+          
+          <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-8 mt-40 relative">
+            <div className="absolute -left-full -right-full -top-20 -z-10">
+              <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff1464]/20 to-transparent"></div>
+            </div>
+            Temurin's Sustainers
           </h2>
-          <div className="p-4">
+          <div className="p-4 bg-gradient-to-b from-[#1e1133]/20 to-[#0d0129]/20 backdrop-blur-sm rounded-xl border border-[#39314a]/30">
             <Logos
               members={LogoType.SPONSOR}
               title=""

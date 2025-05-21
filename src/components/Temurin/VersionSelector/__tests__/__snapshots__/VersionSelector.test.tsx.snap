@@ -6,26 +6,26 @@ exports[`VersionSelector component > renders correctly 1`] = `
     class="w-full max-w-[1264px] mx-auto "
   >
     <div
-      class="overflow-auto relative min-w-full w-full "
+      class="relative min-w-full w-full overflow-auto md:overflow-visible"
     >
       <span
         class="h-[1px] w-full bg-[#3E3355] inline-block absolute bottom-0 z-[-1]"
       />
       <div
-        class="flex space-x-10 whitespace-nowrap   lg:justify-center py-3"
+        class="flex space-x-10 whitespace-nowrap lg:justify-center py-3"
       >
         <button>
           <span
-            class=" py-3  w-full text-base font-normal leading-6 
-                outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary  border-b-[2px] text-white"
+            class="py-3 w-full text-base font-normal leading-6 
+            outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary border-b-[2px] text-white"
           >
             All Versions
           </span>
         </button>
         <button>
           <span
-            class=" py-3  w-full text-base font-normal leading-6
-                    outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent  border-b"
+            class="py-3 w-full text-base font-normal leading-6
+            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
           >
             JDK 
             8
@@ -33,8 +33,8 @@ exports[`VersionSelector component > renders correctly 1`] = `
         </button>
         <button>
           <span
-            class=" py-3  w-full text-base font-normal leading-6
-                    outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent  border-b"
+            class="py-3 w-full text-base font-normal leading-6
+            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
           >
             JDK 
             11
@@ -42,8 +42,8 @@ exports[`VersionSelector component > renders correctly 1`] = `
         </button>
         <button>
           <span
-            class=" py-3  w-full text-base font-normal leading-6
-                    outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent  border-b"
+            class="py-3 w-full text-base font-normal leading-6
+            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
           >
             JDK 
             17

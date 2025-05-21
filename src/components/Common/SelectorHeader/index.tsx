@@ -43,7 +43,7 @@ const SelectorHeader: React.FC<SelectorHeaderProps> = ({
           </svg>
         </span>
       </button>
-      <div className="w-full lg:overflow-visible overflow-auto hidden sm:block">
+      <div className="w-full lg:overflow-visible overflow-hidden hidden sm:block">
         <div className="flex items-center gap-5 justify-between flex-nowrap min-w-[1039px]">
           {data.map((list, index) => {
             let defaultVal: ListItem | undefined

@@ -34,7 +34,7 @@ const BusinessBenefits = () => {
       <Testimonials />
       <ImageText
         title="Need support with Temurin?"
-        description="Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat."
+        description="Eclipse Temurin is supported by a vibrant community of developers and users. If you need help, please reach out to us."
         linkText="Get Support"
         link="/support"
       />

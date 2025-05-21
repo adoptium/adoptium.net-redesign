@@ -90,7 +90,7 @@ const VendorSelector: React.FC<VendorSelectorProps> = ({
                   `}></div>
                   <img
                     src={`/images/vendors/${vendor.icon}`}
-                    className={`mb-0 p-1 relative z-10 transition-all duration-300 group-hover:scale-105 
+                    className={`mb-0 p-1 relative transition-all duration-300 group-hover:scale-105 
                       ${isSelected ? "" : "filter grayscale opacity-50 group-hover:opacity-70 group-hover:grayscale-75"}`}
                     alt={`${vendor.name} icon`}
                     style={

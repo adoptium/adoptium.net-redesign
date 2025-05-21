@@ -508,7 +508,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
       <p
         class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
       >
-        Feugiat ullamcorper justo dolor arcu ut porttitor ultrices rutrum. Eget molestie sit tellus viverra. Bibendum at ut eu feugiat tellus diam turpis. Massa posuere ornare dignissim orci consequat.
+        Eclipse Temurin is supported by a vibrant community of developers and users. If you need help, please reach out to us.
       </p>
       <a
         href="/en/support"

@@ -11,6 +11,7 @@ import {
 } from "@headlessui/react"
 import { FaChevronDown, FaRegBell } from "react-icons/fa"
 import { BsXLg, BsList } from "react-icons/bs"
+import { GrRevert } from "react-icons/gr";
 
 import IconSocial from "../IconSocial"
 import LanguageSelector from "../LanguageSelector"
@@ -119,6 +120,21 @@ const NavBar = () => {
   const [showLastSlide, setShowLastSlide] = useState(false)
   const [showAnnouncement, setShowAnnouncement] = useState(false)
   const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null)
+
+  // Function to go back to the old site
+  const goToOldSite = () => {
+    if (typeof window !== 'undefined') {
+      // Set cookie to view the old site
+      const expirationDate = new Date()
+      expirationDate.setDate(expirationDate.getDate() + 30)
+      
+      // Set the Netlify cookie to 'oldsite' branch
+      document.cookie = `nf_ab=oldsite; expires=${expirationDate.toUTCString()}; path=/`
+      
+      // Reload the page to apply changes
+      window.location.reload()
+    }
+  }
 
   useEffect(() => {
     if (!mobileMenuOpen) {
@@ -249,6 +265,20 @@ const NavBar = () => {
                   <FaRegBell size={20} />
                   <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full text-xs text-white font-bold flex items-center justify-center">
                     1 {/* TODO: calculate the notification count */}
+                  </span>
+                </div>
+              </div>
+              <div className="hidden lg:flex items-center">
+                <div className="relative group">
+                  <button
+                    onClick={goToOldSite}
+                    className="text-gray-300 rounded-full p-1.5 hover:bg-[#3E3355] transition-all border border-gray-600"
+                    aria-label="View classic site"
+                  >
+                    <GrRevert size={20} />
+                  </button>
+                  <span className="absolute -left-12 bottom-full mb-2 hidden group-hover:block whitespace-nowrap rounded bg-[#3E3355] p-1 px-2 text-xs text-gray-300">
+                    View classic site
                   </span>
                 </div>
               </div>
@@ -423,6 +453,18 @@ const NavBar = () => {
             <ul className="flex mb-0 space-x-8 justify-center">
               <IconSocial />
             </ul>
+            <div className="mt-4 flex justify-center">
+              <div className="relative flex items-center">
+                <button
+                  onClick={goToOldSite}
+                  className="text-gray-300 rounded-full p-2 border border-gray-600 hover:bg-[#3E3355] transition-all"
+                  aria-label="View classic site"
+                >
+                  <GrRevert size={20} />
+                </button>
+                <span className="ml-2 text-xs text-gray-400">View classic site</span>
+              </div>
+            </div>
           </div>
         </DialogPanel>
       </Dialog>

@@ -237,6 +237,39 @@ exports[`NavBar component > navbar renders correctly 1`] = `
                 </span>
               </div>
             </div>
+            <div
+              class="hidden lg:flex items-center"
+            >
+              <div
+                class="relative group"
+              >
+                <button
+                  aria-label="View classic site"
+                  class="text-gray-300 rounded-full p-1.5 hover:bg-[#3E3355] transition-all border border-gray-600"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8,3 L3,8 L8,13 M12,20 L15,20 C18.3137085,20 21,17.3137085 21,14 C21,10.6862915 18.3137085,8 15,8 L4,8"
+                      fill="none"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </button>
+                <span
+                  class="absolute -left-12 bottom-full mb-2 hidden group-hover:block whitespace-nowrap rounded bg-[#3E3355] p-1 px-2 text-xs text-gray-300"
+                >
+                  View classic site
+                </span>
+              </div>
+            </div>
           </div>
           <div
             class="flex lg:hidden ml-3"

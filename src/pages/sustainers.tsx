@@ -120,12 +120,12 @@ const Sponsors = () => {
       )}
     >
       <a href="https://github.com/sponsors/adoptium" target="_blank" className="transform transition-transform duration-300 hover:scale-105">
-        <button className="rounded-xl bg-gradient-to-r from-[#ff1464] to-[#FF7994] text-white text-base font-medium w-[290px] h-[50px] shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 transition-all duration-300 ease-in-out">
+        <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
           Become an Individual Sustainer
         </button>
       </a>
       <Link to="/become-a-sustainer" className="transform transition-transform duration-300 hover:scale-105">
-        <button className="rounded-xl bg-transparent border-2 border-[#ff1464] text-white text-base font-medium w-[290px] h-[50px] hover:bg-[#ff1464]/10 transition-all duration-300 ease-in-out">
+        <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold text-lg border border-white/20 hover:border-white/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
           Become a Corporate Sustainer
         </button>
       </Link>

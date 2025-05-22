@@ -7,7 +7,7 @@ type I18nLinkProps = GatsbyLinkProps<any> & {
   placeholder?: string
 }
 
-export const Link: React.FC<I18nLinkProps> = ({ language, to, ...rest }) => {
+export const Link: React.FC<I18nLinkProps> = ({ children, language, to, ...rest }) => {
   const {
     language: currentLanguage,
     defaultLanguage,
@@ -20,6 +20,20 @@ export const Link: React.FC<I18nLinkProps> = ({ language, to, ...rest }) => {
 
   const localizedTo = `${getLanguagePath(urlLanguage)}${to}`
 
-  // @ts-ignore
-  return <GatsbyLink {...rest} to={localizedTo} />
+  const internal = /^\/(?!\/)/.test(to)
+
+  if (internal) {
+    return (
+      // @ts-ignore
+      <GatsbyLink {...rest} to={localizedTo}>
+        {children}
+      </GatsbyLink>
+    )
+  }
+
+  return (
+    <a href={to} {...rest}>
+      {children}
+    </a>
+  )
 }

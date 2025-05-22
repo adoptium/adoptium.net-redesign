@@ -836,7 +836,6 @@ exports[`What We Do page > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
-              href="/enundefined"
             >
               Read More
             </a>
@@ -887,7 +886,6 @@ exports[`What We Do page > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
-              href="/enundefined"
             >
               Read More
             </a>
@@ -942,7 +940,6 @@ exports[`What We Do page > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
-              href="/enundefined"
             >
               Read More
             </a>
@@ -993,7 +990,6 @@ exports[`What We Do page > renders correctly 1`] = `
             </span>
             <a
               class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
-              href="/enundefined"
             >
               Read More
             </a>
@@ -1055,7 +1051,6 @@ exports[`What We Do page > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
-                href="/enundefined"
               >
                 Read More
               </a>
@@ -1106,7 +1101,6 @@ exports[`What We Do page > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
-                href="/enundefined"
               >
                 Read More
               </a>
@@ -1157,7 +1151,6 @@ exports[`What We Do page > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
-                href="/enundefined"
               >
                 Read More
               </a>
@@ -1208,7 +1201,6 @@ exports[`What We Do page > renders correctly 1`] = `
               </span>
               <a
                 class="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
-                href="/enundefined"
               >
                 Read More
               </a>

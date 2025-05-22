@@ -2,7 +2,9 @@ import React from "react"
 import { Link } from "../../Link"
 import { BsDownload } from "react-icons/bs"
 import { RxCrossCircled } from "react-icons/rx"
-import { FaApple, FaWindows } from "react-icons/fa"
+import { FaApple, FaWindows, FaRegFileCode } from "react-icons/fa"
+import { GrNotes, GrInstall } from "react-icons/gr";
+import { GiFlatPlatform } from "react-icons/gi";
 
 interface CardData {
   icon: React.ReactNode
@@ -19,16 +21,24 @@ interface CardData {
 const ButtonContent = ({ results }) => {
   const navigationItem = [
     {
+      icon: <GrNotes />,
       title: "Release notes",
       link: results && results['source'] ? `/temurin/release-notes?version=${results['source'].release_name}` : "/temurin/release-notes"
     },
     {
+      icon: <GrInstall />,
       title: "Installation guide",
       link: "/installation"
     },
     {
+      icon: <GiFlatPlatform />,
       title: "Supported Platforms",
       link: "/supported-platforms"
+    },
+    {
+      icon: <FaRegFileCode />,
+      title: "Source Code",
+      link: results && results['source'] ? results['source'].binary.package.link : undefined
     }
   ]
 
@@ -90,14 +100,13 @@ const ButtonContent = ({ results }) => {
                 className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer"
               >
                 <span className=" group">
-                  <RxCrossCircled />
+                  {item.icon}
                 </span>{" "}
                 {item.title}
               </li>
             </Link>
           ))}
         </ul>
-
         <div className="flex justify-between flex-col md:flex-row  w-full items-center  gap-8">
           {CardData.map((card, index) => (
             <div

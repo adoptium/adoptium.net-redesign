@@ -18,52 +18,54 @@ const Members = () => {
         subtitle="Our Members"
         description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
       />
-      <div className="flex gap-4 md:gap-8 items-center justify-center absolute w-full top-[571px]">
-        <Link to="/join">
-          <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out mt-8">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full py-6 md:py-8 px-4">
+        <Link to="/join" className="w-full sm:w-auto">
+          <button className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
             Become a Member
           </button>
         </Link>
         <button
           onClick={e => scrollToSection(e, "strategic-sec")}
-          className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out mt-8"
+          className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold text-lg border border-white/20 hover:border-white/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
         >
           Our Members
         </button>
       </div>
-      <div className="overflow-auto px-3 py-5 w-full md:w-auto">
-        <h3 className="flex space-x-10 whitespace-nowrap  justify-center py-2">
-          <a href="#strategic-sec">
-            <span
-              className="text-[16px] py-2 border-primary w-full text-base font-normal leading-6
-                outline-none hover:text-white hover:border-b
-                hover:border-[#ff1464] text-[#8a809e] border-b
-                border-transparent cursor-pointer transition-all duration-200 ease-in-out"
-            >
-              Strategic Members
-            </span>
-          </a>
-          <a href="#enterprise-sec">
-            <span
-              className="text-[16px] py-3 border-primary w-full text-base font-normal leading-6
-                outline-none hover:text-white hover:border-b
-                hover:border-[#ff1464] text-[#8a809e] border-b
-                border-transparent cursor-pointer transition-all duration-200 ease-in-out"
-            >
-              Enterprise Members
-            </span>
-          </a>
-          <a href="#participant-sec">
-            <span
-              className="text-[16px] py-2 border-primary w-full text-base font-normal leading-6
-                outline-none hover:text-white hover:border-b
-                hover:border-[#ff1464] text-[#8a809e] border-b
-                border-transparent cursor-pointer transition-all duration-200 ease-in-out"
-            >
-              Participant Members
-            </span>
-          </a>
-        </h3>
+      <div className="w-full px-3 pt-2 pb-4 mb-4">
+        <div className="max-w-4xl mx-auto overflow-x-auto scrollbar-hide">
+          <div className="flex space-x-4 md:space-x-10 whitespace-nowrap justify-center py-2 min-w-max">
+            <a href="#strategic-sec">
+              <span
+                className="px-3 py-2 text-base md:text-lg font-medium leading-6
+                  outline-none hover:text-white hover:border-b-2
+                  hover:border-[#ff1464] text-[#8a809e] border-b-2
+                  border-transparent cursor-pointer transition-all duration-200 ease-in-out"
+              >
+                Strategic Members
+              </span>
+            </a>
+            <a href="#enterprise-sec">
+              <span
+                className="px-3 py-2 text-base md:text-lg font-medium leading-6
+                  outline-none hover:text-white hover:border-b-2
+                  hover:border-[#ff1464] text-[#8a809e] border-b-2
+                  border-transparent cursor-pointer transition-all duration-200 ease-in-out"
+              >
+                Enterprise Members
+              </span>
+            </a>
+            <a href="#participant-sec">
+              <span
+                className="px-3 py-2 text-base md:text-lg font-medium leading-6
+                  outline-none hover:text-white hover:border-b-2
+                  hover:border-[#ff1464] text-[#8a809e] border-b-2
+                  border-transparent cursor-pointer transition-all duration-200 ease-in-out"
+              >
+                Participant Members
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
       <Logos
         sectionId="strategic-sec"
@@ -83,12 +85,12 @@ const Members = () => {
         title="Participant Members"
         description="Companies that use Eclipse Temurin in production."
       />
-      <div className="flex justify-center flex-wrap items-center gap-5 md:gap-14 m-5">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-8 my-12 px-4">
         <p className="text-[20px] leading-[28px] text-white my-0 text-center">
           Are you interested in becoming a member?
         </p>
-        <Link to="/join">
-          <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[179px] h-[48px]  transition-all duration-500 ease-in-out ">
+        <Link to="/join" className="w-full sm:w-auto">
+          <button className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
             Become a Member
           </button>
         </Link>

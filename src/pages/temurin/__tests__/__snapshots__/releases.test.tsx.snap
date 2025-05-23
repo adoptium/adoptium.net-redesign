@@ -293,13 +293,6 @@ exports[`Releases page > renders correctly 1`] = `
       </div>
     </div>
   </section>
-  <section
-    class="py-8 md:py-16"
-  >
-    <div
-      class="flex justify-center items-center"
-    />
-  </section>
   <div>
     Loading...
   </div>

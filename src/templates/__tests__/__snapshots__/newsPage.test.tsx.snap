@@ -164,7 +164,7 @@ exports[`News Template page > renders correctly 1`] = `
           class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
         >
           <a
-            href="/enundefined"
+            href="undefined"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -173,7 +173,7 @@ exports[`News Template page > renders correctly 1`] = `
             </p>
           </a>
           <a
-            href="/enundefined/page/2"
+            href="undefined/page/2"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer font-bold text-pink"
@@ -182,7 +182,7 @@ exports[`News Template page > renders correctly 1`] = `
             </p>
           </a>
           <a
-            href="/enundefined/page/3"
+            href="undefined/page/3"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -191,7 +191,7 @@ exports[`News Template page > renders correctly 1`] = `
             </p>
           </a>
           <a
-            href="/enundefined/page/4"
+            href="undefined/page/4"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "
@@ -200,7 +200,7 @@ exports[`News Template page > renders correctly 1`] = `
             </p>
           </a>
           <a
-            href="/enundefined/page/5"
+            href="undefined/page/5"
           >
             <p
               class="tab-button-text mb-0 cursor-pointer "

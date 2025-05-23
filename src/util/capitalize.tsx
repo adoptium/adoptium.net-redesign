@@ -11,8 +11,6 @@ export function capitalize(text: string) {
       return "IBM"
     case "mac":
       return "macOS"
-    case "bisheng":
-      return "BiSheng"
     case "semeru":
       return "Semeru Runtimes"
     default:

@@ -55,8 +55,6 @@ export function getImageForDistribution(distribution: string) {
       return "/images/adoptium-logo.png"
     case "redhat":
       return "/images/redhat.svg"
-    case "bisheng":
-      return "/images/huawei.svg"
     case "zulu":
       return "/images/azul-logo.png"
     case "semeru":

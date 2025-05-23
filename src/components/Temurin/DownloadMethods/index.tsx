@@ -1,5 +1,5 @@
 import React from "react"
-import { FaDocker, FaGithub } from "react-icons/fa";
+import { FaDocker, FaGithub, FaCalendarAlt } from "react-icons/fa";
 import { FcLinux, FcPackage } from "react-icons/fc";
 import { Link } from "../../Link"
 import {
@@ -72,11 +72,20 @@ const DownloadMethods = () => {
         }
       ]
     },
+        {
+      icon: <FaCalendarAlt size={35} color="#FF1365" />,
+      title: "Other Downloads",
+      buttons: [
+        {
+          "Nightly Builds": "/temurin/nightly",
+        }
+      ]
+    }
   ]
   return (
     <section className="py-16 md:py-32 bg-[#0E002A] px-6">
       <CommonHeading
-      title={"Other ways to install Temurin"}
+      title={"Other ways to download Temurin"}
       description={
         "There are multiple different ways to get Eclipse Temurin beyond direct downloads. The curated list below shows some of these options for installing high-performance, cross-platform, open-source OpenJDK runtime binaries."
       }

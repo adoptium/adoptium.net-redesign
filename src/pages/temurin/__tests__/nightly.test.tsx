@@ -1,7 +1,9 @@
 import React from "react"
 import { act, render, screen, fireEvent } from "@testing-library/react"
+import "@testing-library/jest-dom"
 import { afterEach, describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
+import "vitest-axe/extend-expect"
 import Nightly, { Head } from "../nightly"
 import AxiosInstance from "axios"
 import MockAdapter from "axios-mock-adapter"
@@ -22,8 +24,8 @@ describe("Temurin Nightly page", () => {
 
     await act(async () => {
       const datepicker = screen.getByLabelText("Build Date")
-      fireEvent.change(datepicker, { target: { value: "01/01/2022" } })
-      expect(datepicker.getAttribute("value")).toBe("01/01/2022")
+      fireEvent.change(datepicker, { target: { value: "2022-01-01" } })
+      expect(datepicker.getAttribute("value")).toBe("2022-01-01")
     })
 
     expect(pageContent).toMatchSnapshot()

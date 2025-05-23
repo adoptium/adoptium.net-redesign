@@ -29,6 +29,12 @@ GATSBY_CPU_COUNT = "1"
   force = true
 
 [[redirects]]
+  from = "/:locale/blog/*"
+  to = "/news/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/"
   query = {variant = ":variant"}
   to = "/temurin/releases/"

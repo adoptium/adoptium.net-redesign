@@ -3,59 +3,13 @@
 exports[`TemurinNightlyTable component > renders correctly - no data 1`] = `
 <div>
   <div
-    id="nightly-list"
+    class="bg-[#26193F] rounded-xl p-6 text-center"
   >
-    <table
-      class="table table-hover text-start table-striped"
-      id="nightly-table"
+    <p
+      class="text-white text-lg"
     >
-      <thead
-        class="table-dark"
-      >
-        <tr>
-          <td
-            class="fw-bold"
-          >
-            Platform
-          </td>
-          <td
-            class="fw-bold"
-          >
-            Type
-          </td>
-          <td
-            class="fw-bold"
-          >
-            Build/Tag
-          </td>
-          <td
-            class="fw-bold"
-          >
-            Date
-          </td>
-          <td
-            class="fw-bold"
-          >
-            Binary
-          </td>
-          <td
-            class="fw-bold"
-          >
-            Installer
-          </td>
-          <td
-            class="fw-bold"
-          >
-            SHA256
-          </td>
-        </tr>
-      </thead>
-      <tbody
-        class="table-light"
-      >
-        <tr />
-      </tbody>
-    </table>
+      No nightly builds available for the selected version.
+    </p>
   </div>
 </div>
 `;
@@ -63,141 +17,177 @@ exports[`TemurinNightlyTable component > renders correctly - no data 1`] = `
 exports[`TemurinNightlyTable component > renders correctly 1`] = `
 <div>
   <div
+    class="overflow-x-auto"
     id="nightly-list"
   >
-    <table
-      class="table table-hover text-start table-striped"
-      id="nightly-table"
+    <div
+      class="rounded-xl overflow-hidden mb-8 shadow-md"
     >
-      <thead
-        class="table-dark"
+      <table
+        class="min-w-full divide-y divide-gray-700"
       >
-        <tr>
-          <td
-            class="fw-bold"
-          >
-            Platform
-          </td>
-          <td
-            class="fw-bold"
-          >
-            Type
-          </td>
-          <td
-            class="fw-bold"
-          >
-            Build/Tag
-          </td>
-          <td
-            class="fw-bold"
-          >
-            Date
-          </td>
-          <td
-            class="fw-bold"
-          >
-            Binary
-          </td>
-          <td
-            class="fw-bold"
-          >
-            Installer
-          </td>
-          <td
-            class="fw-bold"
-          >
-            SHA256
-          </td>
-        </tr>
-      </thead>
-      <tbody
-        class="table-light"
-      >
-        <tr
-          class="nightly-row"
+        <thead
+          class="bg-[#200E46]"
         >
-          <td>
-            Os_mock
-             
-            architecture_mock
-          </td>
-          <td>
-            type_mock
-          </td>
-          <td>
-            release_name_mock
-          </td>
-          <td>
-            January 1, 2020
-          </td>
-          <td>
-            <a
-              href="/en/download"
-              title=""
+          <tr>
+            <th
+              class="px-6 py-4 text-left text-sm font-medium text-white tracking-wider"
+              scope="col"
             >
-              extension_mock (0 MB)
-            </a>
-          </td>
-          <td>
-            Text
-          </td>
-          <td>
-            <a
-              data-bs-checksum="checksum_mock"
-              data-bs-target="#checksumModal"
-              data-bs-toggle="modal"
-              href=""
+              Platform
+            </th>
+            <th
+              class="px-6 py-4 text-left text-sm font-medium text-white tracking-wider"
+              scope="col"
+            >
+              Type
+            </th>
+            <th
+              class="px-6 py-4 text-left text-sm font-medium text-white tracking-wider"
+              scope="col"
+            >
+              Build/Tag
+            </th>
+            <th
+              class="px-6 py-4 text-left text-sm font-medium text-white tracking-wider"
+              scope="col"
+            >
+              Date
+            </th>
+            <th
+              class="px-6 py-4 text-left text-sm font-medium text-white tracking-wider"
+              scope="col"
+            >
+              Binary
+            </th>
+            <th
+              class="px-6 py-4 text-left text-sm font-medium text-white tracking-wider"
+              scope="col"
+            >
+              Installer
+            </th>
+            <th
+              class="px-6 py-4 text-left text-sm font-medium text-white tracking-wider"
+              scope="col"
+            >
+              SHA256
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="bg-[#26193F] divide-y divide-gray-700"
+        >
+          <tr
+            class="hover:bg-[#2B1A4F] transition-colors duration-150"
+          >
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm text-gray-200"
+            >
+              Os_mock
+               
+              architecture_mock
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm text-gray-200"
+            >
+              type_mock
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm text-gray-200"
+            >
+              release_name_mock
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+            >
+              January 1, 2020
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm"
+            >
+              <a
+                class="text-[#FF1464] hover:text-[#FF5A8F] hover:underline"
+                href="/en/download"
+                title=""
+              >
+                extension_mock (0 MB)
+              </a>
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm text-gray-400"
             >
               Text
-            </a>
-          </td>
-        </tr>
-        <tr
-          class="nightly-row"
-        >
-          <td>
-            Os_mock
-             
-            architecture_mock
-          </td>
-          <td>
-            type_mock
-          </td>
-          <td>
-            release_name_mock
-          </td>
-          <td>
-            January 1, 2020
-          </td>
-          <td>
-            <a
-              href="/en/download"
-              title=""
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm"
             >
-              extension_mock (0 MB)
-            </a>
-          </td>
-          <td>
-            <a
-              href="/en/download"
-              title=""
+              <button
+                class="text-[#FF1464] hover:text-[#FF5A8F] hover:underline cursor-pointer"
+              >
+                Text
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="hover:bg-[#2B1A4F] transition-colors duration-150"
+          >
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm text-gray-200"
             >
-              installer_extension_mock
-            </a>
-          </td>
-          <td>
-            <a
-              data-bs-checksum="checksum_mock"
-              data-bs-target="#checksumModal"
-              data-bs-toggle="modal"
-              href=""
+              Os_mock
+               
+              architecture_mock
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm text-gray-200"
             >
-              Text
-            </a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+              type_mock
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm text-gray-200"
+            >
+              release_name_mock
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+            >
+              January 1, 2020
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm"
+            >
+              <a
+                class="text-[#FF1464] hover:text-[#FF5A8F] hover:underline"
+                href="/en/download"
+                title=""
+              >
+                extension_mock (0 MB)
+              </a>
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm"
+            >
+              <a
+                class="text-[#FF1464] hover:text-[#FF5A8F] hover:underline"
+                href="/en/download"
+                title=""
+              >
+                installer_extension_mock
+              </a>
+            </td>
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm"
+            >
+              <button
+                class="text-[#FF1464] hover:text-[#FF5A8F] hover:underline cursor-pointer"
+              >
+                Text
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 `;

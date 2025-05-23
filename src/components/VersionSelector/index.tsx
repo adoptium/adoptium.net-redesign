@@ -3,10 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Trans, useI18next } from "gatsby-plugin-react-i18next"
 import { useLocation } from "@gatsbyjs/reach-router"
 import queryString from "query-string"
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3'
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider"
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker"
-import * as Locales from 'date-fns/locale'
 
 import { setURLParam } from "../../util/setURLParam"
 
@@ -36,13 +32,6 @@ const VersionSelector = ({ updater, releaseType, Table }) => {
   const versions = data.allVersions.edges
 
   const { language } = useI18next()
-
-  let locale
-
-  // import the correct date locale for the language
-  if (language !== "en") {
-    locale = Locales[language] ?? Locales[language.substring(0, 2)] ?? Locales.enUS
-  }
 
   let selectedVersion = defaultVersion
   const versionParam = queryString.parse(useLocation().search).version
@@ -111,82 +100,91 @@ const VersionSelector = ({ updater, releaseType, Table }) => {
 
   return (
     <>
-      <p className="text-center">
-        <Trans>
-          Use the drop-down boxes below to filter the list of releases.
-        </Trans>
-      </p>
-      <div className="input-group p-3 d-flex justify-content-center">
-        <label className="px-2 fw-bold" htmlFor="version">
-          <Trans>Version</Trans>
-        </label>
-        <select
-          data-testid="version-filter"
-          aria-label="version-filter"
-          id="version-filter"
-          onChange={e => setVersion(e.target.value)}
-          value={version}
-          className="form-select form-select-sm"
-          style={{ maxWidth: "10em" }}
-        >
-          {/* loop through versions array from graphql */}
-          {versionsToDisplay.map(
-            (version, i): number | JSX.Element =>
-              version && (
-                <option key={version.node.id} value={version.node.version}>
-                  {version.node.label}
-                </option>
-              ),
-          )}
-        </select>
-      </div>
-      {releaseType === "ea" && (
-        <div className="input-group pb-5 d-flex justify-content-center">
-          <span className="p-2">View</span>
-          <select
-            data-testid="build-num-filter"
-            aria-label="Filter by number of builds"
-            id="build-num-filter"
-            onChange={e => setNumBuilds(e.target.value)}
-            defaultValue={numBuilds}
-            className="form-select form-select-sm"
-            style={{ maxWidth: "5em" }}
-          >
-            <option key={1} value={1}>
-              1
-            </option>
-            <option key={5} value={5}>
-              5
-            </option>
-            <option key={10} value={10}>
-              10
-            </option>
-            <option key={20} value={20}>
-              20
-            </option>
-            <option key={50} value={50}>
-              50
-            </option>
-          </select>
-          <span className="p-2">nightly builds prior to:</span>
-          <LocalizationProvider
-            dateAdapter={AdapterDateFns}
-            adapterLocale={locale}
-          >
-            <DesktopDatePicker
-              label="Build Date"
-              value={buildDate}
-              maxDate={new Date()}
-              onChange={newValue => {
-                newValue && updateBuildDate(newValue)
-              }}
-              sx={{
-                maxWidth: "10em",
-              }}
-            />
-          </LocalizationProvider>
+      <div className="max-w-3xl mx-auto my-8">
+        <h3 className="text-xl text-white mb-4 font-medium text-center">
+          <Trans>
+            Select options to filter the list of nightly builds
+          </Trans>
+        </h3>
+        
+        <div className="bg-[#26193F] rounded-xl p-6 mb-8">
+          <div className="flex flex-col md:flex-row md:items-end gap-6 justify-center">
+            <div className="w-full md:w-auto">
+              <label className="block text-gray-300 mb-2 font-medium" htmlFor="version">
+                <Trans>Version</Trans>
+              </label>
+              <select
+                data-testid="version-filter"
+                aria-label="version-filter"
+                id="version-filter"
+                onChange={e => setVersion(e.target.value)}
+                value={version}
+                className="w-full md:w-auto px-4 py-2 bg-[#200E46] border border-[#3E3355] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#FF1464]"
+              >
+                {/* loop through versions array from graphql */}
+                {versionsToDisplay.map(
+                  (version, i): number | JSX.Element =>
+                    version && (
+                      <option key={version.node.id || i} value={version.node.version}>
+                        {version.node.label}
+                      </option>
+                    ),
+                )}
+              </select>
+            </div>
+            
+            {releaseType === "ea" && (
+              <>
+                <div className="w-full md:w-auto">
+                  <label className="block text-gray-300 mb-2 font-medium" htmlFor="build-num-filter">
+                    <Trans>Number of builds</Trans>
+                  </label>
+                  <select
+                    data-testid="build-num-filter"
+                    aria-label="Filter by number of builds"
+                    id="build-num-filter"
+                    onChange={e => setNumBuilds(e.target.value)}
+                    defaultValue={numBuilds}
+                    className="w-full md:w-auto px-4 py-2 bg-[#200E46] border border-[#3E3355] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#FF1464]"
+                  >
+                    <option key={1} value={1}>1</option>
+                    <option key={5} value={5}>5</option>
+                    <option key={10} value={10}>10</option>
+                    <option key={20} value={20}>20</option>
+                    <option key={50} value={50}>50</option>
+                  </select>
+                </div>
+
+                <div className="w-full md:w-auto">
+                  <label className="block text-gray-300 mb-2 font-medium" htmlFor="build-date">
+                  <Trans>Builds prior to</Trans>
+                  </label>
+                  <input
+                  id="build-date"
+                  type="date"
+                  className="w-full md:w-auto px-4 py-2 bg-[#200E46] border border-[#3E3355] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#FF1464] date-picker"
+                  value={buildDate.toISOString().split("T")[0]}
+                  max={new Date().toISOString().split("T")[0]}
+                  aria-label="Build Date"
+                  onChange={e => {
+                    const date = new Date(e.target.value)
+                    if (!isNaN(date.getTime())) {
+                    updateBuildDate(date)
+                    }
+                  }}
+                  />
+                  <style>{`
+                  .date-picker::-webkit-calendar-picker-indicator {
+                    filter: invert(39%) sepia(76%) saturate(7464%) hue-rotate(324deg) brightness(98%) contrast(105%);
+                  }
+                  `}</style>
+                </div>
+              </>
+            )}
+          </div>
         </div>
-      )}
+      </div>
+      
       <Table results={releases} updatePage={updatePage} />
     </>
   )

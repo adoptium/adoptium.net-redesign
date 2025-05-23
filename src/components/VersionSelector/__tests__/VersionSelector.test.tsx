@@ -6,8 +6,9 @@ import {
   fireEvent,
   prettyDOM,
 } from "@testing-library/react"
+import "@testing-library/jest-dom"
 import queryString from "query-string"
-import { afterEach, vi } from "vitest"
+import { afterEach, vi, describe, it, expect } from "vitest"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import VersionSelector from "../index"
 import locales from "../../../../locales/i18n"
@@ -27,10 +28,6 @@ describe("VersionSelector", () => {
   useI18next.mockReturnValue({
     language: "en",
     languages: locales,
-  })
-
-  vi.mock("@mui/x-date-pickers/DatePicker", () => {
-    return vi.importActual("@mui/x-date-pickers/DesktopDatePicker")
   })
 
   afterEach(() => {
@@ -111,8 +108,8 @@ describe("VersionSelector", () => {
 
     await act(async () => {
       const datepicker = screen.getByLabelText("Build Date")
-      fireEvent.change(datepicker, { target: { value: "01/01/2022" } })
-      expect(datepicker.getAttribute("value")).toBe("01/01/2022")
+      fireEvent.change(datepicker, { target: { value: "2022-01-01" } })
+      expect(datepicker.getAttribute("value")).toBe("2022-01-01")
     })
 
     expect(updater).lastCalledWith("1", "ea", "10", expect.any(Date), 0)

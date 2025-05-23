@@ -308,7 +308,7 @@ exports[`Marketplace page > renders correctly 1`] = `
         <div
           class="text-right mb-2 text-sm text-gray-600 dark:text-gray-300"
         >
-          7
+          6
            of 
           1
            vendors selected

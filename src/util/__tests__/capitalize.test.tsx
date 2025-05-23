@@ -21,9 +21,6 @@ describe("capitalize", () => {
     it("should convert mac to macOS", () => {
       expect(capitalize("mac")).toBe("macOS")
     }),
-    it("should convert bisheng to BiSheng", () => {
-      expect(capitalize("bisheng")).toBe("BiSheng")
-    }),
     it("should convert semeru to Semeru Runtimes", () => {
       expect(capitalize("semeru")).toBe("Semeru Runtimes")
     })

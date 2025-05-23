@@ -50,6 +50,7 @@ const navigation: NavItem[] = [
       { name: "Eclipse Temurin", href: "/temurin" },
       { name: "Eclipse AQAvit", href: "/aqavit" },
       { name: "Eclipse Mission Control", href: "/jmc" },
+      { name: "Eclipse Migration Toolkit", href: "/emt" },
     ],
   },
   {

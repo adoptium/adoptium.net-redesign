@@ -7,7 +7,6 @@ import Seo from "../components/Seo"
 
 // @ts-ignore
 import HeroBgImg from "../images/backgrounds/aqavit-hero-bg.svg"
-// Import react-icons
 import { FaRocket, FaBullseye, FaCode, FaShieldAlt, FaCheckCircle, FaArrowRight, FaFlask, FaBolt, FaChartLine } from "react-icons/fa"
 
 const AQAvit = () => {

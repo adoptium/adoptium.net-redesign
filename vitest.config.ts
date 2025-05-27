@@ -24,6 +24,11 @@ export default defineConfig({
       exclude: ["src/types/**", "src/**/__tests__/**", "src/**/__mocks__/**"],
       reporter: ["text", "json", "html"],
     },
+    server: {
+      deps: {
+        inline: ["@mui/x-data-grid"],
+      },
+    },
   },
   css: {
     preprocessorOptions: {

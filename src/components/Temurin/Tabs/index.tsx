@@ -5,12 +5,10 @@ import queryString from "query-string"
 
 import VersionSelector from "../VersionSelector"
 import ButtonContent from "../ButtonContent"
-import Heading from "../Heading"
 import ReleaseSelector from "../ReleaseSelector"
 
-import { setURLParam } from "../../../util/setURLParam"
-
 import { fetchOses, fetchArches} from '../../../hooks/fetchConstants'
+import { setURLParam } from "../../../util/setURLParam"
 import { packageTypes } from "../../../util/defaults"
 
 const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
@@ -153,6 +151,15 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
     updateOS(os)
   }
 
+  // Reset function to clear all filters and return to defaults
+  const handleReset = () => {
+    const defaultVersion = data.mostRecentLts.version
+    versionUpdater(defaultVersion)
+    osUpdater("any")
+    archUpdater("any")
+    setActiveVersionSelectorTab(defaultVersion)
+  }
+
   /**
    * This useEffect() is called when a parameter is changed
    */
@@ -193,7 +200,7 @@ const Tabs = ({ updaterAction, Table, openModalWithChecksum }) => {
           )}
         </div>
       </section>
-      <Table results={releases} openModalWithChecksum={openModalWithChecksum} />
+      <Table results={releases} openModalWithChecksum={openModalWithChecksum} onReset={handleReset} />
     </>
   )
 }

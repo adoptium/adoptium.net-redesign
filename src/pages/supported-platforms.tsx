@@ -13,7 +13,7 @@ const SupportedPlatforms = () => {
     <>
       <Layout>
         <PageHeader
-          subtitle="Supported Platforms"
+          subtitle="Eclipse Temurin"
           title="Supported Platforms"
           description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
           className={"mx-auto max-w-[860px] px-2 w-full"}
@@ -27,9 +27,9 @@ const SupportedPlatforms = () => {
           linkTo="/slack" 
           className={"md:py-28 py-12"}
         />
-        <div className="py-10">
+        {/* <div className="py-10">
           <DocumentationGrid />
-        </div>
+        </div> */}
       </Layout>
     </>
   )

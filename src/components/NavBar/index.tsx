@@ -111,10 +111,57 @@ const MobileDivider: React.FC = () => (
   <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
 )
 
-function isActivePath(path) {
+function isActivePath(path: string | undefined): boolean {
   if (!path) return false
   if (typeof window === "undefined") return false
-  return window.location.pathname.includes(path) ? true : false
+  
+  const currentPath = window.location.pathname
+  
+  // Remove locale prefix from current path (e.g., /en-GB/docs/faq -> /docs/faq)
+  const removeLocalePrefix = (pathname: string): string => {
+    // Match patterns like /en-GB/, /de/, /es/, /fr/, /zh-CN/, etc.
+    const localePattern = /^\/[a-z]{2}(-[A-Z]{2})?\//
+    return pathname.replace(localePattern, '/')
+  }
+  
+  const pathWithoutLocale = removeLocalePrefix(currentPath)
+  const normalizedPath = path.endsWith('/') ? path.slice(0, -1) : path
+  const normalizedCurrentPath = pathWithoutLocale.endsWith('/') ? pathWithoutLocale.slice(0, -1) : pathWithoutLocale
+  
+  // Get all navigation paths to find the most specific match
+  const allPaths: string[] = []
+  
+  navigation.forEach(item => {
+    if (item.href) {
+      allPaths.push(item.href)
+    }
+    if (item.children) {
+      item.children.forEach(child => {
+        if (child.href) {
+          allPaths.push(child.href)
+        }
+      })
+    }
+  })
+  
+  // Find all matching paths
+  const matchingPaths = allPaths.filter(navPath => {
+    const normalizedNavPath = navPath.endsWith('/') ? navPath.slice(0, -1) : navPath
+    return normalizedCurrentPath === normalizedNavPath || 
+           normalizedCurrentPath.startsWith(normalizedNavPath + '/')
+  })
+  
+  // If no matches, return false
+  if (matchingPaths.length === 0) return false
+  
+  // Find the longest (most specific) matching path
+  const longestMatch = matchingPaths.reduce((longest, current) => 
+    current.length > longest.length ? current : longest
+  )
+  
+  // Only highlight if this path is the most specific match
+  const normalizedLongestMatch = longestMatch.endsWith('/') ? longestMatch.slice(0, -1) : longestMatch
+  return normalizedPath === normalizedLongestMatch
 }
 
 const NavBar = () => {

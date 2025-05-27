@@ -50,8 +50,8 @@ const VendorSelector: React.FC<VendorSelectorProps> = ({
           </div>
         )}
         
-        <div className="flex overflow-x-auto pb-4 no-scrollbar justify-center">
-          <div className="flex space-x-4 min-w-min mx-auto">
+        <div className="flex overflow-x-auto pb-4 no-scrollbar justify-start md:justify-center">
+          <div className="flex space-x-4 min-w-min md:mx-auto pl-4 md:pl-0 pr-4 md:pr-0">
             {randomizedVendors.map(vendor => {
             const identifier = getVendorIdentifier(vendor)
             const isSelected = selectedVendorIdentifiers.includes(identifier)

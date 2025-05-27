@@ -48,7 +48,7 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
         </TransitionChild>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+          <div className="flex min-h-full items-center justify-center p-4 sm:p-6">
             <TransitionChild
               as={Fragment}
               enter="ease-out duration-300"
@@ -58,27 +58,27 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <DialogPanel className="relative transform overflow-hidden rounded-xl bg-gradient-to-br from-[#200E46] to-[#2B1A4F] text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-3xl">
-                <div className="px-6 pb-6 pt-5 sm:p-8">
-                  <div className="flex items-start">
-                    <div className="mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-100/20 sm:mx-0 sm:h-10 sm:w-10">
+              <DialogPanel className="relative transform overflow-hidden rounded-xl bg-gradient-to-br from-[#200E46] to-[#2B1A4F] text-left shadow-2xl transition-all w-full max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl my-4 sm:my-8">
+                <div className="px-4 pb-4 pt-4 sm:px-6 sm:pb-6 sm:pt-5 md:p-8">
+                  <div className="sm:flex sm:items-start">
+                    <div className="mx-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100/20 sm:mx-0 sm:h-10 sm:w-10">
                       <FaClipboard
-                        className="h-6 w-6 text-blue-400"
+                        className="h-5 w-5 text-blue-400"
                         aria-hidden="true"
                       />
                     </div>
-                    <div className="mt-0 ml-4 text-left">
+                    <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                       <DialogTitle
                         as="h3"
-                        className="text-xl leading-6 font-semibold text-white"
+                        className="text-lg sm:text-xl leading-6 font-semibold text-white"
                       >
                         Checksum (SHA256)
                       </DialogTitle>
 
-                      <div className="mt-6 space-y-4">
+                      <div className="mt-4 sm:mt-6 space-y-4">
                         <div className="flex items-start space-x-2">
-                          <FaInfoCircle className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                          <p className="text-sm text-gray-200 leading-relaxed">
+                          <FaInfoCircle className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                          <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
                             Compare the checksum below with the file you downloaded
                             to ensure it's complete and unmodified.
                           </p>
@@ -92,76 +92,76 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
                                 ref={inputRef}
                                 readOnly
                                 onClick={handleCopy}
-                                className="w-full px-4 py-3 text-gray-200 bg-[#1A0B38] font-mono text-sm focus:outline-none overflow-x-auto"
+                                className="w-full px-3 py-2 sm:px-4 sm:py-3 text-gray-200 bg-[#1A0B38] font-mono text-xs sm:text-sm focus:outline-none overflow-x-auto"
                                 value={checksum}
                                 style={{ wordBreak: "break-all" }}
                               />
                               <button
                                 type="button"
                                 onClick={handleCopy}
-                                className={`px-4 flex items-center justify-center transition-colors flex-shrink-0 ${
+                                className={`px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-center transition-colors flex-shrink-0 ${
                                   copied
                                     ? "text-green-400"
                                     : "text-gray-200 hover:text-white"
                                 }`}
                               >
                                 {copied ? (
-                                  <FaCheck className="h-4 w-4" />
+                                  <FaCheck className="h-3 w-3 sm:h-4 sm:w-4" />
                                 ) : (
-                                  <FaClipboard className="h-4 w-4" />
+                                  <FaClipboard className="h-3 w-3 sm:h-4 sm:w-4" />
                                 )}
                               </button>
                             </div>
                           </div>
                         </div>
 
-                        <div className="bg-[#1A0B38] rounded-lg p-4 mt-4">
-                          <p className="text-sm text-gray-300 mb-3 font-medium">
+                        <div className="bg-[#1A0B38] rounded-lg p-3 sm:p-4 mt-4">
+                          <p className="text-xs sm:text-sm text-gray-300 mb-3 font-medium">
                             Verify using:
                           </p>
                           
                           {/* OS Tabs */}
-                          <div className="flex border-b border-gray-700 mb-3">
+                          <div className="flex border-b border-gray-700 mb-3 overflow-x-auto">
                             <button
                               onClick={() => setActiveOS("windows")}
-                              className={`flex items-center space-x-1.5 px-4 py-2 text-sm rounded-t-lg transition ${
+                              className={`flex items-center space-x-1 sm:space-x-1.5 px-3 sm:px-4 py-2 text-xs sm:text-sm rounded-t-lg transition whitespace-nowrap ${
                                 activeOS === "windows"
                                   ? "bg-[#2B1A4F] text-white border-b-2 border-pink-500"
                                   : "text-gray-400 hover:text-gray-200 hover:bg-[#2B1A4F]/40"
                               }`}
                             >
-                              <FaWindows className="h-4 w-4" />
+                              <FaWindows className="h-3 w-3 sm:h-4 sm:w-4" />
                               <span>Windows</span>
                             </button>
                             <button
                               onClick={() => setActiveOS("linux")}
-                              className={`flex items-center space-x-1.5 px-4 py-2 text-sm rounded-t-lg transition ${
+                              className={`flex items-center space-x-1 sm:space-x-1.5 px-3 sm:px-4 py-2 text-xs sm:text-sm rounded-t-lg transition whitespace-nowrap ${
                                 activeOS === "linux"
                                   ? "bg-[#2B1A4F] text-white border-b-2 border-pink-500"
                                   : "text-gray-400 hover:text-gray-200 hover:bg-[#2B1A4F]/40"
                               }`}
                             >
-                              <FaLinux className="h-4 w-4" />
+                              <FaLinux className="h-3 w-3 sm:h-4 sm:w-4" />
                               <span>Linux</span>
                             </button>
                             <button
                               onClick={() => setActiveOS("macos")}
-                              className={`flex items-center space-x-1.5 px-4 py-2 text-sm rounded-t-lg transition ${
+                              className={`flex items-center space-x-1 sm:space-x-1.5 px-3 sm:px-4 py-2 text-xs sm:text-sm rounded-t-lg transition whitespace-nowrap ${
                                 activeOS === "macos"
                                   ? "bg-[#2B1A4F] text-white border-b-2 border-pink-500"
                                   : "text-gray-400 hover:text-gray-200 hover:bg-[#2B1A4F]/40"
                               }`}
                             >
-                              <FaApple className="h-4 w-4" />
+                              <FaApple className="h-3 w-3 sm:h-4 sm:w-4" />
                               <span>macOS</span>
                             </button>
                           </div>
                           
                           {/* Command display based on selected OS */}
-                          <div className="bg-[#2B1A4F] p-3 rounded">
+                          <div className="bg-[#2B1A4F] p-2 sm:p-3 rounded">
                             {activeOS === "windows" && (
                               <div className="flex flex-col">
-                                <code className="text-sm text-gray-200 font-mono">
+                                <code className="text-xs sm:text-sm text-gray-200 font-mono break-all">
                                   certUtil -hashfile file SHA256
                                 </code>
                                 <p className="text-xs text-gray-400 mt-2">
@@ -172,7 +172,7 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
                             
                             {activeOS === "linux" && (
                               <div className="flex flex-col">
-                                <code className="text-sm text-gray-200 font-mono">
+                                <code className="text-xs sm:text-sm text-gray-200 font-mono break-all">
                                   sha256sum file
                                 </code>
                                 <p className="text-xs text-gray-400 mt-2">
@@ -183,7 +183,7 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
                             
                             {activeOS === "macos" && (
                               <div className="flex flex-col">
-                                <code className="text-sm text-gray-200 font-mono">
+                                <code className="text-xs sm:text-sm text-gray-200 font-mono break-all">
                                   shasum -a 256 file
                                 </code>
                                 <p className="text-xs text-gray-400 mt-2">
@@ -197,10 +197,10 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#1A0B38] px-6 py-4 flex items-center justify-end space-x-3">
+                <div className="bg-[#1A0B38] px-4 py-3 sm:px-6 sm:py-4 flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-end space-y-2 space-y-reverse sm:space-y-0 sm:space-x-3">
                   <button
                     type="button"
-                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-gray-700 px-4 py-2 text-sm font-medium text-gray-200 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-gray-700 px-4 py-2 text-sm font-medium text-gray-200 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 min-h-[40px]"
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}
                   >
@@ -208,7 +208,7 @@ const ChecksumModal = ({ open, setOpen, checksum }) => {
                   </button>
                   <button
                     type="button"
-                    className={`inline-flex items-center justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 ${
+                    className={`inline-flex items-center justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 min-h-[40px] ${
                       copied
                         ? "bg-pink-600 hover:bg-pink-700"
                         : "bg-pink-500 hover:pink-600"

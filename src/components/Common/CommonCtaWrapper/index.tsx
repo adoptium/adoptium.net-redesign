@@ -1,10 +1,11 @@
 import React, { useState } from "react"
 import OSSelector from "../OSSelector"
 import { AixIcon, SolarisIcon } from "../Icon"
-import { FaApple, FaWindows } from "react-icons/fa"
+import { FaApple, FaWindows, FaRedo } from "react-icons/fa"
 import { FcLinux } from "react-icons/fc"
 import { SiAlpinelinux } from "react-icons/si"
 import CommonDownloader from "../CommonDownloader"
+import AnimatedPlaceholder from "../../AnimatedPlaceholder"
 import { defaultPackageType } from "../../../util/defaults"
 
 interface Binary {
@@ -49,12 +50,13 @@ interface SelectedPackageType {
 interface CommonCtaWrapperProps {
   results: Result[]
   openModalWithChecksum: (checksum: string) => void
+  onReset?: () => void
 }
 
 const osIcons = {
   windows: FaWindows,
   mac: FaApple,
-  "alpine-linux": SiAlpinelinux, // Assuming alpine-linux uses the same icon as other Linux distros
+  "alpine-linux": SiAlpinelinux,
   linux: FcLinux,
   aix: AixIcon,
   solaris: SolarisIcon,
@@ -63,9 +65,88 @@ const osIcons = {
 const CommonCtaWrapper: React.FC<CommonCtaWrapperProps> = ({
   results,
   openModalWithChecksum,
+  onReset,
 }) => {
+  // Loading state with sleek animated placeholders
   if (!results || !Array.isArray(results)) {
-    return <div>Loading...</div>
+    return (
+      <div className="max-w-[1264px] space-y-8 w-full pb-16 md:pb-32 mx-auto px-6 xl:px-0">
+        {/* Create 3 skeleton cards for the loading state */}
+        {[1, 2, 3].map((index) => (
+          <div
+            key={index}
+            className="flex justify-between border flex-wrap border-[#554772] rounded-[24px] !bg-[#200E46] items-start p-6 lg:p-8 animate-pulse"
+          >
+            <div className="w-full lg:w-[45%] flex flex-col">
+              <AnimatedPlaceholder>
+                <div className="p-6 bg-[#2B1A4F] flex flex-col rounded-[24px] gap-6">
+                  <div className="flex justify-between items-center">
+                    <div className="flex gap-4 justify-start items-center">
+                      <div className="w-8 h-8 bg-gray-600 rounded-full animate-pulse"></div>
+                      <div className="h-6 bg-gray-600 rounded w-24 animate-pulse"></div>
+                    </div>
+                    <div className="flex gap-4">
+                      <div className="h-6 bg-gray-600 rounded w-16 animate-pulse"></div>
+                      <div className="h-6 bg-gray-600 rounded w-16 animate-pulse"></div>
+                    </div>
+                  </div>
+                  <div className="h-12 bg-gray-600 rounded-full animate-pulse"></div>
+                </div>
+              </AnimatedPlaceholder>
+            </div>
+            <div className="flex flex-col w-full lg:w-[50%] mt-8 lg:mt-0">
+              <div className="h-6 bg-gray-600 rounded w-48 mb-6 animate-pulse"></div>
+              <div className="space-y-4">
+                <div className="h-16 bg-gray-600 rounded-xl animate-pulse"></div>
+                <div className="h-16 bg-gray-600 rounded-xl animate-pulse"></div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  // No results state with reset option
+  if (results.length === 0) {
+    return (
+      <div className="max-w-[1264px] w-full pb-16 md:pb-32 mx-auto px-6 xl:px-0">
+        <div className="flex justify-center items-center min-h-[400px]">
+          <div className="text-center space-y-6 max-w-md">
+            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-[#2B1A4F] to-[#3E3355] rounded-full flex items-center justify-center">
+              <svg 
+                className="w-12 h-12 text-gray-400"
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={1.5} 
+                  d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+                />
+              </svg>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-2xl font-semibold text-white">No releases found</h3>
+              <p className="text-gray-400 leading-relaxed">
+                No releases match your current filter criteria. Try adjusting your selections or reset all filters to see available releases.
+              </p>
+            </div>
+            {onReset && (
+              <button
+                onClick={onReset}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-pink-500/25"
+              >
+                <FaRedo className="w-4 h-4" />
+                Reset Filters
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    )
   }
 
   const [activeArchitectures, setActiveArchitectures] =

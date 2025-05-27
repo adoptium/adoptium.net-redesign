@@ -88,10 +88,12 @@ exports[`Marketplace page > renders correctly 1`] = `
           class="max-w-[1264px] mx-auto w-full"
         >
           <button
-            class="sm:hidden flex justify-between items-center w-full text-[16px] font-normal leading-[24px] px-4 py-3 rounded-[80px] border-[2px] border-[#3E3355]"
+            class="sm:hidden flex justify-between items-center w-full text-[16px] font-normal leading-[24px] px-4 py-3 rounded-[80px] border-[2px] border-[#3E3355] transition-all duration-200"
           >
             Filter
-            <span>
+            <span
+              class="transition-transform duration-200 "
+            >
               <svg
                 fill="none"
                 height="20"
@@ -117,10 +119,10 @@ exports[`Marketplace page > renders correctly 1`] = `
             </span>
           </button>
           <div
-            class="w-full lg:overflow-visible overflow-hidden hidden sm:block"
+            class="w-full overflow-visible transition-all duration-300 hidden sm:block"
           >
             <div
-              class="flex items-center gap-5 justify-between flex-nowrap min-w-[1039px]"
+              class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 sm:justify-between sm:flex-nowrap sm:min-w-[1039px]"
             >
               <div
                 class="flex flex-col gap-4 w-full"
@@ -314,10 +316,10 @@ exports[`Marketplace page > renders correctly 1`] = `
            vendors selected
         </div>
         <div
-          class="flex overflow-x-auto pb-4 no-scrollbar justify-center"
+          class="flex overflow-x-auto pb-4 no-scrollbar justify-start md:justify-center"
         >
           <div
-            class="flex space-x-4 min-w-min mx-auto"
+            class="flex space-x-4 min-w-min md:mx-auto pl-4 md:pl-0 pr-4 md:pr-0"
           >
             <button
               class="relative group flex flex-col items-center justify-center p-3 
@@ -375,38 +377,480 @@ exports[`Marketplace page > renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="hidden md:flex items-center gap-20 border-t border-[#3E3355] pt-5 mb-5 mt-12 pl-10"
+      class="mt-8"
     >
-      <p
-        class="text-grey text-[16px] leading-[24px] mb-0"
+      <div
+        class="grid gap-4"
       >
-        Text
-      </p>
-      <p
-        class="text-grey text-[16px] leading-[24px] mb-0"
-      >
-        Text
-      </p>
-      <p
-        class="text-grey text-[16px] leading-[24px] mb-0"
-      >
-        Text
-      </p>
-      <p
-        class="text-grey text-[16px] leading-[24px] mb-0"
-      >
-        Build Date
-      </p>
-      <p
-        class="text-grey text-[16px] leading-[24px] mb-0"
-      >
-        Text
-      </p>
-      <p
-        class="text-grey text-[16px] leading-[24px] mb-0"
-      >
-        Text
-      </p>
+        <div
+          class="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#200E46]/90 via-[#2B1A4F]/80 to-[#200E46]/90 backdrop-blur-sm border border-[#200E46]/50"
+        >
+          <div
+            class="p-6"
+          >
+            <div
+              class="animated-placeholder"
+            >
+              <div
+                class="hidden md:flex items-center justify-between"
+              >
+                <div
+                  class="flex items-center flex-1"
+                >
+                  <div
+                    class="w-[140px] flex-shrink-0"
+                  >
+                    <div
+                      class="h-5 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[140px] flex-shrink-0 px-2"
+                  >
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-24 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[140px] flex-shrink-0 flex justify-center px-2"
+                  >
+                    <div
+                      class="w-20 h-14 bg-[#200E46]/60 rounded-xl animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[120px] flex-shrink-0 px-2 space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[100px] flex-shrink-0 px-2 space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-8 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[100px] flex-shrink-0 px-2 space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-8 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-12 animate-pulse"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-3 flex-shrink-0 ml-4"
+                >
+                  <div
+                    class="h-10 bg-[#200E46]/60 rounded-lg w-24 animate-pulse"
+                  />
+                  <div
+                    class="h-10 bg-[#200E46]/60 rounded-lg w-32 animate-pulse"
+                  />
+                </div>
+              </div>
+              <div
+                class="block md:hidden space-y-4"
+              >
+                <div
+                  class="flex items-center justify-between"
+                >
+                  <div
+                    class="space-y-2"
+                  >
+                    <div
+                      class="h-5 bg-[#200E46]/60 rounded w-24 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-24 h-16 bg-[#200E46]/60 rounded-xl animate-pulse"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2 gap-3"
+                >
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex gap-3 pt-2"
+                >
+                  <div
+                    class="flex-1 h-10 bg-[#200E46]/60 rounded-lg animate-pulse"
+                  />
+                  <div
+                    class="flex-1 h-10 bg-[#200E46]/60 rounded-lg animate-pulse"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#200E46]/90 via-[#2B1A4F]/80 to-[#200E46]/90 backdrop-blur-sm border border-[#200E46]/50"
+        >
+          <div
+            class="p-6"
+          >
+            <div
+              class="animated-placeholder"
+            >
+              <div
+                class="hidden md:flex items-center justify-between"
+              >
+                <div
+                  class="flex items-center flex-1"
+                >
+                  <div
+                    class="w-[140px] flex-shrink-0"
+                  >
+                    <div
+                      class="h-5 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[140px] flex-shrink-0 px-2"
+                  >
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-24 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[140px] flex-shrink-0 flex justify-center px-2"
+                  >
+                    <div
+                      class="w-20 h-14 bg-[#200E46]/60 rounded-xl animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[120px] flex-shrink-0 px-2 space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[100px] flex-shrink-0 px-2 space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-8 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[100px] flex-shrink-0 px-2 space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-8 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-12 animate-pulse"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-3 flex-shrink-0 ml-4"
+                >
+                  <div
+                    class="h-10 bg-[#200E46]/60 rounded-lg w-24 animate-pulse"
+                  />
+                  <div
+                    class="h-10 bg-[#200E46]/60 rounded-lg w-32 animate-pulse"
+                  />
+                </div>
+              </div>
+              <div
+                class="block md:hidden space-y-4"
+              >
+                <div
+                  class="flex items-center justify-between"
+                >
+                  <div
+                    class="space-y-2"
+                  >
+                    <div
+                      class="h-5 bg-[#200E46]/60 rounded w-24 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-24 h-16 bg-[#200E46]/60 rounded-xl animate-pulse"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2 gap-3"
+                >
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex gap-3 pt-2"
+                >
+                  <div
+                    class="flex-1 h-10 bg-[#200E46]/60 rounded-lg animate-pulse"
+                  />
+                  <div
+                    class="flex-1 h-10 bg-[#200E46]/60 rounded-lg animate-pulse"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#200E46]/90 via-[#2B1A4F]/80 to-[#200E46]/90 backdrop-blur-sm border border-[#200E46]/50"
+        >
+          <div
+            class="p-6"
+          >
+            <div
+              class="animated-placeholder"
+            >
+              <div
+                class="hidden md:flex items-center justify-between"
+              >
+                <div
+                  class="flex items-center flex-1"
+                >
+                  <div
+                    class="w-[140px] flex-shrink-0"
+                  >
+                    <div
+                      class="h-5 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[140px] flex-shrink-0 px-2"
+                  >
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-24 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[140px] flex-shrink-0 flex justify-center px-2"
+                  >
+                    <div
+                      class="w-20 h-14 bg-[#200E46]/60 rounded-xl animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[120px] flex-shrink-0 px-2 space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[100px] flex-shrink-0 px-2 space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-8 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-[100px] flex-shrink-0 px-2 space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-8 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-12 animate-pulse"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-3 flex-shrink-0 ml-4"
+                >
+                  <div
+                    class="h-10 bg-[#200E46]/60 rounded-lg w-24 animate-pulse"
+                  />
+                  <div
+                    class="h-10 bg-[#200E46]/60 rounded-lg w-32 animate-pulse"
+                  />
+                </div>
+              </div>
+              <div
+                class="block md:hidden space-y-4"
+              >
+                <div
+                  class="flex items-center justify-between"
+                >
+                  <div
+                    class="space-y-2"
+                  >
+                    <div
+                      class="h-5 bg-[#200E46]/60 rounded w-24 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="w-24 h-16 bg-[#200E46]/60 rounded-xl animate-pulse"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2 gap-3"
+                >
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                  <div
+                    class="space-y-1"
+                  >
+                    <div
+                      class="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"
+                    />
+                    <div
+                      class="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex gap-3 pt-2"
+                >
+                  <div
+                    class="flex-1 h-10 bg-[#200E46]/60 rounded-lg animate-pulse"
+                  />
+                  <div
+                    class="flex-1 h-10 bg-[#200E46]/60 rounded-lg animate-pulse"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div

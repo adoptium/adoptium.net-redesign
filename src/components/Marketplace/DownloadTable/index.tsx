@@ -13,6 +13,8 @@ import { detectOS, UserOS } from "../../../util/detectOS"
 import { getAllPkgsForVersion, MarketplaceRelease } from "../../../hooks"
 import { fetchOses, fetchArches} from '../../../hooks/fetchConstants'
 import { packageTypes, defaultArchitecture, defaultPackageType} from '../../../util/defaults'
+import vendors from "../../../json/marketplace.json"
+import getVendorIdentifier from "../../../util/vendors"
 
 const DownloadTable = () => {
 
@@ -185,6 +187,29 @@ const DownloadTable = () => {
     updateOS(os)
   }
 
+  const handleReset = () => {
+    // Reset all filters to default values
+    const defaultOS = ""
+    const defaultArch = defaultArchitecture
+    const defaultVersion = data.mostRecentLts.version
+    const defaultPackage = defaultPackageType
+    // Select all vendors by default (same as VendorSelector initial behavior)
+    const defaultVendors: string[] = vendors.map(vendor => getVendorIdentifier(vendor))
+
+    // Update URL parameters
+    setURLParam("os", defaultOS)
+    setURLParam("arch", defaultArch)
+    setURLParam("version", defaultVersion)
+    setURLParam("package", defaultPackage)
+    
+    // Update state
+    updateOS(defaultOS)
+    updateArch(defaultArch)
+    udateVersion(defaultVersion)
+    updatePackageType(defaultPackage)
+    updateSelectedVendorIdentifiers(defaultVendors)
+  }
+
   return (
     <div className="max-w-[1264px] mx-auto px-6 pb-20">
       <ReleaseSelector
@@ -203,25 +228,7 @@ const DownloadTable = () => {
         selectedVendorIdentifiers={selectedVendorIdentifiers}
         setSelectedVendorIdentifiers={updateSelectedVendorIdentifiers}
       />
-      <div className="hidden md:flex items-center gap-20 border-t border-[#3E3355] pt-5 mb-5 mt-12 pl-10">
-        <p className="text-grey text-[16px] leading-[24px] mb-0">
-          <Trans>Build Version</Trans>
-        </p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0">
-          <Trans>Distribution</Trans>
-        </p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0">
-          <Trans>Vendor</Trans>
-        </p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0">Build Date</p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0">
-          <Trans>Operating System</Trans>
-        </p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0">
-          <Trans>Architecture</Trans>
-        </p>
-      </div>
-      {releases && <AllReleaseCard results={releases} />}
+      {<AllReleaseCard results={releases} onReset={handleReset} />}
     </div>
   )
 }

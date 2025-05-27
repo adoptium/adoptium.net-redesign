@@ -123,10 +123,12 @@ exports[`Releases page > renders correctly 1`] = `
             class="max-w-[1264px] mx-auto w-full"
           >
             <button
-              class="sm:hidden flex justify-between items-center w-full text-[16px] font-normal leading-[24px] px-4 py-3 rounded-[80px] border-[2px] border-[#3E3355]"
+              class="sm:hidden flex justify-between items-center w-full text-[16px] font-normal leading-[24px] px-4 py-3 rounded-[80px] border-[2px] border-[#3E3355] transition-all duration-200"
             >
               Filter
-              <span>
+              <span
+                class="transition-transform duration-200 "
+              >
                 <svg
                   fill="none"
                   height="20"
@@ -152,10 +154,10 @@ exports[`Releases page > renders correctly 1`] = `
               </span>
             </button>
             <div
-              class="w-full lg:overflow-visible overflow-hidden hidden sm:block"
+              class="w-full overflow-visible transition-all duration-300 hidden sm:block"
             >
               <div
-                class="flex items-center gap-5 justify-between flex-nowrap min-w-[1039px]"
+                class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 sm:justify-between sm:flex-nowrap sm:min-w-[1039px]"
               >
                 <div
                   class="flex flex-col gap-4 w-full"
@@ -293,8 +295,189 @@ exports[`Releases page > renders correctly 1`] = `
       </div>
     </div>
   </section>
-  <div>
-    Loading...
+  <div
+    class="max-w-[1264px] space-y-8 w-full pb-16 md:pb-32 mx-auto px-6 xl:px-0"
+  >
+    <div
+      class="flex justify-between border flex-wrap border-[#554772] rounded-[24px] !bg-[#200E46] items-start p-6 lg:p-8 animate-pulse"
+    >
+      <div
+        class="w-full lg:w-[45%] flex flex-col"
+      >
+        <div
+          class="animated-placeholder"
+        >
+          <div
+            class="p-6 bg-[#2B1A4F] flex flex-col rounded-[24px] gap-6"
+          >
+            <div
+              class="flex justify-between items-center"
+            >
+              <div
+                class="flex gap-4 justify-start items-center"
+              >
+                <div
+                  class="w-8 h-8 bg-gray-600 rounded-full animate-pulse"
+                />
+                <div
+                  class="h-6 bg-gray-600 rounded w-24 animate-pulse"
+                />
+              </div>
+              <div
+                class="flex gap-4"
+              >
+                <div
+                  class="h-6 bg-gray-600 rounded w-16 animate-pulse"
+                />
+                <div
+                  class="h-6 bg-gray-600 rounded w-16 animate-pulse"
+                />
+              </div>
+            </div>
+            <div
+              class="h-12 bg-gray-600 rounded-full animate-pulse"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col w-full lg:w-[50%] mt-8 lg:mt-0"
+      >
+        <div
+          class="h-6 bg-gray-600 rounded w-48 mb-6 animate-pulse"
+        />
+        <div
+          class="space-y-4"
+        >
+          <div
+            class="h-16 bg-gray-600 rounded-xl animate-pulse"
+          />
+          <div
+            class="h-16 bg-gray-600 rounded-xl animate-pulse"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-between border flex-wrap border-[#554772] rounded-[24px] !bg-[#200E46] items-start p-6 lg:p-8 animate-pulse"
+    >
+      <div
+        class="w-full lg:w-[45%] flex flex-col"
+      >
+        <div
+          class="animated-placeholder"
+        >
+          <div
+            class="p-6 bg-[#2B1A4F] flex flex-col rounded-[24px] gap-6"
+          >
+            <div
+              class="flex justify-between items-center"
+            >
+              <div
+                class="flex gap-4 justify-start items-center"
+              >
+                <div
+                  class="w-8 h-8 bg-gray-600 rounded-full animate-pulse"
+                />
+                <div
+                  class="h-6 bg-gray-600 rounded w-24 animate-pulse"
+                />
+              </div>
+              <div
+                class="flex gap-4"
+              >
+                <div
+                  class="h-6 bg-gray-600 rounded w-16 animate-pulse"
+                />
+                <div
+                  class="h-6 bg-gray-600 rounded w-16 animate-pulse"
+                />
+              </div>
+            </div>
+            <div
+              class="h-12 bg-gray-600 rounded-full animate-pulse"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col w-full lg:w-[50%] mt-8 lg:mt-0"
+      >
+        <div
+          class="h-6 bg-gray-600 rounded w-48 mb-6 animate-pulse"
+        />
+        <div
+          class="space-y-4"
+        >
+          <div
+            class="h-16 bg-gray-600 rounded-xl animate-pulse"
+          />
+          <div
+            class="h-16 bg-gray-600 rounded-xl animate-pulse"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-between border flex-wrap border-[#554772] rounded-[24px] !bg-[#200E46] items-start p-6 lg:p-8 animate-pulse"
+    >
+      <div
+        class="w-full lg:w-[45%] flex flex-col"
+      >
+        <div
+          class="animated-placeholder"
+        >
+          <div
+            class="p-6 bg-[#2B1A4F] flex flex-col rounded-[24px] gap-6"
+          >
+            <div
+              class="flex justify-between items-center"
+            >
+              <div
+                class="flex gap-4 justify-start items-center"
+              >
+                <div
+                  class="w-8 h-8 bg-gray-600 rounded-full animate-pulse"
+                />
+                <div
+                  class="h-6 bg-gray-600 rounded w-24 animate-pulse"
+                />
+              </div>
+              <div
+                class="flex gap-4"
+              >
+                <div
+                  class="h-6 bg-gray-600 rounded w-16 animate-pulse"
+                />
+                <div
+                  class="h-6 bg-gray-600 rounded w-16 animate-pulse"
+                />
+              </div>
+            </div>
+            <div
+              class="h-12 bg-gray-600 rounded-full animate-pulse"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col w-full lg:w-[50%] mt-8 lg:mt-0"
+      >
+        <div
+          class="h-6 bg-gray-600 rounded w-48 mb-6 animate-pulse"
+        />
+        <div
+          class="space-y-4"
+        >
+          <div
+            class="h-16 bg-gray-600 rounded-xl animate-pulse"
+          />
+          <div
+            class="h-16 bg-gray-600 rounded-xl animate-pulse"
+          />
+        </div>
+      </div>
+    </div>
   </div>
   <section
     class="py-16 md:py-32 bg-[#0E002A] px-6"

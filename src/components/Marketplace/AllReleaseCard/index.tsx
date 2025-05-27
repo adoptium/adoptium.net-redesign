@@ -2,13 +2,20 @@ import React, { useState } from "react"
 import { Link } from "../../Link"
 import { BsCopy } from "react-icons/bs"
 import { FiDownload, FiInfo } from "react-icons/fi"
+import { FaRedo } from "react-icons/fa"
 import ChecksumModal from "../../ChecksumModal"
+import AnimatedPlaceholder from "../../AnimatedPlaceholder"
 
 import { capitalize } from "../../../util/capitalize"
 import { getImageForDistribution } from "../../../hooks"
 import { fetchExtension } from "../../../util/fetchExtension"
 
-const AllReleaseCard = ({ results }) => {
+interface AllReleaseCardProps {
+  results: any[] | null
+  onReset?: () => void
+}
+
+const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => {
   const [modalOpen, setModalOpen] = useState(false)
   const [currentChecksum, setCurrentChecksum] = useState("")
 
@@ -17,83 +24,309 @@ const AllReleaseCard = ({ results }) => {
     setModalOpen(true)
   }
 
+  // Loading state with sleek animated placeholders
+  if (results === null) {
+    return (
+      <div className="mt-8">
+        <div className="grid gap-4">
+          {/* Create 3 skeleton cards for the loading state */}
+          {[1, 2, 3].map((index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#200E46]/90 via-[#2B1A4F]/80 to-[#200E46]/90 backdrop-blur-sm border border-[#200E46]/50"
+            >
+              <div className="p-6">
+                <AnimatedPlaceholder>
+                  {/* Desktop Layout Skeleton */}
+                  <div className="hidden md:flex items-center justify-between">
+                    <div className="flex items-center flex-1">
+                      <div className="w-[140px] flex-shrink-0">
+                        <div className="h-5 bg-[#200E46]/60 rounded w-20 animate-pulse"></div>
+                      </div>
+                      <div className="w-[140px] flex-shrink-0 px-2">
+                        <div className="h-4 bg-[#200E46]/60 rounded w-24 animate-pulse"></div>
+                      </div>
+                      <div className="w-[140px] flex-shrink-0 flex justify-center px-2">
+                        <div className="w-20 h-14 bg-[#200E46]/60 rounded-xl animate-pulse"></div>
+                      </div>
+                      <div className="w-[120px] flex-shrink-0 px-2 space-y-1">
+                        <div className="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"></div>
+                        <div className="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"></div>
+                      </div>
+                      <div className="w-[100px] flex-shrink-0 px-2 space-y-1">
+                        <div className="h-3 bg-[#200E46]/60 rounded w-8 animate-pulse"></div>
+                        <div className="h-4 bg-[#200E46]/60 rounded w-16 animate-pulse"></div>
+                      </div>
+                      <div className="w-[100px] flex-shrink-0 px-2 space-y-1">
+                        <div className="h-3 bg-[#200E46]/60 rounded w-8 animate-pulse"></div>
+                        <div className="h-4 bg-[#200E46]/60 rounded w-12 animate-pulse"></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 flex-shrink-0 ml-4">
+                      <div className="h-10 bg-[#200E46]/60 rounded-lg w-24 animate-pulse"></div>
+                      <div className="h-10 bg-[#200E46]/60 rounded-lg w-32 animate-pulse"></div>
+                    </div>
+                  </div>
+
+                  {/* Mobile Layout Skeleton */}
+                  <div className="block md:hidden space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="space-y-2">
+                        <div className="h-5 bg-[#200E46]/60 rounded w-24 animate-pulse"></div>
+                        <div className="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"></div>
+                      </div>
+                      <div className="w-24 h-16 bg-[#200E46]/60 rounded-xl animate-pulse"></div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      {[1, 2, 3, 4].map((i) => (
+                        <div key={i} className="space-y-1">
+                          <div className="h-3 bg-[#200E46]/60 rounded w-16 animate-pulse"></div>
+                          <div className="h-4 bg-[#200E46]/60 rounded w-20 animate-pulse"></div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex gap-3 pt-2">
+                      <div className="flex-1 h-10 bg-[#200E46]/60 rounded-lg animate-pulse"></div>
+                      <div className="flex-1 h-10 bg-[#200E46]/60 rounded-lg animate-pulse"></div>
+                    </div>
+                  </div>
+                </AnimatedPlaceholder>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  // No results state with reset option
+  if (results && results.length === 0) {
+    return (
+      <div className="mt-8">
+        <div className="flex justify-center items-center min-h-[400px]">
+          <div className="text-center space-y-6 max-w-md">
+            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-[#2B1A4F] to-[#3E3355] rounded-full flex items-center justify-center">
+              <svg 
+                className="w-12 h-12 text-gray-400"
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={1.5} 
+                  d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+                />
+              </svg>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-2xl font-semibold text-white">No distributions found</h3>
+              <p className="text-gray-400 leading-relaxed">
+                No Java distributions match your current filter criteria. Try adjusting your selections or reset all filters to see available distributions.
+              </p>
+            </div>
+            {onReset && (
+              <button
+                onClick={onReset}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#FF1464] to-[#FF1464]/90 hover:from-[#FF1464]/90 hover:to-[#FF1464] text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-[#FF1464]/25"
+              >
+                <FaRedo className="w-4 h-4" />
+                Reset Filters
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="mt-8">
       <ChecksumModal open={modalOpen} setOpen={setModalOpen} checksum={currentChecksum} />
-      {results.map((release, index) => (
-        <div
-          key={index}
-          className="newscard-2 !blur-0 px-6 py-6 lg:flex justify-between items-center mt-6 hover:shadow-xl transition-all duration-300 rounded-2xl bg-gradient-to-r from-[#200E46]/80 to-[#2B1A4F]/80 backdrop-blur-sm"
-        >
-          <div className="flex flex-col lg:flex-row justify-between gap-4 lg:items-center">
-            <span className="block md:hidden">
-              <img
-                className="w-[100px] mb-0"
-                alt={`${release.vendor} logo`}
-                src={getImageForDistribution(release.vendor)}
-              />
-            </span>
-            <div className="lg:w-[160px] mt-3 md:mt-0">
-              <h3 className="text-[24px] hidden md:block md:text-[16px] font-bold leading-[133.333%] md:leading-[150%] text-white">
-                {release.release_name}
-              </h3>
-              <h3 className="text-[24px] block md:hidden md:text-[16px] font-bold leading-[133.333%] md:leading-[150%] text-white">
-                {release.release_name}
-              </h3>
-            </div>
-            <div className="lg:flex items-center gap-20">
-              <p className="text-base font-bold leading-[150%] mb-0 hidden lg:block w-[140px] text-white">
-                {capitalize(release.binary.distribution)}
-              </p>
-              <span className="fill-primary hidden md:block" style={{ backgroundColor: "#fff", padding: "10px", borderRadius: "12px", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" }}>
-                <img
-                  className="w-[100px] mb-0"
-                  alt={`${release.binary.distribution} logo`}
-                  src={getImageForDistribution(release.binary.distribution)}
-                />
-              </span>
-              <p className="text-base text-gray-300 leading-[150%] mb-0 hidden lg:block">
-                {new Date(release.binary.timestamp).toLocaleDateString()}
-              </p>
-              <p className="text-base text-gray-300 leading-[150%] hidden lg:block mb-0">
-                {capitalize(release.binary.os)}
-              </p>
-              <p className="text-base text-gray-300 leading-[150%] mb-0 hidden lg:block">
-                {release.binary.architecture}
-              </p>
+      
+      {/* Modern Grid Layout */}
+      <div className="grid gap-4">
+        {results.map((release, index) => (
+          <div
+            key={index}
+            className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-[#200E46]/90 via-[#2B1A4F]/80 to-[#200E46]/90 backdrop-blur-sm border border-[#200E46]/50 hover:border-[#FF1464]/40 transition-all duration-300 hover:shadow-2xl hover:shadow-[#FF1464]/10 hover:transform hover:scale-[1.02]"
+          >
+            {/* Subtle gradient overlay on hover */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FF1464]/5 to-[#FF1464]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            
+            <div className="relative p-6">
+              {/* Mobile Layout */}
+              <div className="block md:hidden space-y-4">
+                {/* Header with version and vendor logo */}
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-1">
+                      {release.release_name}
+                    </h3>
+                    <p className="text-sm text-slate-300">
+                      {capitalize(release.binary.distribution)}
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <div className="w-24 h-16 bg-white rounded-xl p-2.5 shadow-xl ring-2 ring-[#FF1464]/20">
+                      <img
+                        className="w-full h-full object-contain drop-shadow-sm"
+                        alt={`${release.binary.distribution} logo`}
+                        src={getImageForDistribution(release.binary.distribution)}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Details Grid */}
+                <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div className="space-y-1">
+                    <span className="text-slate-300">Build Date</span>
+                    <p className="text-white font-medium">
+                      {new Date(release.binary.timestamp).toLocaleDateString()}
+                    </p>
+                  </div>
+                  <div className="space-y-1">
+                    <span className="text-slate-300">OS</span>
+                    <p className="text-white font-medium">
+                      {capitalize(release.binary.os)}
+                    </p>
+                  </div>
+                  <div className="space-y-1">
+                    <span className="text-slate-300">Architecture</span>
+                    <p className="text-white font-medium">
+                      {release.binary.architecture}
+                    </p>
+                  </div>
+                  <div className="space-y-1">
+                    <span className="text-slate-300">Vendor</span>
+                    <p className="text-white font-medium">
+                      {release.vendor}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Action Buttons - Grouped Design */}
+                <div className="bg-[#200E46]/60 backdrop-blur-sm rounded-xl p-3 border border-[#200E46]/40">
+                  <div className="flex gap-2">
+                    <button 
+                      onClick={() => openModalWithChecksum(release.binary.package.sha256sum)}
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-[#200E46]/80 hover:bg-[#200E46]/90 border border-[#FF1464]/20 hover:border-[#FF1464]/40 rounded-lg text-white text-sm font-medium transition-all duration-200 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-[#FF1464]/20"
+                      aria-label="View checksum"
+                    >
+                      <BsCopy className="w-4 h-4" />
+                      Checksum
+                    </button>
+                    <Link
+                      placeholder="Download"
+                      to="/download"
+                      state={{
+                        link: release.binary.package.link,
+                        checksum: release.binary.package.checksum,
+                        os: release.binary.os,
+                        arch: release.binary.architecture,
+                        pkg_type: release.binary.package.type,
+                        java_version: release.release_name,
+                        vendor: release.vendor,
+                      }}
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#FF1464] to-[#FF1464]/90 hover:from-[#FF1464]/90 hover:to-[#FF1464] rounded-lg text-white text-sm font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-[#FF1464]/30 hover:transform hover:scale-105"
+                    >
+                      <FiDownload className="w-4 h-4" />
+                      Download ({fetchExtension(release.binary.package.name)})
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Desktop Layout */}
+              <div className="hidden md:flex items-center justify-between">
+                <div className="flex items-center flex-1">
+                  {/* Version */}
+                  <div className="w-[140px] flex-shrink-0">
+                    <h3 className="text-lg font-bold text-white truncate">
+                      {release.release_name}
+                    </h3>
+                  </div>
+
+                  {/* Distribution */}
+                  <div className="w-[140px] flex-shrink-0 px-2">
+                    <p className="text-white font-semibold truncate">
+                      {capitalize(release.binary.distribution)}
+                    </p>
+                  </div>
+
+                  {/* Vendor Logo - More Prominent */}
+                  <div className="w-[140px] flex-shrink-0 flex justify-center px-2">
+                    <div className="w-20 h-14 bg-white rounded-xl p-2.5 shadow-xl ring-2 ring-[#FF1464]/20 hover:ring-[#FF1464]/40 transition-all duration-200">
+                      <img
+                        className="w-full h-full object-contain drop-shadow-sm"
+                        alt={`${release.binary.distribution} logo`}
+                        src={getImageForDistribution(release.binary.distribution)}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Build Date */}
+                  <div className="w-[120px] flex-shrink-0 px-2">
+                    <span className="text-xs text-slate-300 block">Build Date</span>
+                    <p className="text-sm text-white font-medium truncate">
+                      {new Date(release.binary.timestamp).toLocaleDateString()}
+                    </p>
+                  </div>
+
+                  {/* OS */}
+                  <div className="w-[100px] flex-shrink-0 px-2">
+                    <span className="text-xs text-slate-300 block">OS</span>
+                    <p className="text-sm text-white font-medium truncate">
+                      {capitalize(release.binary.os)}
+                    </p>
+                  </div>
+
+                  {/* Architecture */}
+                  <div className="w-[100px] flex-shrink-0 px-2">
+                    <span className="text-xs text-slate-300 block">Arch</span>
+                    <p className="text-sm text-white font-medium truncate">
+                      {release.binary.architecture}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Action Buttons - Grouped Design */}
+                <div className="bg-[#200E46]/40 backdrop-blur-sm rounded-xl p-3 border border-[#200E46]/30">
+                  <div className="flex items-center gap-2">
+                    <button 
+                      onClick={() => openModalWithChecksum(release.binary.package.sha256sum)}
+                      className="flex items-center gap-2 px-4 py-2 bg-[#200E46]/80 hover:bg-[#200E46]/90 border border-[#FF1464]/20 hover:border-[#FF1464]/40 rounded-lg text-white text-sm font-medium transition-all duration-200 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-[#FF1464]/20"
+                      aria-label="View checksum"
+                    >
+                      <BsCopy className="w-4 h-4" />
+                      Checksum
+                    </button>
+                    <Link
+                      placeholder="Download"
+                      to="/download"
+                      state={{
+                        link: release.binary.package.link,
+                        checksum: release.binary.package.checksum,
+                        os: release.binary.os,
+                        arch: release.binary.architecture,
+                        pkg_type: release.binary.package.type,
+                        java_version: release.release_name,
+                        vendor: release.vendor,
+                      }}
+                      className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#FF1464] to-[#FF1464]/90 hover:from-[#FF1464]/90 hover:to-[#FF1464] rounded-lg text-white text-sm font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-[#FF1464]/30 hover:transform hover:scale-105"
+                    >
+                      <FiDownload className="w-4 h-4" />
+                      Download ({fetchExtension(release.binary.package.name)})
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="flex items-end justify-between ml-3 mt-4 md:mt-0 gap-5">
-            <div className="flex gap-3">
-              <button 
-                onClick={() => openModalWithChecksum(release.binary.package.sha256sum)}
-                className="rounded-[20px] px-3 py-2 flex items-center justify-center bg-[#2B1A4F] hover:bg-[#3B2A5F] transition-all border border-[#5A4D76] hover:border-[#6A5D86] text-white text-sm gap-2"
-                aria-label="View checksum"
-                title="View checksum"
-              >
-                <BsCopy className="h-4 w-4" /> Checksum
-              </button>
-              <Link
-                placeholder="Download"
-                to="/download"
-                state={{
-                  link: release.binary.package.link,
-                  checksum: release.binary.package.checksum,
-                  os: release.binary.os,
-                  arch: release.binary.architecture,
-                  pkg_type: release.binary.package.type,
-                  java_version: release.release_name,
-                  vendor: release.vendor,
-                }}
-                className="rounded-[20px] hover:shadow-lg transition-all duration-300 bg-[#FF1464] border-0 ease-in-out flex items-center justify-center gap-2 px-4 py-2 text-white font-medium text-sm"
-              >
-                <FiDownload className="h-4 w-4" /> 
-                <span>Download ({fetchExtension(release.binary.package.name)})</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }

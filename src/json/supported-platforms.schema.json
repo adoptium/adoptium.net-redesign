@@ -10,6 +10,9 @@
           "category": {
             "type": "string"
           },
+          "footnotes": {
+            "type": "array"
+          },
           "distros": {
             "type": "array",
             "items": {

@@ -6,6 +6,15 @@ import { LiaTimesSolid } from "react-icons/lia"
 import { HiChevronDown } from "react-icons/hi2"
 import platformSupportData from "../../../json/supported-platforms.json"
 
+interface Platform {
+  category: string
+  footnotes?: string[]
+  distros: Array<{
+    name: string
+    versions: Record<string, { supported: boolean; docker: boolean }>
+  }>
+}
+
 const PlatformMatrix = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
@@ -15,6 +24,29 @@ const PlatformMatrix = () => {
 
   const isEven = n => {
     return n % 2 == 0
+  }
+
+  // Helper function to render text with clickable links
+  const renderTextWithLinks = (text: string) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g
+    const parts = text.split(urlRegex)
+    
+    return parts.map((part, index) => {
+      if (urlRegex.test(part)) {
+        return (
+          <a
+            key={index}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-pink-300 hover:text-pink-200 underline transition-colors duration-200"
+          >
+            {part}
+          </a>
+        )
+      }
+      return part
+    })
   }
 
   return (
@@ -99,6 +131,21 @@ const PlatformMatrix = () => {
               >
                 {openFaq === index && (
                   <div className="px-4 md:px-6 lg:px-8 pb-4 md:pb-6 lg:pb-8">
+                    {/* Footnotes section */}
+                    {(platform as any).footnotes && (platform as any).footnotes.length > 0 && (
+                      <div className="my-4 p-4 bg-gradient-to-r from-pink-900/20 to-rose-900/20 border border-pink-500/20 rounded-xl">
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0 w-2 h-2 bg-pink-400 rounded-full mt-2"></div>
+                          <div className="text-pink-100/90 text-sm leading-relaxed">
+                            {(platform as any).footnotes.map((footnote: string, index: number) => (
+                              <div key={index} className={index > 0 ? 'mt-2' : ''}>
+                                {renderTextWithLinks(footnote)}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )}
                     <div className="hidden md:block bg-gradient-to-br from-black/20 to-black/10 rounded-2xl border border-white/5 overflow-hidden">
                       {platform.distros.map((distro, distroIndex) => (
                         <div

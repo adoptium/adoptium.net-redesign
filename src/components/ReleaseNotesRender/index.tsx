@@ -2,8 +2,8 @@ import React, { useRef, MutableRefObject } from "react"
 import {
   DataGrid,
   GridColDef,
-  GridToolbarContainer,
-  GridToolbarFilterButton,
+  Toolbar,
+  ToolbarButton,
   gridClasses,
 } from "@mui/x-data-grid"
 import CircularProgress from '@mui/material/CircularProgress';
@@ -65,9 +65,9 @@ const CustomToolbar = () => {
   const [filterButtonEl, setFilterButtonEl] = React.useState<HTMLButtonElement | null>(null);
   
   return (
-    <GridToolbarContainer>
-      <GridToolbarFilterButton ref={setFilterButtonEl} />
-    </GridToolbarContainer>
+    <Toolbar>
+      <ToolbarButton ref={setFilterButtonEl} />
+    </Toolbar>
   );
 };
 

@@ -10,19 +10,6 @@ import queryString from "query-string"
 vi.mock("query-string")
 vi.mock("../../../hooks/fetchReleaseNotes")
 
-// Disable Virtualization so vitest can render all the columns
-// https://github.com/mui/mui-x/issues/1151#issuecomment-1108349639
-vi.mock("@mui/x-data-grid", async () => {
-  const datagrid: any = await vi.importActual("@mui/x-data-grid")
-  const { DataGrid } = datagrid
-  return {
-    ...datagrid,
-    DataGrid: (props: DataGridProps) => {
-      return <DataGrid {...props} disableVirtualization />
-    },
-  }
-})
-
 afterEach(() => {
   vi.clearAllMocks()
 })

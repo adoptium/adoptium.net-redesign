@@ -4,6 +4,13 @@ updates:
   directory: "/"
   schedule:
     interval: daily
+  groups:
+      gatsby-dependencies:
+        patterns:
+          - "gatsby-plugin-*"
+      mui-dependencies:
+        patterns:
+          - "@mui/*"
   open-pull-requests-limit: 10
 - package-ecosystem: github-actions
   directory: "/"

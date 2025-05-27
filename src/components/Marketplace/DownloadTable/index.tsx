@@ -228,24 +228,6 @@ const DownloadTable = () => {
         selectedVendorIdentifiers={selectedVendorIdentifiers}
         setSelectedVendorIdentifiers={updateSelectedVendorIdentifiers}
       />
-      <div className="hidden md:flex items-center gap-20 border-t border-[#3E3355] pt-5 mb-5 mt-12 pl-10">
-        <p className="text-grey text-[16px] leading-[24px] mb-0">
-          <Trans>Build Version</Trans>
-        </p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0">
-          <Trans>Distribution</Trans>
-        </p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0">
-          <Trans>Vendor</Trans>
-        </p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0">Build Date</p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0">
-          <Trans>Operating System</Trans>
-        </p>
-        <p className="text-grey text-[16px] leading-[24px] mb-0">
-          <Trans>Architecture</Trans>
-        </p>
-      </div>
       {<AllReleaseCard results={releases} onReset={handleReset} />}
     </div>
   )

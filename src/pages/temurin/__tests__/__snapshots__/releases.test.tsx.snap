@@ -123,10 +123,12 @@ exports[`Releases page > renders correctly 1`] = `
             class="max-w-[1264px] mx-auto w-full"
           >
             <button
-              class="sm:hidden flex justify-between items-center w-full text-[16px] font-normal leading-[24px] px-4 py-3 rounded-[80px] border-[2px] border-[#3E3355]"
+              class="sm:hidden flex justify-between items-center w-full text-[16px] font-normal leading-[24px] px-4 py-3 rounded-[80px] border-[2px] border-[#3E3355] transition-all duration-200"
             >
               Filter
-              <span>
+              <span
+                class="transition-transform duration-200 "
+              >
                 <svg
                   fill="none"
                   height="20"
@@ -152,10 +154,10 @@ exports[`Releases page > renders correctly 1`] = `
               </span>
             </button>
             <div
-              class="w-full lg:overflow-visible overflow-hidden hidden sm:block"
+              class="w-full overflow-visible transition-all duration-300 hidden sm:block"
             >
               <div
-                class="flex items-center gap-5 justify-between flex-nowrap min-w-[1039px]"
+                class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 sm:justify-between sm:flex-nowrap sm:min-w-[1039px]"
               >
                 <div
                   class="flex flex-col gap-4 w-full"

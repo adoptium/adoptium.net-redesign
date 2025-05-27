@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import CommonSelector, { ListItem } from "../CommonSelector"
 
 interface SelectorHeaderProps {
@@ -14,11 +14,20 @@ const SelectorHeader: React.FC<SelectorHeaderProps> = ({
   selectorUpdater,
   defaultValues,
 }) => {
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+
+  const toggleMobileFilters = () => {
+    setMobileFiltersOpen(!mobileFiltersOpen)
+  }
+
   return (
     <div className="max-w-[1264px] mx-auto w-full">
-      <button className="sm:hidden flex justify-between items-center w-full text-[16px] font-normal leading-[24px] px-4 py-3 rounded-[80px] border-[2px] border-[#3E3355]">
+      <button 
+        onClick={toggleMobileFilters}
+        className="sm:hidden flex justify-between items-center w-full text-[16px] font-normal leading-[24px] px-4 py-3 rounded-[80px] border-[2px] border-[#3E3355] transition-all duration-200"
+      >
         Filter
-        <span>
+        <span className={`transition-transform duration-200 ${mobileFiltersOpen ? 'rotate-45' : ''}`}>
           <svg
             width="20"
             height="20"
@@ -43,8 +52,8 @@ const SelectorHeader: React.FC<SelectorHeaderProps> = ({
           </svg>
         </span>
       </button>
-      <div className="w-full lg:overflow-visible overflow-hidden hidden sm:block">
-        <div className="flex items-center gap-5 justify-between flex-nowrap min-w-[1039px]">
+      <div className={`w-full overflow-visible transition-all duration-300 ${mobileFiltersOpen ? 'block' : 'hidden'} sm:block`}>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 sm:justify-between sm:flex-nowrap sm:min-w-[1039px]">
           {data.map((list, index) => {
             let defaultVal: ListItem | undefined
             if (defaultValues && defaultValues[index]) {

@@ -3,6 +3,7 @@ import { Trans } from "gatsby-plugin-react-i18next"
 import { FaDocker } from "react-icons/fa"
 import { IoMdCheckmarkCircleOutline } from "react-icons/io"
 import { LiaTimesSolid } from "react-icons/lia"
+import { HiChevronDown } from "react-icons/hi2"
 import platformSupportData from "../../../json/supported-platforms.json"
 
 const PlatformMatrix = () => {
@@ -17,146 +18,190 @@ const PlatformMatrix = () => {
   }
 
   return (
-    <div className="max-w-[1200px] w-full mx-auto px-6 pt-8 pb-14 md:pb-28 md:pt-16">
-      <h3 className="text-4xl leading-[122%] md:text-5xl md:leading-[116%] text-white text-center font-semibold">
-        Temurin™ Supported Platforms
-      </h3>
-      <p className="text-lightgrey mt-6 mb-0 tab-button-text text-center">
-        This section lists the operating systems that are supported with the
-        latest release of Eclipse Temurin.
-      </p>
-      <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 items-center py-8 md:py-16">
-        <div className="text-[14px] font-bold leading-[142.857%] text-white flex items-center gap-2">
-          <IoMdCheckmarkCircleOutline size={25} className="text-pink" />{" "}
-          Supported
+    <div className="max-w-[1200px] w-full mx-auto px-4 md:px-6 pt-6 md:pt-8 pb-12 md:pb-14 lg:pb-28 lg:pt-16">
+      <div className="text-center">
+        <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-4">
+          This section lists the operating systems that are supported with the
+          latest release of Eclipse Temurin.
+        </p>
+      </div>
+
+      <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6 lg:gap-8 items-center py-6 md:py-8 lg:py-12 px-4">
+        <div className="flex items-center gap-3 px-4 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 w-full sm:w-auto justify-center sm:justify-start">
+          <IoMdCheckmarkCircleOutline size={20} className="text-emerald-400 flex-shrink-0" />
+          <span className="text-sm font-medium text-white">Supported</span>
         </div>
-        <div className="text-[14px] font-bold leading-[142.857%] text-white flex items-center gap-2">
-          <FaDocker size={25} className="text-pink" /> Docker image available
+        <div className="flex items-center gap-3 px-4 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 w-full sm:w-auto justify-center sm:justify-start">
+          <FaDocker size={20} className="text-blue-400 flex-shrink-0" />
+          <span className="text-sm font-medium text-white">Docker Available</span>
         </div>
-        <div className="text-[14px] font-bold leading-[142.857%] text-white flex items-center gap-2">
-          <LiaTimesSolid size={25} className="text-pink" /> Not supported
+        <div className="flex items-center gap-3 px-4 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 w-full sm:w-auto justify-center sm:justify-start">
+          <LiaTimesSolid size={20} className="text-red-400 flex-shrink-0" />
+          <span className="text-sm font-medium text-white">Not Supported</span>
         </div>
       </div>
-      <div className="bg-[#200D46] p-6 md:p-8 rounded-[24px] mb-6">
-        <div className="grid grid-cols-6 gap-6 pb-6 overflow-auto w-full text-center">
-          <div className="text-[20px] leading-[140%] text-grey font-semibold">
+      <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
+        <div className="hidden md:grid md:grid-cols-6 gap-6 p-6 md:p-8 bg-gradient-to-r from-purple-900/50 to-indigo-900/50 border-b border-white/10">
+          <div className="text-lg font-semibold text-white/90">
             <Trans>Operating System</Trans>
           </div>
-          <div className="text-[20px] leading-[140%] text-grey font-semibold">
-            Version 8
-          </div>
-          <div className="text-[20px] leading-[140%] text-grey font-semibold">
-            Version 11
-          </div>
-          <div className="text-[20px] leading-[140%] text-grey font-semibold">
-            Version 17
-          </div>
-          <div className="text-[20px] leading-[140%] text-grey font-semibold">
-            Version 21
-          </div>
-          <div className="text-[20px] leading-[140%] text-grey font-semibold">
-            Version 24
+          {Array.from(
+            new Set(
+              platformSupportData.platforms.flatMap((platform) =>
+                platform.distros.flatMap((distro) =>
+                  Object.keys(distro.versions)
+                )
+              )
+            )
+          )
+            .sort((a, b) => Number(a) - Number(b))
+            .map((version) => (
+              <div key={version} className="text-lg font-semibold text-white/90 text-center">
+                JDK {version}
+              </div>
+            ))}
+        </div>
+
+        <div className="md:hidden bg-gradient-to-r from-purple-900/50 to-indigo-900/50 border-b border-white/10">
+          <div className="p-4">
+            <h4 className="text-lg font-semibold text-white/90 mb-3 text-center">
+              <Trans>Operating System</Trans>
+            </h4>
           </div>
         </div>
-        {platformSupportData.platforms.map((platform, index) => (
-          <div key={index}>
-            <div
-              onClick={() => handleToggleFaq(index)}
-              className="flex items-center justify-between py-5 cursor-pointer border-t border-[#3E3355]"
-            >
-              <h3 className="text-[22px] leading-[127.273%] md:text-[24px] md:leading-[133.333%] text-white">
-                {platform.category}
-              </h3>
-              <span>
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="1"
-                    y="1"
-                    width="46"
-                    height="46"
-                    rx="23"
-                    stroke="#3E3355"
-                    strokeWidth="2"
+
+        <div className="divide-y divide-white/5">
+          {platformSupportData.platforms.map((platform, index) => (
+            <div key={index} className="group">
+              <button
+                onClick={() => handleToggleFaq(index)}
+                className="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+              >
+                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left">
+                  {platform.category}
+                </h3>
+                <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0">
+                  <HiChevronDown 
+                    size={18} 
+                    className={`text-white/70 transition-all duration-300 md:w-5 md:h-5 ${
+                      openFaq === index ? "rotate-180 text-pink-300" : "rotate-0"
+                    }`} 
                   />
-                  <path
-                    className={`transition duration-700 ease-in-out ${
-                      openFaq === index ? "rotate-90" : "rotate-0"
-                    }`}
-                    d="M24 17V31"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M17 24H31"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-            </div>
-            <div
-              className={`flex transition duration-700 ease-in-out items-center w-full ${
-                openFaq === index
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-7 opacity-0"
-              }`}
-            >
-              {openFaq === index && (
-                <div className="w-full overflow-auto min-w-full">
-                  {platform.distros.map((distro, distroIndex) => (
-                    <div
-                      className={`flex items-center justify-center min-w-[1040px] md:px-3 py-5 rounded-[24px] ${isEven(distroIndex) && `bg-[#2B194F]`}`}
-                    >
-                      <h3 className="tab-button-text text-white flex items-center min-w-[164px] lg:min-w-[220px] ml:30">
-                        {distro.name}
-                      </h3>
-                      {Object.entries(distro.versions).map(
-                        ([version, { supported, docker }], versionIndex) => (
-                          <div
-                            key={versionIndex}
-                            className="flex items-center justify-center gap-3 min-w-[164px]"
-                          >
-                            <span>
-                              {supported ? (
-                                <IoMdCheckmarkCircleOutline
-                                  size={25}
-                                  className="text-pink"
-                                />
-                              ) : (
-                                <LiaTimesSolid
-                                  size={25}
-                                  className="text-pink"
-                                />
-                              )}
-                            </span>
-                            <span>
-                              {docker ? (
-                                <FaDocker size={25} className="text-pink" />
-                              ) : (
-                                ""
-                              )}
+                </div>
+              </button>
+
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-out ${
+                  openFaq === index
+                    ? "max-h-[2000px] opacity-100"
+                    : "max-h-0 opacity-0"
+                }`}
+              >
+                {openFaq === index && (
+                  <div className="px-4 md:px-6 lg:px-8 pb-4 md:pb-6 lg:pb-8">
+                    <div className="hidden md:block bg-gradient-to-br from-black/20 to-black/10 rounded-2xl border border-white/5 overflow-hidden">
+                      {platform.distros.map((distro, distroIndex) => (
+                        <div
+                          key={distroIndex}
+                          className={`grid grid-cols-6 gap-6 p-4 md:p-6 transition-all duration-200 hover:bg-white/5 ${
+                            isEven(distroIndex) ? "bg-white/2" : "bg-transparent"
+                          }`}
+                        >
+                          <div className="flex items-center">
+                            <span className="text-white/90 font-medium text-sm md:text-base">
+                              {distro.name}
                             </span>
                           </div>
-                        ),
-                      )}
+                          {Object.entries(distro.versions).map(
+                            ([version, { supported, docker }], versionIndex) => (
+                              <div
+                                key={versionIndex}
+                                className="flex items-center justify-center gap-2"
+                              >
+                                <div className="flex items-center gap-2">
+                                  {supported ? (
+                                    <div className="p-1 rounded-full bg-emerald-500/20">
+                                      <IoMdCheckmarkCircleOutline
+                                        size={18}
+                                        className="text-emerald-400"
+                                      />
+                                    </div>
+                                  ) : (
+                                    <div className="p-1 rounded-full bg-red-500/20">
+                                      <LiaTimesSolid
+                                        size={18}
+                                        className="text-red-400"
+                                      />
+                                    </div>
+                                  )}
+                                  {docker && (
+                                    <div className="p-1 rounded-full bg-blue-500/20">
+                                      <FaDocker size={16} className="text-blue-400" />
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            ),
+                          )}
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                  {/* </div> */}
-                </div>
-              )}
+
+                    {/* Mobile view - card layout */}
+                    <div className="md:hidden space-y-4">
+                      {platform.distros.map((distro, distroIndex) => (
+                        <div
+                          key={distroIndex}
+                          className="bg-gradient-to-br from-black/20 to-black/10 rounded-2xl border border-white/5 p-4"
+                        >
+                          <h4 className="text-white/90 font-semibold text-base mb-4">
+                            {distro.name}
+                          </h4>
+                          <div className="grid grid-cols-2 gap-3">
+                            {Object.entries(distro.versions).map(
+                              ([version, { supported, docker }], versionIndex) => (
+                                <div
+                                  key={versionIndex}
+                                  className="flex items-center justify-between p-3 bg-white/5 rounded-xl"
+                                >
+                                  <span className="text-white/80 text-sm font-medium">
+                                    JDK {version}
+                                  </span>
+                                  <div className="flex items-center gap-2">
+                                    {supported ? (
+                                      <div className="p-1 rounded-full bg-emerald-500/20">
+                                        <IoMdCheckmarkCircleOutline
+                                          size={16}
+                                          className="text-emerald-400"
+                                        />
+                                      </div>
+                                    ) : (
+                                      <div className="p-1 rounded-full bg-red-500/20">
+                                        <LiaTimesSolid
+                                          size={16}
+                                          className="text-red-400"
+                                        />
+                                      </div>
+                                    )}
+                                    {docker && (
+                                      <div className="p-1 rounded-full bg-blue-500/20">
+                                        <FaDocker size={14} className="text-blue-400" />
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              ),
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )

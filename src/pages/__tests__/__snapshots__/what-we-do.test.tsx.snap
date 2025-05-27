@@ -477,77 +477,96 @@ exports[`What We Do page > renders correctly 1`] = `
     </div>
   </section>
   <section
-    class="bg-[#0E002A] overflow-x-hidden border-t border-[#3E3355]"
+    class="relative bg-gradient-to-br from-[#0E002A] via-[#1A0B3D] to-[#0E002A] overflow-hidden"
   >
     <div
-      class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6"
+      class="absolute inset-0 opacity-5"
     >
       <div
-        class="flex justify-center items-center"
+        class="absolute inset-0 bg-repeat"
+      />
+    </div>
+    <div
+      class="relative max-w-7xl px-6 py-16 mx-auto text-center lg:py-24"
+    >
+      <div
+        class="relative max-w-5xl mx-auto"
       >
-        <figure
-          class="max-w-screen-md mx-auto"
+        <div
+          class="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 md:p-12 shadow-2xl"
         >
-          <svg
-            class="h-12 mx-auto mb-3 text-pink text-pink-400"
-            fill="none"
-            viewBox="0 0 24 27"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-              fill="currentColor"
-            />
-          </svg>
-          <blockquote
-            class="slide-in-right"
-            style="min-height: 204px;"
-          >
-            <span
-              class="md:text-[26px] text-[20px] leading-[34px] md:leading-10 font-semibold  text-white"
-            >
-              Microsoft is proud to be a Strategic Member of the Eclipse Adoptium Working Group, collaborating closely with industry partners to contribute to and benefit from a vibrant open-source ecosystem. Together, we are dedicated to delivering high-quality, secure, and performant Java runtimes that empower our customers and the developer community.
-            </span>
-          </blockquote>
-          <figcaption
-            class="flex items-center justify-center md:mt-6 mt-0 space-x-3"
-          >
-            <img
-              alt="Martijn Verburg"
-              class="w-6 h-6 mb-0 rounded-full hidden sm:block"
-              src="/images/authors/martijnverburg.jpg"
-            />
+          <figure>
             <div
-              class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
+              class="mb-8"
+            >
+              <svg
+                class="h-12 w-12 mx-auto text-pink opacity-60"
+                fill="none"
+                viewBox="0 0 24 27"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <blockquote
+              class="slide-in-right mb-8"
             >
               <div
-                class="px-3 text-pink font-medium text-pink-900"
+                class="min-h-[200px] md:min-h-[180px] flex items-center justify-center"
               >
-                Martijn Verburg
+                <p
+                  class="text-xl md:text-2xl leading-relaxed font-medium text-white/90 italic"
+                >
+                  "
+                  Microsoft is proud to be a Strategic Member of the Eclipse Adoptium Working Group, collaborating closely with industry partners to contribute to and benefit from a vibrant open-source ecosystem. Together, we are dedicated to delivering high-quality, secure, and performant Java runtimes that empower our customers and the developer community.
+                  "
+                </p>
               </div>
+            </blockquote>
+            <figcaption
+              class="flex flex-col sm:flex-row items-center justify-center gap-4"
+            >
+              <img
+                alt="Martijn Verburg"
+                class="w-16 h-16 rounded-full border-2 border-pink-400/30 object-cover"
+                src="/images/authors/martijnverburg.jpg"
+              />
               <div
-                class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+                class="text-center sm:text-left"
               >
-                Principal Group Manager - Java & Go @ Microsoft
+                <div
+                  class="text-lg font-semibold text-white"
+                >
+                  Martijn Verburg
+                </div>
+                <div
+                  class="text-pink font-medium"
+                >
+                  Principal Group Manager - Java & Go @ Microsoft
+                </div>
               </div>
-            </div>
-          </figcaption>
-        </figure>
+            </figcaption>
+          </figure>
+        </div>
       </div>
       <div
-        class="flex justify-center items-center max-w-screen-md mx-auto pt-8"
+        class="flex justify-center items-center mt-12 space-x-6"
       >
         <button
           aria-label="Previous Testimonial"
-          class="arrow-button p-2"
+          class="group p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300"
         >
           <svg
+            class="w-5 h-5 text-white group-hover:text-pink transition-colors"
             fill="currentColor"
-            height="20"
+            height="1em"
             stroke="currentColor"
-            stroke-width="1"
+            stroke-width="0"
             viewBox="0 0 448 512"
-            width="20"
+            width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -555,17 +574,34 @@ exports[`What We Do page > renders correctly 1`] = `
             />
           </svg>
         </button>
+        <div
+          class="flex space-x-2"
+        >
+          <button
+            aria-label="Go to testimonial 1"
+            class="h-2 rounded-full transition-all duration-300 w-8 bg-pink-400"
+          />
+          <button
+            aria-label="Go to testimonial 2"
+            class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
+          />
+          <button
+            aria-label="Go to testimonial 3"
+            class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
+          />
+        </div>
         <button
           aria-label="Next Testimonial"
-          class="arrow-button arrow-button-progress p-2"
+          class="group relative p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300 overflow-hidden"
         >
           <svg
+            class="w-5 h-5 text-white group-hover:text-pink transition-colors relative z-10"
             fill="currentColor"
-            height="20"
+            height="1em"
             stroke="currentColor"
-            stroke-width="1"
+            stroke-width="0"
             viewBox="0 0 448 512"
-            width="20"
+            width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -573,184 +609,55 @@ exports[`What We Do page > renders correctly 1`] = `
             />
           </svg>
           <div
-            class="progress-border"
+            class="absolute inset-0 rounded-full border-2 border-transparent border-t-pink-400 animate-spin opacity-60"
+            style="animation-duration: 8s;"
           />
         </button>
       </div>
       <div
-        class="max-w-[896px] mx-auto flex flex-wrap justify-center items-center mt-10 gap-6 md:space-x-16"
+        class="flex justify-center items-center mt-12 space-x-8"
       >
         <button
           aria-label="Microsoft Testimonial"
+          class="transition-all duration-300 opacity-60 hover:opacity-100 opacity-100 scale-110"
         >
-          <svg
-            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] fill-white"
-            fill="none"
-            height="48"
-            viewBox="0 0 140 48"
-            width="140"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="h-12 w-32 flex items-center justify-center"
           >
-            <svg
-              height="48"
-              viewBox="0 0 337.6 72"
-              width="140"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M140.4,14.4v43.2h-7.5V23.7h-0.1l-13.4,33.9h-5l-13.7-33.9h-0.1v33.9h-6.9V14.4h10.8l12.4,32h0.2l13.1-32H140.4 z M146.6,17.7c0-1.2,0.4-2.2,1.3-3c0.9-0.8,1.9-1.2,3.1-1.2c1.3,0,2.4,0.4,3.2,1.2s1.3,1.8,1.3,3c0,1.2-0.4,2.2-1.3,3 c-0.9,0.8-1.9,1.2-3.2,1.2s-2.3-0.4-3.1-1.2C147.1,19.8,146.6,18.8,146.6,17.7z M154.7,26.6v31h-7.3v-31H154.7z M176.8,52.3 c1.1,0,2.3-0.2,3.6-0.8c1.3-0.5,2.5-1.2,3.6-2v6.8c-1.2,0.7-2.5,1.2-4,1.5c-1.5,0.3-3.1,0.5-4.9,0.5c-4.6,0-8.3-1.4-11.1-4.3 c-2.9-2.9-4.3-6.6-4.3-11c0-5,1.5-9.1,4.4-12.3c2.9-3.2,7-4.8,12.4-4.8c1.4,0,2.8,0.2,4.1,0.5c1.4,0.3,2.5,0.8,3.3,1.2v7 c-1.1-0.8-2.3-1.5-3.4-1.9c-1.2-0.4-2.4-0.7-3.6-0.7c-2.9,0-5.2,0.9-7,2.8s-2.6,4.4-2.6,7.6c0,3.1,0.9,5.6,2.6,7.3 C171.6,51.4,173.9,52.3,176.8,52.3z M204.7,26.1c0.6,0,1.1,0,1.6,0.1s0.9,0.2,1.2,0.3v7.4c-0.4-0.3-0.9-0.6-1.7-0.8 s-1.6-0.4-2.7-0.4c-1.8,0-3.3,0.8-4.5,2.3s-1.9,3.8-1.9,7v15.6h-7.3v-31h7.3v4.9h0.1c0.7-1.7,1.7-3,3-4 C201.2,26.6,202.8,26.1,204.7,26.1z M207.9,42.6c0-5.1,1.5-9.2,4.3-12.2c2.9-3,6.9-4.5,12-4.5c4.8,0,8.6,1.4,11.3,4.3 s4.1,6.8,4.1,11.7c0,5-1.5,9-4.3,12c-2.9,3-6.8,4.5-11.8,4.5c-4.8,0-8.6-1.4-11.4-4.2C209.3,51.3,207.9,47.4,207.9,42.6z M215.5,42.3c0,3.2,0.7,5.7,2.2,7.4s3.6,2.6,6.3,2.6c2.6,0,4.7-0.8,6.1-2.6c1.4-1.7,2.1-4.2,2.1-7.6c0-3.3-0.7-5.8-2.1-7.6 c-1.4-1.7-3.5-2.6-6-2.6c-2.7,0-4.7,0.9-6.2,2.7C216.2,36.5,215.5,39,215.5,42.3z M250.5,34.8c0,1,0.3,1.9,1,2.5 c0.7,0.6,2.1,1.3,4.4,2.2c2.9,1.2,5,2.5,6.1,3.9c1.2,1.5,1.8,3.2,1.8,5.3c0,2.9-1.1,5.2-3.4,7c-2.2,1.8-5.3,2.6-9.1,2.6 c-1.3,0-2.7-0.2-4.3-0.5c-1.6-0.3-2.9-0.7-4-1.2v-7.2c1.3,0.9,2.8,1.7,4.3,2.2c1.5,0.5,2.9,0.8,4.2,0.8c1.6,0,2.9-0.2,3.6-0.7 c0.8-0.5,1.2-1.2,1.2-2.3c0-1-0.4-1.8-1.2-2.6c-0.8-0.7-2.4-1.5-4.6-2.4c-2.7-1.1-4.6-2.4-5.7-3.8s-1.7-3.2-1.7-5.4 c0-2.8,1.1-5.1,3.3-6.9c2.2-1.8,5.1-2.7,8.6-2.7c1.1,0,2.3,0.1,3.6,0.4s2.5,0.6,3.4,0.9V34c-1-0.6-2.1-1.2-3.4-1.7 c-1.3-0.5-2.6-0.7-3.8-0.7c-1.4,0-2.5,0.3-3.2,0.8C250.9,33.1,250.5,33.8,250.5,34.8z M266.9,42.6c0-5.1,1.5-9.2,4.3-12.2 c2.9-3,6.9-4.5,12-4.5c4.8,0,8.6,1.4,11.3,4.3s4.1,6.8,4.1,11.7c0,5-1.5,9-4.3,12c-2.9,3-6.8,4.5-11.8,4.5c-4.8,0-8.6-1.4-11.4-4.2 C268.4,51.3,266.9,47.4,266.9,42.6z M274.5,42.3c0,3.2,0.7,5.7,2.2,7.4s3.6,2.6,6.3,2.6c2.6,0,4.7-0.8,6.1-2.6 c1.4-1.7,2.1-4.2,2.1-7.6c0-3.3-0.7-5.8-2.1-7.6c-1.4-1.7-3.5-2.6-6-2.6c-2.7,0-4.7,0.9-6.2,2.7C275.3,36.5,274.5,39,274.5,42.3z M322.9,32.6h-10.9v25h-7.4v-25h-5.2v-6h5.2v-4.3c0-3.2,1.1-5.9,3.2-8s4.8-3.1,8.1-3.1c0.9,0,1.7,0.1,2.4,0.1s1.3,0.2,1.8,0.4v6.3 c-0.2-0.1-0.7-0.3-1.3-0.5c-0.6-0.2-1.3-0.3-2.1-0.3c-1.5,0-2.7,0.5-3.5,1.4c-0.8,0.9-1.2,2.4-1.2,4.2v3.7h10.9v-7l7.3-2.2v9.2h7.4 v6h-7.4v14.5c0,1.9,0.4,3.2,1,4c0.7,0.8,1.8,1.2,3.3,1.2c0.4,0,0.9-0.1,1.5-0.3c0.6-0.2,1.1-0.4,1.5-0.7v6c-0.5,0.3-1.2,0.5-2.3,0.7 c-1.1,0.2-2.1,0.3-3.2,0.3c-3.1,0-5.4-0.8-6.9-2.4c-1.5-1.6-2.3-4.1-2.3-7.4L322.9,32.6L322.9,32.6z"
-                fill="white"
-              />
-              <rect
-                fill="white"
-                height="34.2"
-                width="34.2"
-              />
-              <rect
-                fill="white"
-                height="34.2"
-                width="34.2"
-                x="37.8"
-              />
-              <rect
-                fill="white"
-                height="34.2"
-                width="34.2"
-                y="37.8"
-              />
-              <rect
-                fill="white"
-                height="34.2"
-                width="34.2"
-                x="37.8"
-                y="37.8"
-              />
-            </svg>
-          </svg>
+            <img
+              alt="Microsoft"
+              class="max-h-full max-w-full object-contain brightness-0 invert"
+              src="/images/microsoft.svg"
+            />
+          </div>
         </button>
         <button
-          aria-label="Aana Testimonial"
+          aria-label="Alibaba Cloud Testimonial"
+          class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
         >
-          <svg
-            class="hover:fill-white hover:opacity-100 duration-200 ease-in-out fill-[#4F405A] opacity-[0.25]"
-            fill="none"
-            height="48"
-            viewBox="0 0 140 48"
-            width="140"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="h-12 w-32 flex items-center justify-center"
           >
-            <svg
-              height="48"
-              preserveAspectRatio="xMinYMid meet"
-              viewBox="0 0 595.2 75"
-              width="140"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                class="st0"
-                height="9"
-                width="40.1"
-                x="40.1"
-                y="32.8"
-              />
-              <path
-                class="st0"
-                d="M100.2,0H73.7l6.4,9.1L99.5,15c3.6,1.1,5.9,4.5,5.8,8c0,0,0,0,0,0V52c0,0,0,0,0,0c0,3.6-2.3,6.9-5.8,8
-	l-19.3,5.9L73.7,75h26.5c11.1,0,20-9,20-20V20C120.3,9,111.3,0,100.2,0"
-              />
-              <path
-                class="st0"
-                d="M20,0h26.5l-6.4,9.1L20.8,15c-3.6,1.1-5.9,4.5-5.8,8c0,0,0,0,0,0V52c0,0,0,0,0,0c0,3.6,2.3,6.9,5.8,8l19.3,5.9
-	l6.4,9.1H20C9,75,0,66,0,55V20C0,9,9,0,20,0"
-              />
-              <path
-                class="st0"
-                d="M444.9,52.4c0,6.5-5.3,11.7-11.9,11.7c-6.6,0-11.9-5.3-11.9-11.7V23.7c0-6.5,5.3-11.7,11.9-11.7
-	c6.5,0,11.9,5.3,11.9,11.7V24h9.1v-0.4C454,12.3,444.6,3,433,3s-21,9.3-21,20.7v28.6c0,11.4,9.4,20.7,21,20.7
-	c11.5,0,20.9-9.3,21-20.7V52h-9.1V52.4z"
-              />
-              <path
-                class="st0"
-                d="M492.1,21.5c-9.6,0-17.6,7.5-18,17v17.6c0.5,9.5,8.4,17,18,17c9.6,0,17.5-7.5,18-17V38.5
-	C509.7,29,501.8,21.5,492.1,21.5 M501,55c-0.1,5-4,8.9-8.9,8.9c-4.9,0-8.8-3.9-8.9-8.9V39.5c0-4.9,4-8.9,8.9-8.9
-	c4.9,0,8.9,4,8.9,8.9V55z"
-              />
-              <rect
-                class="st0"
-                height="69"
-                width="9.1"
-                x="458.5"
-                y="3"
-              />
-              <rect
-                class="st0"
-                height="50.4"
-                width="9.1"
-                x="208.8"
-                y="21.5"
-              />
-              <rect
-                class="st0"
-                height="69"
-                width="9.1"
-                x="190.7"
-                y="3"
-              />
-              <path
-                class="st0"
-                d="M167.8,3h-11.1l-18.3,68.9l0,0.1h9l4.9-18.3l20,0.1l4.8,18.2l0,0.1h9L167.8,3L167.8,3z M169.9,44.7h-15.2
-	l7.6-28.6L169.9,44.7z"
-              />
-              <path
-                class="st0"
-                d="M543.6,56c0,4.9-4,8.9-8.9,8.9c-4.9,0-8.9-4-8.9-8.9V21.5h-9.1v36c0,8.6,7,15.6,15.6,15.6
-	c1.6,0,3.1-0.2,4.6-0.7c0.9-0.3,1.7-0.6,2.5-1c1.4-0.7,2.7-1.6,3.8-2.7l0.4-0.4v3.7h9.1V21.5h-9.1V56z"
-              />
-              <rect
-                class="st0"
-                height="9.1"
-                width="9.1"
-                x="208.8"
-                y="3"
-              />
-              <path
-                class="st0"
-                d="M247.3,21.5c-4.1,0-8,1.6-10.9,4.5l-0.4,0.4V3h-9.1v69h9.1v-3.7l0.4,0.4c2.9,2.9,6.8,4.5,10.9,4.5
-	c8.6,0,15.6-7,15.6-15.6V37.1C262.9,28.4,255.9,21.5,247.3,21.5 M253.9,38.7v17.1c0,4.9-4,9-9,9c-4.9,0-9-4-9-9V38.7c0-4.9,4-9,9-9
-	C249.9,29.8,253.9,33.8,253.9,38.7"
-              />
-              <path
-                class="st0"
-                d="M331.7,21.4c-4.1,0-8,1.6-10.9,4.5l-0.4,0.4V3h-9.1v69h9.1v-3.7l0.4,0.4c2.9,2.9,6.8,4.5,10.9,4.5
-	c8.6,0,15.6-7,15.6-15.6V37C347.3,28.4,340.3,21.4,331.7,21.4 M338.3,38.7v17.1c0,4.9-4,9-9,9c-4.9,0-9-4-9-9V38.7c0-4.9,4-9,9-9
-	C334.3,29.7,338.3,33.8,338.3,38.7"
-              />
-              <path
-                class="st0"
-                d="M586.2,3v23.3l-0.4-0.4c-2.9-2.9-6.8-4.5-10.9-4.5c-8.6,0-15.6,7-15.6,15.6v20.4l0,0.1c0,8.6,7,15.5,15.6,15.5
-	c4.1,0,8-1.6,10.9-4.5l0.4-0.4v3.7h9.1V3H586.2z M586.1,38.7v17.1c0,4.9-4,9-9,9c-4.9,0-9-4-9-9V38.7c0-4.9,4-9,9-9
-	C582.1,29.7,586.1,33.8,586.1,38.7"
-              />
-              <path
-                class="st0"
-                d="M304.8,38.6c0-0.5-0.1-1.1-0.2-1.8l0-0.2c-0.5-2.7-1.5-5.3-3.1-7.6c-3.2-4.5-8.1-7.2-13.5-7.5c-0.1,0-0.7,0-1,0
-	c-4.2,0-8.3,1.5-11.6,4.2c-3.2,2.7-5.4,6.4-6.2,10.6l0,0.1h8.9l0-0.1c0.8-4.2,4.5-7.2,8.7-7.2c2.3,0,4.5,0.9,6.2,2.5
-	c1.7,1.6,2.6,3.8,2.7,6.1l0,4.2h-12.9c-8.6,0-15.6,7-15.6,15.6c0,7.2,5,13.3,11.7,15.1c0.1,0,0.2,0,0.2,0.1c0.3,0.1,0.6,0.1,0.9,0.2
-	c0.3,0.1,0.7,0.1,1.1,0.2c0.1,0,0.1,0,0.2,0c0.7,0.1,1.5,0.1,2.4,0.1c2.2,0,4.1-0.3,5.4-0.8c2.3-0.7,4.4-2,6.2-3.7l0.4-0.4v3.7h9.1
-	v-6V38.6z M284.6,48.7h11v6.4c0,4.8-3.5,9-8.2,9.9c-0.7,0.2-1.4,0.2-2,0.2c-1.6,0-3.1-0.4-4.6-1.3c-0.4-0.2-0.8-0.5-1.2-0.7
-	c-0.5-0.4-1-0.9-1.4-1.4l-0.1-0.1c-1.1-1.4-1.7-3.1-1.7-4.9C276.5,52.3,280.1,48.7,284.6,48.7"
-              />
-              <path
-                class="st0"
-                d="M389.3,38.6c0-0.5-0.1-1.1-0.2-1.8l0-0.2c-0.5-2.7-1.5-5.3-3.1-7.6c-3.2-4.5-8.1-7.2-13.5-7.5c-0.1,0-0.7,0-1,0
-	c-4.2,0-8.3,1.5-11.6,4.2c-3.2,2.7-5.4,6.4-6.2,10.6l0,0.1h8.9l0-0.1c0.8-4.2,4.5-7.2,8.7-7.2c2.3,0,4.5,0.9,6.2,2.5
-	c1.7,1.6,2.6,3.8,2.7,6.1l0,4.2h-12.9c-8.6,0-15.6,7-15.6,15.6c0,7.2,5,13.3,11.7,15.1c0.1,0,0.2,0,0.2,0.1c0.3,0.1,0.6,0.1,0.9,0.2
-	c0.3,0.1,0.7,0.1,1.1,0.2c0.1,0,0.1,0,0.2,0c0.7,0.1,1.5,0.1,2.4,0.1c2.2,0,4.1-0.3,5.4-0.8c2.3-0.7,4.4-2,6.2-3.7l0.4-0.4v3.7h9.1
-	v-6V38.6z M369.1,48.7h11v6.4c0,4.8-3.5,9-8.2,9.9c-0.7,0.2-1.4,0.2-2,0.2c-1.6,0-3.1-0.4-4.6-1.3c-0.4-0.2-0.8-0.5-1.2-0.7
-	c-0.5-0.4-1-0.9-1.4-1.4l-0.1-0.1c-1.1-1.4-1.7-3.1-1.7-4.9C361,52.4,364.6,48.7,369.1,48.7"
-              />
-            </svg>
-          </svg>
+            <img
+              alt="Alibaba Cloud"
+              class="max-h-full max-w-full object-contain brightness-0 invert"
+              src="/images/alibaba.png"
+            />
+          </div>
+        </button>
+        <button
+          aria-label="Azul Systems Testimonial"
+          class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
+        >
+          <div
+            class="h-12 w-32 flex items-center justify-center"
+          >
+            <img
+              alt="Azul Systems"
+              class="max-h-full max-w-full object-contain brightness-0 invert"
+              src="/images/azul.svg"
+            />
+          </div>
         </button>
       </div>
     </div>

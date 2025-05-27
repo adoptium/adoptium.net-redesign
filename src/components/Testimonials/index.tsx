@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6"
-import { AlibabaCloudSlider, MicrosoftSlider } from "./Icons"
 
 import "./Testimonials.scss"
 
@@ -10,18 +9,24 @@ const testimonialData = [
     name: "Martijn Verburg",
     role: "Principal Group Manager - Java & Go @ Microsoft",
     image: "/images/authors/martijnverburg.jpg",
+    companyLogo: "/images/microsoft.svg",
+    companyName: "Microsoft"
   },
   {
     quote: "As a member of the Adoptium Working Group, Alibaba Cloud is committed to fostering a vendor-neutral environment that drives the growth of Java Runtime on our global cloud platform. We contribute Alibaba Dragonwell to the Adoptium marketplace, a trusted source for production-ready OpenJDK builds, and actively participate in the EMT4J sub-project within Adoptium to help developers seamlessly upgrade their applications.",
     name: "Sanhong Li",
     role: "Director of Compiler & Runtime, Alibaba Cloud Intelligence",
     image: "/images/quotes/sanhongli.jpg",
+    companyLogo: "/images/alibaba.png",
+    companyName: "Alibaba Cloud"
   },
   {
     quote: "Azul has been a member of the Eclipse Adoptium Working Group since its formation. As a provider of free and supported OpenJDK builds—including Azul Platform Core (Zulu) and Azul Platform Prime (Zing)—Azul is a passionate contributor and steward for open-source Java. The company is committed to enhancing users’ ability to access and utilize high-quality Java runtimes effectively, while also providing real-time, actionable Java intelligence such as JVM inventory, vulnerability detection, and identification of dead and unused code.",
     name: "Simon Ritter",
     role: "Deputy CTO at Azul Systems",
     image: "/images/quotes/simonritter.jpeg",
+    companyLogo: "/images/azul.svg",
+    companyName: "Azul Systems"
   }
 ]
 
@@ -68,77 +73,120 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="bg-[#0E002A] overflow-x-hidden border-t border-[#3E3355]">
-      <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-        <div className="flex justify-center items-center">
-        <figure className="max-w-screen-md mx-auto" key={testimonialKey}>
-          <svg
-            className="h-12 mx-auto mb-3 text-pink text-pink-400"
-            viewBox="0 0 24 27"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-              fill="currentColor"
-            />
-          </svg>
-          <blockquote
-            className={testimonialClassName}
-            style={{ minHeight: "204px" }}
-          >
-            <span className="md:text-[26px] text-[20px] leading-[34px] md:leading-10 font-semibold  text-white">
-              {testimonial.quote}
-            </span>
-          </blockquote>
-          <figcaption className="flex items-center justify-center md:mt-6 mt-0 space-x-3">
-            <img
-              className="w-6 h-6 mb-0 rounded-full hidden sm:block"
-              src={testimonial.image}
-              alt={testimonial.name}
-            />
-            <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-              <div className="px-3 text-pink font-medium text-pink-900">
-                {testimonial.name}
+    <section className="relative bg-gradient-to-br from-[#0E002A] via-[#1A0B3D] to-[#0E002A] overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-repeat" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+      </div>
+      
+      <div className="relative max-w-7xl px-6 py-16 mx-auto text-center lg:py-24">
+        {/* Testimonial Container */}
+        <div className="relative max-w-5xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 md:p-12 shadow-2xl">
+            <figure key={testimonialKey}>
+              {/* Quote Icon */}
+              <div className="mb-8">
+                <svg
+                  className="h-12 w-12 mx-auto text-pink opacity-60"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    fill="currentColor"
+                  />
+                </svg>
               </div>
-              <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
-                {testimonial.role}
-              </div>
-            </div>
-          </figcaption>
-        </figure>
+
+              {/* Quote */}
+              <blockquote className={`${testimonialClassName} mb-8`}>
+                <div className="min-h-[200px] md:min-h-[180px] flex items-center justify-center">
+                  <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90 italic">
+                    "{testimonial.quote}"
+                  </p>
+                </div>
+              </blockquote>
+
+              {/* Author Info */}
+              <figcaption className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <img
+                  className="w-16 h-16 rounded-full border-2 border-pink-400/30 object-cover"
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                />
+                <div className="text-center sm:text-left">
+                  <div className="text-lg font-semibold text-white">
+                    {testimonial.name}
+                  </div>
+                  <div className="text-pink font-medium">
+                    {testimonial.role}
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
         </div>
-        {/* Navigation Arrows */}
-        <div className="flex justify-center items-center max-w-screen-md mx-auto pt-8">
+        {/* Navigation Controls */}
+        <div className="flex justify-center items-center mt-12 space-x-6">
           <button
-            className="arrow-button p-2"
+            className="group p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300"
             onClick={prevTestimonial}
             aria-label="Previous Testimonial"
           >
-            <FaArrowLeft size={20} strokeWidth={1} />
+            <FaArrowLeft className="w-5 h-5 text-white group-hover:text-pink transition-colors" />
           </button>
+          
+          {/* Progress indicators */}
+          <div className="flex space-x-2">
+            {testimonialData.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => logoSliderChangeHandler(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  currentTestimonial === index 
+                    ? 'w-8 bg-pink-400' 
+                    : 'w-2 bg-white/30 hover:bg-white/50'
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
+          
           <button
-            className="arrow-button arrow-button-progress p-2"
+            className="group relative p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300 overflow-hidden"
             onClick={nextTestimonial}
             aria-label="Next Testimonial"
           >
-            <FaArrowRight size={20} strokeWidth={1} />
-            <div className="progress-border"></div>
+            <FaArrowRight className="w-5 h-5 text-white group-hover:text-pink transition-colors relative z-10" />
+            {/* Progress ring */}
+            <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-pink-400 animate-spin opacity-60" 
+                 style={{ animationDuration: '8s' }} />
           </button>
         </div>
-        <div className="max-w-[896px] mx-auto flex flex-wrap justify-center items-center mt-10 gap-6 md:space-x-16">
-          <button
-            onClick={() => logoSliderChangeHandler(0)}
-            aria-label="Microsoft Testimonial"
-          >
-            <MicrosoftSlider current={currentTestimonial} />
-          </button>
-          <button
-            onClick={() => logoSliderChangeHandler(1)}
-            aria-label="Aana Testimonial"
-          >
-            <AlibabaCloudSlider current={currentTestimonial} />
-          </button>
+
+        {/* Company logos navigation */}
+        <div className="flex justify-center items-center mt-12 space-x-8">
+          {testimonialData.map((testimonial, index) => (
+            <button
+              key={index}
+              onClick={() => logoSliderChangeHandler(index)}
+              className={`transition-all duration-300 opacity-60 hover:opacity-100 ${
+                currentTestimonial === index ? 'opacity-100 scale-110' : 'hover:scale-105'
+              }`}
+              aria-label={`${testimonial.companyName} Testimonial`}
+            >
+              <div className="h-12 w-32 flex items-center justify-center">
+                <img
+                  src={testimonial.companyLogo}
+                  alt={testimonial.companyName}
+                  className="max-h-full max-w-full object-contain brightness-0 invert"
+                />
+              </div>
+            </button>
+          ))}
         </div>
       </div>
     </section>

@@ -2,19 +2,106 @@ import React, { useState } from "react"
 import { Link } from "../../Link"
 import { BsCopy } from "react-icons/bs"
 import { FiDownload, FiInfo } from "react-icons/fi"
+import { FaRedo } from "react-icons/fa"
 import ChecksumModal from "../../ChecksumModal"
+import AnimatedPlaceholder from "../../AnimatedPlaceholder"
 
 import { capitalize } from "../../../util/capitalize"
 import { getImageForDistribution } from "../../../hooks"
 import { fetchExtension } from "../../../util/fetchExtension"
 
-const AllReleaseCard = ({ results }) => {
+interface AllReleaseCardProps {
+  results: any[] | null
+  onReset?: () => void
+}
+
+const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => {
   const [modalOpen, setModalOpen] = useState(false)
   const [currentChecksum, setCurrentChecksum] = useState("")
 
   const openModalWithChecksum = checksum => {
     setCurrentChecksum(checksum)
     setModalOpen(true)
+  }
+
+  // Loading state with sleek animated placeholders
+  if (results === null) {
+    return (
+      <div className="mt-8 space-y-6">
+        {/* Create 3 skeleton cards for the loading state */}
+        {[1, 2, 3].map((index) => (
+          <div
+            key={index}
+            className="newscard-2 !blur-0 px-6 py-6 lg:flex justify-between items-center hover:shadow-xl transition-all duration-300 rounded-2xl bg-gradient-to-r from-[#200E46]/80 to-[#2B1A4F]/80 backdrop-blur-sm"
+          >
+            <div className="flex flex-col lg:flex-row justify-between gap-4 lg:items-center flex-1">
+              <AnimatedPlaceholder>
+                <div className="flex flex-col lg:flex-row gap-4 lg:items-center flex-1">
+                  <div className="lg:w-[160px]">
+                    <div className="h-6 bg-gray-600 rounded w-32 animate-pulse"></div>
+                  </div>
+                  <div className="lg:flex items-center gap-20 flex-1">
+                    <div className="h-5 bg-gray-600 rounded w-24 animate-pulse"></div>
+                    <div className="w-[100px] h-[60px] bg-gray-600 rounded-xl animate-pulse"></div>
+                    <div className="h-5 bg-gray-600 rounded w-20 animate-pulse"></div>
+                    <div className="h-5 bg-gray-600 rounded w-16 animate-pulse"></div>
+                    <div className="h-5 bg-gray-600 rounded w-14 animate-pulse"></div>
+                  </div>
+                </div>
+              </AnimatedPlaceholder>
+            </div>
+            <div className="flex items-end justify-between mt-4 md:mt-0 gap-5">
+              <div className="flex gap-3">
+                <div className="h-10 bg-gray-600 rounded-full w-24 animate-pulse"></div>
+                <div className="h-10 bg-gray-600 rounded-full w-32 animate-pulse"></div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  // No results state with reset option
+  if (results && results.length === 0) {
+    return (
+      <div className="mt-8">
+        <div className="flex justify-center items-center min-h-[400px]">
+          <div className="text-center space-y-6 max-w-md">
+            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-[#2B1A4F] to-[#3E3355] rounded-full flex items-center justify-center">
+              <svg 
+                className="w-12 h-12 text-gray-400"
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={1.5} 
+                  d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+                />
+              </svg>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-2xl font-semibold text-white">No distributions found</h3>
+              <p className="text-gray-400 leading-relaxed">
+                No Java distributions match your current filter criteria. Try adjusting your selections or reset all filters to see available distributions.
+              </p>
+            </div>
+            {onReset && (
+              <button
+                onClick={onReset}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-pink-500/25"
+              >
+                <FaRedo className="w-4 h-4" />
+                Reset Filters
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (

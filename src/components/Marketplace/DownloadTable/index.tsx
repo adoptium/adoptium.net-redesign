@@ -13,6 +13,8 @@ import { detectOS, UserOS } from "../../../util/detectOS"
 import { getAllPkgsForVersion, MarketplaceRelease } from "../../../hooks"
 import { fetchOses, fetchArches} from '../../../hooks/fetchConstants'
 import { packageTypes, defaultArchitecture, defaultPackageType} from '../../../util/defaults'
+import vendors from "../../../json/marketplace.json"
+import getVendorIdentifier from "../../../util/vendors"
 
 const DownloadTable = () => {
 
@@ -185,6 +187,29 @@ const DownloadTable = () => {
     updateOS(os)
   }
 
+  const handleReset = () => {
+    // Reset all filters to default values
+    const defaultOS = ""
+    const defaultArch = defaultArchitecture
+    const defaultVersion = data.mostRecentLts.version
+    const defaultPackage = defaultPackageType
+    // Select all vendors by default (same as VendorSelector initial behavior)
+    const defaultVendors: string[] = vendors.map(vendor => getVendorIdentifier(vendor))
+
+    // Update URL parameters
+    setURLParam("os", defaultOS)
+    setURLParam("arch", defaultArch)
+    setURLParam("version", defaultVersion)
+    setURLParam("package", defaultPackage)
+    
+    // Update state
+    updateOS(defaultOS)
+    updateArch(defaultArch)
+    udateVersion(defaultVersion)
+    updatePackageType(defaultPackage)
+    updateSelectedVendorIdentifiers(defaultVendors)
+  }
+
   return (
     <div className="max-w-[1264px] mx-auto px-6 pb-20">
       <ReleaseSelector
@@ -221,7 +246,7 @@ const DownloadTable = () => {
           <Trans>Architecture</Trans>
         </p>
       </div>
-      {releases && <AllReleaseCard results={releases} />}
+      {<AllReleaseCard results={releases} onReset={handleReset} />}
     </div>
   )
 }

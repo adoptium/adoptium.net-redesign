@@ -408,6 +408,178 @@ exports[`Marketplace page > renders correctly 1`] = `
         Text
       </p>
     </div>
+    <div
+      class="mt-8 space-y-6"
+    >
+      <div
+        class="newscard-2 !blur-0 px-6 py-6 lg:flex justify-between items-center hover:shadow-xl transition-all duration-300 rounded-2xl bg-gradient-to-r from-[#200E46]/80 to-[#2B1A4F]/80 backdrop-blur-sm"
+      >
+        <div
+          class="flex flex-col lg:flex-row justify-between gap-4 lg:items-center flex-1"
+        >
+          <div
+            class="animated-placeholder"
+          >
+            <div
+              class="flex flex-col lg:flex-row gap-4 lg:items-center flex-1"
+            >
+              <div
+                class="lg:w-[160px]"
+              >
+                <div
+                  class="h-6 bg-gray-600 rounded w-32 animate-pulse"
+                />
+              </div>
+              <div
+                class="lg:flex items-center gap-20 flex-1"
+              >
+                <div
+                  class="h-5 bg-gray-600 rounded w-24 animate-pulse"
+                />
+                <div
+                  class="w-[100px] h-[60px] bg-gray-600 rounded-xl animate-pulse"
+                />
+                <div
+                  class="h-5 bg-gray-600 rounded w-20 animate-pulse"
+                />
+                <div
+                  class="h-5 bg-gray-600 rounded w-16 animate-pulse"
+                />
+                <div
+                  class="h-5 bg-gray-600 rounded w-14 animate-pulse"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex items-end justify-between mt-4 md:mt-0 gap-5"
+        >
+          <div
+            class="flex gap-3"
+          >
+            <div
+              class="h-10 bg-gray-600 rounded-full w-24 animate-pulse"
+            />
+            <div
+              class="h-10 bg-gray-600 rounded-full w-32 animate-pulse"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="newscard-2 !blur-0 px-6 py-6 lg:flex justify-between items-center hover:shadow-xl transition-all duration-300 rounded-2xl bg-gradient-to-r from-[#200E46]/80 to-[#2B1A4F]/80 backdrop-blur-sm"
+      >
+        <div
+          class="flex flex-col lg:flex-row justify-between gap-4 lg:items-center flex-1"
+        >
+          <div
+            class="animated-placeholder"
+          >
+            <div
+              class="flex flex-col lg:flex-row gap-4 lg:items-center flex-1"
+            >
+              <div
+                class="lg:w-[160px]"
+              >
+                <div
+                  class="h-6 bg-gray-600 rounded w-32 animate-pulse"
+                />
+              </div>
+              <div
+                class="lg:flex items-center gap-20 flex-1"
+              >
+                <div
+                  class="h-5 bg-gray-600 rounded w-24 animate-pulse"
+                />
+                <div
+                  class="w-[100px] h-[60px] bg-gray-600 rounded-xl animate-pulse"
+                />
+                <div
+                  class="h-5 bg-gray-600 rounded w-20 animate-pulse"
+                />
+                <div
+                  class="h-5 bg-gray-600 rounded w-16 animate-pulse"
+                />
+                <div
+                  class="h-5 bg-gray-600 rounded w-14 animate-pulse"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex items-end justify-between mt-4 md:mt-0 gap-5"
+        >
+          <div
+            class="flex gap-3"
+          >
+            <div
+              class="h-10 bg-gray-600 rounded-full w-24 animate-pulse"
+            />
+            <div
+              class="h-10 bg-gray-600 rounded-full w-32 animate-pulse"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="newscard-2 !blur-0 px-6 py-6 lg:flex justify-between items-center hover:shadow-xl transition-all duration-300 rounded-2xl bg-gradient-to-r from-[#200E46]/80 to-[#2B1A4F]/80 backdrop-blur-sm"
+      >
+        <div
+          class="flex flex-col lg:flex-row justify-between gap-4 lg:items-center flex-1"
+        >
+          <div
+            class="animated-placeholder"
+          >
+            <div
+              class="flex flex-col lg:flex-row gap-4 lg:items-center flex-1"
+            >
+              <div
+                class="lg:w-[160px]"
+              >
+                <div
+                  class="h-6 bg-gray-600 rounded w-32 animate-pulse"
+                />
+              </div>
+              <div
+                class="lg:flex items-center gap-20 flex-1"
+              >
+                <div
+                  class="h-5 bg-gray-600 rounded w-24 animate-pulse"
+                />
+                <div
+                  class="w-[100px] h-[60px] bg-gray-600 rounded-xl animate-pulse"
+                />
+                <div
+                  class="h-5 bg-gray-600 rounded w-20 animate-pulse"
+                />
+                <div
+                  class="h-5 bg-gray-600 rounded w-16 animate-pulse"
+                />
+                <div
+                  class="h-5 bg-gray-600 rounded w-14 animate-pulse"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex items-end justify-between mt-4 md:mt-0 gap-5"
+        >
+          <div
+            class="flex gap-3"
+          >
+            <div
+              class="h-10 bg-gray-600 rounded-full w-24 animate-pulse"
+            />
+            <div
+              class="h-10 bg-gray-600 rounded-full w-32 animate-pulse"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div
     class="community flex justify-center items-center px-6 pt-10 pb-24 md:py-24"

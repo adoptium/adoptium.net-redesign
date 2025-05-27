@@ -273,7 +273,7 @@ exports[`Temurin Nightly page > renders correctly 1`] = `
               aria-label="Build Date"
               class="w-full md:w-auto px-4 py-2 bg-[#200E46] border border-[#3E3355] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#FF1464] date-picker"
               id="build-date"
-              max="2025-05-23"
+              max="2025-05-27"
               type="date"
               value="2022-01-01"
             />

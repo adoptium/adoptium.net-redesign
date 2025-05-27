@@ -324,7 +324,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
     // If no featured image is provided and both title and subtitle exist:
     if (!featuredImage && title && description) {
       const outputFileName = "banner.png";
-      const outputDir = path.join(`static/images/blog/${slug}`);
+      const outputDir = path.join(`static/images/news/${slug}`);
       const outputPath = path.join(outputDir, outputFileName);
 
       try {
@@ -332,7 +332,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
         createNodeField({
           node,
           name: 'generatedFeaturedImage',
-          value: `/images/blog/${slug}/${outputFileName}`,
+          value: `/images/news/${slug}/${outputFileName}`,
         });
       } catch (error) {
         console.error(`Error generating featured image for ${title}: ${error}`);

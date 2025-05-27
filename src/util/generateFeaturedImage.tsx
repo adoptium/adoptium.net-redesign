@@ -31,7 +31,7 @@ export async function generateFeaturedImage(
         '../',
         'static',
         'images',
-        'blog',
+        'news',
         'blog-background.png'
     );
     const background = await loadImage(backgroundPath);

@@ -6,6 +6,26 @@ import "@testing-library/jest-dom"
 import "vitest-axe/extend-expect"
 import * as axeMatchers from "vitest-axe/matchers"
 
+// Mock Date to a fixed value for consistent snapshots
+const mockDate = new Date('2025-05-27T00:00:00.000Z')
+
+// Create a global Date mock that doesn't interfere with vi.useFakeTimers()
+const OriginalDate = global.Date
+
+global.Date = class extends OriginalDate {
+  constructor(...args: any[]) {
+    if (args.length === 0) {
+      super(mockDate.getTime())
+    } else {
+      super(...args)
+    }
+  }
+
+  static now() {
+    return mockDate.getTime()
+  }
+} as DateConstructor
+
 vi.stubGlobal("jest", vi)
 
 expect.extend(axeMatchers)

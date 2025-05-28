@@ -44,7 +44,7 @@ const ReleaseSelector: React.FC<ReleaseSelectorProps> = ({
   const osToArchMap = useMemo(() => ({
     'windows': ['x64', 'x86', 'aarch64'],
     'mac': ['x64', 'aarch64'],
-    'linux': ['x64', 'x86', 'aarch64', 'ppc64le', 's390x', 'riscv64'],
+    'linux': ['x64', 'x86', 'aarch64', 'arm', 'ppc64le', 's390x', 'riscv64'],
     'alpine-linux': ['x64', 'aarch64'],
     'aix': ['ppc64'],
     'solaris': ['sparcv9', 'x64']

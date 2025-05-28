@@ -1,6 +1,6 @@
 import React from "react"
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions, Transition } from "@headlessui/react"
-import { Fragment, useMemo } from "react"
+import { Fragment, useMemo, useState, useEffect } from "react"
 import { FaChevronDown } from "react-icons/fa"
 
 export interface ListItem {
@@ -20,9 +20,18 @@ export default function CommonSelector({
   selectorUpdater,
 }: ListBoxSelectProps) {
 
-  const selected = useMemo(() => defaultValue ? defaultValue : list[0], [defaultValue, list])
+  const initialSelected = useMemo(() => defaultValue ? defaultValue : list[0], [defaultValue, list])
+  const [selected, setSelected] = useState<ListItem>(initialSelected)
+
+  // Update selected when defaultValue changes (controlled from parent)
+  useEffect(() => {
+    if (defaultValue) {
+      setSelected(defaultValue)
+    }
+  }, [defaultValue])
 
   const handleChange = (newValue: ListItem) => {
+    setSelected(newValue)
     selectorUpdater(newValue.value)
   }
 

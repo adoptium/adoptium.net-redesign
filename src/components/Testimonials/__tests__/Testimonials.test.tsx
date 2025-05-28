@@ -4,9 +4,10 @@ import { describe, expect, it, vi, beforeEach, afterEach } from "vitest"
 import Testimonials from "../index"
 
 describe("Testimonials component", () => {
-  beforeEach(() => {
+  // Setup timers for tests that need them
+  const setupTimers = () => {
     vi.useFakeTimers()
-  })
+  }
 
   afterEach(() => {
     vi.restoreAllMocks()
@@ -98,6 +99,7 @@ describe("Testimonials component", () => {
   })
 
   it("auto-advances testimonials after 8 seconds", async () => {
+    setupTimers()
     render(<Testimonials />)
     
     // Initial state - Microsoft testimonial
@@ -115,6 +117,7 @@ describe("Testimonials component", () => {
   })
 
   it("cycles through all testimonials automatically", async () => {
+    setupTimers()
     render(<Testimonials />)
     
     // Start with Microsoft
@@ -146,6 +149,7 @@ describe("Testimonials component", () => {
   })
 
   it("resets auto-advance timer when manually navigating", async () => {
+    setupTimers()
     render(<Testimonials />)
     
     // Initial state - Microsoft testimonial

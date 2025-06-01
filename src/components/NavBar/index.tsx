@@ -11,7 +11,7 @@ import {
 } from "@headlessui/react"
 import { FaChevronDown, FaRegBell } from "react-icons/fa"
 import { BsXLg, BsList } from "react-icons/bs"
-import { GrRevert } from "react-icons/gr";
+import { GrRevert } from "react-icons/gr"
 
 import IconSocial from "../IconSocial"
 import LanguageSelector from "../LanguageSelector"
@@ -70,9 +70,9 @@ const navigation: NavItem[] = [
     children: [
       // { name: "Our Community", href: "" },
       { name: "Support", href: "/support" },
-      { name: "News & Updates", href: "/news" },
+      { name: "News", href: "/news" },
+      { name: "Events", href: "/events" },
       { name: "Slack", href: "/slack" },
-      // { name: "Events", href: "/events" },
     ],
   },
 ]
@@ -114,23 +114,25 @@ const MobileDivider: React.FC = () => (
 function isActivePath(path: string | undefined): boolean {
   if (!path) return false
   if (typeof window === "undefined") return false
-  
+
   const currentPath = window.location.pathname
-  
+
   // Remove locale prefix from current path (e.g., /en-GB/docs/faq -> /docs/faq)
   const removeLocalePrefix = (pathname: string): string => {
     // Match patterns like /en-GB/, /de/, /es/, /fr/, /zh-CN/, etc.
     const localePattern = /^\/[a-z]{2}(-[A-Z]{2})?\//
-    return pathname.replace(localePattern, '/')
+    return pathname.replace(localePattern, "/")
   }
-  
+
   const pathWithoutLocale = removeLocalePrefix(currentPath)
-  const normalizedPath = path.endsWith('/') ? path.slice(0, -1) : path
-  const normalizedCurrentPath = pathWithoutLocale.endsWith('/') ? pathWithoutLocale.slice(0, -1) : pathWithoutLocale
-  
+  const normalizedPath = path.endsWith("/") ? path.slice(0, -1) : path
+  const normalizedCurrentPath = pathWithoutLocale.endsWith("/")
+    ? pathWithoutLocale.slice(0, -1)
+    : pathWithoutLocale
+
   // Get all navigation paths to find the most specific match
   const allPaths: string[] = []
-  
+
   navigation.forEach(item => {
     if (item.href) {
       allPaths.push(item.href)
@@ -143,24 +145,30 @@ function isActivePath(path: string | undefined): boolean {
       })
     }
   })
-  
+
   // Find all matching paths
   const matchingPaths = allPaths.filter(navPath => {
-    const normalizedNavPath = navPath.endsWith('/') ? navPath.slice(0, -1) : navPath
-    return normalizedCurrentPath === normalizedNavPath || 
-           normalizedCurrentPath.startsWith(normalizedNavPath + '/')
+    const normalizedNavPath = navPath.endsWith("/")
+      ? navPath.slice(0, -1)
+      : navPath
+    return (
+      normalizedCurrentPath === normalizedNavPath ||
+      normalizedCurrentPath.startsWith(normalizedNavPath + "/")
+    )
   })
-  
+
   // If no matches, return false
   if (matchingPaths.length === 0) return false
-  
+
   // Find the longest (most specific) matching path
-  const longestMatch = matchingPaths.reduce((longest, current) => 
-    current.length > longest.length ? current : longest
+  const longestMatch = matchingPaths.reduce((longest, current) =>
+    current.length > longest.length ? current : longest,
   )
-  
+
   // Only highlight if this path is the most specific match
-  const normalizedLongestMatch = longestMatch.endsWith('/') ? longestMatch.slice(0, -1) : longestMatch
+  const normalizedLongestMatch = longestMatch.endsWith("/")
+    ? longestMatch.slice(0, -1)
+    : longestMatch
   return normalizedPath === normalizedLongestMatch
 }
 
@@ -172,14 +180,14 @@ const NavBar = () => {
 
   // Function to go back to the old site
   const goToOldSite = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // Set cookie to view the old site
       const expirationDate = new Date()
       expirationDate.setDate(expirationDate.getDate() + 30)
-      
+
       // Set the Netlify cookie to 'oldsite' branch
       document.cookie = `nf_ab=oldsite; expires=${expirationDate.toUTCString()}; path=/`
-      
+
       // Reload the page to apply changes
       window.location.reload()
     }
@@ -511,7 +519,9 @@ const NavBar = () => {
                 >
                   <GrRevert size={20} />
                 </button>
-                <span className="ml-2 text-xs text-gray-400">View classic site</span>
+                <span className="ml-2 text-xs text-gray-400">
+                  View classic site
+                </span>
               </div>
             </div>
           </div>

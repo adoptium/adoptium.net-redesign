@@ -20,7 +20,7 @@ exports[`TimeLine component > should render correctly with events 1`] = `
           <span
             class="text-base text-grey"
           >
-            27 May 2025
+            May 27, 2025
           </span>
           <a
             href="https://example.com/a"
@@ -66,7 +66,7 @@ exports[`TimeLine component > should render correctly with events 1`] = `
           <span
             class="text-base text-grey"
           >
-            29 May 2025
+            May 29, 2025
           </span>
           <a
             href="https://example.com/b"

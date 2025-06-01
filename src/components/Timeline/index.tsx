@@ -1,8 +1,11 @@
 import React, { memo, useState } from "react"
 import Pagination from "../News/Pagination"
 import { truncateIfLonger } from "../../util/truncateLonger"
+import { useI18next } from "gatsby-plugin-react-i18next"
+import { localeDate } from "../../util/localeDate"
 
 const TimeLine = ({ data }) => {
+  const { language } = useI18next()
   const today = new Date()
   const validEvents = data?.filter(
     event => !!event.date && !isNaN(new Date(event.date).getTime()),
@@ -44,7 +47,7 @@ const TimeLine = ({ data }) => {
             <div className="w-5/12">
               <div className={`text-${isRight ? "right" : "left"}`}>
                 <span className="text-base text-grey">
-                  {formatDate(event.date)}
+                  {localeDate(event.date, language)}
                 </span>
                 <a
                   href={event.infoLink}
@@ -104,13 +107,3 @@ const TimeLine = ({ data }) => {
 }
 
 export default memo(TimeLine)
-
-const formatDate = (dateString: string) => {
-  const options: Intl.DateTimeFormatOptions = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }
-  const date = new Date(dateString)
-  return date.toLocaleDateString("en-UK", options)
-}

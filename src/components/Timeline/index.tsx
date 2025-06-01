@@ -1,5 +1,6 @@
-import React, { memo, useMemo, useState } from "react"
+import React, { memo, useState } from "react"
 import Pagination from "../News/Pagination"
+import { truncateIfLonger } from "../../util/truncateLonger"
 
 const TimeLine = ({ data }) => {
   const today = new Date()
@@ -112,15 +113,4 @@ const formatDate = (dateString: string) => {
   }
   const date = new Date(dateString)
   return date.toLocaleDateString("en-UK", options)
-}
-
-function truncateIfLonger(description) {
-  const referenceWordCount = 40 // Number of words to keep
-  const descriptionWords = description.trim().split(/\s+/)
-
-  if (descriptionWords.length > referenceWordCount) {
-    return descriptionWords.slice(0, referenceWordCount).join(" ") + "..."
-  }
-
-  return description
 }

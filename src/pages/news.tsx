@@ -31,7 +31,7 @@ const NewsIndex = ({ data }) => {
         description="Follow the latest updates from the Eclipse Adoptium Project"
         className="mx-auto max-w-[860px] px-2 w-full"
       />
-      <NewsCardList 
+      <NewsCardList
         posts={posts}
         previousPageNumber={previousPageNumber}
         previousPageLink={previousPageLink}
@@ -46,7 +46,7 @@ const NewsIndex = ({ data }) => {
 
 export default NewsIndex
 
-export const Head = () => <Seo title="News & Events" />
+export const Head = () => <Seo title="News" />
 
 export const pageQuery = graphql`
   query ($language: String!) {

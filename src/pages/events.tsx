@@ -21,7 +21,7 @@ const Events = () => {
     <Layout>
       <PageHeader
         subtitle="Events"
-        title="News & Events"
+        title="Eclipse  Foundation Events"
         description="Follow the latest Eclipse Foundation Events"
         className="mx-auto max-w-[860px] px-2 w-full"
       />

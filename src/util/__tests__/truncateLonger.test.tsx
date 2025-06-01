@@ -20,7 +20,7 @@ describe("truncateIfLonger", () => {
 
   it("should handle extra spaces correctly", () => {
     const input = "   word1    word2   word3   "
-    expect(truncateIfLonger(input)).toBe(input) // Because it's under 40 words
+    expect(truncateIfLonger(input)).toBe(input)
   })
 
   it("should return empty string if given empty string", () => {

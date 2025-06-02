@@ -36,7 +36,7 @@ const PageHeader = ({
               </div>
             </div>
             {/* if title is a string else React.ReactNode */}
-            {typeof title === 'string' ? (
+            {typeof title === "string" ? (
               <div
                 className={`self-stretch text-center text-white   text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold`}
                 dangerouslySetInnerHTML={{ __html: title }}

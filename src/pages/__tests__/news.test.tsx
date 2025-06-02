@@ -30,7 +30,7 @@ describe("News page", () => {
     const { container } = render(<Head />)
     // eslint-disable-next-line
     const title = container.querySelector("title")
-    expect(title?.textContent).toEqual("News & Events | Adoptium")
+    expect(title?.textContent).toEqual("News | Adoptium")
   })
 
   it("has no accessibility violations", async () => {

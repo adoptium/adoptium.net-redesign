@@ -27,6 +27,14 @@ const testimonialData = [
     image: "/images/quotes/simonritter.jpeg",
     companyLogo: "/images/azul.svg",
     companyName: "Azul Systems"
+  },
+  {
+    quote: "As a leading provider of enterprise open source software solutions, Red Hat supports the Eclipse Adoptium Working Group. We contribute to Eclipse Temurin and AQAvit to deliver high-performance, enterprise-ready OpenJDK builds backed by a secure supply chain, suitable for production deployment. This aligns with our mission to foster secure, stable, and innovative technologies.",
+    name: "Mark Little",
+    role: "VP Middleware Engineering, Red Hat",
+    image: "/images/quotes/marklittle.jpeg",
+    companyLogo: "/images/redhat.svg",
+    companyName: "Red Hat"
   }
 ]
 

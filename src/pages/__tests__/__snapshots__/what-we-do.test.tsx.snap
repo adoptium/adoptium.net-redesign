@@ -589,6 +589,10 @@ exports[`What We Do page > renders correctly 1`] = `
             aria-label="Go to testimonial 3"
             class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
           />
+          <button
+            aria-label="Go to testimonial 4"
+            class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
+          />
         </div>
         <button
           aria-label="Next Testimonial"
@@ -656,6 +660,20 @@ exports[`What We Do page > renders correctly 1`] = `
               alt="Azul Systems"
               class="max-h-full max-w-full object-contain brightness-0 invert"
               src="/images/azul.svg"
+            />
+          </div>
+        </button>
+        <button
+          aria-label="Red Hat Testimonial"
+          class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
+        >
+          <div
+            class="h-12 w-32 flex items-center justify-center"
+          >
+            <img
+              alt="Red Hat"
+              class="max-h-full max-w-full object-contain brightness-0 invert"
+              src="/images/redhat.svg"
             />
           </div>
         </button>

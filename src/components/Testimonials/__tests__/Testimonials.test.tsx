@@ -39,6 +39,7 @@ describe("Testimonials component", () => {
     expect(screen.getByLabelText("Go to testimonial 1")).toBeTruthy()
     expect(screen.getByLabelText("Go to testimonial 2")).toBeTruthy()
     expect(screen.getByLabelText("Go to testimonial 3")).toBeTruthy()
+    expect(screen.getByLabelText("Go to testimonial 4")).toBeTruthy()
   })
 
   it("navigates to next testimonial when next button is clicked", () => {
@@ -64,8 +65,8 @@ describe("Testimonials component", () => {
     fireEvent.click(prevButton)
     
     // Should show Azul testimonial (last one)
-    expect(screen.getByText("Simon Ritter")).toBeTruthy()
-    expect(screen.getByText("Deputy CTO at Azul Systems")).toBeTruthy()
+    expect(screen.getByText("Mark Little")).toBeTruthy()
+    expect(screen.getByText("VP Middleware Engineering, Red Hat")).toBeTruthy()
   })
 
   it("navigates using progress indicators", () => {
@@ -75,12 +76,12 @@ describe("Testimonials component", () => {
     expect(screen.getByText("Martijn Verburg")).toBeTruthy()
     
     // Click on third progress indicator
-    const thirdIndicator = screen.getByLabelText("Go to testimonial 3")
-    fireEvent.click(thirdIndicator)
+    const fourthIndicator = screen.getByLabelText("Go to testimonial 4")
+    fireEvent.click(fourthIndicator)
     
-    // Should show Azul testimonial
-    expect(screen.getByText("Simon Ritter")).toBeTruthy()
-    expect(screen.getByText(/Azul has been a member of the Eclipse Adoptium/)).toBeTruthy()
+    // Should show Red Hat testimonial
+    expect(screen.getByText("Mark Little")).toBeTruthy()
+    expect(screen.getByText(/As a leading provider of enterprise open source software/)).toBeTruthy()
   })
 
   it("navigates using company logos", () => {
@@ -138,7 +139,15 @@ describe("Testimonials component", () => {
     await waitFor(() => {
       expect(screen.getByText("Simon Ritter")).toBeTruthy()
     })
-    
+
+    // After another 8 seconds -> Red Hat
+    act(() => {
+      vi.advanceTimersByTime(8000)
+    })
+    await waitFor(() => {
+      expect(screen.getByText("Mark Little")).toBeTruthy()
+    })
+
     // After another 8 seconds -> back to Microsoft
     act(() => {
       vi.advanceTimersByTime(8000)
@@ -209,12 +218,14 @@ describe("Testimonials component", () => {
     expect(screen.getByLabelText("Microsoft Testimonial")).toBeTruthy()
     expect(screen.getByLabelText("Alibaba Cloud Testimonial")).toBeTruthy()
     expect(screen.getByLabelText("Azul Systems Testimonial")).toBeTruthy()
+    expect(screen.getByLabelText("Red Hat Testimonial")).toBeTruthy()
     
     // Check for proper alt text on images
     expect(screen.getByAltText("Martijn Verburg")).toBeTruthy()
     expect(screen.getByAltText("Microsoft")).toBeTruthy()
     expect(screen.getByAltText("Alibaba Cloud")).toBeTruthy()
     expect(screen.getByAltText("Azul Systems")).toBeTruthy()
+    expect(screen.getByAltText("Red Hat")).toBeTruthy()
   })
 
   it("renders all testimonial data correctly", () => {
@@ -235,6 +246,11 @@ describe("Testimonials component", () => {
         name: "Simon Ritter",
         role: "Deputy CTO at Azul Systems", 
         company: "Azul Systems"
+      },
+      {
+        name: "Mark Little",
+        role: "VP Middleware Engineering, Red Hat", 
+        company: "Red Hat"
       }
     ]
     

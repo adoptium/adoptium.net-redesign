@@ -80,25 +80,26 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
     class="max-w-[1264px] mx-auto px-6 py-8 md:pt-12"
   >
     <div
-      class="flex justify-center gap-6 items-center flex-wrap pt-8 md:pt-12"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
     >
       <div
-        class="flex flex-col max-w-[385px] rounded-3xl newscard-2 bg-[#200D46]"
+        class="flex flex-col max-w-[385px] w-full sm:w-[385px] h-[600px] rounded-3xl newscard-2 bg-[#200D46]"
       >
         <img
           alt="blog banner image"
-          class="m-0.5 rounded-3xl"
+          class="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
         />
         <div
-          class="p-8"
+          class="p-8 flex flex-col h-[400px]"
         >
           <h3
-            class="text-[24px] font-semibold leading-[133.333%]"
+            class="text-[24px] font-semibold leading-normal h-auto line-clamp-3 mb-2"
+            title="MDX Page title"
           >
             MDX Page title
           </h3>
           <div
-            class="flex justify-between py-4"
+            class="flex justify-between py-3"
           >
             <h3
               class="flex flex-col gap-1 tab-button-text text-white"
@@ -108,24 +109,31 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
               </span>
             </h3>
           </div>
-          <span>
-            MDX Page excerpt
-          </span>
-          <a
-            href="/en/mdx/mdx-page-title"
+          <div
+            class="flex-grow overflow-hidden h-[100px]"
           >
-            <button
-              class="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block "
+            <p
+              class="line-clamp-4"
             >
-              Read More
-            </button>
-          </a>
+              MDX Page excerpt
+            </p>
+          </div>
+          <div
+            class="mt-auto pt-4"
+          >
+            <a
+              href="/en/mdx/mdx-page-title"
+            >
+              <button
+                class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block"
+              >
+                Read More
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div
-      class="flex justify-center gap-6 items-center flex-wrap py-8 md:py-12"
-    />
     <div
       class="flex justify-center items-center gap-8 md:gap-14 my-8"
     >
@@ -239,24 +247,15 @@ exports[`TagPage pages > renders correctly - with next and previous pagination 1
       </a>
     </div>
     <div
-      class="flex items-center gap-5"
+      class="flex justify-center items-center gap-5 mt-8"
     >
       <a
-        class="flex items-center gap-3"
-        href="https://newsroom.eclipse.org/eclipse/community-news"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View all
-      </a>
-      |
-      <a
-        class="flex items-center gap-3"
+        class="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium"
         href="https://newsroom.eclipse.org/node/add/news"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Submit news
+        Submit News
       </a>
     </div>
   </div>
@@ -343,25 +342,26 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
     class="max-w-[1264px] mx-auto px-6 py-8 md:pt-12"
   >
     <div
-      class="flex justify-center gap-6 items-center flex-wrap pt-8 md:pt-12"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
     >
       <div
-        class="flex flex-col max-w-[385px] rounded-3xl newscard-2 bg-[#200D46]"
+        class="flex flex-col max-w-[385px] w-full sm:w-[385px] h-[600px] rounded-3xl newscard-2 bg-[#200D46]"
       >
         <img
           alt="blog banner image"
-          class="m-0.5 rounded-3xl"
+          class="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
         />
         <div
-          class="p-8"
+          class="p-8 flex flex-col h-[400px]"
         >
           <h3
-            class="text-[24px] font-semibold leading-[133.333%]"
+            class="text-[24px] font-semibold leading-normal h-auto line-clamp-3 mb-2"
+            title="MDX Page title"
           >
             MDX Page title
           </h3>
           <div
-            class="flex justify-between py-4"
+            class="flex justify-between py-3"
           >
             <h3
               class="flex flex-col gap-1 tab-button-text text-white"
@@ -371,24 +371,31 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
               </span>
             </h3>
           </div>
-          <span>
-            MDX Page excerpt
-          </span>
-          <a
-            href="/en/mdx/mdx-page-title"
+          <div
+            class="flex-grow overflow-hidden h-[100px]"
           >
-            <button
-              class="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block "
+            <p
+              class="line-clamp-4"
             >
-              Read More
-            </button>
-          </a>
+              MDX Page excerpt
+            </p>
+          </div>
+          <div
+            class="mt-auto pt-4"
+          >
+            <a
+              href="/en/mdx/mdx-page-title"
+            >
+              <button
+                class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block"
+              >
+                Read More
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div
-      class="flex justify-center gap-6 items-center flex-wrap py-8 md:py-12"
-    />
     <div
       class="flex justify-center items-center gap-8 md:gap-14 my-8"
     >
@@ -502,24 +509,15 @@ exports[`TagPage pages > renders correctly - with next pagination 1`] = `
       </a>
     </div>
     <div
-      class="flex items-center gap-5"
+      class="flex justify-center items-center gap-5 mt-8"
     >
       <a
-        class="flex items-center gap-3"
-        href="https://newsroom.eclipse.org/eclipse/community-news"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View all
-      </a>
-      |
-      <a
-        class="flex items-center gap-3"
+        class="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium"
         href="https://newsroom.eclipse.org/node/add/news"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Submit news
+        Submit News
       </a>
     </div>
   </div>
@@ -606,25 +604,26 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
     class="max-w-[1264px] mx-auto px-6 py-8 md:pt-12"
   >
     <div
-      class="flex justify-center gap-6 items-center flex-wrap pt-8 md:pt-12"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
     >
       <div
-        class="flex flex-col max-w-[385px] rounded-3xl newscard-2 bg-[#200D46]"
+        class="flex flex-col max-w-[385px] w-full sm:w-[385px] h-[600px] rounded-3xl newscard-2 bg-[#200D46]"
       >
         <img
           alt="blog banner image"
-          class="m-0.5 rounded-3xl"
+          class="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
         />
         <div
-          class="p-8"
+          class="p-8 flex flex-col h-[400px]"
         >
           <h3
-            class="text-[24px] font-semibold leading-[133.333%]"
+            class="text-[24px] font-semibold leading-normal h-auto line-clamp-3 mb-2"
+            title="MDX Page title"
           >
             MDX Page title
           </h3>
           <div
-            class="flex justify-between py-4"
+            class="flex justify-between py-3"
           >
             <h3
               class="flex flex-col gap-1 tab-button-text text-white"
@@ -634,24 +633,31 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
               </span>
             </h3>
           </div>
-          <span>
-            MDX Page excerpt
-          </span>
-          <a
-            href="/en/mdx/mdx-page-title"
+          <div
+            class="flex-grow overflow-hidden h-[100px]"
           >
-            <button
-              class="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block "
+            <p
+              class="line-clamp-4"
             >
-              Read More
-            </button>
-          </a>
+              MDX Page excerpt
+            </p>
+          </div>
+          <div
+            class="mt-auto pt-4"
+          >
+            <a
+              href="/en/mdx/mdx-page-title"
+            >
+              <button
+                class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block"
+              >
+                Read More
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div
-      class="flex justify-center gap-6 items-center flex-wrap py-8 md:py-12"
-    />
     <div
       class="flex justify-center items-center gap-8 md:gap-14 my-8"
     >
@@ -765,24 +771,15 @@ exports[`TagPage pages > renders correctly - with previous pagination 1`] = `
       </a>
     </div>
     <div
-      class="flex items-center gap-5"
+      class="flex justify-center items-center gap-5 mt-8"
     >
       <a
-        class="flex items-center gap-3"
-        href="https://newsroom.eclipse.org/eclipse/community-news"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View all
-      </a>
-      |
-      <a
-        class="flex items-center gap-3"
+        class="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium"
         href="https://newsroom.eclipse.org/node/add/news"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Submit news
+        Submit News
       </a>
     </div>
   </div>
@@ -869,25 +866,26 @@ exports[`TagPage pages > renders correctly 1`] = `
     class="max-w-[1264px] mx-auto px-6 py-8 md:pt-12"
   >
     <div
-      class="flex justify-center gap-6 items-center flex-wrap pt-8 md:pt-12"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
     >
       <div
-        class="flex flex-col max-w-[385px] rounded-3xl newscard-2 bg-[#200D46]"
+        class="flex flex-col max-w-[385px] w-full sm:w-[385px] h-[600px] rounded-3xl newscard-2 bg-[#200D46]"
       >
         <img
           alt="blog banner image"
-          class="m-0.5 rounded-3xl"
+          class="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
         />
         <div
-          class="p-8"
+          class="p-8 flex flex-col h-[400px]"
         >
           <h3
-            class="text-[24px] font-semibold leading-[133.333%]"
+            class="text-[24px] font-semibold leading-normal h-auto line-clamp-3 mb-2"
+            title="MDX Page title"
           >
             MDX Page title
           </h3>
           <div
-            class="flex justify-between py-4"
+            class="flex justify-between py-3"
           >
             <h3
               class="flex flex-col gap-1 tab-button-text text-white"
@@ -897,24 +895,31 @@ exports[`TagPage pages > renders correctly 1`] = `
               </span>
             </h3>
           </div>
-          <span>
-            MDX Page excerpt
-          </span>
-          <a
-            href="/en/mdx/mdx-page-title"
+          <div
+            class="flex-grow overflow-hidden h-[100px]"
           >
-            <button
-              class="rounded-2xl bg-transparent gradient-border mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block "
+            <p
+              class="line-clamp-4"
             >
-              Read More
-            </button>
-          </a>
+              MDX Page excerpt
+            </p>
+          </div>
+          <div
+            class="mt-auto pt-4"
+          >
+            <a
+              href="/en/mdx/mdx-page-title"
+            >
+              <button
+                class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block"
+              >
+                Read More
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div
-      class="flex justify-center gap-6 items-center flex-wrap py-8 md:py-12"
-    />
     <div
       class="flex justify-center items-center gap-8 md:gap-14 my-8"
     >
@@ -1028,24 +1033,15 @@ exports[`TagPage pages > renders correctly 1`] = `
       </a>
     </div>
     <div
-      class="flex items-center gap-5"
+      class="flex justify-center items-center gap-5 mt-8"
     >
       <a
-        class="flex items-center gap-3"
-        href="https://newsroom.eclipse.org/eclipse/community-news"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View all
-      </a>
-      |
-      <a
-        class="flex items-center gap-3"
+        class="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium"
         href="https://newsroom.eclipse.org/node/add/news"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Submit news
+        Submit News
       </a>
     </div>
   </div>

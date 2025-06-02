@@ -3,6 +3,39 @@ import EventCard from "../../Events/EventCard";
 import Pagination from "../Pagination";
 import { Link } from "../../../components/Link";
 
+interface Post {
+  node: {
+    excerpt: string;
+    fields: {
+      slug: string;
+      postPath: string;
+      generatedFeaturedImage: string;
+    };
+    frontmatter: {
+      title: string;
+      date: string;
+      description: string;
+      author: string;
+      tags?: string[];
+      featuredImage?: {
+        childImageSharp: {
+          gatsbyImageData: any;
+        };
+      };
+    };
+  };
+}
+
+interface NewsCardListProps {
+  posts: Post[];
+  previousPageNumber: number | null;
+  previousPageLink: string | null;
+  nextPage: string | null;
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+}
+
 const NewsCardList = ({
   posts,
   previousPageNumber,
@@ -11,22 +44,37 @@ const NewsCardList = ({
   currentPage,
   totalPages,
   baseUrl,
-}) => {
-  const data1 = posts.slice(0, 3);
-  const data2 = posts.slice(3, 6);
+}: NewsCardListProps) => {
+  // Create a balanced layout for all posts - divide them into groups for layout
+  const allPosts = [...posts];
+  const rowsNeeded = Math.ceil(allPosts.length / 3);
+  let rowData: Post[][] = [];
+  
+  // Create rows with up to 3 cards each
+  for (let i = 0; i < rowsNeeded; i++) {
+    const startIndex = i * 3;
+    const rowPosts = allPosts.slice(startIndex, startIndex + 3);
+    rowData.push(rowPosts);
+  }
 
   return (
     <div className="max-w-[1264px] mx-auto px-6 py-8 md:pt-12">
-      <div className="flex justify-center gap-6 items-center flex-wrap pt-8 md:pt-12">
-        {data1.map((post, index) => (
-          <EventCard key={index} post={post} />
-        ))}
-      </div>
-      <div className="flex justify-center gap-6 items-center flex-wrap py-8 md:py-12">
-        {data2.map((post, index) => (
-          <EventCard key={index} post={post} />
-        ))}
-      </div>
+      {/* Display all posts in rows of up to 3 cards */}
+      {rowData.map((row, rowIndex) => (
+        <div 
+          key={`row-${rowIndex}`} 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
+        >
+          {row.map((post, index) => (
+            <EventCard 
+              key={`post-${rowIndex}-${index}`} 
+              post={post}
+              isEclipseNews={post.node.frontmatter.author === 'Eclipse Foundation' || 
+                (post.node.frontmatter.tags && post.node.frontmatter.tags.includes('eclipse-news'))} 
+            />
+          ))}
+        </div>
+      ))}
       <Pagination
         previousPageNumber={previousPageNumber}
         previousPageLink={previousPageLink}
@@ -35,18 +83,12 @@ const NewsCardList = ({
         totalPages={totalPages}
         baseUrl={baseUrl}
       />
-      <div className="flex items-center gap-5">
-        <a 
-          href="https://newsroom.eclipse.org/eclipse/community-news" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="flex items-center gap-3">View all</a>
-        | 
+      <div className="flex justify-center items-center gap-5 mt-8">
         <a 
           href="https://newsroom.eclipse.org/node/add/news" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="flex items-center gap-3">Submit news</a>
+          className="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium">Submit News</a>
       </div>
     </div>
   );

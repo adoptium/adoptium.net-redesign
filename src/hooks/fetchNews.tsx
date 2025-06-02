@@ -24,7 +24,7 @@ export function fetchNewsItems(isVisible: boolean, page: number): News | null {
   return newsAndEvents
 }
 
-async function fetchLatestNews(page) {
+export async function fetchLatestNews(page) {
   const url = new URL(`${baseUrl}/news`)
   url.searchParams.append("parameters[publish_to]", "adoptium")
   url.searchParams.append("page", page)
@@ -36,7 +36,7 @@ async function fetchLatestNews(page) {
       return response.data
     })
     .catch(function (error) {
-      return []
+      return { news: [], pager: null }
     })
 }
 
@@ -76,6 +76,7 @@ export interface NewsItem {
   body: string
   date: Date
   link: URL
+  image?: string  // Optional image URL from the Eclipse Foundation news API
 }
 
 export interface EventItem {

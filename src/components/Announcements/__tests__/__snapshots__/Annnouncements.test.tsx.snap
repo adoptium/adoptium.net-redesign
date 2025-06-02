@@ -64,6 +64,14 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
             class="py-3 w-full tab-button-text
                 outline-hidden cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
           >
+            Events
+          </span>
+        </button>
+        <button>
+          <span
+            class="py-3 w-full tab-button-text
+                outline-hidden cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
+          >
             Releases
           </span>
         </button>
@@ -81,7 +89,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
               href="/en/test-announcement-1"
             >
               <div
-                class="text-[#c4bfce"
+                class="text-[#c4bfce]"
               >
                 <p
                   class="text-[12px] leading-[133.333%] text-lightgrey mb-0"
@@ -109,12 +117,12 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
               href="/en/test-announcement-2"
             >
               <div
-                class="text-[#c4bfce"
+                class="text-[#c4bfce]"
               >
                 <p
                   class="text-[12px] leading-[133.333%] text-lightgrey mb-0"
                 >
-                  3 weeks ago
+                  3 days ago
                 </p>
                 <h3
                   class="text-[20px] leading-[140%] text-white mb-4"
@@ -137,7 +145,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
               href="/en/test-announcement-3"
             >
               <div
-                class="text-[#c4bfce"
+                class="text-[#c4bfce]"
               >
                 <p
                   class="text-[12px] leading-[133.333%] text-lightgrey mb-0"
@@ -165,7 +173,7 @@ exports[`Announcements component > Announcements renders correctly 1`] = `
               href="/en/test-announcement-4"
             >
               <div
-                class="text-[#c4bfce"
+                class="text-[#c4bfce]"
               >
                 <p
                   class="text-[12px] leading-[133.333%] text-lightgrey mb-0"

@@ -6,27 +6,18 @@ import { localeDate } from "../../util/localeDate"
 
 const TimeLine = ({ data }) => {
   const { language } = useI18next()
-  const today = new Date()
   const validEvents = data?.filter(
     event => !!event.date && !isNaN(new Date(event.date).getTime()),
   )
-  const sortedEvents = validEvents.sort((a, b) => {
-    const dateA = new Date(a.date)
-    const dateB = new Date(b.date)
-    const diffA = Math.abs(dateA.getTime() - today.getTime())
-    const diffB = Math.abs(dateB.getTime() - today.getTime())
 
-    return diffA - diffB
-  })
-
-  const totalCount = sortedEvents?.length
+  const totalCount = validEvents?.length
   const postsPerPage = 6
   const totalPages = Math.ceil(totalCount / postsPerPage)
   const [currentPage, setCurrentPage] = useState(1)
 
   const startIndex = (currentPage - 1) * postsPerPage
   const endIndex = startIndex + postsPerPage
-  const paginatedData = sortedEvents.slice(startIndex, endIndex)
+  const paginatedData = validEvents.slice(startIndex, endIndex)
   const previousPageNumber = currentPage > 1 ? currentPage - 1 : currentPage
   const nextPageNumber =
     currentPage < totalPages ? currentPage + 1 : currentPage

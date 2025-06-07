@@ -33,7 +33,7 @@ const Banner = () => {
           </div>
           <div className="mt-2 md:mt-0">
             <a 
-              href="https://forms.gle/vM5rigSGfvFTLVVQ7" 
+              href="https://hubs.la/Q03nBrkJ0" 
               className="px-6 py-2 bg-primary hover:bg-primary-dark text-white font-bold rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center group"
             >
               Submit Your Proposal

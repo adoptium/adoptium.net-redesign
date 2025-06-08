@@ -81,7 +81,7 @@ exports[`Index page > renders correctly 1`] = `
     <h2
       class="text-center text-xl font-normal leading-7 text-grey"
     >
-      Temurin is trusted by millions of developers
+      Temurin is trusted by millions, including these leading adopters
     </h2>
     <div
       class="slick-slider mt-6 slick-initialized"

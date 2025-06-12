@@ -55,9 +55,9 @@ exports[`Tests for MacOSPanel component > renders correctly 1`] = `
         <span
           class="install-text-command"
         >
-          brew tap 
+          brew install --cask 
         </span>
-        homebrew/cask-versions
+        temurin@8
         <br />
         <span
           class="install__text__no-select"
@@ -69,19 +69,7 @@ exports[`Tests for MacOSPanel component > renders correctly 1`] = `
         >
           brew install --cask 
         </span>
-        temurin8
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          brew install --cask 
-        </span>
-        temurin
+        temurin@
         1
       </code>
     </pre>
@@ -113,7 +101,8 @@ exports[`Tests for MacOSPanel component > renders correctly 1`] = `
         >
           brew uninstall --cask 
         </span>
-        temurin
+        temurin@
+        1
       </code>
     </pre>
     <a

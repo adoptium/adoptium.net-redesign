@@ -30,16 +30,12 @@ export const PureMacOSPanel = (): JSX.Element => {
         </span>
         <br />
         <span className="install__text__no-select">$</span>
-        <span className="install-text-command">brew tap </span>
-        homebrew/cask-versions
+        <span className="install-text-command">brew install --cask </span>
+        temurin@8
         <br />
         <span className="install__text__no-select">$</span>
         <span className="install-text-command">brew install --cask </span>
-        temurin8
-        <br />
-        <span className="install__text__no-select">$</span>
-        <span className="install-text-command">brew install --cask </span>
-        temurin{mostRecentLts}
+        temurin@{mostRecentLts}
       </ShellBox>
       <br />
       <br />
@@ -51,7 +47,7 @@ export const PureMacOSPanel = (): JSX.Element => {
         <br />
         <span className="install__text__no-select">$</span>
         <span className="install-text-command">brew uninstall --cask </span>
-        temurin
+        temurin@{mostRecentLts}
       </ShellBox>
       <a className="install__docs-button" href="https://docs.brew.sh/Manpage">
         Read documentation
